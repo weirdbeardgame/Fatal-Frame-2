@@ -1,0 +1,15 @@
+// STATUS: NOT STARTED
+
+#ifndef HOME_ZERO_ROM_ZERO2NP_SRC_DEBUG_CAMERA_MENU_H
+#define HOME_ZERO_ROM_ZERO2NP_SRC_DEBUG_CAMERA_MENU_H
+
+typedef struct {
+	int PlayerFollowON;
+	int FreeCameraON;
+	int CameraDebugON;
+} DEBUG_CAMERA_MENU;
+
+extern DEBUG_CAMERA_MENU DebugCameraMenu;
+
+
+#endif // HOME_ZERO_ROM_ZERO2NP_SRC_DEBUG_CAMERA_MENU_H

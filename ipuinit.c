@@ -1,0 +1,99 @@
+// STATUS: NOT STARTED
+
+#include "ipuinit.h"
+
+static setD4_CHCR() {
+  uint uVar1;
+  int iVar2;
+  
+  iVar2 = DIntr();
+  uVar1 = REG_DMAC_ENABLER;
+  REG_DMAC_ENABLEW = uVar1 | 0x10000;
+  REG_DMAC_4_IPU_TO_CHCR = param_1;
+  uVar1 = REG_DMAC_ENABLER;
+  REG_DMAC_ENABLEW = uVar1 & 0xfffeffff;
+  if (iVar2 != 0) {
+    iVar2 = EIntr();
+    return iVar2;
+  }
+  return iVar2;
+}
+
+sceIpuInit() {
+  int iVar1;
+  
+  setD4_CHCR(1);
+  REG_IPU_CTRL = 0x40000000;
+  do {
+    iVar1 = REG_IPU_CTRL;
+  } while (iVar1 < 0);
+  REG_IPU_CMD = 0;
+  do {
+    iVar1 = REG_IPU_CTRL;
+  } while (iVar1 < 0);
+  REG_IPU_IN_FIFO = (int)_iqval;
+  DAT_10007014 = (int)((ulong)_iqval >> 0x20);
+  DAT_10007018 = DAT_003694c8;
+  DAT_1000701c = DAT_003694cc;
+  REG_IPU_IN_FIFO = DAT_003694d0;
+  DAT_10007014 = DAT_003694d4;
+  DAT_10007018 = DAT_003694d8;
+  DAT_1000701c = DAT_003694dc;
+  REG_IPU_IN_FIFO = DAT_003694e0;
+  DAT_10007014 = DAT_003694e4;
+  DAT_10007018 = DAT_003694e8;
+  DAT_1000701c = DAT_003694ec;
+  REG_IPU_IN_FIFO = DAT_003694f0;
+  DAT_10007014 = DAT_003694f4;
+  DAT_10007018 = DAT_003694f8;
+  DAT_1000701c = DAT_003694fc;
+  REG_IPU_IN_FIFO = DAT_00369500;
+  DAT_10007014 = DAT_00369504;
+  DAT_10007018 = DAT_00369508;
+  DAT_1000701c = DAT_0036950c;
+  REG_IPU_IN_FIFO = DAT_00369500;
+  DAT_10007014 = DAT_00369504;
+  DAT_10007018 = DAT_00369508;
+  DAT_1000701c = DAT_0036950c;
+  REG_IPU_IN_FIFO = DAT_00369500;
+  DAT_10007014 = DAT_00369504;
+  DAT_10007018 = DAT_00369508;
+  DAT_1000701c = DAT_0036950c;
+  REG_IPU_IN_FIFO = DAT_00369500;
+  DAT_10007014 = DAT_00369504;
+  DAT_10007018 = DAT_00369508;
+  DAT_1000701c = DAT_0036950c;
+  REG_IPU_CMD = 0x50000000;
+  do {
+    iVar1 = REG_IPU_CTRL;
+  } while (iVar1 < 0);
+  REG_IPU_CMD = 0x58000000;
+  do {
+    iVar1 = REG_IPU_CTRL;
+  } while (iVar1 < 0);
+  REG_IPU_IN_FIFO = (int)_vqval;
+  DAT_10007014 = (int)((ulong)_vqval >> 0x20);
+  DAT_10007018 = DAT_00369518;
+  DAT_1000701c = DAT_0036951c;
+  REG_IPU_IN_FIFO = DAT_00369520;
+  DAT_10007014 = DAT_00369524;
+  DAT_10007018 = DAT_00369528;
+  DAT_1000701c = DAT_0036952c;
+  REG_IPU_CMD = 0x60000000;
+  do {
+    iVar1 = REG_IPU_CTRL;
+  } while (iVar1 < 0);
+  REG_IPU_CMD = 0x90000000;
+  do {
+    iVar1 = REG_IPU_CTRL;
+  } while (iVar1 < 0);
+  REG_IPU_CTRL = 0x40000000;
+  do {
+    iVar1 = REG_IPU_CTRL;
+  } while (iVar1 < 0);
+  REG_IPU_CMD = 0;
+  do {
+    iVar1 = REG_IPU_CTRL;
+  } while (iVar1 < 0);
+  return;
+}

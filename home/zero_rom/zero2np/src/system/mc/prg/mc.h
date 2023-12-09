@@ -1,0 +1,10 @@
+// STATUS: NOT STARTED
+
+#ifndef HOME_ZERO_ROM_ZERO2NP_SRC_SYSTEM_MC_PRG_MC_H
+#define HOME_ZERO_ROM_ZERO2NP_SRC_SYSTEM_MC_PRG_MC_H
+
+void MemoryCardInit();
+void MemoryCardExeInit();
+void MemoryCardEnd();
+
+#endif // HOME_ZERO_ROM_ZERO2NP_SRC_SYSTEM_MC_PRG_MC_H

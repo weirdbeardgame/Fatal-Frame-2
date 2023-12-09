@@ -1,0 +1,10 @@
+// STATUS: NOT STARTED
+
+#ifndef HOME_ZERO_ROM_ZERO2NP_SRC_OUTGAME_TITLE_ALBUM_H
+#define HOME_ZERO_ROM_ZERO2NP_SRC_OUTGAME_TITLE_ALBUM_H
+
+void TitleAlbumInit();
+void TitleAlbumMain();
+void TitleAlbumDispMain();
+
+#endif // HOME_ZERO_ROM_ZERO2NP_SRC_OUTGAME_TITLE_ALBUM_H

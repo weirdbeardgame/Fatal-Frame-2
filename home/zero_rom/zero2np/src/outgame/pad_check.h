@@ -1,0 +1,11 @@
+// STATUS: NOT STARTED
+
+#ifndef HOME_ZERO_ROM_ZERO2NP_SRC_OUTGAME_PAD_CHECK_H
+#define HOME_ZERO_ROM_ZERO2NP_SRC_OUTGAME_PAD_CHECK_H
+
+
+void init_Boot_PadCheck();
+GPHASE_ENUM one_Boot_PadCheck(GPHASE_ENUM dummy);
+void end_Boot_PadCheck();
+
+#endif // HOME_ZERO_ROM_ZERO2NP_SRC_OUTGAME_PAD_CHECK_H

@@ -1,0 +1,11 @@
+// STATUS: NOT STARTED
+
+#ifndef HOME_ZERO_ROM_ZERO2NP_SRC_INGAME_PLYR_SIS_TRPOINT_H
+#define HOME_ZERO_ROM_ZERO2NP_SRC_INGAME_PLYR_SIS_TRPOINT_H
+
+extern int room_point_num[63];
+extern sceVu0FVECTOR *room_point_pos[63];
+extern int *room_connect[63];
+
+
+#endif // HOME_ZERO_ROM_ZERO2NP_SRC_INGAME_PLYR_SIS_TRPOINT_H

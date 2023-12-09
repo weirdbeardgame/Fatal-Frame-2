@@ -1,0 +1,12 @@
+// STATUS: NOT STARTED
+
+#ifndef HOME_ZERO_ROM_ZERO2NP_SRC_INGAME_PHOTO_FREQ_CAMERA_H
+#define HOME_ZERO_ROM_ZERO2NP_SRC_INGAME_PHOTO_FREQ_CAMERA_H
+
+
+void FreqCameraInit();
+void ReqFreqCamera();
+void FreqCamera();
+float GetFreqCamera();
+
+#endif // HOME_ZERO_ROM_ZERO2NP_SRC_INGAME_PHOTO_FREQ_CAMERA_H

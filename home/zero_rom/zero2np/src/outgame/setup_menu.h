@@ -1,0 +1,11 @@
+// STATUS: NOT STARTED
+
+#ifndef HOME_ZERO_ROM_ZERO2NP_SRC_OUTGAME_SETUP_MENU_H
+#define HOME_ZERO_ROM_ZERO2NP_SRC_OUTGAME_SETUP_MENU_H
+
+
+void SetupMenuInit();
+void SetupMenuMain();
+void SetupMenuDispMain();
+
+#endif // HOME_ZERO_ROM_ZERO2NP_SRC_OUTGAME_SETUP_MENU_H

@@ -1,0 +1,8 @@
+// STATUS: NOT STARTED
+
+#ifndef USR_LOCAL_SCE_EE_GCC_SRC_NEWLIB_LIBC_STDIO_FREAD_H
+#define USR_LOCAL_SCE_EE_GCC_SRC_NEWLIB_LIBC_STDIO_FREAD_H
+
+size_t fread(void *buf, size_t size, size_t count, FILE *fp);
+
+#endif // USR_LOCAL_SCE_EE_GCC_SRC_NEWLIB_LIBC_STDIO_FREAD_H

@@ -1,0 +1,10 @@
+// STATUS: NOT STARTED
+
+#ifndef USR_LOCAL_SCE_EE_GCC_SRC_NEWLIB_LIBC_REENT_SBRKR_H
+#define USR_LOCAL_SCE_EE_GCC_SRC_NEWLIB_LIBC_REENT_SBRKR_H
+
+extern int errno;
+
+void* _sbrk_r(_reent *ptr, size_t incr);
+
+#endif // USR_LOCAL_SCE_EE_GCC_SRC_NEWLIB_LIBC_REENT_SBRKR_H

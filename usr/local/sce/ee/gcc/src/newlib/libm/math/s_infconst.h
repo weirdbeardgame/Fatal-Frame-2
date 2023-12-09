@@ -1,0 +1,14 @@
+// STATUS: NOT STARTED
+
+#ifndef USR_LOCAL_SCE_EE_GCC_SRC_NEWLIB_LIBM_MATH_S_INFCONST_H
+#define USR_LOCAL_SCE_EE_GCC_SRC_NEWLIB_LIBM_MATH_S_INFCONST_H
+
+union __dmath {
+	__uint32_t i[2];
+	double d;
+};
+
+extern __dmath __infinity[1];
+
+
+#endif // USR_LOCAL_SCE_EE_GCC_SRC_NEWLIB_LIBM_MATH_S_INFCONST_H

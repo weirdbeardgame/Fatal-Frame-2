@@ -1,0 +1,8 @@
+// STATUS: NOT STARTED
+
+#ifndef HOME_ZERO_ROM_ZERO2NP_SRC_GRAPHICS_GRAPH2D_DRAW_BTN_H
+#define HOME_ZERO_ROM_ZERO2NP_SRC_GRAPHICS_GRAPH2D_DRAW_BTN_H
+
+void DrawCmnButton(u_char btn_label, float x, float y, u_char alp, u_int pri);
+
+#endif // HOME_ZERO_ROM_ZERO2NP_SRC_GRAPHICS_GRAPH2D_DRAW_BTN_H

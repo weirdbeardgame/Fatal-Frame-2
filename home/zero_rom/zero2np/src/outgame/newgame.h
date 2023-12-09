@@ -1,0 +1,11 @@
+// STATUS: NOT STARTED
+
+#ifndef HOME_ZERO_ROM_ZERO2NP_SRC_OUTGAME_NEWGAME_H
+#define HOME_ZERO_ROM_ZERO2NP_SRC_OUTGAME_NEWGAME_H
+
+
+void NewGameCtrlInit();
+void NewGameMain();
+void NewGameDispMain();
+
+#endif // HOME_ZERO_ROM_ZERO2NP_SRC_OUTGAME_NEWGAME_H

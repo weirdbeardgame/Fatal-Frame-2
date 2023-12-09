@@ -1,0 +1,9 @@
+// STATUS: NOT STARTED
+
+#ifndef USR_LOCAL_SCE_EE_GCC_SRC_NEWLIB_LIBC_REENT_SIGNALR_H
+#define USR_LOCAL_SCE_EE_GCC_SRC_NEWLIB_LIBC_REENT_SIGNALR_H
+
+int _kill_r(_reent *ptr, int pid, int sig);
+int _getpid_r(_reent *ptr);
+
+#endif // USR_LOCAL_SCE_EE_GCC_SRC_NEWLIB_LIBC_REENT_SIGNALR_H

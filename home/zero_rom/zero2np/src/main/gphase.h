@@ -1,0 +1,11 @@
+// STATUS: NOT STARTED
+
+#ifndef HOME_ZERO_ROM_ZERO2NP_SRC_MAIN_GPHASE_H
+#define HOME_ZERO_ROM_ZERO2NP_SRC_MAIN_GPHASE_H
+
+
+void InitGPhaseSys();
+void GPhaseSysMain();
+void SetNextGPhase(GPHASE_ID_ENUM id);
+
+#endif // HOME_ZERO_ROM_ZERO2NP_SRC_MAIN_GPHASE_H

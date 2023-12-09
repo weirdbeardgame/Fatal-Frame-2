@@ -1,0 +1,16 @@
+// STATUS: NOT STARTED
+
+#ifndef HOME_ZERO_ROM_ZERO2NP_SRC_INGAME_MENU_TIM_DAT_SAVE_POINT_DAT_H
+#define HOME_ZERO_ROM_ZERO2NP_SRC_INGAME_MENU_TIM_DAT_SAVE_POINT_DAT_H
+
+typedef struct {
+	float x;
+	float y;
+	int map_label;
+	int room_label;
+} MAP_SAVE_POINT;
+
+extern MAP_SAVE_POINT map_save_point[13];
+
+
+#endif // HOME_ZERO_ROM_ZERO2NP_SRC_INGAME_MENU_TIM_DAT_SAVE_POINT_DAT_H

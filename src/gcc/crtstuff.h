@@ -1,0 +1,6 @@
+// STATUS: NOT STARTED
+
+#ifndef SRC_GCC_CRTSTUFF_H
+#define SRC_GCC_CRTSTUFF_H
+
+#endif // SRC_GCC_CRTSTUFF_H

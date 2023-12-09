@@ -1,0 +1,11 @@
+// STATUS: NOT STARTED
+
+#ifndef HOME_ZERO_ROM_ZERO2NP_SRC_OUTGAME_CHAPTER_SEL_H
+#define HOME_ZERO_ROM_ZERO2NP_SRC_OUTGAME_CHAPTER_SEL_H
+
+
+void ChapterSelCtrlInit();
+void ChapterSelMain();
+void ChapterSelDispMain();
+
+#endif // HOME_ZERO_ROM_ZERO2NP_SRC_OUTGAME_CHAPTER_SEL_H

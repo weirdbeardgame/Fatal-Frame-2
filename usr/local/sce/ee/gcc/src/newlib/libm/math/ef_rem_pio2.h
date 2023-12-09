@@ -1,0 +1,10 @@
+// STATUS: NOT STARTED
+
+#ifndef USR_LOCAL_SCE_EE_GCC_SRC_NEWLIB_LIBM_MATH_EF_REM_PIO2_H
+#define USR_LOCAL_SCE_EE_GCC_SRC_NEWLIB_LIBM_MATH_EF_REM_PIO2_H
+
+typedef int __int32_t;
+
+__int32_t __ieee754_rem_pio2f(float x, float *y);
+
+#endif // USR_LOCAL_SCE_EE_GCC_SRC_NEWLIB_LIBM_MATH_EF_REM_PIO2_H

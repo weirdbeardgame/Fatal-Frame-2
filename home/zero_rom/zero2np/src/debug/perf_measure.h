@@ -1,0 +1,20 @@
+// STATUS: NOT STARTED
+
+#ifndef HOME_ZERO_ROM_ZERO2NP_SRC_DEBUG_PERF_MEASURE_H
+#define HOME_ZERO_ROM_ZERO2NP_SRC_DEBUG_PERF_MEASURE_H
+
+struct C_PERFORMANCE_MEASURE {
+private:
+	int m_MarkCnt;
+	
+public:
+	C_PERFORMANCE_MEASURE& operator=();
+	C_PERFORMANCE_MEASURE();
+	C_PERFORMANCE_MEASURE();
+	void FrameStart();
+	int Get();
+	void SetMark();
+	int GetFromMark();
+};
+
+#endif // HOME_ZERO_ROM_ZERO2NP_SRC_DEBUG_PERF_MEASURE_H

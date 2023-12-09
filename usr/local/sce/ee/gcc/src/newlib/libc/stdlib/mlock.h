@@ -1,0 +1,10 @@
+// STATUS: NOT STARTED
+
+#ifndef USR_LOCAL_SCE_EE_GCC_SRC_NEWLIB_LIBC_STDLIB_MLOCK_H
+#define USR_LOCAL_SCE_EE_GCC_SRC_NEWLIB_LIBC_STDLIB_MLOCK_H
+
+
+void __malloc_lock(_reent *ptr);
+void __malloc_unlock(_reent *ptr);
+
+#endif // USR_LOCAL_SCE_EE_GCC_SRC_NEWLIB_LIBC_STDLIB_MLOCK_H

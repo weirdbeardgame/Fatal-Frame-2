@@ -1,0 +1,9 @@
+// STATUS: NOT STARTED
+
+#ifndef USR_LOCAL_SCE_EE_GCC_SRC_NEWLIB_LIBM_MATH_KF_SIN_H
+#define USR_LOCAL_SCE_EE_GCC_SRC_NEWLIB_LIBM_MATH_KF_SIN_H
+
+
+float __kernel_sinf(float x, float y, int iy);
+
+#endif // USR_LOCAL_SCE_EE_GCC_SRC_NEWLIB_LIBM_MATH_KF_SIN_H

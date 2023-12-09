@@ -1,0 +1,10 @@
+// STATUS: NOT STARTED
+
+#ifndef HOME_ZERO_ROM_ZERO2NP_SRC_SYSTEM_MC_PRG_MC_DEL_ALL_FILE_H
+#define HOME_ZERO_ROM_ZERO2NP_SRC_SYSTEM_MC_PRG_MC_DEL_ALL_FILE_H
+
+
+void MemoryCardAllFileDelInit(int port, int slot, int dir_label);
+int MemoryCardAllFileDelMain();
+
+#endif // HOME_ZERO_ROM_ZERO2NP_SRC_SYSTEM_MC_PRG_MC_DEL_ALL_FILE_H
