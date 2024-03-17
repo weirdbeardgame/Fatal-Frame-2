@@ -7,5 +7,5 @@ asm/
 build.ninja
 permuter_settings.toml
 *.ld
-SLES_523.84
+SLES_523.84*
 *.elf

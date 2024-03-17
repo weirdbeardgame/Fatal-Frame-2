@@ -1,5 +1,4 @@
 #include "common.h"
-#include "main.h"
 
 INCLUDE_ASM(const s32, "main/main", func_001D7D18);
 

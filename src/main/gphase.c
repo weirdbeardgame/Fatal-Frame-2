@@ -1,8 +1,8 @@
 #include "common.h"
-#include "gphase.h"
-#include "main.h"
+//#include "gphase.h"
+//#include "main.h"
 
-const GPHASE_DAT gphase_tbl[94] = {
+/*GPHASE_DAT gphase_tbl[94] = {
     {0, GPHASE_ID_NONE, GID_BOOT_INIT, 14},
     {1, GID_SUPER, GPHASE_ID_NONE, 0},
     {1, GID_SUPER, GPHASE_ID_NONE, 0},
@@ -110,109 +110,144 @@ GPHASE_ENUM(*pre_func[94])
 GPHASE_ENUM(*after_func[94])
 (GPHASE_ENUM) = {after_super__F11GPHASE_ENUM};
 
+extern "C" int printf(char *fmt, ...);
+
 void InitGPhaseSys()
 {
-  for (int i = 0; i < 6; i++)
-  {
-    gphase_sys.now[i] = GPHASE_ID_NONE;
-  }
+    for (int i = 0; i < 6; i++)
+    {
+        gphase_sys.now[i] = GPHASE_ID_NONE;
+    }
 
-  SetNextGPhase(GID_SUPER);
+    SetNextGPhase(GID_SUPER);
 }
 
-void SetInitFlag()
+void SetInitFlag(void)
 {
-  for (int i = 0; i < 6; i++)
-  {
-    gphase_sys.ini_flg[i] = gphase_sys.now[i] != gphase_sys.next[i];
-  }
+    for (int i = 0; i < 6; i++)
+    {
+        if (gphase_sys.next[i] != gphase_sys.now[i])
+        {
+            gphase_sys.ini_flg[i] = 1;
+        }
+        else
+        {
+            gphase_sys.ini_flg[i] = 0;
+        }
+    }
 }
 
 GPHASE_ENUM DoJobPhase(int layer)
 {
-  GPHASE_ENUM result;
+    GPHASE_ENUM result = GPHASE_CONTINUE;
 
-  //assert(layer < 6 && "layer_num over 6\n");
+    if (layer >= 6)
+    {
+        printf("layer_num over %d\n", 6);
+        while (true)
+            ;
+    }
 
-  if (gphase_sys.ini_flg[layer] != 0
-      && ini_func[gphase_sys.now[layer]] != 0x0)
-  {
-    (*ini_func[gphase_sys.now[layer]])();
-  }
+    if (gphase_sys.ini_flg[layer] != 0)
+    {
+        ini_func[gphase_sys.now[layer]]();
+    }
 
-  if (pre_func[gphase_sys.now[layer]] != 0x0)
-  {
-    (*pre_func[gphase_sys.now[layer]])(GPHASE_CONTINUE);
-  }
+    if (pre_func[gphase_sys.now[layer]] != 0x0)
+    {
+        pre_func[gphase_sys.now[layer]]((GPHASE_ENUM)0);
+    }
 
-  if (gphase_tbl[gphase_sys.now[layer]].son_num != 0)
-  {
-    result = DoJobPhase(layer + 1);
-  }
+    if (gphase_tbl[gphase_sys.now[layer]].son_num != 0)
+    {
+        result = DoJobPhase(layer + 1);
+    }
 
-  if (after_func[gphase_sys.now[layer]] != 0x0)
-  {
-    return (*after_func[gphase_sys.now[layer]])(result);
-  }
-
-  return GPHASE_CONTINUE;
+    return after_func[gphase_sys.now[layer]](result);
 }
 
-void GPhaseSysMain()
+void GPhaseSysMain(void)
 {
-  SetInitFlag();
+    int i = 0;
 
-  for (int i = 0; i < 6; i++)
-  {
-    gphase_sys.now[i] = gphase_sys.next[i];
-  }
+    SetInitFlag();
 
-  DoJobPhase(GID_SUPER);
-
-  for (int i = 0; i < 6; i++)
-  {
-    if (gphase_sys.now[i] != GPHASE_ID_NONE
-        && gphase_sys.now[i] != gphase_sys.next[i])
+    do
     {
-      (*end_func[gphase_sys.now[i]])();
-    }
-  }
+        gphase_sys.now[i] = gphase_sys.next[i];
+        i++;
+    } while (i < 6);
+
+    DoJobPhase(0);
+    i = 5;
+
+    do
+    {
+        if (
+            (gphase_sys.now[i] != GPHASE_ID_NONE) &&
+            (gphase_sys.now[i] != gphase_sys.next[i]))
+        {
+            (end_func[gphase_sys.now[i]])();
+        }
+
+        i--;
+    } while (-1 < i);
 }
 
 void SetNextGPhase(GPHASE_ID_ENUM id)
 {
-  const GPHASE_DAT *gp = &gphase_tbl[id];
-  int layer = gp->layer;
-  gphase_sys.next[layer] = id;
+    int layer;
+    int i;
+    GPHASE_DAT *gp;
+    GPHASE_DAT *gpbak;
 
-  for (int i = layer; i < 6; i++)
-  {
-    if (gp->son_num == 0)
+    gpbak = &gphase_tbl[id];
+    gp = &gphase_tbl[id];
+    layer = gp->layer;
+
+    gphase_sys.next[layer] = id;
+
+    for (i = layer; i < 6; i++)
     {
-      for (; i < 5; i++)
-      {
-        gphase_sys.next[i + 1] = GPHASE_ID_NONE;
-      }
-
-      break;
+        if (gp->son_num != 0)
+        {
+            id = (GPHASE_ID_ENUM)gp->son_ID;
+            gphase_sys.next[i + 1] = id;
+            gp = &gphase_tbl[id];
+        }
+        else
+        {
+            for (; i < 5; i++)
+            {
+                gphase_sys.next[i + 1] = GPHASE_ID_NONE;
+            }
+            break;
+        }
     }
 
-    gphase_sys.next[i + 1] = (GPHASE_ID_ENUM) gp->son_ID;
-    gp = &gphase_tbl[gp->son_ID];
-  }
+    gp = gpbak;
+    for (i = layer; i > 0; i--)
+    {
+        if (gp->superID >= 0)
+        {
+            id = (GPHASE_ID_ENUM)gp->superID;
+            gphase_sys.next[i - 1] = id;
+            gp = &gphase_tbl[id];
+        }
+        else
+        {
+            break;
+        }
+    }
+}*/
 
-  if (0 >= layer || gphase_tbl[id].superID < 0)
-  {
-    return;
-  }
 
-  gphase_sys.now[layer + 5] = (GPHASE_ID_ENUM) gphase_tbl[id].superID;
+INCLUDE_ASM(const s32, "main/gphase", InitGPhaseSys__Fv);
 
-  layer -= 1;
+INCLUDE_ASM(const s32, "main/gphase", SetInitFlag__Fv);
 
-  for (int i = gphase_tbl[id].superID; i > 0 && layer > 0; layer--)
-  {
-    i = gphase_tbl[i].superID;
-    gphase_sys.now[layer + 5] = (GPHASE_ID_ENUM) i;
-  }
-}
+INCLUDE_ASM(const s32, "main/gphase", DoJobPhase__Fv);
+
+INCLUDE_ASM(const s32, "main/gphase", GPhaseSysMain__Fv);
+
+INCLUDE_ASM(const s32, "main/gphase", SetNextGPhase__F14GPHASE_ID_ENUM);

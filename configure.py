@@ -22,19 +22,24 @@ TOOLS_DIR = ROOT / "tools"
 YAML_FILE = "FF2.yaml"
 BASENAME = "SLES_523.84"
 LD_PATH = f"{BASENAME}.ld"
-ELF_PATH = f"build/{BASENAME}"
+ELF_PATH = f"{BASENAME}"
 MAP_PATH = f"build/{BASENAME}.map"
 PRE_ELF_PATH = f"build/{BASENAME}.elf"
 
-COMMON_INCLUDES = "-Iinclude -isystem include/sdk/ee -isystem include/sdk -isystem include/gcc -isystem include/gcc/gcc-lib -isystem include/main"
-COMPILER_DIR = f"{TOOLS_DIR}/cc/ee-gcc2.96/bin"
-COMPILER_FLAGS = "-O2 -G8 -x c++ -gstabs"
-COMPILE_CMD = (
-    f"{COMPILER_DIR}/ee-gcc -c {COMMON_INCLUDES} {COMPILER_FLAGS}"
-    # f"{COMPILER_DIR}/ee-gcc -c -B {COMPILER_DIR}/ee- {COMMON_INCLUDES} {COMPILER_FLAGS}"
+COMMON_INCLUDES = "-Iinclude -isystem include/sdk/ee -isystem include/gcc -isystem include/main"
+
+COMPILER = "ee-gcc2.96"
+GAME_CC_DIR = f"{TOOLS_DIR}/cc/{COMPILER}/bin"
+LIB_CC_DIR = f"{TOOLS_DIR}/cc/{COMPILER}/bin"
+
+GAME_COMPILE_CMD = f"{GAME_CC_DIR}/ee-gcc -c {COMMON_INCLUDES} -x c++ -O2 -G0 -g"
+
+LIB_COMPILE_CMD = (
+    f"{LIB_CC_DIR}/ee-gcc -c -isystem include/gcc-9.26 {COMMON_INCLUDES} -x c++ -O2 -G0 -g"
 )
 
-WIBO_VER = "0.6.11"
+WIBO_VER = "0.6.4"
+
 
 def exec_shell(command: List[str]) -> str:
     ret = subprocess.run(
@@ -50,39 +55,18 @@ def clean():
     shutil.rmtree("assets", ignore_errors=True)
     shutil.rmtree("build", ignore_errors=True)
 
-os.system(
-    "find -iname '*.[sS+]' -exec sed -ri 's/(pref       )\$zero,/\\10x0,/g' {} \;"
-)
-
-pattern = re.compile(r'%(gp_rel)\(([^)]+)\)\(\$28\)')
-def remove_gprel():
-    for root, dirs, files in os.walk("asm/nonmatchings/"):
-        for filename in files:
-            filepath = os.path.join(root, filename)
-
-            with open(filepath, "r") as file:
-                content = file.read()
-
-            # Search for any %gp_rel access
-            if re.search(pattern, content):
-                # Reference found, remove
-                updated_content = re.sub(pattern, r'\2', content)
-
-                # Write the updated content back to the file
-                with open(filepath, "w") as file:
-                    file.write(updated_content)
 
 def write_permuter_settings():
     with open("permuter_settings.toml", "w") as f:
         f.write(
-            f"""compiler_command = "tools/cc/ee-gcc2.96/bin/ee-gcc -c -Iinclude -Iinclude/sdk/ee -Iinclude/gcc -Iinclude/gcc/gcc-lib -O2 -G8 -x c++ -gstabs gphase.c main.S -D__GNUC__"
+            f"""compiler_command = "{os.path.relpath(GAME_COMPILE_CMD, ROOT)} -D__GNUC__"
 assembler_command = "mips-linux-gnu-as -march=r5900 -mabi=eabi -Iinclude"
 compiler_type = "gcc"
 
 [preserve_macros]
 
 [decompme.compilers]
-"tools/cc/ee-gcc2.96/bin/ee-gcc" = "ee-gcc2.96"
+"tools/build/cc/gcc/gcc" = "{COMPILER}"
 """
         )
 
@@ -118,19 +102,24 @@ def build_stuff(linker_entries: List[LinkerEntry]):
     # Rules
     cross = "mips-linux-gnu-"
 
-    ld_args = f"-EL -T undefined_syms_auto.txt -T undefined_funcs_auto.txt -T undefined_syms.txt -Map $mapfile -T $in -o $out"
+    ld_args = "-EL -T undefined_syms.txt -T undefined_syms_auto.txt -T undefined_funcs_auto.txt -Map $mapfile -T $in -o $out"
 
     ninja.rule(
         "as",
         description="as $in",
-        command=f"cpp {COMMON_INCLUDES} $in -o  - | iconv -f=UTF-8 -t=EUC-JP $in | {cross}as -no-pad-sections -EL -march=5900 -mabi=eabi -Iinclude -o $out",
+        command=f"cpp {COMMON_INCLUDES} $in -o  - | {cross}as -no-pad-sections -EL -march=5900 -mabi=eabi -Iinclude -o $out",
     )
 
     ninja.rule(
         "cc",
         description="cc $in",
-        command=f"{COMPILE_CMD} $in -o $out && {cross}strip $out -N dummy-symbol-name",
-        #command=f"{COMPILE_CMD} $in -o $out",
+        command=f"{GAME_COMPILE_CMD} $in -o $out && {cross}strip $out -N dummy-symbol-name",
+    )
+
+    ninja.rule(
+        "libcc",
+        description="cc $in",
+        command=f"{LIB_COMPILE_CMD} $in -o $out && {cross}strip $out -N dummy-symbol-name",
     )
 
     ninja.rule(
@@ -165,8 +154,13 @@ def build_stuff(linker_entries: List[LinkerEntry]):
         ):
             build(entry.object_path, entry.src_paths, "as")
         elif isinstance(seg, splat.segtypes.common.c.CommonSegC):
-            build(entry.object_path, entry.src_paths, "cc")
-        elif isinstance(seg, splat.segtypes.common.databin.CommonSegDatabin) or isinstance(seg, splat.segtypes.common.rodatabin.CommonSegRodatabin):
+            if any(
+                str(src_path).startswith("src/lib/") for src_path in entry.src_paths
+            ):
+                build(entry.object_path, entry.src_paths, "libcc")
+            else:
+                build(entry.object_path, entry.src_paths, "cc")
+        elif isinstance(seg, splat.segtypes.common.databin.CommonSegDatabin):
             build(entry.object_path, entry.src_paths, "as")
         else:
             print(f"ERROR: Unsupported build segment type {seg.type}")
@@ -193,24 +187,13 @@ def build_stuff(linker_entries: List[LinkerEntry]):
         implicit=[ELF_PATH],
     )
 
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Configure the project")
     parser.add_argument(
         "-c",
         "--clean",
         help="Clean extraction and build artifacts",
-        action="store_true",
-    )
-    parser.add_argument(
-        "-csrc",
-        "--cleansrc",
-        help="Clean the 'src' folder",
-        action="store_true",
-    )
-    parser.add_argument(
-        "-nogp",
-        "--no-gprel-removing",
-        help="Do not remove gp_rel references on the disassembly",
         action="store_true",
     )
     args = parser.parse_args()
@@ -227,9 +210,6 @@ if __name__ == "__main__":
 
     if args.clean:
         clean()
-    
-    if args.cleansrc:
-        shutil.rmtree("src", ignore_errors=True)
 
     split.main([YAML_FILE], modes="all", verbose=False)
 
@@ -238,7 +218,3 @@ if __name__ == "__main__":
     build_stuff(linker_entries)
 
     write_permuter_settings()
-
-    # We're done with everything, now get rid of the %gp_rel references
-    if not args.no_gprel_removing:
-        remove_gprel()
