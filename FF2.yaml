@@ -1,0 +1,54 @@
+name: Fatal Frame 2 (PAL) (2004-02-06)
+sha1: 06e0f35b0b38ed54337740fdea8c3eb18bb98bd5
+options:
+  # paths
+  basename: SLES_523.84
+  target_path: SLES_523.84
+  gp_value: 0x3f57f0
+  base_path: .
+  compiler: GCC
+  find_file_boundaries: False
+  platform: ps2
+  create_undefined_funcs_auto: False
+  undefined_funcs_auto_path: undefined_funcs_auto.txt
+  create_undefined_syms_auto: True
+  undefined_syms_auto_path: undefined_syms_auto.txt
+  symbol_addrs_path: symbol_addrs.txt
+  asm_path: asm
+  src_path: src
+  build_path: build
+  extensions_path: tools/splat_ext
+  section_order: [".text", ".data", ".rodata", ".bss"]
+  auto_all_sections: [".data", ".rodata", ".bss"]
+  subalign: 8
+  disasm_unknown: True
+  named_regs_for_c_funcs: False
+  include_macro_inc: no
+segments:
+  - [0, databin, elf_header]
+  - name: main
+    type: code
+    start: 0x1000
+    vram: 0x100000
+    # subalign: null
+    subsegments:
+      - [0x1000, asm, entry]
+      - [0x1008, asm, sce/crt0]
+      #- [0x1258, c, ingame/map/CBuff]
+
+      - [0xb09a8, c, main/gphase]
+      - [0xb0d38, asm, unk]
+      #- [0xb0d38, c, graphics/gra3d]
+
+      - [0xd8d18, c, main/main]
+      - [0xd95d0, asm, unk1]
+      #- [0xb5db8, asm, unk]
+
+      #- [0x1bb0a0, data, vutext] # .vutext
+      #- [0x1c4d00, data] # .data
+
+  - [0x1bb0a0, databin]
+  #- [0x29aa00, databin] # pad
+  #- [0x29b000, databin] # .mfifo
+  #- [0x2ab000, databin] # .reginfo
+  - [0x31034636]

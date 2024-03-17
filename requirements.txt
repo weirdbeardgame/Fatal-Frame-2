@@ -1,0 +1,5 @@
+spimdisasm
+rabbitizer
+splat64[mips]
+tqdm
+ninja_syntax

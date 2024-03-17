@@ -1,0 +1,11 @@
+.venv/
+build/
+assets/
+asm/
+.ninja_log
+.splache
+build.ninja
+permuter_settings.toml
+*.ld
+SLES_523.84
+*.elf
