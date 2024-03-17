@@ -44,10 +44,9 @@ segments:
       - [0xd95d0, asm, unk1]
       #- [0xb5db8, asm, unk]
 
-      #- [0x1bb0a0, data, vutext] # .vutext
-      #- [0x1c4d00, data] # .data
-
-  - [0x1bb0a0, databin]
+  - [0x1bb0a0, databin, vutext]
+  - [0x1c4d00, databin, data] # .data
+  #- [0x2f5ac4, databin, mdebug]
   #- [0x29aa00, databin] # pad
   #- [0x29b000, databin] # .mfifo
   #- [0x2ab000, databin] # .reginfo
