@@ -489,10 +489,15 @@ SetSave_AlbumData__FP12MC_SAVE_DATA                                             
 SetSave_AlbumInfoData__FP12MC_SAVE_DATA                                                                                       = 0x0011cd00;
 AlbumInOutAnimCtrl__FPcT0PUc                                                                                                  = 0x0011cfb8;
 AlbumEditMenuAnimCtrl__FPcT0PUcPfT3                                                                                           = 0x0011cfe8;
+_fixed_array_verifyrange__H1ZPv_UiUi_PX01                                                                                     = 0x0011cf10;
+_fixed_array_verifyrange__H1ZPc_UiUi_PX01                                                                                     = 0x0011cf48;
+_fixed_array_verifyrange__H1ZPUi_UiUi_PX01                                                                                    = 0x0011cf80;
 AlbumEditFrameDisp__FiiUc                                                                                                     = 0x0011d138;
 AlbumBlackBgDisp__FiiUcUc                                                                                                     = 0x0011d1c8;
 AlbumTitleFrameDisp__FiiUc                                                                                                    = 0x0011d250;
 AlbumTitleDisp__FiiUc                                                                                                         = 0x0011d2f8;
+AlbumBaseFrameDisp__FiiUc                                                                                                     = 0x0011d380;
+AlbumA_FrameDisp__FiiUc                                                                                                       = 0x0011d488;
 AlbumA_CurrentFrameFlareDisp__FiiUcUc                                                                                         = 0x0011d5e8;
 AlbumB_CurrentFrameFlareDisp__FiiUcUc                                                                                         = 0x0011da50;
 AlbumThumbnailBaseDisp__FiiiUc                                                                                                = 0x0011dfc8;
@@ -505,6 +510,7 @@ AlbumEditInfoNoDisp__FiiiUc                                                     
 AlbumEditInfoPhotoNoDisp__FiiiiUc                                                                                             = 0x0011e970;
 AlbumEditAlbumInfoWinItemDisp__FiiiUc                                                                                         = 0x0011e9c8;
 AlbumEditPhotoFrameDisp__FiiUcPv                                                                                              = 0x0011eaa8;
+__tf10ALBUM_INFO                                                                                                              = 0x0011cee0;
 AlbumEditPhotoProtectionFrameDisp__FiiUc                                                                                      = 0x0011eea0;
 AlbumMenuSelFrameDisp__FiiiUcfUc                                                                                              = 0x0011ef50;
 AlbumMenuNonSelFrameDisp__FiiiUcf                                                                                             = 0x0011f100;
