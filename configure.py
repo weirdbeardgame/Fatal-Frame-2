@@ -32,10 +32,10 @@ COMPILER = "ee-gcc2.96"
 GAME_CC_DIR = f"{TOOLS_DIR}/cc/{COMPILER}/bin"
 LIB_CC_DIR = f"{TOOLS_DIR}/cc/{COMPILER}/bin"
 
-GAME_COMPILE_CMD = f"{GAME_CC_DIR}/ee-gcc -c {COMMON_INCLUDES} -x c++ -O2 -G0 -g"
+GAME_COMPILE_CMD = f"{GAME_CC_DIR}/ee-gcc -c {COMMON_INCLUDES} -O2 -G8 -g -x c++"
 
 LIB_COMPILE_CMD = (
-    f"{LIB_CC_DIR}/ee-gcc -c -isystem include/gcc-9.26 {COMMON_INCLUDES} -x c++ -O2 -G0 -g"
+    f"{LIB_CC_DIR}/ee-gcc -c -isystem include/gcc-9.26 {COMMON_INCLUDES} -O2 -G8 -g -x c++"
 )
 
 WIBO_VER = "0.6.4"
@@ -148,19 +148,13 @@ def build_stuff(linker_entries: List[LinkerEntry]):
 
         if entry.object_path is None:
             continue
-
         if isinstance(seg, splat.segtypes.common.asm.CommonSegAsm) or isinstance(
             seg, splat.segtypes.common.data.CommonSegData
         ):
             build(entry.object_path, entry.src_paths, "as")
         elif isinstance(seg, splat.segtypes.common.c.CommonSegC):
-            if any(
-                str(src_path).startswith("src/lib/") for src_path in entry.src_paths
-            ):
-                build(entry.object_path, entry.src_paths, "libcc")
-            else:
-                build(entry.object_path, entry.src_paths, "cc")
-        elif isinstance(seg, splat.segtypes.common.databin.CommonSegDatabin):
+            build(entry.object_path, entry.src_paths, "cc")
+        elif isinstance(seg, splat.segtypes.common.databin.CommonSegDatabin) or isinstance(seg, splat.segtypes.common.rodatabin.CommonSegRodatabin):
             build(entry.object_path, entry.src_paths, "as")
         else:
             print(f"ERROR: Unsupported build segment type {seg.type}")

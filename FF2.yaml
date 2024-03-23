@@ -9,6 +9,7 @@ options:
   compiler: GCC
   find_file_boundaries: False
   platform: ps2
+  rodata_string_guesser_level: 2 # improve string detection
   create_undefined_funcs_auto: False
   undefined_funcs_auto_path: undefined_funcs_auto.txt
   create_undefined_syms_auto: True
@@ -23,14 +24,13 @@ options:
   subalign: 8
   disasm_unknown: True
   named_regs_for_c_funcs: False
-  include_macro_inc: no
 segments:
   - [0, databin, elf_header]
   - name: main
     type: code
     start: 0x1000
     vram: 0x100000
-    # subalign: null
+    #align: 4
     subsegments:
       - [0x1000, asm, entry]
       - [0x1008, asm, sce/crt0]
@@ -38,16 +38,18 @@ segments:
 
       - [0xb09a8, c, main/gphase]
       - [0xb0d38, asm, unk]
+      - [0xba1e0, rodata, main/gphase]
       #- [0xb0d38, c, graphics/gra3d]
 
       - [0xd8d18, c, main/main]
       - [0xd95d0, asm, unk1]
       #- [0xb5db8, asm, unk]
 
-  - [0x1bb0a0, databin, vutext]
-  - [0x1c4d00, databin, data] # .data
-  #- [0x2f5ac4, databin, mdebug]
+  - [0x1c4c78, databin] # .reginfo
+  #- [0x2ed800, databin, lit4]
+  #- [0x2f4a80, databin, sbss]
+  - [0x2f5500, rodatabin, bss]
   #- [0x29aa00, databin] # pad
   #- [0x29b000, databin] # .mfifo
-  #- [0x2ab000, databin] # .reginfo
+  #- [0x218178, data, main/gphase]
   - [0x31034636]

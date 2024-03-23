@@ -1,8 +1,8 @@
 #include "common.h"
-//#include "gphase.h"
-//#include "main.h"
+#include "gphase.h"
+#include "main.h"
 
-/*GPHASE_DAT gphase_tbl[94] = {
+GPHASE_DAT gphase_tbl[94] = {
     {0, GPHASE_ID_NONE, GID_BOOT_INIT, 14},
     {1, GID_SUPER, GPHASE_ID_NONE, 0},
     {1, GID_SUPER, GPHASE_ID_NONE, 0},
@@ -98,10 +98,21 @@
     {5, GID_TITLE_MISSION, GPHASE_ID_NONE, 0},
     {5, GID_TITLE_MISSION, GPHASE_ID_NONE, 0}};
 
+INCLUDE_ASM(const s32, "main/gphase", InitGPhaseSys__Fv);
+
+INCLUDE_ASM(const s32, "main/gphase", SetInitFlag__Fv);
+
+INCLUDE_ASM(const s32, "main/gphase", DoJobPhase__Fv);
+
+INCLUDE_ASM(const s32, "main/gphase", SetNextGPhase__F14GPHASE_ID_ENUM);
+
 extern "C" void init_super__Fv();
 extern "C" void end_super__Fv();
 extern "C" GPHASE_ENUM pre_super__F11GPHASE_ENUM(GPHASE_ENUM super);
 extern "C" GPHASE_ENUM after_super__F11GPHASE_ENUM(GPHASE_ENUM result);
+
+extern "C" GPHASE_ENUM DoJobPhase__Fv(int layer);
+extern "C" void SetInitFlag__Fv();
 
 void (*ini_func[94])() = {init_super__Fv};
 static void (*end_func[94])() = {end_super__Fv};
@@ -110,7 +121,7 @@ GPHASE_ENUM(*pre_func[94])
 GPHASE_ENUM(*after_func[94])
 (GPHASE_ENUM) = {after_super__F11GPHASE_ENUM};
 
-extern "C" int printf(char *fmt, ...);
+/*extern "C" int printf(char *fmt, ...);
 
 void InitGPhaseSys()
 {
@@ -241,13 +252,32 @@ void SetNextGPhase(GPHASE_ID_ENUM id)
     }
 }*/
 
+void GPhaseSysMain(void)
+{
+    int i = 0;
 
-INCLUDE_ASM(const s32, "main/gphase", InitGPhaseSys__Fv);
+    SetInitFlag__Fv();
 
-INCLUDE_ASM(const s32, "main/gphase", SetInitFlag__Fv);
+    do
+    {
+        gphase_sys.now[i] = gphase_sys.next[i];
+        i++;
+    } while (i < 6);
 
-INCLUDE_ASM(const s32, "main/gphase", DoJobPhase__Fv);
+    DoJobPhase__Fv(0);
+    i = 5;
 
-INCLUDE_ASM(const s32, "main/gphase", GPhaseSysMain__Fv);
+    do
+    {
+        if (
+            (gphase_sys.now[i] != GPHASE_ID_NONE) &&
+            (gphase_sys.now[i] != gphase_sys.next[i]))
+        {
+            (end_func[gphase_sys.now[i]])();
+        }
 
-INCLUDE_ASM(const s32, "main/gphase", SetNextGPhase__F14GPHASE_ID_ENUM);
+        i--;
+    } while (-1 < i);
+}
+
+// INCLUDE_ASM(const s32, "main/gphase", GPhaseSysMain__Fv);
