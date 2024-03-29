@@ -70,6 +70,37 @@ segments:
       - [0x25410, c, album/prg/album_load]
       - [0x26f10, c, album/prg/album_mem]
       - [0x270b8, c, album/prg/album_save]
+      - [0x29388, c, album/prg/album_view]
+      - [0x2b3b0, c, ingame/menu/anim_2d]
+      - [0x2b410, c, ingame/enemy/alg_manage]
+      - [0x2b568, c, graphics/motion/anicode]
+      - [0x2c650, c, outgame/autoload]
+      - [0x2d110, c, ingame/photo/bonus_shot]
+      #Missing file btn_sport_dat.c
+      #- [0x2e510, c, ingame/menu/tim_dat/cam_level_up_point]
+      #Missing file camera_film.c
+      #Missing file camera_menu.c
+      - [0x2e510, c, ingame/menu/tim_dat/camera_power_up]
+      - [0x2e7a8, c, ingame/photo/center_circle]
+      - [0x2ede0, c, ingame/photo/center_cross]
+      - [0x2f1a8, c, outgame/chapter_sel]
+      - [0x2fbe8, c, ingame/plyr/charBB]
+      - [0x2fda8, c, ingame/clear/prg/clear_flg]
+      - [0x30990, c, ingame/clear/prg/clearmenu]
+      - [0x31088, c, ingame/clear/prg/clearmenu_top]
+      - [0x31b78, c, system/compress/compress]
+      - [0x32c50, c, ingame/item/prg/crystal]
+      - [0x33148, c, ingame/photo/damage_disp]
+      - [0x333a8, c, debug/debug]
+      - [0x33fa8, c, debug/debug_menu]
+      - [0x365a8, c, graphics/dmaVif1]
+      - [0x37098, c, ingame/door/prg/door]
+      - [0x378b0, c, graphics/graph2d/draw_btn]
+      - [0xa6dc0, c, outgame/gallery]
+      - [0xa7b80, c, outgame/gallery_disp]
+      - [0xa8d58, c, save_load/prg/game_data_save]
+      - [0xab6f0, c, ingame/clear/prg/game_result]
+      - [0xad4b8, c, ingame/gameover/prg/gameover]
       - [0xb09a8, c, main/gphase]
       - [0xb0d38, c, graphics/gra3d]
 
@@ -81,7 +112,12 @@ segments:
       - [0xd9ce0, c, ingame/map/map_bgm]
       - [0xda240, c, ingame/map/map_camera]
       - [0xdc7d8, c, ingame/map/map_height]
+      - [0xdd548, c, ingame/map/map_hit_check]
 
+      - [0x17e250, c, devvu0]
+      - [0x17e9b8, c, devvif0]
+
+  - [0x1ba0a0, databin] # .vutext
   - [0x1c4c78, databin] # .reginfo
   - [0x2ed800, databin, lit4]
   - [0x2f4a80, rodatabin, sbss]

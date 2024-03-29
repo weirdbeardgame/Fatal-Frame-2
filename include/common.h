@@ -13,6 +13,10 @@ typedef unsigned short u16;
 typedef unsigned int u32;
 typedef unsigned long u64;
 
+typedef unsigned int u_int;
+
+typedef unsigned short u_short;
+
 typedef float f32;
 
 #define UNK_TYPE s32
