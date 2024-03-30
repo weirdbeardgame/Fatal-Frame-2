@@ -6,7 +6,7 @@ CBuffSetStr__FPc                                                                
 CBuffReset__Fv                                                                                                                = 0x00100400;
 CBuffInit__Fii                                                                                                                = 0x00100440;
 CBuffTerm__Fv                                                                                                                 = 0x00100498;
-__9CEditRoot                                                                                                                  = 0x001004d0;
+custom_allocate__Q23ctlt16custom_allocator1ZP11IEditObjectUi                                                                  = 0x001004d0;
 __9CEditRootPCcP9CEditRoot                                                                                                    = 0x001006d8;
 _$_9CEditRoot                                                                                                                 = 0x001009a8;
 Create__9CEditRootPCc                                                                                                         = 0x00100a80;
