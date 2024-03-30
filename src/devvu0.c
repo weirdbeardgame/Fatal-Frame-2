@@ -18,7 +18,7 @@ INCLUDE_ASM(const s32, "devvu0", sceDevVu0GetTBit);
 
 INCLUDE_ASM(const s32, "devvu0", func_0027D3B0);
 
-void sceDevVu0Exec(u_short addr)
+inline void sceDevVu0Exec(u_short addr)
 {
     register u_int reg = addr;
     __asm__ volatile(

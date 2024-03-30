@@ -70,7 +70,6 @@ INCLUDE_ASM(const s32, "ingame/map/MapPut", MapPutDraw__Fv);
 
 INCLUDE_ASM(const s32, "ingame/map/MapPut", MapPutResetAll__Fv);
 
-void func_00111570(void) {
-}
+INCLUDE_ASM(const s32, "ingame/map/MapPut", func_00111570);
 
 INCLUDE_ASM(const s32, "ingame/map/MapPut", func_00111578);

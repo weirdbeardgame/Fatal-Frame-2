@@ -88,7 +88,6 @@ INCLUDE_ASM(const s32, "ingame/map/MapAnim", MapManimProc__Fv);
 
 INCLUDE_ASM(const s32, "ingame/map/MapAnim", MapManimInit__Fv);
 
-void func_001052B8(void) {
-}
+INCLUDE_ASM(const s32, "ingame/map/MapAnim", func_001052B8);
 
 INCLUDE_ASM(const s32, "ingame/map/MapAnim", func_001052C0);

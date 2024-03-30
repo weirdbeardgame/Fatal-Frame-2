@@ -50,7 +50,6 @@ INCLUDE_ASM(const s32, "ingame/map/MapSp", MapSpProc__Fv);
 
 INCLUDE_ASM(const s32, "ingame/map/MapSp", MapSpInit__Fv);
 
-void func_00114370(void) {
-}
+INCLUDE_ASM(const s32, "ingame/map/MapSp", func_00114370);
 
 INCLUDE_ASM(const s32, "ingame/map/MapSp", func_00114378);

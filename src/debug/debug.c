@@ -26,7 +26,8 @@ INCLUDE_ASM(const s32, "debug/debug", DebugEnd__Fv);
 
 INCLUDE_ASM(const s32, "debug/debug", init_Debug_Menu__Fv);
 
-void end_Debug_Menu__Fv(void) {
+inline void end_Debug_Menu__Fv(void)
+{
 }
 
 INCLUDE_ASM(const s32, "debug/debug", one_Debug_Menu__F11GPHASE_ENUM);

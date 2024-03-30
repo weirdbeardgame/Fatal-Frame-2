@@ -26,5 +26,4 @@ INCLUDE_ASM(const s32, "ingame/map/map_bgm", map_bgmFadeIn__Fi);
 
 INCLUDE_ASM(const s32, "ingame/map/map_bgm", map_bgmSetSave__FP12MC_SAVE_DATA);
 
-void func_001D9238(void) {
-}
+INCLUDE_ASM(const s32, "ingame/map/map_bgm", func_001D9238);

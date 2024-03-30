@@ -28,7 +28,6 @@ INCLUDE_ASM(const s32, "ingame/item/prg/crystal", SetSave_PlyrCrystal__FP12MC_SA
 
 INCLUDE_ASM(const s32, "ingame/item/prg/crystal", DebugAllCrystalGet__Fv);
 
-void func_00132120(void) {
-}
+INCLUDE_ASM(const s32, "ingame/item/prg/crystal", func_00132120);
 
 INCLUDE_ASM(const s32, "ingame/item/prg/crystal", func_00132128);

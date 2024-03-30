@@ -32,7 +32,6 @@ INCLUDE_ASM(const s32, "ingame/door/prg/door", GetDoorDataLabelToDoorLabel__Fi);
 
 INCLUDE_ASM(const s32, "ingame/door/prg/door", SetSave_DoorCtrl__FP12MC_SAVE_DATA);
 
-void func_00136888(void) {
-}
+INCLUDE_ASM(const s32, "ingame/door/prg/door", func_00136888);
 
 INCLUDE_ASM(const s32, "ingame/door/prg/door", func_00136890);

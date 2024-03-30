@@ -68,6 +68,7 @@ FurnWorkFree__Fi                                                                
 FurnWorkFreeAll__Fv                                                                                                           = 0x00102850;
 FurnWorkInit__Fv                                                                                                              = 0x001028c0;
 FurnWorkTrem__Fv                                                                                                              = 0x001028e0;
+__static_initialization_and_destruction_0                                                                                     = 0x001028e8;
 FurnLoadGetAttr__FPc                                                                                                          = 0x00102ab8;
 FurnLoadOne__FPCcPcPi                                                                                                         = 0x00102ae8;
 FurnLoadRegID__FiiPc                                                                                                          = 0x00102ca0;
@@ -193,6 +194,7 @@ MapHitDeleteDoorRec__Fv                                                         
 MapHitSetDoorHit__FiiPA3_f                                                                                                    = 0x00109328;
 MapHitSetDoorZ__Ff                                                                                                            = 0x00109440;
 MapTesCallbackHit__FP11MAPHIT_HEADP10MAPHIT_DATi                                                                              = 0x00109448;
+__static_initialization_and_destruction_1                                                                                     = 0x001094e0;
 MapLBuffRegist__Fi                                                                                                            = 0x00109508;
 MapLBuffLoad__Fi                                                                                                              = 0x001095e0;
 MapLBuffDeleteFile__Fii                                                                                                       = 0x00109700;
@@ -289,6 +291,7 @@ MapObjSetDoorDat__Fii                                                           
 MapObjDeletDraw__Fi                                                                                                           = 0x00110438;
 MapObjRegistPhf__FiPc                                                                                                         = 0x00110700;
 MapObjRegInit__Fv                                                                                                             = 0x00110770;
+__static_initialization_and_destruction_2                                                                                     = 0x00110798;
 MapPutSetFlg__Fii                                                                                                             = 0x00110898;
 MapPutDeleteFlg__Fii                                                                                                          = 0x001108d8;
 MapPutSetFirst__FPvs                                                                                                          = 0x00110920;
@@ -542,9 +545,6 @@ AlbumMemMain__Fv                                                                
 GetAlbumMemAddr__Fv                                                                                                           = 0x00126060;
 AlbumMemFree__FPCci                                                                                                           = 0x00126070;
 __tf10ALBUM_INFO__Fv                                                                                                          = 0x001260b8;
-_fixed_array_verifyrange__H1ZPv_UiUi_PX01                                                                                     = 0x001260e8;
-_fixed_array_verifyrange__H1ZPc_UiUi_PX01                                                                                     = 0x00126120;
-_fixed_array_verifyrange__H1ZPUi_UiUi_PX01                                                                                    = 0x00126158;
 AlbumSaveCtrlInit__Fv                                                                                                         = 0x00126190;
 AlbumSaveTexLoadWait__Fv                                                                                                      = 0x001261f0;
 AlbumSaveMain__Fv                                                                                                             = 0x00126258;

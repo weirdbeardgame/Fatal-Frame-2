@@ -64,7 +64,8 @@ INCLUDE_ASM(const s32, "ingame/map/FurnCtl", FurnCtlModelInit__Fi);
 
 INCLUDE_ASM(const s32, "ingame/map/FurnCtl", FurnCtlInit__Fv);
 
-void FurnCtlTerm__Fv(void) {
+inline void FurnCtlTerm__Fv(void)
+{
 }
 
 INCLUDE_ASM(const s32, "ingame/map/FurnCtl", FurnWorkGetFreeHead__Fv);
@@ -77,10 +78,12 @@ INCLUDE_ASM(const s32, "ingame/map/FurnCtl", FurnWorkFreeAll__Fv);
 
 INCLUDE_ASM(const s32, "ingame/map/FurnCtl", FurnWorkInit__Fv);
 
-void FurnWorkTrem__Fv(void) {
+inline void FurnWorkTrem__Fv(void)
+{
 }
 
-void func_001028E8(void) {
+inline void __static_initialization_and_destruction_0(void)
+{
 }
 
 INCLUDE_ASM(const s32, "ingame/map/FurnCtl", func_001028F0);

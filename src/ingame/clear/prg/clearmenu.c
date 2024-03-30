@@ -48,7 +48,8 @@ INCLUDE_ASM(const s32, "ingame/clear/prg/clearmenu", init_ClearMenu_Top__Fv);
 
 INCLUDE_ASM(const s32, "ingame/clear/prg/clearmenu", one_ClearMenu_Top__F11GPHASE_ENUM);
 
-void end_ClearMenu_Top__Fv(void) {
+inline void end_ClearMenu_Top__Fv(void)
+{
 }
 
 INCLUDE_ASM(const s32, "ingame/clear/prg/clearmenu", init_ClearMenu_Save__Fv);
@@ -61,5 +62,6 @@ INCLUDE_ASM(const s32, "ingame/clear/prg/clearmenu", init_ClearMenu_Album__Fv);
 
 INCLUDE_ASM(const s32, "ingame/clear/prg/clearmenu", one_ClearMenu_Album__F11GPHASE_ENUM);
 
-void end_ClearMenu_Album__Fv(void) {
+inline void end_ClearMenu_Album__Fv(void)
+{
 }

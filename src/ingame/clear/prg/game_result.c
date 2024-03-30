@@ -48,7 +48,8 @@ INCLUDE_ASM(const s32, "ingame/clear/prg/game_result", init_GameResult_Top__Fv);
 
 INCLUDE_ASM(const s32, "ingame/clear/prg/game_result", one_GameResult_Top__F11GPHASE_ENUM);
 
-void end_GameResult_Top__Fv(void) {
+inline void end_GameResult_Top__Fv(void)
+{
 }
 
 INCLUDE_ASM(const s32, "ingame/clear/prg/game_result", func_001AB0F8);
@@ -91,7 +92,6 @@ INCLUDE_ASM(const s32, "ingame/clear/prg/game_result", func_001AC338);
 
 INCLUDE_ASM(const s32, "ingame/clear/prg/game_result", func_001AC468);
 
-void func_001AC490(void) {
-}
+INCLUDE_ASM(const s32, "ingame/clear/prg/game_result", func_001AC490);
 
 INCLUDE_ASM(const s32, "ingame/clear/prg/game_result", func_001AC498);

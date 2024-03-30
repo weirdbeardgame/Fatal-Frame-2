@@ -34,7 +34,6 @@ INCLUDE_ASM(const s32, "ingame/map/MapSky", MapSkyProc__Fv);
 
 INCLUDE_ASM(const s32, "ingame/map/MapSky", MapSkyInit__FUi);
 
-void func_001133A0(void) {
-}
+INCLUDE_ASM(const s32, "ingame/map/MapSky", func_001133A0);
 
 INCLUDE_ASM(const s32, "ingame/map/MapSky", func_001133A8);

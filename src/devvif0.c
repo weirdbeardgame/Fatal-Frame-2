@@ -1562,7 +1562,8 @@ INCLUDE_ASM(const s32, "devvif0", __terminate);
 
 INCLUDE_ASM(const s32, "devvif0", __throw_type_match);
 
-void __empty(void) {
+inline void __empty(void)
+{
 }
 
 INCLUDE_ASM(const s32, "devvif0", func_0029D0F8);
@@ -1609,7 +1610,8 @@ INCLUDE_ASM(const s32, "devvif0", func_0029DC58);
 
 INCLUDE_ASM(const s32, "devvif0", func_0029DCC0);
 
-void __unwinding_cleanup(void) {
+inline void __unwinding_cleanup(void)
+{
 }
 
 INCLUDE_ASM(const s32, "devvif0", func_0029DD78);
@@ -2108,20 +2110,15 @@ INCLUDE_ASM(const s32, "devvif0", func_002AF320);
 
 INCLUDE_ASM(const s32, "devvif0", func_002AF3A8);
 
-void func_002AF3B0(void) {
-}
+INCLUDE_ASM(const s32, "devvif0", func_002AF3B0);
 
-void func_002AF3B8(void) {
-}
+INCLUDE_ASM(const s32, "devvif0", func_002AF3B8);
 
-void func_002AF3C0(void) {
-}
+INCLUDE_ASM(const s32, "devvif0", func_002AF3C0);
 
-void func_002AF3C8(void) {
-}
+INCLUDE_ASM(const s32, "devvif0", func_002AF3C8);
 
-void func_002AF3D0(void) {
-}
+INCLUDE_ASM(const s32, "devvif0", func_002AF3D0);
 
 INCLUDE_ASM(const s32, "devvif0", func_002AF3D8);
 
@@ -2619,8 +2616,7 @@ INCLUDE_ASM(const s32, "devvif0", func_002B4AD0);
 
 INCLUDE_ASM(const s32, "devvif0", func_002B4B28);
 
-void func_002B4B68(void) {
-}
+INCLUDE_ASM(const s32, "devvif0", func_002B4B68);
 
 INCLUDE_ASM(const s32, "devvif0", func_002B4B70);
 
@@ -2636,10 +2632,7 @@ INCLUDE_ASM(const s32, "devvif0", func_002B4C90);
 
 INCLUDE_ASM(const s32, "devvif0", func_002B4CA8);
 
-INCLUDE_ASM(const s32, "devvif0", func_002B4CC8);
-
-void func_002B4CF8(void) {
-}
+INCLUDE_ASM(const s32, "devvif0", func_002B4CF8);
 
 INCLUDE_ASM(const s32, "devvif0", func_002B4D00);
 
@@ -2713,10 +2706,7 @@ INCLUDE_ASM(const s32, "devvif0", func_002B66D8);
 
 INCLUDE_ASM(const s32, "devvif0", func_002B6718);
 
-INCLUDE_ASM(const s32, "devvif0", func_002B6758);
-
-void func_002B6790(void) {
-}
+INCLUDE_ASM(const s32, "devvif0", func_002B6790);
 
 INCLUDE_ASM(const s32, "devvif0", func_002B6798);
 
@@ -2905,5 +2895,3 @@ INCLUDE_ASM(const s32, "devvif0", func_002B8FA8);
 INCLUDE_ASM(const s32, "devvif0", func_002B8FE8);
 
 INCLUDE_ASM(const s32, "devvif0", func_002B9040);
-
-INCLUDE_ASM(const s32, "devvif0", func_002B9098);

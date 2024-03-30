@@ -18,7 +18,8 @@ INCLUDE_ASM(const s32, "outgame/gallery_disp", func_001A71D0);
 
 INCLUDE_ASM(const s32, "outgame/gallery_disp", func_001A7358);
 
-void GalleryDispMovie__Fv(void) {
+inline void GalleryDispMovie__Fv(void)
+{
 }
 
 INCLUDE_ASM(const s32, "outgame/gallery_disp", func_001A7518);

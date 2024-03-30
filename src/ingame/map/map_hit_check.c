@@ -350,8 +350,7 @@ INCLUDE_ASM(const s32, "ingame/map/map_hit_check", MemoryCardAssert__FPce);
 
 INCLUDE_ASM(const s32, "ingame/map/map_hit_check", MemoryCardWarning__FPce);
 
-void func_001E2D88(void) {
-}
+INCLUDE_ASM(const s32, "ingame/map/map_hit_check", func_001E2D88);
 
 INCLUDE_ASM(const s32, "ingame/map/map_hit_check", func_001E2D90);
 
@@ -517,8 +516,7 @@ INCLUDE_ASM(const s32, "ingame/map/map_hit_check", DebugAllFirstMemoGet__Fv);
 
 INCLUDE_ASM(const s32, "ingame/map/map_hit_check", DebugAllSecondMemoGet__Fv);
 
-void func_001E5828(void) {
-}
+INCLUDE_ASM(const s32, "ingame/map/map_hit_check", func_001E5828);
 
 INCLUDE_ASM(const s32, "ingame/map/map_hit_check", func_001E5830);
 
@@ -1164,8 +1162,7 @@ INCLUDE_ASM(const s32, "ingame/map/map_hit_check", func_001F8C30);
 
 INCLUDE_ASM(const s32, "ingame/map/map_hit_check", func_001F8D90);
 
-void func_001F8F58(void) {
-}
+INCLUDE_ASM(const s32, "ingame/map/map_hit_check", func_001F8F58);
 
 INCLUDE_ASM(const s32, "ingame/map/map_hit_check", func_001F8F60);
 
@@ -1237,8 +1234,7 @@ INCLUDE_ASM(const s32, "ingame/map/map_hit_check", func_001FB3F8);
 
 INCLUDE_ASM(const s32, "ingame/map/map_hit_check", func_001FB540);
 
-void func_001FB5D0(void) {
-}
+INCLUDE_ASM(const s32, "ingame/map/map_hit_check", func_001FB5D0);
 
 INCLUDE_ASM(const s32, "ingame/map/map_hit_check", func_001FB5D8);
 
@@ -1340,8 +1336,7 @@ INCLUDE_ASM(const s32, "ingame/map/map_hit_check", func_001FF750);
 
 INCLUDE_ASM(const s32, "ingame/map/map_hit_check", func_001FF878);
 
-void func_001FF8E0(void) {
-}
+INCLUDE_ASM(const s32, "ingame/map/map_hit_check", func_001FF8E0);
 
 INCLUDE_ASM(const s32, "ingame/map/map_hit_check", func_001FF8E8);
 
@@ -1409,10 +1404,7 @@ INCLUDE_ASM(const s32, "ingame/map/map_hit_check", func_00200E90);
 
 INCLUDE_ASM(const s32, "ingame/map/map_hit_check", func_00200F10);
 
-INCLUDE_ASM(const s32, "ingame/map/map_hit_check", func_00201140);
-
-void func_002011D0(void) {
-}
+INCLUDE_ASM(const s32, "ingame/map/map_hit_check", func_002011D0);
 
 INCLUDE_ASM(const s32, "ingame/map/map_hit_check", func_002011D8);
 
@@ -1568,8 +1560,7 @@ INCLUDE_ASM(const s32, "ingame/map/map_hit_check", func_00206480);
 
 INCLUDE_ASM(const s32, "ingame/map/map_hit_check", func_002064F8);
 
-void func_00206560(void) {
-}
+INCLUDE_ASM(const s32, "ingame/map/map_hit_check", func_00206560);
 
 INCLUDE_ASM(const s32, "ingame/map/map_hit_check", func_00206568);
 
@@ -1659,8 +1650,7 @@ INCLUDE_ASM(const s32, "ingame/map/map_hit_check", func_00208B58);
 
 INCLUDE_ASM(const s32, "ingame/map/map_hit_check", SetSave_ListCompDispFlg__FP12MC_SAVE_DATA);
 
-void func_00208B98(void) {
-}
+INCLUDE_ASM(const s32, "ingame/map/map_hit_check", func_00208B98);
 
 INCLUDE_ASM(const s32, "ingame/map/map_hit_check", func_00208BA0);
 
@@ -1764,7 +1754,8 @@ INCLUDE_ASM(const s32, "ingame/map/map_hit_check", SetASCIIString3__FiffiUcUcUcU
 
 INCLUDE_ASM(const s32, "ingame/map/map_hit_check", SetASCIIString4__FiffiUcUcUcPc);
 
-void SetWString2__FiffUcUcUcPc(void) {
+inline void SetWString2__FiffUcUcUcPc(void)
+{
 }
 
 INCLUDE_ASM(const s32, "ingame/map/map_hit_check", SetString__FffPCce);
@@ -1959,7 +1950,8 @@ INCLUDE_ASM(const s32, "ingame/map/map_hit_check", mimSetOriVertex__FP8MIME_DAT)
 
 INCLUDE_ASM(const s32, "ingame/map/map_hit_check", mimSetVertex__FP8ANI_CTRL);
 
-void mimClearToScene__Fv(void) {
+inline void mimClearToScene__Fv(void)
+{
 }
 
 INCLUDE_ASM(const s32, "ingame/map/map_hit_check", mimClearAllVertex__FP8ANI_CTRL);
@@ -2336,8 +2328,7 @@ INCLUDE_ASM(const s32, "ingame/map/map_hit_check", func_0021A120);
 
 INCLUDE_ASM(const s32, "ingame/map/map_hit_check", func_0021A310);
 
-void func_0021A320(void) {
-}
+INCLUDE_ASM(const s32, "ingame/map/map_hit_check", func_0021A320);
 
 INCLUDE_ASM(const s32, "ingame/map/map_hit_check", func_0021A328);
 
@@ -2511,8 +2502,7 @@ INCLUDE_ASM(const s32, "ingame/map/map_hit_check", SetRT2BaseMtx__FP8ANI_CTRLPfT
 
 INCLUDE_ASM(const s32, "ingame/map/map_hit_check", motGetLocalWorldMatrix__FPA3_fPUii);
 
-void func_0021EA18(void) {
-}
+INCLUDE_ASM(const s32, "ingame/map/map_hit_check", func_0021EA18);
 
 INCLUDE_ASM(const s32, "ingame/map/map_hit_check", func_0021EA20);
 
@@ -2574,8 +2564,7 @@ INCLUDE_ASM(const s32, "ingame/map/map_hit_check", movie_projecterWork__Fv);
 
 INCLUDE_ASM(const s32, "ingame/map/map_hit_check", movie_projecterDraw__Fv);
 
-void func_0021F658(void) {
-}
+INCLUDE_ASM(const s32, "ingame/map/map_hit_check", func_0021F658);
 
 INCLUDE_ASM(const s32, "ingame/map/map_hit_check", func_0021F660);
 
@@ -2687,7 +2676,8 @@ INCLUDE_ASM(const s32, "ingame/map/map_hit_check", MovieTitleDispMain__Fiiiic);
 
 INCLUDE_ASM(const s32, "ingame/map/map_hit_check", MovieTitleBaseDisp__FfffUcUi);
 
-void MovieTitleEnd__Fv(void) {
+inline void MovieTitleEnd__Fv(void)
+{
 }
 
 INCLUDE_ASM(const s32, "ingame/map/map_hit_check", my_mallocInit__FP10_MY_MALLOCPvi);
@@ -2834,7 +2824,8 @@ INCLUDE_ASM(const s32, "ingame/map/map_hit_check", ResetCharge__12CNPlyrCamera);
 
 INCLUDE_ASM(const s32, "ingame/map/map_hit_check", ReqNoiseUp__12CNPlyrCamera);
 
-void ReqNoiseReset__12CNPlyrCamera(void) {
+inline void ReqNoiseReset__12CNPlyrCamera(void)
+{
 }
 
 INCLUDE_ASM(const s32, "ingame/map/map_hit_check", Main__12CNPlyrCamera);
@@ -3177,7 +3168,8 @@ INCLUDE_ASM(const s32, "ingame/map/map_hit_check", init_Boot_PadCheck__Fv);
 
 INCLUDE_ASM(const s32, "ingame/map/map_hit_check", one_Boot_PadCheck__F11GPHASE_ENUM);
 
-void end_Boot_PadCheck__Fv(void) {
+inline void end_Boot_PadCheck__Fv(void)
+{
 }
 
 INCLUDE_ASM(const s32, "ingame/map/map_hit_check", func_0022D040);
@@ -3330,7 +3322,8 @@ INCLUDE_ASM(const s32, "ingame/map/map_hit_check", FurnPhotoFlgUp__Fv);
 
 INCLUDE_ASM(const s32, "ingame/map/map_hit_check", FurnPhotoFlgIsUp__Fv);
 
-void PhotoDebug__Fv(void) {
+inline void PhotoDebug__Fv(void)
+{
 }
 
 INCLUDE_ASM(const s32, "ingame/map/map_hit_check", func_00231FF8);
@@ -3375,7 +3368,8 @@ INCLUDE_ASM(const s32, "ingame/map/map_hit_check", photo_datFlgDown__Fi);
 
 INCLUDE_ASM(const s32, "ingame/map/map_hit_check", photo_datObjStart__FP8MDAT_OBJ);
 
-void photo_datRelease__Fv(void) {
+inline void photo_datRelease__Fv(void)
+{
 }
 
 INCLUDE_ASM(const s32, "ingame/map/map_hit_check", func_00232650);
@@ -3518,7 +3512,8 @@ INCLUDE_ASM(const s32, "ingame/map/map_hit_check", ReleasePlayer__Fv);
 
 INCLUDE_ASM(const s32, "ingame/map/map_hit_check", ClrEneSta__Fv);
 
-void PlyrDebug__Fv(void) {
+inline void PlyrDebug__Fv(void)
+{
 }
 
 INCLUDE_ASM(const s32, "ingame/map/map_hit_check", PlayerMainCmn__Fi);
@@ -3627,7 +3622,8 @@ INCLUDE_ASM(const s32, "ingame/map/map_hit_check", PlyrFinderCtrl__Fv);
 
 INCLUDE_ASM(const s32, "ingame/map/map_hit_check", EneFrameHitChk__Fv);
 
-void FModeScreenEffect__Fv(void) {
+inline void FModeScreenEffect__Fv(void)
+{
 }
 
 INCLUDE_ASM(const s32, "ingame/map/map_hit_check", NearEneInfo__FP9PLCMN_WRK);
@@ -3636,7 +3632,8 @@ INCLUDE_ASM(const s32, "ingame/map/map_hit_check", NearAllEneInfo__FP9PLCMN_WRK)
 
 INCLUDE_ASM(const s32, "ingame/map/map_hit_check", PlyrDWalkTmCtrl__FP9PLCMN_WRK);
 
-void PlyrCamTurnChk__Fv(void) {
+inline void PlyrCamTurnChk__Fv(void)
+{
 }
 
 INCLUDE_ASM(const s32, "ingame/map/map_hit_check", func_00239C60);
@@ -3933,8 +3930,7 @@ INCLUDE_ASM(const s32, "ingame/map/map_hit_check", SetSave_RoomInInfo__FP12MC_SA
 
 INCLUDE_ASM(const s32, "ingame/map/map_hit_check", DebugAllMapDisp__Fv);
 
-void func_00240A90(void) {
-}
+INCLUDE_ASM(const s32, "ingame/map/map_hit_check", func_00240A90);
 
 INCLUDE_ASM(const s32, "ingame/map/map_hit_check", func_00240A98);
 
@@ -3996,7 +3992,8 @@ INCLUDE_ASM(const s32, "ingame/map/map_hit_check", init_Puzzle_InConf__Fv);
 
 INCLUDE_ASM(const s32, "ingame/map/map_hit_check", one_Puzzle_InConf__F11GPHASE_ENUM);
 
-void end_Puzzle_InConf__Fv(void) {
+inline void end_Puzzle_InConf__Fv(void)
+{
 }
 
 INCLUDE_ASM(const s32, "ingame/map/map_hit_check", init_Puzzle_CrossFade__Fv);
@@ -4041,8 +4038,7 @@ INCLUDE_ASM(const s32, "ingame/map/map_hit_check", one_Puzzle_Kai2__F11GPHASE_EN
 
 INCLUDE_ASM(const s32, "ingame/map/map_hit_check", end_Puzzle_Kai2__Fv);
 
-void func_00241CF0(void) {
-}
+INCLUDE_ASM(const s32, "ingame/map/map_hit_check", func_00241CF0);
 
 INCLUDE_ASM(const s32, "ingame/map/map_hit_check", func_00241CF8);
 
@@ -4184,8 +4180,7 @@ INCLUDE_ASM(const s32, "ingame/map/map_hit_check", SixPuzzleCrossScreenDisp__Fii
 
 INCLUDE_ASM(const s32, "ingame/map/map_hit_check", func_00244E70);
 
-void func_00244EF0(void) {
-}
+INCLUDE_ASM(const s32, "ingame/map/map_hit_check", func_00244EF0);
 
 INCLUDE_ASM(const s32, "ingame/map/map_hit_check", func_00244EF8);
 
@@ -4273,19 +4268,22 @@ INCLUDE_ASM(const s32, "ingame/map/map_hit_check", SavePointBackGroundLoadReq__F
 
 INCLUDE_ASM(const s32, "ingame/map/map_hit_check", SavePointEnd__Fv);
 
-void init_SavePoint_FadeIn__Fv(void) {
+inline void init_SavePoint_FadeIn__Fv(void)
+{
 }
 
 INCLUDE_ASM(const s32, "ingame/map/map_hit_check", one_SavePoint_FadeIn__F11GPHASE_ENUM);
 
-void end_SavePoint_FadeIn__Fv(void) {
+inline void end_SavePoint_FadeIn__Fv(void)
+{
 }
 
 INCLUDE_ASM(const s32, "ingame/map/map_hit_check", init_SavePoint_FadeOut__Fv);
 
 INCLUDE_ASM(const s32, "ingame/map/map_hit_check", one_SavePoint_FadeOut__F11GPHASE_ENUM);
 
-void end_SavePoint_FadeOut__Fv(void) {
+inline void end_SavePoint_FadeOut__Fv(void)
+{
 }
 
 INCLUDE_ASM(const s32, "ingame/map/map_hit_check", SavePoint_MenuWinDisp__FiiUc);
@@ -4374,7 +4372,8 @@ INCLUDE_ASM(const s32, "ingame/map/map_hit_check", init_SavePoint_Top__Fv);
 
 INCLUDE_ASM(const s32, "ingame/map/map_hit_check", one_SavePoint_Top__F11GPHASE_ENUM);
 
-void end_SavePoint_Top__Fv(void) {
+inline void end_SavePoint_Top__Fv(void)
+{
 }
 
 INCLUDE_ASM(const s32, "ingame/map/map_hit_check", init_SavePoint_Save__Fv);
@@ -4387,7 +4386,8 @@ INCLUDE_ASM(const s32, "ingame/map/map_hit_check", init_SavePoint_Album__Fv);
 
 INCLUDE_ASM(const s32, "ingame/map/map_hit_check", one_SavePoint_Album__F11GPHASE_ENUM);
 
-void end_SavePoint_Album__Fv(void) {
+inline void end_SavePoint_Album__Fv(void)
+{
 }
 
 INCLUDE_ASM(const s32, "ingame/map/map_hit_check", func_00248138);
@@ -4526,7 +4526,8 @@ INCLUDE_ASM(const s32, "ingame/map/map_hit_check", func_0024C100);
 
 INCLUDE_ASM(const s32, "ingame/map/map_hit_check", SceneSetSquare__FiffffUcUcUcUc);
 
-void SceneCheckModelEntry__FP10SCENE_CTRL(void) {
+inline void SceneCheckModelEntry__FP10SCENE_CTRL(void)
+{
 }
 
 INCLUDE_ASM(const s32, "ingame/map/map_hit_check", InitSceneWork__Fv);
@@ -4861,7 +4862,8 @@ INCLUDE_ASM(const s32, "ingame/map/map_hit_check", func_002559A8);
 
 INCLUDE_ASM(const s32, "ingame/map/map_hit_check", Init__11CSearchMark);
 
-void Release__11CSearchMark(void) {
+inline void Release__11CSearchMark(void)
+{
 }
 
 INCLUDE_ASM(const s32, "ingame/map/map_hit_check", Work__11CSearchMark);
@@ -4920,7 +4922,8 @@ INCLUDE_ASM(const s32, "ingame/map/map_hit_check", init_Title_SetupMenu__Fv);
 
 INCLUDE_ASM(const s32, "ingame/map/map_hit_check", one_Title_SetupMenu__F11GPHASE_ENUM);
 
-void end_Title_SetupMenu__Fv(void) {
+inline void end_Title_SetupMenu__Fv(void)
+{
 }
 
 INCLUDE_ASM(const s32, "ingame/map/map_hit_check", init_Title_Mission__Fv);
@@ -4929,7 +4932,8 @@ INCLUDE_ASM(const s32, "ingame/map/map_hit_check", pre_Title_Mission__F11GPHASE_
 
 INCLUDE_ASM(const s32, "ingame/map/map_hit_check", after_Title_Mission__F11GPHASE_ENUM);
 
-void end_Title_Mission__Fv(void) {
+inline void end_Title_Mission__Fv(void)
+{
 }
 
 INCLUDE_ASM(const s32, "ingame/map/map_hit_check", init_Mission_Sel__Fv);
@@ -4942,14 +4946,16 @@ INCLUDE_ASM(const s32, "ingame/map/map_hit_check", init_Mission_Cam__Fv);
 
 INCLUDE_ASM(const s32, "ingame/map/map_hit_check", one_Mission_Cam__F11GPHASE_ENUM);
 
-void end_Mission_Cam__Fv(void) {
+inline void end_Mission_Cam__Fv(void)
+{
 }
 
 INCLUDE_ASM(const s32, "ingame/map/map_hit_check", init_Mission_Album__Fv);
 
 INCLUDE_ASM(const s32, "ingame/map/map_hit_check", one_Mission_Album__F11GPHASE_ENUM);
 
-void end_Mission_Album__Fv(void) {
+inline void end_Mission_Album__Fv(void)
+{
 }
 
 INCLUDE_ASM(const s32, "ingame/map/map_hit_check", init_Mission_Save__Fv);
@@ -5156,7 +5162,8 @@ INCLUDE_ASM(const s32, "ingame/map/map_hit_check", SisNeckRegisterTarget__FP14_L
 
 INCLUDE_ASM(const s32, "ingame/map/map_hit_check", SetSisNeckFlg__Fi);
 
-void DbgSisLookPointCtrl__Fv(void) {
+inline void DbgSisLookPointCtrl__Fv(void)
+{
 }
 
 INCLUDE_ASM(const s32, "ingame/map/map_hit_check", func_0025B8D0);
@@ -5217,12 +5224,14 @@ INCLUDE_ASM(const s32, "ingame/map/map_hit_check", SetSisWrk__Fi);
 
 INCLUDE_ASM(const s32, "ingame/map/map_hit_check", ModeSisTrace__Fv);
 
-void ModeSisFind__Fv(void) {
+inline void ModeSisFind__Fv(void)
+{
 }
 
 INCLUDE_ASM(const s32, "ingame/map/map_hit_check", ModeSisBattle__Fv);
 
-void ModeSisTalk__Fv(void) {
+inline void ModeSisTalk__Fv(void)
+{
 }
 
 INCLUDE_ASM(const s32, "ingame/map/map_hit_check", ModeSisSearch__Fv);
@@ -5297,7 +5306,8 @@ INCLUDE_ASM(const s32, "ingame/map/map_hit_check", SetSearchMode__Fv);
 
 INCLUDE_ASM(const s32, "ingame/map/map_hit_check", SetSisEscape__Fv);
 
-void SetFindMode__FPfi(void) {
+inline void SetFindMode__FPfi(void)
+{
 }
 
 INCLUDE_ASM(const s32, "ingame/map/map_hit_check", MoveSisStairs__Fv);
@@ -5386,8 +5396,7 @@ INCLUDE_ASM(const s32, "ingame/map/map_hit_check", SetSave_PlyrSoulList__FP12MC_
 
 INCLUDE_ASM(const s32, "ingame/map/map_hit_check", DebugGetAllSoulList__Fv);
 
-void func_00263260(void) {
-}
+INCLUDE_ASM(const s32, "ingame/map/map_hit_check", func_00263260);
 
 INCLUDE_ASM(const s32, "ingame/map/map_hit_check", func_00263268);
 
@@ -5793,7 +5802,8 @@ INCLUDE_ASM(const s32, "ingame/map/map_hit_check", init_Title_Top__Fv);
 
 INCLUDE_ASM(const s32, "ingame/map/map_hit_check", one_Title_Top__F11GPHASE_ENUM);
 
-void end_Title_Top__Fv(void) {
+inline void end_Title_Top__Fv(void)
+{
 }
 
 INCLUDE_ASM(const s32, "ingame/map/map_hit_check", init_Title_Menu__Fv);
@@ -5850,14 +5860,16 @@ INCLUDE_ASM(const s32, "ingame/map/map_hit_check", init_Title_Chapter_Sel__Fv);
 
 INCLUDE_ASM(const s32, "ingame/map/map_hit_check", one_Title_Chapter_Sel__F11GPHASE_ENUM);
 
-void end_Title_Chapter_Sel__Fv(void) {
+inline void end_Title_Chapter_Sel__Fv(void)
+{
 }
 
 INCLUDE_ASM(const s32, "ingame/map/map_hit_check", init_Title_Move_Movie__Fv);
 
 INCLUDE_ASM(const s32, "ingame/map/map_hit_check", one_Title_Move_Movie__F11GPHASE_ENUM);
 
-void end_Title_Move_Movie__Fv(void) {
+inline void end_Title_Move_Movie__Fv(void)
+{
 }
 
 INCLUDE_ASM(const s32, "ingame/map/map_hit_check", func_00269770);
@@ -6114,8 +6126,7 @@ INCLUDE_ASM(const s32, "ingame/map/map_hit_check", GetPercent__16C_ZERO2_PERF_CN
 
 INCLUDE_ASM(const s32, "ingame/map/map_hit_check", GetPercentFromMark__16C_ZERO2_PERF_CNT);
 
-void func_0026D6B8(void) {
-}
+INCLUDE_ASM(const s32, "ingame/map/map_hit_check", func_0026D6B8);
 
 INCLUDE_ASM(const s32, "ingame/map/map_hit_check", func_0026D6C0);
 
@@ -6499,12 +6510,14 @@ INCLUDE_ASM(const s32, "ingame/map/map_hit_check", sndGetNeedSize);
 
 INCLUDE_ASM(const s32, "ingame/map/map_hit_check", SndInit);
 
-void SndInitAfter_ee_iopInit(void) {
+inline void SndInitAfter_ee_iopInit(void)
+{
 }
 
 INCLUDE_ASM(const s32, "ingame/map/map_hit_check", SndMain);
 
-void SndFremaAfterMain(void) {
+inline void SndFremaAfterMain(void)
+{
 }
 
 INCLUDE_ASM(const s32, "ingame/map/map_hit_check", SndSetEffect);

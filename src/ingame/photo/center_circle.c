@@ -10,10 +10,12 @@ INCLUDE_ASM(const s32, "ingame/photo/center_circle", func_0012D848);
 
 INCLUDE_ASM(const s32, "ingame/photo/center_circle", Init__13CCenterCircle);
 
-void FrameReset__13CCenterCircle(void) {
+inline void FrameReset__13CCenterCircle(void)
+{
 }
 
-void SetMode__13CCenterCirclei(void) {
+inline void SetMode__13CCenterCirclei(void)
+{
 }
 
 INCLUDE_ASM(const s32, "ingame/photo/center_circle", SetHintFlg__13CCenterCirclei);

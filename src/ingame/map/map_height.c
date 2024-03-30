@@ -34,7 +34,6 @@ INCLUDE_ASM(const s32, "ingame/map/map_height", func_001DC248);
 
 INCLUDE_ASM(const s32, "ingame/map/map_height", func_001DC430);
 
-void func_001DC520(void) {
-}
+INCLUDE_ASM(const s32, "ingame/map/map_height", func_001DC520);
 
 INCLUDE_ASM(const s32, "ingame/map/map_height", func_001DC528);

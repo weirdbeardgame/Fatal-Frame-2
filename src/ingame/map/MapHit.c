@@ -32,7 +32,8 @@ INCLUDE_ASM(const s32, "ingame/map/MapHit", MapHitCheckCol__FPffii);
 
 INCLUDE_ASM(const s32, "ingame/map/MapHit", MapHitInit__Fv);
 
-void MapHitTerm__Fv(void) {
+inline void MapHitTerm__Fv(void)
+{
 }
 
 INCLUDE_ASM(const s32, "ingame/map/MapHit", MapHitSetDoorRec__Fiii);
@@ -51,7 +52,8 @@ INCLUDE_ASM(const s32, "ingame/map/MapHit", MapHitSetDoorZ__Ff);
 
 INCLUDE_ASM(const s32, "ingame/map/MapHit", MapTesCallbackHit__FP11MAPHIT_HEADP10MAPHIT_DATi);
 
-void func_001094E0(void) {
+inline void __static_initialization_and_destruction_1(void)
+{
 }
 
 INCLUDE_ASM(const s32, "ingame/map/MapHit", func_001094E8);

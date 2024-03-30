@@ -66,7 +66,8 @@ INCLUDE_ASM(const s32, "ingame/map/MapObjReg", MapObjRegistPhf__FiPc);
 
 INCLUDE_ASM(const s32, "ingame/map/MapObjReg", MapObjRegInit__Fv);
 
-void func_00110798(void) {
+inline void __static_initialization_and_destruction_2(void)
+{
 }
 
 INCLUDE_ASM(const s32, "ingame/map/MapObjReg", func_001107A0);

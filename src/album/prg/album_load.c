@@ -72,7 +72,6 @@ INCLUDE_ASM(const s32, "album/prg/album_load", func_001259D0);
 
 INCLUDE_ASM(const s32, "album/prg/album_load", func_00125DD0);
 
-void func_00125EE8(void) {
-}
+INCLUDE_ASM(const s32, "album/prg/album_load", func_00125EE8);
 
 INCLUDE_ASM(const s32, "album/prg/album_load", func_00125EF0);

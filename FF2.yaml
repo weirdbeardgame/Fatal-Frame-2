@@ -9,7 +9,7 @@ options:
   compiler: GCC
   find_file_boundaries: False
   platform: ps2
-  rodata_string_guesser_level: 2 # improve string detection
+  #rodata_string_guesser_level: 2 # improve string detection
   create_undefined_funcs_auto: False
   undefined_funcs_auto_path: undefined_funcs_auto.txt
   create_undefined_syms_auto: True
@@ -21,7 +21,7 @@ options:
   extensions_path: tools/splat_ext
   section_order: [".text", ".data", ".rodata", ".bss"]
   auto_all_sections: [".data", ".rodata", ".bss"]
-  subalign: 8
+  subalign: 1
   disasm_unknown: True
   named_regs_for_c_funcs: False
 segments:
@@ -30,12 +30,12 @@ segments:
     type: code
     start: 0x1000
     vram: 0x100000
-    #align: 4
+    align: 4
     subsegments:
       - [0x1000, asm, entry]
       - [0x1008, asm, sce/crt0]
       - [0x1258, c, ingame/map/CBuff]
-      - [0x14d0, cpp, graphics/graph3d/CDebugEdit]
+      - [0x14d0, asm, graphics/graph3d/CDebugEdit]
       - [0x1db0, c, ingame/plyr/ChrSort]
       - [0x23d8, c, debug/DbFurnPre]
       - [0x2a38, c, common/FileSt]
@@ -113,11 +113,11 @@ segments:
       - [0xda240, c, ingame/map/map_camera]
       - [0xdc7d8, c, ingame/map/map_height]
       - [0xdd548, c, ingame/map/map_hit_check]
-
       - [0x17e250, c, devvu0]
       - [0x17e9b8, c, devvif0]
+      - [0x1ba098, c, unk] # functions that appear below the sdk!?
 
-  - [0x1ba0a0, databin] # .vutext
+  - [0x1bb0a0, databin] # .vutext
   - [0x1c4c78, databin] # .reginfo
   - [0x2ed800, databin, lit4]
   - [0x2f4a80, rodatabin, sbss]
