@@ -7,8 +7,8 @@ import subprocess
 import sys
 import re
 
-from   pathlib import Path
-from   typing  import Dict, List, Set, Union
+from pathlib import Path
+from typing import Dict, List, Set, Union
 
 from fix_gp import main as fix_gp_main
 
@@ -16,7 +16,7 @@ import ninja_syntax
 
 import splat
 import splat.scripts.split as split
-from   splat.segtypes.linker_entry import LinkerEntry
+from splat.segtypes.linker_entry import LinkerEntry
 
 ROOT = Path(__file__).parent
 TOOLS_DIR = ROOT / "tools"
@@ -24,11 +24,13 @@ TOOLS_DIR = ROOT / "tools"
 YAML_FILE = "FF2.yaml"
 BASENAME = "SLES_523.84"
 LD_PATH = f"{BASENAME}.ld"
-ELF_PATH = f"{BASENAME}"
+ELF_PATH = f"build/{BASENAME}"
 MAP_PATH = f"build/{BASENAME}.map"
 PRE_ELF_PATH = f"build/{BASENAME}.elf"
 
-COMMON_INCLUDES = "-Iinclude -isystem include/sdk/ee -isystem include/gcc -isystem include/main"
+COMMON_INCLUDES = (
+    "-Iinclude -isystem include/sdk/ee -isystem include/gcc -isystem include/main"
+)
 
 COMPILER = "ee-gcc2.96"
 GAME_CC_DIR = f"{TOOLS_DIR}/cc/{COMPILER}/bin"
@@ -36,9 +38,7 @@ LIB_CC_DIR = f"{TOOLS_DIR}/cc/{COMPILER}/bin"
 
 GAME_COMPILE_CMD = f"{GAME_CC_DIR}/ee-gcc -c {COMMON_INCLUDES} -O2 -G8 -g -x c++"
 
-LIB_COMPILE_CMD = (
-    f"{LIB_CC_DIR}/ee-gcc -c -isystem include/gcc-9.26 {COMMON_INCLUDES} -O2 -G8 -g -x c++"
-)
+LIB_COMPILE_CMD = f"{LIB_CC_DIR}/ee-gcc -c -isystem include/gcc-9.26 {COMMON_INCLUDES} -O2 -G8 -g -x c++"
 
 WIBO_VER = "0.6.4"
 
@@ -141,7 +141,6 @@ def build_stuff(linker_entries: List[LinkerEntry]):
         description="elf $out",
         command=f"{cross}objcopy $in $out -O binary",
     )
-
 
     for entry in linker_entries:
         seg = entry.segment
