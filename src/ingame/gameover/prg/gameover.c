@@ -18,23 +18,17 @@ INCLUDE_ASM(const s32, "ingame/gameover/prg/gameover", func_001AC610);
 
 INCLUDE_ASM(const s32, "ingame/gameover/prg/gameover", GameOverScreenBgDisp__FUcUcUcUcUi);
 
-inline void init_Story_GameOver_Eff__Fv(void)
-{
-}
+INCLUDE_ASM(const s32, "ingame/gameover/prg/gameover", init_Story_GameOver_Eff__Fv);
 
 INCLUDE_ASM(const s32, "ingame/gameover/prg/gameover", one_Story_GameOver_Eff__F11GPHASE_ENUM);
 
-inline void end_Story_GameOver_Eff__Fv(void)
-{
-}
+INCLUDE_ASM(const s32, "ingame/gameover/prg/gameover", end_Story_GameOver_Eff__Fv);
 
 INCLUDE_ASM(const s32, "ingame/gameover/prg/gameover", init_Story_GameOver_Fade__Fv);
 
 INCLUDE_ASM(const s32, "ingame/gameover/prg/gameover", one_Story_GameOver_Fade__F11GPHASE_ENUM);
 
-inline void end_Story_GameOver_Fade__Fv(void)
-{
-}
+INCLUDE_ASM(const s32, "ingame/gameover/prg/gameover", end_Story_GameOver_Fade__Fv);
 
 INCLUDE_ASM(const s32, "ingame/gameover/prg/gameover", init_Story_GameOver_Movie__Fv);
 
@@ -86,9 +80,7 @@ INCLUDE_ASM(const s32, "ingame/gameover/prg/gameover", init_GameOver_Menu_Top__F
 
 INCLUDE_ASM(const s32, "ingame/gameover/prg/gameover", one_GameOver_Menu_Top__F11GPHASE_ENUM);
 
-inline void end_GameOver_Menu_Top__Fv(void)
-{
-}
+INCLUDE_ASM(const s32, "ingame/gameover/prg/gameover", end_GameOver_Menu_Top__Fv);
 
 INCLUDE_ASM(const s32, "ingame/gameover/prg/gameover", init_GameOver_Menu_Load__Fv);
 
@@ -100,9 +92,7 @@ INCLUDE_ASM(const s32, "ingame/gameover/prg/gameover", init_GameOver_Menu_Album_
 
 INCLUDE_ASM(const s32, "ingame/gameover/prg/gameover", one_GameOver_Menu_Album__F11GPHASE_ENUM);
 
-inline void end_GameOver_Menu_Album__Fv(void)
-{
-}
+INCLUDE_ASM(const s32, "ingame/gameover/prg/gameover", end_GameOver_Menu_Album__Fv);
 
 INCLUDE_ASM(const s32, "ingame/gameover/prg/gameover", func_001ACFD0);
 

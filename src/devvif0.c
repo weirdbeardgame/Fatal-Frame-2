@@ -12,7 +12,7 @@ INCLUDE_ASM(const s32, "devvif0", sceDevVif1PutErr);
 
 INCLUDE_ASM(const s32, "devvif0", sceDevVif1GetErr);
 
-INCLUDE_ASM(const s32, "devvif0", func_0027DB18);
+INCLUDE_ASM(const s32, "devvif0", sceDevVif1Sync);
 
 INCLUDE_ASM(const s32, "devvif0", sceDevVif1GetCnd);
 
@@ -314,7 +314,7 @@ INCLUDE_ASM(const s32, "devvif0", iEnableDmac);
 
 INCLUDE_ASM(const s32, "devvif0", iDisableDmac);
 
-INCLUDE_ASM(const s32, "devvif0", func_0027E8D0);
+INCLUDE_ASM(const s32, "devvif0", topThread);
 
 INCLUDE_ASM(const s32, "devvif0", InitThread);
 
@@ -326,9 +326,9 @@ INCLUDE_ASM(const s32, "devvif0", iSuspendThread);
 
 INCLUDE_ASM(const s32, "devvif0", DelayThread);
 
-INCLUDE_ASM(const s32, "devvif0", func_0027ECF8);
+INCLUDE_ASM(const s32, "devvif0", _DelayThreadHandler);
 
-INCLUDE_ASM(const s32, "devvif0", func_0027ED20);
+INCLUDE_ASM(const s32, "devvif0", kputchar);
 
 INCLUDE_ASM(const s32, "devvif0", func_0027ED60);
 
@@ -1562,9 +1562,7 @@ INCLUDE_ASM(const s32, "devvif0", __terminate);
 
 INCLUDE_ASM(const s32, "devvif0", __throw_type_match);
 
-inline void __empty(void)
-{
-}
+INCLUDE_ASM(const s32, "devvif0", __empty);
 
 INCLUDE_ASM(const s32, "devvif0", func_0029D0F8);
 
@@ -1610,9 +1608,7 @@ INCLUDE_ASM(const s32, "devvif0", func_0029DC58);
 
 INCLUDE_ASM(const s32, "devvif0", func_0029DCC0);
 
-inline void __unwinding_cleanup(void)
-{
-}
+INCLUDE_ASM(const s32, "devvif0", __unwinding_cleanup);
 
 INCLUDE_ASM(const s32, "devvif0", func_0029DD78);
 
@@ -2632,6 +2628,8 @@ INCLUDE_ASM(const s32, "devvif0", func_002B4C90);
 
 INCLUDE_ASM(const s32, "devvif0", func_002B4CA8);
 
+INCLUDE_ASM(const s32, "devvif0", func_002B4CC8);
+
 INCLUDE_ASM(const s32, "devvif0", func_002B4CF8);
 
 INCLUDE_ASM(const s32, "devvif0", func_002B4D00);
@@ -2705,6 +2703,8 @@ INCLUDE_ASM(const s32, "devvif0", func_002B6608);
 INCLUDE_ASM(const s32, "devvif0", func_002B66D8);
 
 INCLUDE_ASM(const s32, "devvif0", func_002B6718);
+
+INCLUDE_ASM(const s32, "devvif0", func_002B6758);
 
 INCLUDE_ASM(const s32, "devvif0", func_002B6790);
 

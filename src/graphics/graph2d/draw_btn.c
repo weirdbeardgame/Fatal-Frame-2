@@ -138,9 +138,7 @@ INCLUDE_ASM(const s32, "graphics/graph2d/draw_btn", GetFileTitle__C5CFile);
 
 INCLUDE_ASM(const s32, "graphics/graph2d/draw_btn", GetFilePath__C5CFile);
 
-inline void WriteString__10CStdioFilePCc(void)
-{
-}
+INCLUDE_ASM(const s32, "graphics/graph2d/draw_btn", WriteString__10CStdioFilePCc);
 
 INCLUDE_ASM(const s32, "graphics/graph2d/draw_btn", ReadString__10CStdioFilePcUi);
 
@@ -446,9 +444,7 @@ INCLUDE_ASM(const s32, "graphics/graph2d/draw_btn", func_001420C0);
 
 INCLUDE_ASM(const s32, "graphics/graph2d/draw_btn", InitEffectEne__Fv);
 
-inline void InitEffectEneEF__Fv(void)
-{
-}
+INCLUDE_ASM(const s32, "graphics/graph2d/draw_btn", InitEffectEneEF__Fv);
 
 INCLUDE_ASM(const s32, "graphics/graph2d/draw_btn", func_001421A8);
 
@@ -1060,13 +1056,9 @@ INCLUDE_ASM(const s32, "graphics/graph2d/draw_btn", func_0015BFC0);
 
 INCLUDE_ASM(const s32, "graphics/graph2d/draw_btn", func_0015BFF8);
 
-inline void Reserve2DPacket__FUi(void)
-{
-}
+INCLUDE_ASM(const s32, "graphics/graph2d/draw_btn", Reserve2DPacket__FUi);
 
-inline void Reserve2DPacket_Load__Fv(void)
-{
-}
+INCLUDE_ASM(const s32, "graphics/graph2d/draw_btn", Reserve2DPacket_Load__Fv);
 
 INCLUDE_ASM(const s32, "graphics/graph2d/draw_btn", SortEffectPacket__Fv);
 
@@ -1148,9 +1140,7 @@ INCLUDE_ASM(const s32, "graphics/graph2d/draw_btn", func_0015DA00);
 
 INCLUDE_ASM(const s32, "graphics/graph2d/draw_btn", InitEffectRdr__Fi);
 
-inline void InitEffectRdrEF__Fv(void)
-{
-}
+INCLUDE_ASM(const s32, "graphics/graph2d/draw_btn", InitEffectRdrEF__Fv);
 
 INCLUDE_ASM(const s32, "graphics/graph2d/draw_btn", func_0015DAB8);
 
@@ -1294,9 +1284,7 @@ INCLUDE_ASM(const s32, "graphics/graph2d/draw_btn", SubFadeFrame__FUcUi);
 
 INCLUDE_ASM(const s32, "graphics/graph2d/draw_btn", SetFadeFrame__FP11EFFECT_CONT);
 
-inline void ChangeMonochrome__Fi(void)
-{
-}
+INCLUDE_ASM(const s32, "graphics/graph2d/draw_btn", ChangeMonochrome__Fi);
 
 INCLUDE_ASM(const s32, "graphics/graph2d/draw_btn", func_00164628);
 
@@ -1350,9 +1338,7 @@ INCLUDE_ASM(const s32, "graphics/graph2d/draw_btn", Set3DPosTexure__FPA3_fP8DRAW
 
 INCLUDE_ASM(const s32, "graphics/graph2d/draw_btn", Set3DPosTexure2__FPA3_fP8DRAW_ENViffUcUcUcUci);
 
-inline void CamSave__Fv(void)
-{
-}
+INCLUDE_ASM(const s32, "graphics/graph2d/draw_btn", CamSave__Fv);
 
 INCLUDE_ASM(const s32, "graphics/graph2d/draw_btn", CamChangeCheck__Fv);
 
@@ -1538,17 +1524,13 @@ INCLUDE_ASM(const s32, "graphics/graph2d/draw_btn", func_0016B1D8);
 
 INCLUDE_ASM(const s32, "graphics/graph2d/draw_btn", func_0016B210);
 
-inline void init_Ending_Movie__Fv(void)
-{
-}
+INCLUDE_ASM(const s32, "graphics/graph2d/draw_btn", init_Ending_Movie__Fv);
 
 INCLUDE_ASM(const s32, "graphics/graph2d/draw_btn", pre_Ending_Movie__F11GPHASE_ENUM);
 
 INCLUDE_ASM(const s32, "graphics/graph2d/draw_btn", after_Ending_Movie__F11GPHASE_ENUM);
 
-inline void end_Ending_Movie__Fv(void)
-{
-}
+INCLUDE_ASM(const s32, "graphics/graph2d/draw_btn", end_Ending_Movie__Fv);
 
 INCLUDE_ASM(const s32, "graphics/graph2d/draw_btn", init_Ending_Normal1__Fv);
 
@@ -2022,13 +2004,9 @@ INCLUDE_ASM(const s32, "graphics/graph2d/draw_btn", EJobM0A__FP10ENEALG_WRK);
 
 INCLUDE_ASM(const s32, "graphics/graph2d/draw_btn", EJobM0B__FP10ENEALG_WRK);
 
-inline void EJobM0C__FP10ENEALG_WRK(void)
-{
-}
+INCLUDE_ASM(const s32, "graphics/graph2d/draw_btn", EJobM0C__FP10ENEALG_WRK);
 
-inline void EJobM0D__FP10ENEALG_WRK(void)
-{
-}
+INCLUDE_ASM(const s32, "graphics/graph2d/draw_btn", EJobM0D__FP10ENEALG_WRK);
 
 INCLUDE_ASM(const s32, "graphics/graph2d/draw_btn", EJobM0E__FP10ENEALG_WRK);
 
@@ -2180,9 +2158,7 @@ INCLUDE_ASM(const s32, "graphics/graph2d/draw_btn", release_typeSetSaveJ__FP12MC
 
 INCLUDE_ASM(const s32, "graphics/graph2d/draw_btn", release_typeSetSaveA__FP12MC_SAVE_DATA);
 
-inline void release_typeClear__Fv(void)
-{
-}
+INCLUDE_ASM(const s32, "graphics/graph2d/draw_btn", release_typeClear__Fv);
 
 INCLUDE_ASM(const s32, "graphics/graph2d/draw_btn", release_typeInit__Fv);
 
@@ -3046,23 +3022,15 @@ INCLUDE_ASM(const s32, "graphics/graph2d/draw_btn", func_0018A9C0);
 
 INCLUDE_ASM(const s32, "graphics/graph2d/draw_btn", func_0018A9F8);
 
-inline void init_EventMsg_Disp__Fv(void)
-{
-}
+INCLUDE_ASM(const s32, "graphics/graph2d/draw_btn", init_EventMsg_Disp__Fv);
 
-inline void end_EventMsg_Disp__Fv(void)
-{
-}
+INCLUDE_ASM(const s32, "graphics/graph2d/draw_btn", end_EventMsg_Disp__Fv);
 
 INCLUDE_ASM(const s32, "graphics/graph2d/draw_btn", one_EventMsg_Disp__F11GPHASE_ENUM);
 
-inline void init_EventFile_Disp__Fv(void)
-{
-}
+INCLUDE_ASM(const s32, "graphics/graph2d/draw_btn", init_EventFile_Disp__Fv);
 
-inline void end_EventFile_Disp__Fv(void)
-{
-}
+INCLUDE_ASM(const s32, "graphics/graph2d/draw_btn", end_EventFile_Disp__Fv);
 
 INCLUDE_ASM(const s32, "graphics/graph2d/draw_btn", one_EventFile_Disp__F11GPHASE_ENUM);
 
@@ -3352,13 +3320,9 @@ INCLUDE_ASM(const s32, "graphics/graph2d/draw_btn", func_0018F6B0);
 
 INCLUDE_ASM(const s32, "graphics/graph2d/draw_btn", func_0018F6E8);
 
-inline void RTModeOn__9CFilamentii(void)
-{
-}
+INCLUDE_ASM(const s32, "graphics/graph2d/draw_btn", RTModeOn__9CFilamentii);
 
-inline void RTModeOff__9CFilament(void)
-{
-}
+INCLUDE_ASM(const s32, "graphics/graph2d/draw_btn", RTModeOff__9CFilament);
 
 INCLUDE_ASM(const s32, "graphics/graph2d/draw_btn", SetSave__9CFilamentP12MC_SAVE_DATA);
 
@@ -3512,9 +3476,7 @@ INCLUDE_ASM(const s32, "graphics/graph2d/draw_btn", DispPointNumberNew__FissUc);
 
 INCLUDE_ASM(const s32, "graphics/graph2d/draw_btn", DispCameraCharge__Fssi);
 
-inline void ChargeDispReset__Fv(void)
-{
-}
+INCLUDE_ASM(const s32, "graphics/graph2d/draw_btn", ChargeDispReset__Fv);
 
 INCLUDE_ASM(const s32, "graphics/graph2d/draw_btn", DispCaptureCircleNew__Fss);
 
@@ -3728,13 +3690,9 @@ INCLUDE_ASM(const s32, "graphics/graph2d/draw_btn", GetFreqCamera__Fv);
 
 INCLUDE_ASM(const s32, "graphics/graph2d/draw_btn", InitShibataSet__Fv);
 
-inline void SetShibataSet__Fv(void)
-{
-}
+INCLUDE_ASM(const s32, "graphics/graph2d/draw_btn", SetShibataSet__Fv);
 
-inline void CheckHintTex__Fv(void)
-{
-}
+INCLUDE_ASM(const s32, "graphics/graph2d/draw_btn", CheckHintTex__Fv);
 
 INCLUDE_ASM(const s32, "graphics/graph2d/draw_btn", DrawPerformanceCounter2__Fi);
 
@@ -3746,9 +3704,7 @@ INCLUDE_ASM(const s32, "graphics/graph2d/draw_btn", func_001982F0);
 
 INCLUDE_ASM(const s32, "graphics/graph2d/draw_btn", func_00198328);
 
-inline void InitG2DDraw__Fv(void)
-{
-}
+INCLUDE_ASM(const s32, "graphics/graph2d/draw_btn", InitG2DDraw__Fv);
 
 INCLUDE_ASM(const s32, "graphics/graph2d/draw_btn", CopySprDToSpr__FP9DISP_SPRTP8SPRT_DAT);
 
@@ -3800,9 +3756,7 @@ INCLUDE_ASM(const s32, "graphics/graph2d/draw_btn", SetPK2DRefTag__FiUi);
 
 INCLUDE_ASM(const s32, "graphics/graph2d/draw_btn", TermPK2Dbuf__Fv);
 
-inline void AddCNTtag__FP10Q_WORDDATAi(void)
-{
-}
+INCLUDE_ASM(const s32, "graphics/graph2d/draw_btn", AddCNTtag__FP10Q_WORDDATAi);
 
 INCLUDE_ASM(const s32, "graphics/graph2d/draw_btn", SetPK2DImageTrans__FUii);
 
@@ -3822,9 +3776,7 @@ INCLUDE_ASM(const s32, "graphics/graph2d/draw_btn", func_0019AC28);
 
 INCLUDE_ASM(const s32, "graphics/graph2d/draw_btn", func_0019AC60);
 
-inline void InitGraph2dON__Fv(void)
-{
-}
+INCLUDE_ASM(const s32, "graphics/graph2d/draw_btn", InitGraph2dON__Fv);
 
 INCLUDE_ASM(const s32, "graphics/graph2d/draw_btn", InitGraph2dBoot__Fv);
 
@@ -3934,13 +3886,9 @@ INCLUDE_ASM(const s32, "graphics/graph2d/draw_btn", _GetLineInfo__Fv);
 
 INCLUDE_ASM(const s32, "graphics/graph2d/draw_btn", g3ddbgWaitVU1__Fv);
 
-inline void g3ddbgDumpVu1MicroMemory__Fv(void)
-{
-}
+INCLUDE_ASM(const s32, "graphics/graph2d/draw_btn", g3ddbgDumpVu1MicroMemory__Fv);
 
-inline void DispVUMemory__Fv(void)
-{
-}
+INCLUDE_ASM(const s32, "graphics/graph2d/draw_btn", DispVUMemory__Fv);
 
 INCLUDE_ASM(const s32, "graphics/graph2d/draw_btn", _PrintVector__FPCfPCc);
 
@@ -3952,13 +3900,9 @@ INCLUDE_ASM(const s32, "graphics/graph2d/draw_btn", g3ddbgStoreVu0FloatingPointR
 
 INCLUDE_ASM(const s32, "graphics/graph2d/draw_btn", g3ddbgDumpVu0FloatingPointRegisters__FPA3_Cf);
 
-inline void g3ddbgVerifyVu1MemAddress__Fv(void)
-{
-}
+INCLUDE_ASM(const s32, "graphics/graph2d/draw_btn", g3ddbgVerifyVu1MemAddress__Fv);
 
-inline void g3ddbgVerifyGsRegisterAddress__Fv(void)
-{
-}
+INCLUDE_ASM(const s32, "graphics/graph2d/draw_btn", g3ddbgVerifyGsRegisterAddress__Fv);
 
 INCLUDE_ASM(const s32, "graphics/graph2d/draw_btn", g3ddbgVerifyVifCode__FPC9tVIF_CODE);
 

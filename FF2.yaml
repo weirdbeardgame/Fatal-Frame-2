@@ -6,11 +6,12 @@ options:
   target_path: SLES_523.84
   gp_value: 0x3f57f0
   base_path: .
-  compiler: GCC
+  compiler: EEGCC
   find_file_boundaries: False
   platform: ps2
+  string_encoding: EUC-JP
   #rodata_string_guesser_level: 2 # improve string detection
-  auto_decompile_empty_functions: True
+  auto_decompile_empty_functions: False
   create_undefined_funcs_auto: False
   undefined_funcs_auto_path: undefined_funcs_auto.txt
   create_undefined_syms_auto: True
@@ -20,9 +21,21 @@ options:
   src_path: src
   build_path: build
   extensions_path: tools/splat_ext
-  section_order: [".text", ".data", ".rodata", ".bss"]
-  auto_all_sections: [".data", ".rodata", ".bss"]
-  subalign: 1
+  section_order:
+    [
+      ".text",
+      ".vutext",
+      ".data",
+      ".vudata",
+      ".rodata",
+      ".lit4",
+      ".sdata",
+      ".sbss",
+      ".bss",
+      ".vubss",
+    ]
+  auto_all_sections: [".data", ".sdata", ".sbss", ".lit4", ".rodata", ".bss"]
+  subalign: 8
   disasm_unknown: True
   named_regs_for_c_funcs: False
 segments:
@@ -30,7 +43,7 @@ segments:
   - name: main
     type: code
     start: 0x1000
-    vram: 0x100000
+    vram: 0x00100000
     align: 4
     subsegments:
       - [0x1000, asm, entry]
@@ -105,7 +118,6 @@ segments:
       - [0xb09a8, c, main/gphase]
       - [0xb0d38, c, graphics/gra3d]
 
-      #- [0xba1e0, rodata, main/gphase]
       - [0xd8270, c, outgame/logo]
       - [0xd88b8, c, ingame/plyr/m_plyr_camera]
       - [0xd8d18, c, main/main]
@@ -117,13 +129,34 @@ segments:
       - [0x17e250, c, devvu0]
       - [0x17e9b8, c, devvif0]
       - [0x1ba098, c, unk] # functions that appear below the sdk!?
+      - [0x1bb0a0, textbin, vutext] # .vutext
 
-  - [0x1bb0a0, databin] # .vutext
-  - [0x1c4c78, databin] # .reginfo
-  - [0x2ed800, databin, lit4]
-  - [0x2f4a80, rodatabin, sbss]
-  - [0x2f5500, rodatabin, bss]
-  #- [0x29aa00, databin] # pad
-  #- [0x29b000, databin] # .mfifo
-  #- [0x218178, data, main/gphase]
+    # ######
+  - name: reg_info
+    type: databin
+    start: 0x1c4c78
+  #- name: lit4
+  #  type: lit4
+  #  start: 0x2ed800
+  #  vram: 0x3ed800
+  - name: sdata
+    type: sdata
+    start: 0x2efa80
+    vram: 0x3eea80
+  #- name: sbss
+  # type: sbss
+  # start: 0x2f4a80
+  # vram: 0x3f4a80
+  #- name: bss
+  #  type: bss
+  #  start: 0x2f5500
+  #  vram: 0x3f5500
+  # - name: vubss
+  #   type: databin
+  #   start: 0x25888c
+  #   vram: 0x40a8b0
+  - name: mips_debug
+    type: databin
+    start: 0x2f5ac4
+    vram: 0x000000
   - [0x31034636]

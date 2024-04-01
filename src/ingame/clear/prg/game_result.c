@@ -48,9 +48,7 @@ INCLUDE_ASM(const s32, "ingame/clear/prg/game_result", init_GameResult_Top__Fv);
 
 INCLUDE_ASM(const s32, "ingame/clear/prg/game_result", one_GameResult_Top__F11GPHASE_ENUM);
 
-inline void end_GameResult_Top__Fv(void)
-{
-}
+INCLUDE_ASM(const s32, "ingame/clear/prg/game_result", end_GameResult_Top__Fv);
 
 INCLUDE_ASM(const s32, "ingame/clear/prg/game_result", func_001AB0F8);
 

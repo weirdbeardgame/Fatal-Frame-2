@@ -22,13 +22,9 @@ INCLUDE_ASM(const s32, "graphics/gra3d", gra3dLightDataAddOffsetPosition__FP14GR
 
 INCLUDE_ASM(const s32, "graphics/gra3d", gra3dLightEnableAll__Fi);
 
-inline void gra3dLightEnablePush__Fv(void)
-{
-}
+INCLUDE_ASM(const s32, "graphics/gra3d", gra3dLightEnablePush__Fv);
 
-inline void gra3dLightEnablePop__Fv(void)
-{
-}
+INCLUDE_ASM(const s32, "graphics/gra3d", gra3dLightEnablePop__Fv);
 
 INCLUDE_ASM(const s32, "graphics/gra3d", gra3dLightPushData__Fv);
 
@@ -166,9 +162,7 @@ INCLUDE_ASM(const s32, "graphics/gra3d", SetVU1Header__Fv);
 
 INCLUDE_ASM(const s32, "graphics/gra3d", gra3dIsLightTypeEnable__F12G3DLIGHTTYPE);
 
-inline void gra3dEnableLightType__F12G3DLIGHTTYPEi(void)
-{
-}
+INCLUDE_ASM(const s32, "graphics/gra3d", gra3dEnableLightType__F12G3DLIGHTTYPEi);
 
 INCLUDE_ASM(const s32, "graphics/gra3d", gra3dSetAmbient__FPCf);
 
@@ -188,9 +182,7 @@ INCLUDE_ASM(const s32, "graphics/gra3d", gra3dGetLightStatusRef__Fi);
 
 INCLUDE_ASM(const s32, "graphics/gra3d", gra3dApplyLight__Fv);
 
-inline void gra3dDrawPrimitive__FPCvi(void)
-{
-}
+INCLUDE_ASM(const s32, "graphics/gra3d", gra3dDrawPrimitive__FPCvi);
 
 INCLUDE_ASM(const s32, "graphics/gra3d", g3dGetVu1MaterialCache__F12G3DLIGHTTYPEi);
 
@@ -300,9 +292,7 @@ INCLUDE_ASM(const s32, "graphics/gra3d", gra3ddbgDrawLine__FPCfT0Ui);
 
 INCLUDE_ASM(const s32, "graphics/gra3d", gra3ddbgDrawPoint__FPCfUi);
 
-inline void gra3ddbgVerifyVu1MemAddress__Fv(void)
-{
-}
+INCLUDE_ASM(const s32, "graphics/gra3d", gra3ddbgVerifyVu1MemAddress__Fv);
 
 INCLUDE_ASM(const s32, "graphics/gra3d", gra3ddbgDrawSphere__FPCffUiT0);
 
@@ -312,9 +302,7 @@ INCLUDE_ASM(const s32, "graphics/gra3d", gra3ddbgDrawSprite__FPC10G3DFREGIONfUiP
 
 INCLUDE_ASM(const s32, "graphics/gra3d", gra3ddbgDrawBB__FPA3_CfUi);
 
-inline void gra3ddbgDrawProc__Fv(void)
-{
-}
+INCLUDE_ASM(const s32, "graphics/gra3d", gra3ddbgDrawProc__Fv);
 
 INCLUDE_ASM(const s32, "graphics/gra3d", gra3ddbgVerifyVifCodex4__FPC9tVIF_CODE);
 
@@ -726,9 +714,7 @@ INCLUDE_ASM(const s32, "graphics/gra3d", SetSquareZ__Fiffffi);
 
 INCLUDE_ASM(const s32, "graphics/gra3d", SetSquareSN__FiffffUcUcUcUc);
 
-inline void SetSquareN__FiffffffffUcUcUcUc(void)
-{
-}
+INCLUDE_ASM(const s32, "graphics/gra3d", SetSquareN__FiffffffffUcUcUcUc);
 
 INCLUDE_ASM(const s32, "graphics/gra3d", SetTriangle__FiffffffUcUcUcUc);
 
@@ -944,9 +930,7 @@ INCLUDE_ASM(const s32, "graphics/gra3d", SetIngameDoorMode__Fi);
 
 INCLUDE_ASM(const s32, "graphics/gra3d", SendIngameEventLoadEndFlg__Fi);
 
-inline void SetIngameEventModeFlg__Fi(void)
-{
-}
+INCLUDE_ASM(const s32, "graphics/gra3d", SetIngameEventModeFlg__Fi);
 
 INCLUDE_ASM(const s32, "graphics/gra3d", SetIngameEffectModeTime__Fi);
 
@@ -982,25 +966,19 @@ INCLUDE_ASM(const s32, "graphics/gra3d", end_Story_NowLoading__Fv);
 
 INCLUDE_ASM(const s32, "graphics/gra3d", init_Story_Load_Mission__Fv);
 
-inline void end_Story_Load_Mission__Fv(void)
-{
-}
+INCLUDE_ASM(const s32, "graphics/gra3d", end_Story_Load_Mission__Fv);
 
 INCLUDE_ASM(const s32, "graphics/gra3d", one_Story_Load_Mission__F11GPHASE_ENUM);
 
 INCLUDE_ASM(const s32, "graphics/gra3d", init_Story_Load_Mission_Save__Fv);
 
-inline void end_Story_Load_Mission_Save__Fv(void)
-{
-}
+INCLUDE_ASM(const s32, "graphics/gra3d", end_Story_Load_Mission_Save__Fv);
 
 INCLUDE_ASM(const s32, "graphics/gra3d", one_Story_Load_Mission_Save__F11GPHASE_ENUM);
 
 INCLUDE_ASM(const s32, "graphics/gra3d", init_Story_Load_Mission_Event__Fv);
 
-inline void end_Story_Load_Mission_Event__Fv(void)
-{
-}
+INCLUDE_ASM(const s32, "graphics/gra3d", end_Story_Load_Mission_Event__Fv);
 
 INCLUDE_ASM(const s32, "graphics/gra3d", one_Story_Load_Mission_Event__F11GPHASE_ENUM);
 
@@ -1018,17 +996,13 @@ INCLUDE_ASM(const s32, "graphics/gra3d", IngameDrawSub__Fv);
 
 INCLUDE_ASM(const s32, "graphics/gra3d", init_Story_Normal__Fv);
 
-inline void end_Story_Normal__Fv(void)
-{
-}
+INCLUDE_ASM(const s32, "graphics/gra3d", end_Story_Normal__Fv);
 
 INCLUDE_ASM(const s32, "graphics/gra3d", one_Story_Normal__F11GPHASE_ENUM);
 
 INCLUDE_ASM(const s32, "graphics/gra3d", init_Story_Game_Over_Pre__Fv);
 
-inline void end_Story_Game_Over_Pre__Fv(void)
-{
-}
+INCLUDE_ASM(const s32, "graphics/gra3d", end_Story_Game_Over_Pre__Fv);
 
 INCLUDE_ASM(const s32, "graphics/gra3d", one_Story_Game_Over_Pre__F11GPHASE_ENUM);
 
@@ -1044,33 +1018,21 @@ INCLUDE_ASM(const s32, "graphics/gra3d", end_Story_Door_Open__Fv);
 
 INCLUDE_ASM(const s32, "graphics/gra3d", one_Story_Door_Open__F11GPHASE_ENUM);
 
-inline void init_Story_Ene_Dead__Fv(void)
-{
-}
+INCLUDE_ASM(const s32, "graphics/gra3d", init_Story_Ene_Dead__Fv);
 
-inline void end_Story_Ene_Dead__Fv(void)
-{
-}
+INCLUDE_ASM(const s32, "graphics/gra3d", end_Story_Ene_Dead__Fv);
 
 INCLUDE_ASM(const s32, "graphics/gra3d", one_Story_Ene_Dead__F11GPHASE_ENUM);
 
-inline void init_Story_Debug__Fv(void)
-{
-}
+INCLUDE_ASM(const s32, "graphics/gra3d", init_Story_Debug__Fv);
 
-inline void end_Story_Debug__Fv(void)
-{
-}
+INCLUDE_ASM(const s32, "graphics/gra3d", end_Story_Debug__Fv);
 
 INCLUDE_ASM(const s32, "graphics/gra3d", one_Story_Debug__F11GPHASE_ENUM);
 
-inline void init_Story_Debug_Cam__Fv(void)
-{
-}
+INCLUDE_ASM(const s32, "graphics/gra3d", init_Story_Debug_Cam__Fv);
 
-inline void end_Story_Debug_Cam__Fv(void)
-{
-}
+INCLUDE_ASM(const s32, "graphics/gra3d", end_Story_Debug_Cam__Fv);
 
 INCLUDE_ASM(const s32, "graphics/gra3d", one_Story_Debug_Cam__F11GPHASE_ENUM);
 
@@ -1124,9 +1086,7 @@ INCLUDE_ASM(const s32, "graphics/gra3d", end_Story_Game_Over__Fv);
 
 INCLUDE_ASM(const s32, "graphics/gra3d", init_Story_Effect__Fv);
 
-inline void end_Story_Effect__Fv(void)
-{
-}
+INCLUDE_ASM(const s32, "graphics/gra3d", end_Story_Effect__Fv);
 
 INCLUDE_ASM(const s32, "graphics/gra3d", one_Story_Effect__F11GPHASE_ENUM);
 
@@ -1146,9 +1106,7 @@ INCLUDE_ASM(const s32, "graphics/gra3d", after_Story_SavePoint__F11GPHASE_ENUM);
 
 INCLUDE_ASM(const s32, "graphics/gra3d", end_Story_SavePoint__Fv);
 
-inline void init_Story_Movie_Room__Fv(void)
-{
-}
+INCLUDE_ASM(const s32, "graphics/gra3d", init_Story_Movie_Room__Fv);
 
 INCLUDE_ASM(const s32, "graphics/gra3d", end_Story_Movie_Room__Fv);
 
@@ -1360,9 +1318,7 @@ INCLUDE_ASM(const s32, "graphics/gra3d", func_001CD748);
 
 INCLUDE_ASM(const s32, "graphics/gra3d", func_001CD780);
 
-inline void ItemDbg_PlyrItemLink__Fv(void)
-{
-}
+INCLUDE_ASM(const s32, "graphics/gra3d", ItemDbg_PlyrItemLink__Fv);
 
 INCLUDE_ASM(const s32, "graphics/gra3d", func_001CD7C0);
 

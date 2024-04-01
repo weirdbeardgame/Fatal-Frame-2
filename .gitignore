@@ -1,7 +1,9 @@
 .venv/
 build/
+build-old/
 assets/
 asm/
+__pycache__/
 .ninja_log
 .splache
 build.ninja

@@ -26,9 +26,7 @@ INCLUDE_ASM(const s32, "graphics/scene/IngameScene", after_Story_Scene__F11GPHAS
 
 INCLUDE_ASM(const s32, "graphics/scene/IngameScene", init_Story_Scene_PreLoad__Fv);
 
-inline void end_Story_Scene_PreLoad__Fv(void)
-{
-}
+INCLUDE_ASM(const s32, "graphics/scene/IngameScene", end_Story_Scene_PreLoad__Fv);
 
 INCLUDE_ASM(const s32, "graphics/scene/IngameScene", one_Story_Scene_PreLoad__F11GPHASE_ENUM);
 
@@ -48,9 +46,7 @@ INCLUDE_ASM(const s32, "graphics/scene/IngameScene", after_Story_Movie__F11GPHAS
 
 INCLUDE_ASM(const s32, "graphics/scene/IngameScene", init_Story_Movie_PreLoad__Fv);
 
-inline void end_Story_Movie_PreLoad__Fv(void)
-{
-}
+INCLUDE_ASM(const s32, "graphics/scene/IngameScene", end_Story_Movie_PreLoad__Fv);
 
 INCLUDE_ASM(const s32, "graphics/scene/IngameScene", one_Story_Movie_PreLoad__F11GPHASE_ENUM);
 

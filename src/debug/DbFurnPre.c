@@ -1,6 +1,6 @@
 #include "common.h"
 
-INCLUDE_ASM(const s32, "debug/DbFurnPre", func_001013D8);
+INCLUDE_ASM(const s32, "debug/DbFurnPre", _fixed_array_assert__FPCcUiUi);
 
 INCLUDE_ASM(const s32, "debug/DbFurnPre", func_00101408);
 

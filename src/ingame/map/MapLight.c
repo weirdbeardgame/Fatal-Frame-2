@@ -58,9 +58,7 @@ INCLUDE_ASM(const s32, "ingame/map/MapLight", MapMeiRegistLightOne__FP8G3DLIGHT)
 
 INCLUDE_ASM(const s32, "ingame/map/MapLight", MapMeiInit__FP14GRA3DLIGHTDATA);
 
-inline void MapMeiTerm__Fv(void)
-{
-}
+INCLUDE_ASM(const s32, "ingame/map/MapLight", MapMeiTerm__Fv);
 
 INCLUDE_ASM(const s32, "ingame/map/MapLight", func_0010B150);
 

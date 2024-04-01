@@ -1,12 +1,13 @@
 _start                                                                                                                        = 0x00100008;
 _exit                                                                                                                         = 0x00100248;
+_fixed_array_assert__FPCcUiUi                                                                                                 = 0x00100258;
 CBuffGetRegistNum__Fv                                                                                                         = 0x00100330;
 CBuffGetStr__Fi                                                                                                               = 0x00100338;
 CBuffSetStr__FPc                                                                                                              = 0x00100368;
 CBuffReset__Fv                                                                                                                = 0x00100400;
 CBuffInit__Fii                                                                                                                = 0x00100440;
 CBuffTerm__Fv                                                                                                                 = 0x00100498;
-custom_allocate__Q23ctlt16custom_allocator1ZP11IEditObjectUi                                                                  = 0x001004d0;
+__9CEditRoot                                                                                                                  = 0x001004d0;
 __9CEditRootPCcP9CEditRoot                                                                                                    = 0x001006d8;
 _$_9CEditRoot                                                                                                                 = 0x001009a8;
 Create__9CEditRootPCc                                                                                                         = 0x00100a80;
@@ -16,6 +17,7 @@ SwitchNextItem__9CEditRoot                                                      
 SwitchPrevItem__9CEditRoot                                                                                                    = 0x00100c80;
 GetObject__9CEditRooti                                                                                                        = 0x00100c88;
 GetObject__9CEditRootPCci                                                                                                     = 0x00100cc0;
+//_fixed_array_assert__FPCcUiUi                                                                                                 = 0x00100db0;
 ChrSortSetFlg__Fi                                                                                                             = 0x00100e88;
 ChrSortDelFlg__Fi                                                                                                             = 0x00100e98;
 ChrSortEnemCallback__Fv                                                                                                       = 0x00100eb0;
@@ -31,12 +33,14 @@ ChrSortRegistSis__Fv                                                            
 ChrSortRegistPlayr__Fv                                                                                                        = 0x001012b8;
 ChrSortDelete__Fi                                                                                                             = 0x00101308;
 ChrSortInit__Fv                                                                                                               = 0x00101360;
+//_fixed_array_assert__FPCcUiUi                                                                                                 = 0x001013D8;
 DbFurnPreGetNumOneType__FiiPci                                                                                                = 0x00101538;
 DbFurnPreGetDat__FiPci                                                                                                        = 0x00101638;
 DbFurnPreGetObjNum__FiPc                                                                                                      = 0x001016f8;
 DbFurnPreSetBuffID__Fi                                                                                                        = 0x00101798;
 DbFurnPreProc__Fv                                                                                                             = 0x001017c8;
 FileStGetType__Fi                                                                                                             = 0x00101a38;
+//_fixed_array_assert__FPCcUiUi                                                                                                 = 0x00101a70;
 FurnCtlCheckKakuType__FPcT0                                                                                                   = 0x00101b48;
 FurnCtlGetType__FPc                                                                                                           = 0x00101b98;
 FurnCtlGetMdoelName__FPcT0                                                                                                    = 0x00101bc0;
@@ -69,9 +73,11 @@ FurnWorkFreeAll__Fv                                                             
 FurnWorkInit__Fv                                                                                                              = 0x001028c0;
 FurnWorkTrem__Fv                                                                                                              = 0x001028e0;
 __static_initialization_and_destruction_0                                                                                     = 0x001028e8;
+//_fixed_array_assert__FPCcUiUi                                                                                                 = 0x00102910;
 FurnLoadGetAttr__FPc                                                                                                          = 0x00102ab8;
 FurnLoadOne__FPCcPcPi                                                                                                         = 0x00102ae8;
 FurnLoadRegID__FiiPc                                                                                                          = 0x00102ca0;
+//_fixed_array_assert__FPCcUiUi                                                                                                 = 0x00102db0;
 IngameSceneInit__Fi                                                                                                           = 0x00102e88;
 init_Story_Scene__Fv                                                                                                          = 0x001030f0;
 end_Story_Scene__Fv                                                                                                           = 0x00103130;
@@ -93,6 +99,7 @@ one_Story_Movie_PreLoad__F11GPHASE_ENUM                                         
 init_Story_Movie_Main__Fv                                                                                                     = 0x001034d8;
 end_Story_Movie_Main__Fv                                                                                                      = 0x00103510;
 one_Story_Movie_Main__F11GPHASE_ENUM                                                                                          = 0x00103568;
+//_fixed_array_assert__FPCcUiUi                                                                                                 = 0x001035c0;
 MapAnimCheckPlay__Fi                                                                                                          = 0x00103970;
 MapAnimSetFlg__Fii                                                                                                            = 0x001039e0;
 MapAnimDeleteFlg__Fii                                                                                                         = 0x00103a20;
@@ -118,6 +125,7 @@ MapManimSetMatrixSgdOne2__FP13SGDFILEHEADERi                                    
 MapManimUnitMatrix__Fi                                                                                                        = 0x00105128;
 MapManimProc__Fv                                                                                                              = 0x001051a8;
 MapManimInit__Fv                                                                                                              = 0x00105228;
+//_fixed_array_assert__FPCcUiUi                                                                                                 = 0x001052E0;
 MapDoorGetDatListPtr__Fi                                                                                                      = 0x001053b8;
 MapDoorMakeDualRoomLight__FP14GRA3DLIGHTDATAPfPv                                                                              = 0x00105420;
 MapDoorDeleteBuff__Fi                                                                                                         = 0x001055c8;
@@ -141,6 +149,7 @@ MapDoorAnimClose__Fi                                                            
 MapDoorAnimInit__FPUi                                                                                                         = 0x00107020;
 MapDoorGetModelSize__FPc                                                                                                      = 0x00107048;
 MapDoorAllPreRender__Fi                                                                                                       = 0x001071b8;
+//_fixed_array_assert__FPCcUiUi                                                                                                 = 0x00107278;
 MapDrawCalcRoomCoord__FPvPCf                                                                                                  = 0x00107350;
 MapDrawSetMatrixSGD__FPvPA3_f                                                                                                 = 0x001073e0;
 MapDrawSGD__FPv                                                                                                               = 0x00107430;
@@ -166,6 +175,7 @@ MapDrawRoomOne__FP10MLOAD_HEADP14GRA3DLIGHTDATA                                 
 MapDrawRoom__Fv                                                                                                               = 0x00108118;
 MapDrawEnableFlashlightOnly__Fi                                                                                               = 0x00108178;
 MapDrawIsEnableFlashlightOnly__Fv                                                                                             = 0x00108180;
+//_fixed_array_assert__FPCcUiUi                                                                                                 = 0x001081B0;
 MapFogGetColor__Fv                                                                                                            = 0x00108288;
 MapFogAnimStart__Fi                                                                                                           = 0x00108298;
 MapFogAnim__FP12MAP_FOG_HEADN20                                                                                               = 0x001082f0;
@@ -174,6 +184,7 @@ MapFogEndFogEv__Fi                                                              
 MapFogReset__Fv                                                                                                               = 0x00108988;
 MapFogProc__FiiPf                                                                                                             = 0x001089a8;
 MapFogDbProc__FiiPf                                                                                                           = 0x00108b68;
+//_fixed_array_assert__FPCcUiUi                                                                                                 = 0x00108b88;
 MapHitGetColLen__Fv                                                                                                           = 0x00108c60;
 MapHitGetColPoint__Fv                                                                                                         = 0x00108c68;
 MapHitSetFlg__Fii                                                                                                             = 0x00108c78;
@@ -200,6 +211,7 @@ MapLBuffLoad__Fi                                                                
 MapLBuffDeleteFile__Fii                                                                                                       = 0x00109700;
 MapLBuffSetLoadFile__Fii                                                                                                      = 0x00109768;
 MapLBuffInit__Fv                                                                                                              = 0x001097c0;
+//_fixed_array_assert__FPCcUiUi                                                                                                 = 0x00109820;
 MapLightLed__FP14GRA3DLIGHTDATA                                                                                               = 0x001098f8;
 MapLightPreRenderObj__FPvi                                                                                                    = 0x00109958;
 MapLightPreRenderObj2__FPvi                                                                                                   = 0x001099b8;
@@ -4474,6 +4486,7 @@ sceDevVif1Pause                                                                 
 sceDevVif1Continue                                                                                                            = 0x0027daa8;
 sceDevVif1PutErr                                                                                                              = 0x0027dae8;
 sceDevVif1GetErr                                                                                                              = 0x0027db08;
+sceDevVif1Sync                                                                                                                = 0x0027db18;
 sceDevVif1GetCnd                                                                                                              = 0x0027db68;
 sceDevVif1PutFifo                                                                                                             = 0x0027dd40;
 sceDevVif1GetFifo                                                                                                             = 0x0027dda0;
@@ -4624,11 +4637,14 @@ iEnableIntc                                                                     
 iDisableIntc                                                                                                                  = 0x0027e870;
 iEnableDmac                                                                                                                   = 0x0027e890;
 iDisableDmac                                                                                                                  = 0x0027e8b0;
+topThread                                                                                                                     = 0x0027e8d0;
 InitThread                                                                                                                    = 0x0027e9a8;
 iWakeupThread                                                                                                                 = 0x0027ea80;
 iRotateThreadReadyQueue                                                                                                       = 0x0027eb18;
 iSuspendThread                                                                                                                = 0x0027eb98;
 DelayThread                                                                                                                   = 0x0027ec30;
+_DelayThreadHandler                                                                                                           = 0x0027ecf8;
+kputchar                                                                                                                      = 0x0027ed20;
 _printf                                                                                                                       = 0x0027f048;
 kprintf                                                                                                                       = 0x0027f640;
 scePrintf                                                                                                                     = 0x0027f678;

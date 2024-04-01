@@ -10,6 +10,8 @@ import re
 from   pathlib import Path
 from   typing  import Dict, List, Set, Union
 
+from fix_gp import main as fix_gp_main
+
 import ninja_syntax
 
 import splat
@@ -140,6 +142,7 @@ def build_stuff(linker_entries: List[LinkerEntry]):
         command=f"{cross}objcopy $in $out -O binary",
     )
 
+
     for entry in linker_entries:
         seg = entry.segment
 
@@ -148,14 +151,38 @@ def build_stuff(linker_entries: List[LinkerEntry]):
 
         if entry.object_path is None:
             continue
-        if isinstance(seg, splat.segtypes.common.asm.CommonSegAsm) or isinstance(
-            seg, splat.segtypes.common.data.CommonSegData
+
+        if isinstance(
+            seg,
+            (
+                splat.segtypes.common.asm.CommonSegAsm,
+                splat.segtypes.common.data.CommonSegData,
+            ),
         ):
             build(entry.object_path, entry.src_paths, "as")
+
         elif isinstance(seg, splat.segtypes.common.c.CommonSegC):
-            build(entry.object_path, entry.src_paths, "cc")
-        elif isinstance(seg, splat.segtypes.common.databin.CommonSegDatabin) or isinstance(seg, splat.segtypes.common.rodatabin.CommonSegRodatabin):
+            if any(
+                str(src_path).startswith("src/lib/") for src_path in entry.src_paths
+            ):
+                build(entry.object_path, entry.src_paths, "libcc")
+
+            else:
+                # check file for cc or cc-01
+                build(entry.object_path, entry.src_paths, "cc")
+
+        elif isinstance(seg, splat.segtypes.common.databin.CommonSegDatabin):
             build(entry.object_path, entry.src_paths, "as")
+
+        elif isinstance(seg, splat.segtypes.common.rodatabin.CommonSegRodatabin):
+            build(entry.object_path, entry.src_paths, "as")
+
+        elif isinstance(seg, splat.segtypes.common.textbin.CommonSegTextbin):
+            build(entry.object_path, entry.src_paths, "as")
+
+        elif isinstance(seg, splat.segtypes.common.sbss.CommonSegSbss):
+            build(entry.object_path, entry.src_paths, "as")
+
         else:
             print(f"ERROR: Unsupported build segment type {seg.type}")
             sys.exit(1)
@@ -212,3 +239,7 @@ if __name__ == "__main__":
     build_stuff(linker_entries)
 
     write_permuter_settings()
+
+    gp_value = split.config["options"]["gp_value"]
+
+    fix_gp_main(gp_value)
