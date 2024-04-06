@@ -124,7 +124,7 @@ typedef struct
 static GPHASE_SYS gphase_sys;
 
 void InitGPhaseSys();
-//void SetInitFlag();
-//GPHASE_ENUM DoJobPhase(int layer);
+void SetInitFlag();
+GPHASE_ENUM DoJobPhase(int layer);
 void GPhaseSysMain();
 void SetNextGPhase(GPHASE_ID_ENUM id);
