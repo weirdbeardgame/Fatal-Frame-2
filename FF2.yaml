@@ -42,12 +42,11 @@ segments:
   - [0, databin, elf_header]
   - name: main
     type: code
-    start: 0x1008
-    vram: 0x100008
+    start: 0x1000
+    vram: 0x100000
     bss_size: 0x0d8bec
-    align: 1
     subsegments:
-      - [0x1008, asm, crt0.s]
+      - [0x1000, asm, crt0.s]
       - [0x1258, asm]
       # - [0x1258, c, ingame/map/CBuff]
       # - [0x14d0, asm, graphics/graph3d/CDebugEdit]
