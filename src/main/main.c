@@ -1,4 +1,5 @@
 #include "common.h"
+#include "gphase.h"
 
 INCLUDE_ASM("asm/nonmatchings/main/main", func_001D7D18);
 

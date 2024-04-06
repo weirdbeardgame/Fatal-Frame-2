@@ -6,7 +6,7 @@ options:
   target_path: SLES_523.84
   gp_value: 0x3f57f0
   base_path: .
-  compiler: EEGCC
+  compiler: GCC
   find_file_boundaries: False
   platform: ps2
   string_encoding: EUC-JP
