@@ -4,15 +4,15 @@
 #if !defined(SPLAT) && !defined(__CTX__) && !defined(PERMUTER)
 
 #ifndef INCLUDE_ASM
-#define INCLUDE_ASM(TYPE, FOLDER, NAME, ARGS...)                   \
-    __asm__(                                                       \
-        ".section .text\n"                                         \
-        "\t.set noreorder\n"                                       \
-        "\t.set noat\n"                                            \
-        "\t.include \"asm/nonmatchings/" FOLDER "/" #NAME ".s\"\n" \
-        "\t.set reorder\n"                                         \
-        "\t.set at\n"                                              \
-        "\t.globl    " #NAME ".NON_MATCHING\n"                     \
+#define INCLUDE_ASM(FOLDER, NAME)   \
+    __asm__(                                       \
+        ".section .text\n"                         \
+        "\t.set noat\n"                            \
+        "\t.set noreorder\n"                       \
+        "\t.include \"" FOLDER "/" #NAME ".s\"\n"  \
+        "\t.set reorder\n"                         \
+        "\t.set at\n"                              \
+        "\t.globl    " #NAME ".NON_MATCHING\n"     \
         "\t #NAME .NON_MATCHING  = " #NAME "\n");
 #endif
 
