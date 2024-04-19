@@ -1,4 +1,4 @@
-// File written by stdump development version on 2024-01-07
+// File written by stdump v2.0 on 2024-04-19
 // 
 // Input file:
 //   SLES_523.84
@@ -185,7 +185,7 @@ typedef struct { // 0xc
 	/* 0x8 */ void (*ini_func)(/* parameters unknown */);
 } DEBUG_MENU_DATA;
 
-typedef enum {
+enum _FADE_MODE {
 	FADE_MODE_NONE = 0,
 	FADE_MODE_IN = 1,
 	FADE_MODE_KEEP = 2,
@@ -194,7 +194,7 @@ typedef enum {
 	FADE_MODE_DOWN = 5,
 	FADE_MODE_IN_STOP = 6,
 	FADE_MODE_OUT_STOP = 7
-} _FADE_MODE;
+};
 
 typedef _FADE_MODE FADE_MODE;
 
@@ -223,16 +223,16 @@ struct _HEAP_WRK { // 0x20
 
 typedef _HEAP_WRK HEAP_WRK;
 
-typedef enum {
+enum HEAP_MEMMODE {
 	HEAPMEM_USED_SIZE = 0,
 	HEAPMEM_LEAVE_SIZE = 1
-} HEAP_MEMMODE;
+};
 
-typedef enum {
+enum _enum__SPU_CORE {
 	SPU_CORE_1 = 0,
 	SPU_CORE_2 = 1,
 	SPU_CORE_NUM = 2
-} _enum__SPU_CORE;
+};
 
 typedef _enum__SPU_CORE enum_SPU_CORE;
 
@@ -1602,7 +1602,7 @@ struct G3DMATERIAL { // 0x50
 	/* 0x44 */ int aiPad[3];
 };
 
-typedef enum {
+enum G3DLIGHTTYPE {
 	G3DLIGHT_DIRECTIONAL = 0,
 	G3DLIGHT_POINT = 1,
 	G3DLIGHT_SPOT = 2,
@@ -1610,7 +1610,7 @@ typedef enum {
 	G3DLIGHT_AMBIENT = 3,
 	INVALID_G3DLIGHTTYPE = 2147483647,
 	G3DLIGHTTYPE_FORCE_DWORD = 2147483647
-} G3DLIGHTTYPE;
+};
 
 struct G3DLIGHT { // 0x70
 	/* 0x00 */ sceVu0FVECTOR vDiffuse;
@@ -1627,7 +1627,7 @@ struct G3DLIGHT { // 0x70
 	/* 0x68 */ float afPad0[2];
 };
 
-typedef enum {
+enum G3DRENDERSTATETYPE {
 	G3DRS_LIGHTING = 0,
 	G3DRS_COLORVERTEX = 1,
 	G3DRS_SPECULARENABLE = 2,
@@ -1638,37 +1638,37 @@ typedef enum {
 	G3DRS_FOGCOLOR = 7,
 	NUM_G3DRENDERSTATETYPE = 8,
 	G3DRENDERSTATE_FORCE_DWORD = 2147483647
-} G3DRENDERSTATETYPE;
+};
 
-typedef enum {
+enum G3DGLOBALSTATETYPE {
 	G3DGS_LIGHTATTENUATIONTYPE = 0,
 	G3DGS_LIGHTINGTYPE = 1,
 	NUM_G3DGLOBALSTATETYPE = 2,
 	G3DGLOBALSTATE_FORCE_DWORD = 2147483647
-} G3DGLOBALSTATETYPE;
+};
 
-typedef enum {
+enum G3DMATERIALCOLORSOURCE {
 	G3DMCS_MATERIAL = 0,
 	G3DMCS_COLOR1 = 1,
 	G3DMCS_COLOR2 = 2,
 	G3DMCS_FORCE_DWORD = 2147483647
-} G3DMATERIALCOLORSOURCE;
+};
 
-typedef enum {
+enum G3DLIGHTATTENUATIONTYPE {
 	G3DLAT_LINEAR = 0,
 	G3DLAT_HYPERBOLIC = 1,
 	G3DLAT_FORCE_DWORD = 2147483647
-} G3DLIGHTATTENUATIONTYPE;
+};
 
-typedef enum {
+enum G3DLIGHTINGTYPE {
 	G3DLT_CONSTANT = 0,
 	G3DLT_LAMBERT = 1,
 	G3DLT_PHONG = 2,
 	NUM_G3DLIGHTINGTYPE = 3,
 	G3DLIGHTINGTYPE_FORCE_DWORD = 2147483647
-} G3DLIGHTINGTYPE;
+};
 
-typedef enum {
+enum G3DLIGHTINDEX {
 	G3DLIDX_DIRECTIONAL_0 = 0,
 	G3DLIDX_DIRECTIONAL_1 = 1,
 	G3DLIDX_DIRECTIONAL_2 = 2,
@@ -1691,7 +1691,7 @@ typedef enum {
 	G3D_MAX_LIGHT_PER_TYPE = 3,
 	INVALID_G3DLIGHTINDEX = 2147483647,
 	G3DLIGHTINDEX_FORCE_DWORD = 2147483647
-} G3DLIGHTINDEX;
+};
 
 struct G3DSCREEN { // 0x10
 	/* 0x0 */ float fWidth;
@@ -1723,14 +1723,14 @@ struct G3DVIEWPORT { // 0x18
 	/* 0x14 */ float fMaxZ;
 };
 
-typedef enum {
+enum G3DCAMPROJECTIONTYPE {
 	PT_PERSPECTIVE = 0,
 	PT_ORTHO = 1,
 	NUM_G3DCAMPROJECTIONTYPE = 2,
 	G3DCAMPROJECTIONTYPE_FORCE_DWORD = -1
-} G3DCAMPROJECTIONTYPE;
+};
 
-typedef enum {
+enum G3DTRANSFORMSTATETYPE {
 	G3DTS_VIEW = 0,
 	G3DTS_PROJECTION = 1,
 	G3DTS_WORLD = 2,
@@ -1738,7 +1738,7 @@ typedef enum {
 	G3DTS_WORLDCLIP = 4,
 	NUM_G3DTRANSFORMSTATETYPE = 5,
 	G3DTS_FORCE_DWORD = 2147483647
-} G3DTRANSFORMSTATETYPE;
+};
 
 struct G3DFOG { // 0x10
 	/* 0x0 */ float fMin;
@@ -1790,12 +1790,12 @@ struct __exception { // 0x28
 	/* 0x20 */ int err;
 };
 
-typedef enum {
+enum __fdlibm_version {
 	__fdlibm_ieee = -1,
 	__fdlibm_svid = 0,
 	__fdlibm_xopen = 1,
 	__fdlibm_posix = 2
-} __fdlibm_version;
+};
 
 typedef signed char _G_int8_t;
 typedef unsigned char _G_uint8_t;
@@ -1982,14 +1982,14 @@ typedef _G_ssize_t streamsize;
 typedef long unsigned int __fmtflags;
 typedef unsigned char __iostate;
 
-typedef enum {
+enum io_state {
 	goodbit = 0,
 	eofbit = 1,
 	failbit = 2,
 	badbit = 4
-} io_state;
+};
 
-typedef enum {
+enum open_mode {
 	in = 1,
 	out = 2,
 	ate = 4,
@@ -1999,13 +1999,13 @@ typedef enum {
 	noreplace = 64,
 	bin = 128,
 	binary = 128
-} open_mode;
+};
 
-typedef enum {
+enum seek_dir {
 	beg = 0,
 	cur = 1,
 	end = 2
-} seek_dir;
+};
 
 typedef seek_dir _seek_dir;
 typedef ios& (*__manip)(/* parameters unknown */);
@@ -2161,14 +2161,14 @@ struct LIGHTCOMPAREDATA { // 0xc
 	/* 0x8 */ int iIndex;
 };
 
-typedef enum {
+enum G3DGSSYNCPATHTIMEOUTREASON {
 	SPTR_D1_START = 0,
 	SPTR_D2_START = 1,
 	SPTR_VIF1_ACTIVE = 2,
 	SPTR_VU0_STAT = 3,
 	SPTR_GIF_STAT = 4,
 	SPTR_GS_CSR_FINISH = 5
-} G3DGSSYNCPATHTIMEOUTREASON;
+};
 
 typedef void (*LPFUNC_ONDETECTPACKETDOESNOTTERMINATED)(/* parameters unknown */);
 typedef void (*LPFUNC_VU0LOADMATRIX)(/* parameters unknown */);
@@ -2190,7 +2190,7 @@ public:
 	void ApplyWithoutTrans();
 };
 
-typedef enum {
+enum G3DVU1MEMADDRESS {
 	MA_VF01 = 1,
 	MA_LWMATRIX0_0 = 2,
 	MA_LWMATRIX0_1 = 3,
@@ -2267,7 +2267,7 @@ typedef enum {
 	MA_MATERIALALPHA = 74,
 	MA_GLOBALAMBIENT = 75,
 	MA_TEMP = 76
-} G3DVU1MEMADDRESS;
+};
 
 struct G3DVU1DIRECTIONALLIGHT { // 0x30
 	/* 0x00 */ sceVu0FVECTOR avDirection[3];
@@ -2464,7 +2464,7 @@ union G3DVU1MEMLAYOUT { // 0x6e0
 	/* 0x000 */ G3DVU1MEMLAYOUT_DIRECT Direct;
 };
 
-typedef enum {
+enum GRA3DLIGHTID {
 	LID_DIRECTIONAL_0 = 0,
 	LID_DIRECTIONAL_1 = 1,
 	LID_DIRECTIONAL_2 = 2,
@@ -2518,7 +2518,7 @@ typedef enum {
 	GRA3D_NUM_LIGHT_SPOT_STATIC = 16,
 	INVALID_GRA3DLIGHTID = 2147483647,
 	GRA3DLIGHTID_FORCE_DWORD = 2147483647
-} GRA3DLIGHTID;
+};
 
 struct GRA3DCAMERA { // 0x1e0
 	/* 0x000 */ float fFov;
@@ -2665,7 +2665,7 @@ struct ZERO2LIGHTDATAFILE { // 0x1890
 	/* 0x04f0 */ GRA3DLIGHTDATA LD;
 };
 
-typedef enum {
+enum GRA3DTRANSFORMSTATETYPE {
 	GRA3DTS_VIEW = 0,
 	GRA3DTS_PROJECTION = 1,
 	GRA3DTS_WORLD = 2,
@@ -2674,9 +2674,9 @@ typedef enum {
 	GRA3DTS_WORLDSCREEN = 5,
 	NUM_GRA3DTRANSFORMSTATETYPE = 6,
 	GRA3DTS_FORCE_DWORD = 2147483647
-} GRA3DTRANSFORMSTATETYPE;
+};
 
-typedef enum {
+enum GRA3DVU1MEMADDRESS {
 	GRA3DVU1MEM_TOP = 0,
 	GRA3DVU1MEM_VF01 = 0,
 	GRA3DVU1MEM_VF02 = 1,
@@ -2771,7 +2771,7 @@ typedef enum {
 	GRA3DVU1MEM_MAPSHADOW_FOGDATA = 24,
 	GRA3DVU1MEM_DBBASE = 96,
 	GRA3DVU1MEM_DBEND = 1024
-} GRA3DVU1MEMADDRESS;
+};
 
 struct GRA3DVU1LIGHTDATA_DIRECTIONAL { // 0x60
 	/* 0x00 */ LMATRIX lmDiffuse;
@@ -2961,13 +2961,13 @@ union GRA3DVU1MEMLAYOUT_MAPSHADOW { // 0x190
 	/* 0x000 */ GRA3DVU1MEMLAYOUT_MAPSHADOW_DIRECT Direct;
 };
 
-typedef enum {
+enum VFINDEX {
 	VF_00 = 0,
 	VF_01 = 1,
 	VF_02 = 2,
 	NUM_VFINDEX = 3,
 	VFINDEX_FORCE_DWORD = 2147483647
-} VFINDEX;
+};
 
 struct GRA3DEMULATIONLIGHTDATACREATIONDATA { // 0x40
 	/* 0x00 */ float vStaticDirLightColor[4];
@@ -3322,13 +3322,13 @@ union SGDPROCUNITDATA { // 0x80
 	/* 0x00 */ SGDGSIMAGEDATA GSImage;
 };
 
-typedef enum {
+enum SGDVECTORADDRESSID {
 	SVA_UNIQUE = 0,
 	SVA_COMMON = 1,
 	SVA_WEIGHTED = 2,
 	NUM_SGDVECTORADDRESSID = 3,
 	SGDVECTORADDRESSID_FORCE_DWORD = -1
-} SGDVECTORADDRESSID;
+};
 
 struct _ONELIST { // 0x8
 	/* 0x0 */ short int sCoordId0;
@@ -3378,13 +3378,13 @@ struct SGDFILEHEADER { // 0x20
 	/* 0x1c */ int aiPad[1];
 };
 
-typedef enum {
+enum SGDRENDERTYPE {
 	SRT_REALTIME = 0,
 	SRT_PRELIGHTING = 1,
 	SRT_MAPSHADOW = 2,
 	SRT_CLEARPRELIGHTING = 3,
 	NUM_SGDRENDERTYPE = 4
-} SGDRENDERTYPE;
+};
 
 struct GRA3DSGDCREATIONDATA { // 0x8
 	/* 0x0 */ sceVu0FVECTOR *vnarray;
@@ -3410,11 +3410,11 @@ public:
 	void Stop();
 };
 
-typedef enum {
+enum _PLANE3D {
 	YZ = 0,
 	ZX = 1,
 	XY = 2
-} _PLANE3D;
+};
 
 typedef _PLANE3D PLANE3D;
 
@@ -4314,13 +4314,13 @@ struct ANI_TBL { // 0x10
 	/* 0xc */ NECK_SPD *neck_spd;
 };
 
-typedef enum {
+enum _SND_BANK_STATUS {
 	SND_BANK_NOT_USE = 0,
 	SND_BANK_NOT_READY = 1,
 	SND_BANK_USE = 2,
 	SND_BANK_ILLEGAL_SOUND_NO = 3,
 	SND_BANK_OK = 4
-} _SND_BANK_STATUS;
+};
 
 typedef _SND_BANK_STATUS SND_BANK_STATUS;
 
@@ -4334,7 +4334,7 @@ struct _LOOK_AT_PARAM { // 0x20
 
 typedef _LOOK_AT_PARAM LOOK_AT_PARAM;
 
-typedef enum {
+enum _LOOK_TARGET_PRIORITY_MIO {
 	LTP_MIO_ATTACK_ENEMY = 0,
 	LTP_MIO_ENEMY = 1,
 	LTP_MIO_EVENT_OBJ = 2,
@@ -4344,7 +4344,7 @@ typedef enum {
 	LTP_MIO_DOOR = 6,
 	LTP_MIO_MAYU = 7,
 	LTP_MIO_LEAST = -1
-} _LOOK_TARGET_PRIORITY_MIO;
+};
 
 typedef _LOOK_TARGET_PRIORITY_MIO LOOK_TARGET_PRIORITY_MIO;
 
@@ -4355,7 +4355,7 @@ struct CPLYR_SND_BUF_PLAY : /* 0x0 */ CSND_BUF_PLAY { // 0x4
 	void Play();
 };
 
-typedef enum {
+enum _LOOK_TARGET_PRIORITY_MAYU {
 	LTP_MAYU_ATTACK_ENEMY = 0,
 	LTP_MAYU_ENEMY = 1,
 	LTP_MAYU_EVENT_OBJ = 2,
@@ -4368,7 +4368,7 @@ typedef enum {
 	LTP_MAYU_MIO_MIDDLE = 9,
 	LTP_MAYU_KAIDAN = 10,
 	LTP_MAYU_LEAST = -1
-} _LOOK_TARGET_PRIORITY_MAYU;
+};
 
 typedef _LOOK_TARGET_PRIORITY_MAYU LOOK_TARGET_PRIORITY_MAYU;
 
@@ -4431,7 +4431,7 @@ typedef struct { // 0xb0
 	/* 0x10 */ fixed_array<float[4],10> p;
 } PP_JUDGE;
 
-typedef enum {
+enum _ENE_RELASE_TYPE {
 	ENE_RELEASE_NO_RELEASE = 0,
 	ENE_RELEASE_TAKE_PICT = 1,
 	ENE_RELEASE_TIME_OUT = 2,
@@ -4440,17 +4440,17 @@ typedef enum {
 	ENE_RELEASE_REQ = 5,
 	ENE_RELEASE_MAX_NO = 6,
 	ENE_RELEASE_FORCE_DWORD = -1
-} _ENE_RELASE_TYPE;
+};
 
 typedef _ENE_RELASE_TYPE ENE_RELASE_TYPE;
 
-typedef enum {
+enum _SHUTTER_CHANCE_STATE {
 	SHUTTER_CHANCE_NONE = 0,
 	SHUTTER_CHANCE_NORMAL = 1,
 	SHUTTER_CHANCE_SP = 2,
 	SHUTTER_CHANCE_STATE_MAX = 3,
 	SHUTTER_CHANCE_FORCE_DWORD = -1
-} _SHUTTER_CHANCE_STATE;
+};
 
 typedef _SHUTTER_CHANCE_STATE SHUTTER_CHANCE_STATE;
 
@@ -4497,21 +4497,21 @@ public:
 	void Draw();
 };
 
-typedef enum {
+enum _OL_LOAD_ERR {
 	OL_LOAD_ERR_OK = 0,
 	OL_LOAD_ERR_MEMORY_LACK = 1,
 	OL_LOAD_ERR_WORK_LACK = 2,
 	OL_LOAD_ERR_FORCE_DWORD = -1
-} _OL_LOAD_ERR;
+};
 
 typedef _OL_LOAD_ERR OL_LOAD_ERR;
 
-typedef enum {
+enum OL_LOAD_READY {
 	OL_LOAD_READY_NOT_READY = 0,
 	OL_LOAD_READY_READY = 1,
 	OL_LOAD_READY_READY_FIRST = 3,
 	OL_LOAD_READY_WAIT_MEMORY = 4
-} OL_LOAD_READY;
+};
 
 struct OL_LOAD_ONE { // 0x10
 private:
@@ -4574,15 +4574,15 @@ public:
 	void Print();
 };
 
-typedef enum {
+enum ITEM_MODEL_PACK_ORDER {
 	ITEM_MODEL_PACK_ORDER_SGD = 0,
 	ITEM_MODEL_PACK_ORDER_TM2 = 1,
 	ITEM_MODEL_PACK_ORDER_BWC = 2
-} ITEM_MODEL_PACK_ORDER;
+};
 
 typedef OL_LOAD_ERR MMANAGE_ERR;
 
-typedef enum {
+enum _ENE_STATUS {
 	ENE_STATUS_NO_USE = 0,
 	ENE_STATUS_LOADING = 1,
 	ENE_STATUS_WAIT_ANI_CTRL = 2,
@@ -4590,7 +4590,7 @@ typedef enum {
 	ENE_STATUS_ACT = 4,
 	ENE_STATUS_RELEASE = 5,
 	ENE_STATUS_FORCE_DWORD = -1
-} _ENE_STATUS;
+};
 
 typedef _ENE_STATUS ENE_STATUS;
 
@@ -4876,13 +4876,13 @@ struct ENE_WRK { // 0x490
 	/* 0x481 */ char combo_sb_counter;
 };
 
-typedef enum {
+enum GPHASE_ENUM {
 	GPHASE_CONTINUE = 0,
 	GPHASE_END = 1,
 	GPHASE_NOFRAME = 2
-} GPHASE_ENUM;
+};
 
-typedef enum {
+enum GPHASE_ID_ENUM {
 	GID_SUPER = 0,
 	GID_BOOT_INIT = 1,
 	GID_BOOT_PADCHECK = 2,
@@ -4978,7 +4978,7 @@ typedef enum {
 	GID_MISSION_ALBUM = 92,
 	GID_MISSION_SAVE = 93,
 	GPHASE_ID_NONE = -1
-} GPHASE_ID_ENUM;
+};
 
 struct POINT_T { // 0x8
 	/* 0x0 */ float x;
@@ -5079,7 +5079,7 @@ private:
 	int GetResionId();
 };
 
-typedef enum {
+enum CD_FILE_DAT {
 	COMP_TES_PKS = 0,
 	COMP_TES_CMP = 1,
 	LOGO_PK2 = 2,
@@ -9571,7 +9571,7 @@ typedef enum {
 	OVERLAY_PK2 = 4488,
 	TEST_BG_PK2 = 4489,
 	BRIGHTNESS_PK2 = 4490
-} CD_FILE_DAT;
+};
 
 typedef struct { // 0x180
 	/* 0x000 */ u_char y[256];
@@ -10322,14 +10322,14 @@ typedef struct { // 0x34
 	/* 0x30 */ u_char alpha;
 } GSQ4_DAT;
 
-typedef enum {
+enum TIM2_gattr_type {
 	TIM2_NONE = 0,
 	TIM2_RGB16 = 1,
 	TIM2_RGB24 = 2,
 	TIM2_RGB32 = 3,
 	TIM2_IDTEX4 = 4,
 	TIM2_IDTEX8 = 5
-} TIM2_gattr_type;
+};
 
 typedef struct { // 0x10
 	/* 0x0 */ u_char FileId[4];
@@ -10884,11 +10884,11 @@ struct PLYR_WRK { // 0x380
 	/* 0x370 */ SHUTTER_CHANCE_STATE nowShutterChanceState;
 };
 
-typedef enum {
+enum PLAYERFLASHLIGHTTYPE {
 	PFT_HAND = 0,
 	PFT_STEP = 1,
 	NUM_PLAYERFLASHLIGHTTYPE = 2
-} PLAYERFLASHLIGHTTYPE;
+};
 
 struct fixed_array_base<char,4,char[4]> { // 0x4
 protected:
@@ -10931,11 +10931,11 @@ typedef struct { // 0x13f0
 	/* 0x13e0 */ fixed_array<char,4> reg_id;
 } MLOAD_HEAD;
 
-typedef enum {
+enum MAPMODELPK2DATAINDEX {
 	MAPMODELPK2_MODEL = 0,
 	MAPMODELPK2_SOURCEMODEL = 1,
 	MAPMODELPK2_SHADOWMODEL = 2
-} MAPMODELPK2DATAINDEX;
+};
 
 typedef struct { // 0x3c
 	/* 0x00 */ int buff_id;
@@ -10976,12 +10976,12 @@ typedef struct { // 0x8
 	/* 0x4 */ char *addr;
 } FURN_WORK_HEAD;
 
-typedef enum {
+enum _FILE_LOAD_ENUM {
 	FILE_LOAD_OK = 0,
 	FILE_LOAD_ALREADY_LOAD = 1,
 	FILE_LOAD_ALREADY_ALL_LOAD = 2,
 	FILE_LOAD_ID_NOT_EXIST = 3
-} _FILE_LOAD_ENUM;
+};
 
 typedef _FILE_LOAD_ENUM FILE_LOAD_ENUM;
 
@@ -10991,14 +10991,14 @@ typedef struct { // 0x10
 	/* 0xc */ int attr;
 } FURN_LOAD_TBL;
 
-typedef enum {
+enum ENUM_ScreenEffectStatus {
 	SCREEN_EFFECT_NORMAL = 0,
 	SCREEN_EFFECT_EMEMY_DEAD = 1,
 	SCREEN_EFFECT_PUZZLE = 2,
 	SCREEN_EFFECT_NOTHING = 3
-} ENUM_ScreenEffectStatus;
+};
 
-typedef enum {
+enum SCREEN_EFFECT_NO_LABEL {
 	SCREEN_EFFECT_NO_DEFAULT = 0,
 	SCREEN_EFFECT_NO_01 = 1,
 	SCREEN_EFFECT_NO_02 = 2,
@@ -11006,15 +11006,15 @@ typedef enum {
 	SCREEN_EFFECT_NO_04 = 4,
 	SCREEN_EFFECT_NO_SCREEN_SAVER = 5,
 	SCREEN_EFFECT_NO_NUM = 6
-} SCREEN_EFFECT_NO_LABEL;
+};
 
-typedef enum {
+enum EFF_FLOW_CTRL_ID {
 	EFF_FLOW_CTRL_IN = 0,
 	EFF_FLOW_CTRL_KEEP = 1,
 	EFF_FLOW_CTRL_OUT = 2,
 	EFF_FLOW_CTRL_END = 3,
 	EFF_FLOW_CTRL_STOP = 4
-} EFF_FLOW_CTRL_ID;
+};
 
 typedef union { // 0x4
 	/* 0x0 */ int ui32;
@@ -11850,7 +11850,7 @@ struct PhotoData { // 0x18
 	/* 0x16 */ short int ghost_list_rel_no;
 };
 
-typedef enum {
+enum _MAP_OBJ_EFFECT_ENUM {
 	MAP_OBJ_EFFECT_ITEM = 0,
 	MAP_OBJ_EFFECT_TORCH0 = 1,
 	MAP_OBJ_EFFECT_TORCH1 = 2,
@@ -11872,7 +11872,7 @@ typedef enum {
 	MAP_OBJ_EFFECT_SIMI = 18,
 	MAP_OBJ_EFFECT_TORCH7 = 19,
 	MAP_OBJ_EFFECT_MAX = 20
-} _MAP_OBJ_EFFECT_ENUM;
+};
 
 typedef _MAP_OBJ_EFFECT_ENUM MAP_OBJ_EFFECT_ENUM;
 
@@ -11928,7 +11928,7 @@ typedef struct { // 0x8
 	/* 0x4 */ char *name;
 } FNAME_DAT;
 
-typedef enum {
+enum INGAME_SCENE_STATUS {
 	INGAME_SCENE_STREAM_BACKUP = 0,
 	INGAME_SCENE_DATA_LOAD_REQ = 1,
 	INGAME_SCENE_DATA_LOAD_WAIT = 2,
@@ -11936,15 +11936,15 @@ typedef enum {
 	INGAME_SCENE_PLAY = 4,
 	INGAME_SCENE_PLAY_MOVIE = 5,
 	INGAME_SCENE_DEBUG_SKIP = 6
-} INGAME_SCENE_STATUS;
+};
 
-typedef enum {
+enum INGAME_SCENE_ROOM_LOAD_STATUS {
 	INGAME_SCENE_ROOM_LOAD_WAIT = 0,
 	INGAME_SCENE_ROOM_SUB_LOAD_REQ = 1,
 	INGAME_SCENE_ROOM_SUB_LOAD = 2,
 	INGAME_SCENE_ROOM_MAIN_LOAD_REQ = 3,
 	INGAME_SCENE_ROOM_MAIN_LOAD = 4
-} INGAME_SCENE_ROOM_LOAD_STATUS;
+};
 
 typedef struct { // 0x10
 	/* 0x0 */ int SceneNo;
@@ -12334,10 +12334,10 @@ typedef struct { // 0xc
 	/* 0x8 */ int call_work;
 } MAPHIT_DAT;
 
-typedef enum {
+enum _AUTO_BD_ERR {
 	AUTO_BD_ERR_OK = 0,
 	AUTO_BD_ERR_NO_WRK = 1
-} _AUTO_BD_ERR;
+};
 
 typedef _AUTO_BD_ERR AUTO_BD_ERR;
 
@@ -12423,25 +12423,25 @@ typedef struct { // 0x6
 	/* 0x4 */ char type[2];
 } MAPDOOR_SEL;
 
-typedef enum {
+enum HAZE_ALL_VELOCITY_STATUS {
 	HAZE_ALL_VELOCITY_TYPE1 = 0,
 	HAZE_ALL_VELOCITY_TYPE1_TO_2 = 1,
 	HAZE_ALL_VELOCITY_TYPE2 = 2,
 	HAZE_ALL_VELOCITY_TYPE2_TO_3 = 3,
 	HAZE_ALL_VELOCITY_TYPE3 = 4,
 	HAZE_ALL_VELOCITY_TYPE3_TO_1 = 5
-} HAZE_ALL_VELOCITY_STATUS;
+};
 
-typedef enum {
+enum HAZE_PARAMETER_TYPE {
 	HAZE_PARAMETER_NORMAL = 0,
 	HAZE_PARAMETER_KUSABI = 1,
 	HAZE_PARAMETER_SAE = 2
-} HAZE_PARAMETER_TYPE;
+};
 
-typedef enum {
+enum ITEM_EFFECT_TYPE {
 	ITEM_EFFECT_TYPE00 = 0,
 	ITEM_EFFECT_TYPE01 = 1
-} ITEM_EFFECT_TYPE;
+};
 
 typedef struct { // 0x50
 	/* 0x00 */ int fl;
@@ -12904,7 +12904,7 @@ public:
 struct fixed_array<MLOAD_HEAD,2> : /* 0x0000 */ fixed_array_base<MLOAD_HEAD,2,MLOAD_HEAD[2]> { // 0x27e0
 };
 
-typedef enum {
+enum ENE_HIT_EFFECT_LABEL {
 	ENE_HIT_EFFECT_SMALL = 0,
 	ENE_HIT_EFFECT_LARGE = 1,
 	ENE_HIT_EFFECT_SP = 2,
@@ -12925,9 +12925,9 @@ typedef enum {
 	ENE_HIT_EFFECT_REN_SP = 17,
 	ENE_HIT_EFFECT_TSUI = 18,
 	ENE_HIT_EFFECT_FUU = 19
-} ENE_HIT_EFFECT_LABEL;
+};
 
-typedef enum {
+enum ENUM_ENE_DMG_LARGE_HIT {
 	ENE_DMG_LARGE_HIT_SMALL = 0,
 	ENE_DMG_LARGE_HIT_LARGE = 1,
 	ENE_DMG_LARGE_HIT_SP_A = 2,
@@ -12966,21 +12966,21 @@ typedef enum {
 	ENE_DMG_LARGE_HIT_TSUI_B = 35,
 	ENE_DMG_LARGE_HIT_FUU_A = 36,
 	ENE_DMG_LARGE_HIT_FUU_B = 37
-} ENUM_ENE_DMG_LARGE_HIT;
+};
 
-typedef enum {
+enum ENE_DMG_PARTICLE_TYPE {
 	ENE_DMG_PARTICLE_TYPE_HIT_DAMAGE = 0,
 	ENE_DMG_PARTICLE_TYPE_EFFECT_END = 1
-} ENE_DMG_PARTICLE_TYPE;
+};
 
-typedef enum {
+enum EFFECT_END_PARTICLE_TYPE {
 	EFFECT_END_PARTICLE_SLOW = 0,
 	EFFECT_END_PARTICLE_PARALYZE = 1,
 	EFFECT_END_PARTICLE_VIEW = 2,
 	EFFECT_END_PARTICLE_TSUI = 3,
 	EFFECT_END_PARTICLE_FUU = 4,
 	EFFECT_END_PARTICLE_TYPE_NUM = 5
-} EFFECT_END_PARTICLE_TYPE;
+};
 
 struct fixed_array_base<float[4],2,float[2][4]> { // 0x20
 protected:
@@ -13283,24 +13283,24 @@ typedef struct { // 0x30
 	/* 0x20 */ int EffectType;
 } ENE_DMG_PARTICLE_REQ;
 
-typedef enum {
+enum IG_ENE_DMG_EFFECT_TYPE {
 	IG_ENE_DMG_EFFECT_NORMAL = 0,
 	IG_ENE_DMG_EFFECT_SC = 1,
 	IG_ENE_DMG_EFFECT_SP = 2
-} IG_ENE_DMG_EFFECT_TYPE;
+};
 
-typedef enum {
+enum EFF_LIGHT_COMEIN_ALPHA_MODE {
 	EFF_LIGHT_COMEIN_ALPHA_CALC_DIRECTION = 0,
 	EFF_LIGHT_COMEIN_ALPHA_CALC_DISTANCE = 1
-} EFF_LIGHT_COMEIN_ALPHA_MODE;
+};
 
-typedef enum {
+enum EFF_LIGHT_COMEIN_TYPE {
 	EFF_LIGHT_COMEIN_TYPE_NORMAL = 0,
 	EFF_LIGHT_COMEIN_TYPE_F607 = 1,
 	EFF_LIGHT_COMEIN_TYPE_F609 = 2
-} EFF_LIGHT_COMEIN_TYPE;
+};
 
-typedef enum {
+enum EFF_WATER_FLOW_MOVE_TYPE {
 	EFF_WATER_MOVE_RIVER0 = 0,
 	EFF_WATER_MOVE_RIVER1 = 1,
 	EFF_WATER_MOVE_LAKE0 = 2,
@@ -13309,16 +13309,16 @@ typedef enum {
 	EFF_WATER_MOVE_RIVER_MINAKAMI1 = 5,
 	EFF_WATER_MOVE_LAKE_FUKAMICHI0 = 6,
 	EFF_WATER_MOVE_LAKE_FUKAMICHI1 = 7
-} EFF_WATER_FLOW_MOVE_TYPE;
+};
 
-typedef enum {
+enum EFF_WATER_FLOW_MOVE_STATUS {
 	EFF_WATER_MOVE_TYPE_A = 0,
 	EFF_WATER_MOVE_TYPE_A_TO_B = 1,
 	EFF_WATER_MOVE_TYPE_B = 2,
 	EFF_WATER_MOVE_TYPE_B_TO_C = 3,
 	EFF_WATER_MOVE_TYPE_C = 4,
 	EFF_WATER_MOVE_TYPE_C_TO_A = 5
-} EFF_WATER_FLOW_MOVE_STATUS;
+};
 
 struct fixed_array_base<int,10,int[10]> { // 0x28
 protected:
@@ -13696,13 +13696,13 @@ struct _HINT_PHOTO_REQ { // 0x4
 
 typedef _HINT_PHOTO_REQ HINT_PHOTO_REQ;
 
-typedef enum {
+enum _PHOTO_TYPE {
 	PHOTO_TYPE_HINT = 0,
 	PHOTO_TYPE_HINT3D = 1,
 	PHOTO_TYPE_RARE = 2,
 	PHOTO_TYPE_MAYU_CURSE = 3,
 	PHOTO_TYPE_INVALID = 4
-} _PHOTO_TYPE;
+};
 
 typedef _PHOTO_TYPE PHOTO_TYPE;
 
@@ -14246,7 +14246,7 @@ public:
 struct fixed_array<TUBE,13> : /* 0x000 */ fixed_array_base<TUBE,13,TUBE[13]> { // 0x270
 };
 
-typedef enum {
+enum _enum_LOAD_PRIORITY {
 	LOAD_PRIORITY_DUMMY = 0,
 	LOAD_PRIORITY_STREAM_HEADER = 1,
 	LOAD_PRIORITY_MENU = 2,
@@ -14255,11 +14255,11 @@ typedef enum {
 	LOAD_PRIORITY_TITLE = 5,
 	LOAD_PRIORITY_NORMAL = 6,
 	LOAD_PRIORITY_PRELOAD_MDL = 7
-} _enum_LOAD_PRIORITY;
+};
 
 typedef _enum_LOAD_PRIORITY enum_LOAD_PRIORITY;
 
-typedef enum {
+enum _STREAM_PRIORITY {
 	dummySTREAM_PRIORITY_START = 10,
 	STREAM_PRIORITY_SETUP = 11,
 	STREAM_PRIORITY_TITLE = 12,
@@ -14272,14 +14272,14 @@ typedef enum {
 	STREAM_PRIORITY_GHOST = 19,
 	STREAM_PRIORITY_MENU = 20,
 	STREAM_PRIORITY_MAP = 21
-} _STREAM_PRIORITY;
+};
 
 typedef _STREAM_PRIORITY STREAM_PRIORITY;
 
-typedef enum {
+enum _SND_GROUP {
 	SND_GROUP_SOUND_EFFECT = 0,
 	SND_GROUP_BGM = 1
-} _SND_GROUP;
+};
 
 typedef _SND_GROUP SND_GROUP;
 
@@ -14874,7 +14874,7 @@ struct MyPoint { // 0x2
 	/* 0x0 */ short int x;
 };
 
-typedef enum {
+enum _CAMERA_SUB_FUNC_ENUM {
 	CAMERA_SUB_FUNC_NONE = 0,
 	CAMERA_SUB_FUNC_SLOW = 1,
 	CAMERA_SUB_FUNC_STOP = 2,
@@ -14886,7 +14886,7 @@ typedef enum {
 	CAMERA_SUB_FUNC_METSU = 8,
 	CAMERA_SUB_FUNC_REN = 9,
 	SUB_FUNC_NUM = 10
-} _CAMERA_SUB_FUNC_ENUM;
+};
 
 typedef _CAMERA_SUB_FUNC_ENUM CAMERA_SUB_FUNC_ENUM;
 
@@ -15516,7 +15516,7 @@ typedef struct { // 0x8
 	/* 0x7 */ char clear_csr;
 } CHAPTER_SEL_CTRL;
 
-typedef enum {
+enum GRA3DBOUNDINGBOXVERTEXINDEX {
 	BBVI_MMM = 0,
 	BBVI_PMM = 1,
 	BBVI_MPM = 2,
@@ -15527,7 +15527,7 @@ typedef enum {
 	BBVI_PPP = 7,
 	BBVI_CENTER = 8,
 	NUM_GRA3DBOUNDINGBOXVERTEXINDEX = 9
-} GRA3DBOUNDINGBOXVERTEXINDEX;
+};
 
 struct CHARBBDATA { // 0x30
 	/* 0x00 */ float vMin[4];
@@ -16153,7 +16153,7 @@ typedef struct { // 0xc
 	/* 0x8 */ int end_frame;
 } MOVIE_TITLE_DAT;
 
-typedef enum {
+enum SCN_DB_EFF_TYPE {
 	SCN_DB_EFF_Z_DEP = 0,
 	SCN_DB_EFF_MONO = 1,
 	SCN_DB_EFF_SEPIA = 2,
@@ -16173,7 +16173,7 @@ typedef enum {
 	SCN_DB_EFF_FADE_SCR = 15,
 	SCN_DB_EFF_SHIBATA = 16,
 	SCN_DB_EFF_MAX = 17
-} SCN_DB_EFF_TYPE;
+};
 
 typedef struct { // 0x24
 	/* 0x00 */ u_char mode;
@@ -16207,10 +16207,10 @@ typedef struct { // 0x10
 	/* 0xc */ u_int pad;
 } MT_IVECTOR;
 
-typedef enum {
+enum BUTTERFLY_MOVE_TYPE {
 	BUTTERFLY_MOVE_DEFAULT = 0,
 	BUTTERFLY_MOVE_TO_TARGET = 1
-} BUTTERFLY_MOVE_TYPE;
+};
 
 typedef struct { // 0x2c
 	/* 0x00 */ int Speed;
@@ -16915,10 +16915,10 @@ typedef struct { // 0x2a00
 	/* 0x29a4 */ DEBUG_EFFECT_END_PARTICLE EffectEndParticle;
 } DEBUG_EFFECT_MENU;
 
-typedef enum {
+enum DEVICETYPE {
 	DT_HOST0 = 0,
 	NUM_DEVICETYPE = 1
-} DEVICETYPE;
+};
 
 struct rebind<basic_string<char, string_char_traits<char>, ctl::custom_allocator<char> > > { // 0x1
 };
@@ -17072,7 +17072,7 @@ public:
 struct vector<sce_dirent> : /* 0x0 */ vector<sce_dirent,ctl::custom_allocator<sce_dirent> > { // 0x10
 };
 
-typedef enum {
+enum MAPVIEWER_PADCOMMAND {
 	PADCMD_UP = 0,
 	PADCMD_DOWN = 1,
 	PADCMD_LEFT = 2,
@@ -17090,19 +17090,19 @@ typedef enum {
 	PADCMD_L2 = 14,
 	PADCMD_START = 15,
 	NUM_PADCMD = 16
-} MAPVIEWER_PADCOMMAND;
+};
 
-typedef enum {
+enum PHASE {
 	PHASE_EXPLORER = 0,
 	PHASE_CAMERACONTROL = 1,
 	PHASE_EDITCONTROL = 2,
 	NUM_PHASE = 3
-} PHASE;
+};
 
-typedef enum {
+enum COMMAND {
 	CMD_LOADDATA = 0,
 	NUM_COMMAND = 1
-} COMMAND;
+};
 
 struct LOADDATA { // 0x100
 	/* 0x00 */ char strFileName[256];
@@ -17265,7 +17265,7 @@ typedef struct { // 0x68
 	/* 0x18 */ char arg[80];
 } sceSifCmdResetData;
 
-typedef enum {
+enum PS2EXCEPTION {
 	PS2E_INTERRUPT = 0,
 	PS2E_TLB_MOD = 1,
 	PS2E_TLB_LOAD_OR_IFETCH = 2,
@@ -17281,7 +17281,7 @@ typedef enum {
 	PS2E_ARITHMETIC_OVERFLOW = 12,
 	PS2E_TRAP = 13,
 	NUM_PS2EXCEPTION = 14
-} PS2EXCEPTION;
+};
 
 struct IOPEXCEPTIONCREATIONDATA { // 0x4
 	/* 0x0 */ char *pModuleName;
@@ -17292,19 +17292,19 @@ struct PROFILEFUNCTION { // 0x8
 	/* 0x4 */ void *pCallSite;
 };
 
-typedef enum {
+enum OpenFlags {
 	modeRead = 0,
 	modeWrite = 1,
 	modeCreate = 4096,
 	RWMASK = 3,
 	WRITEMASK = 4096
-} OpenFlags;
+};
 
-typedef enum {
+enum SeekPosition {
 	begin = 0,
 	current = 1,
 	end = 2
-} SeekPosition;
+};
 
 typedef string std_string;
 
@@ -17619,14 +17619,14 @@ public:
 struct fixed_array<int,48> : /* 0x00 */ fixed_array_base<int,48,int[48]> { // 0xc0
 };
 
-typedef enum {
+enum BUTTERFLY_TARGET_PARAMETER_TYPE {
 	BUTTERFLY_TARGET_PARAMETER_TYPE00 = 0,
 	BUTTERFLY_TARGET_PARAMETER_TYPE01 = 1,
 	BUTTERFLY_TARGET_PARAMETER_TYPE02 = 2,
 	BUTTERFLY_TARGET_PARAMETER_TYPE03 = 3,
 	BUTTERFLY_TARGET_PARAMETER_TYPE04 = 4,
 	BUTTERFLY_TARGET_PARAMETER_NUM = 5
-} BUTTERFLY_TARGET_PARAMETER_TYPE;
+};
 
 struct _BUTTERFLY_DISP { // 0x2c0
 	/* 0x000 */ float Position[4];
@@ -18417,21 +18417,21 @@ typedef struct { // 0x10
 	/* 0x0 */ SINGLE_LINK_LIST LightList;
 } LIGHT_COME_IN_CTRL;
 
-typedef enum {
+enum CANDLE_FLAME_FLOW {
 	CANDLE_FLAME_INIT = 0,
 	CANDLE_FLAME_START1 = 1,
 	CANDLE_FLAME_START2 = 2,
 	CANDLE_FLAME_NORMAL = 3,
 	CANDLE_FLAME_YURAMEKI = 4,
 	CANDLE_FLAME_FUKKI = 5
-} CANDLE_FLAME_FLOW;
+};
 
-typedef enum {
+enum MANY_CANDLE_LOAD_CTRL_STATUS {
 	CANDLE_LOAD_IDLE = 0,
 	CANDLE_LOAD_WAIT = 1,
 	CANDLE_LOAD_EXEC = 2,
 	CANDLE_LOAD_CANCEL = 3
-} MANY_CANDLE_LOAD_CTRL_STATUS;
+};
 
 typedef struct { // 0x40
 	/* 0x00 */ float Offset[4];
@@ -18448,7 +18448,7 @@ typedef struct { // 0x10
 	/* 0x8 */ int Pad[2];
 } MANY_CANDLE_POS_DATA_HEADER;
 
-typedef enum {
+enum DOOR_SEAL_DISAPPEAR_STATUS {
 	DOOR_SEAL_STATUS_IDLE = 0,
 	DOOR_SEAL_STATUS_PRELOAD_WAIT = 1,
 	DOOR_SEAL_STATUS_SOUL_IN = 2,
@@ -18457,7 +18457,7 @@ typedef enum {
 	DOOR_SEAL_STATUS_DEFORM_KEEP = 5,
 	DOOR_SEAL_STATUS_SOUL_OUT = 6,
 	DOOR_SEAL_STATUS_DEFORM_OUT = 7
-} DOOR_SEAL_DISAPPEAR_STATUS;
+};
 
 typedef struct { // 0x110
 	/* 0x000 */ int Counter;
@@ -18814,25 +18814,25 @@ public:
 struct fixed_array<EFFRDR_RSV,10> : /* 0x000 */ fixed_array_base<EFFRDR_RSV,10,EFFRDR_RSV[10]> { // 0x280
 };
 
-typedef enum {
+enum MAP_CAM_HOKAN_TYPE {
 	MCD_HOKAN_LINE = 0,
 	MCD_HOKAN_BEZIER = 1,
 	MCD_HOKAN_HERMITE = 2,
 	MCD_HOKAN_NUM = 3
-} MAP_CAM_HOKAN_TYPE;
+};
 
-typedef enum {
+enum MAP_CAM_MODE {
 	MAP_CAM_MODE_NORMAL = 0,
 	MAP_CAM_MODE_FINDER_IN = 1,
 	MAP_CAM_MODE_FINDER = 2,
 	MAP_CAM_MODE_APPROACH = 3
-} MAP_CAM_MODE;
+};
 
-typedef enum {
+enum PLYR_SHOULDER_CAMERA_TYPE {
 	PLYR_SHOULDER_CAMERA_TYPE_DEFAULT = 0,
 	PLYR_SHOULDER_CAMERA_TYPE_TWINS = 1,
 	PLYR_SHOULDER_CAMERA_TYPE_ONIKODOMO = 2
-} PLYR_SHOULDER_CAMERA_TYPE;
+};
 
 typedef struct { // 0xb0
 	/* 0x00 */ int mode;
@@ -18853,11 +18853,11 @@ typedef struct { // 0xb0
 	/* 0xa0 */ ENE_WRK *pEneWrk;
 } APPROACH_CAMERA;
 
-typedef enum {
+enum SCREEN_SAVER_LOAD_STATUS {
 	SCREEN_SAVER_LOAD_IDLE = 0,
 	SCREEN_SAVER_LOAD_WAIT = 1,
 	SCREEN_SAVER_LOAD_END = 2
-} SCREEN_SAVER_LOAD_STATUS;
+};
 
 struct EFF_BLUR { // 0x28
 	/* 0x00 */ u_int flow;
@@ -19217,11 +19217,11 @@ struct _NEAREST_ENE_MANAGE { // 0xc
 
 typedef _NEAREST_ENE_MANAGE NEAREST_ENE_MANAGE;
 
-typedef enum {
+enum _MOVIE_PROJECTER_STATE {
 	MOVIE_PROJECTER_STATE_NONE = 0,
 	MOVIE_PROJECTER_STATE_PRELOAD = 1,
 	MOVIE_PROJECTER_STATE_PLAY = 2
-} _MOVIE_PROJECTER_STATE;
+};
 
 typedef _MOVIE_PROJECTER_STATE MOVIE_PROJECTER_STATE;
 
@@ -19242,7 +19242,7 @@ typedef struct { // 0x8
 	/* 0x4 */ int obj_id;
 } EV_PHOTO_OBJ;
 
-typedef enum {
+enum EV_TBL_TYPE {
 	SUB_EVENT_OPEN_TBL = 0,
 	EV_DAT_INIT_TBL = 1,
 	EV_DAT_MAIN_TBL = 2,
@@ -19250,7 +19250,7 @@ typedef enum {
 	EV_DAT_DESTRCT_TBL = 4,
 	EV_DAT_PARENT_TBL = 5,
 	EV_DAT_SUBEVENT_TBL_TBL = 6
-} EV_TBL_TYPE;
+};
 
 struct fixed_array_base<EV_CHANGE_CTRL,30,EV_CHANGE_CTRL[30]> { // 0x168
 protected:
@@ -19486,14 +19486,14 @@ struct _HXD_HEADER { // 0x20
 
 typedef _HXD_HEADER HXD_HEADER;
 
-typedef enum {
+enum _VOICE_TYPE_ENUM {
 	VOICE_ATTRIBUTE_GROUP_A = 0,
 	VOICE_ATTRIBUTE_GROUP_B = 1,
 	VOICE_ATTRIBUTE_GROUP_C = 2,
 	VOICE_ATTRIBUTE_GROUP_D = 3,
 	VOICE_ATTRIBUTE_GROUP_E = 4,
 	VOICE_TYPE_NUM = 5
-} _VOICE_TYPE_ENUM;
+};
 
 typedef _VOICE_TYPE_ENUM VOICE_TYPE_ENUM;
 
@@ -19544,7 +19544,7 @@ struct _EEIOP_DEF { // 0x3c
 
 typedef _EEIOP_DEF EEIOP_DEF;
 
-typedef enum {
+enum _EEIOP_STREAM_STATUS {
 	ST_STREAM_NO_USE = 0,
 	ST_STREAM_HEADER_LOAD = 1,
 	ST_STREAM_PRE_LOAD = 2,
@@ -19554,7 +19554,7 @@ typedef enum {
 	ST_STREAM_START = 6,
 	ST_STREAM_PRE_NO_USE = 7,
 	ST_STREAM_FORCE_DWORD = -1
-} _EEIOP_STREAM_STATUS;
+};
 
 typedef _EEIOP_STREAM_STATUS EEIOP_STREAM_STATUS;
 
@@ -19589,27 +19589,27 @@ struct _SPU_BLOCK_DATA { // 0x10
 
 typedef _SPU_BLOCK_DATA SPU_BLOCK_DATA;
 
-typedef enum {
+enum _enumSPU_LOOP {
 	SPU_LOOP_NON = 0,
 	SPU_LOOP = 2,
 	SPU_LOOP_START = 6,
 	SPU_LOOP_END = 3,
 	SPU_END = 1,
 	SPU_STOP_BLOCK = 7
-} _enumSPU_LOOP;
+};
 
 typedef _enumSPU_LOOP enumSPU_LOOP;
 
-typedef enum {
+enum _IOP_COMMAND_QUERY_ENUM {
 	REQ_FILE_SIZE = 0,
 	REQ_Q_LOAD_CANCEL = 1,
 	REQ_SPU_TRANS_CORE_GET = 2,
 	REQ_SPU_TRANS_CORE_RELEASE = 3
-} _IOP_COMMAND_QUERY_ENUM;
+};
 
 typedef _IOP_COMMAND_QUERY_ENUM IOP_COMMAND_QUERY_ENUM;
 
-typedef enum {
+enum _IOP_COMMAND_ENUM {
 	IOP_COM_END = 0,
 	REQ_IOP_REBOOT = 1,
 	REQ_CDVD_INIT = 2,
@@ -19645,7 +19645,7 @@ typedef enum {
 	REQ_PCM_STREAMRESTART = 32,
 	REQ_PCM_STREAMSETVOL = 33,
 	IOP_COMMAND_ENUM_FORCE_DWORD = -1
-} _IOP_COMMAND_ENUM;
+};
 
 typedef _IOP_COMMAND_ENUM IOP_COMMAND_ENUM;
 
@@ -20254,10 +20254,10 @@ public:
 struct reference_fixed_array<int,8> : /* 0x0 */ fixed_array_base<int,8,int *> { // 0x4
 };
 
-typedef enum {
+enum EVENT_CAMERA_POINT_TYPE {
 	EVECAM_POINT_POSITION = 0,
 	EVECAM_POINT_TARGET = 1
-} EVENT_CAMERA_POINT_TYPE;
+};
 
 typedef struct { // 0x8
 	/* 0x0 */ u_int *pDataTop;
@@ -20479,12 +20479,12 @@ typedef struct { // 0x3d0
 	/* 0x3cc */ int col;
 } ENEDMGLINE_WRK;
 
-typedef enum {
+enum _SP_CHANCE_MODE {
 	SP_CHANCE_NONE = 0,
 	SP_CHANCE_IN = 1,
 	SP_CHANCE_OUT = 2,
 	SP_CHANCE_END = 3
-} _SP_CHANCE_MODE;
+};
 
 typedef _SP_CHANCE_MODE SP_CHANCE_MODE;
 
@@ -20589,25 +20589,25 @@ struct G2D_WRK { // 0x8
 	/* 0x4 */ int flow;
 };
 
-typedef enum {
+enum G3DBOUNINGVOLUMETYPE {
 	BVT_BOX = 0,
 	BVT_SPHERE = 1,
 	BVT_ELLIPSE = 2,
 	BVT_COLUMN = 3
-} G3DBOUNINGVOLUMETYPE;
+};
 
 struct BOUNDINGVOLUMEDATA { // 0x50
 	/* 0x00 */ G3DBOUNINGVOLUMETYPE Type;
 	/* 0x10 */ float matCoord[4][4];
 };
 
-typedef enum {
+enum G3DRESOURCETYPE {
 	G3DRTYPE_TEXTURE = 1,
 	G3DRTYPE_VERTEXBUFFER = 2,
 	G3DRTYPE_INDEXBUFFER = 3,
 	INVALID_G3DRESOURCETYPE = 2147483647,
 	G3DRTYPE_FORCE_DWORD = 2147483647
-} G3DRESOURCETYPE;
+};
 
 struct G3DTEXTUREDATA_LONG { // 0x10
 	/* 0x0 */ long int lTex0;
@@ -20636,67 +20636,67 @@ struct _PACKET { // 0x30
 	/* 0x20 */ sceGifPackAd aGPA[1];
 };
 
-typedef enum {
+enum VIF1_STAT_VPS {
 	VPS_IDLE = 0,
 	VPS_WAITINGFORDATA = 1,
 	VPS_DECODE = 2,
 	VPS_PROCESSING = 3
-} VIF1_STAT_VPS;
+};
 
-typedef enum {
+enum VIF1_STAT_VEW {
 	VEW_NOTWAIT = 0,
 	VEW_WAIT = 1
-} VIF1_STAT_VEW;
+};
 
-typedef enum {
+enum VIF1_STAT_VGW {
 	VGW_NOTWAIT = 0,
 	VGW_WAIT = 1
-} VIF1_STAT_VGW;
+};
 
-typedef enum {
+enum VIF1_STAT_MRK {
 	MRK_NOTDETECT = 0,
 	MRK_DETECT = 1
-} VIF1_STAT_MRK;
+};
 
-typedef enum {
+enum VIF1_STAT_DBF {
 	DBF_BASE = 0,
 	DBF_BASEplusOFFSET = 1
-} VIF1_STAT_DBF;
+};
 
-typedef enum {
+enum VIF1_STAT_VSS {
 	VSS_NOTSTALL = 0,
 	VSS_STALL = 1
-} VIF1_STAT_VSS;
+};
 
-typedef enum {
+enum VIF1_STAT_VFS {
 	VFS_NOTSTALL = 0,
 	VFS_STALL = 1
-} VIF1_STAT_VFS;
+};
 
-typedef enum {
+enum VIF1_STAT_VIS {
 	VIS_NOTSTALL = 0,
 	VIS_STALL = 1
-} VIF1_STAT_VIS;
+};
 
-typedef enum {
+enum VIF1_STAT_INT {
 	INT_NOTDETECT = 0,
 	INT_DETECT = 1
-} VIF1_STAT_INT;
+};
 
-typedef enum {
+enum VIF1_STAT_ERO {
 	ERO_NOERROR = 0,
 	ERO_ERROR = 1
-} VIF1_STAT_ERO;
+};
 
-typedef enum {
+enum VIF1_STAT_ER1 {
 	ER1_NOTDETECT = 0,
 	ER1_DETECT = 1
-} VIF1_STAT_ER1;
+};
 
-typedef enum {
+enum VIF1_STAT_FDR {
 	FDR_MEMtoVIF1 = 0,
 	FDR_VIF1toMEM = 1
-} VIF1_STAT_FDR;
+};
 
 struct _PACKET_SETGSREGISTER { // 0x30
 	/* 0x00 */ qword qwVif1Code;
@@ -21399,7 +21399,7 @@ struct _PHASE_CHANGE_REQS { // 0x8
 
 typedef _PHASE_CHANGE_REQS PHASE_CHANGE_REQS;
 
-typedef enum {
+enum SUBFUNC_PDEFORM_TYPE {
 	PDEFORM_TYPE_ZERO = 0,
 	PDEFORM_TYPE_SLOW = 1,
 	PDEFORM_TYPE_KOKU = 2,
@@ -21410,13 +21410,13 @@ typedef enum {
 	PDEFORM_TYPE_TSUI = 7,
 	PDEFORM_TYPE_FUU = 8,
 	PDEFORM_TYPE_FREQ = 9
-} SUBFUNC_PDEFORM_TYPE;
+};
 
-typedef enum {
+enum SUBFUNC_PDEFORM_STATUS {
 	SUBFUNC_PDEFORM_STATUS_NOT_USE = 0,
 	SUBFUNC_PDEFORM_STATUS_USE = 1,
 	SUBFUNC_PDEFORM_STATUS_WAIT = 2
-} SUBFUNC_PDEFORM_STATUS;
+};
 
 typedef struct { // 0x18
 	/* 0x00 */ int EneWrkNo;
@@ -21681,7 +21681,7 @@ struct _MAP_BGM_SAVE { // 0x3c4
 
 typedef _MAP_BGM_SAVE MAP_BGM_SAVE;
 
-typedef enum {
+enum APPROACH_CAMERA_FLOW {
 	APPROACH_CAMERA_FLOW_INIT = 0,
 	APPROACH_CAMERA_FLOW_MOVE = 1,
 	APPROACH_CAMERA_FLOW_KEEP = 2,
@@ -21690,7 +21690,7 @@ typedef enum {
 	APPROACH_CAMERA_FLOW_TALK_KEEP = 11,
 	APPROACH_CAMERA_FLOW_DEAD_INIT = 20,
 	APPROACH_CAMERA_FLOW_DEAD_KEEP = 21
-} APPROACH_CAMERA_FLOW;
+};
 
 typedef struct { // 0x24
 	/* 0x00 */ int EventCamFlg;
@@ -22996,10 +22996,10 @@ struct MDL_REQ_SAVE { // 0x10
 	void SetSave();
 };
 
-typedef enum {
+enum _LTD_MODE {
 	LTD_MODE_NORMAL = 0,
 	LTD_MODE_TIRED = 1
-} _LTD_MODE;
+};
 
 typedef _LTD_MODE LTD_MODE;
 
@@ -23127,7 +23127,7 @@ typedef struct { // 0x4
 	/* 0x3 */ char conf_anim_timer;
 } SAVEPOINT_TOP_DISP;
 
-typedef enum {
+enum _EXTENSION_LABEL {
 	EXT_LABEL_PKS = 0,
 	EXT_LABEL_CMP = 1,
 	EXT_LABEL_PK2 = 2,
@@ -23148,7 +23148,7 @@ typedef enum {
 	EXT_LABEL_EFF = 17,
 	EXT_LABEL_SCN = 18,
 	EXT_LABEL_ICO = 19
-} _EXTENSION_LABEL;
+};
 
 typedef _EXTENSION_LABEL EXT_LABEL;
 
@@ -23646,12 +23646,12 @@ typedef struct { // 0x4
 	/* 0x2 */ short int Pad;
 } SCENE_EFFECT_FADE_SCREEN_OFF;
 
-typedef enum {
+enum SCN_TEST_MODE {
 	SCN_TEST_SLCT = 0,
 	SCN_TEST_PLAY = 1,
 	SCN_TEST_PLAY_MOVIE = 2,
 	SCN_TEST_MENU = 3
-} SCN_TEST_MODE;
+};
 
 typedef struct { // 0x1120
 	/* 0x0000 */ G3DLIGHT light_tmp[36];
@@ -23862,11 +23862,11 @@ public:
 	void FreePop();
 };
 
-typedef enum {
+enum SUBTITLE_STATUS {
 	SUBTITLE_STATUS_IDLE = 0,
 	SUBTITLE_STATUS_PRELOAD = 1,
 	SUBTITLE_STATUS_EXEC = 2
-} SUBTITLE_STATUS;
+};
 
 typedef struct { // 0x4
 	/* 0x0 */ short int MsgId;
@@ -23931,11 +23931,11 @@ typedef struct { // 0x6
 
 typedef int wchar_t;
 
-typedef enum {
+enum _ENCODE_TYPE {
 	ENCODE_TYPE_NONE = 0,
 	ENCODE_TYPE_SLIDE = 1,
 	ENCODE_TYPE_FORCE_WORD = 65535
-} _ENCODE_TYPE;
+};
 
 typedef _ENCODE_TYPE ENCODE_TYPE;
 
@@ -23959,13 +23959,13 @@ struct _CMP_HEADER { // 0x20
 
 typedef _CMP_HEADER CMP_HEADER;
 
-typedef enum {
+enum _FILE_LOAD_TYPE {
 	FILE_LOAD_TYPE_EE = 0,
 	FILE_LOAD_TYPE_SPU = 1,
 	FILE_LOAD_TYPE_DECODE_EE = 2,
 	FILE_LOAD_TYPE_DECODE_IOP = 3,
 	FILE_LOAD_TYPE_FORCE_DWORD = -1
-} _FILE_LOAD_TYPE;
+};
 
 typedef _FILE_LOAD_TYPE FILE_LOAD_TYPE;
 
@@ -23985,19 +23985,19 @@ struct _FILE_LOAD_RET { // 0x8
 
 typedef _FILE_LOAD_RET FILE_LOAD_RET;
 
-typedef enum {
+enum _CMP_EEIOP_DECODE_STATE {
 	DECODE_STATE_HEADER_LOAD = 1025,
 	DECODE_STATE_END = 1026
-} _CMP_EEIOP_DECODE_STATE;
+};
 
 typedef _CMP_EEIOP_DECODE_STATE CMP_EEIOP_DECODE_STATE;
 
-typedef enum {
+enum _LOAD_CANCEL_TYPE {
 	LOAD_CANCEL_NONE = 0,
 	LOAD_CANCEL_STORE = 1,
 	LOAD_CANCEL_NORMAL = 2,
 	LOAD_CANCEL_WAIT = 3
-} _LOAD_CANCEL_TYPE;
+};
 
 typedef _LOAD_CANCEL_TYPE LOAD_CANCEL_TYPE;
 
@@ -24043,7 +24043,7 @@ struct _SPU_BUF { // 0x18
 
 typedef _SPU_BUF SPU_BUF;
 
-typedef enum {
+enum {
 	FADE_STOP_NONE = 0,
 	FADE_STOP_REQ = 1,
 	FADE_STOP_END = 2,
@@ -24089,7 +24089,7 @@ struct _HIL_FORMAT { // 0x10
 
 typedef _HIL_FORMAT HIL_FORMAT;
 
-typedef enum {
+enum _SND_STREAM_ERR {
 	SND_STREAM_OK = 0,
 	SND_STREAM_ERR_IOPSEND = 1,
 	SND_STREAM_ERR_HEADER = 2,
@@ -24098,16 +24098,16 @@ typedef enum {
 	SND_STREAM_ERR_VOICE = 5,
 	SND_STREAM_ERR_SPU_MEM = 6,
 	SND_STREAM_ERR_WAIT_QUEUE = 7
-} _SND_STREAM_ERR;
+};
 
 typedef _SND_STREAM_ERR SND_STREAM_ERR;
 
-typedef enum {
+enum _SND_STREAM_RET {
 	SND_STREAM_RET_NOT_USE = 0,
 	SND_STREAM_RET_PLAYING = 1,
 	SND_STREAM_RET_PRELOADING = 0,
 	SND_STREAM_RET_PRELOAD_OK = 1
-} _SND_STREAM_RET;
+};
 
 typedef _SND_STREAM_RET SND_STREAM_RET;
 
@@ -24192,23 +24192,23 @@ struct _SND_3D_LISTENER { // 0x50
 
 typedef _SND_3D_LISTENER SND_3D_LISTENER;
 
-typedef enum {
+enum _SND_PCM_STREAM_ERR {
 	SND_PCM_STREAM_OK = 0,
 	SND_PCM_STREAM_ERR_IOPSEND = 1,
 	SND_PCM_STREAM_ERR_HEADER = 2,
 	SND_PCM_STREAM_ERR_NOT_USE = 3,
 	SND_PCM_STREAM_ERR_IN_USE = 4,
 	SND_PCM_STREAM_ERR_WAIT_QUEUE = 5
-} _SND_PCM_STREAM_ERR;
+};
 
 typedef _SND_PCM_STREAM_ERR SND_PCM_STREAM_ERR;
 
-typedef enum {
+enum _SND_PCM_STREAM_RET {
 	SND_PCM_STREAM_RET_NOT_USE = 0,
 	SND_PCM_STREAM_RET_PLAYING = 1,
 	SND_PCM_STREAM_RET_PRELOADING = 0,
 	SND_PCM_STREAM_RET_PRELOAD_OK = 1
-} _SND_PCM_STREAM_RET;
+};
 
 typedef _SND_PCM_STREAM_RET SND_PCM_STREAM_RET;
 
@@ -24234,12 +24234,12 @@ struct _SND_PCM_STREAM_WRK { // 0x128
 
 typedef _SND_PCM_STREAM_WRK SND_PCM_STREAM_WRK;
 
-typedef enum {
+enum _AUTO_BD_MODE {
 	AUTO_BD_MODE_NO_USE = 0,
 	AUTO_BD_MODE_MEM_WAIT = 1,
 	AUTO_BD_MODE_LOAD_WAIT = 2,
 	AUTO_BD_MODE_PLAYEND_WAIT = 3
-} _AUTO_BD_MODE;
+};
 
 typedef _AUTO_BD_MODE AUTO_BD_MODE;
 
@@ -24268,11 +24268,11 @@ struct _AUTO_BD_WRK { // 0x60
 
 typedef _AUTO_BD_WRK AUTO_BD_WRK;
 
-typedef enum {
+enum _FILE_STREAM_REQ_ENUM {
 	REQ_STM_START = 0,
 	REQ_STM_READ = 1,
 	REQ_STM_STOP = 2
-} _FILE_STREAM_REQ_ENUM;
+};
 
 typedef _FILE_STREAM_REQ_ENUM FILE_STREAM_REQ_ENUM;
 
@@ -24585,7 +24585,7 @@ struct rqueue { // 0x408
 // warning: multiple differing types with the same name (descriptor not equal)
 typedef char *__gnuc_va_list;
 
-typedef enum {
+enum {
 	__no_type_class = -1,
 	__void_type_class = 0,
 	__integer_type_class = 1,
@@ -25554,23 +25554,23 @@ typedef union { // 0x4
 	/* 0x0 */ __uint32_t word;
 } ieee_float_shape_type;
 
-typedef enum {
+enum cmp_type {
 	CMP_SI = 0,
 	CMP_DI = 1,
 	CMP_SF = 2,
 	CMP_DF = 3,
 	CMP_MAX = 4
-} cmp_type;
+};
 
-typedef enum {
+enum delay_type {
 	DELAY_NONE = 0,
 	DELAY_LOAD = 1,
 	DELAY_HILO = 2,
 	DELAY_HILO1 = 3,
 	DELAY_FCMP = 4
-} delay_type;
+};
 
-typedef enum {
+enum processor_type {
 	PROCESSOR_DEFAULT = 0,
 	PROCESSOR_R3000 = 1,
 	PROCESSOR_R3900 = 2,
@@ -25584,20 +25584,20 @@ typedef enum {
 	PROCESSOR_R5400 = 10,
 	PROCESSOR_R5900 = 11,
 	PROCESSOR_R8000 = 12
-} processor_type;
+};
 
-typedef enum {
+enum mips_abicalls_type {
 	MIPS_ABICALLS_NO = 0,
 	MIPS_ABICALLS_YES = 1
-} mips_abicalls_type;
+};
 
-typedef enum {
+enum block_move_type {
 	BLOCK_MOVE_NORMAL = 0,
 	BLOCK_MOVE_NOT_LAST = 1,
 	BLOCK_MOVE_LAST = 2
-} block_move_type;
+};
 
-typedef enum {
+enum reg_class {
 	NO_REGS = 0,
 	ARGP_REGS = 1,
 	M16_NA_REGS = 2,
@@ -25631,14 +25631,14 @@ typedef enum {
 	ST_REGS = 30,
 	ALL_REGS = 31,
 	LIM_REG_CLASSES = 32
-} reg_class;
+};
 
-typedef enum {
+enum frameinfo_state {
 	fi_blank = 0,
 	fi_partially_initialized = 1,
 	fi_modes_known = 2,
 	fi_initialized = 3
-} frameinfo_state;
+};
 
 struct mips_frame_info { // 0x80
 	/* 0x00 */ long int total_size;
@@ -25674,7 +25674,7 @@ struct mips_args { // 0x3c
 
 typedef mips_args CUMULATIVE_ARGS;
 
-typedef enum {
+enum mips_builtins {
 	MIPS5900_BUILTIN_PABSH = 0,
 	MIPS5900_BUILTIN_PABSW = 1,
 	MIPS5900_BUILTIN_PADDB = 2,
@@ -25771,9 +25771,9 @@ typedef enum {
 	MIPS5900_BUILTIN_PMFHL_LH = 93,
 	MIPS5900_BUILTIN_PMFHL_SH = 94,
 	MIPS_BUILTIN_MAX = 95
-} mips_builtins;
+};
 
-typedef enum {
+enum machine_mode {
 	VOIDmode = 0,
 	BImode = 1,
 	QImode = 2,
@@ -25827,9 +25827,9 @@ typedef enum {
 	BLKmode = 50,
 	CCmode = 51,
 	MAX_MACHINE_MODE = 52
-} machine_mode;
+};
 
-typedef enum {
+enum mode_class {
 	MODE_RANDOM = 0,
 	MODE_INT = 1,
 	MODE_FLOAT = 2,
@@ -25840,7 +25840,7 @@ typedef enum {
 	MODE_VECTOR_INT = 7,
 	MODE_VECTOR_FLOAT = 8,
 	MAX_MODE_CLASS = 9
-} mode_class;
+};
 
 typedef signed char QItype;
 typedef unsigned char UQItype;
@@ -25933,7 +25933,7 @@ typedef struct { // 0x8
 	/* 0x6 */ short int version;
 } __eh_info;
 
-typedef enum {
+enum exception_source_language {
 	EH_LANG_C89 = 1,
 	EH_LANG_C = 2,
 	EH_LANG_Ada83 = 3,
@@ -25946,7 +25946,7 @@ typedef enum {
 	EH_LANG_Modula2 = 10,
 	EH_LANG_Java = 11,
 	EH_LANG_Mips_Assembler = 32769
-} exception_source_language;
+};
 
 struct eh_full_context { // 0xf0
 	/* 0x00 */ eh_context c;
@@ -26025,7 +26025,7 @@ typedef union { // 0x8
 	} bits;
 } FLO_union_type;
 
-typedef enum {
+enum dwarf_tag {
 	DW_TAG_padding = 0,
 	DW_TAG_array_type = 1,
 	DW_TAG_class_type = 2,
@@ -26078,9 +26078,9 @@ typedef enum {
 	DW_TAG_format_label = 16641,
 	DW_TAG_function_template = 16642,
 	DW_TAG_class_template = 16643
-} dwarf_tag;
+};
 
-typedef enum {
+enum dwarf_form {
 	DW_FORM_addr = 1,
 	DW_FORM_block2 = 3,
 	DW_FORM_block4 = 4,
@@ -26102,9 +26102,9 @@ typedef enum {
 	DW_FORM_ref8 = 20,
 	DW_FORM_ref_udata = 21,
 	DW_FORM_indirect = 22
-} dwarf_form;
+};
 
-typedef enum {
+enum dwarf_attribute {
 	DW_AT_sibling = 1,
 	DW_AT_location = 2,
 	DW_AT_name = 3,
@@ -26184,9 +26184,9 @@ typedef enum {
 	DW_AT_src_coords = 8452,
 	DW_AT_body_begin = 8453,
 	DW_AT_body_end = 8454
-} dwarf_attribute;
+};
 
-typedef enum {
+enum dwarf_location_atom {
 	DW_OP_addr = 3,
 	DW_OP_deref = 6,
 	DW_OP_const1u = 8,
@@ -26332,9 +26332,9 @@ typedef enum {
 	DW_OP_deref_size = 148,
 	DW_OP_xderef_size = 149,
 	DW_OP_nop = 150
-} dwarf_location_atom;
+};
 
-typedef enum {
+enum dwarf_type {
 	DW_ATE_void = 0,
 	DW_ATE_address = 1,
 	DW_ATE_boolean = 2,
@@ -26344,57 +26344,57 @@ typedef enum {
 	DW_ATE_signed_char = 6,
 	DW_ATE_unsigned = 7,
 	DW_ATE_unsigned_char = 8
-} dwarf_type;
+};
 
-typedef enum {
+enum dwarf_array_dim_ordering {
 	DW_ORD_row_major = 0,
 	DW_ORD_col_major = 1
-} dwarf_array_dim_ordering;
+};
 
-typedef enum {
+enum dwarf_access_attribute {
 	DW_ACCESS_public = 1,
 	DW_ACCESS_protected = 2,
 	DW_ACCESS_private = 3
-} dwarf_access_attribute;
+};
 
-typedef enum {
+enum dwarf_visibility_attribute {
 	DW_VIS_local = 1,
 	DW_VIS_exported = 2,
 	DW_VIS_qualified = 3
-} dwarf_visibility_attribute;
+};
 
-typedef enum {
+enum dwarf_virtuality_attribute {
 	DW_VIRTUALITY_none = 0,
 	DW_VIRTUALITY_virtual = 1,
 	DW_VIRTUALITY_pure_virtual = 2
-} dwarf_virtuality_attribute;
+};
 
-typedef enum {
+enum dwarf_id_case {
 	DW_ID_case_sensitive = 0,
 	DW_ID_up_case = 1,
 	DW_ID_down_case = 2,
 	DW_ID_case_insensitive = 3
-} dwarf_id_case;
+};
 
-typedef enum {
+enum dwarf_calling_convention {
 	DW_CC_normal = 1,
 	DW_CC_program = 2,
 	DW_CC_nocall = 3
-} dwarf_calling_convention;
+};
 
-typedef enum {
+enum dwarf_inline_attribute {
 	DW_INL_not_inlined = 0,
 	DW_INL_inlined = 1,
 	DW_INL_declared_not_inlined = 2,
 	DW_INL_declared_inlined = 3
-} dwarf_inline_attribute;
+};
 
-typedef enum {
+enum dwarf_discrim_list {
 	DW_DSC_label = 0,
 	DW_DSC_range = 1
-} dwarf_discrim_list;
+};
 
-typedef enum {
+enum dwarf_line_number_ops {
 	DW_LNS_extended_op = 0,
 	DW_LNS_copy = 1,
 	DW_LNS_advance_pc = 2,
@@ -26405,15 +26405,15 @@ typedef enum {
 	DW_LNS_set_basic_block = 7,
 	DW_LNS_const_add_pc = 8,
 	DW_LNS_fixed_advance_pc = 9
-} dwarf_line_number_ops;
+};
 
-typedef enum {
+enum dwarf_line_number_x_ops {
 	DW_LNE_end_sequence = 1,
 	DW_LNE_set_address = 2,
 	DW_LNE_define_file = 3
-} dwarf_line_number_x_ops;
+};
 
-typedef enum {
+enum dwarf_call_frame_info {
 	DW_CFA_advance_loc = 64,
 	DW_CFA_offset = 128,
 	DW_CFA_restore = 192,
@@ -26438,9 +26438,9 @@ typedef enum {
 	DW_CFA_GNU_window_save = 45,
 	DW_CFA_GNU_args_size = 46,
 	DW_CFA_GNU_negative_offset_extended = 47
-} dwarf_call_frame_info;
+};
 
-typedef enum {
+enum dwarf_source_language {
 	DW_LANG_C89 = 1,
 	DW_LANG_C = 2,
 	DW_LANG_Ada83 = 3,
@@ -26453,15 +26453,15 @@ typedef enum {
 	DW_LANG_Modula2 = 10,
 	DW_LANG_Java = 11,
 	DW_LANG_Mips_Assembler = 32769
-} dwarf_source_language;
+};
 
-typedef enum {
+enum dwarf_macinfo_record_type {
 	DW_MACINFO_define = 1,
 	DW_MACINFO_undef = 2,
 	DW_MACINFO_start_file = 3,
 	DW_MACINFO_end_file = 4,
 	DW_MACINFO_vendor_ext = 255
-} dwarf_macinfo_record_type;
+};
 
 typedef int sword;
 typedef unsigned int uword;
@@ -26540,7 +26540,7 @@ struct bad_cast : /* 0x0 */ exception { // 0x4
 struct bad_typeid : /* 0x0 */ exception { // 0x4
 };
 
-typedef enum {
+enum sub_kind {
 	unknown = 0,
 	not_contained = 1,
 	contained_ambig = 2,
@@ -26549,7 +26549,7 @@ typedef enum {
 	contained_public_mask = 2,
 	contained_private = 4,
 	contained_public = 6
-} sub_kind;
+};
 
 struct upcast_result { // 0xc
 	/* 0x0 */ void *target_obj;
@@ -26566,11 +26566,11 @@ struct dyncast_result { // 0x10
 
 typedef int myint32;
 
-typedef enum {
+enum access {
 	PUBLIC = 1,
 	PROTECTED = 2,
 	PRIVATE = 3
-} access;
+};
 
 struct base_info { // 0x8
 	/* 0x0 */ __user_type_info *base;
@@ -26627,12 +26627,12 @@ struct __user_type_info : /* 0x0 */ type_info { // 0x8
 	/* vtable[4] */ virtual sub_kind do_find_public_subobj();
 };
 
-typedef enum {
+enum cv {
 	NONE = 0,
 	CONST = 1,
 	VOLATILE = 2,
 	CONSTVOL = 3
-} cv;
+};
 
 struct __array_type_info : /* 0x0 */ type_info { // 0x8
 };
@@ -26783,7 +26783,7 @@ union double_union { // 0x8
 	/* 0x0 */ __uint32_t i[2];
 };
 
-typedef enum {
+enum {
 	OCT = 0,
 	DEC = 1,
 	HEX = 2

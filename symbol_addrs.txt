@@ -5359,3 +5359,5 @@ InvalidDCache                                                                   
 iInvalidDCache                                                                                                                = 0x002ae898; // type:func
 __fixdfdi                                                                                                                     = 0x002ae8b0; // type:func
 dptoli                                                                                                                        = 0x002ae928; // type:func
+gphase_tbl                                                                                                                    = 0x00317758; // size:0x5E0
+gphase_sys                                                                                                                    = 0x004AF6E0; // size:0x48
