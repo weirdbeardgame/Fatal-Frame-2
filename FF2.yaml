@@ -139,14 +139,37 @@ segments:
   - name: reg_info
     type: databin
     start: 0x1c4c78
+  # data ################
+  - name: data_1
+    type: data
+    start: 0x1c4d00
+    vram: 0x2c3d00
+  - name: main/gphase
+    type: .data
+    start: 0x218758
+    vram: 0x317758
+  - name: data_3
+    type: data
+    start: 0x218D38
+    vram: 0x317d38
+  # #####################
+  # bss #################
+  - name: bss_1
+    type: bss
+    start: 0x2f5ac4
+    vram: 0x3f5500
+  - name: main/gphase
+    type: .bss
+    vram: 0x4af6e0
+  - name: bss_3
+    type: bss
+    vram: 0x4af730
+  #######################
+  - [0x26b260, databin, eh_frame]
   - name: lit4
     type: lit4
     start: 0x2ee800
     vram: 0x3ed800
-  - name: sdata
-    type: sdata
-    start: 0x2efa80
-    vram: 0x3eea80
   #- name: sbss
   # type: sbss
   # start: 0x2f4a80
