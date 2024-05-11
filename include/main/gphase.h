@@ -130,8 +130,10 @@ extern GPHASE_SYS gphase_sys;
 
 extern GPHASE_DAT gphase_tbl[94];
 
-// void InitGPhaseSys();
-//  void SetInitFlag();
-// GPHASE_ENUM DoJobPhase(int layer);
-// void GPhaseSysMain();
-// void SetNextGPhase(GPHASE_ID_ENUM id);
+extern "C++" {
+    void InitGPhaseSys();
+    void SetInitFlag();
+    GPHASE_ENUM DoJobPhase(int layer);
+    void GPhaseSysMain();
+    void SetNextGPhase(GPHASE_ID_ENUM id);
+};

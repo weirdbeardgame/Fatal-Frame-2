@@ -111,12 +111,6 @@ GPHASE_ENUM(*pre_func[94])
 GPHASE_ENUM(*after_func[94])
 (GPHASE_ENUM) = {after_super};
 
-void InitGPhaseSys();
-void SetInitFlag();
-GPHASE_ENUM DoJobPhase(int layer);
-void GPhaseSysMain();
-void SetNextGPhase(GPHASE_ID_ENUM id);
-
 void InitGPhaseSys(void)
 {
     for (int i = 0; i < gphase_sys_num; i++)
