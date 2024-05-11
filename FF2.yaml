@@ -129,6 +129,8 @@ segments:
       type: textbin
       start: 0x1bb0a0
       vram: 0x2ba0a0
+    - [0x1c4b00, databin, ctors]
+    - [0x1c4c6c, databin, dtors]
     - [0x1c4c78, databin, reg_info]
     # data ################
     - name: data_1
@@ -137,14 +139,14 @@ segments:
       vram: 0x2c3d00
     - name: main/gphase
       type: .data
-      start: 0x218758
-      vram: 0x317758
+      start: 0x218178
+      vram: 0x317178
     - name: data_3
       type: data
-      start: 0x218D38
-      vram: 0x317d38
+      start: 0x218D40
+      vram: 0x317d40
     - [0x26b260, databin, eh_frame]
-    - [0x29eaec, databin, vudata]
+    # - [0x29eaec, databin, vudata]
     # #####################
     # lit4 ################
     - name: lit4
