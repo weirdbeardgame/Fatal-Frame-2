@@ -48,7 +48,6 @@ segments:
     bss_size: 0x0d8bec
     subsegments:
     - [0x1000, asm, crt0.s]
-      # - [0x1258, asm]
     - [0x1258, asm, ingame/map/CBuff]
     - [0x14d0, asm, graphics/graph3d/CDebugEdit]
     - [0x1db0, asm, ingame/plyr/ChrSort]
@@ -130,14 +129,12 @@ segments:
       type: textbin
       start: 0x1bb0a0
       vram: 0x2ba0a0
-    - name: reg_info
-      type: databin
-      start: 0x1c4c78
+    - [0x1c4c78, databin, reg_info]
     # data ################
-    #- name: data_1
-     # type: data
-     # start: 0x1c4d00
-     # vram: 0x2c3d00
+    - name: data_1
+      type: data
+      start: 0x1c4d00
+      vram: 0x2c3d00
     - name: main/gphase
       type: .data
       start: 0x218758
@@ -147,6 +144,7 @@ segments:
       start: 0x218D38
       vram: 0x317d38
     - [0x26b260, databin, eh_frame]
+    - [0x29eaec, databin, vudata]
     # #####################
     # lit4 ################
     - name: lit4
@@ -154,24 +152,35 @@ segments:
       start: 0x2ee800
       vram: 0x3ed800
     # #####################
+    # sdata ###############
+    - name: sdata
+      type: sdata
+      start: 0x2efa80
+      vram: 0x3eea80
+    # #####################
     # sbss ################
-    - name: sbss_1
+    - name: sbss
       type: sbss
       start: 0x2f5a80
       vram: 0x3f4a80
     # #####################
     # bss #################
+    - name: bss
+      type: bss
+      start: 0x2f5ac4
+      vram: 0x3f5500
     - name: main/gphase
       type: .bss
+      start: 0x2f5ac4
       vram: 0x4af6e0
     - name: bss_1
       type: bss
+      start: 0x2f5ac4
       vram: 0x4af730
-    #######################
-    # - name: vubss
-    #   type: databin
-    #   start: 0x25888c
-    #   vram: 0x4ce0ec
+    - name: vubss
+      type: bss
+      start: 0x2f5ac4
+      vram: 0x4ce0ec
   - name: mips_debug
     type: databin
     start: 0x2f5ac4
