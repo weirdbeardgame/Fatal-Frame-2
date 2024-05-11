@@ -1,7 +1,20 @@
 #include "common.h"
 #include "gphase.h"
 
-GPHASE_SYS gphase_sys;
+// TODO: find a way to avoid the attribute
+GPHASE_SYS gphase_sys __attribute__((section(".bss")));
+
+void end_super();
+GPHASE_ENUM after_super(GPHASE_ENUM result);
+void init_super();
+GPHASE_ENUM pre_super(GPHASE_ENUM super);
+
+void (*ini_func[94])() = {init_super};
+void (*end_func[94])() = {end_super};
+GPHASE_ENUM(*pre_func[94])
+(GPHASE_ENUM) = {pre_super, 0x0, 0x0, 0x0, 0x0, 0x0};
+GPHASE_ENUM(*after_func[94])
+(GPHASE_ENUM) = {after_super};
 
 GPHASE_DAT gphase_tbl[94] = {
     {0, GPHASE_ID_NONE, GID_BOOT_INIT, 14},
@@ -97,19 +110,11 @@ GPHASE_DAT gphase_tbl[94] = {
     {5, GID_TITLE_MISSION, GPHASE_ID_NONE, 0},
     {5, GID_TITLE_MISSION, GPHASE_ID_NONE, 0},
     {5, GID_TITLE_MISSION, GPHASE_ID_NONE, 0},
-    {5, GID_TITLE_MISSION, GPHASE_ID_NONE, 0}};
+    {5, GID_TITLE_MISSION, GPHASE_ID_NONE, 0}
+};
 
-void end_super();
-GPHASE_ENUM after_super(GPHASE_ENUM result);
-void init_super();
-GPHASE_ENUM pre_super(GPHASE_ENUM super);
-
-void (*ini_func[94])() = {init_super};
-static void (*end_func[94])() = {end_super};
-GPHASE_ENUM(*pre_func[94])
-(GPHASE_ENUM) = {pre_super, 0x0, 0x0, 0x0, 0x0, 0x0};
-GPHASE_ENUM(*after_func[94])
-(GPHASE_ENUM) = {after_super};
+// TODO: match graphics/gra3d.c
+int pad[2] __attribute__((section(".data")));
 
 void InitGPhaseSys(void)
 {
