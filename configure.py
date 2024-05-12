@@ -29,7 +29,7 @@ MAP_PATH = f"build/{BASENAME}.map"
 PRE_ELF_PATH = f"build/{BASENAME}.elf"
 
 COMMON_INCLUDES = (
-    "-Iinclude -isystem include/sdk/ee -isystem include/gcc -isystem include/main"
+    "-Iinclude -I include/sdk/ee -I include/gcc -I include/main"
 )
 
 COMPILER = "ee-gcc2.96"
@@ -38,7 +38,7 @@ LIB_CC_DIR = f"{TOOLS_DIR}/cc/{COMPILER}/bin"
 
 GAME_COMPILE_CMD = f"{GAME_CC_DIR}/ee-gcc -c {COMMON_INCLUDES} -O2 -G8 -g -x c++"
 
-LIB_COMPILE_CMD = f"{LIB_CC_DIR}/ee-gcc -c -isystem include/gcc-9.26 {COMMON_INCLUDES} -O2 -G8 -g -x c++"
+LIB_COMPILE_CMD = f"{LIB_CC_DIR}/ee-gcc -c -I include/gcc-9.26 {COMMON_INCLUDES} -O2 -G8 -g -x c++"
 
 WIBO_VER = "0.6.4"
 
