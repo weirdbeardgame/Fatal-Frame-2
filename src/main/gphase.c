@@ -1,5 +1,6 @@
 #include "common.h"
 #include "gphase.h"
+#include "main.h"
 
 // TODO: find a way to avoid the attribute
 GPHASE_SYS gphase_sys __attribute__((section(".bss")));

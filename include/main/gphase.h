@@ -129,7 +129,6 @@ extern "C" int printf(char *fmt, ...);
 extern "C++" {
 
     // init externs
-    extern void init_super();
     extern void init_Boot_Init();
     extern void init_Boot_PadCheck();
     extern void init_LangData_Check();
@@ -225,7 +224,6 @@ extern "C++" {
     extern void init_Mission_Save();
 
     // end externs
-    extern void end_super();
     extern void end_Boot_Init();
     extern void end_Boot_PadCheck();
     extern void end_LangData_Check();
@@ -321,7 +319,6 @@ extern "C++" {
     extern void end_Mission_Save();
 
     // pre externs
-    extern GPHASE_ENUM pre_super(GPHASE_ENUM);
     extern GPHASE_ENUM pre_OutGame_Main(GPHASE_ENUM);
     extern GPHASE_ENUM pre_Story_Main(GPHASE_ENUM);
     extern GPHASE_ENUM pre_GameOver_Menu(GPHASE_ENUM);
@@ -340,8 +337,6 @@ extern "C++" {
     extern GPHASE_ENUM pre_Title_Mission(GPHASE_ENUM);
 
     // after externs
-    extern GPHASE_ENUM after_super(GPHASE_ENUM);
-    extern GPHASE_ENUM one_Boot_Init(GPHASE_ENUM);
     extern GPHASE_ENUM one_Boot_PadCheck(GPHASE_ENUM);
     extern GPHASE_ENUM one_LangData_Check(GPHASE_ENUM);
     extern GPHASE_ENUM one_LangSel_Main(GPHASE_ENUM);
@@ -353,7 +348,6 @@ extern "C++" {
     extern GPHASE_ENUM after_Ending_Movie(GPHASE_ENUM);
     extern GPHASE_ENUM after_GameResult(GPHASE_ENUM);
     extern GPHASE_ENUM after_ClearMenu(GPHASE_ENUM);
-    extern GPHASE_ENUM one_SoftResetMain(GPHASE_ENUM);
     extern GPHASE_ENUM one_Debug_Menu(GPHASE_ENUM);
     extern GPHASE_ENUM one_Tecmo_Mode(GPHASE_ENUM);
     extern GPHASE_ENUM one_Project_Mode(GPHASE_ENUM);
