@@ -4,6 +4,9 @@
 // TODO: find a way to avoid the attribute
 GPHASE_SYS gphase_sys __attribute__((section(".bss")));
 
+// TODO: match the next file's bss
+int pad_bss[2] __attribute__((section(".bss")));
+
 void (*ini_func[94])() = {
     init_super,
     init_Boot_Init,
@@ -522,7 +525,8 @@ GPHASE_ENUM DoJobPhase(int layer)
 
     if (layer >= 6)
     {
-        printf("layer_num over %d\n", 6);
+        // TODO: match the next file's rodata to remove the padding
+        printf("layer_num over %d\n\0\0\0\0", 6);
         while (true)
             ;
     }
