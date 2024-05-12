@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "*.ksy": "yaml",
+        "*.json": "json",
+        "common.h": "c"
+    }
+}

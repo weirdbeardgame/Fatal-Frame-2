@@ -120,9 +120,12 @@ segments:
     - [0xdc7d8, asm, ingame/map/map_height]
     - [0xdd548, asm, ingame/map/map_hit_check]
     - [0xde0a8, asm, unk]
+    - [0x1369c0, c, ingame/plyr/player]
+    - [0x13f100, c, ingame/plyr/plyr_mdl]
+    - [0x1410e8, asm, unk_1]
     - [0x17e250, asm, devvu0]
     - [0x17e6e8, asm, devvif0]
-    - [0x17ea18, asm, unk_1] # functions that appear below the sdk!?
+    - [0x17ea18, asm, unk_2] # functions that appear below the sdk!?
 
     # ######0100000
     - name: vutext
