@@ -182,20 +182,24 @@ segments:
     # bss #################
     - name: bss
       type: bss
-      start: 0x2f5ac4
+      start: 0x2f5a80
       vram: 0x3f5500
     - name: main/gphase
       type: .bss
-      start: 0x2f5ac4
+      start: 0x2f5a80
       vram: 0x4af6e0
     - name: bss_1
       type: bss
-      start: 0x2f5ac4
+      start: 0x2f5a80
       vram: 0x4af730
     - name: vubss
       type: bss
-      start: 0x2f5ac4
+      start: 0x2f5a80
       vram: 0x4ce0ec
+  - name: padding
+    type: databin
+    start: 0x2f5a80
+    vram: 0x000000
   - name: mips_debug
     type: databin
     start: 0x2f5ac4
