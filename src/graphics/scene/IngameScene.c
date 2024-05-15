@@ -1,20 +1,20 @@
 #include "common.h"
 
-INCLUDE_ASM("asm/nonmatchings/graphics/scene/IngameScene", func_00102DB0);
+INCLUDE_ASM("asm/nonmatchings/graphics/scene/IngameScene", _fixed_array_assert__FPCcUiUi__4);
 
-INCLUDE_ASM("asm/nonmatchings/graphics/scene/IngameScene", func_00102DE0);
+INCLUDE_ASM("asm/nonmatchings/graphics/scene/IngameScene", _fixed_array_verifyrange__H1ZPv_UiUi_PX01__6);
 
-INCLUDE_ASM("asm/nonmatchings/graphics/scene/IngameScene", func_00102E18);
+INCLUDE_ASM("asm/nonmatchings/graphics/scene/IngameScene", _fixed_array_verifyrange__H1ZPc_UiUi_PX01__6);
 
-INCLUDE_ASM("asm/nonmatchings/graphics/scene/IngameScene", func_00102E50);
+INCLUDE_ASM("asm/nonmatchings/graphics/scene/IngameScene", _fixed_array_verifyrange__H1ZPUi_UiUi_PX01__6);
 
 INCLUDE_ASM("asm/nonmatchings/graphics/scene/IngameScene", IngameSceneInit__Fi);
 
-INCLUDE_ASM("asm/nonmatchings/graphics/scene/IngameScene", func_00102ED8);
+INCLUDE_ASM("asm/nonmatchings/graphics/scene/IngameScene", IngameSceneRoomLoadCheck__Fi);
 
-INCLUDE_ASM("asm/nonmatchings/graphics/scene/IngameScene", func_00102F40);
+INCLUDE_ASM("asm/nonmatchings/graphics/scene/IngameScene", IngameSceneLoadRoom__FP17INGAME_SCENE_CTRL);
 
-INCLUDE_ASM("asm/nonmatchings/graphics/scene/IngameScene", func_00103070);
+INCLUDE_ASM("asm/nonmatchings/graphics/scene/IngameScene", IngameSceneDrawRoomInit__Fv);
 
 INCLUDE_ASM("asm/nonmatchings/graphics/scene/IngameScene", init_Story_Scene__Fv);
 

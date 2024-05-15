@@ -1,12 +1,12 @@
 #include "common.h"
 
-INCLUDE_ASM("asm/nonmatchings/graphics/motion/accessory", func_00117190);
+INCLUDE_ASM("asm/nonmatchings/graphics/motion/accessory", __tft16fixed_array_base3Z10C_ACS_CTRLUi_15_ZA14_10C_ACS_CTRL);
 
-INCLUDE_ASM("asm/nonmatchings/graphics/motion/accessory", func_001171C0);
+INCLUDE_ASM("asm/nonmatchings/graphics/motion/accessory", _fixed_array_verifyrange__H1ZPv_UiUi_PX01__23);
 
-INCLUDE_ASM("asm/nonmatchings/graphics/motion/accessory", func_001171F8);
+INCLUDE_ASM("asm/nonmatchings/graphics/motion/accessory", _fixed_array_verifyrange__H1ZPc_UiUi_PX01__23);
 
-INCLUDE_ASM("asm/nonmatchings/graphics/motion/accessory", func_00117230);
+INCLUDE_ASM("asm/nonmatchings/graphics/motion/accessory", _fixed_array_verifyrange__H1ZPUi_UiUi_PX01__23);
 
 INCLUDE_ASM("asm/nonmatchings/graphics/motion/accessory", InitPlyrAcsAlpha__Fv);
 
@@ -22,7 +22,7 @@ INCLUDE_ASM("asm/nonmatchings/graphics/motion/accessory", acsRopeReleaseWork__FU
 
 INCLUDE_ASM("asm/nonmatchings/graphics/motion/accessory", acsRopeGetFurnID__FUi);
 
-INCLUDE_ASM("asm/nonmatchings/graphics/motion/accessory", acsGetRopePos__FUi);
+INCLUDE_ASM("asm/nonmatchings/graphics/motion/accessory", float__7);
 
 INCLUDE_ASM("asm/nonmatchings/graphics/motion/accessory", acsInitRopeSub__FUiUiUi);
 
@@ -64,9 +64,9 @@ INCLUDE_ASM("asm/nonmatchings/graphics/motion/accessory", acsMoveCloth__FPA3_fP1
 
 INCLUDE_ASM("asm/nonmatchings/graphics/motion/accessory", acsResetCloth__FP8ANI_CTRL);
 
-INCLUDE_ASM("asm/nonmatchings/graphics/motion/accessory", func_0011AD58);
+INCLUDE_ASM("asm/nonmatchings/graphics/motion/accessory", motClothWind__FP10CLOTH_CTRL);
 
-INCLUDE_ASM("asm/nonmatchings/graphics/motion/accessory", func_0011AE88);
+INCLUDE_ASM("asm/nonmatchings/graphics/motion/accessory", motClothSetWindTime__FP9WIND_CTRL);
 
 INCLUDE_ASM("asm/nonmatchings/graphics/motion/accessory", acsChodoInitCloth__Fv);
 
@@ -96,6 +96,6 @@ INCLUDE_ASM("asm/nonmatchings/graphics/motion/accessory", acsCheckCollisionPlane
 
 INCLUDE_ASM("asm/nonmatchings/graphics/motion/accessory", SetLWS2__FP13SGDCOORDINATE);
 
-INCLUDE_ASM("asm/nonmatchings/graphics/motion/accessory", func_0011C140);
+INCLUDE_ASM("asm/nonmatchings/graphics/motion/accessory", __static_initialization_and_destruction_0__13);
 
-INCLUDE_ASM("asm/nonmatchings/graphics/motion/accessory", func_0011C148);
+INCLUDE_ASM("asm/nonmatchings/graphics/motion/accessory", _GLOBAL__I_rope_spring);

@@ -29,7 +29,7 @@ MAP_PATH = f"build/{BASENAME}.map"
 PRE_ELF_PATH = f"build/{BASENAME}.elf"
 
 COMMON_INCLUDES = (
-    "-Iinclude -I include/sdk/ee -I include/gcc -I include/main"
+    "-Iinclude -I include/sdk/ee -I include/gcc -I include/gcc/sys -I include/gcc/gcc-lib -I include/main -I include/graphics -I include/graphics/graph3d -I include/graphics/motion -I include/ingame -I include/ingame/plyr"
 )
 
 COMPILER = "ee-gcc2.96"

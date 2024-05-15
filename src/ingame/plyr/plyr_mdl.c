@@ -1,12 +1,12 @@
 #include "common.h"
 
-INCLUDE_ASM("asm/nonmatchings/ingame/plyr/plyr_mdl", _fixed_array_assert__FPCcUiUi);
+INCLUDE_ASM("asm/nonmatchings/ingame/plyr/plyr_mdl", __tf8MAN_DATA);
 
-INCLUDE_ASM("asm/nonmatchings/ingame/plyr/plyr_mdl", _fixed_array_verifyrange__H1ZPv_UiUi_PX01);
+INCLUDE_ASM("asm/nonmatchings/ingame/plyr/plyr_mdl", _fixed_array_verifyrange__H1ZPv_UiUi_PX01__193);
 
-INCLUDE_ASM("asm/nonmatchings/ingame/plyr/plyr_mdl", func_0023E168);
+INCLUDE_ASM("asm/nonmatchings/ingame/plyr/plyr_mdl", _fixed_array_verifyrange__H1ZPc_UiUi_PX01__193);
 
-INCLUDE_ASM("asm/nonmatchings/ingame/plyr/plyr_mdl", _fixed_array_verifyrange__H1ZPUi_UiUi_PX01);
+INCLUDE_ASM("asm/nonmatchings/ingame/plyr/plyr_mdl", _fixed_array_verifyrange__H1ZPUi_UiUi_PX01__193);
 
 INCLUDE_ASM("asm/nonmatchings/ingame/plyr/plyr_mdl", plyr_mdlInit__Fv);
 
@@ -66,11 +66,11 @@ INCLUDE_ASM("asm/nonmatchings/ingame/plyr/plyr_mdl", PlyrNeckFrameInit__Fv);
 
 INCLUDE_ASM("asm/nonmatchings/ingame/plyr/plyr_mdl", PlyrNeckInit__Fv);
 
-INCLUDE_ASM("asm/nonmatchings/ingame/plyr/plyr_mdl", PlyrNeckMain__Fv);
+INCLUDE_ASM("asm/nonmatchings/ingame/plyr/plyr_mdl", PlyrNeckRegisterTarget__FP14_LOOK_AT_PARAM25_LOOK_TARGET_PRIORITY_MIO);
 
 INCLUDE_ASM("asm/nonmatchings/ingame/plyr/plyr_mdl", SetPlyrNeckFlg__Fi);
 
-INCLUDE_ASM("asm/nonmatchings/ingame/plyr/plyr_mdl", PlyrNeckRegisterTarget__FP14_LOOK_AT_PARAM25_LOOK_TARGET_PRIORITY_MIO);
+INCLUDE_ASM("asm/nonmatchings/ingame/plyr/plyr_mdl", PlyrNeckMain__Fv);
 
 INCLUDE_ASM("asm/nonmatchings/ingame/plyr/plyr_mdl", PlyrNeckGetParam__Fv);
 
@@ -96,6 +96,6 @@ INCLUDE_ASM("asm/nonmatchings/ingame/plyr/plyr_mdl", SetSisterAcsNo__Fi);
 
 INCLUDE_ASM("asm/nonmatchings/ingame/plyr/plyr_mdl", CostumeSetSave__FP12MC_SAVE_DATA);
 
-INCLUDE_ASM("asm/nonmatchings/ingame/plyr/plyr_mdl", func_00240050);
+INCLUDE_ASM("asm/nonmatchings/ingame/plyr/plyr_mdl", __static_initialization_and_destruction_0__78);
 
-INCLUDE_ASM("asm/nonmatchings/ingame/plyr/plyr_mdl", RoomInInfoInit__Fv);
+INCLUDE_ASM("asm/nonmatchings/ingame/plyr/plyr_mdl", _GLOBAL__I_g_iMaxPlayerAlpha);

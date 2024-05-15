@@ -1,6 +1,6 @@
 #include "common.h"
 
-INCLUDE_ASM("asm/nonmatchings/graphics/dmaVif1", func_001355A8);
+INCLUDE_ASM("asm/nonmatchings/graphics/dmaVif1", _OnDetectedPacketDoesNotTerminated__F26G3DGSSYNCPATHTIMEOUTREASON);
 
 INCLUDE_ASM("asm/nonmatchings/graphics/dmaVif1", dmaVif1ClearDMA__Fv);
 
