@@ -7581,7 +7581,7 @@ _GLOBAL__I_plyr_wrk                                                             
 // ----------------------------------------------------------------------------------------------------------------------------------------------------------------
 // /home/zero_rom/zero2np/src/ingame/plyr/plyr_mdl.c (50)
 // ----------------------------------------------------------------------------------------------------------------------------------------------------------------
-__tf8MAN_DATA                                                                                                                = 0x0023e100; // type:func
+//__tf8MAN_DATA                                                                                                                = 0x0023e100; // type:func
 _fixed_array_verifyrange__H1ZPv_UiUi_PX01__193                                                                               = 0x0023e130; // type:func size:0x34
 _fixed_array_verifyrange__H1ZPc_UiUi_PX01__193                                                                               = 0x0023e168; // type:func size:0x34
 _fixed_array_verifyrange__H1ZPUi_UiUi_PX01__193                                                                              = 0x0023e1a0; // type:func size:0x34

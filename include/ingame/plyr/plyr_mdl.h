@@ -42,11 +42,29 @@ private:
     void Init();
 };
 
+typedef struct
+{
+    int mPlyrMdlNo;
+    int mSisterMdlNo;
+    int mPlyrAcsNo;
+    int mSisterAcsNo;
+} _GAME_COSTUME;
+
+typedef _GAME_COSTUME GAME_COSTUME;
+
+extern GAME_COSTUME GameCostume;
 extern PLYR_PLYR_DATA plyr_data;
 
 int IsReadyPlyrMdl();
 void DrawGirl(int in_mirror);
-
-GRA3DEMULATIONLIGHTDATACREATIONDATA *_GetEmulationLightdataCreationDataRef()
+int GetPlyrMdlNo();
+void SetPlyrMdlNo(int iMdlNo);
+int GetPlyrAcsNo();
+void SetPlyrAcsNo(int iMdlNo);
+int GetSisterMdlNo();
+void SetSisterMdlNo(int iMdlNo);
+int GetSisterAcsNo();
+void SetSisterAcsNo(int iAcsNo);
+// void CostumeSetSave(MC_SAVE_DATA *data);
 
 #endif // PLYR_MDL_H

@@ -141,6 +141,7 @@ segments:
       - [0xc1050, c, graphics/graph3d/gra3dTRI2]
       - [0xc1730, c, graphics/graph3d/gra3dVu0]
       - [0xc1808, c, graphics/graphics]
+      - [0xc5b30, asm, unk_1]
 
       - [0xd8270, asm, outgame/logo]
       - [0xd88b8, asm, ingame/plyr/m_plyr_camera]
@@ -150,20 +151,20 @@ segments:
       - [0xda240, asm, ingame/map/map_camera]
       - [0xdc7d8, asm, ingame/map/map_height]
       - [0xdd548, asm, ingame/map/map_hit_check]
-      - [0xde0a8, asm, unk]
+      - [0xde0a8, asm, unk_2]
       - [0x119a00, c, graphics/mmanage]
       - [0x119ee8, c, graphics/motion/morph]
       - [0x11b328, c, graphics/motion/motion]
       - [0x11fa40, c, graphics/movie/movie]
-      - [0x120158, asm, unk_1]
+      - [0x120158, asm, unk_3]
       - [0x127930, c, graphics/obj_draw_ctrl]
-      - [0x127c80, asm, unk_2]
+      - [0x127c80, asm, unk_4]
       - [0x1369c0, c, ingame/plyr/player]
       - [0x13f100, c, ingame/plyr/plyr_mdl]
-      - [0x1410e8, asm, unk_3]
+      - [0x1410e8, asm, unk_5]
       - [0x17e250, asm, devvu0]
       - [0x17e6e8, asm, devvif0]
-      - [0x17ea18, asm, unk_4] # functions that appear below the sdk!?
+      - [0x17ea18, asm, unk_6] # functions that appear below the sdk!?
 
       # ######0100000
       - name: vutext
@@ -233,6 +234,10 @@ segments:
         type: bss
         start: 0x2f5a80
         vram: 0x4af730
+      - name: ingame/plyr/plyr_mdl # Whhyyyy does this cause everything to asplode
+        type: .bss
+        start: 0x2f5a80
+        vram: 0x4bbce0
       - name: vubss
         type: bss
         start: 0x2f5a80

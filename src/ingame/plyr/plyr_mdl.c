@@ -1,6 +1,9 @@
 #include "common.h"
+#include "plyr_mdl.h"
 
-INCLUDE_ASM("asm/nonmatchings/ingame/plyr/plyr_mdl", __tf8MAN_DATA);
+GAME_COSTUME GameCostume;
+
+INCLUDE_ASM("asm/nonmatchings/ingame/plyr/plyr_mdl", func_0023E100);
 
 INCLUDE_ASM("asm/nonmatchings/ingame/plyr/plyr_mdl", _fixed_array_verifyrange__H1ZPv_UiUi_PX01__193);
 
@@ -78,13 +81,27 @@ INCLUDE_ASM("asm/nonmatchings/ingame/plyr/plyr_mdl", plyr_mdlBankPlay__FiiiiP11_
 
 INCLUDE_ASM("asm/nonmatchings/ingame/plyr/plyr_mdl", plyr_mdlBankIsLoopSnd__Fi);
 
-INCLUDE_ASM("asm/nonmatchings/ingame/plyr/plyr_mdl", GetPlyrMdlNo__Fv);
+int GetPlyrMdlNo()
+{
+    return GameCostume.mPlyrMdlNo;
+}
 
-INCLUDE_ASM("asm/nonmatchings/ingame/plyr/plyr_mdl", SetPlyrMdlNo__Fi);
+void SetPlyrMdlNo(int iMdlNo)
+{
+    GameCostume.mPlyrMdlNo = iMdlNo;
+    return;
+}
 
-INCLUDE_ASM("asm/nonmatchings/ingame/plyr/plyr_mdl", GetPlyrAcsNo__Fv);
+int GetPlyrAcsNo()
+{
+    return GameCostume.mPlyrAcsNo;
+}
 
-INCLUDE_ASM("asm/nonmatchings/ingame/plyr/plyr_mdl", SetPlyrAcsNo__Fi);
+void SetPlyrAcsNo(int iMdlNo)
+{
+    GameCostume.mPlyrAcsNo = iMdlNo;
+    return;
+}
 
 INCLUDE_ASM("asm/nonmatchings/ingame/plyr/plyr_mdl", GetSisterMdlNo__Fv);
 
