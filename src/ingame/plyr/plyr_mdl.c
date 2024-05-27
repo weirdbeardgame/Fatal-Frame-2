@@ -103,13 +103,27 @@ void SetPlyrAcsNo(int iMdlNo)
     return;
 }
 
-INCLUDE_ASM("asm/nonmatchings/ingame/plyr/plyr_mdl", GetSisterMdlNo__Fv);
+int GetSisterMdlNo(void)
+{
+    return GameCostume.mSisterMdlNo;
+}
 
-INCLUDE_ASM("asm/nonmatchings/ingame/plyr/plyr_mdl", SetSisterMdlNo__Fi);
+void SetSisterMdlNo(int iMdlNo)
+{
+    GameCostume.mSisterMdlNo = iMdlNo;
+    return;
+}
 
-INCLUDE_ASM("asm/nonmatchings/ingame/plyr/plyr_mdl", GetSisterAcsNo__Fv);
+int GetSisterAcsNo(void)
+{
+    return GameCostume.mSisterAcsNo;
+}
 
-INCLUDE_ASM("asm/nonmatchings/ingame/plyr/plyr_mdl", SetSisterAcsNo__Fi);
+void SetSisterAcsNo(int iAcsNo)
+{
+    GameCostume.mSisterAcsNo = iAcsNo;
+    return;
+}
 
 INCLUDE_ASM("asm/nonmatchings/ingame/plyr/plyr_mdl", CostumeSetSave__FP12MC_SAVE_DATA);
 

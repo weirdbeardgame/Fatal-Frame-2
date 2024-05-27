@@ -234,14 +234,14 @@ segments:
         type: bss
         start: 0x2f5a80
         vram: 0x4af730
-      - name: ingame/plyr/plyr_mdl # Whhyyyy does this cause everything to asplode
+      - name: ingame/plyr/plyr_mdl
         type: .bss
         start: 0x2f5a80
         vram: 0x4bbce0
       - name: vubss
         type: bss
         start: 0x2f5a80
-        vram: 0x4ce0ec
+        vram: 0x4bbce4
   - name: padding
     type: databin
     start: 0x2f5a80

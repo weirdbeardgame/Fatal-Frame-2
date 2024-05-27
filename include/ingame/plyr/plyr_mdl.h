@@ -42,14 +42,13 @@ private:
     void Init();
 };
 
-typedef struct
+struct _GAME_COSTUME
 {
     int mPlyrMdlNo;
     int mSisterMdlNo;
     int mPlyrAcsNo;
     int mSisterAcsNo;
-} _GAME_COSTUME;
-
+};
 typedef _GAME_COSTUME GAME_COSTUME;
 
 extern GAME_COSTUME GameCostume;

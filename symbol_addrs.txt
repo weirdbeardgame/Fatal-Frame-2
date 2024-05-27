@@ -11034,3 +11034,6 @@ iSyncDCache                                                                     
 _sceIDC                                                                                                                      = 0x002ae770; // type:func size:0xa4
 InvalidDCache                                                                                                                = 0x002ae818; // type:func size:0x7c
 iInvalidDCache                                                                                                               = 0x002ae898; // type:func size:0x14
+
+// Extra Symbols
+GameCostume                                                                                                                  = 0x004BBCE0;
