@@ -1,7 +1,15 @@
 #include "common.h"
 #include "plyr_mdl.h"
+#include "mmanage.h"
+#include "ChrSort.h"
 
+PLYR_PLYR_DATA plyr_data;
+MDL_REQ_SAVE plyr_mdl_req_save;
 GAME_COSTUME GameCostume;
+
+int ltd_mode;
+int same_priority_count;
+int plyr_neck_no_registered_cnt;
 
 INCLUDE_ASM("asm/nonmatchings/ingame/plyr/plyr_mdl", func_0023E100);
 
@@ -11,9 +19,47 @@ INCLUDE_ASM("asm/nonmatchings/ingame/plyr/plyr_mdl", _fixed_array_verifyrange__H
 
 INCLUDE_ASM("asm/nonmatchings/ingame/plyr/plyr_mdl", _fixed_array_verifyrange__H1ZPUi_UiUi_PX01__193);
 
-INCLUDE_ASM("asm/nonmatchings/ingame/plyr/plyr_mdl", plyr_mdlInit__Fv);
+static void plyr_mdlInit()
+{  
+    plyr_mdl_req_save.mMdlNo = GetPlyrMdlNo();
+    plyr_mdl_req_save.mSmdlNo = 0x10;
+    plyr_mdl_req_save.mBdNo = 0xcfd;
+    plyr_mdl_req_save.mAnmNo = 0;
+    
+    PlyrNeckInit();
+    plyr_data.InitializeIn();
+    
+    plyr_data.plyr_init_ok = 0;
+    plyr_data.plyr_req_other_mdl = 0;
+}
 
-INCLUDE_ASM("asm/nonmatchings/ingame/plyr/plyr_mdl", plyr_mdlResetReq__Fv);
+void plyr_mdlResetReq() 
+{
+    /* s5 21 */ int mdl_no;
+    /* s1 17 */ int anm_no;
+    /* s2 18 */ int bd_no;
+    /* s4 20 */ int smdl_no;
+    /* s3 19 */ int iAcsNo;
+  
+    mdl_no = GetPlyrMdlNo();
+    anm_no = plyr_mdl_req_save.mAnmNo;
+    bd_no = plyr_mdl_req_save.mBdNo;
+    smdl_no = plyr_mdl_req_save.mSmdlNo;
+    iAcsNo = GetPlyrAcsNo();
+
+    if (!plyr_data.plyr_req_other_mdl) 
+    {
+        mmanageReqItemMdl(0);
+        mmanageReqItemMdl(1);
+        plyr_data.plyr_req_other_mdl = 1;
+    }
+    
+    if (plyr_data.SetupIn(mdl_no, anm_no, bd_no, smdl_no, iAcsNo) && plyr_data.plyr_init_ok) 
+    {
+        ChrSortDelete(1);
+        plyr_data.plyr_init_ok = 0;
+    }
+}
 
 INCLUDE_ASM("asm/nonmatchings/ingame/plyr/plyr_mdl", SetupPlyrMdl__Fiiii);
 
@@ -65,9 +111,22 @@ INCLUDE_ASM("asm/nonmatchings/ingame/plyr/plyr_mdl", plyr_mdlGetANI_CTRL__Fv);
 
 INCLUDE_ASM("asm/nonmatchings/ingame/plyr/plyr_mdl", plyr_mdlGetShadowANI_CTRL__Fv);
 
-INCLUDE_ASM("asm/nonmatchings/ingame/plyr/plyr_mdl", PlyrNeckFrameInit__Fv);
+static void PlyrNeckFrameInit()
+{
+  plyr_neck_now_priority = LTP_MIO_LEAST;
+  return;
+}
 
-INCLUDE_ASM("asm/nonmatchings/ingame/plyr/plyr_mdl", PlyrNeckInit__Fv);
+static void PlyrNeckInit(void)
+{
+  SetPlyrNeckFlg(1);
+  ltd_mode = 0;
+  pre_priority = LTP_MIO_LEAST;
+  same_priority_count = 0;
+  plyr_neck_no_registered_cnt = 0;
+  PlyrNeckFrameInit();
+  return;
+}
 
 INCLUDE_ASM("asm/nonmatchings/ingame/plyr/plyr_mdl", PlyrNeckRegisterTarget__FP14_LOOK_AT_PARAM25_LOOK_TARGET_PRIORITY_MIO);
 

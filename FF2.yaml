@@ -237,11 +237,11 @@ segments:
       - name: ingame/plyr/plyr_mdl
         type: .bss
         start: 0x2f5a80
-        vram: 0x4bbce0
+        vram: 0x4bbc70
       - name: vubss
         type: bss
         start: 0x2f5a80
-        vram: 0x4bbce4
+        vram: 0x4bbce8
   - name: padding
     type: databin
     start: 0x2f5a80
