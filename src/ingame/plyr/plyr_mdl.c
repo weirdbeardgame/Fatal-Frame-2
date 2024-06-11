@@ -1,15 +1,4 @@
-#include "common.h"
 #include "plyr_mdl.h"
-#include "mmanage.h"
-#include "ChrSort.h"
-
-PLYR_PLYR_DATA plyr_data;
-MDL_REQ_SAVE plyr_mdl_req_save;
-GAME_COSTUME GameCostume;
-
-int ltd_mode;
-int same_priority_count;
-int plyr_neck_no_registered_cnt;
 
 INCLUDE_ASM("asm/nonmatchings/ingame/plyr/plyr_mdl", func_0023E100);
 
@@ -112,9 +101,17 @@ INCLUDE_ASM("asm/nonmatchings/ingame/plyr/plyr_mdl", playerCalcAlpha__FPC8ANI_CT
 
 INCLUDE_ASM("asm/nonmatchings/ingame/plyr/plyr_mdl", playerDrawShadow__Fv);
 
-INCLUDE_ASM("asm/nonmatchings/ingame/plyr/plyr_mdl", PlayerDrawLock__Fv);
+void PlayerDrawLock(void)
+{
+  plyr_data.man_data_draw_lock_cnt = plyr_data.man_data_draw_lock_cnt + 1;
+  return;
+}
 
-INCLUDE_ASM("asm/nonmatchings/ingame/plyr/plyr_mdl", PlayerDrawUnlock__Fv);
+void PlayerDrawUnlock(void)
+{
+  plyr_data.man_data_draw_lock_cnt = plyr_data.man_data_draw_lock_cnt + -1;
+  return;
+}
 
 INCLUDE_ASM("asm/nonmatchings/ingame/plyr/plyr_mdl", DrawGirl__Fv);
 

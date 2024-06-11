@@ -11036,4 +11036,8 @@ InvalidDCache                                                                   
 iInvalidDCache                                                                                                               = 0x002ae898; // type:func size:0x14
 
 // Extra Symbols
-GameCostume                                                                                                                  = 0x004BBCE0;
+plyr_data                                                                                                                    = 0x004BBC70; // size:0x3c
+_$_14PLYR_PLYR_DATA                                                                                                          = 0x0036A050; // size:0x18
+plyr_mdl_req_save                                                                                                            = 0x004BBCB0; // size:0x10
+plyr_neck_now_param                                                                                                          = 0x004BBCC0; // size:0x20
+GameCostume                                                                                                                  = 0x004BBCE0; // size:0x10

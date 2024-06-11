@@ -28,7 +28,7 @@ struct MAN_DATA
   MAN_DATA &operator=(const MAN_DATA &rval);
   MAN_DATA();
   ~MAN_DATA();
-  /* vtable[1] */ virtual int Setup();
+  /* vtable[1] */ virtual int Setup(int param_1, int param_2, int param_3, int param_4, int param_5);
   /* vtable[2] */ virtual int IsReady();
   ANI_CTRL *GetAniCtrl();
   ANI_CTRL *GetShadowAniCtrl();
