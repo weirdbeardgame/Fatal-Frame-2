@@ -1,5 +1,7 @@
 #include "plyr_mdl.h"
 
+PLYR_PLYR_DATA plyr_data;
+
 INCLUDE_ASM("asm/nonmatchings/ingame/plyr/plyr_mdl", func_0023E100);
 
 INCLUDE_ASM("asm/nonmatchings/ingame/plyr/plyr_mdl", _fixed_array_verifyrange__H1ZPv_UiUi_PX01__193);
@@ -8,7 +10,7 @@ INCLUDE_ASM("asm/nonmatchings/ingame/plyr/plyr_mdl", _fixed_array_verifyrange__H
 
 INCLUDE_ASM("asm/nonmatchings/ingame/plyr/plyr_mdl", _fixed_array_verifyrange__H1ZPUi_UiUi_PX01__193);
 
-static void plyr_mdlInit()
+void plyr_mdlInit()
 {
     plyr_mdl_req_save.Set(GetPlyrMdlNo(), 0, 0xcfd, 16);
     
@@ -121,13 +123,13 @@ INCLUDE_ASM("asm/nonmatchings/ingame/plyr/plyr_mdl", plyr_mdlGetANI_CTRL__Fv);
 
 INCLUDE_ASM("asm/nonmatchings/ingame/plyr/plyr_mdl", plyr_mdlGetShadowANI_CTRL__Fv);
 
-static void PlyrNeckFrameInit()
+void PlyrNeckFrameInit()
 {
   plyr_neck_now_priority = LTP_MIO_LEAST;
   return;
 }
 
-static void PlyrNeckInit(void)
+void PlyrNeckInit(void)
 {
   SetPlyrNeckFlg(1);
   ltd_mode = 0;
@@ -191,7 +193,6 @@ int GetSisterAcsNo(void)
 void SetSisterAcsNo(int iAcsNo)
 {
     GameCostume.mSisterAcsNo = iAcsNo;
-    return;
 }
 
 INCLUDE_ASM("asm/nonmatchings/ingame/plyr/plyr_mdl", CostumeSetSave__FP12MC_SAVE_DATA);

@@ -46,8 +46,6 @@ struct PLYR_PLYR_DATA : MAN_DATA
 
  public:
   PLYR_PLYR_DATA &operator=(const PLYR_PLYR_DATA &rval);
-  PLYR_PLYR_DATA();
-  ~PLYR_PLYR_DATA();
   /* vtable[1] */ virtual int Setup(int param_1, int param_2, int param_3,
                                     int param_4, int param_5)
   {
@@ -99,8 +97,6 @@ struct MDL_REQ_SAVE
   /* 0xc */ int mSmdlNo;
 
   MDL_REQ_SAVE &operator=(const MDL_REQ_SAVE &rval);
-  MDL_REQ_SAVE();
-  ~MDL_REQ_SAVE();
   inline void Set(int m, int a, int b, int s)
   {
     mMdlNo = m;
@@ -122,7 +118,7 @@ struct _LOOK_AT_PARAM
 
 typedef _LOOK_AT_PARAM LOOK_AT_PARAM;
 
-static PLYR_PLYR_DATA plyr_data;
+extern PLYR_PLYR_DATA plyr_data;
 static MDL_REQ_SAVE plyr_mdl_req_save;
 static GAME_COSTUME GameCostume;
 
@@ -147,7 +143,7 @@ int GetSisterAcsNo();
 void SetSisterAcsNo(int iAcsNo);
 void SetPlyrNeckFlg(int flg);
 
-//static void plyr_mdlInit();
+void plyr_mdlInit();
 static void PlyrNeckFrameInit();
 static void PlyrNeckInit();
 void plyr_mdlResetReq();

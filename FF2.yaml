@@ -142,6 +142,9 @@ segments:
       - [0xc1730, c, graphics/graph3d/gra3dVu0]
       - [0xc1808, c, graphics/graphics]
       - [0xc5b30, asm, unk_1]
+      - [0xc95c0, c, ingame/ingame]
+      - [0xcba38, c, ingame/ingame_effect]
+      - [0xcda10, asm, item/prg/item]
 
       - [0xd8270, asm, outgame/logo]
       - [0xd88b8, asm, ingame/plyr/m_plyr_camera]
