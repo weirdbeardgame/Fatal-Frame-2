@@ -20,11 +20,8 @@ INCLUDE_ASM("asm/nonmatchings/ingame/plyr/plyr_mdl", _fixed_array_verifyrange__H
 INCLUDE_ASM("asm/nonmatchings/ingame/plyr/plyr_mdl", _fixed_array_verifyrange__H1ZPUi_UiUi_PX01__193);
 
 static void plyr_mdlInit()
-{  
-    plyr_mdl_req_save.mMdlNo = GetPlyrMdlNo();
-    plyr_mdl_req_save.mSmdlNo = 0x10;
-    plyr_mdl_req_save.mBdNo = 0xcfd;
-    plyr_mdl_req_save.mAnmNo = 0;
+{
+    plyr_mdl_req_save.Set(GetPlyrMdlNo(), 0, 0xcfd, 16);
     
     PlyrNeckInit();
     plyr_data.InitializeIn();
@@ -61,8 +58,24 @@ void plyr_mdlResetReq()
     }
 }
 
-INCLUDE_ASM("asm/nonmatchings/ingame/plyr/plyr_mdl", SetupPlyrMdl__Fiiii);
-
+void SetupPlyrMdl(/* s3 19 */ int mdl_no, /* s1 17 */ int anm_no, /* s2 18 */ int smdl_no, /* s4 20 */ int acs_no) 
+{
+    plyr_mdl_req_save.mBdNo = 0xcfd;
+    plyr_mdl_req_save.mMdlNo = mdl_no;
+    plyr_mdl_req_save.mAnmNo = anm_no;
+    plyr_mdl_req_save.mSmdlNo = smdl_no;
+    if (!plyr_data.plyr_req_other_mdl) 
+    {
+        mmanageReqItemMdl(0);
+        mmanageReqItemMdl(1);
+        plyr_data.plyr_req_other_mdl = 1;
+    }
+    if (plyr_data.SetupIn(mdl_no,anm_no,0xcfd,smdl_no,acs_no) && plyr_data.plyr_init_ok) 
+    {
+        ChrSortDelete(1);
+        plyr_data.plyr_init_ok = 0;
+    }
+}
 INCLUDE_ASM("asm/nonmatchings/ingame/plyr/plyr_mdl", IsReadyPlyrMdl__Fv);
 
 INCLUDE_ASM("asm/nonmatchings/ingame/plyr/plyr_mdl", ReleasePlyrMdl__Fv);

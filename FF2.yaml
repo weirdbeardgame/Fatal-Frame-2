@@ -185,8 +185,16 @@ segments:
         vram: 0x317178
       - name: data_3
         type: data
-        start: 0x218D40
+        start: 0x218d40
         vram: 0x317d40
+      - name: ingame/plyr/plyr_mdl
+        type: .data
+        start: 0x26b050
+        vram: 0x36a050
+      - name: data_4
+        type: data
+        start: 0x26b070
+        vram: 0x36a070
       - [0x26b260, databin, eh_frame]
       # - [0x29eaec, databin, vudata]
       # rodata ################
@@ -238,10 +246,10 @@ segments:
         type: .bss
         start: 0x2f5a80
         vram: 0x4bbc70
-      - name: vubss
+      - name: bss_2
         type: bss
         start: 0x2f5a80
-        vram: 0x4bbce8
+        vram: 0x4bbcf0
   - name: padding
     type: databin
     start: 0x2f5a80

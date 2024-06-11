@@ -46,7 +46,28 @@ struct PLYR_PLYR_DATA : MAN_DATA
   PLYR_PLYR_DATA &operator=(const PLYR_PLYR_DATA &rval);
   PLYR_PLYR_DATA();
   ~PLYR_PLYR_DATA();
-  /* vtable[1] */ virtual int Setup();
+  /* vtable[1] */ virtual int Setup(int param_1,int param_2,int param_3,int param_4,int param_5)
+  {
+    int return_val = 0;
+    if (!plyr_req_other_mdl)
+    { 
+        return_val = 1;
+        mmanageReqItemMdl(0);
+        mmanageReqItemMdl(1);
+        plyr_req_other_mdl = 1;
+    }
+    if (SetupIn(param_1, param_2, param_3, param_4, param_5)) 
+    {
+        if (plyr_init_ok)
+        {
+            ChrSortDelete(1);
+            plyr_init_ok = 0;
+        }
+        return_val = 1;
+    }
+    return return_val;
+}
+
   /* vtable[2] */ virtual int IsReady();
   void Release();
   void Initialize();
@@ -75,7 +96,13 @@ struct MDL_REQ_SAVE
   MDL_REQ_SAVE &operator=(const MDL_REQ_SAVE &rval);
   MDL_REQ_SAVE();
   ~MDL_REQ_SAVE();
-  void Set();
+  inline void Set(int m, int a, int b, int s)
+  {
+    mMdlNo = m;
+    mAnmNo = a;
+    mBdNo = b;
+    mSmdlNo = s;
+  }
   void SetSave();
 };
 extern PLYR_PLYR_DATA plyr_data;
