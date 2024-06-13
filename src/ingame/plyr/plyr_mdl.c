@@ -1,7 +1,5 @@
 #include "plyr_mdl.h"
 
-PLYR_PLYR_DATA plyr_data;
-
 INCLUDE_ASM("asm/nonmatchings/ingame/plyr/plyr_mdl", func_0023E100);
 
 INCLUDE_ASM("asm/nonmatchings/ingame/plyr/plyr_mdl", _fixed_array_verifyrange__H1ZPv_UiUi_PX01__193);

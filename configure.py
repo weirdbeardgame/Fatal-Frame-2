@@ -10,7 +10,7 @@ import re
 from pathlib import Path
 from typing import Dict, List, Set, Union
 
-from fix_gp import main as fix_gp_main
+from fix_gp import fix_gp
 
 import ninja_syntax
 
@@ -241,4 +241,4 @@ if __name__ == "__main__":
 
     gp_value = split.config["options"]["gp_value"]
 
-    fix_gp_main(gp_value)
+    fix_gp(Path("asm"), gp_value, Path("symbol_addrs.txt"))

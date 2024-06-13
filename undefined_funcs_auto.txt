@@ -1,6 +1,6 @@
 func_0010012C = 0x10012C;
 func_00100158 = 0x100158;
 func_00100178 = 0x100178;
-func_0028A154 = 0x28A154;
-func_0028A244 = 0x28A244;
-func_0028A33C = 0x28A33C;
+_RotMatrixZ_02 = 0x28A154;
+_RotMatrixX_02 = 0x28A244;
+_RotMatrixY_02 = 0x28A33C;
