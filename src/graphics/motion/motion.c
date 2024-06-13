@@ -1,20 +1,24 @@
 #include "common.h"
 
-INCLUDE_ASM("asm/nonmatchings/graphics/motion/motion", _GLOBAL__I_ch017_morph);
+INCLUDE_ASM("asm/nonmatchings/graphics/motion/motion", _fixed_array_assert__FPCcUiUi);
 
-INCLUDE_ASM("asm/nonmatchings/graphics/motion/motion", __tf8RST_DATA);
+INCLUDE_ASM("asm/nonmatchings/graphics/motion/motion", _fixed_array_verifyrange__H1ZPv_UiUi_PX01);
 
-INCLUDE_ASM("asm/nonmatchings/graphics/motion/motion", _fixed_array_verifyrange__H1ZPv_UiUi_PX01__172);
+INCLUDE_ASM("asm/nonmatchings/graphics/motion/motion", _fixed_array_verifyrange__H1ZPc_UiUi_PX01);
 
-INCLUDE_ASM("asm/nonmatchings/graphics/motion/motion", _fixed_array_verifyrange__H1ZPc_UiUi_PX01__172);
+INCLUDE_RODATA("asm/nonmatchings/graphics/motion/motion", D_003C0B70);
 
-INCLUDE_ASM("asm/nonmatchings/graphics/motion/motion", _fixed_array_verifyrange__H1ZPUi_UiUi_PX01__172);
+INCLUDE_ASM("asm/nonmatchings/graphics/motion/motion", _fixed_array_verifyrange__H1ZPUi_UiUi_PX01);
 
 INCLUDE_ASM("asm/nonmatchings/graphics/motion/motion", motInitANI_CTRL__Fv);
 
 INCLUDE_ASM("asm/nonmatchings/graphics/motion/motion", motFreeANI_CTRL__FP8ANI_CTRL);
 
 INCLUDE_ASM("asm/nonmatchings/graphics/motion/motion", motGetANI_CTRL__Fv);
+
+INCLUDE_RODATA("asm/nonmatchings/graphics/motion/motion", D_003C0C08);
+
+INCLUDE_RODATA("asm/nonmatchings/graphics/motion/motion", D_003C0C38);
 
 INCLUDE_ASM("asm/nonmatchings/graphics/motion/motion", motReleaseOneAnm__FPv);
 
@@ -29,6 +33,8 @@ INCLUDE_ASM("asm/nonmatchings/graphics/motion/motion", motInitAniCtrlFree__FP8AN
 INCLUDE_ASM("asm/nonmatchings/graphics/motion/motion", motInitOneEnemyMdl__FPUiUi);
 
 INCLUDE_ASM("asm/nonmatchings/graphics/motion/motion", motSearchANI_CTRL__Fi);
+
+INCLUDE_RODATA("asm/nonmatchings/graphics/motion/motion", D_003C0D70);
 
 INCLUDE_ASM("asm/nonmatchings/graphics/motion/motion", motClearANI_CTRL__FP8ANI_CTRL);
 
@@ -62,6 +68,8 @@ INCLUDE_ASM("asm/nonmatchings/graphics/motion/motion", motCheckInterp__FP8ANI_CT
 
 INCLUDE_ASM("asm/nonmatchings/graphics/motion/motion", motGetMotReso__Fv);
 
+INCLUDE_RODATA("asm/nonmatchings/graphics/motion/motion", D_003C0E90);
+
 INCLUDE_ASM("asm/nonmatchings/graphics/motion/motion", GetMdlNeckPos__FPfP8ANI_CTRLUs);
 
 INCLUDE_ASM("asm/nonmatchings/graphics/motion/motion", GetMdlBonePos__FPA3_fPv);
@@ -87,6 +95,22 @@ INCLUDE_ASM("asm/nonmatchings/graphics/motion/motion", motGetKusabiPos__FPfP8ANI
 INCLUDE_ASM("asm/nonmatchings/graphics/motion/motion", motGetTaimatuPos__FPfP8ANI_CTRL);
 
 INCLUDE_ASM("asm/nonmatchings/graphics/motion/motion", motGetKuroreiPos__FPfP8ANI_CTRL);
+
+INCLUDE_RODATA("asm/nonmatchings/graphics/motion/motion", D_003C1000);
+
+INCLUDE_RODATA("asm/nonmatchings/graphics/motion/motion", D_003C1010);
+
+INCLUDE_RODATA("asm/nonmatchings/graphics/motion/motion", D_003C1020);
+
+INCLUDE_RODATA("asm/nonmatchings/graphics/motion/motion", D_003C1030);
+
+INCLUDE_RODATA("asm/nonmatchings/graphics/motion/motion", D_003C1040);
+
+INCLUDE_RODATA("asm/nonmatchings/graphics/motion/motion", D_003C1050);
+
+INCLUDE_RODATA("asm/nonmatchings/graphics/motion/motion", D_003C1060);
+
+INCLUDE_RODATA("asm/nonmatchings/graphics/motion/motion", D_003C1070);
 
 INCLUDE_ASM("asm/nonmatchings/graphics/motion/motion", motGetBukiUpPos__FPfP8ANI_CTRL);
 
@@ -126,6 +150,8 @@ INCLUDE_ASM("asm/nonmatchings/graphics/motion/motion", motGetFrameNum__FPUi);
 
 INCLUDE_ASM("asm/nonmatchings/graphics/motion/motion", motGetSIFrameNum__FPUi);
 
+INCLUDE_RODATA("asm/nonmatchings/graphics/motion/motion", D_003C1200);
+
 INCLUDE_ASM("asm/nonmatchings/graphics/motion/motion", motGetInterpFrameNum__FPUi);
 
 INCLUDE_ASM("asm/nonmatchings/graphics/motion/motion", motCheckIncludeRstPacket__FPUi);
@@ -136,7 +162,13 @@ INCLUDE_ASM("asm/nonmatchings/graphics/motion/motion", motGetFrameDataAddr__FPUi
 
 INCLUDE_ASM("asm/nonmatchings/graphics/motion/motion", motGetFrameData__FP8RST_DATAPUiUi);
 
+INCLUDE_RODATA("asm/nonmatchings/graphics/motion/motion", D_003C1250);
+
 INCLUDE_ASM("asm/nonmatchings/graphics/motion/motion", motGetFrameDataRST__FP8RST_DATAPUiUi);
+
+INCLUDE_RODATA("asm/nonmatchings/graphics/motion/motion", D_003C1288);
+
+INCLUDE_RODATA("asm/nonmatchings/graphics/motion/motion", D_003C12A0);
 
 INCLUDE_ASM("asm/nonmatchings/graphics/motion/motion", motGetFrameDataRT__FP8RST_DATAPUiUiUi);
 
@@ -172,6 +204,6 @@ INCLUDE_ASM("asm/nonmatchings/graphics/motion/motion", SetRT2BaseMtx__FP8ANI_CTR
 
 INCLUDE_ASM("asm/nonmatchings/graphics/motion/motion", motGetLocalWorldMatrix__FPA3_fPUii);
 
-INCLUDE_ASM("asm/nonmatchings/graphics/motion/motion", __static_initialization_and_destruction_0__72);
+INCLUDE_ASM("asm/nonmatchings/graphics/motion/motion", __static_initialization_and_destruction_0);
 
-INCLUDE_ASM("asm/nonmatchings/graphics/motion/motion", _GLOBAL__I_motInitANI_CTRL__Fv);
+INCLUDE_ASM("asm/nonmatchings/graphics/motion/motion", _GLOBAL_$I$motInitANI_CTRL__Fv);

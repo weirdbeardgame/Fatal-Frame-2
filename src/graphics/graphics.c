@@ -1,12 +1,14 @@
 #include "common.h"
 
-INCLUDE_ASM("asm/nonmatchings/graphics/graphics", _fixed_array_assert__FPCcUiUi__53);
+INCLUDE_ASM("asm/nonmatchings/graphics/graphics", _fixed_array_assert__FPCcUiUi);
 
-INCLUDE_ASM("asm/nonmatchings/graphics/graphics", _fixed_array_verifyrange__H1ZPv_UiUi_PX01__121);
+INCLUDE_ASM("asm/nonmatchings/graphics/graphics", _fixed_array_verifyrange__H1ZPv_UiUi_PX01);
 
-INCLUDE_ASM("asm/nonmatchings/graphics/graphics", _fixed_array_verifyrange__H1ZPc_UiUi_PX01__121);
+INCLUDE_ASM("asm/nonmatchings/graphics/graphics", _fixed_array_verifyrange__H1ZPc_UiUi_PX01);
 
-INCLUDE_ASM("asm/nonmatchings/graphics/graphics", _fixed_array_verifyrange__H1ZPUi_UiUi_PX01__121);
+INCLUDE_RODATA("asm/nonmatchings/graphics/graphics", D_003B8780);
+
+INCLUDE_ASM("asm/nonmatchings/graphics/graphics", _fixed_array_verifyrange__H1ZPUi_UiUi_PX01);
 
 INCLUDE_ASM("asm/nonmatchings/graphics/graphics", DrawHitCircle__FPffiUcUcf);
 
@@ -27,6 +29,18 @@ INCLUDE_ASM("asm/nonmatchings/graphics/graphics", DrawLinePacket__FPCfUcUcUcUcT0
 INCLUDE_ASM("asm/nonmatchings/graphics/graphics", DrawLine__FPCfUcUcUcUcT0UcUcUcUc);
 
 INCLUDE_ASM("asm/nonmatchings/graphics/graphics", DrawLineTestOff__FPfUcUcUcUcT0UcUcUcUc);
+
+INCLUDE_RODATA("asm/nonmatchings/graphics/graphics", D_003B87D8);
+
+INCLUDE_RODATA("asm/nonmatchings/graphics/graphics", D_003B8820);
+
+INCLUDE_RODATA("asm/nonmatchings/graphics/graphics", D_003B8838);
+
+INCLUDE_RODATA("asm/nonmatchings/graphics/graphics", D_003B8880);
+
+INCLUDE_RODATA("asm/nonmatchings/graphics/graphics", D_003B8898);
+
+INCLUDE_RODATA("asm/nonmatchings/graphics/graphics", D_003B88B0);
 
 INCLUDE_ASM("asm/nonmatchings/graphics/graphics", DrawCrossLineLast__FPCf);
 
@@ -69,3 +83,19 @@ INCLUDE_ASM("asm/nonmatchings/graphics/graphics", DrawScreen__FUiUiUcUcUcUc);
 INCLUDE_ASM("asm/nonmatchings/graphics/graphics", MakePacket3D__FPA3_fiiiiiffffG9sceGsTex0i);
 
 INCLUDE_ASM("asm/nonmatchings/graphics/graphics", MakeBillBoardPacket__FPfffiiiiffffG9sceGsTex0i);
+
+INCLUDE_RODATA("asm/nonmatchings/graphics/graphics", D_003B8940);
+
+INCLUDE_RODATA("asm/nonmatchings/graphics/graphics", D_003B8958);
+
+INCLUDE_RODATA("asm/nonmatchings/graphics/graphics", D_003B8970);
+
+INCLUDE_RODATA("asm/nonmatchings/graphics/graphics", D_003B8A30);
+
+INCLUDE_RODATA("asm/nonmatchings/graphics/graphics", D_003B8B20);
+
+INCLUDE_RODATA("asm/nonmatchings/graphics/graphics", D_003B8C10);
+
+INCLUDE_RODATA("asm/nonmatchings/graphics/graphics", D_003B8D10);
+
+INCLUDE_RODATA("asm/nonmatchings/graphics/graphics", D_003B8D90);

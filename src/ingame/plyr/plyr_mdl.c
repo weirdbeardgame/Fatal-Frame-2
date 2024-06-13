@@ -10,62 +10,68 @@ INCLUDE_ASM("asm/nonmatchings/ingame/plyr/plyr_mdl", _fixed_array_verifyrange__H
 
 void plyr_mdlInit()
 {
-    plyr_mdl_req_save.Set(GetPlyrMdlNo(), 0, 0xcfd, 16);
-    
-    PlyrNeckInit();
-    plyr_data.InitializeIn();
-    
+  plyr_mdl_req_save.Set(GetPlyrMdlNo(), 0, 0xcfd, 16);
+
+  PlyrNeckInit();
+  plyr_data.InitializeIn();
+
+  plyr_data.plyr_init_ok = 0;
+  plyr_data.plyr_req_other_mdl = 0;
+}
+
+void plyr_mdlResetReq()
+{
+  /* s5 21 */ int mdl_no;
+  /* s1 17 */ int anm_no;
+  /* s2 18 */ int bd_no;
+  /* s4 20 */ int smdl_no;
+  /* s3 19 */ int iAcsNo;
+
+  mdl_no = GetPlyrMdlNo();
+  anm_no = plyr_mdl_req_save.mAnmNo;
+  bd_no = plyr_mdl_req_save.mBdNo;
+  smdl_no = plyr_mdl_req_save.mSmdlNo;
+  iAcsNo = GetPlyrAcsNo();
+
+  if (!plyr_data.plyr_req_other_mdl)
+  {
+    mmanageReqItemMdl(0);
+    mmanageReqItemMdl(1);
+    plyr_data.plyr_req_other_mdl = 1;
+  }
+
+  if (plyr_data.SetupIn(mdl_no, anm_no, bd_no, smdl_no, iAcsNo)
+      && plyr_data.plyr_init_ok)
+  {
+    ChrSortDelete(1);
     plyr_data.plyr_init_ok = 0;
-    plyr_data.plyr_req_other_mdl = 0;
+  }
 }
 
-void plyr_mdlResetReq() 
+void SetupPlyrMdl(/* s3 19 */ int mdl_no, /* s1 17 */ int anm_no, /* s2 18 */ int smdl_no, /* s4 20 */ int acs_no)
 {
-    /* s5 21 */ int mdl_no;
-    /* s1 17 */ int anm_no;
-    /* s2 18 */ int bd_no;
-    /* s4 20 */ int smdl_no;
-    /* s3 19 */ int iAcsNo;
-  
-    mdl_no = GetPlyrMdlNo();
-    anm_no = plyr_mdl_req_save.mAnmNo;
-    bd_no = plyr_mdl_req_save.mBdNo;
-    smdl_no = plyr_mdl_req_save.mSmdlNo;
-    iAcsNo = GetPlyrAcsNo();
-
-    if (!plyr_data.plyr_req_other_mdl) 
-    {
-        mmanageReqItemMdl(0);
-        mmanageReqItemMdl(1);
-        plyr_data.plyr_req_other_mdl = 1;
-    }
-    
-    if (plyr_data.SetupIn(mdl_no, anm_no, bd_no, smdl_no, iAcsNo) && plyr_data.plyr_init_ok) 
-    {
-        ChrSortDelete(1);
-        plyr_data.plyr_init_ok = 0;
-    }
+  plyr_mdl_req_save.mBdNo = 0xcfd;
+  plyr_mdl_req_save.mMdlNo = mdl_no;
+  plyr_mdl_req_save.mAnmNo = anm_no;
+  plyr_mdl_req_save.mSmdlNo = smdl_no;
+  if (!plyr_data.plyr_req_other_mdl)
+  {
+    mmanageReqItemMdl(0);
+    mmanageReqItemMdl(1);
+    plyr_data.plyr_req_other_mdl = 1;
+  }
+  if (plyr_data.SetupIn(mdl_no, anm_no, 0xcfd, smdl_no, acs_no)
+      && plyr_data.plyr_init_ok)
+  {
+    ChrSortDelete(1);
+    plyr_data.plyr_init_ok = 0;
+  }
 }
 
-void SetupPlyrMdl(/* s3 19 */ int mdl_no, /* s1 17 */ int anm_no, /* s2 18 */ int smdl_no, /* s4 20 */ int acs_no) 
+int IsReadyPlyrMdl()
 {
-    plyr_mdl_req_save.mBdNo = 0xcfd;
-    plyr_mdl_req_save.mMdlNo = mdl_no;
-    plyr_mdl_req_save.mAnmNo = anm_no;
-    plyr_mdl_req_save.mSmdlNo = smdl_no;
-    if (!plyr_data.plyr_req_other_mdl) 
-    {
-        mmanageReqItemMdl(0);
-        mmanageReqItemMdl(1);
-        plyr_data.plyr_req_other_mdl = 1;
-    }
-    if (plyr_data.SetupIn(mdl_no,anm_no,0xcfd,smdl_no,acs_no) && plyr_data.plyr_init_ok) 
-    {
-        ChrSortDelete(1);
-        plyr_data.plyr_init_ok = 0;
-    }
+  return plyr_data.IsReady();
 }
-INCLUDE_ASM("asm/nonmatchings/ingame/plyr/plyr_mdl", IsReadyPlyrMdl__Fv);
 
 INCLUDE_ASM("asm/nonmatchings/ingame/plyr/plyr_mdl", ReleasePlyrMdl__Fv);
 
@@ -152,49 +158,52 @@ INCLUDE_ASM("asm/nonmatchings/ingame/plyr/plyr_mdl", plyr_mdlBankIsLoopSnd__Fi);
 
 int GetPlyrMdlNo()
 {
-    return GameCostume.mPlyrMdlNo;
+  return GameCostume.mPlyrMdlNo;
 }
 
 void SetPlyrMdlNo(int iMdlNo)
 {
-    GameCostume.mPlyrMdlNo = iMdlNo;
-    return;
+  GameCostume.mPlyrMdlNo = iMdlNo;
+  return;
 }
 
 int GetPlyrAcsNo()
 {
-    return GameCostume.mPlyrAcsNo;
+  return GameCostume.mPlyrAcsNo;
 }
 
 void SetPlyrAcsNo(int iMdlNo)
 {
-    GameCostume.mPlyrAcsNo = iMdlNo;
-    return;
+  GameCostume.mPlyrAcsNo = iMdlNo;
+  return;
 }
 
 int GetSisterMdlNo(void)
 {
-    return GameCostume.mSisterMdlNo;
+  return GameCostume.mSisterMdlNo;
 }
 
 void SetSisterMdlNo(int iMdlNo)
 {
-    GameCostume.mSisterMdlNo = iMdlNo;
-    return;
+  GameCostume.mSisterMdlNo = iMdlNo;
+  return;
 }
 
 int GetSisterAcsNo(void)
 {
-    return GameCostume.mSisterAcsNo;
+  return GameCostume.mSisterAcsNo;
 }
 
 void SetSisterAcsNo(int iAcsNo)
 {
-    GameCostume.mSisterAcsNo = iAcsNo;
+  GameCostume.mSisterAcsNo = iAcsNo;
 }
 
-INCLUDE_ASM("asm/nonmatchings/ingame/plyr/plyr_mdl", CostumeSetSave__FP12MC_SAVE_DATA);
+INCLUDE_ASM("asm/nonmatchings/ingame/plyr/plyr_mdl",
+            CostumeSetSave__FP12MC_SAVE_DATA);
 
-INCLUDE_ASM("asm/nonmatchings/ingame/plyr/plyr_mdl", __static_initialization_and_destruction_0__78);
+INCLUDE_ASM("asm/nonmatchings/ingame/plyr/plyr_mdl",
+            __static_initialization_and_destruction_0__78);
 
-INCLUDE_ASM("asm/nonmatchings/ingame/plyr/plyr_mdl", _GLOBAL__I_g_iMaxPlayerAlpha);
+INCLUDE_ASM("asm/nonmatchings/ingame/plyr/plyr_mdl",
+            _GLOBAL__I_g_iMaxPlayerAlpha);

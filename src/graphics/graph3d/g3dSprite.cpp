@@ -1,6 +1,6 @@
 #include "common.h"
 
-INCLUDE_ASM("asm/nonmatchings/graphics/graph3d/g3dSprite", ___7CSprite);
+INCLUDE_ASM("asm/nonmatchings/graphics/graph3d/g3dSprite", __7CSprite);
 
 INCLUDE_ASM("asm/nonmatchings/graphics/graph3d/g3dSprite", Create__7CSpritePC13G3DSPRITEDATAP8CTexture);
 

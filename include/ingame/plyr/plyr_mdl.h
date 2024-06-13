@@ -47,8 +47,7 @@ struct PLYR_PLYR_DATA : MAN_DATA
 
  public:
   PLYR_PLYR_DATA &operator=(const PLYR_PLYR_DATA &rval);
-  /* vtable[1] */ virtual int Setup(int param_1, int param_2, int param_3,
-                                    int param_4, int param_5)
+  virtual int Setup(int param_1, int param_2, int param_3, int param_4, int param_5)
   {
     int return_val = 0;
     if (!plyr_req_other_mdl)
@@ -70,8 +69,38 @@ struct PLYR_PLYR_DATA : MAN_DATA
     return return_val;
   }
 
-  /* vtable[2] */ virtual int IsReady()
+  virtual int IsReady()
   {
+    /* -0x30(sp) */ int mdl_p;
+    /* -0x2c(sp) */ int anm_p;
+    /* -0x28(sp) */ int smdl_p;
+    /* s1 17 */ int ret;
+
+    ret = ReadyIn(&mdl_p, &anm_p, &smdl_p);
+    ret &= mmanageIsReadyItemMdl(0, &plyr_cam_mdl_p, 1);
+    ret &= mmanageIsReadyItemMdl(1, &plyr_light_mdl_p, 1);
+
+    if (ret != 0)
+    {
+      InitIn(mdl_p, anm_p, smdl_p);
+      if (!plyr_init_ok)
+      {
+        ChrSortRegistPlayr();
+        plyr_wrk.anime_no = mpAniCtrl->anm.playnum;
+        plyr_cam_alpha = 0;
+        plyr_light_alpha = 0;
+        plyr_init_ok = 1;
+        if (plyr_wrk.cmn_wrk.st.sta & 0x8000)
+        {
+          ReqPlayerMim(0x19, 0);
+          if (mpAniCtrl->mdl_no == GetPlyrMdlNo())
+          {
+            IgEffectRenzFlareDispFlgSet(1);
+          }
+        }
+      }
+    }
+    return ret;
   }
   void Release();
   void Initialize();

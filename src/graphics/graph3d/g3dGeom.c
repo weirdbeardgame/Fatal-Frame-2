@@ -16,9 +16,17 @@ INCLUDE_ASM("asm/nonmatchings/graphics/graph3d/g3dGeom", g3dMatrixRotationByAxis
 
 INCLUDE_ASM("asm/nonmatchings/graphics/graph3d/g3dGeom", g3dMatrixInverseTransform__FPA3_fPA3_Cf);
 
+INCLUDE_RODATA("asm/nonmatchings/graphics/graph3d/g3dGeom", D_003B2110);
+
 INCLUDE_ASM("asm/nonmatchings/graphics/graph3d/g3dGeom", g3dMatrixSetColumn__FPA3_fPCfi);
 
+INCLUDE_RODATA("asm/nonmatchings/graphics/graph3d/g3dGeom", D_003B2138);
+
+INCLUDE_RODATA("asm/nonmatchings/graphics/graph3d/g3dGeom", D_003B2158);
+
 INCLUDE_ASM("asm/nonmatchings/graphics/graph3d/g3dGeom", g3dMatrixSetColumnXYZ__FPA3_fPCfi);
+
+INCLUDE_RODATA("asm/nonmatchings/graphics/graph3d/g3dGeom", D_003B2180);
 
 INCLUDE_ASM("asm/nonmatchings/graphics/graph3d/g3dGeom", _PlaneFromMatrix__FPfPA3_Cfi);
 
@@ -27,6 +35,8 @@ INCLUDE_ASM("asm/nonmatchings/graphics/graph3d/g3dGeom", g3dPlaneFromMatrixZ__FP
 INCLUDE_ASM("asm/nonmatchings/graphics/graph3d/g3dGeom", g3dCalcPlaneFromPointNormal__FPfPCfT1);
 
 INCLUDE_ASM("asm/nonmatchings/graphics/graph3d/g3dGeom", g3dCalcPlaneFromPoints__FPfPCfN21);
+
+INCLUDE_RODATA("asm/nonmatchings/graphics/graph3d/g3dGeom", __FUNCTION__.780);
 
 INCLUDE_ASM("asm/nonmatchings/graphics/graph3d/g3dGeom", g3dCalcIntersectionSphereAndLine__FPA3_fPCffT1T1);
 

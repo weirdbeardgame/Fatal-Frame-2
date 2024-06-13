@@ -1,12 +1,14 @@
 #include "common.h"
 
-INCLUDE_ASM("asm/nonmatchings/graphics/graph3d/gra3dBoundingBox", _fixed_array_assert__FPCcUiUi__49);
+INCLUDE_ASM("asm/nonmatchings/graphics/graph3d/gra3dBoundingBox", _fixed_array_assert__FPCcUiUi);
 
-INCLUDE_ASM("asm/nonmatchings/graphics/graph3d/gra3dBoundingBox", _fixed_array_verifyrange__H1ZPv_UiUi_PX01__112);
+INCLUDE_ASM("asm/nonmatchings/graphics/graph3d/gra3dBoundingBox", _fixed_array_verifyrange__H1ZPv_UiUi_PX01);
 
-INCLUDE_ASM("asm/nonmatchings/graphics/graph3d/gra3dBoundingBox", _fixed_array_verifyrange__H1ZPc_UiUi_PX01__112);
+INCLUDE_ASM("asm/nonmatchings/graphics/graph3d/gra3dBoundingBox", _fixed_array_verifyrange__H1ZPc_UiUi_PX01);
 
-INCLUDE_ASM("asm/nonmatchings/graphics/graph3d/gra3dBoundingBox", _fixed_array_verifyrange__H1ZPUi_UiUi_PX01__112);
+INCLUDE_RODATA("asm/nonmatchings/graphics/graph3d/gra3dBoundingBox", D_003B4CE8);
+
+INCLUDE_ASM("asm/nonmatchings/graphics/graph3d/gra3dBoundingBox", _fixed_array_verifyrange__H1ZPUi_UiUi_PX01);
 
 INCLUDE_ASM("asm/nonmatchings/graphics/graph3d/gra3dBoundingBox", gra3dbbApplyMatrix__FPA3_fPA3_CfT1);
 
@@ -27,3 +29,13 @@ INCLUDE_ASM("asm/nonmatchings/graphics/graph3d/gra3dBoundingBox", gra3dbbCopy__F
 INCLUDE_ASM("asm/nonmatchings/graphics/graph3d/gra3dBoundingBox", gra3dbbApplyFromBounds__FPA3_fPCfT1PA3_Cf);
 
 INCLUDE_ASM("asm/nonmatchings/graphics/graph3d/gra3dBoundingBox", gra3dbbFromBounds__FPA3_fPCfT1);
+
+INCLUDE_RODATA("asm/nonmatchings/graphics/graph3d/gra3dBoundingBox", D_003B4D40);
+
+INCLUDE_RODATA("asm/nonmatchings/graphics/graph3d/gra3dBoundingBox", D_003B4D58);
+
+INCLUDE_RODATA("asm/nonmatchings/graphics/graph3d/gra3dBoundingBox", __FUNCTION__.802);
+
+INCLUDE_RODATA("asm/nonmatchings/graphics/graph3d/gra3dBoundingBox", D_003B4D88);
+
+INCLUDE_RODATA("asm/nonmatchings/graphics/graph3d/gra3dBoundingBox", __FUNCTION__.805);

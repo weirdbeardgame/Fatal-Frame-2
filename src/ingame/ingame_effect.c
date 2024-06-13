@@ -1,20 +1,22 @@
 #include "common.h"
 
-INCLUDE_ASM("asm/nonmatchings/ingame/ingame_effect", __tf7ENE_WRK__3);
+INCLUDE_ASM("asm/nonmatchings/ingame/ingame_effect", _fixed_array_assert__FPCcUiUi);
 
-INCLUDE_ASM("asm/nonmatchings/ingame/ingame_effect", _fixed_array_verifyrange__H1ZPv_UiUi_PX01__125);
+INCLUDE_ASM("asm/nonmatchings/ingame/ingame_effect", _fixed_array_verifyrange__H1ZPv_UiUi_PX01);
 
-INCLUDE_ASM("asm/nonmatchings/ingame/ingame_effect", _fixed_array_verifyrange__H1ZPc_UiUi_PX01__125);
+INCLUDE_ASM("asm/nonmatchings/ingame/ingame_effect", _fixed_array_verifyrange__H1ZPc_UiUi_PX01);
 
-INCLUDE_ASM("asm/nonmatchings/ingame/ingame_effect", _fixed_array_verifyrange__H1ZPUi_UiUi_PX01__125);
+INCLUDE_RODATA("asm/nonmatchings/ingame/ingame_effect", D_003B9320);
+
+INCLUDE_ASM("asm/nonmatchings/ingame/ingame_effect", _fixed_array_verifyrange__H1ZPUi_UiUi_PX01);
 
 INCLUDE_ASM("asm/nonmatchings/ingame/ingame_effect", IgEffectInit__Fv);
 
 INCLUDE_ASM("asm/nonmatchings/ingame/ingame_effect", IgEffectMain__Fv);
 
-INCLUDE_ASM("asm/nonmatchings/ingame/ingame_effect", float__24);
+INCLUDE_ASM("asm/nonmatchings/ingame/ingame_effect", IgEffectParticleEndPosFinderGet__Fv);
 
-INCLUDE_ASM("asm/nonmatchings/ingame/ingame_effect", float__25);
+INCLUDE_ASM("asm/nonmatchings/ingame/ingame_effect", IgEffectParticleEndPosNoFinderGet__Fv);
 
 INCLUDE_ASM("asm/nonmatchings/ingame/ingame_effect", IgEffectParticleEndPosCalcFinder__FPf);
 
@@ -112,6 +114,10 @@ INCLUDE_ASM("asm/nonmatchings/ingame/ingame_effect", IgEffectTourouBaseModelDraw
 
 INCLUDE_ASM("asm/nonmatchings/ingame/ingame_effect", IgEffectEffectEndParticleReq__FPfi);
 
-INCLUDE_ASM("asm/nonmatchings/ingame/ingame_effect", __static_initialization_and_destruction_0__53);
+INCLUDE_ASM("asm/nonmatchings/ingame/ingame_effect", __static_initialization_and_destruction_0);
 
-INCLUDE_ASM("asm/nonmatchings/ingame/ingame_effect", _GLOBAL__I_IgEffectInit__Fv);
+INCLUDE_ASM("asm/nonmatchings/ingame/ingame_effect", _GLOBAL_$I$IgEffectInit__Fv);
+
+INCLUDE_RODATA("asm/nonmatchings/ingame/ingame_effect", D_003B9380);
+
+INCLUDE_RODATA("asm/nonmatchings/ingame/ingame_effect", D_003B9390);

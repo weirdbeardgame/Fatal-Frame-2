@@ -1,13 +1,14 @@
 #include "common.h"
-#include "plyr_mdl.h"
 
-INCLUDE_ASM("asm/nonmatchings/ingame/ingame", _fixed_array_assert__FPCcUiUi__55);
+INCLUDE_ASM("asm/nonmatchings/ingame/ingame", _fixed_array_assert__FPCcUiUi);
 
-INCLUDE_ASM("asm/nonmatchings/ingame/ingame", _fixed_array_verifyrange__H1ZPv_UiUi_PX01__124);
+INCLUDE_ASM("asm/nonmatchings/ingame/ingame", _fixed_array_verifyrange__H1ZPv_UiUi_PX01);
 
-INCLUDE_ASM("asm/nonmatchings/ingame/ingame", _fixed_array_verifyrange__H1ZPc_UiUi_PX01__124);
+INCLUDE_ASM("asm/nonmatchings/ingame/ingame", _fixed_array_verifyrange__H1ZPc_UiUi_PX01);
 
-INCLUDE_ASM("asm/nonmatchings/ingame/ingame", _fixed_array_verifyrange__H1ZPUi_UiUi_PX01__124);
+INCLUDE_RODATA("asm/nonmatchings/ingame/ingame", D_003B9110);
+
+INCLUDE_ASM("asm/nonmatchings/ingame/ingame", _fixed_array_verifyrange__H1ZPUi_UiUi_PX01);
 
 INCLUDE_ASM("asm/nonmatchings/ingame/ingame", Init__10INGAME_WRK);
 
@@ -18,6 +19,12 @@ INCLUDE_ASM("asm/nonmatchings/ingame/ingame", MenuUnlock__10INGAME_WRK);
 INCLUDE_ASM("asm/nonmatchings/ingame/ingame", MenuIsLocked__10INGAME_WRK);
 
 INCLUDE_ASM("asm/nonmatchings/ingame/ingame", PauseLock__10INGAME_WRK);
+
+INCLUDE_RODATA("asm/nonmatchings/ingame/ingame", D_003B9178);
+
+INCLUDE_RODATA("asm/nonmatchings/ingame/ingame", D_003B91A8);
+
+INCLUDE_RODATA("asm/nonmatchings/ingame/ingame", D_003B91B8);
 
 INCLUDE_ASM("asm/nonmatchings/ingame/ingame", PauseUnlock__10INGAME_WRK);
 
@@ -86,6 +93,12 @@ INCLUDE_ASM("asm/nonmatchings/ingame/ingame", one_Story_Load_Mission__F11GPHASE_
 INCLUDE_ASM("asm/nonmatchings/ingame/ingame", init_Story_Load_Mission_Save__Fv);
 
 INCLUDE_ASM("asm/nonmatchings/ingame/ingame", end_Story_Load_Mission_Save__Fv);
+
+INCLUDE_RODATA("asm/nonmatchings/ingame/ingame", D_003B91D8);
+
+INCLUDE_RODATA("asm/nonmatchings/ingame/ingame", D_003B9208);
+
+INCLUDE_RODATA("asm/nonmatchings/ingame/ingame", D_003B9228);
 
 INCLUDE_ASM("asm/nonmatchings/ingame/ingame", one_Story_Load_Mission_Save__F11GPHASE_ENUM);
 
@@ -247,6 +260,14 @@ INCLUDE_ASM("asm/nonmatchings/ingame/ingame", SetSave_IngameWrk__FP12MC_SAVE_DAT
 
 INCLUDE_ASM("asm/nonmatchings/ingame/ingame", fene_entrySetSave__FP12MC_SAVE_DATA);
 
-INCLUDE_ASM("asm/nonmatchings/ingame/ingame", __static_initialization_and_destruction_0__52);
+INCLUDE_ASM("asm/nonmatchings/ingame/ingame", __static_initialization_and_destruction_0);
 
-INCLUDE_ASM("asm/nonmatchings/ingame/ingame", _GLOBAL__I_ingame_wrk);
+INCLUDE_ASM("asm/nonmatchings/ingame/ingame", _GLOBAL_$I$ingame_wrk);
+
+INCLUDE_RODATA("asm/nonmatchings/ingame/ingame", D_003B9290);
+
+INCLUDE_RODATA("asm/nonmatchings/ingame/ingame", D_003B92C0);
+
+INCLUDE_RODATA("asm/nonmatchings/ingame/ingame", D_003B92F0);
+
+INCLUDE_RODATA("asm/nonmatchings/ingame/ingame", D_003B9310);

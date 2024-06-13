@@ -8,6 +8,10 @@ INCLUDE_ASM("asm/nonmatchings/graphics/graph3d/g3dDma", g3dDmaOpenPacket__Fv);
 
 INCLUDE_ASM("asm/nonmatchings/graphics/graph3d/g3dDma", g3dDmaCancelPacket__Fv);
 
+INCLUDE_RODATA("asm/nonmatchings/graphics/graph3d/g3dDma", D_003B2008);
+
+INCLUDE_RODATA("asm/nonmatchings/graphics/graph3d/g3dDma", __FUNCTION__.652);
+
 INCLUDE_ASM("asm/nonmatchings/graphics/graph3d/g3dDma", g3dDmaClosePacket__FPCv);
 
 INCLUDE_ASM("asm/nonmatchings/graphics/graph3d/g3dDma", g3dDmaAddPacket__FPCvi);
@@ -27,3 +31,17 @@ INCLUDE_ASM("asm/nonmatchings/graphics/graph3d/g3dDma", g3dDmaLoadVu1MicroProgra
 INCLUDE_ASM("asm/nonmatchings/graphics/graph3d/g3dDma", g3dDmaCallVu1MicroSubroutine__FPCUii);
 
 INCLUDE_ASM("asm/nonmatchings/graphics/graph3d/g3dDma", g3dDmaContinueVu1MicroSubroutine__FPCUi);
+
+INCLUDE_RODATA("asm/nonmatchings/graphics/graph3d/g3dDma", D_003B2060);
+
+INCLUDE_RODATA("asm/nonmatchings/graphics/graph3d/g3dDma", D_003B2078);
+
+INCLUDE_RODATA("asm/nonmatchings/graphics/graph3d/g3dDma", __FUNCTION__.655);
+
+INCLUDE_RODATA("asm/nonmatchings/graphics/graph3d/g3dDma", D_003B20A8);
+
+INCLUDE_RODATA("asm/nonmatchings/graphics/graph3d/g3dDma", D_003B20C0);
+
+INCLUDE_RODATA("asm/nonmatchings/graphics/graph3d/g3dDma", __FUNCTION__.661);
+
+INCLUDE_RODATA("asm/nonmatchings/graphics/graph3d/g3dDma", s_qwVif1Code_ContinueVu1MicroSubroutine.683);

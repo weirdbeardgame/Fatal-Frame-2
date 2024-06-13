@@ -1,12 +1,14 @@
 #include "common.h"
 
-INCLUDE_ASM("asm/nonmatchings/graphics/scene/IngameScene", _fixed_array_assert__FPCcUiUi__4);
+INCLUDE_ASM("asm/nonmatchings/graphics/scene/IngameScene", _fixed_array_assert__FPCcUiUi);
 
-INCLUDE_ASM("asm/nonmatchings/graphics/scene/IngameScene", _fixed_array_verifyrange__H1ZPv_UiUi_PX01__6);
+INCLUDE_ASM("asm/nonmatchings/graphics/scene/IngameScene", _fixed_array_verifyrange__H1ZPv_UiUi_PX01);
 
-INCLUDE_ASM("asm/nonmatchings/graphics/scene/IngameScene", _fixed_array_verifyrange__H1ZPc_UiUi_PX01__6);
+INCLUDE_ASM("asm/nonmatchings/graphics/scene/IngameScene", _fixed_array_verifyrange__H1ZPc_UiUi_PX01);
 
-INCLUDE_ASM("asm/nonmatchings/graphics/scene/IngameScene", _fixed_array_verifyrange__H1ZPUi_UiUi_PX01__6);
+INCLUDE_RODATA("asm/nonmatchings/graphics/scene/IngameScene", D_0039DF50);
+
+INCLUDE_ASM("asm/nonmatchings/graphics/scene/IngameScene", _fixed_array_verifyrange__H1ZPUi_UiUi_PX01);
 
 INCLUDE_ASM("asm/nonmatchings/graphics/scene/IngameScene", IngameSceneInit__Fi);
 

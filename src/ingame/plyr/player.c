@@ -1,12 +1,14 @@
 #include "common.h"
 
-INCLUDE_ASM("asm/nonmatchings/ingame/plyr/player", __tf7ENE_WRK__4);
+INCLUDE_ASM("asm/nonmatchings/ingame/plyr/player", _fixed_array_assert__FPCcUiUi);
 
-INCLUDE_ASM("asm/nonmatchings/ingame/plyr/player", _fixed_array_verifyrange__H1ZPv_UiUi_PX01__192);
+INCLUDE_ASM("asm/nonmatchings/ingame/plyr/player", _fixed_array_verifyrange__H1ZPv_UiUi_PX01);
 
-INCLUDE_ASM("asm/nonmatchings/ingame/plyr/player", _fixed_array_verifyrange__H1ZPc_UiUi_PX01__192);
+INCLUDE_ASM("asm/nonmatchings/ingame/plyr/player", _fixed_array_verifyrange__H1ZPc_UiUi_PX01);
 
-INCLUDE_ASM("asm/nonmatchings/ingame/plyr/player", _fixed_array_verifyrange__H1ZPUi_UiUi_PX01__192);
+INCLUDE_RODATA("asm/nonmatchings/ingame/plyr/player", D_003C3500);
+
+INCLUDE_ASM("asm/nonmatchings/ingame/plyr/player", _fixed_array_verifyrange__H1ZPUi_UiUi_PX01);
 
 INCLUDE_ASM("asm/nonmatchings/ingame/plyr/player", InitPlayer__Fv);
 
@@ -26,6 +28,10 @@ INCLUDE_ASM("asm/nonmatchings/ingame/plyr/player", PlayerGameOver__Fv);
 
 INCLUDE_ASM("asm/nonmatchings/ingame/plyr/player", ReqPlyrDead__Fi);
 
+INCLUDE_RODATA("asm/nonmatchings/ingame/plyr/player", D_003C3588);
+
+INCLUDE_RODATA("asm/nonmatchings/ingame/plyr/player", D_003C35D8);
+
 INCLUDE_ASM("asm/nonmatchings/ingame/plyr/player", PlyrDead__Fv);
 
 INCLUDE_ASM("asm/nonmatchings/ingame/plyr/player", PlyrMepachiCtrl__Fv);
@@ -33,6 +39,8 @@ INCLUDE_ASM("asm/nonmatchings/ingame/plyr/player", PlyrMepachiCtrl__Fv);
 INCLUDE_ASM("asm/nonmatchings/ingame/plyr/player", PlyrAttractSisMain__Fv);
 
 INCLUDE_ASM("asm/nonmatchings/ingame/plyr/player", PlyrBattleCheck__Fv);
+
+INCLUDE_RODATA("asm/nonmatchings/ingame/plyr/player", D_003C3690);
 
 INCLUDE_ASM("asm/nonmatchings/ingame/plyr/player", PlyrDamageCtrl__Fv);
 
@@ -146,7 +154,13 @@ INCLUDE_ASM("asm/nonmatchings/ingame/plyr/player", PhotoDmgChk2__Fi);
 
 INCLUDE_ASM("asm/nonmatchings/ingame/plyr/player", PhotoDmgChkSub2__FP7ENE_WRKiPi);
 
+INCLUDE_RODATA("asm/nonmatchings/ingame/plyr/player", D_003C37D8);
+
 INCLUDE_ASM("asm/nonmatchings/ingame/plyr/player", PlayerTakePictJob__Fii);
+
+INCLUDE_RODATA("asm/nonmatchings/ingame/plyr/player", D_003C39B0);
+
+INCLUDE_RODATA("asm/nonmatchings/ingame/plyr/player", D_003C3A00);
 
 INCLUDE_ASM("asm/nonmatchings/ingame/plyr/player", PhotoPointCulcEne2__FP7ENE_WRKP16BONUS_SHOT_SCOREP11SUBJECT_WRKP15_HINT_PHOTO_REQi);
 
@@ -198,6 +212,10 @@ INCLUDE_ASM("asm/nonmatchings/ingame/plyr/player", _SetFlashlightHand__Fi);
 
 INCLUDE_ASM("asm/nonmatchings/ingame/plyr/player", _SetFlashlightStep__Fi);
 
+INCLUDE_RODATA("asm/nonmatchings/ingame/plyr/player", D_003C3B80);
+
+INCLUDE_RODATA("asm/nonmatchings/ingame/plyr/player", D_003C3BA8);
+
 INCLUDE_ASM("asm/nonmatchings/ingame/plyr/player", PlyrFlashlight__Fi);
 
 INCLUDE_ASM("asm/nonmatchings/ingame/plyr/player", PlyrSpotMoveCtrl__Fv);
@@ -219,6 +237,10 @@ INCLUDE_ASM("asm/nonmatchings/ingame/plyr/player", PlyrRoomCheck__Fv);
 INCLUDE_ASM("asm/nonmatchings/ingame/plyr/player", GetNearestDistFromPlyrToEnemy__Fv);
 
 INCLUDE_ASM("asm/nonmatchings/ingame/plyr/player", DoorMotionIsEnd__Fv);
+
+INCLUDE_RODATA("asm/nonmatchings/ingame/plyr/player", D_003C3C18);
+
+INCLUDE_RODATA("asm/nonmatchings/ingame/plyr/player", ani_tbl.1477);
 
 INCLUDE_ASM("asm/nonmatchings/ingame/plyr/player", ReqPlyrDoorMotion__Fii);
 
@@ -290,6 +312,12 @@ INCLUDE_ASM("asm/nonmatchings/ingame/plyr/player", Work__10CEneTracer);
 
 INCLUDE_ASM("asm/nonmatchings/ingame/plyr/player", Req__10CEneTracerii);
 
-INCLUDE_ASM("asm/nonmatchings/ingame/plyr/player", __static_initialization_and_destruction_0__77);
+INCLUDE_ASM("asm/nonmatchings/ingame/plyr/player", __static_initialization_and_destruction_0);
 
-INCLUDE_ASM("asm/nonmatchings/ingame/plyr/player", _GLOBAL__I_plyr_wrk);
+INCLUDE_ASM("asm/nonmatchings/ingame/plyr/player", _GLOBAL_$I$plyr_wrk);
+
+INCLUDE_RODATA("asm/nonmatchings/ingame/plyr/player", aDmgRateByDifficulty);
+
+INCLUDE_RODATA("asm/nonmatchings/ingame/plyr/player", combo_point_mag);
+
+INCLUDE_RODATA("asm/nonmatchings/ingame/plyr/player", combo_sb_point_mag);

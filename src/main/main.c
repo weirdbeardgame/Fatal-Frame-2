@@ -1,14 +1,18 @@
 #include "common.h"
 
-INCLUDE_ASM("asm/nonmatchings/main/main", _fixed_array_assert__FPCcUiUi__64);
+INCLUDE_ASM("asm/nonmatchings/main/main", _fixed_array_assert__FPCcUiUi);
 
-INCLUDE_ASM("asm/nonmatchings/main/main", _fixed_array_verifyrange__H1ZPv_UiUi_PX01__139);
+INCLUDE_ASM("asm/nonmatchings/main/main", _fixed_array_verifyrange__H1ZPv_UiUi_PX01);
 
-INCLUDE_ASM("asm/nonmatchings/main/main", _fixed_array_verifyrange__H1ZPc_UiUi_PX01__139);
+INCLUDE_ASM("asm/nonmatchings/main/main", _fixed_array_verifyrange__H1ZPc_UiUi_PX01);
 
-INCLUDE_ASM("asm/nonmatchings/main/main", _fixed_array_verifyrange__H1ZPUi_UiUi_PX01__139);
+INCLUDE_RODATA("asm/nonmatchings/main/main", D_003BAB20);
+
+INCLUDE_ASM("asm/nonmatchings/main/main", _fixed_array_verifyrange__H1ZPUi_UiUi_PX01);
 
 INCLUDE_ASM("asm/nonmatchings/main/main", main);
+
+INCLUDE_RODATA("asm/nonmatchings/main/main", __FUNCTION__.976);
 
 INCLUDE_ASM("asm/nonmatchings/main/main", DebugMemoryCheck__Fv);
 
@@ -27,6 +31,8 @@ INCLUDE_ASM("asm/nonmatchings/main/main", init_Boot_Init__Fv);
 INCLUDE_ASM("asm/nonmatchings/main/main", end_Boot_Init__Fv);
 
 INCLUDE_ASM("asm/nonmatchings/main/main", one_Boot_Init__F11GPHASE_ENUM);
+
+INCLUDE_RODATA("asm/nonmatchings/main/main", D_003BAD88);
 
 INCLUDE_ASM("asm/nonmatchings/main/main", CheckSoftReset__Fv);
 

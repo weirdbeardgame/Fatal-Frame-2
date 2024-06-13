@@ -1,12 +1,14 @@
 #include "common.h"
 
-INCLUDE_ASM("asm/nonmatchings/graphics/motion/anicode", _fixed_array_assert__FPCcUiUi__13);
+INCLUDE_ASM("asm/nonmatchings/graphics/motion/anicode", _fixed_array_assert__FPCcUiUi);
 
-INCLUDE_ASM("asm/nonmatchings/graphics/motion/anicode", _fixed_array_verifyrange__H1ZPv_UiUi_PX01__33);
+INCLUDE_ASM("asm/nonmatchings/graphics/motion/anicode", _fixed_array_verifyrange__H1ZPv_UiUi_PX01);
 
-INCLUDE_ASM("asm/nonmatchings/graphics/motion/anicode", _fixed_array_verifyrange__H1ZPc_UiUi_PX01__33);
+INCLUDE_ASM("asm/nonmatchings/graphics/motion/anicode", _fixed_array_verifyrange__H1ZPc_UiUi_PX01);
 
-INCLUDE_ASM("asm/nonmatchings/graphics/motion/anicode", _fixed_array_verifyrange__H1ZPUi_UiUi_PX01__33);
+INCLUDE_RODATA("asm/nonmatchings/graphics/motion/anicode", D_003A1590);
+
+INCLUDE_ASM("asm/nonmatchings/graphics/motion/anicode", _fixed_array_verifyrange__H1ZPUi_UiUi_PX01);
 
 INCLUDE_ASM("asm/nonmatchings/graphics/motion/anicode", motAniCodeClearBuf__FP8ANI_CTRL);
 
@@ -37,17 +39,3 @@ INCLUDE_ASM("asm/nonmatchings/graphics/motion/anicode", motAniIsSeNoDustEffect__
 INCLUDE_ASM("asm/nonmatchings/graphics/motion/anicode", motAniCodeReadEFCT__FP8ANI_CTRLPi);
 
 INCLUDE_ASM("asm/nonmatchings/graphics/motion/anicode", motGetNextMotion__FP8ANI_CTRL);
-
-INCLUDE_ASM("asm/nonmatchings/graphics/motion/anicode", Anim2D_CalcNowPos__FPC12POS_ANIM_TBLi);
-
-INCLUDE_ASM("asm/nonmatchings/graphics/motion/anicode", Anim2D_CalcNowScale__FPC12SCL_ANIM_TBLi);
-
-INCLUDE_ASM("asm/nonmatchings/graphics/motion/anicode", Anim2D_CalcNowAlpha__FPC14ALPHA_ANIM_TBLi);
-
-INCLUDE_ASM("asm/nonmatchings/graphics/motion/anicode", Anim2D_CalcNowRGB__FPC12RGB_ANIM_TBLi);
-
-INCLUDE_ASM("asm/nonmatchings/graphics/motion/anicode", Anim2D_CalcNowRot__FPC12ROT_ANIM_TBLi);
-
-INCLUDE_ASM("asm/nonmatchings/graphics/motion/anicode", Anim2D_CalcPosAnim__Fffiii);
-
-INCLUDE_ASM("asm/nonmatchings/graphics/motion/anicode", Anim2D_CalcAlphaAnim__FUcUcii);

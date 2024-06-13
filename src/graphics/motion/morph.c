@@ -1,12 +1,14 @@
 #include "common.h"
 
-INCLUDE_ASM("asm/nonmatchings/graphics/motion/morph", __tf10MORPH_CTRL);
+INCLUDE_ASM("asm/nonmatchings/graphics/motion/morph", _fixed_array_assert__FPCcUiUi);
 
-INCLUDE_ASM("asm/nonmatchings/graphics/motion/morph", _fixed_array_verifyrange__H1ZPv_UiUi_PX01__171);
+INCLUDE_ASM("asm/nonmatchings/graphics/motion/morph", _fixed_array_verifyrange__H1ZPv_UiUi_PX01);
 
-INCLUDE_ASM("asm/nonmatchings/graphics/motion/morph", _fixed_array_verifyrange__H1ZPc_UiUi_PX01__171);
+INCLUDE_ASM("asm/nonmatchings/graphics/motion/morph", _fixed_array_verifyrange__H1ZPc_UiUi_PX01);
 
-INCLUDE_ASM("asm/nonmatchings/graphics/motion/morph", _fixed_array_verifyrange__H1ZPUi_UiUi_PX01__171);
+INCLUDE_RODATA("asm/nonmatchings/graphics/motion/morph", D_003C0B00);
+
+INCLUDE_ASM("asm/nonmatchings/graphics/motion/morph", _fixed_array_verifyrange__H1ZPUi_UiUi_PX01);
 
 INCLUDE_ASM("asm/nonmatchings/graphics/motion/morph", MorphInit__Fv);
 
@@ -44,4 +46,6 @@ INCLUDE_ASM("asm/nonmatchings/graphics/motion/morph", MorphResetP__FP10MORPH_CTR
 
 INCLUDE_ASM("asm/nonmatchings/graphics/motion/morph", MorphSetWorkNo__FP8ANI_CTRL);
 
-INCLUDE_ASM("asm/nonmatchings/graphics/motion/morph", __static_initialization_and_destruction_0__71);
+INCLUDE_ASM("asm/nonmatchings/graphics/motion/morph", __static_initialization_and_destruction_0);
+
+INCLUDE_ASM("asm/nonmatchings/graphics/motion/morph", _GLOBAL_$I$ch017_morph);
