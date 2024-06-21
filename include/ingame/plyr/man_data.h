@@ -7,7 +7,6 @@ struct MAN_DATA
 {// 0x30
   /* 0x00 */ int man_data_draw_lock_cnt;
 
- private:
   /* 0x04 */ ANI_CTRL *mpAniCtrl;
   /* 0x08 */ ANI_CTRL *mpShadowAniCtrl;
   /* 0x0c */ int mpAcsMdl;
@@ -26,7 +25,8 @@ struct MAN_DATA
 
  public:
   MAN_DATA &operator=(const MAN_DATA &rval);
-  virtual int Setup(int param_1, int param_2, int param_3, int param_4, int param_5);
+  virtual int Setup(int param_1, int param_2, int param_3, int param_4,
+                    int param_5);
   virtual int IsReady();
   ANI_CTRL *GetAniCtrl();
   ANI_CTRL *GetShadowAniCtrl();
@@ -39,8 +39,8 @@ struct MAN_DATA
   //protected:
   int GetAnmNo();
   int SetupIn(int mdl_no, int anm_no, int bd_no, int smdl_no, int iAcsNo);
-  void InitIn();
-  int ReadyIn();
+  void InitIn(int mdl_p, int anm_p, int smdl_p);
+  int ReadyIn(int *mdl_pp, int *anm_pp, int *smdl_pp);
   void ReleaseAnmIn();
   void ReleaseIn();
   void InitializeIn();

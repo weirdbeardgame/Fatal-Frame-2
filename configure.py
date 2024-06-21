@@ -10,8 +10,6 @@ import re
 from pathlib import Path
 from typing import Dict, List, Set, Union
 
-from fix_gp import fix_gp
-
 import ninja_syntax
 
 import splat
@@ -71,6 +69,51 @@ compiler_type = "gcc"
 "tools/build/cc/gcc/gcc" = "{COMPILER}"
 """
         )
+
+pattern0 = re.compile(r'%(gp_rel)\(([^)]+)\)\(\$28\)')
+pattern1 = re.compile(r"\$28, (%gp_rel\((.+)\))")
+
+def remove_gprel():
+    for root, dirs, files in os.walk("asm/nonmatchings/"):
+        for filename in files:
+            filepath = os.path.join(root, filename)
+
+            with open(filepath, "r") as file:
+                content = file.read()
+            
+            replace: bool = False
+
+            # Search for any %gp_rel access
+            updated_content = content
+            if re.search(pattern0, content):
+                replace = True
+                # Reference found, remove
+                updated_content = re.sub(pattern0, r'\2', updated_content)
+            
+            if re.search(pattern1, updated_content):
+                replace = True
+
+                updated_content = re.sub(pattern1, r'\2', updated_content)
+        
+            if replace == True:
+                # Write the updated content back to the file
+                with open(filepath, "w") as file:
+                    file.write(updated_content)
+
+def fix_asm_include():
+    for root, dirs, files in os.walk("asm/nonmatchings/"):
+        for filename in files:
+            filepath = os.path.join(root, filename)
+
+            with open(filepath, "r") as file:
+                content = file.read()
+            
+            if content.find(".include \"macro.inc\"") != -1:
+                updated_content = content.replace(".include \"macro.inc\"", ".include \"include/macro.inc\"")
+                
+                # Write the updated content back to the file
+                with open(filepath, "w") as file:
+                    file.write(updated_content)
 
 
 def build_stuff(linker_entries: List[LinkerEntry]):
@@ -239,6 +282,7 @@ if __name__ == "__main__":
 
     write_permuter_settings()
 
-    gp_value = split.config["options"]["gp_value"]
+    remove_gprel()
 
-    fix_gp(Path("asm"), gp_value, Path("symbol_addrs.txt"))
+    fix_asm_include()
+

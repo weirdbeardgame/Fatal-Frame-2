@@ -4,6 +4,7 @@
 #include "common.h"
 #include "man_data.h"
 #include "mmanage.h"
+#include "player.h"
 #include "sgd_types.h"
 
 typedef enum
@@ -34,6 +35,28 @@ struct GRA3DEMULATIONLIGHTDATACREATIONDATA
   /* 0x34 */ int bEnableStaticDirLight;
 };
 
+int ChrSortRegistPlayr();
+void ReqPlayerMim(int no, int rev);
+void IgEffectRenzFlareDispFlgSet(int Flg);
+int mmanageIsReadyItemMdl(int mdl_no, int *mdl_pp, int bForceFree);
+
+int IsReadyPlyrMdl();
+void DrawGirl(int in_mirror);
+int GetPlyrMdlNo();
+void SetPlyrMdlNo(int iMdlNo);
+int GetPlyrAcsNo();
+void SetPlyrAcsNo(int iMdlNo);
+int GetSisterMdlNo();
+void SetSisterMdlNo(int iMdlNo);
+int GetSisterAcsNo();
+void SetSisterAcsNo(int iAcsNo);
+void SetPlyrNeckFlg(int flg);
+
+void plyr_mdlInit();
+static void PlyrNeckFrameInit();
+static void PlyrNeckInit();
+void plyr_mdlResetReq();
+
 struct PLYR_PLYR_DATA : MAN_DATA
 {// 0x3c
   /* 0x30 */ int plyr_cam_mdl_p;
@@ -47,7 +70,8 @@ struct PLYR_PLYR_DATA : MAN_DATA
 
  public:
   PLYR_PLYR_DATA &operator=(const PLYR_PLYR_DATA &rval);
-  virtual int Setup(int param_1, int param_2, int param_3, int param_4, int param_5)
+  virtual int Setup(int param_1, int param_2, int param_3, int param_4,
+                    int param_5)
   {
     int return_val = 0;
     if (!plyr_req_other_mdl)
@@ -160,23 +184,6 @@ static int plyr_neck_no_registered_cnt;
 
 static LOOK_TARGET_PRIORITY_MIO plyr_neck_now_priority;
 static LOOK_TARGET_PRIORITY_MIO pre_priority;
-
-int IsReadyPlyrMdl();
-void DrawGirl(int in_mirror);
-int GetPlyrMdlNo();
-void SetPlyrMdlNo(int iMdlNo);
-int GetPlyrAcsNo();
-void SetPlyrAcsNo(int iMdlNo);
-int GetSisterMdlNo();
-void SetSisterMdlNo(int iMdlNo);
-int GetSisterAcsNo();
-void SetSisterAcsNo(int iAcsNo);
-void SetPlyrNeckFlg(int flg);
-
-void plyr_mdlInit();
-static void PlyrNeckFrameInit();
-static void PlyrNeckInit();
-void plyr_mdlResetReq();
 
 // void CostumeSetSave(MC_SAVE_DATA *data);
 
