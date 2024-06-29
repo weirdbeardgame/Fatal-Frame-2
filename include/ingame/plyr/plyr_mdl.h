@@ -7,6 +7,9 @@
 #include "player.h"
 #include "sgd_types.h"
 
+#define PI 3.141592503f
+#define D_FLT_003EE7F0 6.283185005f
+
 typedef enum
 {
   LTP_MIO_ATTACK_ENEMY = 0,
@@ -161,6 +164,15 @@ struct MDL_REQ_SAVE
   void SetSave();
 };
 
+// Note, this is in the wrong file. There's no known header this came from.
+// This will probably be apart of mc.h or something along those lines.
+// Placing it in here to allow definition of some functions
+typedef struct
+{// 0x8
+  /* 0x0 */ unsigned char *addr;
+  /* 0x4 */ int size;
+} MC_SAVE_DATA;
+
 struct _LOOK_AT_PARAM
 {// 0x20
   /* 0x00 */ sceVu0FVECTOR pos;
@@ -185,6 +197,12 @@ static int plyr_neck_no_registered_cnt;
 static LOOK_TARGET_PRIORITY_MIO plyr_neck_now_priority;
 static LOOK_TARGET_PRIORITY_MIO pre_priority;
 
-// void CostumeSetSave(MC_SAVE_DATA *data);
+void CostumeSetSave(MC_SAVE_DATA *data);
+
+u_short GetPlyrFtype();
+void StopPlayerMim(int no);
+int IsPlayerMimParts(int no);
+void plyr_mdlSetSave(MC_SAVE_DATA *data);
+void ReqPlayerMimContinue(int no, int rev);
 
 #endif// PLYR_MDL_H

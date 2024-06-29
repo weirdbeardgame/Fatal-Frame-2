@@ -71,20 +71,68 @@ int IsReadyPlyrMdl()
   return plyr_data.IsReady();
 }
 
-INCLUDE_ASM("asm/nonmatchings/ingame/plyr/plyr_mdl", ReleasePlyrMdl__Fv);
+void ReleasePlyrMdl() 
+{
+    if (plyr_data.plyr_init_ok != 0) 
+    {
+        ChrSortDelete(1);
+        plyr_data.plyr_init_ok = 0;
+    }
+    if (plyr_data.plyr_req_other_mdl != 0) 
+    {
+        mmanageClearItemMdl(0);
+        mmanageClearItemMdl(1);
+        plyr_data.plyr_req_other_mdl = 0;
+    }
+    plyr_data.ReleaseIn();
+}
 
-INCLUDE_ASM("asm/nonmatchings/ingame/plyr/plyr_mdl", ReqPlayerMim__Fii);
+void ReqPlayerMim(/* a0 4 */ int no, /* a1 5 */ int rev) 
+{
+    if (plyr_data.mpAniCtrl != 0x0) 
+    {
+        mimRequestNum(plyr_data.mpAniCtrl, no, rev);
+    }
+}
 
-INCLUDE_ASM("asm/nonmatchings/ingame/plyr/plyr_mdl", ReqPlayerMimContinue__Fii);
+void ReqPlayerMimContinue(int no,int rev) 
+{
+    if (plyr_data.mpAniCtrl != 0x0) 
+    {
+        mimRequestNumContinue(plyr_data.mpAniCtrl,no,(u_char)rev);
+    }
+}
 
-INCLUDE_ASM("asm/nonmatchings/ingame/plyr/plyr_mdl", StopPlayerMim__Fi);
+void StopPlayerMim(int no)
+{
+    if (plyr_data.mpAniCtrl != 0x0) 
+    {
+        mimStopNum(plyr_data.mpAniCtrl,no);
+    }
+    return;
+}
 
-INCLUDE_ASM("asm/nonmatchings/ingame/plyr/plyr_mdl", IsPlayerMimParts__Fi);
+int IsPlayerMimParts(int no)
+{
+    return (mimIsUseParts(plyr_data.mpAniCtrl,no) != 0);
+}
 
-INCLUDE_ASM("asm/nonmatchings/ingame/plyr/plyr_mdl", plyr_mdlSetSave__FP12MC_SAVE_DATA);
+void plyr_mdlSetSave(MC_SAVE_DATA *data)
+{
+  data->size = 0x10;
+  data->addr = (unsigned char *)&plyr_mdl_req_save;
+  return;
+}
 
-INCLUDE_ASM("asm/nonmatchings/ingame/plyr/plyr_mdl", GetPlyrFtype__Fv);
+u_short GetPlyrFtype()
+{
+  if (plyr_data.mpAniCtrl != 0x0) 
+  {
+      return plyr_data.mpAniCtrl->ftype;
+  }
 
+  return 0;
+}
 INCLUDE_ASM("asm/nonmatchings/ingame/plyr/plyr_mdl", ReqPlayerAnime__FUc);
 
 INCLUDE_ASM("asm/nonmatchings/ingame/plyr/plyr_mdl", PlayerInterpFlame__FP8ANI_CTRLii);
@@ -93,7 +141,71 @@ INCLUDE_ASM("asm/nonmatchings/ingame/plyr/plyr_mdl", plyr_mdlMotionWork__Fv);
 
 INCLUDE_ASM("asm/nonmatchings/ingame/plyr/plyr_mdl", plyr_mdlGetMATRIX__FPA3_fi);
 
-INCLUDE_ASM("asm/nonmatchings/ingame/plyr/plyr_mdl", CalcGirlCoord__Fi);
+void CalcGirlCoord(/* a0 4 */ int pause_flg) 
+{
+	/* s4 20 */ HeaderSection *hs;
+	/* s1 17 */ SGDCOORDINATE *cp;
+	/* f20 58 */ float grot;
+
+    // Ghidra declared variables
+    ANI_CTRL *a1;
+    
+    if (IsReadyPlyrMdl() != 0) 
+    {   
+        hs = plyr_data.mpAniCtrl->base_p;
+        cp = hs->coordp;
+        MrecSetRegBuffID(plyr_wrk.cmn_wrk.floor, plyr_wrk.cmn_wrk.mbox.pos, 0);
+        switch (motSetCoord(plyr_data.mpAniCtrl, 0xff, 0)) 
+        {
+        case 1:
+            plyr_wrk.cmn_wrk.st.sta |= 0x2000;
+            break;
+        case 2:
+            plyr_wrk.cmn_wrk.st.sta |= 0x4000;
+            break;
+        }
+        plyr_data.plyr_light_alpha += 10;
+        if ((plyr_data.plyr_light_alpha & 0xFF) > 0x80) 
+        {
+            plyr_data.plyr_light_alpha = 0x80;
+        }
+        plyr_data.plyr_cam_alpha += 10;
+        if ((plyr_data.plyr_cam_alpha & 0xFF) > 0x80) 
+        {
+            plyr_data.plyr_cam_alpha = -0x80U;
+        }
+        a1 = plyr_data.mpAniCtrl;
+        movGetMoveval(plyr_wrk.spd, plyr_wrk.old_spd, a1, motGetNowFrame(&plyr_data.mpAniCtrl->mot) >> 1, 0);
+        mimSetVertex(plyr_data.mpAniCtrl);
+        sceVu0UnitMatrix(cp->matCoord);
+        cp->matCoord[2][2] = 25.0f;
+        cp->matCoord[1][1] = 25.0f;
+        cp->matCoord[0][0] = 25.0f;
+
+        grot = plyr_wrk.cmn_wrk.mbox.rot[1] + D_FLT_003EE7F0;
+        if (D_FLT_003EE7F0 < grot) 
+        {
+            grot -= PI;
+        }
+
+        sceVu0RotMatrixX(cp->matCoord, cp->matCoord, D_FLT_003EE7F0);
+        sceVu0RotMatrixY(cp->matCoord, cp->matCoord, grot);
+
+        /* inlined from g3dxVu0.h */
+        SetVec(&cp->matCoord[3], &plyr_wrk.cmn_wrk.mbox.pos);
+        cp->matCoord[3][3] = 1.0;
+        sgdCalcBoneCoordinate(cp, hs->blocks - 1);
+        a1 = plyr_data.mpAniCtrl;
+        motLookAtCtrl(a1, PlyrNeckGetParam());
+        LeftHandCtrl(cp);
+        sgdCalcBoneCoordinate(cp, hs->blocks - 1);
+        a1 = plyr_data.mpAniCtrl;
+        GetMdlWaistPos(plyr_wrk.bwp,a1, a1->mdl_no);
+        GetMdlNeckPos(plyr_wrk.cmn_wrk.headpos, a1,a1->mdl_no);
+        GetPlyrAcsLightPos(plyr_wrk.spot_pos,plyr_data.mpAniCtrl);
+    }
+}
+
 
 INCLUDE_ASM("asm/nonmatchings/ingame/plyr/plyr_mdl", playerUseDoorLight__Fi);
 

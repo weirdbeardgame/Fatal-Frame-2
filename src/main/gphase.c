@@ -2,11 +2,7 @@
 #include "gphase.h"
 #include "main.h"
 
-// TODO: find a way to avoid the attribute
-GPHASE_SYS gphase_sys __attribute__((section(".bss")));
-
-// TODO: match the next file's bss
-int pad_bss[2] __attribute__((section(".bss")));
+GPHASE_SYS gphase_sys;
 
 void (*ini_func[94])() = {
     init_super,
@@ -492,9 +488,6 @@ GPHASE_DAT gphase_tbl[94] = {
     {5, GID_TITLE_MISSION, GPHASE_ID_NONE, 0}
 };
 
-// TODO: match graphics/gra3d.c
-int pad[2] __attribute__((section(".data")));
-
 void InitGPhaseSys(void)
 {
     for (int i = 0; i < gphase_sys_num; i++)
@@ -526,7 +519,6 @@ GPHASE_ENUM DoJobPhase(int layer)
 
     if (layer >= 6)
     {
-        // TODO: match the next file's rodata to remove the padding
         printf("layer_num over %d\n\0\0\0\0", 6);
         while (true)
             ;

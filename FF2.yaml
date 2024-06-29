@@ -5,18 +5,21 @@ options:
   basename: SLES_523.84
   target_path: SLES_523.84
 
+  platform: ps2
+
   gp_value: 0x3f57f0
 
   base_path: .
 
-  compiler: GCC
+  compiler: EE-GCC
 
   find_file_boundaries: False
 
-  platform: ps2
-
-  string_encoding: EUC-JP
+  string_encoding: ASCII
+  data_string_encoding: ASCII
   
+  #migrate_rodata_to_functions: no
+
   #rodata_string_guesser_level: 2 # improve string detection
 
   use_legacy_include_asm: False
@@ -31,6 +34,8 @@ options:
 
   symbol_addrs_path: symbol_addrs.txt
 
+  asm_data_macro: dlabel
+
   asm_path: asm
   src_path: src
 
@@ -44,6 +49,8 @@ options:
       ".vutext",
       ".data",
       ".eh_frame",
+      ".ctors",
+      ".dtors",
       ".vudata",
       ".rodata",
       ".gcc_except_table",
@@ -188,7 +195,7 @@ segments:
       - [0x98c08, asm, graphics/effect/g2d_debug] # size:0x680
       - [0x99288, asm, graphics/graph2d/g2d_draw] # size:0x2938
       - [0x9bbc0, asm, graphics/graph2d/g2d_main] # size:0x198
-      - [0x9bd58, cpp, graphics/graph3d/g3dBoundingVolume] # size:0x34c
+      - [0x9bd58, asm, graphics/graph3d/g3dBoundingVolume] # size:0x34c
       - [0x9c0a8, asm, graphics/graph3d/g3dCamera] # size:0x464
       - [0x9c510, asm, graphics/graph3d/g3dCore] # size:0x2650
       - [0x9eb60, asm, graphics/graph3d/g3dDebug] # size:0x1ac0
@@ -199,9 +206,9 @@ segments:
       - [0xa39c8, asm, graphics/graph3d/g3dLightEx] # size:0x1234
       - [0xa4c00, asm, graphics/graph3d/g3dMath] # size:0xca4
       - [0xa58a8, asm, graphics/graph3d/g3dMemory] # size:0x34
-      - [0xa58e0, cpp, graphics/graph3d/g3dRenderTarget] # size:0x7c8
-      - [0xa60a8, cpp, graphics/graph3d/g3dSprite] # size:0x4b0
-      - [0xa6558, cpp, graphics/graph3d/g3dTexture] # size:0x114
+      - [0xa58e0, asm, graphics/graph3d/g3dRenderTarget] # size:0x7c8
+      - [0xa60a8, asm, graphics/graph3d/g3dSprite] # size:0x4b0
+      - [0xa6558, asm, graphics/graph3d/g3dTexture] # size:0x114
       - [0xa6670, asm, graphics/graph3d/g3dVif1] # size:0x74c
       - [0xa6dc0, asm, outgame/gallery] # size:0xdbc
       - [0xa7b80, asm, outgame/gallery_disp] # size:0x11d4
@@ -382,241 +389,241 @@ segments:
       - [0x16e010, asm, ingame/menu/zero2_anim2d] # size:0x48c
       - [0x16e4a0, asm, debug/zero2_perf] # size:0x240
       - [0x16e6e0, asm, common/zero2_util] # size:0x5e0
-      - [0x16ecc0, asm, iopsys.a(fileload)] # size:0x16a8
-      - [0x170368, asm, iopsys.a(spu_mem)] # size:0x798
-      - [0x170b00, asm, iopsys.a(snd_buffer)] # size:0xe34
-      - [0x171938, asm, iopsys.a(ee_iop)] # size:0x888
-      - [0x1721c0, asm, iopsys.a(ee_iop_q)] # size:0x2a8
-      - [0x172468, asm, iopsys.a(stream_auto)] # size:0x1d74
-      - [0x1741e0, asm, iopsys.a(snd_bank)] # size:0x1048
-      - [0x175228, asm, iopsys.a(snd_3d)] # size:0x944
-      - [0x175b70, asm, iopsys.a(cddat)] # size:0x3b8
-      - [0x175f28, asm, iopsys.a(snd)] # size:0x754
-      - [0x176680, asm, iopsys.a(snd_pcmstream)] # size:0x60c
-      - [0x176c90, asm, iopsys.a(cmp_eeiop)] # size:0x464
-      - [0x1770f8, asm, iopsys.a(snd_util)] # size:0x578
-      - [0x177670, asm, iopsys.a(file_stream)] # size:0x32c
-      - [0x1779a0, asm, iopsys.a(hxd)] # size:0x2c0
-      - [0x177c60, asm, iopsys.a(spu_voice)] # size:0xf8
-      - [0x177d58, asm, iopsys.a(snd_stream)] # size:0x16cc
-      - [0x179428, asm, cmp.a(encodes)] # size:0x8d8
-      - [0x179d00, asm, cmp.a(cmp)] # size:0x12c
-      - [0x179e30, asm, playpss.a(my_strfile)] # size:0x7c
-      - [0x179eb0, asm, playpss.a(playpss)] # size:0xdd4
-      - [0x17ac88, asm, playpss.a(audiodec)] # size:0x8a4
-      - [0x17b530, asm, playpss.a(ldimage)] # size:0x464
-      - [0x17b998, asm, libexcep.a(libexcep)] # size:0x34c
-      - [0x17bce8, asm, libexcep.a(print)] # size:0x5fc
-      - [0x17c2e8, asm, libcdvd.a(cdvd000)] # size:0x1554
-      - [0x17d840, asm, libcdvd.a(cdvd036)] # size:0xd0
-      - [0x17d910, asm, libcdvd.a(cdvd039)] # size:0xf8
-      - [0x17da08, asm, libdma.a(libdma)] # size:0x844
-      - [0x17e250, asm, libdev.a(devvu0)] # size:0x494
-      - [0x17e6e8, asm, libdev.a(devvif0)] # size:0x32c
-      - [0x17ea18, asm, libdev.a(devvif1)] # size:0x3e8
-      - [0x17ee00, asm, libkernl.a(klib)] # size:0x8a0
-      - [0x17f6a0, asm, libkernl.a(intr)] # size:0x230
-      - [0x17f8d0, asm, libkernl.a(thread)] # size:0x450
-      - [0x17fd20, asm, libkernl.a(kprintf)] # size:0x9b8
-      - [0x1806d8, asm, libkernl.a(sifcmd)] # size:0x7d8
-      - [0x180eb0, asm, libkernl.a(sifrpc)] # size:0x1090
-      - [0x181f40, asm, libkernl.a(filestub)] # size:0x3718
-      - [0x185658, asm, libkernl.a(iopheap)] # size:0x54c
-      - [0x185ba8, asm, libkernl.a(eeloadfile)] # size:0xd5c
-      - [0x186908, asm, libkernl.a(iopreset)] # size:0x2e0
-      - [0x186be8, asm, libkernl.a(tlbfunc)] # size:0x50c
-      - [0x187100, asm, libkernl.a(tlbtrap)] # size:0x35c
-      - [0x187460, asm, libkernl.a(diei)] # size:0x70
-      - [0x1874d0, asm, libkernl.a(initsys)] # size:0x28c
-      - [0x187760, asm, libkernl.a(libosd)] # size:0x17c
-      - [0x1878e0, asm, libkernl.a(exit)] # size:0x29c
-      - [0x187b80, asm, libkernl.a(alarm)] # size:0x13c
-      - [0x187cc0, asm, libkernl.a(timer)] # size:0x1364
-      - [0x189028, asm, libkernl.a(timeralarm)] # size:0x3f0
-      - [0x189418, asm, libkernl.a(iopnotify)] # size:0x260
-      - [0x189678, asm, libkernl.a(glue)] # size:0x3d0
-      - [0x189a48, asm, libkernl.a(deci2)] # size:0x234
-      - [0x189c80, asm, libkernl.a(tty)] # size:0x544
-      - [0x18a1c8, asm, libpkt.a(gifpk000)] # size:0x10
-      - [0x18a1d8, asm, libpkt.a(gifpk001)] # size:0x10
-      - [0x18a1e8, asm, libpkt.a(gifpk002)] # size:0x58
-      - [0x18a240, asm, libpkt.a(gifpk005)] # size:0x74
-      - [0x18a2b8, asm, libpkt.a(gifpk011)] # size:0x74
-      - [0x18a330, asm, libpkt.a(gifpk014)] # size:0xa4
-      - [0x18a3d8, asm, libpkt.a(gifpk015)] # size:0x28
-      - [0x18a400, asm, libpkt.a(vifpk025)] # size:0x10
-      - [0x18a410, asm, libpkt.a(vifpk026)] # size:0x10
-      - [0x18a420, asm, libpkt.a(vifpk027)] # size:0x58
-      - [0x18a478, asm, libpkt.a(vifpk030)] # size:0x58
-      - [0x18a4d0, asm, libpkt.a(vifpk036)] # size:0x58
-      - [0x18a528, asm, libpkt.a(vifpk039)] # size:0x58
-      - [0x18a580, asm, libpkt.a(vifpk040)] # size:0x2c
-      - [0x18a5b0, asm, libpkt.a(vifpk041)] # size:0x18
-      - [0x18a5c8, asm, libpkt.a(vifpk042)] # size:0xa4
-      - [0x18a670, asm, libpkt.a(vifpk043)] # size:0x14
-      - [0x18a688, asm, libpkt.a(vifpk044)] # size:0x7c
-      - [0x18a708, asm, libvu0.a(libvu0)] # size:0x1748
-      - [0x18be50, asm, libpad.a(libpad)] # size:0x1480
-      - [0x18d2d0, asm, libmc.a(libmc)] # size:0x17fc
-      - [0x18ead0, asm, libgraph.a(graph001)] # size:0x19c
-      - [0x18ec70, asm, libgraph.a(graph002)] # size:0x68
-      - [0x18ecd8, asm, libgraph.a(graph009)] # size:0x298
-      - [0x18ef70, asm, libgraph.a(graph011)] # size:0x94
-      - [0x18f008, asm, libgraph.a(graph012)] # size:0x314
-      - [0x18f320, asm, libgraph.a(graph014)] # size:0x5c
-      - [0x18f380, asm, libgraph.a(graph015)] # size:0x1e4
-      - [0x18f568, asm, libgraph.a(graph016)] # size:0x140
-      - [0x18f6a8, asm, libgraph.a(graph017)] # size:0x17c
-      - [0x18f828, asm, libgraph.a(graph019)] # size:0xa0
-      - [0x18f8c8, asm, libgraph.a(graph020)] # size:0x3c
-      - [0x18f908, asm, libgraph.a(graph021)] # size:0x88
-      - [0x18f990, asm, libgraph.a(graph029)] # size:0x1c
-      - [0x18f9b0, asm, libgraph.a(graph003)] # size:0x424
-      - [0x18fdd8, asm, libgraph.a(graph005)] # size:0xc8
-      - [0x18fea0, asm, libgraph.a(graph006)] # size:0x1e4
-      - [0x190088, asm, libgraph.a(graph007)] # size:0x104
-      - [0x190190, asm, libmpeg.a(pack)] # size:0xe20
-      - [0x190fb0, asm, libmpeg.a(mpeg)] # size:0xc48
-      - [0x191bf8, asm, libmpeg.a(init)] # size:0xb04
-      - [0x192700, asm, libmpeg.a(defhandler)] # size:0x4c
-      - [0x192750, asm, libmpeg.a(mpc)] # size:0x5054
-      - [0x1977a8, asm, libmpeg.a(csc)] # size:0x790
-      - [0x197f38, asm, libmpeg.a(bit)] # size:0x20c
-      - [0x198148, asm, libsdr.a(sdr_main)] # size:0x4e0
-      - [0x198628, asm, libsdr.a(sdr_cb)] # size:0x390
-      - [0x1989b8, asm, libipu.a(libipu)] # size:0x390
-      - [0x198d48, asm, libipu.a(ipuinit)] # size:0x2b0
-      - [0x198ff8, asm, libscf.a(libscf)] # size:0x6f0
-      - [0x1996e8, asm, libm.a(s_isnan)] # size:0x3c
-      - [0x199728, asm, libm.a(sf_atan)] # size:0x28c
-      - [0x1999b8, asm, libm.a(sf_cos)] # size:0xd4
-      - [0x199a90, asm, libm.a(sf_fabs)] # size:0x28
-      - [0x199ab8, asm, libm.a(sf_finite)] # size:0x8
-      - [0x199ac0, asm, libm.a(sf_isinf)] # size:0x8
-      - [0x199ac8, asm, libm.a(sf_isnan)] # size:0x8
-      - [0x199ad0, asm, libm.a(sf_sin)] # size:0xe8
-      - [0x199bb8, asm, libm.a(sf_tan)] # size:0x78
-      - [0x199c30, asm, libm.a(wf_acos)] # size:0x14
-      - [0x199c48, asm, libm.a(wf_atan2)] # size:0x14
-      - [0x199c60, asm, libm.a(wf_fmod)] # size:0x14
-      - [0x199c78, asm, libm.a(wf_log)] # size:0x14
-      - [0x199c90, asm, libm.a(wf_pow)] # size:0x14
-      - [0x199ca8, asm, libm.a(wf_sqrt)] # size:0x14
-      - [0x199cc0, asm, libm.a(ef_acos)] # size:0x424
-      - [0x19a0e8, asm, libm.a(ef_atan2)] # size:0x1e0
-      - [0x19a2c8, asm, libm.a(ef_fmod)] # size:0x1d0
-      - [0x19a498, asm, libm.a(ef_log)] # size:0x2e0
-      - [0x19a778, asm, libm.a(ef_pow)] # size:0x7e0
-      - [0x19af58, asm, libm.a(ef_rem_pio2)] # size:0x3b0
-      - [0x19b308, asm, libm.a(ef_sqrt)] # size:0xcc
-      - [0x19b3d8, asm, libm.a(kf_cos)] # size:0x150
-      - [0x19b528, asm, libm.a(kf_rem_pio2)] # size:0x864
-      - [0x19bd90, asm, libm.a(kf_sin)] # size:0x104
-      - [0x19be98, asm, libm.a(kf_tan)] # size:0x284
-      - [0x19c120, asm, libm.a(sf_floor)] # size:0xd8
-      - [0x19c1f8, asm, libm.a(sf_scalbn)] # size:0xc8
-      - [0x19c2c0, asm, libm.a(sf_copysign)] # size:0x3c
-      - [0x19c300, asm, libgcc.a(_muldi3)] # size:0x74
-      - [0x19c378, asm, libgcc.a(_divdi3)] # size:0x694
-      - [0x19ca10, asm, libgcc.a(_moddi3)] # size:0x690
-      - [0x19d0a0, asm, libgcc.a(_udivdi3)] # size:0x57c
-      - [0x19d620, asm, libgcc.a(_umoddi3)] # size:0x568
-      - [0x19db88, asm, libgcc.a(_floatdisf)] # size:0xe8
-      - [0x19dc70, asm, libgcc.a(_fixunsdfdi)] # size:0x118
-      - [0x19dd88, asm, libgcc.a(_fixunssfdi)] # size:0x128
-      - [0x19deb0, asm, libgcc.a(_fixsfdi)] # size:0x3c
-      - [0x19def0, asm, libgcc.a(__main)] # size:0x188
-      - [0x19e078, asm, libgcc.a(_pure)] # size:0x14
-      - [0x19e090, asm, libgcc.a(_eh)] # size:0x1328
-      - [0x19f3b8, asm, libgcc.a(_sf_to_df)] # size:0x3c
-      - [0x19f3f8, asm, libgcc.a(_addsub_df)] # size:0x31c
-      - [0x19f718, asm, libgcc.a(_mul_df)] # size:0x284
-      - [0x19f9a0, asm, libgcc.a(_div_df)] # size:0x140
-      - [0x19fae0, asm, libgcc.a(_compare_df)] # size:0x4c
-      - [0x19fb30, asm, libgcc.a(_si_to_df)] # size:0xb8
-      - [0x19fbe8, asm, libgcc.a(_make_df)] # size:0x2c
-      - [0x19fc18, asm, libgcc.a(_df_to_sf)] # size:0x54
-      - [0x19fc70, asm, libgcc.a(_df_to_usi)] # size:0xa0
-      - [0x19fd10, asm, libgcc.a(frame-dwarf2)] # size:0x1590
-      - [0x1a12a0, asm, libgcc.a(tinfo)] # size:0xdfc
-      - [0x1a20a0, asm, libgcc.a(tinfo2)] # size:0xbb4
-      - [0x1a2c58, asm, libgcc.a(opdel)] # size:0x20
-      - [0x1a2c78, asm, libgcc.a(exception)] # size:0x678
-      - [0x1a32f0, asm, libgcc.a(_floatdidf)] # size:0xa8
-      - [0x1a3398, asm, libgcc.a(_unpack_sf)] # size:0x5c
-      - [0x1a33f8, asm, libgcc.a(_make_sf)] # size:0x2c
-      - [0x1a3428, asm, libgcc.a(_pack_df)] # size:0xd8
-      - [0x1a3500, asm, libgcc.a(_unpack_df)] # size:0xbc
-      - [0x1a35c0, asm, libgcc.a(_fpcmp_parts_df)] # size:0x120
-      - [0x1a36e0, asm, libgcc.a(_pack_sf)] # size:0xb4
-      - [0x1a3798, asm, libc.a(abort)] # size:0x18
-      - [0x1a37b0, asm, libc.a(assert)] # size:0x34
-      - [0x1a37e8, asm, libc.a(atexit)] # size:0xa0
-      - [0x1a3888, asm, libc.a(atoi)] # size:0x28
-      - [0x1a38b0, asm, libc.a(errno)] # size:0xc
-      - [0x1a38c0, asm, libc.a(exit)] # size:0xac
-      - [0x1a3970, asm, libc.a(fiprintf)] # size:0x54
-      - [0x1a39c8, asm, libc.a(malloc)] # size:0xa0
-      - [0x1a3a68, asm, libc.a(mallocr)] # size:0x980
-      - [0x1a43e8, asm, libc.a(memcmp)] # size:0x94
-      - [0x1a447c, asm, libc.a(memcpy)] # size:0xb0
-      - [0x1a452c, asm, libc.a(memmove)] # size:0x104
-      - [0x1a4630, asm, libc.a(memset)] # size:0xc0
-      - [0x1a46f0, asm, libc.a(mlock)] # size:0xcc
-      - [0x1a47c0, asm, libc.a(printf)] # size:0xd0
-      - [0x1a4890, asm, libc.a(qsort)] # size:0x9ec
-      - [0x1a5280, asm, libc.a(rand)] # size:0x7c
-      - [0x1a5300, asm, libc.a(sbrkr)] # size:0x58
-      - [0x1a5358, asm, libc.a(signal)] # size:0x2e8
-      - [0x1a5640, asm, libc.a(signalr)] # size:0x74
-      - [0x1a56b8, asm, libc.a(sprintf)] # size:0x118
-      - [0x1a57d0, asm, libc.a(sscanf)] # size:0xb0
-      - [0x1a5880, asm, libc.a(strcat)] # size:0x12c
-      - [0x1a59ac, asm, libc.a(strcmp)] # size:0x144
-      - [0x1a5af0, asm, libc.a(strcpy)] # size:0x114
-      - [0x1a5c08, asm, libc.a(strerror)] # size:0x514
-      - [0x1a611c, asm, libc.a(strlen)] # size:0x138
-      - [0x1a6258, asm, libc.a(strncmp)] # size:0x1b8
-      - [0x1a6410, asm, libc.a(strncpy)] # size:0x1bc
-      - [0x1a65d0, asm, libc.a(strrchr)] # size:0x50
-      - [0x1a6620, asm, libc.a(strstr)] # size:0x84
-      - [0x1a66a8, asm, libc.a(strtol)] # size:0x264
-      - [0x1a6910, asm, libc.a(u_strerr)] # size:0x8
-      - [0x1a6918, asm, libc.a(vfiprintf)] # size:0xd70
-      - [0x1a7688, asm, libc.a(vfprintf)] # size:0x1a84
-      - [0x1a9110, asm, libc.a(vfscanf)] # size:0xd90
-      - [0x1a9ea0, asm, libc.a(vsprintf)] # size:0xac
-      - [0x1a9f50, asm, libc.a(wsetup)] # size:0x10c
-      - [0x1aa060, asm, libc.a(atof)] # size:0x18
-      - [0x1aa078, asm, libc.a(atol)] # size:0x1c
-      - [0x1aa098, asm, libc.a(dtoa)] # size:0x1494
-      - [0x1ab530, asm, libc.a(fflush)] # size:0x114
-      - [0x1ab648, asm, libc.a(findfp)] # size:0x29c
-      - [0x1ab8e8, asm, libc.a(fread)] # size:0x11c
-      - [0x1aba08, asm, libc.a(freer)] # size:0x464
-      - [0x1abe70, asm, libc.a(fvwrite)] # size:0x3e0
-      - [0x1ac250, asm, libc.a(fwalk)] # size:0x94
-      - [0x1ac2e8, asm, libc.a(locale)] # size:0xe4
-      - [0x1ac3d0, asm, libc.a(makebuf)] # size:0x154
-      - [0x1ac528, asm, libc.a(mbtowc_r)] # size:0x34
-      - [0x1ac55c, asm, libc.a(memchr)] # size:0xe0
-      - [0x1ac640, asm, libc.a(mprec)] # size:0x1018
-      - [0x1ad658, asm, libc.a(refill)] # size:0x1b4
-      - [0x1ad810, asm, libc.a(s_isinf)] # size:0x48
-      - [0x1ad858, asm, libc.a(stdio)] # size:0x16c
-      - [0x1ad9c8, asm, libc.a(strtod)] # size:0xf68
-      - [0x1ae930, asm, libc.a(strtoul)] # size:0x25c
-      - [0x1aeb90, asm, libc.a(ungetc)] # size:0x270
-      - [0x1aee00, asm, libc.a(writer)] # size:0x60
-      - [0x1aee60, asm, libc.a(callocr)] # size:0xb4
-      - [0x1aef18, asm, libc.a(closer)] # size:0x58
-      - [0x1aef70, asm, libc.a(fstatr)] # size:0x5c
-      - [0x1aefd0, asm, libc.a(lseekr)] # size:0x60
-      - [0x1af030, asm, libc.a(readr)] # size:0x60
-      - [0x1af090, asm, libc.a(reallocr)] # size:0x5a0
-      - [0x1af630, asm, libkernl.a(cache)] # size:0x27c
-      - [0x1af8b0, asm, libgcc.a(_fixdfdi)] # size:0x78
-      - [0x1af928, asm, libgcc.a(_df_to_si)] # size:0x9c
+      - [0x16ecc0, asm, iopsys.a_fileload_] # size:0x16a8
+      - [0x170368, asm, iopsys.a_spu_mem_] # size:0x798
+      - [0x170b00, asm, iopsys.a_snd_buffer_] # size:0xe34
+      - [0x171938, asm, iopsys.a_ee_iop_] # size:0x888
+      - [0x1721c0, asm, iopsys.a_ee_iop_q_] # size:0x2a8
+      - [0x172468, asm, iopsys.a_stream_auto_] # size:0x1d74
+      - [0x1741e0, asm, iopsys.a_snd_bank_] # size:0x1048
+      - [0x175228, asm, iopsys.a_snd_3d_] # size:0x944
+      - [0x175b70, asm, iopsys.a_cddat_] # size:0x3b8
+      - [0x175f28, asm, iopsys.a_snd_] # size:0x754
+      - [0x176680, asm, iopsys.a_snd_pcmstream_] # size:0x60c
+      - [0x176c90, asm, iopsys.a_cmp_eeiop_] # size:0x464
+      - [0x1770f8, asm, iopsys.a_snd_util_] # size:0x578
+      - [0x177670, asm, iopsys.a_file_stream_] # size:0x32c
+      - [0x1779a0, asm, iopsys.a_hxd_] # size:0x2c0
+      - [0x177c60, asm, iopsys.a_spu_voice_] # size:0xf8
+      - [0x177d58, asm, iopsys.a_snd_stream_] # size:0x16cc
+      - [0x179428, asm, cmp.a_encodes_] # size:0x8d8
+      - [0x179d00, asm, cmp.a_cmp_] # size:0x12c
+      - [0x179e30, asm, playpss.a_my_strfile_] # size:0x7c
+      - [0x179eb0, asm, playpss.a_playpss_] # size:0xdd4
+      - [0x17ac88, asm, playpss.a_audiodec_] # size:0x8a4
+      - [0x17b530, asm, playpss.a_ldimage_] # size:0x464
+      - [0x17b998, asm, libexcep.a_libexcep_] # size:0x34c
+      - [0x17bce8, asm, libexcep.a_print_] # size:0x5fc
+      - [0x17c2e8, asm, libcdvd.a_cdvd000_] # size:0x1554
+      - [0x17d840, asm, libcdvd.a_cdvd036_] # size:0xd0
+      - [0x17d910, asm, libcdvd.a_cdvd039_] # size:0xf8
+      - [0x17da08, asm, libdma.a_libdma_] # size:0x844
+      - [0x17e250, asm, libdev.a_devvu0_] # size:0x494
+      - [0x17e6e8, asm, libdev.a_devvif0_] # size:0x32c
+      - [0x17ea18, asm, libdev.a_devvif1_] # size:0x3e8
+      - [0x17ee00, asm, libkernl.a_klib_] # size:0x8a0
+      - [0x17f6a0, asm, libkernl.a_intr_] # size:0x230
+      - [0x17f8d0, asm, libkernl.a_thread_] # size:0x450
+      - [0x17fd20, asm, libkernl.a_kprintf_] # size:0x9b8
+      - [0x1806d8, asm, libkernl.a_sifcmd_] # size:0x7d8
+      - [0x180eb0, asm, libkernl.a_sifrpc_] # size:0x1090
+      - [0x181f40, asm, libkernl.a_filestub_] # size:0x3718
+      - [0x185658, asm, libkernl.a_iopheap_] # size:0x54c
+      - [0x185ba8, asm, libkernl.a_eeloadfile_] # size:0xd5c
+      - [0x186908, asm, libkernl.a_iopreset_] # size:0x2e0
+      - [0x186be8, asm, libkernl.a_tlbfunc_] # size:0x50c
+      - [0x187100, asm, libkernl.a_tlbtrap_] # size:0x35c
+      - [0x187460, asm, libkernl.a_diei_] # size:0x70
+      - [0x1874d0, asm, libkernl.a_initsys_] # size:0x28c
+      - [0x187760, asm, libkernl.a_libosd_] # size:0x17c
+      - [0x1878e0, asm, libkernl.a_exit_] # size:0x29c
+      - [0x187b80, asm, libkernl.a_alarm_] # size:0x13c
+      - [0x187cc0, asm, libkernl.a_timer_] # size:0x1364
+      - [0x189028, asm, libkernl.a_timeralarm_] # size:0x3f0
+      - [0x189418, asm, libkernl.a_iopnotify_] # size:0x260
+      - [0x189678, asm, libkernl.a_glue_] # size:0x3d0
+      - [0x189a48, asm, libkernl.a_deci2_] # size:0x234
+      - [0x189c80, asm, libkernl.a_tty_] # size:0x544
+      - [0x18a1c8, asm, libpkt.a_gifpk000_] # size:0x10
+      - [0x18a1d8, asm, libpkt.a_gifpk001_] # size:0x10
+      - [0x18a1e8, asm, libpkt.a_gifpk002_] # size:0x58
+      - [0x18a240, asm, libpkt.a_gifpk005_] # size:0x74
+      - [0x18a2b8, asm, libpkt.a_gifpk011_] # size:0x74
+      - [0x18a330, asm, libpkt.a_gifpk014_] # size:0xa4
+      - [0x18a3d8, asm, libpkt.a_gifpk015_] # size:0x28
+      - [0x18a400, asm, libpkt.a_vifpk025_] # size:0x10
+      - [0x18a410, asm, libpkt.a_vifpk026_] # size:0x10
+      - [0x18a420, asm, libpkt.a_vifpk027_] # size:0x58
+      - [0x18a478, asm, libpkt.a_vifpk030_] # size:0x58
+      - [0x18a4d0, asm, libpkt.a_vifpk036_] # size:0x58
+      - [0x18a528, asm, libpkt.a_vifpk039_] # size:0x58
+      - [0x18a580, asm, libpkt.a_vifpk040_] # size:0x2c
+      - [0x18a5b0, asm, libpkt.a_vifpk041_] # size:0x18
+      - [0x18a5c8, asm, libpkt.a_vifpk042_] # size:0xa4
+      - [0x18a670, asm, libpkt.a_vifpk043_] # size:0x14
+      - [0x18a688, asm, libpkt.a_vifpk044_] # size:0x7c
+      - [0x18a708, asm, libvu0.a_libvu0_] # size:0x1748
+      - [0x18be50, asm, libpad.a_libpad_] # size:0x1480
+      - [0x18d2d0, asm, libmc.a_libmc_] # size:0x17fc
+      - [0x18ead0, asm, libgraph.a_graph001_] # size:0x19c
+      - [0x18ec70, asm, libgraph.a_graph002_] # size:0x68
+      - [0x18ecd8, asm, libgraph.a_graph009_] # size:0x298
+      - [0x18ef70, asm, libgraph.a_graph011_] # size:0x94
+      - [0x18f008, asm, libgraph.a_graph012_] # size:0x314
+      - [0x18f320, asm, libgraph.a_graph014_] # size:0x5c
+      - [0x18f380, asm, libgraph.a_graph015_] # size:0x1e4
+      - [0x18f568, asm, libgraph.a_graph016_] # size:0x140
+      - [0x18f6a8, asm, libgraph.a_graph017_] # size:0x17c
+      - [0x18f828, asm, libgraph.a_graph019_] # size:0xa0
+      - [0x18f8c8, asm, libgraph.a_graph020_] # size:0x3c
+      - [0x18f908, asm, libgraph.a_graph021_] # size:0x88
+      - [0x18f990, asm, libgraph.a_graph029_] # size:0x1c
+      - [0x18f9b0, asm, libgraph.a_graph003_] # size:0x424
+      - [0x18fdd8, asm, libgraph.a_graph005_] # size:0xc8
+      - [0x18fea0, asm, libgraph.a_graph006_] # size:0x1e4
+      - [0x190088, asm, libgraph.a_graph007_] # size:0x104
+      - [0x190190, asm, libmpeg.a_pack_] # size:0xe20
+      - [0x190fb0, asm, libmpeg.a_mpeg_] # size:0xc48
+      - [0x191bf8, asm, libmpeg.a_init_] # size:0xb04
+      - [0x192700, asm, libmpeg.a_defhandler_] # size:0x4c
+      - [0x192750, asm, libmpeg.a_mpc_] # size:0x5054
+      - [0x1977a8, asm, libmpeg.a_csc_] # size:0x790
+      - [0x197f38, asm, libmpeg.a_bit_] # size:0x20c
+      - [0x198148, asm, libsdr.a_sdr_main_] # size:0x4e0
+      - [0x198628, asm, libsdr.a_sdr_cb_] # size:0x390
+      - [0x1989b8, asm, libipu.a_libipu_] # size:0x390
+      - [0x198d48, asm, libipu.a_ipuinit_] # size:0x2b0
+      - [0x198ff8, asm, libscf.a_libscf_] # size:0x6f0
+      - [0x1996e8, asm, libm.a_s_isnan_] # size:0x3c
+      - [0x199728, asm, libm.a_sf_atan_] # size:0x28c
+      - [0x1999b8, asm, libm.a_sf_cos_] # size:0xd4
+      - [0x199a90, asm, libm.a_sf_fabs_] # size:0x28
+      - [0x199ab8, asm, libm.a_sf_finite_] # size:0x8
+      - [0x199ac0, asm, libm.a_sf_isinf_] # size:0x8
+      - [0x199ac8, asm, libm.a_sf_isnan_] # size:0x8
+      - [0x199ad0, asm, libm.a_sf_sin_] # size:0xe8
+      - [0x199bb8, asm, libm.a_sf_tan_] # size:0x78
+      - [0x199c30, asm, libm.a_wf_acos_] # size:0x14
+      - [0x199c48, asm, libm.a_wf_atan2_] # size:0x14
+      - [0x199c60, asm, libm.a_wf_fmod_] # size:0x14
+      - [0x199c78, asm, libm.a_wf_log_] # size:0x14
+      - [0x199c90, asm, libm.a_wf_pow_] # size:0x14
+      - [0x199ca8, asm, libm.a_wf_sqrt_] # size:0x14
+      - [0x199cc0, asm, libm.a_ef_acos_] # size:0x424
+      - [0x19a0e8, asm, libm.a_ef_atan2_] # size:0x1e0
+      - [0x19a2c8, asm, libm.a_ef_fmod_] # size:0x1d0
+      - [0x19a498, asm, libm.a_ef_log_] # size:0x2e0
+      - [0x19a778, asm, libm.a_ef_pow_] # size:0x7e0
+      - [0x19af58, asm, libm.a_ef_rem_pio2_] # size:0x3b0
+      - [0x19b308, asm, libm.a_ef_sqrt_] # size:0xcc
+      - [0x19b3d8, asm, libm.a_kf_cos_] # size:0x150
+      - [0x19b528, asm, libm.a_kf_rem_pio2_] # size:0x864
+      - [0x19bd90, asm, libm.a_kf_sin_] # size:0x104
+      - [0x19be98, asm, libm.a_kf_tan_] # size:0x284
+      - [0x19c120, asm, libm.a_sf_floor_] # size:0xd8
+      - [0x19c1f8, asm, libm.a_sf_scalbn_] # size:0xc8
+      - [0x19c2c0, asm, libm.a_sf_copysign_] # size:0x3c
+      - [0x19c300, asm, libgcc.a__muldi3_] # size:0x74
+      - [0x19c378, asm, libgcc.a__divdi3_] # size:0x694
+      - [0x19ca10, asm, libgcc.a__moddi3_] # size:0x690
+      - [0x19d0a0, asm, libgcc.a__udivdi3_] # size:0x57c
+      - [0x19d620, asm, libgcc.a__umoddi3_] # size:0x568
+      - [0x19db88, asm, libgcc.a__floatdisf_] # size:0xe8
+      - [0x19dc70, asm, libgcc.a__fixunsdfdi_] # size:0x118
+      - [0x19dd88, asm, libgcc.a__fixunssfdi_] # size:0x128
+      - [0x19deb0, asm, libgcc.a__fixsfdi_] # size:0x3c
+      - [0x19def0, asm, libgcc.a___main_] # size:0x188
+      - [0x19e078, asm, libgcc.a__pure_] # size:0x14
+      - [0x19e090, asm, libgcc.a__eh_] # size:0x1328
+      - [0x19f3b8, asm, libgcc.a__sf_to_df_] # size:0x3c
+      - [0x19f3f8, asm, libgcc.a__addsub_df_] # size:0x31c
+      - [0x19f718, asm, libgcc.a__mul_df_] # size:0x284
+      - [0x19f9a0, asm, libgcc.a__div_df_] # size:0x140
+      - [0x19fae0, asm, libgcc.a__compare_df_] # size:0x4c
+      - [0x19fb30, asm, libgcc.a__si_to_df_] # size:0xb8
+      - [0x19fbe8, asm, libgcc.a__make_df_] # size:0x2c
+      - [0x19fc18, asm, libgcc.a__df_to_sf_] # size:0x54
+      - [0x19fc70, asm, libgcc.a__df_to_usi_] # size:0xa0
+      - [0x19fd10, asm, libgcc.a_frame-dwarf2_] # size:0x1590
+      - [0x1a12a0, asm, libgcc.a_tinfo_] # size:0xdfc
+      - [0x1a20a0, asm, libgcc.a_tinfo2_] # size:0xbb4
+      - [0x1a2c58, asm, libgcc.a_opdel_] # size:0x20
+      - [0x1a2c78, asm, libgcc.a_exception_] # size:0x678
+      - [0x1a32f0, asm, libgcc.a__floatdidf_] # size:0xa8
+      - [0x1a3398, asm, libgcc.a__unpack_sf_] # size:0x5c
+      - [0x1a33f8, asm, libgcc.a__make_sf_] # size:0x2c
+      - [0x1a3428, asm, libgcc.a__pack_df_] # size:0xd8
+      - [0x1a3500, asm, libgcc.a__unpack_df_] # size:0xbc
+      - [0x1a35c0, asm, libgcc.a__fpcmp_parts_df_] # size:0x120
+      - [0x1a36e0, asm, libgcc.a__pack_sf_] # size:0xb4
+      - [0x1a3798, asm, libc.a_abort_] # size:0x18
+      - [0x1a37b0, asm, libc.a_assert_] # size:0x34
+      - [0x1a37e8, asm, libc.a_atexit_] # size:0xa0
+      - [0x1a3888, asm, libc.a_atoi_] # size:0x28
+      - [0x1a38b0, asm, libc.a_errno_] # size:0xc
+      - [0x1a38c0, asm, libc.a_exit_] # size:0xac
+      - [0x1a3970, asm, libc.a_fiprintf_] # size:0x54
+      - [0x1a39c8, asm, libc.a_malloc_] # size:0xa0
+      - [0x1a3a68, asm, libc.a_mallocr_] # size:0x980
+      - [0x1a43e8, asm, libc.a_memcmp_] # size:0x94
+      - [0x1a447c, asm, libc.a_memcpy_] # size:0xb0
+      - [0x1a452c, asm, libc.a_memmove_] # size:0x104
+      - [0x1a4630, asm, libc.a_memset_] # size:0xc0
+      - [0x1a46f0, asm, libc.a_mlock_] # size:0xcc
+      - [0x1a47c0, asm, libc.a_printf_] # size:0xd0
+      - [0x1a4890, asm, libc.a_qsort_] # size:0x9ec
+      - [0x1a5280, asm, libc.a_rand_] # size:0x7c
+      - [0x1a5300, asm, libc.a_sbrkr_] # size:0x58
+      - [0x1a5358, asm, libc.a_signal_] # size:0x2e8
+      - [0x1a5640, asm, libc.a_signalr_] # size:0x74
+      - [0x1a56b8, asm, libc.a_sprintf_] # size:0x118
+      - [0x1a57d0, asm, libc.a_sscanf_] # size:0xb0
+      - [0x1a5880, asm, libc.a_strcat_] # size:0x12c
+      - [0x1a59ac, asm, libc.a_strcmp_] # size:0x144
+      - [0x1a5af0, asm, libc.a_strcpy_] # size:0x114
+      - [0x1a5c08, asm, libc.a_strerror_] # size:0x514
+      - [0x1a611c, asm, libc.a_strlen_] # size:0x138
+      - [0x1a6258, asm, libc.a_strncmp_] # size:0x1b8
+      - [0x1a6410, asm, libc.a_strncpy_] # size:0x1bc
+      - [0x1a65d0, asm, libc.a_strrchr_] # size:0x50
+      - [0x1a6620, asm, libc.a_strstr_] # size:0x84
+      - [0x1a66a8, asm, libc.a_strtol_] # size:0x264
+      - [0x1a6910, asm, libc.a_u_strerr_] # size:0x8
+      - [0x1a6918, asm, libc.a_vfiprintf_] # size:0xd70
+      - [0x1a7688, asm, libc.a_vfprintf_] # size:0x1a84
+      - [0x1a9110, asm, libc.a_vfscanf_] # size:0xd90
+      - [0x1a9ea0, asm, libc.a_vsprintf_] # size:0xac
+      - [0x1a9f50, asm, libc.a_wsetup_] # size:0x10c
+      - [0x1aa060, asm, libc.a_atof_] # size:0x18
+      - [0x1aa078, asm, libc.a_atol_] # size:0x1c
+      - [0x1aa098, asm, libc.a_dtoa_] # size:0x1494
+      - [0x1ab530, asm, libc.a_fflush_] # size:0x114
+      - [0x1ab648, asm, libc.a_findfp_] # size:0x29c
+      - [0x1ab8e8, asm, libc.a_fread_] # size:0x11c
+      - [0x1aba08, asm, libc.a_freer_] # size:0x464
+      - [0x1abe70, asm, libc.a_fvwrite_] # size:0x3e0
+      - [0x1ac250, asm, libc.a_fwalk_] # size:0x94
+      - [0x1ac2e8, asm, libc.a_locale_] # size:0xe4
+      - [0x1ac3d0, asm, libc.a_makebuf_] # size:0x154
+      - [0x1ac528, asm, libc.a_mbtowc_r_] # size:0x34
+      - [0x1ac55c, asm, libc.a_memchr_] # size:0xe0
+      - [0x1ac640, asm, libc.a_mprec_] # size:0x1018
+      - [0x1ad658, asm, libc.a_refill_] # size:0x1b4
+      - [0x1ad810, asm, libc.a_s_isinf_] # size:0x48
+      - [0x1ad858, asm, libc.a_stdio_] # size:0x16c
+      - [0x1ad9c8, asm, libc.a_strtod_] # size:0xf68
+      - [0x1ae930, asm, libc.a_strtoul_] # size:0x25c
+      - [0x1aeb90, asm, libc.a_ungetc_] # size:0x270
+      - [0x1aee00, asm, libc.a_writer_] # size:0x60
+      - [0x1aee60, asm, libc.a_callocr_] # size:0xb4
+      - [0x1aef18, asm, libc.a_closer_] # size:0x58
+      - [0x1aef70, asm, libc.a_fstatr_] # size:0x5c
+      - [0x1aefd0, asm, libc.a_lseekr_] # size:0x60
+      - [0x1af030, asm, libc.a_readr_] # size:0x60
+      - [0x1af090, asm, libc.a_reallocr_] # size:0x5a0
+      - [0x1af630, asm, libkernl.a_cache_] # size:0x27c
+      - [0x1af8b0, asm, libgcc.a__fixdfdi_] # size:0x78
+      - [0x1af928, asm, libgcc.a__df_to_si_] # size:0x9c
 
 
       # ######0100000
@@ -792,58 +799,373 @@ segments:
       - {start: 0x250e80, type: data, vram: 0x34fe80, name: ingame/subtitle/subtitle} # size:0x1c
       - {start: 0x250ea0, type: data, vram: 0x34fea0, name: system/os/system} # size:0xe740
       - {start: 0x25f5e0, type: data, vram: 0x35e5e0, name: title_datsystem/mc/mc_title_dat} # size:0x3a0
-      - {start: 0x25f980, type: data, vram: 0x35e980, name: iopsys.a(snd_3d)} # size:0x18
-      - {start: 0x25f998, type: data, vram: 0x35e998, name: iopsys.a(snd)} # size:0x28
-      - {start: 0x25f9c0, type: data, vram: 0x35e9c0, name: iopsys.a(snd_pcmstream)} # size:0x250
-      - {start: 0x25fc10, type: data, vram: 0x35ec10, name: iopsys.a(hxd)} # size:0x14
-      - {start: 0x25fc28, type: data, vram: 0x35ec28, name: cmp.a(encodes)} # size:0x7229
-      - {start: 0x266e58, type: data, vram: 0x365e58, name: libexcep.a(libexcep)} # size:0x10
-      - {start: 0x266e80, type: data, vram: 0x365e80, name: libcdvd.a(cdvd000)} # size:0x1ba8
-      - {start: 0x268a28, type: data, vram: 0x367a28, name: libcdvd.a(cdvd036)} # size:0xc
-      - {start: 0x268a38, type: data, vram: 0x367a38, name: libdma.a(libdma)} # size:0x38
-      - {start: 0x268a70, type: data, vram: 0x367a70, name: libkernl.a(klib)} # size:0x10
-      - {start: 0x268a80, type: data, vram: 0x367a80, name: libkernl.a(thread)} # size:0x4
-      - {start: 0x268a84, type: data, vram: 0x367a84, name: libkernl.a(kprintf)} # size:0x8
-      - {start: 0x268a8c, type: data, vram: 0x367a8c, name: libkernl.a(sifcmd)} # size:0x4
-      - {start: 0x268a90, type: data, vram: 0x367a90, name: libkernl.a(sifrpc)} # size:0x4
-      - {start: 0x268a98, type: data, vram: 0x367a98, name: libkernl.a(filestub)} # size:0x9c
-      - {start: 0x268b34, type: data, vram: 0x367b34, name: libkernl.a(iopheap)} # size:0x4
-      - {start: 0x268b38, type: data, vram: 0x367b38, name: libkernl.a(eeloadfile)} # size:0x8
-      - {start: 0x268b40, type: data, vram: 0x367b40, name: libkernl.a(tlbfunc)} # size:0x64c
-      - {start: 0x269190, type: data, vram: 0x368190, name: libkernl.a(initsys)} # size:0x20
-      - {start: 0x2691b0, type: data, vram: 0x3681b0, name: libkernl.a(libosd)} # size:0x7c0
-      - {start: 0x269970, type: data, vram: 0x368970, name: libkernl.a(exit)} # size:0x8
-      - {start: 0x269978, type: data, vram: 0x368978, name: libkernl.a(alarm)} # size:0x7a8
-      - {start: 0x26a120, type: data, vram: 0x369120, name: libkernl.a(timer)} # size:0x20
-      - {start: 0x26a140, type: data, vram: 0x369140, name: libkernl.a(iopnotify)} # size:0x8
-      - {start: 0x26a148, type: data, vram: 0x369148, name: libkernl.a(glue)} # size:0x8
-      - {start: 0x26a150, type: data, vram: 0x369150, name: libpkt.a(gifpk000)} # size:0x10
-      - {start: 0x26a160, type: data, vram: 0x369160, name: libpkt.a(vifpk025)} # size:0x10
-      - {start: 0x26a170, type: data, vram: 0x369170, name: libvu0.a(libvu0)} # size:0x40
-      - {start: 0x26a1b0, type: data, vram: 0x3691b0, name: libpad.a(libpad)} # size:0x44
-      - {start: 0x26a1f8, type: data, vram: 0x3691f8, name: libmc.a(libmc)} # size:0x1c
-      - {start: 0x26a220, type: data, vram: 0x369220, name: libgraph.a(graph001)} # size:0x20
-      - {start: 0x26a240, type: data, vram: 0x369240, name: libgraph.a(graph002)} # size:0x20
-      - {start: 0x26a260, type: data, vram: 0x369260, name: libmpeg.a(pack)} # size:0xa0
-      - {start: 0x26a300, type: data, vram: 0x369300, name: libmpeg.a(mpeg)} # size:0x10
-      - {start: 0x26a340, type: data, vram: 0x369340, name: libmpeg.a(var)} # size:0x80
-      - {start: 0x26a3c0, type: data, vram: 0x3693c0, name: libmpeg.a(mpc)} # size:0xa8
-      - {start: 0x26a468, type: data, vram: 0x369468, name: libsdr.a(sdr_main)} # size:0x18
-      - {start: 0x26a480, type: data, vram: 0x369480, name: libsdr.a(sdr_cb)} # size:0x28
-      - {start: 0x26a4b0, type: data, vram: 0x3694b0, name: libipu.a(ipuinit)} # size:0x80
-      - {start: 0x26a530, type: data, vram: 0x369530, name: libscf.a(libscf)} # size:0x27
-      - {start: 0x26a558, type: data, vram: 0x369558, name: libgcc.a(__main)} # size:0x8
-      - {start: 0x26a560, type: data, vram: 0x369560, name: libgcc.a(_eh)} # size:0x14
-      - {start: 0x26a574, type: data, vram: 0x369574, name: libgcc.a(frame-dwarf2)} # size:0x4
-      - {start: 0x26a578, type: data, vram: 0x369578, name: libgcc.a(tinfo2)} # size:0x98
-      - {start: 0x26a610, type: data, vram: 0x369610, name: libgcc.a(exception)} # size:0x4
-      - {start: 0x26a618, type: data, vram: 0x369618, name: libc.a(impure)} # size:0x2f4
-      - {start: 0x26a910, type: data, vram: 0x369910, name: libc.a(mallocr)} # size:0x458
-      - {start: 0x26ad68, type: data, vram: 0x369d68, name: libc.a(mlock)} # size:0x8
-      - {start: 0x26ad70, type: data, vram: 0x369d70, name: libc.a(locale)} # size:0x4
+      - {start: 0x25f980, type: data, vram: 0x35e980, name: iopsys.a_snd_3d_} # size:0x18
+      - {start: 0x25f998, type: data, vram: 0x35e998, name: iopsys.a_snd_} # size:0x28
+      - {start: 0x25f9c0, type: data, vram: 0x35e9c0, name: iopsys.a_snd_pcmstream_} # size:0x250
+      - {start: 0x25fc10, type: data, vram: 0x35ec10, name: iopsys.a_hxd_} # size:0x14
+      - {start: 0x25fc28, type: data, vram: 0x35ec28, name: cmp.a_encodes_} # size:0x7229
+      - {start: 0x266e58, type: data, vram: 0x365e58, name: libexcep.a_libexcep_} # size:0x10
+      - {start: 0x266e80, type: data, vram: 0x365e80, name: libcdvd.a_cdvd000_} # size:0x1ba8
+      - {start: 0x268a28, type: data, vram: 0x367a28, name: libcdvd.a_cdvd036_} # size:0xc
+      - {start: 0x268a38, type: data, vram: 0x367a38, name: libdma.a_libdma_} # size:0x38
+      - {start: 0x268a70, type: data, vram: 0x367a70, name: libkernl.a_klib_} # size:0x10
+      - {start: 0x268a80, type: data, vram: 0x367a80, name: libkernl.a_thread_} # size:0x4
+      - {start: 0x268a84, type: data, vram: 0x367a84, name: libkernl.a_kprintf_} # size:0x8
+      - {start: 0x268a8c, type: data, vram: 0x367a8c, name: libkernl.a_sifcmd_} # size:0x4
+      - {start: 0x268a90, type: data, vram: 0x367a90, name: libkernl.a_sifrpc_} # size:0x4
+      - {start: 0x268a98, type: data, vram: 0x367a98, name: libkernl.a_filestub_} # size:0x9c
+      - {start: 0x268b34, type: data, vram: 0x367b34, name: libkernl.a_iopheap_} # size:0x4
+      - {start: 0x268b38, type: data, vram: 0x367b38, name: libkernl.a_eeloadfile_} # size:0x8
+      - {start: 0x268b40, type: data, vram: 0x367b40, name: libkernl.a_tlbfunc_} # size:0x64c
+      - {start: 0x269190, type: data, vram: 0x368190, name: libkernl.a_initsys_} # size:0x20
+      - {start: 0x2691b0, type: data, vram: 0x3681b0, name: libkernl.a_libosd_} # size:0x7c0
+      - {start: 0x269970, type: data, vram: 0x368970, name: libkernl.a_exit_} # size:0x8
+      - {start: 0x269978, type: data, vram: 0x368978, name: libkernl.a_alarm_} # size:0x7a8
+      - {start: 0x26a120, type: data, vram: 0x369120, name: libkernl.a_timer_} # size:0x20
+      - {start: 0x26a140, type: data, vram: 0x369140, name: libkernl.a_iopnotify_} # size:0x8
+      - {start: 0x26a148, type: data, vram: 0x369148, name: libkernl.a_glue_} # size:0x8
+      - {start: 0x26a150, type: data, vram: 0x369150, name: libpkt.a_gifpk000_} # size:0x10
+      - {start: 0x26a160, type: data, vram: 0x369160, name: libpkt.a_vifpk025_} # size:0x10
+      - {start: 0x26a170, type: data, vram: 0x369170, name: libvu0.a_libvu0_} # size:0x40
+      - {start: 0x26a1b0, type: data, vram: 0x3691b0, name: libpad.a_libpad_} # size:0x44
+      - {start: 0x26a1f8, type: data, vram: 0x3691f8, name: libmc.a_libmc_} # size:0x1c
+      - {start: 0x26a220, type: data, vram: 0x369220, name: libgraph.a_graph001_} # size:0x20
+      - {start: 0x26a240, type: data, vram: 0x369240, name: libgraph.a_graph002_} # size:0x20
+      - {start: 0x26a260, type: data, vram: 0x369260, name: libmpeg.a_pack_} # size:0xa0
+      - {start: 0x26a300, type: data, vram: 0x369300, name: libmpeg.a_mpeg_} # size:0x10
+      - {start: 0x26a340, type: data, vram: 0x369340, name: libmpeg.a_var_} # size:0x80
+      - {start: 0x26a3c0, type: data, vram: 0x3693c0, name: libmpeg.a_mpc_} # size:0xa8
+      - {start: 0x26a468, type: data, vram: 0x369468, name: libsdr.a_sdr_main_} # size:0x18
+      - {start: 0x26a480, type: data, vram: 0x369480, name: libsdr.a_sdr_cb_} # size:0x28
+      - {start: 0x26a4b0, type: data, vram: 0x3694b0, name: libipu.a_ipuinit_} # size:0x80
+      - {start: 0x26a530, type: data, vram: 0x369530, name: libscf.a_libscf_} # size:0x27
+      - {start: 0x26a558, type: data, vram: 0x369558, name: libgcc.a___main_} # size:0x8
+      - {start: 0x26a560, type: data, vram: 0x369560, name: libgcc.a__eh_} # size:0x14
+      - {start: 0x26a574, type: data, vram: 0x369574, name: libgcc.a_frame-dwarf2_} # size:0x4
+      - {start: 0x26a578, type: data, vram: 0x369578, name: libgcc.a_tinfo2_} # size:0x98
+      - {start: 0x26a610, type: data, vram: 0x369610, name: libgcc.a_exception_} # size:0x4
+      - {start: 0x26a618, type: data, vram: 0x369618, name: libc.a_impure_} # size:0x2f4
+      - {start: 0x26a910, type: data, vram: 0x369910, name: libc.a_mallocr_} # size:0x458
+      - {start: 0x26ad68, type: data, vram: 0x369d68, name: libc.a_mlock_} # size:0x8
+      - {start: 0x26ad70, type: data, vram: 0x369d70, name: libc.a_locale_} # size:0x4
 
-      - [0x26b260, databin, eh_frame]
-      # - [0x29eaec, databin, vudata]
+      ## EH_FRAME
+      - {start: 0x26b260, type: eh_frame, vram: 0x36a260, name: ingame/map/CBuff} #  size:0xa8
+      - {start: 0x26b308, type: eh_frame, vram: 0x36a308, name: graphics/graph3d/CDebugEdit} #  size:0x2c8
+      - {start: 0x26b5d0, type: eh_frame, vram: 0x36a5d0, name: ingame/plyr/ChrSort} #  size:0x1a4
+      - {start: 0x26b774, type: eh_frame, vram: 0x36a774, name: debug/DbFurnPre} #  size:0x17c
+      - {start: 0x26b8f0, type: eh_frame, vram: 0x36a8f0, name: ingame/map/FurnCtl} #  size:0x388
+      - {start: 0x26bc78, type: eh_frame, vram: 0x36ac78, name: ingame/map/FurnLoad} #  size:0x130
+      - {start: 0x26bda8, type: eh_frame, vram: 0x36ada8, name: graphics/scene/IngameScene} #  size:0x238
+      - {start: 0x26bfe0, type: eh_frame, vram: 0x36afe0, name: ingame/map/MapAnim} #  size:0x5b8
+      - {start: 0x26c598, type: eh_frame, vram: 0x36b598, name: ingame/map/MapDoor} #  size:0x400
+      - {start: 0x26c998, type: eh_frame, vram: 0x36b998, name: ingame/map/MapDraw} #  size:0x334
+      - {start: 0x26cccc, type: eh_frame, vram: 0x36bccc, name: ingame/map/MapFog} #  size:0x178
+      - {start: 0x26ce44, type: eh_frame, vram: 0x36be44, name: ingame/map/MapHit} #  size:0x28c
+      - {start: 0x26d0d0, type: eh_frame, vram: 0x36c0d0, name: ingame/map/MapLBuff} #  size:0x60
+      - {start: 0x26d130, type: eh_frame, vram: 0x36c130, name: ingame/map/MapLight} #  size:0x428
+      - {start: 0x26d558, type: eh_frame, vram: 0x36c558, name: ingame/map/MapLoad} #  size:0x564
+      - {start: 0x26dabc, type: eh_frame, vram: 0x36cabc, name: ingame/map/MapObj} #  size:0x260
+      - {start: 0x26dd1c, type: eh_frame, vram: 0x36cd1c, name: ingame/map/MapObjReg} #  size:0x4e4
+      - {start: 0x26e200, type: eh_frame, vram: 0x36d200, name: ingame/map/MapPut} #  size:0x1b4
+      - {start: 0x26e3b4, type: eh_frame, vram: 0x36d3b4, name: ingame/map/MapSave} #  size:0x98
+      - {start: 0x26e44c, type: eh_frame, vram: 0x36d44c, name: ingame/map/MapSky} #  size:0x220
+      - {start: 0x26e66c, type: eh_frame, vram: 0x36d66c, name: ingame/map/MapSp} #  size:0x2c8
+      - {start: 0x26e934, type: eh_frame, vram: 0x36d934, name: ingame/map/MhCtl} #  size:0x1b4
+      - {start: 0x26eae8, type: eh_frame, vram: 0x36dae8, name: ingame/map/RegDat} #  size:0x568
+      - {start: 0x26f050, type: eh_frame, vram: 0x36e050, name: common/SingleLinkList} #  size:0x154
+      - {start: 0x26f1a4, type: eh_frame, vram: 0x36e1a4, name: outgame/SpriteCmn} #  size:0x1ac
+      - {start: 0x26f350, type: eh_frame, vram: 0x36e350, name: graphics/motion/accessory} #  size:0x720
+      - {start: 0x26fa70, type: eh_frame, vram: 0x36ea70, name: graphics/motion/acs_dat} #  size:0x70
+      - {start: 0x26fae0, type: eh_frame, vram: 0x36eae0, name: album/prg/album} #  size:0x26c
+      - {start: 0x26fd4c, type: eh_frame, vram: 0x36ed4c, name: album/prg/album_dat} #  size:0x70
+      - {start: 0x26fdbc, type: eh_frame, vram: 0x36edbc, name: album/prg/album_disp} #  size:0x7a4
+      - {start: 0x270560, type: eh_frame, vram: 0x36f560, name: album/prg/album_edit} #  size:0x7b4
+      - {start: 0x270d14, type: eh_frame, vram: 0x36fd14, name: album/prg/album_load} #  size:0x430
+      - {start: 0x271144, type: eh_frame, vram: 0x370144, name: album/prg/album_mem} #  size:0x50
+      - {start: 0x271194, type: eh_frame, vram: 0x370194, name: album/prg/album_save} #  size:0x5a4
+      - {start: 0x271738, type: eh_frame, vram: 0x370738, name: album/prg/album_view} #  size:0x470
+      - {start: 0x271ba8, type: eh_frame, vram: 0x370ba8, name: ingame/enemy/alg_manage} #  size:0xb8
+      - {start: 0x271c60, type: eh_frame, vram: 0x370c60, name: graphics/motion/anicode} #  size:0x194
+      - {start: 0x271df4, type: eh_frame, vram: 0x370df4, name: ingame/menu/anim_2d} #  size:0xe0
+      - {start: 0x271ed4, type: eh_frame, vram: 0x370ed4, name: outgame/autoload} #  size:0x1f8
+      - {start: 0x2720cc, type: eh_frame, vram: 0x3710cc, name: ingame/photo/bonus_shot} #  size:0x25c
+      - {start: 0x272328, type: eh_frame, vram: 0x371328, name: ingame/menu/tim_dat/cam_level_up_point} #  size:0x70
+      - {start: 0x272398, type: eh_frame, vram: 0x371398, name: ingame/menu/tim_dat/camera_power_up} #  size:0x70
+      - {start: 0x272408, type: eh_frame, vram: 0x371408, name: ingame/photo/center_circle} #  size:0xdc
+      - {start: 0x2724e4, type: eh_frame, vram: 0x3714e4, name: ingame/photo/center_cross} #  size:0xf0
+      - {start: 0x2725d4, type: eh_frame, vram: 0x3715d4, name: outgame/chapter_sel} #  size:0xe8
+      - {start: 0x2726bc, type: eh_frame, vram: 0x3716bc, name: ingame/plyr/charBB} #  size:0x58
+      - {start: 0x272714, type: eh_frame, vram: 0x371714, name: ingame/clear/prg/clear_flg} #  size:0x190
+      - {start: 0x2728a4, type: eh_frame, vram: 0x3718a4, name: ingame/clear/prg/clearmenu} #  size:0x2a0
+      - {start: 0x272b44, type: eh_frame, vram: 0x371b44, name: ingame/clear/prg/clearmenu_top} #  size:0x20c
+      - {start: 0x272d50, type: eh_frame, vram: 0x371d50, name: system/compress/compress} #  size:0x11c
+      - {start: 0x272e6c, type: eh_frame, vram: 0x371e6c, name: ingame/item/prg/crystal} #  size:0x1ac
+      - {start: 0x273018, type: eh_frame, vram: 0x372018, name: ingame/photo/damage_disp} #  size:0xd0
+      - {start: 0x2730e8, type: eh_frame, vram: 0x3720e8, name: debug/debug} #  size:0x170
+      - {start: 0x273258, type: eh_frame, vram: 0x372258, name: debug/debug_menu} #  size:0x158
+      - {start: 0x2733b0, type: eh_frame, vram: 0x3723b0, name: graphics/dmaVif1} #  size:0x180
+      - {start: 0x273530, type: eh_frame, vram: 0x372530, name: ingame/door/prg/door} #  size:0x1f4
+      - {start: 0x273724, type: eh_frame, vram: 0x372724, name: graphics/graph2d/draw_btn} #  size:0x34
+      - {start: 0x273758, type: eh_frame, vram: 0x372758, name: graphics/graph2d/draw_caption} #  size:0xf8
+      - {start: 0x273850, type: eh_frame, vram: 0x372850, name: graphics/graph2d/draw_cmn_num} #  size:0x74
+      - {start: 0x2738c4, type: eh_frame, vram: 0x3728c4, name: graphics/graph2d/draw_cmn_win} #  size:0x1d0
+      - {start: 0x273a94, type: eh_frame, vram: 0x372a94, name: graphics/draw_env} #  size:0x174
+      - {start: 0x273c08, type: eh_frame, vram: 0x372c08, name: graphics/graph2d/draw_line} #  size:0x90
+      - {start: 0x273c98, type: eh_frame, vram: 0x372c98, name: graphics/graph3d/eeException} #  size:0xd8
+      - {start: 0x273d70, type: eh_frame, vram: 0x372d70, name: graphics/graph3d/eeFile} #  size:0x2f4
+      - {start: 0x274064, type: eh_frame, vram: 0x373064, name: graphics/graph3d/eeFindFile} #  size:0x394
+      - {start: 0x2743f8, type: eh_frame, vram: 0x3733f8, name: system/os/eecdvd} #  size:0x148
+      - {start: 0x274540, type: eh_frame, vram: 0x373540, name: graphics/effect/effect} #  size:0x4d0
+      - {start: 0x274a10, type: eh_frame, vram: 0x373a10, name: graphics/effect/effect_butterfly} #  size:0x56c
+      - {start: 0x274f7c, type: eh_frame, vram: 0x373f7c, name: graphics/effect/effect_ene} #  size:0xc30
+      - {start: 0x275bac, type: eh_frame, vram: 0x374bac, name: graphics/effect/effect_obj} #  size:0xc38
+      - {start: 0x2767e4, type: eh_frame, vram: 0x3757e4, name: graphics/effect/effect_oth} #  size:0xee0
+      - {start: 0x2776c4, type: eh_frame, vram: 0x3766c4, name: graphics/effect/effect_pak} #  size:0x70
+      - {start: 0x277734, type: eh_frame, vram: 0x376734, name: graphics/effect/effect_rain} #  size:0x3f0
+      - {start: 0x277b24, type: eh_frame, vram: 0x376b24, name: graphics/effect/effect_rdr} #  size:0x2e0
+      - {start: 0x277e04, type: eh_frame, vram: 0x376e04, name: graphics/effect/effect_scr} #  size:0x820
+      - {start: 0x278624, type: eh_frame, vram: 0x377624, name: graphics/effect/effect_spr} #  size:0xd8
+      - {start: 0x2786fc, type: eh_frame, vram: 0x3776fc, name: graphics/effect/effect_sub} #  size:0x7bc
+      - {start: 0x278eb8, type: eh_frame, vram: 0x377eb8, name: graphics/effect/effect_torch} #  size:0x50c
+      - {start: 0x2793c4, type: eh_frame, vram: 0x3783c4, name: ingame/clear/prg/ending} #  size:0x148
+      - {start: 0x27950c, type: eh_frame, vram: 0x37850c, name: ingame/photo/ene_life} #  size:0xd0
+      - {start: 0x2795dc, type: eh_frame, vram: 0x3785dc, name: ingame/enemy/ene_mot_ctrl} #  size:0x124
+      - {start: 0x279700, type: eh_frame, vram: 0x378700, name: ingame/enemy/enemy} #  size:0xbe8
+      - {start: 0x27a2e8, type: eh_frame, vram: 0x3792e8, name: ingame/enemy/enemy_act} #  size:0x1288
+      - {start: 0x27b570, type: eh_frame, vram: 0x37a570, name: ingame/enemy/enemy_dat} #  size:0xa8
+      - {start: 0x27b618, type: eh_frame, vram: 0x37a618, name: ingame/event/prg/ev_change} #  size:0x274
+      - {start: 0x27b88c, type: eh_frame, vram: 0x37a88c, name: ingame/event/prg/ev_debug} #  size:0x94
+      - {start: 0x27b920, type: eh_frame, vram: 0x37a920, name: ingame/event/prg/ev_disp} #  size:0x2b8
+      - {start: 0x27bbd8, type: eh_frame, vram: 0x37abd8, name: ingame/event/dat/ev_disp_dat} #  size:0x70
+      - {start: 0x27bc48, type: eh_frame, vram: 0x37ac48, name: ingame/event/prg/ev_ene} #  size:0x118
+      - {start: 0x27bd60, type: eh_frame, vram: 0x37ad60, name: ingame/event/prg/ev_exe} #  size:0x214
+      - {start: 0x27bf74, type: eh_frame, vram: 0x37af74, name: ingame/event/prg/ev_gaze} #  size:0xa4
+      - {start: 0x27c018, type: eh_frame, vram: 0x37b018, name: ingame/event/prg/ev_get} #  size:0x180
+      - {start: 0x27c198, type: eh_frame, vram: 0x37b198, name: ingame/event/prg/ev_macro} #  size:0x1b84
+      - {start: 0x27dd1c, type: eh_frame, vram: 0x37cd1c, name: ingame/event/prg/ev_main} #  size:0x110
+      - {start: 0x27de2c, type: eh_frame, vram: 0x37ce2c, name: ingame/event/prg/ev_open} #  size:0x75c
+      - {start: 0x27e588, type: eh_frame, vram: 0x37d588, name: ingame/event/prg/ev_phase} #  size:0xa0
+      - {start: 0x27e628, type: eh_frame, vram: 0x37d628, name: ingame/event/prg/ev_se} #  size:0xfc
+      - {start: 0x27e724, type: eh_frame, vram: 0x37d724, name: ingame/event/prg/ev_sis} #  size:0x100
+      - {start: 0x27e824, type: eh_frame, vram: 0x37d824, name: ingame/event/prg/ev_talk} #  size:0x224
+      - {start: 0x27ea48, type: eh_frame, vram: 0x37da48, name: ingame/event/prg/ev_talk_dat} #  size:0x70
+      - {start: 0x27eab8, type: eh_frame, vram: 0x37dab8, name: ingame/event/prg/ev_timer} #  size:0x15c
+      - {start: 0x27ec14, type: eh_frame, vram: 0x37dc14, name: ingame/event/prg/event_camera} #  size:0x3f0
+      - {start: 0x27f004, type: eh_frame, vram: 0x37e004, name: graphics/graph2d/fade} #  size:0x4c
+      - {start: 0x27f050, type: eh_frame, vram: 0x37e050, name: ingame/enemy/fene_entry} #  size:0x268
+      - {start: 0x27f2b8, type: eh_frame, vram: 0x37e2b8, name: ingame/photo/filament} #  size:0xe4
+      - {start: 0x27f39c, type: eh_frame, vram: 0x37e39c, name: ingame/item/prg/file} #  size:0x264
+      - {start: 0x27f600, type: eh_frame, vram: 0x37e600, name: ingame/item/dat/file_dat} #  size:0x70
+      - {start: 0x27f670, type: eh_frame, vram: 0x37e670, name: ingame/photo/film_no} #  size:0xbc
+      - {start: 0x27f72c, type: eh_frame, vram: 0x37e72c, name: ingame/photo/finder} #  size:0x3ec
+      - {start: 0x27fb18, type: eh_frame, vram: 0x37eb18, name: ingame/camera/finder_camera} #  size:0x124
+      - {start: 0x27fc3c, type: eh_frame, vram: 0x37ec3c, name: ingame/enemy/fly_ctrl} #  size:0x3d0
+      - {start: 0x28000c, type: eh_frame, vram: 0x37f00c, name: graphics/scene/fod} #  size:0x368
+      - {start: 0x280374, type: eh_frame, vram: 0x37f374, name: ingame/map/foot_se} #  size:0x11c
+      - {start: 0x280490, type: eh_frame, vram: 0x37f490, name: outgame/framerate} #  size:0x124
+      - {start: 0x2805b4, type: eh_frame, vram: 0x37f5b4, name: ingame/photo/freq_camera} #  size:0xac
+      - {start: 0x280660, type: eh_frame, vram: 0x37f660, name: graphics/effect/g2d_debug} #  size:0x54
+      - {start: 0x2806b4, type: eh_frame, vram: 0x37f6b4, name: graphics/graph2d/g2d_draw} #  size:0x330
+      - {start: 0x2809e4, type: eh_frame, vram: 0x37f9e4, name: graphics/graph2d/g2d_main} #  size:0xb8
+      - {start: 0x280a9c, type: eh_frame, vram: 0x37fa9c, name: graphics/graph3d/g3dBoundingVolume} #  size:0x48
+      - {start: 0x280ae4, type: eh_frame, vram: 0x37fae4, name: graphics/graph3d/g3dCamera} #  size:0xfc
+      - {start: 0x280be0, type: eh_frame, vram: 0x37fbe0, name: graphics/graph3d/g3dCore} #  size:0x30c
+      - {start: 0x280eec, type: eh_frame, vram: 0x37feec, name: graphics/graph3d/g3dDebug} #  size:0x21c
+      - {start: 0x281108, type: eh_frame, vram: 0x380108, name: graphics/graph3d/g3dDma} #  size:0x17c
+      - {start: 0x281284, type: eh_frame, vram: 0x380284, name: graphics/graph3d/g3dGeom} #  size:0x144
+      - {start: 0x2813c8, type: eh_frame, vram: 0x3803c8, name: graphics/graph3d/g3dGsWrapper} #  size:0xc0
+      - {start: 0x281488, type: eh_frame, vram: 0x380488, name: graphics/graph3d/g3dLight} #  size:0x7c
+      - {start: 0x281504, type: eh_frame, vram: 0x380504, name: graphics/graph3d/g3dLightEx} #  size:0x368
+      - {start: 0x28186c, type: eh_frame, vram: 0x38086c, name: graphics/graph3d/g3dMath} #  size:0x100
+      - {start: 0x28196c, type: eh_frame, vram: 0x38096c, name: graphics/graph3d/g3dMemory} #  size:0x40
+      - {start: 0x2819ac, type: eh_frame, vram: 0x3809ac, name: graphics/graph3d/g3dRenderTarget} #  size:0x1c4
+      - {start: 0x281b70, type: eh_frame, vram: 0x380b70, name: graphics/graph3d/g3dSprite} #  size:0x78
+      - {start: 0x281be8, type: eh_frame, vram: 0x380be8, name: graphics/graph3d/g3dTexture} #  size:0x9c
+      - {start: 0x281c84, type: eh_frame, vram: 0x380c84, name: graphics/graph3d/g3dVif1} #  size:0xa4
+      - {start: 0x281d28, type: eh_frame, vram: 0x380d28, name: outgame/gallery} #  size:0x250
+      - {start: 0x281f78, type: eh_frame, vram: 0x380f78, name: outgame/gallery_disp} #  size:0x1fc
+      - {start: 0x282174, type: eh_frame, vram: 0x381174, name: save_load/prg/game_data_save} #  size:0x5f8
+      - {start: 0x28276c, type: eh_frame, vram: 0x38176c, name: ingame/clear/prg/game_result} #  size:0x244
+      - {start: 0x2829b0, type: eh_frame, vram: 0x3819b0, name: ingame/clear/prg/game_result_top} #  size:0x2f0
+      - {start: 0x282ca0, type: eh_frame, vram: 0x381ca0, name: ingame/gameover/prg/gameover} #  size:0x158
+      - {start: 0x282df8, type: eh_frame, vram: 0x381df8, name: ingame/gameover/prg/gameover_menu} #  size:0x27c
+      - {start: 0x283074, type: eh_frame, vram: 0x382074, name: ingame/gameover/prg/gameover_menu_load} #  size:0x420
+      - {start: 0x283494, type: eh_frame, vram: 0x382494, name: ingame/gameover/prg/gameover_menu_top} #  size:0x20c
+      - {start: 0x2836a0, type: eh_frame, vram: 0x3826a0, name: ingame/menu/ghost_seal_door} #  size:0x14c
+      - {start: 0x2837ec, type: .eh_frame, vram: 0x3827ec, name: main/gphase} #  size:0x6c
+      - {start: 0x283858, type: eh_frame, vram: 0x382858, name: graphics/graph3d/gra3d} #  size:0xb70
+      - {start: 0x2843c8, type: eh_frame, vram: 0x3833c8, name: graphics/graph3d/gra3dBoundingBox} #  size:0x10c
+      - {start: 0x2844d4, type: eh_frame, vram: 0x3834d4, name: graphics/graph3d/gra3dConst} #  size:0x70
+      - {start: 0x284544, type: eh_frame, vram: 0x383544, name: graphics/graph3d/gra3dDebug} #  size:0x1f4
+      - {start: 0x284738, type: eh_frame, vram: 0x383738, name: graphics/graph3d/gra3dDma} #  size:0x98
+      - {start: 0x2847d0, type: eh_frame, vram: 0x3837d0, name: graphics/graph3d/gra3dMisc} #  size:0x35c
+      - {start: 0x284b2c, type: eh_frame, vram: 0x383b2c, name: graphics/graph3d/gra3dSGD} #  size:0x658
+      - {start: 0x285184, type: eh_frame, vram: 0x384184, name: graphics/graph3d/gra3dSGDData} #  size:0x298
+      - {start: 0x28541c, type: eh_frame, vram: 0x38441c, name: graphics/graph3d/gra3dShadow} #  size:0x414
+      - {start: 0x285830, type: eh_frame, vram: 0x384830, name: graphics/graph3d/gra3dTRI2} #  size:0x118
+      - {start: 0x285948, type: eh_frame, vram: 0x384948, name: graphics/graph3d/gra3dVu0} #  size:0x70
+      - {start: 0x2859b8, type: eh_frame, vram: 0x3849b8, name: graphics/graphics} #  size:0x664
+      - {start: 0x28601c, type: eh_frame, vram: 0x38501c, name: common/heapctrl} #  size:0x114
+      - {start: 0x286130, type: eh_frame, vram: 0x385130, name: ingame/puzzle/hina/hina_pzl} #  size:0x548
+      - {start: 0x286678, type: eh_frame, vram: 0x385678, name: ingame/map/hit_check_base} #  size:0x138
+      - {start: 0x2867b0, type: eh_frame, vram: 0x3857b0, name: ingame/photo/hp_bar} #  size:0xdc
+      - {start: 0x28688c, type: eh_frame, vram: 0x38588c, name: ingame/ingame} #  size:0x700
+      - {start: 0x286f8c, type: eh_frame, vram: 0x385f8c, name: ingame/ingame_effect} #  size:0x668
+      - {start: 0x2875f4, type: eh_frame, vram: 0x3865f4, name: ingame/item/prg/item} #  size:0x2a4
+      - {start: 0x287898, type: eh_frame, vram: 0x386898, name: ingame/item/prg/item_dat} #  size:0x70
+      - {start: 0x287908, type: eh_frame, vram: 0x386908, name: ingame/item/prg/item_debug} #  size:0x70
+      - {start: 0x287978, type: eh_frame, vram: 0x386978, name: ingame/puzzle/kai/kai_pzl} #  size:0x240
+      - {start: 0x287bb8, type: eh_frame, vram: 0x386bb8, name: ingame/puzzle/kaza2/kaza2_pzl} #  size:0x6e0
+      - {start: 0x288298, type: eh_frame, vram: 0x387298, name: ingame/puzzle/kaza/kaza_pzl} #  size:0x664
+      - {start: 0x2888fc, type: eh_frame, vram: 0x3878fc, name: outgame/lang_check} #  size:0x1a0
+      - {start: 0x288a9c, type: eh_frame, vram: 0x387a9c, name: outgame/lang_sel} #  size:0x23c
+      - {start: 0x288cd8, type: eh_frame, vram: 0x387cd8, name: ingame/item/prg/level_gem} #  size:0x88
+      - {start: 0x288d60, type: eh_frame, vram: 0x387d60, name: outgame/loadgame} #  size:0x400
+      - {start: 0x289160, type: eh_frame, vram: 0x388160, name: ingame/loading/loading} #  size:0x1bc
+      - {start: 0x28931c, type: eh_frame, vram: 0x38831c, name: outgame/logo} #  size:0x17c
+      - {start: 0x289498, type: eh_frame, vram: 0x388498, name: ingame/photo/m_plyr_camera} #  size:0xf8
+      - {start: 0x289590, type: eh_frame, vram: 0x388590, name: main/main} #  size:0x1bc
+      - {start: 0x28974c, type: eh_frame, vram: 0x38874c, name: ingame/plyr/man_data} #  size:0x198
+      - {start: 0x2898e4, type: eh_frame, vram: 0x3888e4, name: ingame/map/map_bgm} #  size:0x17c
+      - {start: 0x289a60, type: eh_frame, vram: 0x388a60, name: ingame/map/map_camera} #  size:0x4a0
+      - {start: 0x289f00, type: eh_frame, vram: 0x388f00, name: ingame/map/map_height} #  size:0x290
+      - {start: 0x28a190, type: eh_frame, vram: 0x389190, name: ingame/map/map_hit_check} #  size:0xd8
+      - {start: 0x28a268, type: eh_frame, vram: 0x389268, name: ingame/map/map_rectangle} #  size:0x554
+      - {start: 0x28a7bc, type: eh_frame, vram: 0x3897bc, name: ingame/map/map_reverb} #  size:0xa4
+      - {start: 0x28a860, type: eh_frame, vram: 0x389860, name: system/mc/prg/mc} #  size:0x58
+      - {start: 0x28a8b8, type: eh_frame, vram: 0x3898b8, name: system/mc/prg/mc_check} #  size:0x54
+      - {start: 0x28a90c, type: eh_frame, vram: 0x38990c, name: system/mc/prg/mc_check_broken} #  size:0x7c
+      - {start: 0x28a988, type: eh_frame, vram: 0x389988, name: system/mc/prg/mc_check_card} #  size:0x84
+      - {start: 0x28aa0c, type: eh_frame, vram: 0x389a0c, name: system/mc/prg/mc_check_dir} #  size:0xa4
+      - {start: 0x28aab0, type: eh_frame, vram: 0x389ab0, name: system/mc/prg/mc_check_empty} #  size:0x4c
+      - {start: 0x28aafc, type: eh_frame, vram: 0x389afc, name: system/mc/prg/mc_close} #  size:0x48
+      - {start: 0x28ab44, type: eh_frame, vram: 0x389b44, name: system/mc/prg/mc_cmn} #  size:0x40
+      - {start: 0x28ab84, type: eh_frame, vram: 0x389b84, name: system/mc/prg/mc_del_all_file} #  size:0x60
+      - {start: 0x28abe4, type: eh_frame, vram: 0x389be4, name: system/mc/prg/mc_del_dir} #  size:0x34
+      - {start: 0x28ac18, type: eh_frame, vram: 0x389c18, name: system/mc/prg/mc_del_file} #  size:0x6c
+      - {start: 0x28ac84, type: eh_frame, vram: 0x389c84, name: system/mc/prg/mc_format} #  size:0x4c
+      - {start: 0x28acd0, type: eh_frame, vram: 0x389cd0, name: system/mc/prg/mc_icon} #  size:0x64
+      - {start: 0x28ad34, type: eh_frame, vram: 0x389d34, name: system/mc/prg/mc_icon_sys} #  size:0x4c
+      - {start: 0x28ad80, type: eh_frame, vram: 0x389d80, name: system/mc/prg/mc_load} #  size:0x50
+      - {start: 0x28add0, type: eh_frame, vram: 0x389dd0, name: system/mc/prg/mc_make} #  size:0x4c
+      - {start: 0x28ae1c, type: eh_frame, vram: 0x389e1c, name: system/mc/prg/mc_make_all_file} #  size:0x54
+      - {start: 0x28ae70, type: eh_frame, vram: 0x389e70, name: system/mc/prg/mc_make_dir} #  size:0x6c
+      - {start: 0x28aedc, type: eh_frame, vram: 0x389edc, name: system/mc/prg/mc_make_file} #  size:0x50
+      - {start: 0x28af2c, type: eh_frame, vram: 0x389f2c, name: system/mc/prg/mc_open} #  size:0x50
+      - {start: 0x28af7c, type: eh_frame, vram: 0x389f7c, name: system/mc/prg/mc_read} #  size:0x4c
+      - {start: 0x28afc8, type: eh_frame, vram: 0x389fc8, name: system/mc/prg/mc_save} #  size:0x50
+      - {start: 0x28b018, type: eh_frame, vram: 0x38a018, name: system/mc/prg/mc_set_data} #  size:0x4f8
+      - {start: 0x28b510, type: eh_frame, vram: 0x38a510, name: system/mc/prg/mc_write} #  size:0x4c
+      - {start: 0x28b55c, type: eh_frame, vram: 0x38a55c, name: graphics/motion/mdlact} #  size:0x1fc
+      - {start: 0x28b758, type: eh_frame, vram: 0x38a758, name: graphics/motion/mdldat} #  size:0x70
+      - {start: 0x28b7c8, type: eh_frame, vram: 0x38a7c8, name: graphics/motion/mdlwork} #  size:0x2d0
+      - {start: 0x28ba98, type: eh_frame, vram: 0x38aa98, name: debug/mem_dbg} #  size:0xb8
+      - {start: 0x28bb50, type: eh_frame, vram: 0x38ab50, name: common/mem_util} #  size:0xb8
+      - {start: 0x28bc08, type: eh_frame, vram: 0x38ac08, name: ingame/item/prg/memo} #  size:0x1a4
+      - {start: 0x28bdac, type: eh_frame, vram: 0x38adac, name: ingame/menu/menu} #  size:0x228
+      - {start: 0x28bfd4, type: eh_frame, vram: 0x38afd4, name: ingame/menu/menu_cam} #  size:0x48
+      - {start: 0x28c01c, type: eh_frame, vram: 0x38b01c, name: ingame/menu/menu_cam_edit} #  size:0xd10
+      - {start: 0x28cd2c, type: eh_frame, vram: 0x38bd2c, name: ingame/menu/menu_cam_main} #  size:0x354
+      - {start: 0x28d080, type: eh_frame, vram: 0x38c080, name: ingame/menu/menu_cam_top} #  size:0x67c
+      - {start: 0x28d6fc, type: eh_frame, vram: 0x38c6fc, name: ingame/menu/menu_cmn} #  size:0x344
+      - {start: 0x28da40, type: eh_frame, vram: 0x38ca40, name: ingame/menu/menu_cmn_disp} #  size:0x2c4
+      - {start: 0x28dd04, type: eh_frame, vram: 0x38cd04, name: debug/menu_dat} #  size:0xf0
+      - {start: 0x28ddf4, type: eh_frame, vram: 0x38cdf4, name: ingame/menu/menu_file} #  size:0xa4c
+      - {start: 0x28e840, type: eh_frame, vram: 0x38d840, name: ingame/menu/menu_item} #  size:0x450
+      - {start: 0x28ec90, type: eh_frame, vram: 0x38dc90, name: ingame/menu/menu_map} #  size:0x6cc
+      - {start: 0x28f35c, type: eh_frame, vram: 0x38e35c, name: ingame/menu/menu_memo} #  size:0x3f4
+      - {start: 0x28f750, type: eh_frame, vram: 0x38e750, name: ingame/menu/menu_photo} #  size:0x49c
+      - {start: 0x28fbec, type: eh_frame, vram: 0x38ebec, name: ingame/menu/menu_radio} #  size:0x530
+      - {start: 0x29011c, type: eh_frame, vram: 0x38f11c, name: ingame/menu/menu_soul} #  size:0x59c
+      - {start: 0x2906b8, type: eh_frame, vram: 0x38f6b8, name: ingame/menu/menu_top} #  size:0x418
+      - {start: 0x290ad0, type: eh_frame, vram: 0x38fad0, name: graphics/graph2d/message} #  size:0x868
+      - {start: 0x291338, type: eh_frame, vram: 0x390338, name: graphics/motion/mim_dat} #  size:0x70
+      - {start: 0x2913a8, type: eh_frame, vram: 0x3903a8, name: graphics/motion/mime} #  size:0x38c
+      - {start: 0x291734, type: eh_frame, vram: 0x390734, name: outgame/mis_sel_disp} #  size:0x264
+      - {start: 0x291998, type: eh_frame, vram: 0x390998, name: outgame/mission_ctl} #  size:0x2b8
+      - {start: 0x291c50, type: eh_frame, vram: 0x390c50, name: outgame/mission_disp} #  size:0x1d0
+      - {start: 0x291e20, type: eh_frame, vram: 0x390e20, name: outgame/mission_pause} #  size:0x254
+      - {start: 0x292074, type: eh_frame, vram: 0x391074, name: outgame/mission_sel} #  size:0x548
+      - {start: 0x2925bc, type: eh_frame, vram: 0x3915bc, name: graphics/mmanage} #  size:0x198
+      - {start: 0x292754, type: eh_frame, vram: 0x391754, name: graphics/motion/morph} #  size:0x2cc
+      - {start: 0x292a20, type: eh_frame, vram: 0x391a20, name: graphics/motion/motion} #  size:0x940
+      - {start: 0x293360, type: eh_frame, vram: 0x392360, name: graphics/movie/movie} #  size:0x174
+      - {start: 0x2934d4, type: eh_frame, vram: 0x3924d4, name: ingame/movie_room_menu/prg/movie_projecter} #  size:0x1dc
+      - {start: 0x2936b0, type: eh_frame, vram: 0x3926b0, name: ingame/movie_room} #  size:0x104
+      - {start: 0x2937b4, type: eh_frame, vram: 0x3927b4, name: ingame/movie_room_menu/prg/movie_room_menu} #  size:0x3b4
+      - {start: 0x293b68, type: eh_frame, vram: 0x392b68, name: graphics/movie/movie_title} #  size:0x140
+      - {start: 0x293ca8, type: eh_frame, vram: 0x392ca8, name: common/my_mallocmy_malloc} #  size:0x64
+      - {start: 0x293d0c, type: eh_frame, vram: 0x392d0c, name: ingame/photo/n_equip_tray} #  size:0x48c
+      - {start: 0x294198, type: eh_frame, vram: 0x393198, name: ingame/photo/n_plyr_camera} #  size:0x2d0
+      - {start: 0x294468, type: eh_frame, vram: 0x393468, name: outgame/newgame} #  size:0x168
+      - {start: 0x2945d0, type: eh_frame, vram: 0x3935d0, name: graphics/obj_draw_ctrl} #  size:0x58
+      - {start: 0x294628, type: eh_frame, vram: 0x393628, name: common/ol_load} #  size:0x38c
+      - {start: 0x2949b4, type: eh_frame, vram: 0x3939b4, name: outgame/option} #  size:0x2b0
+      - {start: 0x294c64, type: eh_frame, vram: 0x393c64, name: outgame/option_disp} #  size:0x36c
+      - {start: 0x294fd0, type: eh_frame, vram: 0x393fd0, name: outgame/outgame} #  size:0x1b0
+      - {start: 0x295180, type: eh_frame, vram: 0x394180, name: pad/pad} #  size:0x114
+      - {start: 0x295294, type: eh_frame, vram: 0x394294, name: pad/pad_check} #  size:0xd4
+      - {start: 0x295368, type: eh_frame, vram: 0x394368, name: ingame/pause/prg/pause} #  size:0x25c
+      - {start: 0x2955c4, type: eh_frame, vram: 0x3945c4, name: system/mc/prg/pc_save} #  size:0x50
+      - {start: 0x295614, type: eh_frame, vram: 0x394614, name: ingame/photo/photo} #  size:0x5b4
+      - {start: 0x295bc8, type: eh_frame, vram: 0x394bc8, name: ingame/photo/photo_charger} #  size:0xd8
+      - {start: 0x295ca0, type: eh_frame, vram: 0x394ca0, name: ingame/photo/photo_dat} #  size:0x1b0
+      - {start: 0x295e50, type: eh_frame, vram: 0x394e50, name: ingame/photo/photo_make} #  size:0x394
+      - {start: 0x2961e4, type: eh_frame, vram: 0x3951e4, name: ingame/menu/play_data} #  size:0x134
+      - {start: 0x296318, type: eh_frame, vram: 0x395318, name: ingame/plyr/player} #  size:0xcbc
+      - {start: 0x296fd4, type: eh_frame, vram: 0x395fd4, name: ingame/plyr/plyr_mdl} #  size:0x440
+      - {start: 0x297414, type: eh_frame, vram: 0x396414, name: ingame/menu/plyr_room_info} #  size:0x1f0
+      - {start: 0x297604, type: eh_frame, vram: 0x396604, name: ingame/puzzle/puzzle} #  size:0x4f8
+      - {start: 0x297afc, type: eh_frame, vram: 0x396afc, name: ingame/puzzle/kaza/puzzle_kaza_dat} #  size:0x70
+      - {start: 0x297b6c, type: eh_frame, vram: 0x396b6c, name: ingame/puzzle/roku/puzzle_roku_dat} #  size:0x70
+      - {start: 0x297bdc, type: eh_frame, vram: 0x396bdc, name: ingame/puzzle/roku/roku_pzl} #  size:0x70c
+      - {start: 0x2982e8, type: eh_frame, vram: 0x3972e8, name: system/mc/dat/save_data} #  size:0x70
+      - {start: 0x298358, type: eh_frame, vram: 0x397358, name: save_load/prg/save_load_disp} #  size:0x4a0
+      - {start: 0x2987f8, type: eh_frame, vram: 0x3977f8, name: ingame/savepoint/savepoint} #  size:0x108
+      - {start: 0x298900, type: eh_frame, vram: 0x397900, name: ingame/savepoint/savepoint_disp} #  size:0x1b8
+      - {start: 0x298ab8, type: eh_frame, vram: 0x397ab8, name: ingame/savepoint/savepoint_fade_in} #  size:0xdc
+      - {start: 0x298b94, type: eh_frame, vram: 0x397b94, name: ingame/savepoint/savepoint_fade_out} #  size:0x28
+      - {start: 0x298bbc, type: eh_frame, vram: 0x397bbc, name: ingame/savepoint/savepoint_main} #  size:0x27c
+      - {start: 0x298e38, type: eh_frame, vram: 0x397e38, name: ingame/savepoint/savepoint_top} #  size:0x20c
+      - {start: 0x299044, type: eh_frame, vram: 0x398044, name: graphics/scene/scene} #  size:0xa28
+      - {start: 0x299a6c, type: eh_frame, vram: 0x398a6c, name: graphics/scene/scene_dat} #  size:0x70
+      - {start: 0x299adc, type: eh_frame, vram: 0x398adc, name: graphics/scene/scene_effect} #  size:0x8e8
+      - {start: 0x29a3c4, type: eh_frame, vram: 0x3993c4, name: debug/scn_test} #  size:0x6fc
+      - {start: 0x29aac0, type: eh_frame, vram: 0x399ac0, name: ingame/photo/search_mark} #  size:0xb0
+      - {start: 0x29ab70, type: eh_frame, vram: 0x399b70, name: outgame/setup} #  size:0x2f0
+      - {start: 0x29ae60, type: eh_frame, vram: 0x399e60, name: outgame/setup_menu} #  size:0x5c0
+      - {start: 0x29b420, type: eh_frame, vram: 0x39a420, name: ingame/plyr/sis_algo} #  size:0x2a4
+      - {start: 0x29b6c4, type: eh_frame, vram: 0x39a6c4, name: ingame/plyr/sis_mdl} #  size:0x348
+      - {start: 0x29ba0c, type: eh_frame, vram: 0x39aa0c, name: ingame/plyr/sister} #  size:0x854
+      - {start: 0x29c260, type: eh_frame, vram: 0x39b260, name: ingame/item/prg/soul_list} #  size:0x254
+      - {start: 0x29c4b4, type: eh_frame, vram: 0x39b4b4, name: ingame/photo/sp_chance} #  size:0x114
+      - {start: 0x29c5c8, type: eh_frame, vram: 0x39b5c8, name: ingame/photo/spirit_gage} #  size:0xec
+      - {start: 0x29c6b4, type: eh_frame, vram: 0x39b6b4, name: common/spr_stack} #  size:0xa4
+      - {start: 0x29c758, type: eh_frame, vram: 0x39b758, name: ingame/subtitle/subtitle} #  size:0x1dc
+      - {start: 0x29c934, type: eh_frame, vram: 0x39b934, name: system/os/system} #  size:0x2a4
+      - {start: 0x29cbd8, type: eh_frame, vram: 0x39bbd8, name: save_load/prg/system_data_save} #  size:0x444
+      - {start: 0x29d01c, type: eh_frame, vram: 0x39c01c, name: graphics/graph2d/tim2} #  size:0x27c
+      - {start: 0x29d298, type: eh_frame, vram: 0x39c298, name: outgame/title} #  size:0x4a0
+      - {start: 0x29d738, type: eh_frame, vram: 0x39c738, name: outgame/title_album} #  size:0xb8
+      - {start: 0x29d7f0, type: eh_frame, vram: 0x39c7f0, name: outgame/title_disp} #  size:0x21c
+      - {start: 0x29da0c, type: eh_frame, vram: 0x39ca0c, name: outgame/title_menu} #  size:0x130
+      - {start: 0x29db3c, type: eh_frame, vram: 0x39cb3c, name: outgame/title_movie} #  size:0xe0
+      - {start: 0x29dc1c, type: eh_frame, vram: 0x39cc1c, name: outgame/title_top} #  size:0xdc
+      - {start: 0x29dcf8, type: eh_frame, vram: 0x39ccf8, name: ingame/plyr/unit_ctl} #  size:0x154
+      - {start: 0x29de4c, type: eh_frame, vram: 0x39ce4c, name: common/utility} #  size:0xc8
+      - {start: 0x29df14, type: eh_frame, vram: 0x39cf14, name: common/utility2} #  size:0x4c
+      - {start: 0x29df60, type: eh_frame, vram: 0x39cf60, name: system/pad/vib_manage} #  size:0x28
+      - {start: 0x29df88, type: eh_frame, vram: 0x39cf88, name: ingame/menu/zero2_anim2d} #  size:0xb0
+      - {start: 0x29e038, type: eh_frame, vram: 0x39d038, name: debug/zero2_perf} #  size:0x90
+      - {start: 0x29e0c8, type: eh_frame, vram: 0x39d0c8, name: common/zero2_util} #  size:0x124
+      - {start: 0x29e1ec, type: eh_frame, vram: 0x39d1ec, name: libgcc.a__eh_} #  size:0x41c
+      - {start: 0x29e608, type: eh_frame, vram: 0x39d608, name: libgcc.a_tinfo_} #  size:0x180
+      - {start: 0x29e788, type: eh_frame, vram: 0x39d788, name: libgcc.a_tinfo2_} #  size:0x190
+      - {start: 0x29e918, type: eh_frame, vram: 0x39d918, name: libgcc.a_exception_} #  size:0x1d0
+      - {start: 0x29eae8, type: eh_frame, vram: 0x39dae8, name: crtend} #  size:0x4
+      #- [0x29eaec, pad, vudata]
+
       # rodata ################
       - {start: 0x29eb00, type: rodata, vram: 0x39db00, name: ingame/map/CBuff} 
       - {start: 0x29eb58, type: rodata, vram: 0x39db58, name: graphics/graph3d/CDebugEdit}
@@ -918,7 +1240,7 @@ segments:
       - {start: 0x2a75a0, type: rodata, vram: 0x3a65a0, name: graphics/effect/effect_obj}
       - {start: 0x2a7b30, type: rodata, vram: 0x3a6b30, name: graphics/effect/effect_oth}
       - {start: 0x2a8188, type: rodata, vram: 0x3a7188, name: graphics/effect/effect_pak}
-      - {start: 0x2a8210, type: rodata, vram: 0x3a7188, name: graphics/effect/effect_rain}
+      - {start: 0x2a8210, type: rodata, vram: 0x3a7210, name: graphics/effect/effect_rain}
       - {start: 0x2a8de0, type: rodata, vram: 0x3a7de0, name: graphics/effect/effect_rdr}
       - {start: 0x2a8ee0, type: rodata, vram: 0x3a7ee0, name: graphics/effect/effect_scr}
       - {start: 0x2a91a8, type: rodata, vram: 0x3a81a8, name: graphics/effect/effect_spr}
@@ -1149,88 +1471,98 @@ segments:
       - {start: 0x2e7d98, type: rodata, vram: 0x3e6d98, name: ingame/menu/zero2_anim2d}
       - {start: 0x2e7ef0, type: rodata, vram: 0x3e6ef0, name: debug/zero2_perf}
       - {start: 0x2e7f00, type: rodata, vram: 0x3e6f00, name: commmon/zero2_util}
-      - {start: 0x2e83a0, type: rodata, vram: 0x3e73a0, name: iopsys.a(spu_mem)}
-      - {start: 0x2e84b0, type: rodata, vram: 0x3e74b0, name: iopsys.a(snd_buffer)}
-      - {start: 0x2e8650, type: rodata, vram: 0x3e7650, name: iopsys.a(ee_iop)}
-      - {start: 0x2e88e0, type: rodata, vram: 0x3e78e0, name: iopsys.a(ee_iop_q)}
-      - {start: 0x2e8918, type: rodata, vram: 0x3e7918, name: iopsys.a(stream_auto)}
-      - {start: 0x2e8cb8, type: rodata, vram: 0x3e7cb8, name: iopsys.a(snd_bank)}
-      - {start: 0x2e90c0, type: rodata, vram: 0x3e80c0, name: iopsys.a(snd_3d)}
-      - {start: 0x2e9260, type: rodata, vram: 0x3e8260, name: iopsys.a(cddat)}
-      - {start: 0x2e92e8, type: rodata, vram: 0x3e82e8, name: iopsys.a(snd)}
-      - {start: 0x2e9418, type: rodata, vram: 0x3e8418, name: iopsys.a(snd_pcmstream)}
-      - {start: 0x2e9510, type: rodata, vram: 0x3e8510, name: iopsys.a(snd_util)}
-      - {start: 0x2e95f0, type: rodata, vram: 0x3e85f0, name: iopsys.a(file_stream)}
-      - {start: 0x2e96b0, type: rodata, vram: 0x3e86b0, name: iopsys.a(hxd)}
-      - {start: 0x2e98f0, type: rodata, vram: 0x3e88f0, name: iopsys.a(spu_voice)}
-      - {start: 0x2e9950, type: rodata, vram: 0x3e8950, name: iopsys.a(snd_stream)}
-      - {start: 0x2e9d40, type: rodata, vram: 0x3e8d40, name: playpss.a(playpss)}
-      - {start: 0x2e9d80, type: rodata, vram: 0x3e8d80, name: playpss.a(audiodec)}
-      - {start: 0x2e9ec8, type: rodata, vram: 0x3e8ec8, name: libexcep.a(libexcep)}
-      - {start: 0x2e9f28, type: rodata, vram: 0x3e8f28, name: libexcep.a(print)}
-      - {start: 0x2eaf28, type: rodata, vram: 0x3e9f28, name: libcdvd.a(cdvd000)}
-      - {start: 0x2eb0f8, type: rodata, vram: 0x3ea0f8, name: libcdvd.a(cdvd039)}
-      - {start: 0x2eb138, type: rodata, vram: 0x3ea138, name: libdma.a(libdma)}
-      - {start: 0x2eb1b0, type: rodata, vram: 0x3ea1b0, name: libdev.a(devvu0)}
-      - {start: 0x2eb1c8, type: rodata, vram: 0x3ea1c8, name: libkernl.a(thread)}
-      - {start: 0x2eb200, type: rodata, vram: 0x3ea200, name: libkernl.a(kprintf)}
-      - {start: 0x2eb360, type: rodata, vram: 0x3ea360, name: libkernl.a(filestub)}
-      - {start: 0x2eb3d0, type: rodata, vram: 0x3ea3d0, name: libkernl.a(eeloadfile)}
-      - {start: 0x2eb3e0, type: rodata, vram: 0x3ea3e0, name: libkernl.a(iopreset)}
-      - {start: 0x2eb410, type: rodata, vram: 0x3ea410, name: libkernl.a(tlbfunc)}
-      - {start: 0x2eb490, type: rodata, vram: 0x3ea490, name: libkernl.a(exit)}
-      - {start: 0x2eb498, type: rodata, vram: 0x3ea498, name: libkernl.a(tty)}
-      - {start: 0x2eb508, type: rodata, vram: 0x3ea508, name: libpad.a(libpad)}
-      - {start: 0x2eb660, type: rodata, vram: 0x3ea660, name: libmc.a(libmc)}
-      - {start: 0x2eb6e8, type: rodata, vram: 0x3ea6e8, name: libgraph.a(graph012)}
-      - {start: 0x2eb880, type: rodata, vram: 0x3ea880, name: libgraph.a(graph015)}
-      - {start: 0x2eb9a0, type: rodata, vram: 0x3ea9a0, name: libgraph.a(graph017)}
-      - {start: 0x2eb9d8, type: rodata, vram: 0x3ea9d8, name: libgraph.a(graph003)}
-      - {start: 0x2eba20, type: rodata, vram: 0x3eaa20, name: libmpeg.a(pack)}
-      - {start: 0x2eba60, type: rodata, vram: 0x3eaa60, name: libmpeg.a(mpeg)}
-      - {start: 0x2ebb68, type: rodata, vram: 0x3eab68, name: libmpeg.a(init)}
-      - {start: 0x2ebcb0, type: rodata, vram: 0x3eacb0, name: libmpeg.a(mpc)}
-      - {start: 0x2ebf78, type: rodata, vram: 0x3eaf78, name: libmpeg.a(csc)}
-      - {start: 0x2ebf90, type: rodata, vram: 0x3eaf90, name: libsdr.a(sdr_main)}
-      - {start: 0x2ebfb8, type: rodata, vram: 0x3eafb8, name: libsdr.a(sdr_cb)}
-      - {start: 0x2ebfe0, type: rodata, vram: 0x3eafe0, name: libscf.a(libscf)}
-      - {start: 0x2ec000, type: rodata, vram: 0x3eb000, name: ibm.a(sf_atan)}
-      - {start: 0x2ec054, type: rodata, vram: 0x3eb054, name: libm.a(sf_cos)}
-      - {start: 0x2ec058, type: rodata, vram: 0x3eb058, name: libm.a(ef_acos)}
-      - {start: 0x2ec090, type: rodata, vram: 0x3eb090, name: libm.a(ef_atan2)}
-      - {start: 0x2ec0a8, type: rodata, vram: 0x3eb0a8, name: libm.a(ef_fmod)}
-      - {start: 0x2ec0b8, type: rodata, vram: 0x3eb0b8, name: libm.a(ef_log)}
-      - {start: 0x2ec0e8, type: rodata, vram: 0x3eb0e8, name: libm.a(ef_pow)}
-      - {start: 0x2ec170, type: rodata, vram: 0x3eb170, name: libm.a(ef_rem_pio2)}
-      - {start: 0x2ec530, type: rodata, vram: 0x3eb530, name: libm.a(ef_sqrt)}
-      - {start: 0x2ec538, type: rodata, vram: 0x3eb538, name: libm.a(kf_cos)}
-      - {start: 0x2ec558, type: rodata, vram: 0x3eb558, name: libm.a(kf_rem_pio2)}
-      - {start: 0x2ec5a4, type: rodata, vram: 0x3eb5a4, name: libm.a(kf_sin)}
-      - {start: 0x2ec5c0, type: rodata, vram: 0x3eb5c0, name: libm.a(kf_tan)}
-      - {start: 0x2ec604, type: rodata, vram: 0x3eb604, name: libm.a(sf_floor)}
-      - {start: 0x2ec608, type: rodata, vram: 0x3eb608, name: libm.a(sf_scalbn)}
-      - {start: 0x2ec618, type: rodata, vram: 0x3eb618, name: libgcc.a(_divdi3)}
-      - {start: 0x2ec718, type: rodata, vram: 0x3eb718, name: libgcc.a(_moddi3)}
-      - {start: 0x2ec818, type: rodata, vram: 0x3eb818, name: libgcc.a(_udivdi3)}
-      - {start: 0x2ec918, type: rodata, vram: 0x3eb918, name: libgcc.a(_umoddi3)}
-      - {start: 0x2eca18, type: rodata, vram: 0x3eba18, name: libgcc.a(_thenan_df)}
-      - {start: 0x2eca30, type: rodata, vram: 0x3eba30, name: libgcc.a(frame-dwarf2)}
-      - {start: 0x2ecb00, type: rodata, vram: 0x3ebb00, name: libgcc.a(tinfo)}
-      - {start: 0x2ecb78, type: rodata, vram: 0x3ebb78, name: libgcc.a(tinfo2)}
-      - {start: 0x2eccb8, type: rodata, vram: 0x3ebcb8, name: libgcc.a(exception)}
-      - {start: 0x2eccd8, type: rodata, vram: 0x3ebcd8, name: libc.a(assert)}
-      - {start: 0x2ecd08, type: rodata, vram: 0x3ebd08, name: libc.a(ctype_)}
-      - {start: 0x2ece10, type: rodata, vram: 0x3ebe10, name: libc.a(impure)}
-      - {start: 0x2ece20, type: rodata, vram: 0x3ebe20, name: libc.a(strerror)}
-      - {start: 0x2ed970, type: rodata, vram: 0x3ec970, name: libc.a(vfiprintf)}
-      - {start: 0x2edb80, type: rodata, vram: 0x3ecb80, name: libc.a(vfscanf)}
-      - {start: 0x2edff0, type: rodata, vram: 0x3ecff0, name: libc.a(dtoa)}
-      - {start: 0x2ee048, type: rodata, vram: 0x3ed048, name: libc.a(locale)}
-      - {start: 0x2ee090, type: rodata, vram: 0x3ed090, name: libc.a(mprec)}
-      - {start: 0x2ee1c0, type: rodata, vram: 0x3ed1c0, name: libc.a(strtod)}
-      - {start: 0x2ee290, type: rodata, vram: 0x3ed290, name: libc.a(s_infconst)}
-      # ###################################################################################################################
-      # #####################
+      - {start: 0x2e83a0, type: rodata, vram: 0x3e73a0, name: iopsys.a_spu_mem_}
+      - {start: 0x2e84b0, type: rodata, vram: 0x3e74b0, name: iopsys.a_snd_buffer_}
+      - {start: 0x2e8650, type: rodata, vram: 0x3e7650, name: iopsys.a_ee_iop_}
+      - {start: 0x2e88e0, type: rodata, vram: 0x3e78e0, name: iopsys.a_ee_iop_q_}
+      - {start: 0x2e8918, type: rodata, vram: 0x3e7918, name: iopsys.a_stream_auto_}
+      - {start: 0x2e8cb8, type: rodata, vram: 0x3e7cb8, name: iopsys.a_snd_bank_}
+      - {start: 0x2e90c0, type: rodata, vram: 0x3e80c0, name: iopsys.a_snd_3d_}
+      - {start: 0x2e9260, type: rodata, vram: 0x3e8260, name: iopsys.a_cddat_}
+      - {start: 0x2e92e8, type: rodata, vram: 0x3e82e8, name: iopsys.a_snd_}
+      - {start: 0x2e9418, type: rodata, vram: 0x3e8418, name: iopsys.a_snd_pcmstream_}
+      - {start: 0x2e9510, type: rodata, vram: 0x3e8510, name: iopsys.a_snd_util_}
+      - {start: 0x2e95f0, type: rodata, vram: 0x3e85f0, name: iopsys.a_file_stream_}
+      - {start: 0x2e96b0, type: rodata, vram: 0x3e86b0, name: iopsys.a_hxd_}
+      - {start: 0x2e98f0, type: rodata, vram: 0x3e88f0, name: iopsys.a_spu_voice_}
+      - {start: 0x2e9950, type: rodata, vram: 0x3e8950, name: iopsys.a_snd_stream_}
+      - {start: 0x2e9d40, type: rodata, vram: 0x3e8d40, name: playpss.a_playpss_}
+      - {start: 0x2e9d80, type: rodata, vram: 0x3e8d80, name: playpss.a_audiodec_}
+      - {start: 0x2e9ec8, type: rodata, vram: 0x3e8ec8, name: libexcep.a_libexcep_}
+      - {start: 0x2e9f28, type: rodata, vram: 0x3e8f28, name: libexcep.a_print_}
+      - {start: 0x2eaf28, type: rodata, vram: 0x3e9f28, name: libcdvd.a_cdvd000_}
+      - {start: 0x2eb0f8, type: rodata, vram: 0x3ea0f8, name: libcdvd.a_cdvd039_}
+      - {start: 0x2eb138, type: rodata, vram: 0x3ea138, name: libdma.a_libdma_}
+      - {start: 0x2eb1b0, type: rodata, vram: 0x3ea1b0, name: libdev.a_devvu0_}
+      - {start: 0x2eb1c8, type: rodata, vram: 0x3ea1c8, name: libkernl.a_thread_}
+      - {start: 0x2eb200, type: rodata, vram: 0x3ea200, name: libkernl.a_kprintf_}
+      - {start: 0x2eb360, type: rodata, vram: 0x3ea360, name: libkernl.a_filestub_}
+      - {start: 0x2eb3d0, type: rodata, vram: 0x3ea3d0, name: libkernl.a_eeloadfile_}
+      - {start: 0x2eb3e0, type: rodata, vram: 0x3ea3e0, name: libkernl.a_iopreset_}
+      - {start: 0x2eb410, type: rodata, vram: 0x3ea410, name: libkernl.a_tlbfunc_}
+      - {start: 0x2eb490, type: rodata, vram: 0x3ea490, name: libkernl.a_exit_}
+      - {start: 0x2eb498, type: rodata, vram: 0x3ea498, name: libkernl.a_tty_}
+      - {start: 0x2eb508, type: rodata, vram: 0x3ea508, name: libpad.a_libpad_}
+      - {start: 0x2eb660, type: rodata, vram: 0x3ea660, name: libmc.a_libmc_}
+      - {start: 0x2eb6e8, type: rodata, vram: 0x3ea6e8, name: libgraph.a_graph012_}
+      - {start: 0x2eb880, type: rodata, vram: 0x3ea880, name: libgraph.a_graph015_}
+      - {start: 0x2eb9a0, type: rodata, vram: 0x3ea9a0, name: libgraph.a_graph017_}
+      - {start: 0x2eb9d8, type: rodata, vram: 0x3ea9d8, name: libgraph.a_graph003_}
+      - {start: 0x2eba20, type: rodata, vram: 0x3eaa20, name: libmpeg.a_pack_}
+      - {start: 0x2eba60, type: rodata, vram: 0x3eaa60, name: libmpeg.a_mpeg_}
+      - {start: 0x2ebb68, type: rodata, vram: 0x3eab68, name: libmpeg.a_init_}
+      - {start: 0x2ebcb0, type: rodata, vram: 0x3eacb0, name: libmpeg.a_mpc_}
+      - {start: 0x2ebf78, type: rodata, vram: 0x3eaf78, name: libmpeg.a_csc_}
+      - {start: 0x2ebf90, type: rodata, vram: 0x3eaf90, name: libsdr.a_sdr_main_}
+      - {start: 0x2ebfb8, type: rodata, vram: 0x3eafb8, name: libsdr.a_sdr_cb_}
+      - {start: 0x2ebfe0, type: rodata, vram: 0x3eafe0, name: libscf.a_libscf_}
+      - {start: 0x2ec000, type: rodata, vram: 0x3eb000, name: ibm.a_sf_atan_}
+      - {start: 0x2ec054, type: rodata, vram: 0x3eb054, name: libm.a_sf_cos_}
+      - {start: 0x2ec058, type: rodata, vram: 0x3eb058, name: libm.a_ef_acos_}
+      - {start: 0x2ec090, type: rodata, vram: 0x3eb090, name: libm.a_ef_atan2_}
+      - {start: 0x2ec0a8, type: rodata, vram: 0x3eb0a8, name: libm.a_ef_fmod_}
+      - {start: 0x2ec0b8, type: rodata, vram: 0x3eb0b8, name: libm.a_ef_log_}
+      - {start: 0x2ec0e8, type: rodata, vram: 0x3eb0e8, name: libm.a_ef_pow_}
+      - {start: 0x2ec170, type: rodata, vram: 0x3eb170, name: libm.a_ef_rem_pio2_}
+      - {start: 0x2ec530, type: rodata, vram: 0x3eb530, name: libm.a_ef_sqrt_}
+      - {start: 0x2ec538, type: rodata, vram: 0x3eb538, name: libm.a_kf_cos_}
+      - {start: 0x2ec558, type: rodata, vram: 0x3eb558, name: libm.a_kf_rem_pio2_}
+      - {start: 0x2ec5a4, type: rodata, vram: 0x3eb5a4, name: libm.a_kf_sin_}
+      - {start: 0x2ec5c0, type: rodata, vram: 0x3eb5c0, name: libm.a_kf_tan_}
+      - {start: 0x2ec604, type: rodata, vram: 0x3eb604, name: libm.a_sf_floor_}
+      - {start: 0x2ec608, type: rodata, vram: 0x3eb608, name: libm.a_sf_scalbn_}
+      - {start: 0x2ec618, type: rodata, vram: 0x3eb618, name: libgcc.a__divdi3_}
+      - {start: 0x2ec718, type: rodata, vram: 0x3eb718, name: libgcc.a__moddi3_}
+      - {start: 0x2ec818, type: rodata, vram: 0x3eb818, name: libgcc.a__udivdi3_}
+      - {start: 0x2ec918, type: rodata, vram: 0x3eb918, name: libgcc.a__umoddi3_}
+      - {start: 0x2eca18, type: rodata, vram: 0x3eba18, name: libgcc.a__thenan_df_}
+      - {start: 0x2eca30, type: rodata, vram: 0x3eba30, name: libgcc.a_frame-dwarf2_}
+      - {start: 0x2ecb00, type: rodata, vram: 0x3ebb00, name: libgcc.a_tinfo_}
+      - {start: 0x2ecb78, type: rodata, vram: 0x3ebb78, name: libgcc.a_tinfo2_}
+      - {start: 0x2eccb8, type: rodata, vram: 0x3ebcb8, name: libgcc.a_exception_}
+      - {start: 0x2eccd8, type: rodata, vram: 0x3ebcd8, name: libc.a_assert_}
+      - {start: 0x2ecd08, type: rodata, vram: 0x3ebd08, name: libc.a_ctype__}
+      - {start: 0x2ece10, type: rodata, vram: 0x3ebe10, name: libc.a_impure_}
+      - {start: 0x2ece20, type: rodata, vram: 0x3ebe20, name: libc.a_strerror_}
+      - {start: 0x2ed970, type: rodata, vram: 0x3ec970, name: libc.a_vfiprintf_}
+      - {start: 0x2edb80, type: rodata, vram: 0x3ecb80, name: libc.a_vfscanf_}
+      - {start: 0x2edff0, type: rodata, vram: 0x3ecff0, name: libc.a_dtoa_}
+      - {start: 0x2ee048, type: rodata, vram: 0x3ed048, name: libc.a_locale_}
+      - {start: 0x2ee090, type: rodata, vram: 0x3ed090, name: libc.a_mprec_}
+      - {start: 0x2ee1c0, type: rodata, vram: 0x3ed1c0, name: libc.a_strtod_}
+      - {start: 0x2ee290, type: rodata, vram: 0x3ed290, name: libc.a_s_infconst_}
+      
+      ### GCC_EXCEPT_TABLE
+      - {start: 0x2ee300, type: gcc_except_table, vram: 0x3ed300, name: graphics/graph3d/CDebugEdit}
+      - {start: 0x2ee36c, type: gcc_except_table, vram: 0x3ed36c, name: graphics/graph3d/eeFile}
+      - {start: 0x2ee4b8, type: gcc_except_table, vram: 0x3ed4b8, name: graphics/graph3d/eeFindFile}
+      - {start: 0x2ee594, type: gcc_except_table, vram: 0x3ed594, name: ingame/event/prg/ev_macro}
+      - {start: 0x2ee630, type: gcc_except_table, vram: 0x3ed630, name: graphics/graph3d/g3dRenderTarget}
+      - {start: 0x2ee65c, type: gcc_except_table, vram: 0x3ed65c, name: graphics/graph3d/g3dTexture}
+      - {start: 0x2ee678, type: gcc_except_table, vram: 0x3ed678, name: graphics/graph3d/gra3dShadow}
+      - {start: 0x2ee694, type: gcc_except_table, vram: 0x3ed694, name: common/ol_load}
+      - {start: 0x2ee730, type: gcc_except_table, vram: 0x3ed730, name: libgcc.a_exception_} # size:0x7c
+
       # lit4 ################
       - {start: 0x2ee800, type: lit4, vram: 0x3ed800, name: ingame/map/MapDoor} # size:0x2c
       - {start: 0x2ee82c, type: lit4, vram: 0x3ed82c, name: ingame/map/MapDraw} # size:0x8
@@ -1337,8 +1669,8 @@ segments:
       - {start: 0x2ef9ec, type: lit4, vram: 0x3ee9ec, name: common/utility2} # size:0x10
       - {start: 0x2ef9fc, type: lit4, vram: 0x3ee9fc, name: debug/zero2_perf} # size:0x4
       - {start: 0x2efa00, type: lit4, vram: 0x3eea00, name: commmon/zero2_util} # size:0xc
-      - {start: 0x2efa0c, type: lit4, vram: 0x3eea0c, name: iopsys.a(snd_3d)} # size:0xc
-      - {start: 0x2efa18, type: lit4, vram: 0x3eea18, name: playpss.a(playpss)} # size:0xc
+      - {start: 0x2efa0c, type: lit4, vram: 0x3eea0c, name: iopsys.a_snd_3d_} # size:0xc
+      - {start: 0x2efa18, type: lit4, vram: 0x3eea18, name: playpss.a_playpss_} # size:0xc
       # #####################
       # sdata ###############
       - {start: 0x2efa80, type: sdata, vram: 0x3eea80, name: ingame/map/CBuff} # size:0x4c
@@ -1608,20 +1940,26 @@ segments:
       - {start: 0x2f58c0, type: sdata, vram: 0x3f48c0, name: common/utility2} # size:0x3a
       - {start: 0x2f5900, type: sdata, vram: 0x3f4900, name: debug/zero2_perf} # size:0x10
       - {start: 0x2f5910, type: sdata, vram: 0x3f4910, name: commmon/zero2_util} # size:0x4c
-      - {start: 0x2f5960, type: sdata, vram: 0x3f4960, name: iopsys.a(fileload)} # size:0x5
-      - {start: 0x2f5968, type: sdata, vram: 0x3f4968, name: iopsys.a(spu_mem)} # size:0x3
-      - {start: 0x2f5970, type: sdata, vram: 0x3f4970, name: iopsys.a(snd_buffer)} # size:0x8
-      - {start: 0x2f5978, type: sdata, vram: 0x3f4978, name: iopsys.a(stream_auto)} # size:0x12
-      - {start: 0x2f5990, type: sdata, vram: 0x3f4990, name: iopsys.a(snd_bank)} # size:0x2
-      - {start: 0x2f5992, type: sdata, vram: 0x3f4992, name: iopsys.a(snd_3d)} # size:0x1
-      - {start: 0x2f5998, type: sdata, vram: 0x3f4998, name: iopsys.a(cddat)} # size:0x8
-      - {start: 0x2f59a0, type: sdata, vram: 0x3f49a0, name: iopsys.a(snd)} # size:0x6
-      - {start: 0x2f59a8, type: sdata, vram: 0x3f49a8, name: iopsys.a(cmp_eeiop)} # size:0x8
-      - {start: 0x2f59b0, type: sdata, vram: 0x3f49b0, name: iopsys.a(hxd)} # size:0x12
-      - {start: 0x2f59c8, type: sdata, vram: 0x3f49c8, name: iopsys.a(spu_voice)} # size:0x10
-      - {start: 0x2f59d8, type: sdata, vram: 0x3f49d8, name: cmp.a(encodes)} # size:0x4
-      - {start: 0x2f59e0, type: sdata, vram: 0x3f49e0, name: playpss.a(playpss)} # size:0x1c
-      # #####################
+      - {start: 0x2f5960, type: sdata, vram: 0x3f4960, name: iopsys.a_fileload_} # size:0x5
+      - {start: 0x2f5968, type: sdata, vram: 0x3f4968, name: iopsys.a_spu_mem_} # size:0x3
+      - {start: 0x2f5970, type: sdata, vram: 0x3f4970, name: iopsys.a_snd_buffer_} # size:0x8
+      - {start: 0x2f5978, type: sdata, vram: 0x3f4978, name: iopsys.a_stream_auto_} # size:0x12
+      - {start: 0x2f5990, type: sdata, vram: 0x3f4990, name: iopsys.a_snd_bank_} # size:0x2
+      #- {start: 0x2f5992, type: sdata, vram: 0x3f4992, name: iopsys.a_snd_3d_} # size:0x1
+      - {start: 0x2f5998, type: sdata, vram: 0x3f4998, name: iopsys.a_cddat_} # size:0x8
+      - {start: 0x2f59a0, type: sdata, vram: 0x3f49a0, name: iopsys.a_snd_} # size:0x6
+      - {start: 0x2f59a8, type: sdata, vram: 0x3f49a8, name: iopsys.a_cmp_eeiop_} # size:0x8
+      - {start: 0x2f59b0, type: sdata, vram: 0x3f49b0, name: iopsys.a_hxd_} # size:0x12
+      - {start: 0x2f59c8, type: sdata, vram: 0x3f49c8, name: iopsys.a_spu_voice_} # size:0x10
+      - {start: 0x2f59d8, type: sdata, vram: 0x3f49d8, name: cmp.a_encodes_} # size:0x4
+      - {start: 0x2f59e0, type: sdata, vram: 0x3f49e0, name: playpss.a_playpss_} # size:0x1c
+      - {start: 0x2F59FC, type: sdata, vram: 0x3f49fc, name: graphics/graph3d/CDebugEdit_1} # size:0x4
+      - {start: 0x2F5A00, type: sdata, vram: 0x3F4A00, name: graphics/graph3d/CDebugEdit_2} # size:0x4
+      - {start: 0x2F5A04, type: sdata, vram: 0x3F4A04, name: debug/debug_1} # size:0x4
+      - {start: 0x2F5A08, type: sdata, vram: 0x3F4A08, name: debug/debug_2} # size:0x4
+
+      - [0x2F5A0C, pad, section_padding_2F5A0C]
+      
       # sbss ################
       - {type: sbss, vram: 0x3f4a80, name: ingame/map/CBuff} # size:0x4
       - {type: sbss, vram: 0x3f4a88, name: ingame/plyr/ChrSort} # size:0x8
@@ -1701,7 +2039,7 @@ segments:
       - {type: sbss, vram: 0x3f4e9c, name: ingame/photo/n_plyr_camera} # size:0x4
       - {type: sbss, vram: 0x3f4ea0, name: outgame/newgame} # size:0x4
       - {type: sbss, vram: 0x3f4ea8, name: pad/pad} # size:0x6
-      - {type: sbss, vram: 0x3f4eae, name: outgame/pad_check} # size:0x1
+      #- {type: sbss, vram: 0x3f4eae, name: outgame/pad_check} # size:0x1
       - {type: sbss, vram: 0x3f4eb0, name: ingame/photo/photo} # size:0x28
       - {type: sbss, vram: 0x3f4ed8, name: ingame/photo/photo_dat} # size:0x8
       - {type: sbss, vram: 0x3f4ee0, name: ingame/menu/play_data} # size:0x1
@@ -1722,22 +2060,22 @@ segments:
       - {type: sbss, vram: 0x3f4fe0, name: outgame/title_menu} # size:0x1
       - {type: sbss, vram: 0x3f4fe8, name: outgame/title_movie} # size:0x6
       - {type: sbss, vram: 0x3f4ff0, name: vib_manage} # size:0xc
-      - {type: sbss, vram: 0x3f4ffc, name: iopsys.a(fileload)} # size:0x18
-      - {type: sbss, vram: 0x3f5014, name: iopsys.a(spu_mem)} # size:0x4
-      - {type: sbss, vram: 0x3f5018, name: iopsys.a(ee_iop)} # size:0xc
-      - {type: sbss, vram: 0x3f5024, name: iopsys.a(ee_iop_q)} # size:0x4
-      - {type: sbss, vram: 0x3f5028, name: iopsys.a(stream_auto)} # size:0x14
-      - {type: sbss, vram: 0x3f503c, name: iopsys.a(snd_bank)} # size:0x14
-      - {type: sbss, vram: 0x3f5050, name: iopsys.a(snd_3d)} # size:0x10
-      - {type: sbss, vram: 0x3f5060, name: iopsys.a(cddat)} # size:0x14
-      - {type: sbss, vram: 0x3f5078, name: iopsys.a(snd)} # size:0x10
-      - {type: sbss, vram: 0x3f5088, name: iopsys.a(cmp_eeiop)} # size:0x10
-      - {type: sbss, vram: 0x3f5098, name: iopsys.a(snd_util)} # size:0x8
-      - {type: sbss, vram: 0x3f50a0, name: iopsys.a(file_stream)} # size:0x4
-      - {type: sbss, vram: 0x3f50a8, name: iopsys.a(snd_stream)} # size:0xc
-      - {type: sbss, vram: 0x3f50b4, name: playpss.a(my_strfile)} # size:0x4
-      - {type: sbss, vram: 0x3f50b8, name: playpss.a(playpss)} # size:0x3c
-      - {type: sbss, vram: 0x3f50f4, name: playpss.a(audiodec)} # size:0x8
+      - {type: sbss, vram: 0x3f4ffc, name: iopsys.a_fileload_} # size:0x18
+      - {type: sbss, vram: 0x3f5014, name: iopsys.a_spu_mem_} # size:0x4
+      - {type: sbss, vram: 0x3f5018, name: iopsys.a_ee_iop_} # size:0xc
+      - {type: sbss, vram: 0x3f5024, name: iopsys.a_ee_iop_q_} # size:0x4
+      - {type: sbss, vram: 0x3f5028, name: iopsys.a_stream_auto_} # size:0x14
+      - {type: sbss, vram: 0x3f503c, name: iopsys.a_snd_bank_} # size:0x14
+      - {type: sbss, vram: 0x3f5050, name: iopsys.a_snd_3d_} # size:0x10
+      - {type: sbss, vram: 0x3f5060, name: iopsys.a_cddat_} # size:0x14
+      - {type: sbss, vram: 0x3f5078, name: iopsys.a_snd_} # size:0x10
+      - {type: sbss, vram: 0x3f5088, name: iopsys.a_cmp_eeiop_} # size:0x10
+      - {type: sbss, vram: 0x3f5098, name: iopsys.a_snd_util_} # size:0x8
+      - {type: sbss, vram: 0x3f50a0, name: iopsys.a_file_stream_} # size:0x4
+      - {type: sbss, vram: 0x3f50a8, name: iopsys.a_snd_stream_} # size:0xc
+      - {type: sbss, vram: 0x3f50b4, name: playpss.a_my_strfile_} # size:0x4
+      - {type: sbss, vram: 0x3f50b8, name: playpss.a_playpss_} # size:0x3c
+      - {type: sbss, vram: 0x3f50f4, name: playpss.a_audiodec_} # size:0x8
       # #####################
       # bss #################
       - {type: bss, vram: 0x3f5500, name: crt0} # size:0x144
@@ -1878,48 +2216,48 @@ segments:
       - {type: bss, vram: 0x4bc620, name: system/os/system} # size:0x20
       - {type: bss, vram: 0x4bc640, name: outgame/title} # size:0x14
       - {type: bss, vram: 0x4bc658, name: common/utility2} # size:0x12c
-      - {type: bss, vram: 0x4bc7c0, name: iopsys.a(fileload)} # size:0x11e8
-      - {type: bss, vram: 0x4bd9a8, name: iopsys.a(spu_mem)} # size:0x4b0
-      - {type: bss, vram: 0x4bde58, name: iopsys.a(snd_buffer)} # size:0x9c0
-      - {type: bss, vram: 0x4be840, name: iopsys.a(ee_iop)} # size:0x13a8
-      - {type: bss, vram: 0x4bfc00, name: iopsys.a(ee_iop_q)} # size:0x428
-      - {type: bss, vram: 0x4c0030, name: iopsys.a(stream_auto)} # size:0xc0
-      - {type: bss, vram: 0x4c00f0, name: iopsys.a(snd_3d)} # size:0x5f0
-      - {type: bss, vram: 0x4c06e0, name: iopsys.a(cddat)} # size:0x1d8
-      - {type: bss, vram: 0x4c08b8, name: iopsys.a(snd)} # size:0x18
-      - {type: bss, vram: 0x4c08d0, name: iopsys.a(cmp_eeiop)} # size:0x1dc
-      - {type: bss, vram: 0x4c0ac0, name: iopsys.a(file_stream)} # size:0x1a8
-      - {type: bss, vram: 0x4c0c80, name: iopsys.a(snd_stream)} # size:0x1380
-      - {type: bss, vram: 0x4c2000, name: playpss.a(playpss)} # size:0x8a8
-      - {type: bss, vram: 0x4c2900, name: libexcep.a(print)} # size:0x408
-      - {type: bss, vram: 0x4c2d40, name: libcdvd.a(cdvd000)} # size:0x294
-      - {type: bss, vram: 0x4c2fd8, name: libdma.a(libdma)} # size:0x14
-      - {type: bss, vram: 0x4c2ff0, name: libkernl.a(thread)} # size:0x810
-      - {type: bss, vram: 0x4c3800, name: libkernl.a(kprintf)} # size:0x80
-      - {type: bss, vram: 0x4c3880, name: libkernl.a(sifcmd)} # size:0x300
-      - {type: bss, vram: 0x4c3b80, name: libkernl.a(sifrpc)} # size:0x182c
-      - {type: bss, vram: 0x4c53c0, name: libkernl.a(filestub)} # size:0x1804
-      - {type: bss, vram: 0x4c6c00, name: libkernl.a(iopheap)} # size:0x1c0
-      - {type: bss, vram: 0x4c6dc0, name: libkernl.a(eeloadfile)} # size:0x22c
-      - {type: bss, vram: 0x4c7000, name: libkernl.a(iopreset)} # size:0x68
-      - {type: bss, vram: 0x4c7080, name: libkernl.a(tlbtrap)} # size:0x122c
-      - {type: bss, vram: 0x4c82c0, name: libkernl.a(timer)} # size:0x2000
-      - {type: bss, vram: 0x4ca2c0, name: libkernl.a(timeralarm)} # size:0x404
-      - {type: bss, vram: 0x4ca6c8, name: libkernl.a(iopnotify)} # size:0x200
-      - {type: bss, vram: 0x4ca8c8, name: libkernl.a(deci2)} # size:0x24
-      - {type: bss, vram: 0x4ca900, name: libkernl.a(tty)} # size:0x3c0
-      - {type: bss, vram: 0x4cacc0, name: libpad.a(libpad)} # size:0x2c0
-      - {type: bss, vram: 0x4caf80, name: libmc.a(libmc)} # size:0x1600
-      - {type: bss, vram: 0x4cc580, name: libmpeg.a(mpc)} # size:0x200
-      - {type: bss, vram: 0x4cc780, name: libsdr.a(sdr_main)} # size:0xa8
-      - {type: bss, vram: 0x4cc840, name: libsdr.a(sdr_cb)} # size:0x109c
-      - {type: bss, vram: 0x4cd8e0, name: libgcc.a(__main)} # size:0x1c
-      - {type: bss, vram: 0x4cd900, name: libgcc.a(_eh)} # size:0x172
-      - {type: bss, vram: 0x4cda74, name: libgcc.a(frame-dwarf2)} # size:0x8
+      - {type: bss, vram: 0x4bc7c0, name: iopsys.a_fileload_} # size:0x11e8
+      - {type: bss, vram: 0x4bd9a8, name: iopsys.a_spu_mem_} # size:0x4b0
+      - {type: bss, vram: 0x4bde58, name: iopsys.a_snd_buffer_} # size:0x9c0
+      - {type: bss, vram: 0x4be840, name: iopsys.a_ee_iop_} # size:0x13a8
+      - {type: bss, vram: 0x4bfc00, name: iopsys.a_ee_iop_q_} # size:0x428
+      - {type: bss, vram: 0x4c0030, name: iopsys.a_stream_auto_} # size:0xc0
+      - {type: bss, vram: 0x4c00f0, name: iopsys.a_snd_3d_} # size:0x5f0
+      - {type: bss, vram: 0x4c06e0, name: iopsys.a_cddat_} # size:0x1d8
+      - {type: bss, vram: 0x4c08b8, name: iopsys.a_snd_} # size:0x18
+      - {type: bss, vram: 0x4c08d0, name: iopsys.a_cmp_eeiop_} # size:0x1dc
+      - {type: bss, vram: 0x4c0ac0, name: iopsys.a_file_stream_} # size:0x1a8
+      - {type: bss, vram: 0x4c0c80, name: iopsys.a_snd_stream_} # size:0x1380
+      - {type: bss, vram: 0x4c2000, name: playpss.a_playpss_} # size:0x8a8
+      - {type: bss, vram: 0x4c2900, name: libexcep.a_print_} # size:0x408
+      - {type: bss, vram: 0x4c2d40, name: libcdvd.a_cdvd000_} # size:0x294
+      - {type: bss, vram: 0x4c2fd8, name: libdma.a_libdma_} # size:0x14
+      - {type: bss, vram: 0x4c2ff0, name: libkernl.a_thread_} # size:0x810
+      - {type: bss, vram: 0x4c3800, name: libkernl.a_kprintf_} # size:0x80
+      - {type: bss, vram: 0x4c3880, name: libkernl.a_sifcmd_} # size:0x300
+      - {type: bss, vram: 0x4c3b80, name: libkernl.a_sifrpc_} # size:0x182c
+      - {type: bss, vram: 0x4c53c0, name: libkernl.a_filestub_} # size:0x1804
+      - {type: bss, vram: 0x4c6c00, name: libkernl.a_iopheap_} # size:0x1c0
+      - {type: bss, vram: 0x4c6dc0, name: libkernl.a_eeloadfile_} # size:0x22c
+      - {type: bss, vram: 0x4c7000, name: libkernl.a_iopreset_} # size:0x68
+      - {type: bss, vram: 0x4c7080, name: libkernl.a_tlbtrap_} # size:0x122c
+      - {type: bss, vram: 0x4c82c0, name: libkernl.a_timer_} # size:0x2000
+      - {type: bss, vram: 0x4ca2c0, name: libkernl.a_timeralarm_} # size:0x404
+      - {type: bss, vram: 0x4ca6c8, name: libkernl.a_iopnotify_} # size:0x200
+      - {type: bss, vram: 0x4ca8c8, name: libkernl.a_deci2_} # size:0x24
+      - {type: bss, vram: 0x4ca900, name: libkernl.a_tty_} # size:0x3c0
+      - {type: bss, vram: 0x4cacc0, name: libpad.a_libpad_} # size:0x2c0
+      - {type: bss, vram: 0x4caf80, name: libmc.a_libmc_} # size:0x1600
+      - {type: bss, vram: 0x4cc580, name: libmpeg.a_mpc_} # size:0x200
+      - {type: bss, vram: 0x4cc780, name: libsdr.a_sdr_main_} # size:0xa8
+      - {type: bss, vram: 0x4cc840, name: libsdr.a_sdr_cb_} # size:0x109c
+      - {type: bss, vram: 0x4cd8e0, name: libgcc.a___main_} # size:0x1c
+      - {type: bss, vram: 0x4cd900, name: libgcc.a__eh_} # size:0x172
+      - {type: bss, vram: 0x4cda74, name: libgcc.a_frame-dwarf2_} # size:0x8
+      #- {type: bss, vram: 0x4ce0ec, name: vubss}
   - name: mips_debug
     type: databin
     start: 0x2f5ac4
-    vram: 0x000000
   - [0x31034636]
 # Section Headers:
 #   [Nr] Name              Type            Addr     Off    Size   ES Flg Lk Inf Al
@@ -1930,7 +2268,7 @@ segments:
 #   [ 4] .dtors            PROGBITS        002c3c6c 1c4c6c 00000c 00  WA  0   0  4
 #   [ 5] .reginfo          MIPS_REGINFO    002c3c78 1c4c78 000018 01   A  0   0  4
 #   [ 6] .data             PROGBITS        002c3d00 1c4d00 0a6560 00  WA  0   0 64
-#   [ 7] .eh_frame         PROGBITS        0036a260 26b260 03388c 00  WA  0   0  8
+#   [ 7] eh_frame         PROGBITS        0036a260 26b260 03388c 00  WA  0   0  8
 #   [ 8] .vudata           PROGBITS        0039daec 29eaec 000000 00  WA  0   0  1
 #   [ 9] .rodata           PROGBITS        0039db00 29eb00 04f798 00   A  0   0 16
 #   [10] .gcc_except_table PROGBITS        003ed300 2ee300 0004ac 00  WA  0   0  4

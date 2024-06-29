@@ -225,6 +225,12 @@ def build_stuff(linker_entries: List[LinkerEntry]):
         elif isinstance(seg, splat.segtypes.common.sbss.CommonSegSbss):
             build(entry.object_path, entry.src_paths, "as")
 
+        elif isinstance(seg, splat.segtypes.common.eh_frame.PS2SegEh_frame):
+            build(entry.object_path, entry.src_paths, "as")
+
+        elif isinstance(seg, splat.segtypes.common.gcc_except_table.PS2SegGcc_except_table):
+            build(entry.object_path, entry.src_paths, "as")
+
         else:
             print(f"ERROR: Unsupported build segment type {seg.type}")
             sys.exit(1)
