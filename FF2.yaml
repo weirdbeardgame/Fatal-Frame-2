@@ -49,8 +49,8 @@ options:
       ".vutext",
       ".data",
       ".eh_frame",
-      ".ctors",
-      ".dtors",
+      ".ctor",
+      ".dtor",
       ".vudata",
       ".rodata",
       ".gcc_except_table",
@@ -626,13 +626,110 @@ segments:
       - [0x1af928, asm, libgcc.a__df_to_si_] # size:0x9c
 
 
-      # ######0100000
+      # VUTEXT ############
       - name: vutext
         type: textbin
         start: 0x1bb0a0
-        vram: 0x2ba0a0
-      - [0x1c4b00, databin, ctors]
-      - [0x1c4c6c, databin, dtors]
+        vram:
+
+        # CTOR ################
+      - {start: 0x1c4b00, type: ctor, vram: 0x2c3b00, name: crtbegin} #  size:0x4
+      - {start: 0x1c4b04, type: ctor, vram: 0x2c3b04, name: ingame/map/FurnCtl} #  size:0x4
+      - {start: 0x1c4b08, type: ctor, vram: 0x2c3b08, name: ingame/map/MapAnim} #  size:0x4
+      - {start: 0x1c4b0c, type: ctor, vram: 0x2c3b0c, name: ingame/map/MapDoor} #  size:0x4
+      - {start: 0x1c4b10, type: ctor, vram: 0x2c3b10, name: ingame/map/MapDraw} #  size:0x4
+      - {start: 0x1c4b14, type: ctor, vram: 0x2c3b14, name: ingame/map/MapHit} #  size:0x4
+      - {start: 0x1c4b18, type: ctor, vram: 0x2c3b18, name: ingame/map/MapLight} #  size:0x4
+      - {start: 0x1c4b1c, type: ctor, vram: 0x2c3b1c, name: ingame/map/MapLoad} #  size:0x4
+      - {start: 0x1c4b20, type: ctor, vram: 0x2c3b20, name: ingame/map/MapObjReg} #  size:0x4
+      - {start: 0x1c4b24, type: ctor, vram: 0x2c3b24, name: ingame/map/MapPut} #  size:0x4
+      - {start: 0x1c4b28, type: ctor, vram: 0x2c3b28, name: ingame/map/MapSky} #  size:0x4
+      - {start: 0x1c4b2c, type: ctor, vram: 0x2c3b2c, name: ingame/map/MapSp} #  size:0x4
+      - {start: 0x1c4b30, type: ctor, vram: 0x2c3b30, name: ingame/map/RegDat} #  size:0x4
+      - {start: 0x1c4b34, type: ctor, vram: 0x2c3b34, name: graphics/motion/accessory} #  size:0x4
+      - {start: 0x1c4b38, type: ctor, vram: 0x2c3b38, name: album/prg/album} #  size:0x4
+      - {start: 0x1c4b3c, type: ctor, vram: 0x2c3b3c, name: album/prg/album_load} #  size:0x4
+      - {start: 0x1c4b40, type: ctor, vram: 0x2c3b40, name: album/prg/album_view} #  size:0x4
+      - {start: 0x1c4b44, type: ctor, vram: 0x2c3b44, name: ingame/clear/prg/clear_flg} #  size:0x4
+      - {start: 0x1c4b48, type: ctor, vram: 0x2c3b48, name: ingame/item/prg/crystal} #  size:0x4
+      - {start: 0x1c4b4c, type: ctor, vram: 0x2c3b4c, name: debug/debug_menu} #  size:0x4
+      - {start: 0x1c4b50, type: ctor, vram: 0x2c3b50, name: ingame/door/prg/door} #  size:0x4
+      - {start: 0x1c4b54, type: ctor, vram: 0x2c3b54, name: graphics/effect/effect} #  size:0x4
+      - {start: 0x1c4b58, type: ctor, vram: 0x2c3b58, name: graphics/effect/effect_butterfly} #  size:0x4
+      - {start: 0x1c4b5c, type: ctor, vram: 0x2c3b5c, name: graphics/effect/effect_ene} #  size:0x4
+      - {start: 0x1c4b60, type: ctor, vram: 0x2c3b60, name: graphics/effect/effect_obj} #  size:0x4
+      - {start: 0x1c4b64, type: ctor, vram: 0x2c3b64, name: graphics/effect/effect_oth} #  size:0x4
+      - {start: 0x1c4b68, type: ctor, vram: 0x2c3b68, name: graphics/effect/effect_rdr} #  size:0x4
+      - {start: 0x1c4b6c, type: ctor, vram: 0x2c3b6c, name: graphics/effect/effect_scr} #  size:0x4
+      - {start: 0x1c4b70, type: ctor, vram: 0x2c3b70, name: graphics/effect/effect_torch} #  size:0x4
+      - {start: 0x1c4b74, type: ctor, vram: 0x2c3b74, name: ingame/enemy/ene_mot_ctrl} #  size:0x4
+      - {start: 0x1c4b78, type: ctor, vram: 0x2c3b78, name: ingame/enemy/enemy} #  size:0x4
+      - {start: 0x1c4b7c, type: ctor, vram: 0x2c3b7c, name: ingame/event/prg/ev_change} #  size:0x4
+      - {start: 0x1c4b80, type: ctor, vram: 0x2c3b80, name: ingame/event/dat/ev_disp_dat} #  size:0x4
+      - {start: 0x1c4b84, type: ctor, vram: 0x2c3b84, name: ingame/event/prg/ev_exe} #  size:0x4
+      - {start: 0x1c4b88, type: ctor, vram: 0x2c3b88, name: ingame/event/prg/ev_macro} #  size:0x4
+      - {start: 0x1c4b8c, type: ctor, vram: 0x2c3b8c, name: ingame/event/prg/ev_main} #  size:0x4
+      - {start: 0x1c4b90, type: ctor, vram: 0x2c3b90, name: ingame/event/prg/ev_open} #  size:0x4
+      - {start: 0x1c4b94, type: ctor, vram: 0x2c3b94, name: ingame/event/prg/ev_sis} #  size:0x4
+      - {start: 0x1c4b98, type: ctor, vram: 0x2c3b98, name: ingame/event/prg/ev_talk} #  size:0x4
+      - {start: 0x1c4b9c, type: ctor, vram: 0x2c3b9c, name: ingame/event/dat/ev_talk_dat} #  size:0x4
+      - {start: 0x1c4ba0, type: ctor, vram: 0x2c3ba0, name: ingame/event/prg/ev_timer} #  size:0x4
+      - {start: 0x1c4ba4, type: ctor, vram: 0x2c3ba4, name: ingame/item/prg/file} #  size:0x4
+      - {start: 0x1c4ba8, type: ctor, vram: 0x2c3ba8, name: ingame/enemy/fly_ctrl} #  size:0x4
+      - {start: 0x1c4bac, type: ctor, vram: 0x2c3bac, name: graphics/scene/fod} #  size:0x4
+      - {start: 0x1c4bb0, type: ctor, vram: 0x2c3bb0, name: save_load/prg/game_data_save} #  size:0x4
+      - {start: 0x1c4bb4, type: ctor, vram: 0x2c3bb4, name: ingame/clear/prg/game_result_top} #  size:0x4
+      - {start: 0x1c4bb8, type: ctor, vram: 0x2c3bb8, name: ingame/gameover/prg/gameover_menu_load} #  size:0x4
+      - {start: 0x1c4bbc, type: ctor, vram: 0x2c3bbc, name: ingame/menu/ghost_seal_door} #  size:0x4
+      - {start: 0x1c4bc0, type: ctor, vram: 0x2c3bc0, name: graphics/graph3d/gra3d} #  size:0x4
+      - {start: 0x1c4bc4, type: ctor, vram: 0x2c3bc4, name: graphics/graph3d/gra3dConst} #  size:0x4
+      - {start: 0x1c4bc8, type: ctor, vram: 0x2c3bc8, name: graphics/graph3d/gra3dMisc} #  size:0x4
+      - {start: 0x1c4bcc, type: ctor, vram: 0x2c3bcc, name: graphics/graph3d/gra3dShadow} #  size:0x4
+      - {start: 0x1c4bd0, type: ctor, vram: 0x2c3bd0, name: ingame/ingame} #  size:0x4
+      - {start: 0x1c4bd4, type: ctor, vram: 0x2c3bd4, name: ingame/ingame_effect} #  size:0x4
+      - {start: 0x1c4bd8, type: ctor, vram: 0x2c3bd8, name: ingame/item/prg/item} #  size:0x4
+      - {start: 0x1c4bdc, type: ctor, vram: 0x2c3bdc, name: ingame/puzzle/kaza2/kaza2_pzl} #  size:0x4
+      - {start: 0x1c4be0, type: ctor, vram: 0x2c3be0, name: ingame/puzzle/kaza/kaza_pzl} #  size:0x4
+      - {start: 0x1c4be4, type: ctor, vram: 0x2c3be4, name: outgame/loadgame} #  size:0x4
+      - {start: 0x1c4be8, type: ctor, vram: 0x2c3be8, name: ingame/photo/m_plyr_camera} #  size:0x4
+      - {start: 0x1c4bec, type: ctor, vram: 0x2c3bec, name: ingame/map/map_bgm} #  size:0x4
+      - {start: 0x1c4bf0, type: ctor, vram: 0x2c3bf0, name: ingame/map/map_height} #  size:0x4
+      - {start: 0x1c4bf4, type: ctor, vram: 0x2c3bf4, name: system/mc/prg/mc_set_data} #  size:0x4
+      - {start: 0x1c4bf8, type: ctor, vram: 0x2c3bf8, name: ingame/item/prg/memo} #  size:0x4
+      - {start: 0x1c4bfc, type: ctor, vram: 0x2c3bfc, name: ingame/menu/menu_cam_edit} #  size:0x4
+      - {start: 0x1c4c00, type: ctor, vram: 0x2c3c00, name: ingame/menu/menu_file} #  size:0x4
+      - {start: 0x1c4c04, type: ctor, vram: 0x2c3c04, name: ingame/menu/menu_item} #  size:0x4
+      - {start: 0x1c4c08, type: ctor, vram: 0x2c3c08, name: ingame/menu/menu_map} #  size:0x4
+      - {start: 0x1c4c0c, type: ctor, vram: 0x2c3c0c, name: ingame/menu/menu_memo} #  size:0x4
+      - {start: 0x1c4c10, type: ctor, vram: 0x2c3c10, name: ingame/menu/menu_radio} #  size:0x4
+      - {start: 0x1c4c14, type: ctor, vram: 0x2c3c14, name: ingame/menu/menu_soul} #  size:0x4
+      - {start: 0x1c4c18, type: ctor, vram: 0x2c3c18, name: outgame/mission_sel} #  size:0x4
+      - {start: 0x1c4c1c, type: ctor, vram: 0x2c3c1c, name: graphics/motion/morph} #  size:0x4
+      - {start: 0x1c4c20, type: ctor, vram: 0x2c3c20, name: graphics/motion/motion} #  size:0x4
+      - {start: 0x1c4c24, type: ctor, vram: 0x2c3c24, name: ingame/movie_room_menu/prg/movie_projecter} #  size:0x4
+      - {start: 0x1c4c28, type: ctor, vram: 0x2c3c28, name: common/ol_load} #  size:0x4
+      - {start: 0x1c4c2c, type: ctor, vram: 0x2c3c2c, name: ingame/photo/photo} #  size:0x4
+      - {start: 0x1c4c30, type: ctor, vram: 0x2c3c30, name: ingame/photo/photo_dat} #  size:0x4
+      - {start: 0x1c4c34, type: ctor, vram: 0x2c3c34, name: ingame/plyr/player} #  size:0x4
+      - {start: 0x1c4c38, type: ctor, vram: 0x2c3c38, name: ingame/plyr/plyr_mdl} #  size:0x4
+      - {start: 0x1c4c3c, type: ctor, vram: 0x2c3c3c, name: ingame/menu/plyr_room_info} #  size:0x4
+      - {start: 0x1c4c40, type: ctor, vram: 0x2c3c40, name: ingame/puzzle/puzzle} #  size:0x4
+      - {start: 0x1c4c44, type: ctor, vram: 0x2c3c44, name: puzzle/kaza/puzzle_kaza_dat} #  size:0x4
+      - {start: 0x1c4c48, type: ctor, vram: 0x2c3c48, name: puzzle/roku/puzzle_roku_dat} #  size:0x4
+      - {start: 0x1c4c4c, type: ctor, vram: 0x2c3c4c, name: ingame/puzzle/roku/roku_pzl} #  size:0x4
+      - {start: 0x1c4c50, type: ctor, vram: 0x2c3c50, name: graphics/scene/scene} #  size:0x4
+      - {start: 0x1c4c54, type: ctor, vram: 0x2c3c54, name: ingame/plyr/sis_mdl} #  size:0x4
+      - {start: 0x1c4c58, type: ctor, vram: 0x2c3c58, name: ingame/plyr/sister} #  size:0x4
+      - {start: 0x1c4c5c, type: ctor, vram: 0x2c3c5c, name: ingame/item/prg/soul_list} #  size:0x4
+      - {start: 0x1c4c60, type: ctor, vram: 0x2c3c60, name: common/spr_stack} #  size:0x4
+      - {start: 0x1c4c64, type: ctor, vram: 0x2c3c64, name: debug/zero2_perf} #  size:0x4
+      - {start: 0x1c4c68, type: ctor, vram: 0x2c3c68, name: crtend} #  size:0x4
+      
+        # DTOR ################
+      - {start: 0x1c4c6c, type: dtor, vram: 0x2c3c6c, name: crtbegin} #  size:0x4
+      - {start: 0x1c4c70, type: dtor, vram: 0x2c3c70, name: graphics/graph3d/gra3dShadow} #  size:0x4
+      - {start: 0x1c4c74, type: dtor, vram: 0x2c3c74, name: crtend} #  size:0x4
+
       - [0x1c4c78, databin, reg_info]
       # data ################
       - {start: 0x1c4d00, type: data, vram: 0x2c3d00, name: common/FileSt} # size:0x10
