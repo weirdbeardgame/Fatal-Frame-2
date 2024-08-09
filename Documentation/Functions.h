@@ -52,7 +52,7 @@
 }
 
 /* 00100b90 000000e8 */ CEditRoot* CEditRoot::AddRoot(/* s0 16 */ CEditRoot *this, /* a1 5 */ char *pStr) {
-	/* -0x180(sp) */ char str[256];
+	/* 0x0(sp) */ char str[256];
 	/* s0 16 */ vector<IEditObject *,ctl::custom_allocator<IEditObject *> > *this;
 	/* a2 6 */ IEditObject *&__x;
 }
@@ -67,13 +67,13 @@
 	/* a0 4 */ basic_string<char,string_char_traits<char>,ctl::custom_allocator<char> > *this;
 }
 
-/* 002c3d00 000000d4 */ char* basic_string<char, string_char_traits<char>, ctl::custom_allocator<char> >::Rep::clone(/* s2 18 */ Rep *this) {
+/* ffffffff 000000d4 */ char* basic_string<char, string_char_traits<char>, ctl::custom_allocator<char> >::Rep::clone(/* s2 18 */ Rep *this) {
 	/* s1 17 */ size_t extra;
 	/* a1 5 */ size_t s;
 	/* v1 3 */ size_t i;
 }
 
-/* 002c3d00 00000280 */ basic_string<char,string_char_traits<char>,ctl::custom_allocator<char> >& basic_string<char, string_char_traits<char>, ctl::custom_allocator<char> >::replace(/* s3 19 */ basic_string<char,string_char_traits<char>,ctl::custom_allocator<char> > *this, /* s1 17 */ size_t pos, /* s2 18 */ size_t n1, /* s5 21 */ size_t n2, /* s7 23 */ char c) {
+/* ffffffff 00000280 */ basic_string<char,string_char_traits<char>,ctl::custom_allocator<char> >& basic_string<char, string_char_traits<char>, ctl::custom_allocator<char> >::replace(/* s3 19 */ basic_string<char,string_char_traits<char>,ctl::custom_allocator<char> > *this, /* s1 17 */ size_t pos, /* s2 18 */ size_t n1, /* s5 21 */ size_t n2, /* s7 23 */ char c) {
 	/* s4 20 */ size_t len;
 	/* fp 30 */ size_t newlen;
 	/* a2 6 */ size_t s;
@@ -85,17 +85,17 @@
 	/* a3 7 */ size_t pos;
 	/* v1 3 */ char *s;
 	/* a2 6 */ size_t n;
-	/* -0x70(sp) */ char c;
+	/* 0x10(sp) */ char c;
 }
 
-/* 002c3d00 00000174 */ void basic_string<char, string_char_traits<char>, ctl::custom_allocator<char> >::alloc(/* s2 18 */ basic_string<char,string_char_traits<char>,ctl::custom_allocator<char> > *this, /* a1 5 */ size_t __size, /* s3 19 */ bool __save) {
+/* ffffffff 00000174 */ void basic_string<char, string_char_traits<char>, ctl::custom_allocator<char> >::alloc(/* s2 18 */ basic_string<char,string_char_traits<char>,ctl::custom_allocator<char> > *this, /* a1 5 */ size_t __size, /* s3 19 */ bool __save) {
 	/* a0 4 */ size_t s;
 	/* s0 16 */ size_t extra;
 	/* a1 5 */ size_t s;
 	/* s0 16 */ size_t i;
 }
 
-/* 002c3d00 00000280 */ basic_string<char,string_char_traits<char>,ctl::custom_allocator<char> >& basic_string<char, string_char_traits<char>, ctl::custom_allocator<char> >::replace(/* s4 20 */ basic_string<char,string_char_traits<char>,ctl::custom_allocator<char> > *this, /* s1 17 */ size_t pos, /* s2 18 */ size_t n1, /* fp 30 */ char *s, /* s3 19 */ size_t n2) {
+/* ffffffff 00000280 */ basic_string<char,string_char_traits<char>,ctl::custom_allocator<char> >& basic_string<char, string_char_traits<char>, ctl::custom_allocator<char> >::replace(/* s4 20 */ basic_string<char,string_char_traits<char>,ctl::custom_allocator<char> > *this, /* s1 17 */ size_t pos, /* s2 18 */ size_t n1, /* fp 30 */ char *s, /* s3 19 */ size_t n2) {
 	/* s5 21 */ size_t len;
 	/* s7 23 */ size_t newlen;
 	/* a2 6 */ size_t s;
@@ -109,41 +109,41 @@
 	/* a2 6 */ size_t n;
 }
 
-/* 002c3d00 00000070 */ void void _delete_ContainerPtr_ForEach<ctl::vector<IEditObject *> >(/* s1 17 */ vector<IEditObject *> &rContainer) {
+/* ffffffff 00000070 */ void void _delete_ContainerPtr_ForEach<ctl::vector<IEditObject *> >(/* s1 17 */ vector<IEditObject *> &rContainer) {
 	/* s0 16 */ IEditObject **it;
 }
 
-/* 002c3d00 00000154 */ void vector<IEditObject *, ctl::custom_allocator<IEditObject *> >::_M_insert_aux(/* s1 17 */ vector<IEditObject *,ctl::custom_allocator<IEditObject *> > *this, /* s3 19 */ IEditObject **__position, /* s5 21 */ IEditObject *&__x) {
+/* ffffffff 00000154 */ void vector<IEditObject *, ctl::custom_allocator<IEditObject *> >::_M_insert_aux(/* s1 17 */ vector<IEditObject *,ctl::custom_allocator<IEditObject *> > *this, /* s3 19 */ IEditObject **__position, /* s5 21 */ IEditObject *&__x) {
 	/* s0 16 */ IEditObject *__x_copy;
 	/* v1 3 */ IEditObject *&__value;
 	/* s4 20 */ size_t __len;
 	/* s0 16 */ IEditObject **__new_finish;
 }
 
-/* 002c3d00 0000003c */ type_info& IEditObject type_info function() {}
-/* 002c3d00 00000088 */ void IEditObject::~IEditObject(/* s0 16 */ IEditObject *this, /* s1 17 */ int __in_chrg) {}
-/* 002c3d00 00000008 */ char* IEditObject::ValueString(/* a0 4 */ IEditObject *this) {}
-/* 002c3d00 00000008 */ void IEditObject::Inc(/* a0 4 */ IEditObject *this, /* a1 5 */ int bExecCallback) {}
-/* 002c3d00 00000008 */ void IEditObject::Inc(/* a0 4 */ IEditObject *this, /* f12 50 */ float fScale, /* a1 5 */ int bExecCallback) {}
-/* 002c3d00 00000008 */ void IEditObject::Dec(/* a0 4 */ IEditObject *this, /* a1 5 */ int bExecCallback) {}
-/* 002c3d00 00000008 */ void IEditObject::Dec(/* a0 4 */ IEditObject *this, /* f12 50 */ float fScale, /* a1 5 */ int bExecCallback) {}
-/* 002c3d00 00000008 */ void IEditObject::Clear(/* a0 4 */ IEditObject *this) {}
-/* 002c3d00 00000008 */ char* IEditObject::TypeString(/* a0 4 */ IEditObject *this) {}
-/* 002c3d00 00000014 */ type_info& IEditObject::TypeInfo(/* a0 4 */ IEditObject *this) {}
-/* 002c3d00 0000003c */ type_info& ctl::custom_allocator<IEditObject *> type_info function() {}
-/* 002c3d00 0000004c */ type_info& CEditRoot type_info function() {}
-/* 002c3d00 0000001c */ void* CEditRoot::operator new(/* a0 4 */ size_t Size) {}
-/* 002c3d00 0000001c */ void* CEditRoot::operator new [](/* a0 4 */ size_t Size) {}
-/* 002c3d00 0000001c */ void CEditRoot::operator delete(/* a0 4 */ void *pData, /* a1 5 */ size_t Size) {}
-/* 002c3d00 0000001c */ void CEditRoot::operator delete [](/* a0 4 */ void *pData, /* a1 5 */ size_t Size) {}
-/* 002c3d00 00000008 */ int CEditRoot::IsItem(/* a0 4 */ CEditRoot *this) {}
-/* 002c3d00 00000018 */ int CEditRoot::GetNumObject(/* a0 4 */ CEditRoot *this) {}
-/* 002c3d00 0000000c */ char* CEditRoot::TypeString(/* a0 4 */ CEditRoot *this) {}
-/* 002c3d00 0000003c */ type_info& ctl::custom_allocator<char> type_info function() {}
-/* 002c3d00 0000001c */ void ctl::custom_allocator<char>::custom_deallocate(/* a0 4 */ custom_allocator<char> *this, /* a1 5 */ void *_Ptr) {}
-/* 002c3d00 0000001c */ void ctl::custom_allocator<IEditObject *>::custom_deallocate(/* a0 4 */ custom_allocator<IEditObject *> *this, /* a1 5 */ void *_Ptr) {}
-/* 002c3d00 0000001c */ char* ctl::custom_allocator<char>::custom_allocate(/* a0 4 */ custom_allocator<char> *this, /* a1 5 */ size_t _Count) {}
-/* 002c3d00 0000001c */ IEditObject** ctl::custom_allocator<IEditObject *>::custom_allocate(/* a0 4 */ custom_allocator<IEditObject *> *this, /* a1 5 */ size_t _Count) {}
+/* ffffffff 0000003c */ type_info& IEditObject type_info function() {}
+/* ffffffff 00000088 */ void IEditObject::~IEditObject(/* s0 16 */ IEditObject *this, /* s1 17 */ int __in_chrg) {}
+/* ffffffff 00000008 */ char* IEditObject::ValueString(/* a0 4 */ IEditObject *this) {}
+/* ffffffff 00000008 */ void IEditObject::Inc(/* a0 4 */ IEditObject *this, /* a1 5 */ int bExecCallback) {}
+/* ffffffff 00000008 */ void IEditObject::Inc(/* a0 4 */ IEditObject *this, /* f12 50 */ float fScale, /* a1 5 */ int bExecCallback) {}
+/* ffffffff 00000008 */ void IEditObject::Dec(/* a0 4 */ IEditObject *this, /* a1 5 */ int bExecCallback) {}
+/* ffffffff 00000008 */ void IEditObject::Dec(/* a0 4 */ IEditObject *this, /* f12 50 */ float fScale, /* a1 5 */ int bExecCallback) {}
+/* ffffffff 00000008 */ void IEditObject::Clear(/* a0 4 */ IEditObject *this) {}
+/* ffffffff 00000008 */ char* IEditObject::TypeString(/* a0 4 */ IEditObject *this) {}
+/* ffffffff 00000014 */ type_info& IEditObject::TypeInfo(/* a0 4 */ IEditObject *this) {}
+/* ffffffff 0000003c */ type_info& ctl::custom_allocator<IEditObject *> type_info function() {}
+/* ffffffff 0000004c */ type_info& CEditRoot type_info function() {}
+/* ffffffff 0000001c */ void* CEditRoot::operator new(/* a0 4 */ size_t Size) {}
+/* ffffffff 0000001c */ void* CEditRoot::operator new [](/* a0 4 */ size_t Size) {}
+/* ffffffff 0000001c */ void CEditRoot::operator delete(/* a0 4 */ void *pData, /* a1 5 */ size_t Size) {}
+/* ffffffff 0000001c */ void CEditRoot::operator delete [](/* a0 4 */ void *pData, /* a1 5 */ size_t Size) {}
+/* ffffffff 00000008 */ int CEditRoot::IsItem(/* a0 4 */ CEditRoot *this) {}
+/* ffffffff 00000018 */ int CEditRoot::GetNumObject(/* a0 4 */ CEditRoot *this) {}
+/* ffffffff 0000000c */ char* CEditRoot::TypeString(/* a0 4 */ CEditRoot *this) {}
+/* ffffffff 0000003c */ type_info& ctl::custom_allocator<char> type_info function() {}
+/* ffffffff 0000001c */ void ctl::custom_allocator<char>::custom_deallocate(/* a0 4 */ custom_allocator<char> *this, /* a1 5 */ void *_Ptr) {}
+/* ffffffff 0000001c */ void ctl::custom_allocator<IEditObject *>::custom_deallocate(/* a0 4 */ custom_allocator<IEditObject *> *this, /* a1 5 */ void *_Ptr) {}
+/* ffffffff 0000001c */ char* ctl::custom_allocator<char>::custom_allocate(/* a0 4 */ custom_allocator<char> *this, /* a1 5 */ size_t _Count) {}
+/* ffffffff 0000001c */ IEditObject** ctl::custom_allocator<IEditObject *>::custom_allocate(/* a0 4 */ custom_allocator<IEditObject *> *this, /* a1 5 */ size_t _Count) {}
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/ingame/plyr/ChrSort.c
@@ -249,7 +249,7 @@
 /* 001017c8 0000026c */ void DbFurnPreProc() {
 	/* s0 16 */ int flg;
 	/* s1 17 */ char *name;
-	/* -0x40(sp) */ float pos[4];
+	/* 0x10(sp) */ float pos[4];
 	/* s0 16 */ SGDFILEHEADER *mdp;
 }
 
@@ -369,6 +369,7 @@
 /* 001026b8 00000008 */ void FurnCtlTerm() {}
 
 /* 001026c0 00000080 */ FURN_WORK_HEAD* FurnWorkGetFreeHead() {
+	/* rdata 39de78 */ static char __FUNCTION__[20];
 	/* a2 6 */ int i;
 }
 
@@ -386,7 +387,7 @@
 
 /* 001028c0 0000001c */ void FurnWorkInit() {}
 /* 001028e0 00000008 */ void FurnWorkTrem() {}
-/* 002c3d10 00000054 */ FURN_CTL* FURN_CTL * _fixed_array_verifyrange<FURN_CTL>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ FURN_CTL* FURN_CTL * _fixed_array_verifyrange<FURN_CTL>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
 /* 001028e8 00000008 */ static void __static_initialization_and_destruction_0(/* a0 4 */ int __initialize_p, /* a1 5 */ int __priority) {}
 /* 002c3d10 0000003c */ type_info& FURN_CTL type_info function() {}
 /* 001028f0 00000020 */ static void global constructors keyed to FurnCtlCheckKakuType() {}
@@ -421,15 +422,15 @@
 }
 
 /* 00102b70 00000044 */ static void FurnLoadRegistDoor(/* a0 4 */ void *op) {
-	/* -0x40(sp) */ char name[36];
+	/* 0x0(sp) */ char name[36];
 }
 
 /* 00102bb8 00000044 */ static void FurnLoadRegistObj(/* a0 4 */ void *op) {
-	/* -0x40(sp) */ char name[36];
+	/* 0x0(sp) */ char name[36];
 }
 
 /* 00102c00 00000044 */ static void FurnLoadRegistPut(/* a0 4 */ void *op) {
-	/* -0x40(sp) */ char name[36];
+	/* 0x0(sp) */ char name[36];
 }
 
 /* 00102c48 00000054 */ static void FurnLoadCallFunc(/* s0 16 */ int reg_id, /* a1 5 */ int type, /* s1 17 */ void (*func)(/* parameters unknown */)) {
@@ -564,7 +565,7 @@
 	/* s0 16 */ MIME_DAT *mim_dat;
 }
 
-/* 00103be8 000001c0 */ int MapAnimRegistEx(/* fp 30 */ int play_id, /* s6 22 */ u_int *mdl_p, /* s4 20 */ u_int *mot_p, /* s7 23 */ float *mat[4][4], /* s0 16 */ float *offset, /* s3 19 */ float *rot, /* s5 21 */ int iFlg, /* -0x60(sp) */ int iFflg) {
+/* 00103be8 000001c0 */ int MapAnimRegistEx(/* fp 30 */ int play_id, /* s6 22 */ u_int *mdl_p, /* s4 20 */ u_int *mot_p, /* s7 23 */ float *mat[4][4], /* s0 16 */ float *offset, /* s3 19 */ float *rot, /* s5 21 */ int iFlg, /* 0x0(sp) */ int iFflg) {
 	/* s1 17 */ MAP_ANIM_CTL *cp;
 	/* s2 18 */ ANI_CTRL *ap;
 }
@@ -591,32 +592,32 @@
 }
 
 /* 00103fe8 00000180 */ void MapAnimGetRstMix(/* s1 17 */ MAP_ANIM_CTL *pMapAniCtl, /* s3 19 */ MOT_CTRL *pMotCtl) {
-	/* -0x70(sp) */ RST_DATA aRst;
+	/* 0x0(sp) */ RST_DATA aRst;
 	/* f20 58 */ float fWDat;
 	/* v0 2 */ float *pMstVec[4];
 	/* v1 3 */ float *pDatVec[4];
 }
 
 /* 00104168 00000168 */ void MapAnimMixRst(/* s2 18 */ float *aRetMatrix[4], /* s5 21 */ RST_DATA *pStartRst, /* s4 20 */ RST_DATA *pEndRst, /* f20 58 */ float fRate) {
-	/* -0x120(sp) */ float vTrans[4];
-	/* -0x110(sp) */ float vScale[4];
-	/* -0x100(sp) */ float aStMat[4][4];
-	/* -0xc0(sp) */ float aEndMat[4][4];
-	/* -0x80(sp) */ float aInterp[4][4];
+	/* 0x0(sp) */ float vTrans[4];
+	/* 0x10(sp) */ float vScale[4];
+	/* 0x20(sp) */ float aStMat[4][4];
+	/* 0x60(sp) */ float aEndMat[4][4];
+	/* 0xa0(sp) */ float aInterp[4][4];
 }
 
 /* 001042d0 00000528 */ static void MapAnimOne(/* s6 22 */ int id, /* s1 17 */ float *mat[4], /* s3 19 */ int a_flg) {
 	/* s4 20 */ MOT_CTRL *m_ctrl;
 	/* s0 16 */ MAP_ANIM_CTL *hp;
 	/* v0 2 */ ANI_CTRL *ap;
-	/* -0x130(sp) */ float lmat[4][4];
-	/* -0xf0(sp) */ float rot_y;
+	/* 0x0(sp) */ float lmat[4][4];
+	/* 0x40(sp) */ float rot_y;
 	/* v0 2 */ SGDCOORDINATE *cp;
 	/* f12 50 */ float fWDat;
-	/* -0xe0(sp) */ RST_DATA aMstRst;
-	/* -0xb0(sp) */ RST_DATA aRst;
+	/* 0x50(sp) */ RST_DATA aMstRst;
+	/* 0x80(sp) */ RST_DATA aRst;
 	/* a2 6 */ int id;
-	/* -0x80(sp) */ float w_mat[4][4];
+	/* 0xb0(sp) */ float w_mat[4][4];
 }
 
 /* 001047f8 000000bc */ void MapAnimProc() {
@@ -659,11 +660,11 @@
 	/* s0 16 */ int i;
 }
 
-/* 00104da8 00000188 */ static int MapManimSetAnimSub(/* s0 16 */ int buff_id, /* fp 30 */ int mat_num, /* s7 23 */ char *mdl_addr, /* s6 22 */ char *mot_addr, /* s5 21 */ int *anim_id, /* -0x60(sp) */ float *offset, /* -0x5c(sp) */ float *rot, /* -0x58(sp) */ int st_frame, /* 0x0(sp) */ int e_flg) {
-	/* 0x0(sp) */ int e_flg;
+/* 00104da8 00000188 */ static int MapManimSetAnimSub(/* s0 16 */ int buff_id, /* fp 30 */ int mat_num, /* s7 23 */ char *mdl_addr, /* s6 22 */ char *mot_addr, /* s5 21 */ int *anim_id, /* 0x0(sp) */ float *offset, /* 0x4(sp) */ float *rot, /* 0x8(sp) */ int st_frame, /* 0x60(sp) */ int e_flg) {
+	/* 0x60(sp) */ int e_flg;
 	/* s0 16 */ MAPMANIM_MATRIX *mp;
 	/* s3 19 */ int i;
-	/* -0x54(sp) */ int flg;
+	/* 0xc(sp) */ int flg;
 	/* s4 20 */ MAPMANIM_HEAD *hp;
 	/* s2 18 */ int iAniCtlFlg;
 }
@@ -694,15 +695,15 @@
 	/* s0 16 */ int i;
 }
 
-/* 002c3e20 00000054 */ MAP_ANIM_CTL* MAP_ANIM_CTL * _fixed_array_verifyrange<MAP_ANIM_CTL>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
-/* 002c3e20 00000054 */ ANI_CTRL* ANI_CTRL * _fixed_array_verifyrange<ANI_CTRL>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
-/* 002c3e20 00000054 */ MAPMANIM_MATRIX* MAPMANIM_MATRIX * _fixed_array_verifyrange<MAPMANIM_MATRIX>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
-/* 002c3e20 00000054 */ MAPMANIM_HEAD* MAPMANIM_HEAD * _fixed_array_verifyrange<MAPMANIM_HEAD>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ MAP_ANIM_CTL* MAP_ANIM_CTL * _fixed_array_verifyrange<MAP_ANIM_CTL>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ ANI_CTRL* ANI_CTRL * _fixed_array_verifyrange<ANI_CTRL>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ MAPMANIM_MATRIX* MAPMANIM_MATRIX * _fixed_array_verifyrange<MAPMANIM_MATRIX>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ MAPMANIM_HEAD* MAPMANIM_HEAD * _fixed_array_verifyrange<MAPMANIM_HEAD>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
 /* 001052b8 00000008 */ static void __static_initialization_and_destruction_0(/* a0 4 */ int __initialize_p, /* a1 5 */ int __priority) {}
-/* 002c3e20 0000003c */ type_info& MAP_ANIM_CTL type_info function() {}
-/* 002c3e20 0000003c */ type_info& ANI_CTRL type_info function() {}
-/* 002c3e20 0000003c */ type_info& MAPMANIM_MATRIX type_info function() {}
-/* 002c3e20 0000003c */ type_info& MAPMANIM_HEAD type_info function() {}
+/* ffffffff 0000003c */ type_info& MAP_ANIM_CTL type_info function() {}
+/* ffffffff 0000003c */ type_info& ANI_CTRL type_info function() {}
+/* ffffffff 0000003c */ type_info& MAPMANIM_MATRIX type_info function() {}
+/* ffffffff 0000003c */ type_info& MAPMANIM_HEAD type_info function() {}
 /* 001052c0 00000020 */ static void global constructors keyed to MapAnimCheckPlay() {}
 
 // *****************************************************************************
@@ -720,8 +721,8 @@
 
 /* 00105420 000000bc */ void MapDoorMakeDualRoomLight(/* s3 19 */ GRA3DLIGHTDATA *out, /* a1 5 */ float *vPos, /* s0 16 */ void *mdl_p) {
 	/* s1 17 */ int buff_id;
-	/* -0x50(sp) */ float vWork[4];
-	/* -0x40(sp) */ float vWork2[4];
+	/* 0x0(sp) */ float vWork[4];
+	/* 0x10(sp) */ float vWork2[4];
 }
 
 /* 001054e0 000000e8 */ static MAPDOOR_HEAD* MapDoorCheckID(/* s2 18 */ int door_id) {
@@ -764,14 +765,14 @@
 }
 
 /* 00105ce8 00000318 */ static int MapDoorAnimSetPos() {
-	/* -0xb0(sp) */ float mat[4][4];
+	/* 0x0(sp) */ float mat[4][4];
 	/* s3 19 */ MLOAD_DOOR_DAT *dp;
 	/* s1 17 */ MAPDOOR_HEAD *hp;
 	/* s0 16 */ float *pos;
 	/* s1 17 */ float *rot;
 	/* f2 40 */ float fPlyrY;
 	/* f1 39 */ float fDoorRotY;
-	/* -0x60(sp) */ float rpos[4];
+	/* 0x50(sp) */ float rpos[4];
 	/* v0 2 */ MLOAD_HEAD *lp;
 }
 
@@ -804,12 +805,12 @@
 	/* s0 16 */ int flg;
 	/* v0 2 */ float *pos;
 	/* s0 16 */ float *rot;
-	/* -0x90(sp) */ float spos[4];
-	/* -0x80(sp) */ float srot[4];
+	/* 0x0(sp) */ float spos[4];
+	/* 0x10(sp) */ float srot[4];
 	/* s4 20 */ MDAT_DOOR *dp;
 	/* s3 19 */ MAPDOOR_SEL *slp;
 	/* s1 17 */ int j;
-	/* -0x70(sp) */ int anim_id[4];
+	/* 0x20(sp) */ int anim_id[4];
 }
 
 /* 001065e0 0000000c */ GRA3DLIGHTDATA* MapDoorGetLight() {}
@@ -824,7 +825,7 @@
 
 /* 00106818 00000294 */ int MapDoorAnimOpen() {
 	/* rdata 39e338 */ static char __FUNCTION__[16];
-	/* -0x40(sp) */ float vPos[4];
+	/* 0x0(sp) */ float vPos[4];
 	/* s3 19 */ int type;
 	/* s2 18 */ MLOAD_DOOR_DAT *hp;
 	/* s1 17 */ MAPDOOR_HEAD *dp;
@@ -838,11 +839,11 @@
 	/* s2 18 */ int now_room_no;
 	/* s0 16 */ float *mat[4][4];
 	/* s1 17 */ MLOAD_DOOR_DAT *dp;
-	/* -0xe0(sp) */ float rpos[4];
+	/* 0x10(sp) */ float rpos[4];
 	/* s4 20 */ MLOAD_DOOR_DAT *dp;
-	/* -0xd0(sp) */ float mat[4][4];
-	/* -0x90(sp) */ float vw[4];
-	/* -0x80(sp) */ float fw;
+	/* 0x20(sp) */ float mat[4][4];
+	/* 0x60(sp) */ float vw[4];
+	/* 0x70(sp) */ float fw;
 	/* f2 40 */ float fPlyrY;
 	/* f1 39 */ float fDoorRotY;
 }
@@ -858,12 +859,12 @@
 	/* s0 16 */ int i;
 }
 
-/* 002c3e20 00000054 */ int* int * _fixed_array_verifyrange<int>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
-/* 002c3e20 00000054 */ MAPDOOR_HEAD* MAPDOOR_HEAD * _fixed_array_verifyrange<MAPDOOR_HEAD>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
-/* 002c3e20 00000054 */ MDAT_DOOR** MDAT_DOOR * * _fixed_array_verifyrange<MDAT_DOOR *>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ int* int * _fixed_array_verifyrange<int>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ MAPDOOR_HEAD* MAPDOOR_HEAD * _fixed_array_verifyrange<MAPDOOR_HEAD>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ MDAT_DOOR** MDAT_DOOR * * _fixed_array_verifyrange<MDAT_DOOR *>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
 /* 00107250 00000008 */ static void __static_initialization_and_destruction_0(/* a0 4 */ int __initialize_p, /* a1 5 */ int __priority) {}
-/* 002c3e20 0000003c */ type_info& MAPDOOR_HEAD type_info function() {}
-/* 002c3e20 0000004c */ type_info& MDAT_DOOR * type_info function() {}
+/* ffffffff 0000003c */ type_info& MAPDOOR_HEAD type_info function() {}
+/* ffffffff 0000004c */ type_info& MDAT_DOOR * type_info function() {}
 /* 002c3e20 0000003c */ type_info& MDAT_DOOR type_info function() {}
 /* 00107258 00000020 */ static void global constructors keyed to MapDoorGetDatListPtr() {}
 
@@ -891,7 +892,7 @@
 /* 00107430 00000024 */ void MapDrawSGD(/* a0 4 */ void *sgd_top) {}
 
 /* 00107458 00000090 */ int MapDrawGetCenPos(/* a0 4 */ void *sgd_top, /* s0 16 */ float *rvec[4]) {
-	/* -0x90(sp) */ float h_pos[8][4];
+	/* 0x0(sp) */ float h_pos[8][4];
 }
 
 /* 001074e8 00000074 */ void MapDrawSetSpRoomLight(/* s3 19 */ GRA3DLIGHTDATA *lp) {
@@ -942,16 +943,16 @@
 /* 00107c88 00000034 */ void MapDrawDeleteRoom(/* s0 16 */ MLOAD_HEAD *hp) {}
 /* 00107cc0 00000034 */ void MapDrawDeleteRoomAll() {}
 
-/* 00107cf8 000000c8 */ void MapDrawObj(/* s0 16 */ void *top) {
+/* 00107cf8 000000c8 */ void MapDrawObj(/* s0 16 */ void *top, /* a1 5 */ float *mat[4]) {
 	/* a0 4 */ SGDCOORDINATE *cp;
 }
 
-/* 00107dc0 000000c0 */ void MapDrawObjNoShadow(/* s0 16 */ void *top) {
+/* 00107dc0 000000c0 */ void MapDrawObjNoShadow(/* s0 16 */ void *top, /* a1 5 */ float *mat[4]) {
 	/* a0 4 */ SGDCOORDINATE *cp;
 }
 
 /* 00107e80 00000074 */ void MapDrawSetUpRoomCoordinate(/* s0 16 */ MLOAD_HEAD *hp) {
-	/* -0x20(sp) */ float m_pos[4];
+	/* 0x0(sp) */ float m_pos[4];
 }
 
 /* 00107ef8 00000030 */ void MapDrawShadowOne(/* a0 4 */ MLOAD_HEAD *hp, /* a1 5 */ GRA3DLIGHTDATA *lp) {}
@@ -959,7 +960,7 @@
 /* 00107f28 000001f0 */ void MapDrawRoomOne(/* s1 17 */ MLOAD_HEAD *hp, /* s2 18 */ GRA3DLIGHTDATA *lp) {
 	/* a1 5 */ HeaderSection *hs;
 	/* v0 2 */ SGDCOORDINATE *cp;
-	/* -0x90(sp) */ G3DLIGHT L;
+	/* 0x0(sp) */ G3DLIGHT L;
 	/* s0 16 */ GRA3DLIGHTID lightId;
 }
 
@@ -1082,7 +1083,7 @@
 	/* s1 17 */ int i;
 	/* v0 2 */ int type;
 	/* s5 21 */ int ret;
-	/* -0x60(sp) */ MAPHIT_DAT c_dat;
+	/* 0x0(sp) */ MAPHIT_DAT c_dat;
 }
 
 /* 00109170 000000a4 */ void MapHitInit() {
@@ -1104,7 +1105,7 @@
 /* 00109328 00000118 */ void MapHitSetDoorHit(/* s5 21 */ int id, /* a1 5 */ int type, /* s4 20 */ float *mat[4]) {
 	/* s1 17 */ int i;
 	/* f20 58 */ float dx;
-	/* -0x80(sp) */ float vec[4][4];
+	/* 0x0(sp) */ float vec[4][4];
 }
 
 /* 00109440 00000008 */ void MapHitSetDoorZ(/* f12 50 */ float num) {}
@@ -1114,7 +1115,7 @@
 	/* v1 3 */ float *vec[4];
 }
 
-/* 002c8ce0 00000054 */ MAPHIT_HEAD* MAPHIT_HEAD * _fixed_array_verifyrange<MAPHIT_HEAD>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ MAPHIT_HEAD* MAPHIT_HEAD * _fixed_array_verifyrange<MAPHIT_HEAD>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
 /* 001094e0 00000008 */ static void __static_initialization_and_destruction_0(/* a0 4 */ int __initialize_p, /* a1 5 */ int __priority) {}
 /* 002c8ce0 0000003c */ type_info& MAPHIT_HEAD type_info function() {}
 /* 001094e8 00000020 */ static void global constructors keyed to MapHitDoorZ() {}
@@ -1170,7 +1171,7 @@
 /* 001099f0 00000084 */ void MapLightSetPlayerOnly() {}
 
 /* 00109a78 00000168 */ void MapLightSetPlayerReal() {
-	/* -0x100(sp) */ G3DLIGHT L;
+	/* 0x0(sp) */ G3DLIGHT L;
 	/* a0 4 */ float *pv0;
 	/* f0 38 */ float sc;
 }
@@ -1205,7 +1206,7 @@
 /* 0010a298 000001a8 */ void MapLightSelect(/* s6 22 */ GRA3DLIGHTDATA *pLightMst, /* fp 30 */ float *vPos, /* s7 23 */ int iStart, /* s5 21 */ int iEnd) {
 	/* s0 16 */ int i;
 	/* v1 3 */ int j;
-	/* -0x190(sp) */ MAP_LIGHT_HEAD aFlgList[39];
+	/* 0x0(sp) */ MAP_LIGHT_HEAD aFlgList[39];
 	/* s1 17 */ int iLightID;
 	/* f1 39 */ float fPow;
 }
@@ -1218,7 +1219,7 @@
 	/* t2 10 */ int l_num;
 	/* a1 5 */ int in_cnt;
 	/* t4 12 */ int ret;
-	/* -0x520(sp) */ MAP_LIGHT_SORT llist[78];
+	/* 0x0(sp) */ MAP_LIGHT_SORT llist[78];
 	/* a2 6 */ MAP_LIGHT_SORT *lsp;
 	/* s2 18 */ int reg_cnt;
 }
@@ -1233,10 +1234,10 @@
 	/* s0 16 */ int i;
 }
 
-/* 0010a7a0 00000344 */ void MapLightMakeDualDirect(/* fp 30 */ GRA3DLIGHTDATA *pLightOut, /* a1 5 */ GRA3DLIGHTDATA *pLight1, /* -0x60(sp) */ GRA3DLIGHTDATA *pLight2) {
+/* 0010a7a0 00000344 */ void MapLightMakeDualDirect(/* fp 30 */ GRA3DLIGHTDATA *pLightOut, /* a1 5 */ GRA3DLIGHTDATA *pLight1, /* 0x10(sp) */ GRA3DLIGHTDATA *pLight2) {
 	/* s4 20 */ int j;
 	/* s1 17 */ int l;
-	/* -0x70(sp) */ float fPowList[3];
+	/* 0x0(sp) */ float fPowList[3];
 	/* f1 39 */ float fSarPow;
 	/* s2 18 */ int iSarID;
 }
@@ -1248,7 +1249,7 @@
 
 /* 0010ac60 0000021c */ void MapLightMakeDual(/* s2 18 */ GRA3DLIGHTDATA *out, /* s3 19 */ GRA3DLIGHTDATA *light1, /* s1 17 */ GRA3DLIGHTDATA *light2, /* s0 16 */ float *vCenPos) {
 	/* v1 3 */ int i;
-	/* -0x1620(sp) */ MAP_LIGHT_DAT w_light[39];
+	/* 0x0(sp) */ MAP_LIGHT_DAT w_light[39];
 	/* v0 2 */ GRA3DLIGHTDATA *wp;
 }
 
@@ -1290,11 +1291,11 @@
 }
 
 /* 0010b428 00000070 */ int MapMeiProc() {}
-/* 002c8d20 00000054 */ G3DLIGHT* G3DLIGHT * _fixed_array_verifyrange<G3DLIGHT>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
-/* 002c8d20 00000054 */ GRA3DLIGHTSTATUS* GRA3DLIGHTSTATUS * _fixed_array_verifyrange<GRA3DLIGHTSTATUS>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
-/* 002c8d20 00000054 */ int* int * _fixed_array_verifyrange<int>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ G3DLIGHT* G3DLIGHT * _fixed_array_verifyrange<G3DLIGHT>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ GRA3DLIGHTSTATUS* GRA3DLIGHTSTATUS * _fixed_array_verifyrange<GRA3DLIGHTSTATUS>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ int* int * _fixed_array_verifyrange<int>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
 /* 0010b498 00000008 */ static void __static_initialization_and_destruction_0(/* a0 4 */ int __initialize_p, /* a1 5 */ int __priority) {}
-/* 002c8d20 0000003c */ type_info& G3DLIGHT type_info function() {}
+/* ffffffff 0000003c */ type_info& G3DLIGHT type_info function() {}
 /* 002c8d20 0000003c */ type_info& GRA3DLIGHTSTATUS type_info function() {}
 /* 0010b4a0 00000020 */ static void global constructors keyed to MapLightPower() {}
 
@@ -1377,7 +1378,7 @@
 	/* s2 18 */ MLOAD_HEAD *hp;
 	/* s3 19 */ int buff_id;
 	/* s1 17 */ int j;
-	/* -0x60(sp) */ float work[4];
+	/* 0x0(sp) */ float work[4];
 }
 
 /* 0010c218 000000b8 */ float* MapLoadGetOffset(/* a0 4 */ int room_no) {
@@ -1386,7 +1387,7 @@
 }
 
 /* 0010c2d0 00000080 */ void MapLoadGetOffsetVector(/* s1 17 */ float *Center, /* s0 16 */ int RoomNo) {
-	/* -0x30(sp) */ float tmp_vec[4];
+	/* 0x0(sp) */ float tmp_vec[4];
 	/* v0 2 */ float *pFloat;
 }
 
@@ -1465,11 +1466,11 @@
 	/* s0 16 */ u_int addr;
 	/* s1 17 */ int i;
 	/* s0 16 */ int j;
-	/* -0x60(sp) */ int buff[2];
+	/* 0x0(sp) */ int buff[2];
 }
 
-/* 002c8f14 00000054 */ MLOAD_HEAD* MLOAD_HEAD * _fixed_array_verifyrange<MLOAD_HEAD>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
-/* 002c8f14 00000054 */ char* char * _fixed_array_verifyrange<char>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ MLOAD_HEAD* MLOAD_HEAD * _fixed_array_verifyrange<MLOAD_HEAD>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ char* char * _fixed_array_verifyrange<char>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
 /* 0010d168 00000008 */ static void __static_initialization_and_destruction_0(/* a0 4 */ int __initialize_p, /* a1 5 */ int __priority) {}
 /* 002c8f14 0000003c */ type_info& MLOAD_HEAD type_info function() {}
 /* 0010d170 00000020 */ static void global constructors keyed to MapLoadGetLabel() {}
@@ -1502,7 +1503,7 @@
 	/* a0 4 */ MAPOBJ_DAT *dp;
 	/* bss 40a2b0 */ static GRA3DLIGHTDATA lwork;
 	/* v0 2 */ MDAT_DOOR *op;
-	/* -0x30(sp) */ float vPos[4];
+	/* 0x0(sp) */ float vPos[4];
 }
 
 /* 0010d4e0 00000060 */ int* MapObjGetModelAddr(/* a0 4 */ int type, /* a1 5 */ int id) {
@@ -1515,8 +1516,8 @@
 /* 0010d830 000000f8 */ static int MapObjDeleteEffect(/* a0 4 */ int label_id, /* a1 5 */ int a_type, /* a2 6 */ int action) {}
 
 /* 0010d928 00000190 */ void MapObjSetDrawEffect(/* a0 4 */ MAPOBJ_DAT *dp, /* a1 5 */ int sw) {
-	/* -0x50(sp) */ float rpos[4];
-	/* -0x30(sp) */ float rrot[4];
+	/* 0x0(sp) */ float rpos[4];
+	/* 0x20(sp) */ float rrot[4];
 }
 
 /* 0010dab8 000000c0 */ static int MapObjUpdateEffectDraw(/* a0 4 */ int v_flg, /* s1 17 */ MAPOBJ_DAT *dp) {
@@ -1550,7 +1551,7 @@
 	/* s3 19 */ int ex_flg;
 	/* a0 4 */ int d_flg;
 	/* v1 3 */ MDAT_OBJ *mp;
-	/* -0x90(sp) */ LOOK_AT_PARAM param;
+	/* 0x20(sp) */ LOOK_AT_PARAM param;
 }
 
 /* 0010e3b0 00000020 */ void MapObjInit() {}
@@ -1590,28 +1591,30 @@
 
 /* 0010e6e0 00000514 */ static void* MapObjRegistEffect(/* s5 21 */ int buff_id, /* s1 17 */ char *name, /* s6 22 */ int *mdl_addr, /* s7 23 */ int label, /* s0 16 */ float *mpos, /* s4 20 */ float *mrot) {
 	/* s4 20 */ void *hdl;
-	/* -0x140(sp) */ float scale[4];
-	/* -0x130(sp) */ float pos[4];
-	/* -0x110(sp) */ float rot[4];
-	/* -0xf0(sp) */ float mat[4][4];
+	/* 0x0(sp) */ float scale[4];
+	/* 0x10(sp) */ float pos[4];
+	/* 0x30(sp) */ float rot[4];
+	/* 0x50(sp) */ float mat[4][4];
 	/* s3 19 */ int id;
 	/* v0 2 */ MDAT_OBJ *op;
 	/* s0 16 */ void *hdl;
-	/* -0xb0(sp) */ float scale[4];
-	/* -0xa0(sp) */ float pos[4];
-	/* -0x90(sp) */ float rot[4];
+	/* 0x90(sp) */ float scale[4];
+	/* 0xa0(sp) */ float pos[4];
+	/* 0xb0(sp) */ float rot[4];
 	/* a2 6 */ int iWaterID;
 	/* a2 6 */ int LightComeInType;
 	/* s0 16 */ void *hdl;
-	/* -0x70(sp) */ float pos[4];
-	/* -0x60(sp) */ float rot[4];
+	/* 0xc0(sp) */ float scale[4];
+	/* 0xd0(sp) */ float pos[4];
+	/* 0xe0(sp) */ float rot[4];
 }
 
 /* 0010ebf8 000001bc */ static void* MapObjRegistModel(/* s5 21 */ int buff_id, /* s2 18 */ char *name, /* s4 20 */ int *mdl_addr, /* s3 19 */ int label, /* s1 17 */ float *mpos, /* s0 16 */ float *mrot) {
-	/* -0x80(sp) */ float rrot[4];
+	/* 0x0(sp) */ float rrot[4];
 	/* s0 16 */ void *hdl;
-	/* -0x60(sp) */ float pos[4];
-	/* -0x50(sp) */ float rot[4];
+	/* 0x10(sp) */ float scale[4];
+	/* 0x20(sp) */ float pos[4];
+	/* 0x30(sp) */ float rot[4];
 }
 
 /* 0010edb8 00000090 */ static MAPOBJ_DAT* MapObjGetFreeDatPtr(/* a0 4 */ int buff_id, /* s2 18 */ void *op, /* s1 17 */ int stat) {
@@ -1648,40 +1651,40 @@
 	/* s0 16 */ void *obj_hdl;
 	/* s1 17 */ u_int *mdl_addr;
 	/* s2 18 */ int anim_id;
-	/* -0x40(sp) */ sceGifPackAd aGPA[1];
-	/* -0x30(sp) */ sceGifPackAd aGPAEnd[1];
+	/* 0x0(sp) */ sceGifPackAd aGPA[1];
+	/* 0x10(sp) */ sceGifPackAd aGPAEnd[1];
 }
 
 /* 0010f3a0 000000f4 */ static int MapObjCheckNuno(/* s0 16 */ int buff_id, /* s4 20 */ char *name, /* s1 17 */ void *hdl, /* s3 19 */ int *mdl_addr) {
 	/* s2 18 */ int n_id;
 }
 
-/* 0010f498 00000208 */ static int MapObjRegistTreeAnim(/* s4 20 */ int buff_id, /* s0 16 */ char *m_name, /* -0x60(sp) */ char *model_addr, /* s6 22 */ char *mot_addr, /* fp 30 */ void *obj_hdl, /* -0x5c(sp) */ float *offset, /* -0x58(sp) */ float *rot) {
+/* 0010f498 00000208 */ static int MapObjRegistTreeAnim(/* s4 20 */ int buff_id, /* s0 16 */ char *m_name, /* 0x20(sp) */ char *model_addr, /* s6 22 */ char *mot_addr, /* fp 30 */ void *obj_hdl, /* 0x24(sp) */ float *offset, /* 0x28(sp) */ float *rot) {
 	/* data 2c8fd0 */ static int anim_list[6][7];
 	/* bss 40b650 */ static int id_tes[7][3];
 	/* s2 18 */ int tree_id;
 	/* s3 19 */ short int *flp;
 	/* s1 17 */ int cnt;
-	/* -0x80(sp) */ int work_list[7];
+	/* 0x0(sp) */ int work_list[7];
 }
 
 /* 0010f6a0 00000174 */ int MapObjCheckAnim(/* s1 17 */ int buff_id, /* s0 16 */ char *m_name, /* s4 20 */ float *offset, /* s5 21 */ float *rot, /* s2 18 */ void *obj_hdl, /* s3 19 */ int ani_type) {
-	/* -0x50(sp) */ char *model_addr;
-	/* -0x4c(sp) */ char *mot_addr;
+	/* 0x0(sp) */ char *model_addr;
+	/* 0x4(sp) */ char *mot_addr;
 	/* s0 16 */ int anim_id;
 }
 
 /* 0010f818 000001f8 */ void MapObjRegistMot(/* s6 22 */ int buff_id, /* s4 20 */ MAPOBJ_DAT *dp, /* s1 17 */ char *name, /* a3 7 */ int action, /* s7 23 */ int a_type, /* s5 21 */ float *irot, /* s2 18 */ float *ipos) {
 	/* s3 19 */ void *obj_hdl;
 	/* s0 16 */ int *mdl_addr;
-	/* -0x80(sp) */ float rot[4];
-	/* -0x70(sp) */ float offset[4];
+	/* 0x0(sp) */ float rot[4];
+	/* 0x10(sp) */ float offset[4];
 }
 
 /* 0010fa10 00000120 */ int MapObjRegistDoor(/* s5 21 */ int buff_id, /* s3 19 */ int reg_id, /* s0 16 */ int stat, /* a3 7 */ MB_OUT_SECTION *reg_p) {
 	/* s4 20 */ u_int door_hdl;
 	/* v0 2 */ MAPOBJ_DAT *dp;
-	/* -0x70(sp) */ char name[36];
+	/* 0x0(sp) */ char name[36];
 	/* s2 18 */ MDAT_DOOR *op;
 	/* s1 17 */ float *pos;
 	/* v0 2 */ MB_OUT_HEAD *hp;
@@ -1689,28 +1692,28 @@
 
 /* 0010fb30 000002fc */ int MapObjRegistFurn(/* s2 18 */ int buff_id, /* s4 20 */ int reg_id, /* s0 16 */ int stat, /* a3 7 */ MB_OUT_SECTION *reg_p) {
 	/* s5 21 */ MDAT_OBJ *op;
-	/* -0x110(sp) */ char name[36];
+	/* 0x0(sp) */ char name[36];
 	/* s0 16 */ MAPOBJ_DAT *dp;
 	/* s0 16 */ int ret;
 	/* s1 17 */ float *pos;
 	/* v0 2 */ MB_OUT_HEAD *hp;
 	/* s2 18 */ void *hdl;
-	/* -0xe0(sp) */ float scale[4];
-	/* -0xd0(sp) */ float pos[4];
-	/* -0xb0(sp) */ float rot[4];
-	/* -0x90(sp) */ float mat[4][4];
+	/* 0x30(sp) */ float scale[4];
+	/* 0x40(sp) */ float pos[4];
+	/* 0x60(sp) */ float rot[4];
+	/* 0x80(sp) */ float mat[4][4];
 }
 
 /* 0010fe30 0000033c */ static int MapObjRegistPutFurn(/* fp 30 */ int buff_id, /* s2 18 */ int reg_id, /* s0 16 */ int stat, /* a3 7 */ MB_OUT_SECTION *reg_p) {
 	/* s4 20 */ MDAT_PUT *op;
-	/* -0xf0(sp) */ char name[36];
+	/* 0x0(sp) */ char name[36];
 	/* s6 22 */ MAPOBJ_DAT *dp;
 	/* a0 4 */ int ret;
 	/* s5 21 */ float *pos;
 	/* v0 2 */ MB_OUT_HEAD *hp;
-	/* -0xc0(sp) */ float vScale[4];
-	/* -0xa0(sp) */ float vPos[4];
-	/* -0x80(sp) */ float vRot[4];
+	/* 0x30(sp) */ float vScale[4];
+	/* 0x50(sp) */ float vPos[4];
+	/* 0x70(sp) */ float vRot[4];
 	/* s0 16 */ float *mat[4];
 	/* s3 19 */ float *pos;
 	/* s2 18 */ float *rot;
@@ -1742,7 +1745,7 @@
 	/* s2 18 */ MDAT_DOOR *work;
 	/* s1 17 */ MAPOBJ_DAT *mop;
 	/* s3 19 */ int now_id;
-	/* -0x80(sp) */ char model_name[48];
+	/* 0x0(sp) */ char model_name[48];
 }
 
 /* 00110700 00000070 */ int MapObjRegistPhf(/* s0 16 */ int buff_id, /* s1 17 */ char *lit_addr) {
@@ -1750,8 +1753,8 @@
 }
 
 /* 00110770 00000028 */ void MapObjRegInit() {}
-/* 002c8fd0 00000054 */ MAPOBJ_HEAD* MAPOBJ_HEAD * _fixed_array_verifyrange<MAPOBJ_HEAD>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
-/* 002c8fd0 00000054 */ char* char * _fixed_array_verifyrange<char>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ MAPOBJ_HEAD* MAPOBJ_HEAD * _fixed_array_verifyrange<MAPOBJ_HEAD>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ char* char * _fixed_array_verifyrange<char>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
 /* 00110798 00000008 */ static void __static_initialization_and_destruction_0(/* a0 4 */ int __initialize_p, /* a1 5 */ int __priority) {}
 /* 002c8fd0 0000003c */ type_info& MAPOBJ_HEAD type_info function() {}
 /* 001107a0 00000020 */ static void global constructors keyed to MapObjRegSetSceneLoad() {}
@@ -1805,6 +1808,7 @@
 
 /* 00110b20 000002b4 */ void* MapPutSetObj(/* s4 20 */ int buff_id, /* s0 16 */ u_int *addr, /* s6 22 */ float *pos, /* s7 23 */ float *rot, /* s3 19 */ float *scale, /* s5 21 */ GRA3DLIGHTDATA *lit, /* s2 18 */ int flg) {
 	/* s1 17 */ MAPPUT_OBJ *op;
+	/* s0 16 */ float *mat[4];
 	/* f12 50 */ float rx;
 	/* f12 50 */ float f;
 	/* f21 59 */ float f1;
@@ -1854,7 +1858,7 @@
 
 /* 00111320 000001a8 */ void MapPutDraw() {
 	/* s0 16 */ MAPPUT_OBJ *lp;
-	/* -0x2760(sp) */ GRA3DLIGHTDATA mld;
+	/* 0x0(sp) */ GRA3DLIGHTDATA mld;
 	/* s1 17 */ int l_flg;
 }
 
@@ -1862,7 +1866,7 @@
 	/* s1 17 */ int i;
 }
 
-/* 002c9078 00000054 */ MAPPUT_OBJ* MAPPUT_OBJ * _fixed_array_verifyrange<MAPPUT_OBJ>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ MAPPUT_OBJ* MAPPUT_OBJ * _fixed_array_verifyrange<MAPPUT_OBJ>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
 /* 00111570 00000008 */ static void __static_initialization_and_destruction_0(/* a0 4 */ int __initialize_p, /* a1 5 */ int __priority) {}
 /* 002c9078 0000003c */ type_info& MAPPUT_OBJ type_info function() {}
 /* 00111578 00000020 */ static void global constructors keyed to MapPutSetFlg() {}
@@ -1925,7 +1929,7 @@
 /* 00111dd0 00000034 */ static unsigned int** unsigned int * * _fixed_array_verifyrange<unsigned int *>(/* a0 4 */ size_t v, /* a1 5 */ size_t _max) {}
 
 /* 00111e08 00000224 */ static MAP_SKY_DB* MapSkyGetDatNowArea() {
-	/* -0x60(sp) */ MAP_SKY_ST aSkyCmn[2];
+	/* 0x0(sp) */ MAP_SKY_ST aSkyCmn[2];
 	/* s0 16 */ MAP_SKY_DB *pSkyDat;
 	/* a0 4 */ int room_no;
 }
@@ -1940,7 +1944,7 @@
 /* 001120d0 00000008 */ void MapSkySetAlpha(/* a0 4 */ int iAlpha) {}
 /* 001120d8 00000078 */ void MapSkySetTim2Vram(/* s0 16 */ u_int *top_addr) {}
 
-/* 00112150 000000d8 */ static Q_WORDDATA* MapSkySprite(/* a0 4 */ Q_WORDDATA *pbuf, /* a1 5 */ int x1, /* a2 6 */ int y1, /* a3 7 */ int x2, /* t0 8 */ int y2, /* t1 9 */ int u1, /* t2 10 */ int v1, /* t3 11 */ int u2, /* 0x0(sp) */ int v2, /* 0x8(sp) */ int r, /* 0x10(sp) */ int g, /* 0x18(sp) */ int b, /* 0x20(sp) */ int a) {
+/* 00112150 000000d8 */ static Q_WORDDATA* MapSkySprite(/* a0 4 */ Q_WORDDATA *pbuf, /* a1 5 */ int x1, /* a2 6 */ int y1, /* a3 7 */ int x2, /* t0 8 */ int y2, /* t1 9 */ int u1, /* t2 10 */ int v1, /* t3 11 */ int u2, /* 0x30(sp) */ int v2, /* 0x38(sp) */ int r, /* 0x40(sp) */ int g, /* 0x48(sp) */ int b, /* 0x50(sp) */ int a) {
 	/* s5 21 */ int v2;
 	/* s3 19 */ int r;
 	/* s2 18 */ int g;
@@ -1952,7 +1956,7 @@
 	/* v0 2 */ int *rc;
 	/* v0 2 */ Q_WORDDATA *pbuf;
 	/* s5 21 */ int bg_y;
-	/* -0x50(sp) */ int fc[3];
+	/* 0x0(sp) */ int fc[3];
 	/* s0 16 */ int fr;
 	/* s1 17 */ int fg;
 	/* s3 19 */ int fb;
@@ -1966,9 +1970,9 @@
 	/* s3 19 */ u_int x1;
 	/* s5 21 */ u_int x2;
 	/* s7 23 */ u_int y1;
-	/* -0x60(sp) */ u_int y2;
+	/* 0x70(sp) */ u_int y2;
 	/* fp 30 */ int iPscale;
-	/* -0x70(sp) */ int fc[3];
+	/* 0x60(sp) */ int fc[3];
 	/* f2 40 */ float r2;
 	/* f2 40 */ float sa;
 	/* s1 17 */ int fr;
@@ -1976,7 +1980,7 @@
 	/* s4 20 */ int fb;
 }
 
-/* 001127b0 00000514 */ static Q_WORDDATA* MapSkyBlockPoly(/* s1 17 */ Q_WORDDATA *pbuf, /* fp 30 */ float *vec[4], /* -0xcc(sp) */ int *u, /* -0xc8(sp) */ int *v, /* s5 21 */ int wn, /* t5 13 */ int hn, /* -0xc4(sp) */ int ox, /* 0x0(sp) */ int oy, /* 0x8(sp) */ int r, /* 0x10(sp) */ int g, /* 0x18(sp) */ int b, /* 0x20(sp) */ int a) {
+/* 001127b0 00000514 */ static Q_WORDDATA* MapSkyBlockPoly(/* s1 17 */ Q_WORDDATA *pbuf, /* 0x70(sp) */ float *mat[4], /* fp 30 */ float *vec[4], /* 0x74(sp) */ int *u, /* 0x78(sp) */ int *v, /* s5 21 */ int wn, /* t5 13 */ int hn, /* 0x7c(sp) */ int ox, /* 0x140(sp) */ int oy, /* 0x148(sp) */ int r, /* 0x150(sp) */ int g, /* 0x158(sp) */ int b, /* 0x160(sp) */ int a) {
 	/* v0 2 */ int oy;
 	/* a1 5 */ int r;
 	/* a3 7 */ int g;
@@ -1988,20 +1992,20 @@
 	/* bss 41eb80 */ static int iout[529][4];
 	/* f21 59 */ float fYPos;
 	/* f20 58 */ float fXPos;
-	/* -0x140(sp) */ float vOut[4];
-	/* -0x120(sp) */ int id[4];
-	/* -0x110(sp) */ int viUV[4];
+	/* 0x0(sp) */ float vOut[4];
+	/* 0x20(sp) */ int id[4];
+	/* 0x30(sp) */ int viUV[4];
 }
 
 /* 00112cc8 000002e0 */ static void MapSkyDrawTen(/* s3 19 */ MAP_SKY_ST *skp, /* s0 16 */ float *rot) {
 	/* v0 2 */ Q_WORDDATA *pbuf;
-	/* -0xc0(sp) */ float mat[4][4];
+	/* 0x30(sp) */ float mat[4][4];
 	/* data 2cc5d0 */ static float tes[4][4];
 	/* s7 23 */ int move;
 	/* v0 2 */ int iWork;
-	/* -0x80(sp) */ int tu[4];
-	/* -0x70(sp) */ int tv[4];
-	/* -0x60(sp) */ int fc[3];
+	/* 0x70(sp) */ int tu[4];
+	/* 0x80(sp) */ int tv[4];
+	/* 0x90(sp) */ int fc[3];
 	/* a1 5 */ int iMstFrame;
 	/* s5 21 */ int *out;
 	/* s0 16 */ int fr;
@@ -2015,8 +2019,9 @@
 }
 
 /* 001130f0 0000026c */ void MapSkyProc() {
-	/* -0xb0(sp) */ int ivec[4];
-	/* -0xa0(sp) */ float c_rot[4];
+	/* 0x0(sp) */ int ivec[4];
+	/* s0 16 */ GRA3DCAMERA *pCam;
+	/* 0x10(sp) */ float c_rot[4];
 }
 
 /* 00113360 0000003c */ u_int MapSkyInit(/* v1 3 */ u_int mst_addr) {}
@@ -2065,7 +2070,7 @@
 }
 
 /* 00113900 00000204 */ void MapSpKazSetMatrix(/* s1 17 */ MAPSP_KAZ_HEAD *pKazHead) {
-	/* -0x30(sp) */ float vRot[4];
+	/* 0x0(sp) */ float vRot[4];
 	/* s0 16 */ float *mat[4][4];
 	/* f12 50 */ float in;
 	/* f0 38 */ float min;
@@ -2090,8 +2095,8 @@
 
 /* 00113c20 00000288 */ int MapSpMoviProc() {
 	/* f14 52 */ float fRot;
-	/* -0x50(sp) */ float vRot[4];
-	/* -0x40(sp) */ float vScale[4];
+	/* 0x0(sp) */ float vRot[4];
+	/* 0x10(sp) */ float vScale[4];
 	/* f12 50 */ float in;
 	/* f0 38 */ float min;
 	/* f1 39 */ float max;
@@ -2120,10 +2125,10 @@
 	/* v1 3 */ int i;
 }
 
-/* 002cc610 00000054 */ MAPSP_KAZ_HEAD* MAPSP_KAZ_HEAD * _fixed_array_verifyrange<MAPSP_KAZ_HEAD>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
-/* 002cc610 00000054 */ MAPSP_KAZ_SPEED* MAPSP_KAZ_SPEED * _fixed_array_verifyrange<MAPSP_KAZ_SPEED>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ MAPSP_KAZ_HEAD* MAPSP_KAZ_HEAD * _fixed_array_verifyrange<MAPSP_KAZ_HEAD>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ MAPSP_KAZ_SPEED* MAPSP_KAZ_SPEED * _fixed_array_verifyrange<MAPSP_KAZ_SPEED>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
 /* 00114370 00000008 */ static void __static_initialization_and_destruction_0(/* a0 4 */ int __initialize_p, /* a1 5 */ int __priority) {}
-/* 002cc610 0000003c */ type_info& MAPSP_KAZ_HEAD type_info function() {}
+/* ffffffff 0000003c */ type_info& MAPSP_KAZ_HEAD type_info function() {}
 /* 002cc610 0000003c */ type_info& MAPSP_KAZ_SPEED type_info function() {}
 /* 00114378 00000020 */ static void global constructors keyed to MapSpKayaDrawCallback() {}
 
@@ -2302,11 +2307,11 @@
 }
 
 /* 00115940 0000001c */ static MB_OUT_RECT* RegDatGetVecPtrBin(/* a0 4 */ MB_OUT_HEAD *stp, /* a1 5 */ int RegStID) {
-	/* -0x20(sp) */ int work;
+	/* 0x0(sp) */ int work;
 }
 
 /* 00115960 00000150 */ static int RegDatGetVecNumBin(/* s2 18 */ MB_OUT_HEAD *stp, /* s7 23 */ int RegStID) {
-	/* -0x60(sp) */ int cnt;
+	/* 0x0(sp) */ int cnt;
 	/* s3 19 */ int i;
 	/* s4 20 */ int st_num;
 	/* s1 17 */ MB_OUT_RECT *vp;
@@ -2351,7 +2356,7 @@
 	/* v1 3 */ RD_REG_HEAD *hp;
 }
 
-/* 00116018 000001a8 */ int RegDatGetBuffIDG(/* s4 20 */ int kai) {
+/* 00116018 000001a8 */ int RegDatGetBuffIDG(/* s4 20 */ int kai, /* s5 21 */ float *vPos) {
 	/* s3 19 */ int i;
 	/* s1 17 */ int j;
 	/* s2 18 */ int cnt;
@@ -2361,7 +2366,7 @@
 
 /* 001161c0 0000002c */ void* RegDatGetStat(/* v0 2 */ int kai, /* a3 7 */ float *vPos, /* t0 8 */ int type) {}
 
-/* 001161f0 00000154 */ void* RegDatGetRectAndStat(/* s4 20 */ MB_OUT_RECT **ppRect, /* s3 19 */ void *pRectStat, /* a0 4 */ int kai, /* s7 23 */ int type) {
+/* 001161f0 00000154 */ void* RegDatGetRectAndStat(/* s4 20 */ MB_OUT_RECT **ppRect, /* s3 19 */ void *pRectStat, /* a0 4 */ int kai, /* s6 22 */ float *vPos, /* s7 23 */ int type) {
 	/* a2 6 */ int buff_id;
 	/* s2 18 */ int i;
 	/* s1 17 */ void *pRet;
@@ -2370,7 +2375,7 @@
 	/* v0 2 */ void *pStat;
 }
 
-/* 00116348 00000128 */ void* RegDatGetRectAndStat2(/* fp 30 */ void *pStat, /* s3 19 */ int buff_id, /* s1 17 */ int type) {
+/* 00116348 00000128 */ void* RegDatGetRectAndStat2(/* s4 20 */ MB_OUT_RECT **ppRect, /* fp 30 */ void *pStat, /* s3 19 */ int buff_id, /* s7 23 */ float *vPos, /* s1 17 */ int type) {
 	/* s6 22 */ int cnt;
 	/* s1 17 */ int j;
 	/* s0 16 */ MB_OUT_RECT *mp;
@@ -2379,14 +2384,14 @@
 	/* v0 2 */ void *pTmpStat;
 }
 
-/* 00116470 000000f4 */ int RegDatCheckSameRectStat(/* s1 17 */ void *pStat, /* a0 4 */ int kai, /* s4 20 */ int type) {
+/* 00116470 000000f4 */ int RegDatCheckSameRectStat(/* s1 17 */ void *pStat, /* a0 4 */ int kai, /* s3 19 */ float *vPos, /* s4 20 */ int type) {
 	/* a2 6 */ int buff_id;
 	/* s2 18 */ int i;
 	/* s6 22 */ int RetVal;
 	/* s5 21 */ int HitNum;
 }
 
-/* 00116568 0000001c */ int RegDatGetBuffID() {}
+/* 00116568 0000001c */ int RegDatGetBuffID(/* a1 5 */ float *vPos) {}
 /* 00116588 00000028 */ int* RegDatGetHitList() {}
 /* 001165b0 00000008 */ int RegDatGetHitNum() {}
 /* 001165b8 00000088 */ void RegDatAddNoRegistList(/* s1 17 */ int id) {}
@@ -2402,11 +2407,11 @@
 	/* a0 4 */ MB_OUT_SECTION *wp;
 }
 
-/* 002cca34 00000054 */ RD_REG_HEAD* RD_REG_HEAD * _fixed_array_verifyrange<RD_REG_HEAD>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
-/* 002cca34 00000054 */ RD_REG_ST_DAT* RD_REG_ST_DAT * _fixed_array_verifyrange<RD_REG_ST_DAT>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
-/* 002cca34 00000054 */ int* int * _fixed_array_verifyrange<int>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ RD_REG_HEAD* RD_REG_HEAD * _fixed_array_verifyrange<RD_REG_HEAD>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ RD_REG_ST_DAT* RD_REG_ST_DAT * _fixed_array_verifyrange<RD_REG_ST_DAT>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ int* int * _fixed_array_verifyrange<int>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
 /* 00116778 00000008 */ static void __static_initialization_and_destruction_0(/* a0 4 */ int __initialize_p, /* a1 5 */ int __priority) {}
-/* 002cca34 0000003c */ type_info& RD_REG_HEAD type_info function() {}
+/* ffffffff 0000003c */ type_info& RD_REG_HEAD type_info function() {}
 /* 002cca34 0000003c */ type_info& RD_REG_ST_DAT type_info function() {}
 /* 00116780 00000020 */ static void global constructors keyed to RegDatSetTopAddr() {}
 
@@ -2461,11 +2466,11 @@
 /* 00116ba8 000000a4 */ void SpCmnSetSprite(/* s4 20 */ DISP_SPRT *ds, /* a1 5 */ int iLabel, /* s0 16 */ int off_x, /* s1 17 */ int off_y, /* t0 8 */ u_char alpha, /* s3 19 */ int iFlg) {}
 
 /* 00116c50 00000048 */ void SpCmnDrawSprite(/* v0 2 */ int iLabel, /* v1 3 */ int off_x, /* t2 10 */ int off_y, /* a3 7 */ u_char alpha, /* t1 9 */ int iFlg) {
-	/* -0xa0(sp) */ DISP_SPRT ds;
+	/* 0x0(sp) */ DISP_SPRT ds;
 }
 
 /* 00116c98 00000078 */ void SpCmnDrawSpriteScale(/* v0 2 */ int iLabel, /* v1 3 */ int iOffX, /* t2 10 */ int iOffY, /* f20 58 */ float fScaleW, /* f21 59 */ float fScaleH, /* a3 7 */ u_char ucAlpha, /* t1 9 */ int iFlg) {
-	/* -0xb0(sp) */ DISP_SPRT ds;
+	/* 0x0(sp) */ DISP_SPRT ds;
 }
 
 /* 00116d10 00000090 */ void SpCmnDrawRange(/* a0 4 */ int st, /* s1 17 */ int en, /* s5 21 */ int off_x, /* s4 20 */ int off_y, /* s2 18 */ u_char alpha, /* s3 19 */ int iFlg) {
@@ -2473,15 +2478,15 @@
 }
 
 /* 00116da0 00000080 */ void SpCmnBlackOut(/* a0 4 */ u_char ucAlpha) {
-	/* -0xb0(sp) */ DISP_SQAR dsq;
-	/* -0x30(sp) */ SQAR_DAT black_bg;
+	/* 0x0(sp) */ DISP_SQAR dsq;
+	/* 0x80(sp) */ SQAR_DAT black_bg;
 }
 
-/* 00116e20 000000c4 */ void SpCmnPrintNumber_NK(/* s0 16 */ int iData, /* s1 17 */ int iNum, /* s2 18 */ int iX, /* s3 19 */ int iY, /* t0 8 */ u_char ucColLabel, /* t1 9 */ u_char ucAlpha, /* s6 22 */ int iPri, /* t3 11 */ u_char ucMsgType, /* 0x0(sp) */ int ucZeroFlg) {}
+/* 00116e20 000000c4 */ void SpCmnPrintNumber_NK(/* s0 16 */ int iData, /* s1 17 */ int iNum, /* s2 18 */ int iX, /* s3 19 */ int iY, /* t0 8 */ u_char ucColLabel, /* t1 9 */ u_char ucAlpha, /* s6 22 */ int iPri, /* t3 11 */ u_char ucMsgType, /* 0x60(sp) */ int ucZeroFlg) {}
 /* 00116ee8 00000098 */ void SpCmnPrintMsg_K(/* s0 16 */ int iMsgType, /* s1 17 */ int iMsgID, /* s2 18 */ int iX, /* s3 19 */ int iY, /* s6 22 */ int iColLabel, /* s4 20 */ int iAlpha, /* s5 21 */ int iPri) {}
 
 /* 00116f80 00000074 */ int SpCmnGetCenterX(/* s1 17 */ int iGroupLabel, /* s0 16 */ int iMsgLabel, /* s2 18 */ int iCenX) {
-	/* -0x60(sp) */ DISP_STR disp_wrk;
+	/* 0x0(sp) */ DISP_STR disp_wrk;
 }
 
 /* 00116ff8 00000048 */ void* SpCmnTexMemLoad(/* s1 17 */ int iFileNo) {
@@ -2495,8 +2500,8 @@
 }
 
 /* 001170d0 000000c0 */ void SpCmnDrawScreen(/* a0 4 */ void *pScrAddr, /* s1 17 */ int iVramAddr) {
-	/* -0xd0(sp) */ SPRT_DAT sd;
-	/* -0xb0(sp) */ DISP_SPRT ds;
+	/* 0x0(sp) */ SPRT_DAT sd;
+	/* 0x20(sp) */ DISP_SPRT ds;
 }
 
 // *****************************************************************************
@@ -2522,8 +2527,8 @@
 
 /* 00117378 000000b4 */ void PlyrAcsAlphaCtrl() {
 	/* a2 6 */ u_int i;
-	/* -0x20(sp) */ u_char spd[2];
-	/* -0x10(sp) */ u_char dspd[2];
+	/* 0x0(sp) */ u_char spd[2];
+	/* 0x10(sp) */ u_char dspd[2];
 }
 
 /* 00117430 0000006c */ void acsInitRopeWork() {
@@ -2548,7 +2553,7 @@
 	/* s5 21 */ u_int i;
 	/* fp 30 */ u_int j;
 	/* s4 20 */ ROPE_CTRL *rope;
-	/* -0xa0(sp) */ float gravity[4];
+	/* 0x30(sp) */ float gravity[4];
 	/* s3 19 */ C_PARTICLE *current;
 }
 
@@ -2577,53 +2582,53 @@
 /* 00117e00 000001cc */ int acsRopeMakeCollision(/* s6 22 */ COLLISION_DAT *collision, /* a1 5 */ float *mtx[4], /* s3 19 */ TUBE *tube, /* f20 58 */ float scale) {
 	/* s5 21 */ int i;
 	/* s4 20 */ int cnt;
-	/* -0xf0(sp) */ float pos[4];
-	/* -0xe0(sp) */ float inv[4][4];
-	/* -0xa0(sp) */ float c2w[4][4];
+	/* 0x0(sp) */ float pos[4];
+	/* 0x10(sp) */ float inv[4][4];
+	/* 0x50(sp) */ float c2w[4][4];
 }
 
 /* 00117fd0 000003e8 */ void acsCalcCoordinate(/* fp 30 */ SGDCOORDINATE *cp, /* s3 19 */ ROPE_CTRL *rope) {
 	/* s2 18 */ u_int i;
-	/* -0x230(sp) */ float trans[10][4];
-	/* -0x190(sp) */ float vec[4];
-	/* -0x180(sp) */ float x[4];
-	/* -0x170(sp) */ float y[4];
-	/* -0x160(sp) */ float z[4];
+	/* 0x0(sp) */ float trans[10][4];
+	/* 0xa0(sp) */ float vec[4];
+	/* 0xb0(sp) */ float x[4];
+	/* 0xc0(sp) */ float y[4];
+	/* 0xd0(sp) */ float z[4];
 }
 
 /* 001183b8 000000ac */ void acsSetMoveDir(/* s1 17 */ float *dir) {}
 /* 00118468 00000064 */ void acsRopeMoveCtrl(/* a0 4 */ ROPE_CTRL *rope) {}
 
 /* 001184d0 00000110 */ void acsRopeMoveWind(/* s1 17 */ ROPE_CTRL *rope, /* a1 5 */ char dir_cng) {
-	/* -0x40(sp) */ float wind[4];
+	/* 0x0(sp) */ float wind[4];
 	/* s3 19 */ C_PARTICLE *current;
 	/* s2 18 */ u_int i;
 	/* v0 2 */ char flg;
 }
 
 /* 001185e0 000000a8 */ void acsRopeMoveVib(/* s2 18 */ ROPE_CTRL *rope) {
-	/* -0x40(sp) */ float wind[4];
+	/* 0x0(sp) */ float wind[4];
 	/* s3 19 */ C_PARTICLE *current;
 	/* s1 17 */ u_int i;
 }
 
-/* 00118688 000005b8 */ void acsMoveRope(/* a2 6 */ u_int furn_id, /* -0x80(sp) */ SGDCOORDINATE *furn_cp) {
+/* 00118688 000005b8 */ void acsMoveRope(/* a2 6 */ u_int furn_id, /* 0x4d0(sp) */ SGDCOORDINATE *furn_cp) {
 	/* s3 19 */ u_int i;
 	/* s2 18 */ u_int j;
 	/* s5 21 */ ROPE_CTRL *rope;
-	/* -0x550(sp) */ float m[4][4];
-	/* -0x510(sp) */ float m1[4][4];
-	/* -0x4d0(sp) */ float l2w[4][4];
-	/* -0x490(sp) */ float w2l[4][4];
-	/* -0x450(sp) */ float gravity[4];
-	/* -0x7c(sp) */ C_PARTICLE *current;
-	/* -0x78(sp) */ ROPE_DAT *rdat;
-	/* -0x74(sp) */ u_int fixed_num;
-	/* -0x420(sp) */ COLLISION_DAT collision[13];
-	/* -0x3b0(sp) */ TUBE tube[13];
-	/* -0x140(sp) */ float w_mtx[4][4];
-	/* -0x100(sp) */ float p[4];
-	/* -0xf0(sp) */ float v[4];
+	/* 0x0(sp) */ float m[4][4];
+	/* 0x40(sp) */ float m1[4][4];
+	/* 0x80(sp) */ float l2w[4][4];
+	/* 0xc0(sp) */ float w2l[4][4];
+	/* 0x100(sp) */ float gravity[4];
+	/* 0x4d4(sp) */ C_PARTICLE *current;
+	/* 0x4d8(sp) */ ROPE_DAT *rdat;
+	/* 0x4dc(sp) */ u_int fixed_num;
+	/* 0x130(sp) */ COLLISION_DAT collision[13];
+	/* 0x1a0(sp) */ TUBE tube[13];
+	/* 0x410(sp) */ float w_mtx[4][4];
+	/* 0x450(sp) */ float p[4];
+	/* 0x460(sp) */ float v[4];
 	/* v0 2 */ u_char hit;
 }
 
@@ -2632,19 +2637,19 @@
 	/* s1 17 */ u_int i;
 }
 
-/* 00118d00 00000978 */ u_int* acsInitCloth(/* a0 4 */ CLOTH_CTRL *cloth_top, /* -0x80(sp) */ COLLISION_CTRL *collision_ctrl, /* -0x7c(sp) */ u_int *mpk_p, /* a3 7 */ u_int *top_addr, /* t0 8 */ int mdl_no, /* -0x78(sp) */ int chodo_flg) {
+/* 00118d00 00000978 */ u_int* acsInitCloth(/* a0 4 */ CLOTH_CTRL *cloth_top, /* 0x20(sp) */ COLLISION_CTRL *collision_ctrl, /* 0x24(sp) */ u_int *mpk_p, /* a3 7 */ u_int *top_addr, /* t0 8 */ int mdl_no, /* 0x28(sp) */ int chodo_flg) {
 	/* s1 17 */ u_int i;
 	/* s6 22 */ CLOTH *dat;
 	/* s0 16 */ CLOTH_CTRL *cloth;
-	/* -0x74(sp) */ CLOTH_DAT *cdat;
+	/* 0x2c(sp) */ CLOTH_DAT *cdat;
 	/* a2 6 */ HeaderSection *hs;
 	/* fp 30 */ PHEAD *ph;
 	/* s4 20 */ float *vtx[4];
-	/* -0x70(sp) */ u_int *addr;
+	/* 0x30(sp) */ u_int *addr;
 	/* s3 19 */ u_int div;
 	/* s5 21 */ u_int div1;
 	/* s7 23 */ u_int div2;
-	/* -0x6c(sp) */ u_int cloth_no;
+	/* 0x34(sp) */ u_int cloth_no;
 	/* v1 3 */ u_short id1;
 	/* v0 2 */ u_short id2;
 	/* v1 3 */ u_short id1;
@@ -2656,7 +2661,7 @@
 	/* a3 7 */ u_short id1;
 	/* a1 5 */ u_short id2;
 	/* a0 4 */ u_short j;
-	/* -0xa0(sp) */ u_int ofs[2];
+	/* 0x0(sp) */ u_int ofs[2];
 	/* s2 18 */ int cnt;
 	/* a1 5 */ int id;
 	/* s1 17 */ int w;
@@ -2664,21 +2669,21 @@
 
 /* 00119678 000001a0 */ u_int acsGetClothBufSize(/* a0 4 */ u_int *mpk_p, /* a1 5 */ int mdl_no) {
 	/* a2 6 */ CLOTH *dat;
-	/* -0xb0(sp) */ CLOTH_CTRL cloth;
+	/* 0x0(sp) */ CLOTH_CTRL cloth;
 	/* v1 3 */ CLOTH_DAT *cdat;
 	/* t0 8 */ u_int buf_size;
 }
 
-/* 00119818 000002bc */ void acsClothCtrl(/* -0x80(sp) */ ANI_CTRL *ani_ctrl, /* -0x7c(sp) */ u_int *mpk_p, /* a2 6 */ u_int mdl_no, /* -0x78(sp) */ u_char scene_flg) {
+/* 00119818 000002bc */ void acsClothCtrl(/* 0x90(sp) */ ANI_CTRL *ani_ctrl, /* 0x94(sp) */ u_int *mpk_p, /* a2 6 */ u_int mdl_no, /* 0x98(sp) */ u_char scene_flg) {
 	/* s1 17 */ u_int i;
-	/* -0x74(sp) */ u_int limit;
-	/* -0x70(sp) */ CLOTH_CTRL *cloth;
+	/* 0x9c(sp) */ u_int limit;
+	/* 0xa0(sp) */ CLOTH_CTRL *cloth;
 	/* s7 23 */ SGDCOORDINATE *cp;
 	/* s4 20 */ float *vtx[4];
 	/* v1 3 */ PHEAD *ph;
-	/* -0x110(sp) */ float sub[4];
-	/* -0x100(sp) */ float pos[4];
-	/* -0xf0(sp) */ float rot[4];
+	/* 0x0(sp) */ float sub[4];
+	/* 0x10(sp) */ float pos[4];
+	/* 0x20(sp) */ float rot[4];
 	/* f20 58 */ float val;
 	/* v1 3 */ CLOTH_DAT *cdat;
 	/* s6 22 */ COLLISION_DAT *collision;
@@ -2686,40 +2691,40 @@
 	/* f20 58 */ float scale;
 }
 
-/* 00119ad8 00001190 */ void acsMoveCloth(/* -0xa0(sp) */ float *vtx[4], /* s5 21 */ CLOTH_CTRL *cloth, /* -0x9c(sp) */ SGDCOORDINATE *cp, /* -0x98(sp) */ COLLISION_CTRL *collision_ctrl, /* -0x94(sp) */ COLLISION_DAT *collision, /* f20 58 */ float scale, /* f22 60 */ float collision_scale, /* s7 23 */ u_char hip_id) {
+/* 00119ad8 00001190 */ void acsMoveCloth(/* 0x710(sp) */ float *vtx[4], /* s5 21 */ CLOTH_CTRL *cloth, /* 0x714(sp) */ SGDCOORDINATE *cp, /* 0x718(sp) */ COLLISION_CTRL *collision_ctrl, /* 0x71c(sp) */ COLLISION_DAT *collision, /* f20 58 */ float scale, /* f22 60 */ float collision_scale, /* s7 23 */ u_char hip_id) {
 	/* s4 20 */ int i;
 	/* fp 30 */ int j;
-	/* -0x90(sp) */ int k;
-	/* -0x7a0(sp) */ float gravity[4];
-	/* -0x790(sp) */ float trans[4];
-	/* -0x8c(sp) */ C_PARTICLE *current;
-	/* -0x88(sp) */ SPRING *spring;
-	/* -0x84(sp) */ CLOTH *dat;
-	/* -0x780(sp) */ float l2w[4][4];
-	/* -0x740(sp) */ float w2l[4][4];
-	/* -0x700(sp) */ float old_now_w2w[4][4];
-	/* -0x6c0(sp) */ float l2w_rist[4][4];
-	/* -0x680(sp) */ float matrix[4][4];
-	/* -0x640(sp) */ char restrict[500];
-	/* -0x430(sp) */ float add_vec[4];
-	/* -0x420(sp) */ float add_vec[4];
-	/* -0x410(sp) */ float d[4];
-	/* -0x400(sp) */ float force[4];
+	/* 0x720(sp) */ int k;
+	/* 0x10(sp) */ float gravity[4];
+	/* 0x20(sp) */ float trans[4];
+	/* 0x724(sp) */ C_PARTICLE *current;
+	/* 0x728(sp) */ SPRING *spring;
+	/* 0x72c(sp) */ CLOTH *dat;
+	/* 0x30(sp) */ float l2w[4][4];
+	/* 0x70(sp) */ float w2l[4][4];
+	/* 0xb0(sp) */ float old_now_w2w[4][4];
+	/* 0xf0(sp) */ float l2w_rist[4][4];
+	/* 0x130(sp) */ float matrix[4][4];
+	/* 0x170(sp) */ char restrict[500];
+	/* 0x380(sp) */ float add_vec[4];
+	/* 0x390(sp) */ float add_vec[4];
+	/* 0x3a0(sp) */ float d[4];
+	/* 0x3b0(sp) */ float force[4];
 	/* f12 50 */ float dr;
 	/* a2 6 */ u_int id0;
 	/* a1 5 */ u_int id1;
-	/* -0x3f0(sp) */ float d[4];
-	/* -0x3e0(sp) */ float force[4];
+	/* 0x3c0(sp) */ float d[4];
+	/* 0x3d0(sp) */ float force[4];
 	/* f12 50 */ float dr;
 	/* a2 6 */ u_int id0;
 	/* a1 5 */ u_int id1;
-	/* -0x3d0(sp) */ fixed_array<float[4][4],5> w2c;
-	/* -0x290(sp) */ fixed_array<float[4][4],5> c2w;
-	/* -0x150(sp) */ float p[4];
-	/* -0x140(sp) */ float v[4];
-	/* -0x130(sp) */ float p1[4];
-	/* -0x120(sp) */ float p2[4];
-	/* -0x110(sp) */ float v1[4];
+	/* 0x3e0(sp) */ fixed_array<float[4][4],5> w2c;
+	/* 0x520(sp) */ fixed_array<float[4][4],5> c2w;
+	/* 0x660(sp) */ float p[4];
+	/* 0x670(sp) */ float v[4];
+	/* 0x680(sp) */ float p1[4];
+	/* 0x690(sp) */ float p2[4];
+	/* 0x6a0(sp) */ float v1[4];
 	/* s7 23 */ u_char hit;
 	/* s0 16 */ int n;
 	/* s2 18 */ int b_point;
@@ -2732,7 +2737,7 @@
 	/* s0 16 */ u_short id;
 	/* a0 4 */ u_int id0;
 	/* a1 5 */ u_int id1;
-	/* -0x100(sp) */ float test[4];
+	/* 0x6b0(sp) */ float test[4];
 }
 
 /* 0011ac68 000000f0 */ int acsResetCloth(/* s5 21 */ ANI_CTRL *ani_ctrl) {
@@ -2744,7 +2749,7 @@
 }
 
 /* 0011ad58 00000130 */ static int motClothWind(/* s1 17 */ CLOTH_CTRL *cloth) {
-	/* -0x40(sp) */ float wind[4];
+	/* 0x0(sp) */ float wind[4];
 	/* s2 18 */ int i;
 	/* v0 2 */ int cycle;
 	/* s3 19 */ char flg;
@@ -2767,16 +2772,16 @@
 	/* rdata 39fd18 */ static char __FUNCTION__[18];
 	/* s6 22 */ int i;
 	/* s0 16 */ int j;
-	/* -0x70(sp) */ int id;
+	/* 0x340(sp) */ int id;
 	/* s0 16 */ int mdl_no;
 	/* fp 30 */ CLOTH_CTRL *c_ctrl;
 	/* s5 21 */ u_int *mpk_p;
-	/* -0x6c(sp) */ u_int no;
+	/* 0x344(sp) */ u_int no;
 	/* s4 20 */ SGDCOORDINATE *cp;
 	/* s3 19 */ float *vtx[4];
 	/* v1 3 */ PHEAD *ph;
-	/* -0x3b0(sp) */ fixed_array<COLLISION_DAT,13> collision;
-	/* -0x340(sp) */ fixed_array<TUBE,13> tube;
+	/* 0x0(sp) */ fixed_array<COLLISION_DAT,13> collision;
+	/* 0x70(sp) */ fixed_array<TUBE,13> tube;
 	/* a0 4 */ CLOTH_DAT *cdat;
 	/* f20 58 */ float scale;
 }
@@ -2786,8 +2791,8 @@
 	/* s2 18 */ int i;
 	/* s6 22 */ int flg;
 	/* s0 16 */ CLOTH_CTRL *c_ctrl;
-	/* -0xc0(sp) */ float y_rot_m[4][4];
-	/* -0x80(sp) */ float z_ziku[4];
+	/* 0x0(sp) */ float y_rot_m[4][4];
+	/* 0x40(sp) */ float z_ziku[4];
 }
 
 /* 0011b620 00000118 */ int acsChodoResetWind(/* s4 20 */ int key) {
@@ -2814,69 +2819,69 @@
 /* 0011b980 000001d4 */ int acsChodoMakeCollision(/* s6 22 */ COLLISION_DAT *collision, /* a1 5 */ SGDCOORDINATE *cp, /* s0 16 */ TUBE *tube, /* f20 58 */ float scale) {
 	/* s1 17 */ int i;
 	/* s5 21 */ int cnt;
-	/* -0xf0(sp) */ float pos[4];
-	/* -0xe0(sp) */ float inv[4][4];
-	/* -0xa0(sp) */ float c2w[4][4];
+	/* 0x0(sp) */ float pos[4];
+	/* 0x10(sp) */ float inv[4][4];
+	/* 0x50(sp) */ float c2w[4][4];
 }
 
 /* 0011bb58 00000110 */ u_char acsCheckCollisionSphere(/* v0 2 */ SPHERE *sphere, /* s2 18 */ float *current, /* s0 16 */ float *relative_v, /* f22 60 */ float Ke) {
 	/* f21 59 */ float r1;
-	/* -0x70(sp) */ float tmp[4];
-	/* -0x60(sp) */ float v[4];
-	/* -0x50(sp) */ float v1[4];
+	/* 0x0(sp) */ float tmp[4];
+	/* 0x10(sp) */ float v[4];
+	/* 0x20(sp) */ float v1[4];
 }
 
 /* 0011bc68 00000394 */ u_char acsCheckCollisionTube(/* s3 19 */ TUBE *tube, /* s4 20 */ float *current, /* s7 23 */ float *relative_v, /* fp 30 */ float *old_c, /* f22 60 */ float Ke) {
-	/* -0x160(sp) */ float dir0[4];
-	/* -0x150(sp) */ float dir1[4];
-	/* -0x140(sp) */ float v0[4];
-	/* -0x130(sp) */ float v2[4];
-	/* -0x120(sp) */ float n[4];
-	/* -0x110(sp) */ float AP[4];
-	/* -0x100(sp) */ float PA[4];
-	/* -0xf0(sp) */ float P1P0[4];
-	/* -0xe0(sp) */ float normal[4];
-	/* -0xd0(sp) */ float p0[4];
-	/* -0xc0(sp) */ float p1[4];
+	/* 0x0(sp) */ float dir0[4];
+	/* 0x10(sp) */ float dir1[4];
+	/* 0x20(sp) */ float v0[4];
+	/* 0x30(sp) */ float v2[4];
+	/* 0x40(sp) */ float n[4];
+	/* 0x50(sp) */ float AP[4];
+	/* 0x60(sp) */ float PA[4];
+	/* 0x70(sp) */ float P1P0[4];
+	/* 0x80(sp) */ float normal[4];
+	/* 0x90(sp) */ float p0[4];
+	/* 0xa0(sp) */ float p1[4];
 	/* f20 58 */ float dist;
 	/* f20 58 */ float inner;
-	/* -0xb0(sp) */ float v[4];
-	/* -0xa0(sp) */ float v[4];
-	/* -0x90(sp) */ float n[4];
-	/* -0x80(sp) */ float v[4];
+	/* 0xb0(sp) */ float v[4];
+	/* 0xc0(sp) */ float v[4];
+	/* 0xd0(sp) */ float n[4];
+	/* 0xe0(sp) */ float v[4];
 	/* f20 58 */ float rdif;
 }
 
 /* 0011c000 00000108 */ u_char acsCheckCollisionPlane(/* s0 16 */ CPLANE *plane, /* s2 18 */ float *current, /* s3 19 */ float *relative_v, /* f20 58 */ float Ke, /* s1 17 */ int ofs) {
-	/* -0x50(sp) */ float p_vec[4];
-	/* -0x40(sp) */ float tmp[4];
+	/* 0x0(sp) */ float p_vec[4];
+	/* 0x10(sp) */ float tmp[4];
 	/* f3 41 */ float inner;
 }
 
 /* 0011c108 00000034 */ void SetLWS2(/* s0 16 */ SGDCOORDINATE *cp) {}
-/* 002cca40 00000054 */ C_PARTICLE* C_PARTICLE * _fixed_array_verifyrange<C_PARTICLE>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
-/* 002cca40 00000054 */ fixed_array<C_PARTICLE,20>* fixed_array<C_PARTICLE, 20> * _fixed_array_verifyrange<fixed_array<C_PARTICLE, 20> >(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
-/* 002cca40 00000054 */ SPRING* SPRING * _fixed_array_verifyrange<SPRING>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
-/* 002cca40 00000054 */ fixed_array<SPRING,20>* fixed_array<SPRING, 20> * _fixed_array_verifyrange<fixed_array<SPRING, 20> >(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
-/* 002cca40 00000054 */ float*[4][4] float [3][3] * _fixed_array_verifyrange<float [3][3]>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
-/* 002cca40 00000054 */ ENE_COLLISION* ENE_COLLISION * _fixed_array_verifyrange<ENE_COLLISION>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
-/* 002cca40 00000054 */ C_ACS_CTRL* C_ACS_CTRL * _fixed_array_verifyrange<C_ACS_CTRL>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
-/* 002cca40 00000054 */ fixed_array<C_ACS_CTRL,15>* fixed_array<C_ACS_CTRL, 15> * _fixed_array_verifyrange<fixed_array<C_ACS_CTRL, 15> >(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
-/* 002cca40 00000054 */ COLLISION_DAT* COLLISION_DAT * _fixed_array_verifyrange<COLLISION_DAT>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
-/* 002cca40 00000054 */ TUBE* TUBE * _fixed_array_verifyrange<TUBE>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ C_PARTICLE* C_PARTICLE * _fixed_array_verifyrange<C_PARTICLE>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ fixed_array<C_PARTICLE,20>* fixed_array<C_PARTICLE, 20> * _fixed_array_verifyrange<fixed_array<C_PARTICLE, 20> >(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ SPRING* SPRING * _fixed_array_verifyrange<SPRING>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ fixed_array<SPRING,20>* fixed_array<SPRING, 20> * _fixed_array_verifyrange<fixed_array<SPRING, 20> >(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ float*[4][4] float [3][3] * _fixed_array_verifyrange<float [3][3]>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ ENE_COLLISION* ENE_COLLISION * _fixed_array_verifyrange<ENE_COLLISION>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ C_ACS_CTRL* C_ACS_CTRL * _fixed_array_verifyrange<C_ACS_CTRL>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ fixed_array<C_ACS_CTRL,15>* fixed_array<C_ACS_CTRL, 15> * _fixed_array_verifyrange<fixed_array<C_ACS_CTRL, 15> >(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ COLLISION_DAT* COLLISION_DAT * _fixed_array_verifyrange<COLLISION_DAT>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ TUBE* TUBE * _fixed_array_verifyrange<TUBE>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
 /* 0011c140 00000008 */ static void __static_initialization_and_destruction_0(/* a0 4 */ int __initialize_p, /* a1 5 */ int __priority) {}
-/* 002cca40 0000003c */ type_info& C_PARTICLE type_info function() {}
-/* 002cca40 0000004c */ type_info& fixed_array<C_PARTICLE, 20> type_info function() {}
-/* 002cca40 0000003c */ type_info& SPRING type_info function() {}
-/* 002cca40 0000004c */ type_info& fixed_array<SPRING, 20> type_info function() {}
-/* 002cca40 0000003c */ type_info& float [3][3] type_info function() {}
-/* 002cca40 0000003c */ type_info& ENE_COLLISION type_info function() {}
-/* 002cca40 0000003c */ type_info& C_ACS_CTRL type_info function() {}
-/* 002cca40 0000004c */ type_info& fixed_array<C_ACS_CTRL, 15> type_info function() {}
-/* 002cca40 0000003c */ type_info& COLLISION_DAT type_info function() {}
-/* 002cca40 0000003c */ type_info& TUBE type_info function() {}
-/* 002cca40 0000003c */ type_info& fixed_array_base<C_PARTICLE, 20, C_PARTICLE [19]> type_info function() {}
-/* 002cca40 0000003c */ type_info& fixed_array_base<SPRING, 20, SPRING [19]> type_info function() {}
+/* ffffffff 0000003c */ type_info& C_PARTICLE type_info function() {}
+/* ffffffff 0000004c */ type_info& fixed_array<C_PARTICLE, 20> type_info function() {}
+/* ffffffff 0000003c */ type_info& SPRING type_info function() {}
+/* ffffffff 0000004c */ type_info& fixed_array<SPRING, 20> type_info function() {}
+/* ffffffff 0000003c */ type_info& float [3][3] type_info function() {}
+/* ffffffff 0000003c */ type_info& ENE_COLLISION type_info function() {}
+/* ffffffff 0000003c */ type_info& C_ACS_CTRL type_info function() {}
+/* ffffffff 0000004c */ type_info& fixed_array<C_ACS_CTRL, 15> type_info function() {}
+/* ffffffff 0000003c */ type_info& COLLISION_DAT type_info function() {}
+/* ffffffff 0000003c */ type_info& TUBE type_info function() {}
+/* ffffffff 0000003c */ type_info& fixed_array_base<C_PARTICLE, 20, C_PARTICLE [19]> type_info function() {}
+/* ffffffff 0000003c */ type_info& fixed_array_base<SPRING, 20, SPRING [19]> type_info function() {}
 /* 002cca40 0000003c */ type_info& fixed_array_base<C_ACS_CTRL, 15, C_ACS_CTRL [14]> type_info function() {}
 /* 0011c148 00000020 */ static void global constructors keyed to rope_spring() {}
 
@@ -2952,19 +2957,19 @@
 /* 0011cbe0 00000010 */ static void AlbumDispCtrlInit() {}
 
 /* 0011cbf0 000000f8 */ void AlbumDispMain() {
-	/* -0x30(sp) */ u_char alpha;
+	/* 0x0(sp) */ u_char alpha;
 }
 
 /* 0011cce8 00000018 */ void SetSave_AlbumData(/* a0 4 */ MC_SAVE_DATA *data) {}
 /* 0011cd00 00000068 */ void SetSave_AlbumInfoData(/* s1 17 */ MC_SAVE_DATA *data) {}
-/* 002d4370 00000054 */ ALBUM_INFO* ALBUM_INFO * _fixed_array_verifyrange<ALBUM_INFO>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
-/* 002d4370 00000054 */ PICTURE_WRK* PICTURE_WRK * _fixed_array_verifyrange<PICTURE_WRK>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ ALBUM_INFO* ALBUM_INFO * _fixed_array_verifyrange<ALBUM_INFO>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ PICTURE_WRK* PICTURE_WRK * _fixed_array_verifyrange<PICTURE_WRK>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
 
 /* 0011cd68 0000007c */ static void __static_initialization_and_destruction_0(/* a0 4 */ int __initialize_p, /* a1 5 */ int __priority) {
 	/* v0 2 */ int *ra;
 }
 
-/* 002d4370 0000003c */ type_info& ALBUM_INFO type_info function() {}
+/* ffffffff 0000003c */ type_info& ALBUM_INFO type_info function() {}
 /* 002d4370 0000003c */ type_info& PICTURE_WRK type_info function() {}
 /* 0011cde8 00000020 */ static void global constructors keyed to album_info() {}
 
@@ -3003,74 +3008,74 @@
 /* 0011d138 00000090 */ void AlbumEditFrameDisp(/* a0 4 */ int off_x, /* a1 5 */ int off_y, /* a2 6 */ u_char alpha) {}
 
 /* 0011d1c8 00000088 */ void AlbumBlackBgDisp(/* a0 4 */ int off_x, /* a1 5 */ int off_y, /* a2 6 */ u_char alpha, /* a3 7 */ u_char max_alpha) {
-	/* -0xc0(sp) */ DISP_SQAR dsq;
-	/* -0x40(sp) */ SQAR_DAT cursor_base;
+	/* 0x0(sp) */ DISP_SQAR dsq;
+	/* 0x80(sp) */ SQAR_DAT cursor_base;
 }
 
 /* 0011d250 000000a8 */ void AlbumTitleFrameDisp(/* a0 4 */ int off_x, /* a1 5 */ int off_y, /* s2 18 */ u_char alpha) {
 	/* s0 16 */ int i;
-	/* -0xc0(sp) */ DISP_SPRT title_ds;
+	/* 0x0(sp) */ DISP_SPRT title_ds;
 }
 
 /* 0011d2f8 00000088 */ void AlbumTitleDisp(/* s0 16 */ int off_x, /* s1 17 */ int off_y, /* a2 6 */ u_char alpha) {
-	/* -0xb0(sp) */ DISP_SPRT title_ds;
+	/* 0x0(sp) */ DISP_SPRT title_ds;
 }
 
 /* 0011d380 00000108 */ static void AlbumBaseFrameDisp(/* a0 4 */ int off_x, /* a1 5 */ int off_y, /* s2 18 */ u_char alpha) {
 	/* s0 16 */ int i;
-	/* -0xc0(sp) */ DISP_SPRT base_ds;
+	/* 0x0(sp) */ DISP_SPRT base_ds;
 }
 
 /* 0011d488 000000b0 */ static void AlbumA_FrameDisp(/* a0 4 */ int off_x, /* a1 5 */ int off_y, /* s2 18 */ u_char alpha) {
 	/* s0 16 */ int i;
-	/* -0xc0(sp) */ DISP_SPRT frame_ds;
+	/* 0x0(sp) */ DISP_SPRT frame_ds;
 }
 
 /* 0011d538 000000b0 */ static void AlbumA_ThumbnailFrameDisp(/* a0 4 */ int off_x, /* a1 5 */ int off_y, /* s2 18 */ u_char alpha) {
 	/* s0 16 */ int i;
-	/* -0xc0(sp) */ DISP_SPRT frame_ds;
+	/* 0x0(sp) */ DISP_SPRT frame_ds;
 }
 
 /* 0011d5e8 00000304 */ void AlbumA_CurrentFrameFlareDisp(/* s1 17 */ int off_x, /* s2 18 */ int off_y, /* s4 20 */ u_char alpha, /* s3 19 */ u_char rgb) {
 	/* s0 16 */ int i;
-	/* -0xe0(sp) */ DISP_SPRT frame_ds;
+	/* 0x0(sp) */ DISP_SPRT frame_ds;
 }
 
 /* 0011d8f0 000000b0 */ static void AlbumB_FrameDisp(/* a0 4 */ int off_x, /* a1 5 */ int off_y, /* s2 18 */ u_char alpha) {
 	/* s0 16 */ int i;
-	/* -0xc0(sp) */ DISP_SPRT frame_ds;
+	/* 0x0(sp) */ DISP_SPRT frame_ds;
 }
 
 /* 0011d9a0 000000b0 */ static void AlbumB_ThumbnailFrameDisp(/* a0 4 */ int off_x, /* a1 5 */ int off_y, /* s2 18 */ u_char alpha) {
 	/* s0 16 */ int i;
-	/* -0xc0(sp) */ DISP_SPRT frame_ds;
+	/* 0x0(sp) */ DISP_SPRT frame_ds;
 }
 
 /* 0011da50 00000304 */ void AlbumB_CurrentFrameFlareDisp(/* s0 16 */ int off_x, /* s1 17 */ int off_y, /* s3 19 */ u_char alpha, /* s2 18 */ u_char rgb) {
 	/* s0 16 */ int i;
-	/* -0xe0(sp) */ DISP_SPRT frame_ds;
+	/* 0x0(sp) */ DISP_SPRT frame_ds;
 }
 
 /* 0011dd58 00000138 */ static void AlbumAPhotoNumDisp(/* s2 18 */ int off_x, /* s3 19 */ int off_y, /* a2 6 */ u_char alpha) {
-	/* -0xd0(sp) */ DISP_SPRT num_ds;
+	/* 0x0(sp) */ DISP_SPRT num_ds;
 }
 
 /* 0011de90 00000138 */ static void AlbumBPhotoNumDisp(/* s2 18 */ int off_x, /* s3 19 */ int off_y, /* a2 6 */ u_char alpha) {
-	/* -0xd0(sp) */ DISP_SPRT num_ds;
+	/* 0x0(sp) */ DISP_SPRT num_ds;
 }
 
 /* 0011dfc8 00000100 */ void AlbumThumbnailBaseDisp(/* a0 4 */ int data_label, /* s6 22 */ int off_x, /* s5 21 */ int off_y, /* s4 20 */ u_char alpha) {
 	/* s7 23 */ int i;
 	/* s0 16 */ int j;
-	/* -0xe0(sp) */ DISP_SPRT frame_ds;
+	/* 0x0(sp) */ DISP_SPRT frame_ds;
 	/* sdata 3ef348 */ static int thumbnail_base_x[2];
 	/* sdata 3ef350 */ static int thumbnail_base_y[2];
 }
 
 /* 0011e0c8 0000023c */ void AlbumThumbnailBaseNumberDisp(/* a0 4 */ int data_label, /* a1 5 */ int off_x, /* a2 6 */ int off_y, /* s4 20 */ u_char alpha) {
-	/* -0x80(sp) */ int i;
+	/* 0x90(sp) */ int i;
 	/* s6 22 */ int j;
-	/* -0x110(sp) */ DISP_SPRT frame_ds;
+	/* 0x0(sp) */ DISP_SPRT frame_ds;
 	/* sdata 3ef358 */ static int thumbnail_base_x_tbl[2];
 	/* sdata 3ef360 */ static int thumbnail_num_y_tbl[2];
 	/* f21 59 */ float num_x;
@@ -3081,20 +3086,20 @@
 }
 
 /* 0011e308 00000164 */ void AlbumEditAlbumACursorDisp(/* s2 18 */ int photo_no, /* s7 23 */ int off_x, /* s6 22 */ int off_y, /* a3 7 */ u_char alpha, /* t0 8 */ u_char rgb) {
-	/* -0xe0(sp) */ DISP_SPRT cursor_ds;
+	/* 0x0(sp) */ DISP_SPRT cursor_ds;
 	/* s1 17 */ int csr_tate;
 	/* s2 18 */ int csr_yoko;
 }
 
 /* 0011e470 00000164 */ void AlbumEditAlbumBCursorDisp(/* s2 18 */ int photo_no, /* s7 23 */ int off_x, /* s6 22 */ int off_y, /* a3 7 */ u_char alpha, /* t0 8 */ u_char rgb) {
-	/* -0xe0(sp) */ DISP_SPRT cursor_ds;
+	/* 0x0(sp) */ DISP_SPRT cursor_ds;
 	/* s1 17 */ int csr_tate;
 	/* s2 18 */ int csr_yoko;
 }
 
 /* 0011e5d8 0000010c */ void AlbumEditAlbumDisp(/* a0 4 */ int data_label, /* a1 5 */ int album_type, /* s5 21 */ int off_x, /* s4 20 */ int off_y, /* s3 19 */ u_char alpha) {
 	/* s2 18 */ int i;
-	/* -0xe0(sp) */ DISP_SPRT album_ds;
+	/* 0x0(sp) */ DISP_SPRT album_ds;
 	/* rdata 3a04a0 */ static int album_x_tbl[2][2];
 	/* rdata 3a04b0 */ static int album_y_tbl[2][2];
 	/* rdata 3a04c0 */ static int album_disp_tbl[7][2];
@@ -3103,14 +3108,14 @@
 /* 0011e6e8 000001e4 */ void AlbumEditAlbumInfoWinDisp(/* s2 18 */ int album_type, /* s3 19 */ int off_x, /* s4 20 */ int off_y, /* s5 21 */ u_char alpha) {
 	/* rdata 3a04f8 */ static char __FUNCTION__[26];
 	/* s0 16 */ int i;
-	/* -0xe0(sp) */ DISP_SPRT info_ds;
+	/* 0x0(sp) */ DISP_SPRT info_ds;
 	/* rdata 3a0518 */ static int album_info_tex_tbl[7][2];
 	/* rdata 3a0550 */ static int album_info_name_tbl[7];
 }
 
 /* 0011e8d0 000000a0 */ void AlbumEditInfoNoDisp(/* a0 4 */ int album_type, /* s0 16 */ int off_x, /* s1 17 */ int off_y, /* a3 7 */ u_char alpha) {
 	/* rdata 3a05c0 */ static int no_tex_tbl[7];
-	/* -0xb0(sp) */ DISP_SPRT no_ds;
+	/* 0x0(sp) */ DISP_SPRT no_ds;
 }
 
 /* 0011e970 00000058 */ void AlbumEditInfoPhotoNoDisp(/* a0 4 */ int album_type, /* a1 5 */ int csr_num, /* a2 6 */ int off_x, /* a3 7 */ int off_y, /* t0 8 */ u_char alpha) {
@@ -3119,32 +3124,32 @@
 
 /* 0011e9c8 000000e0 */ void AlbumEditAlbumInfoWinItemDisp(/* a0 4 */ int album_type, /* a1 5 */ int off_x, /* a2 6 */ int off_y, /* s3 19 */ u_char alpha) {
 	/* s0 16 */ int i;
-	/* -0xd0(sp) */ DISP_SPRT info_ds;
+	/* 0x0(sp) */ DISP_SPRT info_ds;
 	/* rdata 3a0600 */ static int item_tex_tbl[7][2];
 }
 
 /* 0011eaa8 000003f4 */ void AlbumEditPhotoFrameDisp(/* v0 2 */ int off_x, /* v1 3 */ int off_y, /* s2 18 */ u_char alpha, /* a3 7 */ void *pk2_addr) {
 	/* s0 16 */ int i;
-	/* -0xc0(sp) */ DISP_SPRT photo_ds;
+	/* 0x0(sp) */ DISP_SPRT photo_ds;
 }
 
 /* 0011eea0 000000b0 */ void AlbumEditPhotoProtectionFrameDisp(/* a0 4 */ int off_x, /* a1 5 */ int off_y, /* s2 18 */ u_char alpha) {
 	/* s0 16 */ int i;
-	/* -0xc0(sp) */ DISP_SPRT photo_ds;
+	/* 0x0(sp) */ DISP_SPRT photo_ds;
 }
 
 /* 0011ef50 000001ac */ void AlbumMenuSelFrameDisp(/* a0 4 */ int data_label, /* s4 20 */ int x, /* s0 16 */ int y, /* s3 19 */ u_char alpha, /* f21 59 */ float scl, /* s1 17 */ u_char rgb) {
-	/* -0xe0(sp) */ DISP_SPRT sel_frame_ds;
+	/* 0x0(sp) */ DISP_SPRT sel_frame_ds;
 	/* rdata 3a0638 */ static int album_frame_tbl[2][2];
 }
 
 /* 0011f100 00000184 */ void AlbumMenuNonSelFrameDisp(/* a0 4 */ int data_label, /* s2 18 */ int x, /* a2 6 */ int y, /* s1 17 */ u_char alpha, /* f21 59 */ float scl) {
-	/* -0xd0(sp) */ DISP_SPRT sel_frame_ds;
+	/* 0x0(sp) */ DISP_SPRT sel_frame_ds;
 	/* rdata 3a0648 */ static int album_frame_tbl[2][2];
 }
 
 /* 0011f288 00000248 */ void AlbumConfYesNoDisp(/* s1 17 */ int conf_csr, /* s6 22 */ int off_x, /* a2 6 */ int off_y, /* s5 21 */ u_char alpha, /* s4 20 */ u_char rgb) {
-	/* -0xe0(sp) */ DISP_SPRT conf_ds;
+	/* 0x0(sp) */ DISP_SPRT conf_ds;
 	/* s2 18 */ int i;
 	/* rdata 3a0658 */ static int conf_tex_tbl[2][2];
 	/* rdata 3a0668 */ static int csr_x_tbl[2][2];
@@ -3152,7 +3157,7 @@
 }
 
 /* 0011f4d0 00000090 */ void AlbumMenuItemDisp(/* a0 4 */ int menu_label, /* s0 16 */ int x, /* s1 17 */ int y, /* a3 7 */ u_char alpha) {
-	/* -0xb0(sp) */ DISP_SPRT menu_ds;
+	/* 0x0(sp) */ DISP_SPRT menu_ds;
 	/* rdata 3a0688 */ static int menu_item_tbl[5];
 }
 
@@ -3168,24 +3173,24 @@
 
 /* 0011f748 000000b0 */ static void AlbumSlotSelectDisp(/* a0 4 */ int off_x, /* a1 5 */ int off_y, /* s2 18 */ u_char alpha) {
 	/* s0 16 */ int i;
-	/* -0xc0(sp) */ DISP_SPRT slot_ds;
+	/* 0x0(sp) */ DISP_SPRT slot_ds;
 }
 
 /* 0011f7f8 000000e8 */ void AlbumSaveSelAlbumDisp(/* v0 2 */ int album_type, /* s0 16 */ int off_x, /* s1 17 */ int off_y, /* a3 7 */ u_char alpha) {
 	/* rdata 3a06a0 */ static char __FUNCTION__[22];
-	/* -0xb0(sp) */ DISP_SPRT album_ds;
+	/* 0x0(sp) */ DISP_SPRT album_ds;
 	/* rdata 3a06b8 */ static int album_tex_tbl[7];
 }
 
 /* 0011f8e0 000001cc */ void AlbumSaveSelAlbumCsrDisp(/* s4 20 */ int album_type, /* fp 30 */ int off_x, /* v1 3 */ int off_y, /* a3 7 */ u_char alpha, /* t0 8 */ u_char rgb) {
 	/* rdata 3a0718 */ static char __FUNCTION__[25];
-	/* -0xf0(sp) */ DISP_SPRT album_ds;
+	/* 0x0(sp) */ DISP_SPRT album_ds;
 	/* rdata 3a0738 */ static int album_tex_tbl[7][2];
 }
 
 /* 0011fab0 000001b8 */ void AlbumSaveNonSelAlbumCsrDisp(/* s3 19 */ int album_type, /* s7 23 */ int off_x, /* v1 3 */ int off_y, /* a3 7 */ u_char alpha, /* t0 8 */ u_char rgb) {
 	/* rdata 3a0770 */ static char __FUNCTION__[28];
-	/* -0xe0(sp) */ DISP_SPRT album_ds;
+	/* 0x0(sp) */ DISP_SPRT album_ds;
 	/* rdata 3a0790 */ static int album_tex_tbl[7][2];
 }
 
@@ -3197,27 +3202,27 @@
 
 /* 0011fd60 0000011c */ void AlbumSaveSelSlotDisp(/* s4 20 */ int sel_slot, /* a1 5 */ int off_x, /* a2 6 */ int off_y, /* s2 18 */ u_char alpha, /* s0 16 */ u_char rgb) {
 	/* s1 17 */ int i;
-	/* -0xe0(sp) */ DISP_SPRT album_ds;
+	/* 0x10(sp) */ DISP_SPRT album_ds;
 	/* sdata 3ef378 */ static int msg_id_tbl[2];
 }
 
 /* 0011fe80 00000104 */ void AlbumSaveSelAlbumCsrFlareDisp(/* v0 2 */ int album_type, /* s2 18 */ int off_x, /* s1 17 */ int off_y, /* a3 7 */ u_char alpha, /* t0 8 */ u_char rgb) {
 	/* rdata 3a0828 */ static char __FUNCTION__[30];
-	/* -0xc0(sp) */ DISP_SPRT album_ds;
+	/* 0x0(sp) */ DISP_SPRT album_ds;
 	/* rdata 3a0848 */ static int album_tex_tbl[7];
 }
 
 /* 0011ff88 0000014c */ void AlbumSaveAlbumMaskDisp(/* a0 4 */ int album_type, /* s6 22 */ int off_x, /* s5 21 */ int off_y, /* s4 20 */ u_char alpha, /* s1 17 */ u_char rgb) {
 	/* rdata 3a0868 */ static char __FUNCTION__[23];
-	/* -0xe0(sp) */ DISP_SPRT album_ds;
+	/* 0x0(sp) */ DISP_SPRT album_ds;
 	/* s2 18 */ int i;
 	/* rdata 3a0880 */ static int album_tex_tbl[7][2];
 }
 
 /* 001200d8 00000040 */ void AlbumSaveMsgWinDisp(/* a0 4 */ int off_x, /* a1 5 */ int off_y, /* a2 6 */ u_char alpha) {}
 /* 00120118 0000005c */ void AlbumMcMsgWinDisp(/* s1 17 */ int off_x, /* s2 18 */ int off_y, /* a2 6 */ u_char alpha) {}
-/* 002d7dc8 00000054 */ ALBUM_INFO* ALBUM_INFO * _fixed_array_verifyrange<ALBUM_INFO>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
-/* 002d7dc8 0000003c */ type_info& ALBUM_INFO type_info function() {}
+/* ffffffff 00000054 */ ALBUM_INFO* ALBUM_INFO * _fixed_array_verifyrange<ALBUM_INFO>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 0000003c */ type_info& ALBUM_INFO type_info function() {}
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/album/prg/album_edit.c
@@ -3305,7 +3310,10 @@
 	/* v1 3 */ u_int tmp_copy_addr;
 }
 
-/* 00122160 0000012c */ static void AlbumPhotoDelete(/* s1 17 */ int del_album, /* s3 19 */ int photo_no) {}
+/* 00122160 0000012c */ static void AlbumPhotoDelete(/* s1 17 */ int del_album, /* s3 19 */ int photo_no) {
+	/* rdata 3a09e0 */ static char __FUNCTION__[17];
+}
+
 /* 00122290 00000034 */ static void AlbumEditModeSave() {}
 /* 001222c8 00000034 */ static void AlbumEditModeLoad() {}
 /* 00122300 00000018 */ void AlbumEditMenuDelete() {}
@@ -3340,7 +3348,7 @@
 /* 001226b8 00000030 */ static void AlbumEditDispInit() {}
 
 /* 001226e8 000000c0 */ void AlbumEditDispMain() {
-	/* -0x30(sp) */ u_char alpha;
+	/* 0x0(sp) */ u_char alpha;
 	/* s1 17 */ void *album_cmn_tex_addr;
 }
 
@@ -3350,8 +3358,8 @@
 	/* s5 21 */ void *album_edit_tex_addr;
 }
 
-/* 00122a18 0000017c */ static void AlbumEditAlbumThumbnailDisp(/* s2 18 */ int data_label, /* -0x60(sp) */ int off_x, /* -0x5c(sp) */ int off_y, /* -0x58(sp) */ u_char alpha) {
-	/* -0x54(sp) */ int i;
+/* 00122a18 0000017c */ static void AlbumEditAlbumThumbnailDisp(/* s2 18 */ int data_label, /* 0x10(sp) */ int off_x, /* 0x14(sp) */ int off_y, /* 0x18(sp) */ u_char alpha) {
+	/* 0x1c(sp) */ int i;
 	/* s4 20 */ int j;
 	/* s6 22 */ int photo_num;
 	/* sdata 3ef3c0 */ static int thumbnail_x_tbl[2];
@@ -3363,7 +3371,7 @@
 	/* s2 18 */ int j;
 	/* s3 19 */ int photo_num;
 	/* f0 38 */ float x;
-	/* -0xf0(sp) */ DISP_SPRT protect_ds;
+	/* 0x0(sp) */ DISP_SPRT protect_ds;
 }
 
 /* 00122d38 00000130 */ static void AlbumEditPhotoDisp(/* s1 17 */ int album_data, /* s2 18 */ int photo_no, /* a2 6 */ int off_x, /* a3 7 */ int off_y, /* s4 20 */ u_char alpha) {}
@@ -3373,16 +3381,16 @@
 	/* s3 19 */ int i;
 	/* s6 22 */ int subject_num;
 	/* a3 7 */ int msg_y;
-	/* -0x70(sp) */ DATE_INFO date;
+	/* 0x10(sp) */ DATE_INFO date;
 }
 
-/* 00123308 0000017c */ static void AlbumEditMenuDisp(/* s4 20 */ int album_data, /* a1 5 */ int album_type, /* a2 6 */ int off_x, /* a3 7 */ int off_y, /* -0x50(sp) */ u_char alpha) {
+/* 00123308 0000017c */ static void AlbumEditMenuDisp(/* s4 20 */ int album_data, /* a1 5 */ int album_type, /* a2 6 */ int off_x, /* a3 7 */ int off_y, /* 0x0(sp) */ u_char alpha) {
 	/* s0 16 */ int i;
 	/* s1 17 */ int menu_num;
 	/* s1 17 */ int frame_top_y;
 	/* s2 18 */ int item_top_y;
-	/* -0x4c(sp) */ float sel_frame_scl;
-	/* -0x48(sp) */ float non_sel_frame_scl;
+	/* 0x4(sp) */ float sel_frame_scl;
+	/* 0x8(sp) */ float non_sel_frame_scl;
 	/* s5 21 */ void *album_edit_tex_addr;
 	/* rdata 3a0a58 */ static int menu_item_x[5];
 }
@@ -3405,26 +3413,26 @@
 	/* s2 18 */ int photo_no;
 }
 
-/* 00123870 000001f8 */ static void AlbumEditSortMenuDisp(/* s6 22 */ int off_x, /* s1 17 */ int off_y, /* -0x100(sp) */ u_char alpha) {
-	/* -0xf0(sp) */ DISP_SPRT sort_ds;
+/* 00123870 000001f8 */ static void AlbumEditSortMenuDisp(/* s6 22 */ int off_x, /* s1 17 */ int off_y, /* 0x0(sp) */ u_char alpha) {
+	/* 0x10(sp) */ DISP_SPRT sort_ds;
 	/* s2 18 */ int i;
 	/* s5 21 */ int current_album;
-	/* -0x60(sp) */ float sel_frame_scl;
-	/* -0x5c(sp) */ float non_sel_frame_scl;
+	/* 0xa0(sp) */ float sel_frame_scl;
+	/* 0xa4(sp) */ float non_sel_frame_scl;
 	/* sdata 3ef3d0 */ static int sort_x_tbl[2];
 }
 
 /* 00123a68 00000220 */ static void AlbumEditCopyPosSelDisp(/* s5 21 */ int off_x, /* s6 22 */ int off_y, /* s1 17 */ u_char alpha) {
 	/* s3 19 */ void *album_cmn_tex_addr;
 	/* s4 20 */ int photo_no;
-	/* -0x50(sp) */ u_char csr_rgb;
+	/* 0x0(sp) */ u_char csr_rgb;
 }
 
 /* 00123c88 00000228 */ static void AlbumEditCopyConfDisp(/* s4 20 */ int off_x, /* s5 21 */ int off_y, /* s2 18 */ u_char alpha) {
 	/* s1 17 */ void *album_cmn_tex_addr;
 	/* s6 22 */ void *album_edit_tex_addr;
 	/* a1 5 */ int photo_no;
-	/* -0x50(sp) */ u_char csr_rgb;
+	/* 0x0(sp) */ u_char csr_rgb;
 }
 
 /* 00123eb0 000001d4 */ static void AlbumEditDelConfDisp(/* s4 20 */ int off_x, /* s5 21 */ int off_y, /* s2 18 */ u_char alpha) {
@@ -3432,7 +3440,7 @@
 	/* s6 22 */ void *album_edit_tex_addr;
 	/* s1 17 */ int current_album;
 	/* s3 19 */ int photo_no;
-	/* -0x50(sp) */ u_char csr_rgb;
+	/* 0x0(sp) */ u_char csr_rgb;
 }
 
 /* 00124088 000001c8 */ static void AlbumEditLoadConfDisp(/* s4 20 */ int off_x, /* s5 21 */ int off_y, /* s2 18 */ u_char alpha) {
@@ -3440,7 +3448,7 @@
 	/* s6 22 */ void *album_edit_tex_addr;
 	/* s1 17 */ int current_album;
 	/* s3 19 */ int photo_no;
-	/* -0x50(sp) */ u_char rgb;
+	/* 0x0(sp) */ u_char rgb;
 }
 
 /* 00124250 00000024 */ static void AlbumEditSaveDisp(/* a0 4 */ int off_x, /* a1 5 */ int off_y, /* a2 6 */ u_char alpha) {}
@@ -3451,12 +3459,14 @@
 	/* s4 20 */ void *album_edit_tex_addr;
 	/* s0 16 */ int current_album;
 	/* s3 19 */ int photo_no;
-	/* -0x40(sp) */ u_char rgb;
+	/* 0x0(sp) */ u_char rgb;
 }
 
-/* 002d7dc8 00000054 */ PICTURE_WRK* PICTURE_WRK * _fixed_array_verifyrange<PICTURE_WRK>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
-/* 002d7dc8 00000054 */ PICTURE_SUBJECT* _PICTURE_SUBJECT * _fixed_array_verifyrange<_PICTURE_SUBJECT>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
-/* 002d7dc8 0000003c */ type_info& PICTURE_WRK type_info function() {}
+/* ffffffff 00000054 */ ALBUM_INFO* ALBUM_INFO * _fixed_array_verifyrange<ALBUM_INFO>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ PICTURE_WRK* PICTURE_WRK * _fixed_array_verifyrange<PICTURE_WRK>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ PICTURE_SUBJECT* _PICTURE_SUBJECT * _fixed_array_verifyrange<_PICTURE_SUBJECT>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 0000003c */ type_info& ALBUM_INFO type_info function() {}
+/* ffffffff 0000003c */ type_info& PICTURE_WRK type_info function() {}
 /* 002d7dc8 0000003c */ type_info& _PICTURE_SUBJECT type_info function() {}
 
 // *****************************************************************************
@@ -3504,7 +3514,7 @@
 }
 
 /* 00124ba0 00000074 */ static void AlbumLoadMcGetDirInfoInit() {
-	/* -0x60(sp) */ char path_name[55];
+	/* 0x0(sp) */ char path_name[55];
 }
 
 /* 00124c18 000001c0 */ static void AlbumLoadMcGetDirInfoWait() {
@@ -3520,7 +3530,9 @@
 	/* s6 22 */ char csr_back_up;
 }
 
-/* 001250a8 00000060 */ static void AlbumLoadMcCheckAgainInit() {}
+/* 001250a8 00000060 */ static void AlbumLoadMcCheckAgainInit() {
+	/* 0x0(sp) */ char path_name[55];
+}
 
 /* 00125108 000000e8 */ static void AlbumLoadMcCheckAgainWait() {
 	/* s0 16 */ int mc_res;
@@ -3533,6 +3545,7 @@
 /* 001253b0 000000e4 */ static void AlbumLoadMcLoadInit() {
 	/* rdata 3a0cc0 */ static char __FUNCTION__[20];
 	/* s0 16 */ int size;
+	/* 0x0(sp) */ char path_name[55];
 }
 
 /* 00125498 00000108 */ static void AlbumLoadMcLoadWait() {
@@ -3557,15 +3570,17 @@
 /* 00125800 00000018 */ static void AlbumLoadDispInit() {}
 
 /* 00125818 000000f0 */ void AlbumLoadDispMain() {
-	/* -0x30(sp) */ u_char alpha;
+	/* rdata 3a0d60 */ static char __FUNCTION__[18];
+	/* 0x0(sp) */ u_char alpha;
 }
 
 /* 00125908 000000c8 */ static void AlbumLoadSlotSelDisp(/* s1 17 */ int off_x, /* s2 18 */ int off_y, /* a2 6 */ u_char alpha) {}
 
 /* 001259d0 000003fc */ static void AlbumLoadMcLoadDisp(/* s4 20 */ int off_x, /* s3 19 */ int off_y, /* s2 18 */ u_char alpha) {
+	/* rdata 3a0d78 */ static char __FUNCTION__[20];
 	/* s1 17 */ void *album_slot_tex_addr;
 	/* a0 4 */ void *album_sl_addr;
-	/* -0x40(sp) */ u_char csr_rgb;
+	/* 0x0(sp) */ u_char csr_rgb;
 }
 
 /* 00125dd0 00000114 */ static void AlbumLoadAlbumSelDisp(/* s2 18 */ u_char alpha) {
@@ -3573,7 +3588,7 @@
 	/* s0 16 */ int msg_col;
 }
 
-/* 002d7e68 00000054 */ char* char * _fixed_array_verifyrange<char>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ char* char * _fixed_array_verifyrange<char>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
 /* 00125ee8 00000008 */ static void __static_initialization_and_destruction_0(/* a0 4 */ int __initialize_p, /* a1 5 */ int __priority) {}
 /* 00125ef0 00000020 */ static void global constructors keyed to AlbumLoadCtrlInit() {}
 
@@ -3591,7 +3606,10 @@
 }
 
 /* 00126060 0000000c */ void* GetAlbumMemAddr() {}
-/* 00126070 00000044 */ void AlbumMemFree(/* a2 6 */ char *file, /* a3 7 */ int line) {}
+
+/* 00126070 00000044 */ void AlbumMemFree(/* a2 6 */ char *file, /* a3 7 */ int line) {
+	/* rdata 3a0e58 */ static char __FUNCTION__[13];
+}
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/album/prg/album_save.c
@@ -3635,7 +3653,7 @@
 }
 
 /* 001268e8 00000074 */ static void AlbumSaveMcGetDirInfoInit() {
-	/* -0x60(sp) */ char path_name[55];
+	/* 0x0(sp) */ char path_name[55];
 }
 
 /* 00126960 0000011c */ static void AlbumSaveMcGetDirInfoWait() {
@@ -3650,7 +3668,9 @@
 	/* v0 2 */ int mc_res;
 }
 
-/* 00126cd0 00000060 */ static void AlbumSaveMcCheckAgainInit() {}
+/* 00126cd0 00000060 */ static void AlbumSaveMcCheckAgainInit() {
+	/* 0x0(sp) */ char path_name[55];
+}
 
 /* 00126d30 00000190 */ static void AlbumSaveMcCheckAgainWait() {
 	/* s1 17 */ int mc_res;
@@ -3662,8 +3682,9 @@
 
 /* 00127080 00000170 */ static void AlbumSaveMcSaveInit() {
 	/* rdata 3a1110 */ static char __FUNCTION__[20];
-	/* -0x80(sp) */ int save_file_label[1];
+	/* 0x0(sp) */ int save_file_label[1];
 	/* s2 18 */ int size;
+	/* 0x10(sp) */ char path_name[55];
 }
 
 /* 001271f0 0000007c */ static void AlbumSaveMcSaveWait() {
@@ -3720,15 +3741,17 @@
 /* 00127c70 00000018 */ static void AlbumSaveDispInit() {}
 
 /* 00127c88 000000f0 */ void AlbumSaveDispMain() {
-	/* -0x30(sp) */ u_char alpha;
+	/* rdata 3a11d0 */ static char __FUNCTION__[18];
+	/* 0x0(sp) */ u_char alpha;
 }
 
 /* 00127d78 000000c8 */ static void AlbumSaveSlotSelDisp(/* s1 17 */ int off_x, /* s2 18 */ int off_y, /* a2 6 */ u_char alpha) {}
 
 /* 00127e40 00000474 */ static void AlbumSaveMcSaveDisp(/* s4 20 */ int off_x, /* s3 19 */ int off_y, /* s2 18 */ u_char alpha) {
+	/* rdata 3a11e8 */ static char __FUNCTION__[20];
 	/* s1 17 */ void *album_slot_tex_addr;
 	/* a0 4 */ void *album_sl_addr;
-	/* -0x40(sp) */ u_char csr_rgb;
+	/* 0x0(sp) */ u_char csr_rgb;
 }
 
 /* 001282b8 000000d0 */ static void AlbumSaveAlbumSelDisp(/* s2 18 */ u_char alpha) {
@@ -3736,8 +3759,8 @@
 	/* s0 16 */ int msg_col;
 }
 
-/* 002d7e68 00000054 */ ALBUM_INFO* ALBUM_INFO * _fixed_array_verifyrange<ALBUM_INFO>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
-/* 002d7e68 0000003c */ type_info& ALBUM_INFO type_info function() {}
+/* ffffffff 00000054 */ ALBUM_INFO* ALBUM_INFO * _fixed_array_verifyrange<ALBUM_INFO>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 0000003c */ type_info& ALBUM_INFO type_info function() {}
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/album/prg/album_view.c
@@ -3775,7 +3798,7 @@
 /* 00128ab8 00000014 */ static void AlbumViewDispInit() {}
 
 /* 00128ad0 00000388 */ void AlbumViewDispMain() {
-	/* -0x60(sp) */ u_char alpha;
+	/* 0x0(sp) */ u_char alpha;
 	/* s3 19 */ int current_album;
 	/* s7 23 */ char before_photo_no;
 	/* fp 30 */ char after_photo_no;
@@ -3784,27 +3807,28 @@
 }
 
 /* 00128e58 000000e0 */ static void AlbumViewBaseDisp(/* a0 4 */ int album_type, /* a1 5 */ int off_x, /* a2 6 */ int off_y, /* s3 19 */ u_char alpha) {
-	/* -0xd0(sp) */ DISP_SPRT base_ds;
+	/* 0x0(sp) */ DISP_SPRT base_ds;
 	/* s0 16 */ int i;
 	/* rdata 3a1360 */ static int frame_tex_tbl[7][2];
 }
 
 /* 00128f38 000000b0 */ static void AlbumViewFrameDisp(/* a0 4 */ int off_x, /* a1 5 */ int off_y, /* s2 18 */ u_char alpha) {
-	/* -0xc0(sp) */ DISP_SPRT frame_ds;
+	/* 0x0(sp) */ DISP_SPRT frame_ds;
 	/* s0 16 */ int i;
 }
 
 /* 00128fe8 00000140 */ static void AlbumViewNoDisp(/* s1 17 */ int album_type, /* s2 18 */ int off_x, /* s3 19 */ int off_y, /* s4 20 */ u_char alpha) {
 	/* rdata 3a1398 */ static char __FUNCTION__[16];
-	/* -0xd0(sp) */ DISP_SPRT type_ds;
+	/* 0x0(sp) */ DISP_SPRT type_ds;
 	/* s1 17 */ int i;
 	/* rdata 3a13a8 */ static int type_tex_tbl[7][3];
 }
 
 /* 00129128 00000144 */ static void AlbumViewAlbumTypeDisp(/* s1 17 */ int album_type, /* s6 22 */ int off_x, /* s4 20 */ int off_y, /* s3 19 */ u_char alpha) {
 	/* rdata 3a1400 */ static char __FUNCTION__[23];
-	/* -0xd0(sp) */ DISP_SPRT type_ds;
+	/* 0x0(sp) */ DISP_SPRT type_ds;
 	/* s1 17 */ int i;
+	/* rdata 3a1418 */ static int type_tex_tbl[7][3];
 }
 
 /* 00129270 000001ec */ static void AlbumViewPhotoDisp(/* s1 17 */ int album_data, /* s2 18 */ int photo_no, /* a2 6 */ int off_x, /* a3 7 */ int off_y, /* s4 20 */ u_char alpha) {
@@ -3812,53 +3836,57 @@
 }
 
 /* 00129460 00000460 */ static void AlbumViewPhotoFrameDisp(/* a0 4 */ int off_x, /* a1 5 */ int off_y, /* s2 18 */ u_char alpha) {
-	/* -0xd0(sp) */ DISP_SPRT frame_ds;
+	/* 0x0(sp) */ DISP_SPRT frame_ds;
 	/* s1 17 */ int i;
 }
 
 /* 001298c0 0000027c */ static void AlbumViewLeftThumbnailDisp(/* s2 18 */ int album_data, /* s3 19 */ int photo_no, /* s6 22 */ int off_x, /* s5 21 */ int off_y, /* s4 20 */ u_char alpha) {
-	/* -0xf0(sp) */ DISP_SPRT frame_ds;
+	/* 0x10(sp) */ DISP_SPRT frame_ds;
 	/* s1 17 */ int i;
 	/* rdata 3a1470 */ static int protect_x_tbl[4];
 	/* rdata 3a1480 */ static int protect_y_tbl[4];
 }
 
 /* 00129b40 0000027c */ static void AlbumViewRightThumbnailDisp(/* s2 18 */ int album_data, /* s3 19 */ int photo_no, /* s6 22 */ int off_x, /* s5 21 */ int off_y, /* s4 20 */ u_char alpha) {
-	/* -0xf0(sp) */ DISP_SPRT frame_ds;
+	/* 0x10(sp) */ DISP_SPRT frame_ds;
 	/* s1 17 */ int i;
 	/* rdata 3a1490 */ static int protect_x_tbl[4];
 	/* rdata 3a14a0 */ static int protect_y_tbl[4];
 }
 
 /* 00129dc0 0000045c */ static void AlbumViewPhotoInfoDisp(/* s1 17 */ int album_data, /* s2 18 */ int photo_no, /* s5 21 */ int off_x, /* fp 30 */ int off_y, /* s4 20 */ u_char alpha) {
+	/* rdata 3a14b0 */ static char __FUNCTION__[23];
 	/* s3 19 */ int i;
 	/* s6 22 */ int subject_num;
 	/* a3 7 */ int msg_y;
-	/* -0x70(sp) */ DATE_INFO date;
+	/* 0x10(sp) */ DATE_INFO date;
 }
 
 /* 0012a220 000000b0 */ static void AlbumViewPhotoProtectionFrameDisp(/* a0 4 */ int off_x, /* a1 5 */ int off_y, /* s2 18 */ u_char alpha) {
 	/* s0 16 */ int i;
-	/* -0xc0(sp) */ DISP_SPRT photo_ds;
+	/* 0x0(sp) */ DISP_SPRT photo_ds;
 }
 
 /* 0012a2d0 000000d0 */ static void AlbumViewCsrDisp(/* v0 2 */ int off_x, /* v1 3 */ int off_y, /* s2 18 */ u_char alpha) {
-	/* -0xd0(sp) */ DISP_SPRT csr_ds;
-	/* -0x40(sp) */ u_char rgb;
+	/* 0x0(sp) */ DISP_SPRT csr_ds;
+	/* 0x90(sp) */ u_char rgb;
 	/* s1 17 */ int i;
 }
 
 /* 0012a3a0 00000028 */ static void AlbumViewCaptionDisp(/* a0 4 */ int off_x, /* a1 5 */ int off_y, /* a2 6 */ u_char alpha) {}
-/* 002d7e68 00000054 */ int* int * _fixed_array_verifyrange<int>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
-/* 002d7e68 00000054 */ PICTURE_WRK* PICTURE_WRK * _fixed_array_verifyrange<PICTURE_WRK>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
-/* 002d7e68 00000054 */ PICTURE_SUBJECT* _PICTURE_SUBJECT * _fixed_array_verifyrange<_PICTURE_SUBJECT>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ ALBUM_INFO* ALBUM_INFO * _fixed_array_verifyrange<ALBUM_INFO>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ int* int * _fixed_array_verifyrange<int>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ char* char * _fixed_array_verifyrange<char>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ PICTURE_WRK* PICTURE_WRK * _fixed_array_verifyrange<PICTURE_WRK>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ PICTURE_SUBJECT* _PICTURE_SUBJECT * _fixed_array_verifyrange<_PICTURE_SUBJECT>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
 
 /* 0012a3c8 00000024 */ static void __static_initialization_and_destruction_0(/* a0 4 */ int __initialize_p, /* a1 5 */ int __priority) {
 	/* v0 2 */ int *ra;
 }
 
-/* 002d7e68 0000003c */ type_info& PICTURE_WRK type_info function() {}
-/* 002d7e68 0000003c */ type_info& _PICTURE_SUBJECT type_info function() {}
+/* ffffffff 0000003c */ type_info& ALBUM_INFO type_info function() {}
+/* ffffffff 0000003c */ type_info& PICTURE_WRK type_info function() {}
+/* ffffffff 0000003c */ type_info& _PICTURE_SUBJECT type_info function() {}
 /* 0012a3f0 00000020 */ static void global constructors keyed to AlbumViewCtrlInit() {}
 
 // *****************************************************************************
@@ -3904,11 +3932,11 @@
 
 /* 0012a7d8 0000014c */ void motAniTimerCodeExec(/* s1 17 */ ANI_CTRL *ani_ctrl) {
 	/* s4 20 */ u_int i;
-	/* -0x60(sp) */ int args[3];
+	/* 0x0(sp) */ int args[3];
 }
 
 /* 0012a928 00000048 */ int motAniCodeIsEnd(/* a0 4 */ ANI_CODE code) {
-	/* -0x20(sp) */ int args[3];
+	/* 0x0(sp) */ int args[3];
 }
 
 /* 0012a970 00000090 */ void GetAniCodeArgs(/* a3 7 */ ANI_CODE code, /* a1 5 */ int *args) {}
@@ -3922,7 +3950,7 @@
 /* 0012ab58 000000bc */ void motAniCodeReadMIM(/* s0 16 */ ANI_CTRL *ani_ctrl, /* a1 5 */ int *args) {}
 
 /* 0012ac18 000000e4 */ void motAniCodeReadSE(/* s0 16 */ ANI_CTRL *ani_ctrl, /* s1 17 */ int *args) {
-	/* -0x30(sp) */ float pos[4];
+	/* 0x0(sp) */ float pos[4];
 }
 
 /* 0012ad00 00000024 */ static int motAniIsSeNoDustEffect(/* a0 4 */ int SeNo) {
@@ -3930,13 +3958,13 @@
 }
 
 /* 0012ad28 000000c8 */ void motAniCodeReadEFCT(/* s0 16 */ ANI_CTRL *ani_ctrl, /* a1 5 */ int *args) {
-	/* -0x20(sp) */ float pos[4];
+	/* 0x0(sp) */ float pos[4];
 }
 
 /* 0012adf0 000000c0 */ u_char motGetNextMotion(/* a0 4 */ ANI_CTRL *ani_ctrl) {
 	/* s1 17 */ ANI_CODE_CTRL *c_ctrl;
 	/* s2 18 */ int loop_end;
-	/* -0x40(sp) */ int args[3];
+	/* 0x0(sp) */ int args[3];
 }
 
 // *****************************************************************************
@@ -3961,6 +3989,7 @@
 }
 
 /* 0012b130 0000012c */ u_char Anim2D_CalcNowAlpha(/* a0 4 */ ALPHA_ANIM_TBL *tbl, /* s1 17 */ int timer) {
+	/* rdata 3a16d0 */ static char __FUNCTION__[20];
 	/* a2 6 */ int i;
 	/* v0 2 */ u_char alpha;
 	/* a3 7 */ int tbl_pos;
@@ -3968,6 +3997,7 @@
 }
 
 /* 0012b260 00000158 */ u_char Anim2D_CalcNowRGB(/* a0 4 */ RGB_ANIM_TBL *tbl, /* s1 17 */ int timer) {
+	/* rdata 3a1700 */ static char __FUNCTION__[18];
 	/* a2 6 */ int i;
 	/* v0 2 */ u_char rgb;
 	/* a3 7 */ int tbl_pos;
@@ -3976,6 +4006,7 @@
 }
 
 /* 0012b3b8 00000144 */ float Anim2D_CalcNowRot(/* a0 4 */ ROT_ANIM_TBL *tbl, /* s2 18 */ int timer) {
+	/* rdata 3a1730 */ static char __FUNCTION__[18];
 	/* a2 6 */ int i;
 	/* f0 38 */ float rot;
 	/* a3 7 */ int tbl_pos;
@@ -4009,10 +4040,12 @@
 
 /* 0012b778 000000f4 */ static void AutoLoadMain() {
 	/* rdata 3a1818 */ static char __FUNCTION__[13];
-	/* -0x50(sp) */ char path_name[55];
+	/* 0x0(sp) */ char path_name[55];
 }
 
-/* 0012b870 00000048 */ static void AutoLoadMcCheckInit() {}
+/* 0012b870 00000048 */ static void AutoLoadMcCheckInit() {
+	/* 0x0(sp) */ char path_name[55];
+}
 
 /* 0012b8b8 00000108 */ static void AutoLoadMcCheckWait() {
 	/* v1 3 */ int mc_res;
@@ -4020,6 +4053,7 @@
 
 /* 0012b9c0 00000084 */ static void AutoLoadMcLoadInit() {
 	/* s0 16 */ int size;
+	/* 0x0(sp) */ char path_name[55];
 }
 
 /* 0012ba48 00000138 */ static void AutoLoadMcLoadWait() {
@@ -4063,7 +4097,7 @@
 /* 0012c2e8 00000048 */ void CBonusShotOne::Work(/* s0 16 */ CBonusShotOne *this) {}
 
 /* 0012c330 00000320 */ void CBonusShotOne::Draw(/* s4 20 */ CBonusShotOne *this, /* fp 30 */ int iOffX, /* s5 21 */ int iOffY, /* a3 7 */ int iPreSprtDat, /* s0 16 */ int iAfterSprtDat) {
-	/* -0xf0(sp) */ DISP_SPRT ds;
+	/* 0x0(sp) */ DISP_SPRT ds;
 	/* f20 58 */ float fXScl;
 }
 
@@ -4091,7 +4125,7 @@
 /* 0012ce68 000005f8 */ void CBonusShot::Draw(/* s2 18 */ CBonusShot *this, /* s5 21 */ int fndr_mx, /* s4 20 */ int fndr_my) {
 	/* s3 19 */ int i;
 	/* f20 58 */ float fScale;
-	/* -0x100(sp) */ DISP_SPRT ds;
+	/* 0x90(sp) */ DISP_SPRT ds;
 	/* f20 58 */ float fScl;
 }
 
@@ -4099,23 +4133,23 @@
 	/* s2 18 */ int i;
 }
 
-/* 002d7e68 00000050 */ void CFadeVariable<char>::Fade(/* a0 4 */ CFadeVariable<char> *this, /* a1 5 */ char tTarget, /* v1 3 */ char tTime) {}
-/* 002d7e68 00000050 */ void CFadeVariable<short>::Fade(/* a0 4 */ CFadeVariable<short int> *this, /* a1 5 */ short int tTarget, /* v1 3 */ short int tTime) {}
-/* 002d7e68 00000074 */ void CFadeVariable<short>::Work(/* a2 6 */ CFadeVariable<short int> *this) {}
-/* 002d7e68 00000074 */ void CFadeVariable<char>::Work(/* a2 6 */ CFadeVariable<char> *this) {}
+/* ffffffff 00000050 */ void CFadeVariable<char>::Fade(/* a0 4 */ CFadeVariable<char> *this, /* a1 5 */ char tTarget, /* v1 3 */ char tTime) {}
+/* ffffffff 00000050 */ void CFadeVariable<short>::Fade(/* a0 4 */ CFadeVariable<short int> *this, /* a1 5 */ short int tTarget, /* v1 3 */ short int tTime) {}
+/* ffffffff 00000074 */ void CFadeVariable<short>::Work(/* a2 6 */ CFadeVariable<short int> *this) {}
+/* ffffffff 00000074 */ void CFadeVariable<char>::Work(/* a2 6 */ CFadeVariable<char> *this) {}
 
-/* 002d7e68 00000038 */ void CWrkVariable<char, 0, 127>::Work(/* a0 4 */ CWrkVariable<char,0,127> *this) {
+/* ffffffff 00000038 */ void CWrkVariable<char, 0, 127>::Work(/* a0 4 */ CWrkVariable<char,0,127> *this) {
 	/* a1 5 */ int iVal;
 }
 
-/* 002d7e68 00000038 */ void CWrkVariable<char, 0, 100>::Work(/* a0 4 */ CWrkVariable<char,0,100> *this) {
+/* ffffffff 00000038 */ void CWrkVariable<char, 0, 100>::Work(/* a0 4 */ CWrkVariable<char,0,100> *this) {
 	/* a1 5 */ int iVal;
 }
 
-/* 002d7e68 00000054 */ short int* short * _fixed_array_verifyrange<short>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
-/* 002d7e68 00000054 */ CBonusShotOne* CBonusShotOne * _fixed_array_verifyrange<CBonusShotOne>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
-/* 002d7e68 00000030 */ int CWaitVariable<short>::Work(/* a1 5 */ CWaitVariable<short int> *this) {}
-/* 002d7e68 00000030 */ int CWaitVariable<char>::Work(/* a1 5 */ CWaitVariable<char> *this) {}
+/* ffffffff 00000054 */ short int* short * _fixed_array_verifyrange<short>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ CBonusShotOne* CBonusShotOne * _fixed_array_verifyrange<CBonusShotOne>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000030 */ int CWaitVariable<short>::Work(/* a1 5 */ CWaitVariable<short int> *this) {}
+/* ffffffff 00000030 */ int CWaitVariable<char>::Work(/* a1 5 */ CWaitVariable<char> *this) {}
 /* 002d7e68 0000003c */ type_info& CBonusShotOne type_info function() {}
 
 // *****************************************************************************
@@ -4187,23 +4221,23 @@
 }
 
 /* 0012db60 00000280 */ void CCenterCircle::Draw(/* s2 18 */ CCenterCircle *this, /* s0 16 */ int fndr_mx, /* s1 17 */ int fndr_my, /* s3 19 */ int iMasterAlpha, /* f21 59 */ float fMasterScale) {
-	/* -0x100(sp) */ DISP_SPRT ds;
+	/* 0x0(sp) */ DISP_SPRT ds;
 	/* f20 58 */ float fScale;
 	/* s1 17 */ int j;
 }
 
-/* 002d8d10 00000040 */ int CWrkVariable<char, 0, 100>::LoopWork(/* a0 4 */ CWrkVariable<char,0,100> *this) {
+/* ffffffff 00000040 */ int CWrkVariable<char, 0, 100>::LoopWork(/* a0 4 */ CWrkVariable<char,0,100> *this) {
 	/* a1 5 */ int iVal;
 }
 
-/* 002d8d10 00000074 */ void CFadeVariable<short>::Work(/* a2 6 */ CFadeVariable<short int> *this) {}
-/* 002d8d10 00000074 */ void CFadeVariable<char>::Work(/* a2 6 */ CFadeVariable<char> *this) {}
+/* ffffffff 00000074 */ void CFadeVariable<short>::Work(/* a2 6 */ CFadeVariable<short int> *this) {}
+/* ffffffff 00000074 */ void CFadeVariable<char>::Work(/* a2 6 */ CFadeVariable<char> *this) {}
 
-/* 002d8d10 00000038 */ void CWrkVariable<short, 0, 128>::Work(/* a0 4 */ CWrkVariable<short int,0,128> *this) {
+/* ffffffff 00000038 */ void CWrkVariable<short, 0, 128>::Work(/* a0 4 */ CWrkVariable<short int,0,128> *this) {
 	/* a1 5 */ int iVal;
 }
 
-/* 002d8d10 00000050 */ void CFadeVariable<short>::Fade(/* a0 4 */ CFadeVariable<short int> *this, /* a1 5 */ short int tTarget, /* v1 3 */ short int tTime) {}
+/* ffffffff 00000050 */ void CFadeVariable<short>::Fade(/* a0 4 */ CFadeVariable<short int> *this, /* a1 5 */ short int tTarget, /* v1 3 */ short int tTime) {}
 /* 002d8d10 00000050 */ void CFadeVariable<char>::Fade(/* a0 4 */ CFadeVariable<char> *this, /* a1 5 */ char tTarget, /* v1 3 */ char tTime) {}
 
 // *****************************************************************************
@@ -4233,7 +4267,7 @@
 	/* s2 18 */ CENTER_CROSS *ccp;
 }
 
-/* 002d8d1c 00000054 */ ENE_WRK* ENE_WRK * _fixed_array_verifyrange<ENE_WRK>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ ENE_WRK* ENE_WRK * _fixed_array_verifyrange<ENE_WRK>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
 /* 002d8d1c 0000003c */ type_info& ENE_WRK type_info function() {}
 
 // *****************************************************************************
@@ -4258,11 +4292,11 @@
 }
 
 /* 0012e7f8 000003ec */ void ChapterSelDispMain() {
-	/* -0x100(sp) */ char *menu_sel_str[7];
-	/* -0xe0(sp) */ char *chapter_sel_str[11];
-	/* -0xb0(sp) */ char *costume_str[9];
-	/* -0x80(sp) */ char *accessory_str[2];
-	/* -0x70(sp) */ char *diff_str[4];
+	/* 0x10(sp) */ char *menu_sel_str[7];
+	/* 0x30(sp) */ char *chapter_sel_str[11];
+	/* 0x60(sp) */ char *costume_str[9];
+	/* 0x90(sp) */ char *accessory_str[2];
+	/* 0xa0(sp) */ char *diff_str[4];
 	/* s0 16 */ int i;
 }
 
@@ -4298,7 +4332,7 @@
 
 /* 0012ef00 00000644 */ CLEAR_FLG_CTRL ClearFlgMerging(/* a1 5 */ CLEAR_FLG_CTRL buff1, /* a2 6 */ CLEAR_FLG_CTRL buff2) {
 	/* s0 16 */ int i;
-	/* -0x90(sp) */ CLEAR_FLG_CTRL result_flg;
+	/* 0x40(sp) */ CLEAR_FLG_CTRL result_flg;
 	/* s3 19 */ int idx;
 	/* s1 17 */ int bit;
 	/* s2 18 */ BIT_FLAGS<3> *this;
@@ -4372,8 +4406,8 @@
 /* 0012fd40 00000038 */ static void ClearMenuDisp() {}
 
 /* 0012fd78 00000080 */ static void ClearMenuFadeBlackBgDisp(/* a0 4 */ int off_x, /* a1 5 */ int off_y, /* a2 6 */ u_char alpha) {
-	/* -0xb0(sp) */ DISP_SQAR dsq;
-	/* -0x30(sp) */ SQAR_DAT black_bg;
+	/* 0x0(sp) */ DISP_SQAR dsq;
+	/* 0x80(sp) */ SQAR_DAT black_bg;
 }
 
 /* 0012fdf8 00000068 */ void init_ClearMenu() {}
@@ -4427,7 +4461,7 @@
 }
 
 /* 00130990 000000b0 */ static void ClearMenuTopTitleDisp(/* a0 4 */ int off_x, /* a1 5 */ int off_y, /* s2 18 */ u_char alpha) {
-	/* -0xc0(sp) */ DISP_SPRT title_ds;
+	/* 0x0(sp) */ DISP_SPRT title_ds;
 	/* s0 16 */ int i;
 }
 
@@ -4443,14 +4477,14 @@
 // FILE -- /home/zero_rom/zero2np/src/system/compress/compress.c
 // *****************************************************************************
 
-/* 00130b78 000002e0 */ float CompressFile(/* -0x60(sp) */ unsigned int *input, /* s3 19 */ char *output, /* s6 22 */ unsigned int max_size, /* -0x5c(sp) */ char quality) {
+/* 00130b78 000002e0 */ float CompressFile(/* 0x130(sp) */ unsigned int *input, /* s3 19 */ char *output, /* s6 22 */ unsigned int max_size, /* 0x134(sp) */ char quality) {
 	/* s2 18 */ int row;
 	/* s0 16 */ int col;
 	/* fp 30 */ int i;
 	/* a0 4 */ int j;
-	/* -0x190(sp) */ unsigned char *input_array[8];
-	/* -0x170(sp) */ int output_array[8][8];
-	/* -0x70(sp) */ BIT_FILE bit_file;
+	/* 0x0(sp) */ unsigned char *input_array[8];
+	/* 0x20(sp) */ int output_array[8][8];
+	/* 0x120(sp) */ BIT_FILE bit_file;
 	/* s0 16 */ unsigned int size;
 	/* s1 17 */ unsigned int *addr;
 	/* v1 3 */ unsigned int tmp;
@@ -4471,8 +4505,8 @@
 	/* s0 16 */ int col;
 	/* a3 7 */ int i;
 	/* a0 4 */ int j;
-	/* -0x170(sp) */ int input_array[8][8];
-	/* -0x70(sp) */ unsigned char *output_array[8];
+	/* 0x0(sp) */ int input_array[8][8];
+	/* 0x100(sp) */ unsigned char *output_array[8];
 	/* a0 4 */ unsigned int quality;
 	/* sbss 3f4b0c */ static unsigned int *out_header;
 	/* sbss 3f4b10 */ static SLIDE_ENCODE_HEADER *sheader;
@@ -4489,7 +4523,7 @@
 }
 
 /* 00131358 00000148 */ static void ForwardDCT(/* a0 4 */ unsigned char **input, /* a1 5 */ int *output[8]) {
-	/* -0x100(sp) */ float temp[8][8];
+	/* 0x0(sp) */ float temp[8][8];
 	/* f2 40 */ float temp1;
 	/* t3 11 */ unsigned int i;
 	/* t1 9 */ unsigned int j;
@@ -4497,6 +4531,7 @@
 }
 
 /* 001314a0 0000019c */ static void InverseDCT(/* a0 4 */ int *input[8], /* a1 5 */ unsigned char **output) {
+	/* 0x0(sp) */ float temp[8][8];
 	/* f2 40 */ float temp1;
 	/* t5 13 */ unsigned int i;
 	/* t2 10 */ unsigned int j;
@@ -4510,7 +4545,7 @@
 	/* f0 38 */ float result;
 }
 
-/* 00131740 0000008c */ static unsigned int* ReadPixelStrip(/* a1 5 */ unsigned char *strip[384], /* a2 6 */ unsigned char type) {
+/* 00131740 0000008c */ static unsigned int* ReadPixelStrip(/* a0 4 */ unsigned int *input, /* a1 5 */ unsigned char *strip[384], /* a2 6 */ unsigned char type) {
 	/* t0 8 */ int row;
 	/* a3 7 */ int col;
 	/* v0 2 */ unsigned int c;
@@ -4533,7 +4568,7 @@
 	/* s2 18 */ int bit_count;
 }
 
-/* 00131ac0 000000a0 */ static unsigned int* WritePixelStrip(/* a0 4 */ unsigned int *output, /* a2 6 */ unsigned char type) {
+/* 00131ac0 000000a0 */ static unsigned int* WritePixelStrip(/* a0 4 */ unsigned int *output, /* a1 5 */ unsigned char *strip[384], /* a2 6 */ unsigned char type) {
 	/* t3 11 */ int row;
 	/* t0 8 */ int col;
 }
@@ -4580,7 +4615,9 @@
 	/* rdata 3a37c0 */ static char __FUNCTION__[19];
 }
 
-/* 00131fa8 00000068 */ MOVIE_TITLE_DAT* GetCrystalTitleDat(/* s0 16 */ int crystal_label) {}
+/* 00131fa8 00000068 */ MOVIE_TITLE_DAT* GetCrystalTitleDat(/* s0 16 */ int crystal_label) {
+	/* rdata 3a3808 */ static char __FUNCTION__[19];
+}
 
 /* 00132010 0000006c */ int GetPlyrHaveCrystalNum() {
 	/* s0 16 */ int i;
@@ -4617,12 +4654,12 @@
 /* 00132290 00000020 */ void CDamageDisp::Req(/* a0 4 */ CDamageDisp *this, /* a1 5 */ int iDamage, /* a2 6 */ int iScore, /* a3 7 */ int iWaitCnt) {}
 
 /* 001322b0 000000f8 */ void CDamageDisp::Draw(/* s3 19 */ CDamageDisp *this, /* s2 18 */ int fndr_mx, /* s4 20 */ int fndr_my, /* a3 7 */ int iAlpha) {
-	/* -0xc0(sp) */ DISP_SPRT ds;
+	/* 0x0(sp) */ DISP_SPRT ds;
 }
 
-/* 002d9c6c 00000030 */ int CWaitVariable<short>::Work(/* a1 5 */ CWaitVariable<short int> *this) {}
+/* ffffffff 00000030 */ int CWaitVariable<short>::Work(/* a1 5 */ CWaitVariable<short int> *this) {}
 
-/* 002d9c6c 00000074 */ void CBlinkVariable<char, 0, 127>::Blink(/* a0 4 */ CBlinkVariable<char,0,127> *this, /* a2 6 */ char tTime) {
+/* ffffffff 00000074 */ void CBlinkVariable<char, 0, 127>::Blink(/* a0 4 */ CBlinkVariable<char,0,127> *this, /* a2 6 */ char tTime) {
 	/* sdata 3ef928 */ static char __FUNCTION__[6];
 }
 
@@ -4643,8 +4680,8 @@
 /* 00132448 00000034 */ static unsigned int** unsigned int * * _fixed_array_verifyrange<unsigned int *>(/* a0 4 */ size_t v, /* a1 5 */ size_t _max) {}
 
 /* 00132480 000000e8 */ void SPU_draw_rect_func(/* a0 4 */ int x, /* a1 5 */ int y, /* a2 6 */ int w, /* a3 7 */ int h, /* s0 16 */ int rgba) {
-	/* -0xc0(sp) */ SQAR_DAT sq;
-	/* -0xa0(sp) */ DISP_SQAR dq;
+	/* 0x0(sp) */ SQAR_DAT sq;
+	/* 0x20(sp) */ DISP_SQAR dq;
 	/* a3 7 */ int i;
 }
 
@@ -4658,13 +4695,16 @@
 	/* s1 17 */ int i;
 	/* s0 16 */ unsigned int max_size;
 	/* s1 17 */ unsigned int total_size;
-	/* -0x4f0(sp) */ char msg[300];
+	/* 0x0(sp) */ char msg[300];
 	/* s1 17 */ unsigned int max_size;
 	/* s2 18 */ unsigned int total_size;
+	/* 0x130(sp) */ char msg[300];
 	/* s0 16 */ unsigned int max_size;
 	/* s2 18 */ unsigned int total_size;
+	/* 0x260(sp) */ char msg[300];
 	/* s0 16 */ unsigned int max_size;
 	/* s2 18 */ unsigned int total_size;
+	/* 0x390(sp) */ char msg[300];
 }
 
 /* 00132c80 00000060 */ static int SceneTest() {
@@ -4698,13 +4738,13 @@
 /* 00133080 0000008c */ void DebugInit() {}
 
 /* 00133110 00000040 */ int getFStrLength(/* f12 50 */ float f) {
-	/* -0x110(sp) */ char cwo[256];
+	/* 0x0(sp) */ char cwo[256];
 }
 
 /* 00133150 00000008 */ DEBUG_MENU* GetNowMenu() {}
 
-/* 00133158 00000a84 */ void DrawDbgMenuSub(/* -0x80(sp) */ DEBUG_MENU *wlp, /* t2 10 */ int fl) {
-	/* -0x7c(sp) */ u_char rgb1;
+/* 00133158 00000a84 */ void DrawDbgMenuSub(/* 0xa0(sp) */ DEBUG_MENU *wlp, /* t2 10 */ int fl) {
+	/* 0xa4(sp) */ u_char rgb1;
 	/* s6 22 */ u_char rgb2;
 	/* s3 19 */ int i;
 	/* fp 30 */ int bx;
@@ -4712,8 +4752,8 @@
 	/* s2 18 */ int sw;
 	/* s4 20 */ int sh;
 	/* v0 2 */ int pri;
-	/* -0x120(sp) */ SQAR_DAT sq;
-	/* -0x100(sp) */ DISP_SQAR dq;
+	/* 0x0(sp) */ SQAR_DAT sq;
+	/* 0x20(sp) */ DISP_SQAR dq;
 	/* t1 9 */ int i;
 	/* t0 8 */ int i;
 	/* a2 6 */ int i;
@@ -4736,7 +4776,7 @@
 }
 
 /* 00134398 000011f0 */ static void __static_initialization_and_destruction_0(/* s3 19 */ int __initialize_p, /* s4 20 */ int __priority) {}
-/* 002d9ca0 00000054 */ PLYR_ITEM* PLYR_ITEM * _fixed_array_verifyrange<PLYR_ITEM>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ PLYR_ITEM* PLYR_ITEM * _fixed_array_verifyrange<PLYR_ITEM>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
 /* 002d9ca0 0000003c */ type_info& PLYR_ITEM type_info function() {}
 /* 00135588 00000020 */ static void global constructors keyed to dbg_menu_main() {}
 
@@ -4788,10 +4828,12 @@
 /* 00135bf8 00000008 */ int dmaVif1GetToggle() {}
 
 /* 00135c00 00000100 */ void dmaVif1AddRefTag(/* s0 16 */ unsigned int addr, /* s2 18 */ int size) {
+	/* rdata 3a41a0 */ static char __FUNCTION__[17];
 	/* a0 4 */ sceDmaTag *ptag;
 }
 
 /* 00135d00 00000100 */ void dmaVif1AddRefTagVIF(/* s0 16 */ unsigned int addr, /* s2 18 */ int size, /* s3 19 */ int vif1code1, /* s4 20 */ int vif1code2) {
+	/* rdata 3a4200 */ static char __FUNCTION__[20];
 	/* a0 4 */ sceDmaTag *ptag;
 }
 
@@ -4834,7 +4876,9 @@
 	/* s0 16 */ int room_no;
 }
 
-/* 001363b8 000000c0 */ void DoorLock(/* s0 16 */ int door_id, /* s1 17 */ u_char lock_id) {}
+/* 001363b8 000000c0 */ void DoorLock(/* s0 16 */ int door_id, /* s1 17 */ u_char lock_id) {
+	/* rdata 3a43c8 */ static char __FUNCTION__[9];
+}
 
 /* 00136478 00000070 */ void DoorUnlock(/* s0 16 */ int door_id) {
 	/* rdata 3a4400 */ static char __FUNCTION__[11];
@@ -4855,10 +4899,13 @@
 	/* rdata 3a4498 */ static char __FUNCTION__[12];
 }
 
-/* 001367b8 00000070 */ u_char GetDoorLockState(/* s0 16 */ int door_id) {}
+/* 001367b8 00000070 */ u_char GetDoorLockState(/* s0 16 */ int door_id) {
+	/* rdata 3a44c8 */ static char __FUNCTION__[17];
+}
+
 /* 00136828 00000020 */ int GetDoorDataLabelToDoorLabel(/* a0 4 */ int door_data_label) {}
 /* 00136848 00000040 */ void SetSave_DoorCtrl(/* s0 16 */ MC_SAVE_DATA *data) {}
-/* 002db35c 00000054 */ DOOR_CTRL* DOOR_CTRL * _fixed_array_verifyrange<DOOR_CTRL>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ DOOR_CTRL* DOOR_CTRL * _fixed_array_verifyrange<DOOR_CTRL>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
 /* 00136888 00000008 */ static void __static_initialization_and_destruction_0(/* a0 4 */ int __initialize_p, /* a1 5 */ int __priority) {}
 /* 002db35c 0000003c */ type_info& DOOR_CTRL type_info function() {}
 /* 00136890 00000020 */ static void global constructors keyed to DoorCtrlInit() {}
@@ -4868,7 +4915,7 @@
 // *****************************************************************************
 
 /* 001368b0 0000008c */ void DrawCmnButton(/* a0 4 */ u_char btn_label, /* f20 58 */ float x, /* f21 59 */ float y, /* a1 5 */ u_char alp, /* s0 16 */ u_int pri) {
-	/* -0xc0(sp) */ DISP_SPRT btn_ds;
+	/* 0x0(sp) */ DISP_SPRT btn_ds;
 }
 
 // *****************************************************************************
@@ -4884,7 +4931,7 @@
 /* 001369e0 00000034 */ static unsigned int** unsigned int * * _fixed_array_verifyrange<unsigned int *>(/* a0 4 */ size_t v, /* a1 5 */ size_t _max) {}
 
 /* 00136a18 000000d8 */ void DrawCmnCaption(/* v1 3 */ u_char cap_label, /* f20 58 */ float x, /* f21 59 */ float y, /* s1 17 */ u_char alp, /* s0 16 */ u_int pri) {
-	/* -0xc0(sp) */ DISP_SPRT cap_ds;
+	/* 0x0(sp) */ DISP_SPRT cap_ds;
 }
 
 /* 00136af0 000001c0 */ void DrawCmnCapGroup(/* s1 17 */ int group_label, /* s5 21 */ int x, /* s7 23 */ int y, /* s3 19 */ u_char alp, /* s4 20 */ u_int pri) {
@@ -4899,7 +4946,7 @@
 // FILE -- /home/zero_rom/zero2np/src/graphics/graph2d/draw_cmn_num.c
 // *****************************************************************************
 
-/* 00136de0 00000140 */ void DrawCmnNumberTex(/* s1 17 */ int data, /* a1 5 */ int num, /* s5 21 */ SPRT_DAT *zero_dat, /* a2 6 */ int x, /* -0x60(sp) */ int y, /* -0x5c(sp) */ u_char alpha, /* -0x58(sp) */ int pri, /* s6 22 */ u_char zero_flg) {
+/* 00136de0 00000140 */ void DrawCmnNumberTex(/* s1 17 */ int data, /* a1 5 */ int num, /* s5 21 */ SPRT_DAT *zero_dat, /* a2 6 */ int x, /* 0x0(sp) */ int y, /* 0x4(sp) */ u_char alpha, /* 0x8(sp) */ int pri, /* s6 22 */ u_char zero_flg) {
 	/* a1 5 */ int i;
 	/* v1 3 */ int j;
 	/* a0 4 */ int tmp;
@@ -4910,7 +4957,7 @@
 
 /* 00136f20 000000ec */ static void DrawCmnNumberTex_One(/* s1 17 */ int data, /* s4 20 */ SPRT_DAT *zero_dat, /* s5 21 */ int x, /* s3 19 */ int y, /* s6 22 */ u_char alpha, /* s2 18 */ int pri) {
 	/* rdata 3a5170 */ static char __FUNCTION__[21];
-	/* -0xd0(sp) */ DISP_SPRT num_ds;
+	/* 0x0(sp) */ DISP_SPRT num_ds;
 }
 
 // *****************************************************************************
@@ -4919,27 +4966,27 @@
 
 /* 00137010 00000268 */ void DrawCmnWindow(/* s2 18 */ u_int pri, /* f21 59 */ float x, /* f22 60 */ float y, /* f20 58 */ float sizew, /* f23 61 */ float sizeh, /* s1 17 */ u_char alpha, /* s0 16 */ u_char max_alpha) {
 	/* f24 62 */ float line_yoko;
-	/* -0xf0(sp) */ DISP_SQAR dsq;
-	/* -0x70(sp) */ SQAR_DAT msg_bg;
+	/* 0x0(sp) */ DISP_SQAR dsq;
+	/* 0x80(sp) */ SQAR_DAT msg_bg;
 }
 
 /* 00137278 00000344 */ void DrawCmnTwoLineWindow(/* fp 30 */ u_int pri, /* f22 60 */ float x, /* f23 61 */ float y, /* f24 62 */ float sizew, /* f25 63 */ float sizeh, /* s7 23 */ u_char alpha, /* s0 16 */ u_char max_alpha) {
 	/* f26 64 */ float size_ita_h;
 	/* f2 40 */ float line_yoko;
-	/* -0x1c0(sp) */ DISP_SPRT ds;
-	/* -0x130(sp) */ DISP_SQAR dsq;
-	/* -0xb0(sp) */ SQAR_DAT msg_bg;
+	/* 0x0(sp) */ DISP_SPRT ds;
+	/* 0x90(sp) */ DISP_SQAR dsq;
+	/* 0x110(sp) */ SQAR_DAT msg_bg;
 }
 
 /* 001375c0 00000258 */ void DrawCmnFileWindow(/* a0 4 */ int file_type, /* a1 5 */ int file_id, /* s1 17 */ u_int pri, /* a3 7 */ u_char alpha, /* t0 8 */ u_char max_alpha) {
-	/* -0x60(sp) */ int msg_type_tbl[5];
+	/* 0x10(sp) */ int msg_type_tbl[5];
 	/* s0 16 */ int msg_length;
 }
 
 /* 00137818 000000a8 */ void DrawCmnYesNoSel(/* a0 4 */ int cursor, /* f20 58 */ float y, /* a1 5 */ u_char alpha, /* s0 16 */ u_int pri) {}
 
 /* 001378c0 00000128 */ void DrawCmnSelFrame(/* a0 4 */ u_int pri, /* f21 59 */ float x, /* f22 60 */ float y, /* s0 16 */ u_char alpha, /* f20 58 */ float w) {
-	/* -0xd0(sp) */ DISP_SPRT sel_ds;
+	/* 0x0(sp) */ DISP_SPRT sel_ds;
 	/* f23 61 */ float scr;
 }
 
@@ -4947,16 +4994,16 @@
 /* 00137a98 000000ac */ void DrawCmnSelNo(/* s1 17 */ u_int pri, /* f21 59 */ float x, /* f20 58 */ float y, /* a1 5 */ u_char alpha) {}
 
 /* 00137b48 00000158 */ void DrawCmnSelCsr(/* a0 4 */ u_int pri, /* f22 60 */ float x, /* f21 59 */ float y, /* s1 17 */ u_char alpha, /* f20 58 */ float w, /* s2 18 */ u_char flg) {
-	/* -0xe0(sp) */ DISP_SPRT sel_ds;
+	/* 0x0(sp) */ DISP_SPRT sel_ds;
 	/* f23 61 */ float scr;
 }
 
 /* 00137ca0 000000c4 */ void DrawCmnTriCsrL(/* a0 4 */ u_int pri, /* f20 58 */ float x, /* f21 59 */ float y, /* a1 5 */ u_char alpha, /* a2 6 */ u_char rgb) {
-	/* -0xc0(sp) */ DISP_SPRT sel_ds;
+	/* 0x0(sp) */ DISP_SPRT sel_ds;
 }
 
 /* 00137d68 000000c4 */ void DrawCmnTriCsrR(/* a0 4 */ u_int pri, /* f20 58 */ float x, /* f21 59 */ float y, /* a1 5 */ u_char alpha, /* a2 6 */ u_char rgb) {
-	/* -0xc0(sp) */ DISP_SPRT sel_ds;
+	/* 0x0(sp) */ DISP_SPRT sel_ds;
 }
 
 // *****************************************************************************
@@ -4969,33 +5016,70 @@
 }
 
 /* 00137f68 00000030 */ void InitDrawEnv(/* a0 4 */ qword* (*c1_start)(/* parameters unknown */), /* a1 5 */ qword* (*c2_start)(/* parameters unknown */), /* a2 6 */ void (*c1_end)(/* parameters unknown */), /* a3 7 */ void (*c2_end)(/* parameters unknown */)) {}
-/* 00137f98 000000c8 */ void SetDrawEnv(/* s1 17 */ int context_no, /* s2 18 */ DRAW_ENV_5 *new_env) {}
-/* 00138060 000000a8 */ void SetDrawEnvNoTex(/* s1 17 */ int context_no, /* s2 18 */ DRAW_ENV_NOTEX *new_env) {}
+
+/* 00137f98 000000c8 */ void SetDrawEnv(/* s1 17 */ int context_no, /* s2 18 */ DRAW_ENV_5 *new_env) {
+	/* s0 16 */ qword *base;
+}
+
+/* 00138060 000000a8 */ void SetDrawEnvNoTex(/* s1 17 */ int context_no, /* s2 18 */ DRAW_ENV_NOTEX *new_env) {
+	/* s0 16 */ qword *base;
+}
+
 /* 00138108 00000018 */ long int GET_ALPHA_REGISTER(/* a0 4 */ int context_no) {}
 
 /* 00138120 000000a0 */ void SetAlphaRegister(/* s0 16 */ int context_no, /* s1 17 */ long int alpha) {
+	/* v0 2 */ qword *base;
 	/* a3 7 */ u_long *base;
 }
 
 /* 001381c0 00000018 */ long int GET_TEST_REGISTER(/* a0 4 */ int context_no) {}
-/* 001381d8 000000a0 */ void SetTestRegister(/* s0 16 */ int context_no, /* s1 17 */ long int test) {}
+
+/* 001381d8 000000a0 */ void SetTestRegister(/* s0 16 */ int context_no, /* s1 17 */ long int test) {
+	/* v0 2 */ qword *base;
+	/* a3 7 */ u_long *base;
+}
+
 /* 00138278 00000018 */ long int GET_ZBUF_REGISTER(/* a0 4 */ int context_no) {}
-/* 00138290 000000a0 */ void SetZbufRegister(/* s0 16 */ int context_no, /* s1 17 */ long int zbuf) {}
+
+/* 00138290 000000a0 */ void SetZbufRegister(/* s0 16 */ int context_no, /* s1 17 */ long int zbuf) {
+	/* v0 2 */ qword *base;
+	/* a3 7 */ u_long *base;
+}
+
 /* 00138330 00000018 */ long int GET_TEX1_REGISTER(/* a0 4 */ int context_no) {}
-/* 00138348 000000a0 */ void SetTex1Register(/* s0 16 */ int context_no, /* s1 17 */ long int tex1) {}
+
+/* 00138348 000000a0 */ void SetTex1Register(/* s0 16 */ int context_no, /* s1 17 */ long int tex1) {
+	/* v0 2 */ qword *base;
+	/* a3 7 */ u_long *base;
+}
+
 /* 001383e8 00000018 */ long int GET_CLAMP_REGISTER(/* a0 4 */ int context_no) {}
-/* 00138400 000000a0 */ void SetClampRegister(/* s0 16 */ int context_no, /* s1 17 */ long int clamp) {}
+
+/* 00138400 000000a0 */ void SetClampRegister(/* s0 16 */ int context_no, /* s1 17 */ long int clamp) {
+	/* v0 2 */ qword *base;
+	/* a3 7 */ u_long *base;
+}
+
 /* 001384a0 00000018 */ long int GET_SCISSOR_REGISTER(/* a0 4 */ int context_no) {}
-/* 001384b8 000000a0 */ void SetScissorRegister(/* s0 16 */ int context_no, /* s1 17 */ long int scissor) {}
+
+/* 001384b8 000000a0 */ void SetScissorRegister(/* s0 16 */ int context_no, /* s1 17 */ long int scissor) {
+	/* v0 2 */ qword *base;
+	/* a3 7 */ u_long *base;
+}
+
 /* 00138558 00000008 */ long int GET_TEXA_REGISTER() {}
-/* 00138560 00000060 */ void SetTexaRegister(/* s0 16 */ long int texa) {}
-/* 001385c0 00000034 */ static void SET_ALPHA_REGISTER(/* a1 5 */ int context_no, /* a2 6 */ long int alpha) {}
-/* 001385f8 00000034 */ static void SET_TEST_REGISTER(/* a1 5 */ int context_no, /* a2 6 */ long int test) {}
-/* 00138630 00000034 */ static void SET_ZBUF_REGISTER(/* a1 5 */ int context_no, /* a2 6 */ long int zbuf) {}
-/* 00138668 00000034 */ static void SET_TEX1_REGISTER(/* a1 5 */ int context_no, /* a2 6 */ long int tex1) {}
-/* 001386a0 00000034 */ static void SET_CLAMP_REGISTER(/* a1 5 */ int context_no, /* a2 6 */ long int clamp) {}
-/* 001386d8 00000034 */ static void SET_SCISSOR_REGISTER(/* a1 5 */ int context_no, /* a2 6 */ long int scissor) {}
-/* 00138710 00000014 */ static void SET_TEXA_REGISTER(/* a1 5 */ long int texa) {}
+
+/* 00138560 00000060 */ void SetTexaRegister(/* s0 16 */ long int texa) {
+	/* v0 2 */ qword *base;
+}
+
+/* 001385c0 00000034 */ static void SET_ALPHA_REGISTER(/* a0 4 */ u_long *base, /* a1 5 */ int context_no, /* a2 6 */ long int alpha) {}
+/* 001385f8 00000034 */ static void SET_TEST_REGISTER(/* a0 4 */ u_long *base, /* a1 5 */ int context_no, /* a2 6 */ long int test) {}
+/* 00138630 00000034 */ static void SET_ZBUF_REGISTER(/* a0 4 */ u_long *base, /* a1 5 */ int context_no, /* a2 6 */ long int zbuf) {}
+/* 00138668 00000034 */ static void SET_TEX1_REGISTER(/* a0 4 */ u_long *base, /* a1 5 */ int context_no, /* a2 6 */ long int tex1) {}
+/* 001386a0 00000034 */ static void SET_CLAMP_REGISTER(/* a0 4 */ u_long *base, /* a1 5 */ int context_no, /* a2 6 */ long int clamp) {}
+/* 001386d8 00000034 */ static void SET_SCISSOR_REGISTER(/* a0 4 */ u_long *base, /* a1 5 */ int context_no, /* a2 6 */ long int scissor) {}
+/* 00138710 00000014 */ static void SET_TEXA_REGISTER(/* a0 4 */ u_long *base, /* a1 5 */ long int texa) {}
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/graphics/graph2d/draw_line.c
@@ -5004,13 +5088,13 @@
 /* 00138728 0000005c */ void DrawCmnLine(/* f12 50 */ float x, /* f13 51 */ float y, /* f14 52 */ float size, /* v1 3 */ u_char type, /* a3 7 */ u_char alp, /* a2 6 */ u_int pri) {}
 
 /* 00138788 00000184 */ static void DrawCmnLineTate(/* f22 60 */ float x, /* f21 59 */ float y, /* f14 52 */ float h, /* s3 19 */ u_char alp, /* s2 18 */ u_int pri) {
-	/* -0xe0(sp) */ DISP_SPRT ds;
+	/* 0x0(sp) */ DISP_SPRT ds;
 	/* f20 58 */ float line_h;
 	/* f24 62 */ float line_scr;
 }
 
 /* 00138910 0000017c */ static void DrawCmnLineYoko(/* f21 59 */ float x, /* f22 60 */ float y, /* f14 52 */ float w, /* s3 19 */ u_char alp, /* s2 18 */ u_int pri) {
-	/* -0xe0(sp) */ DISP_SPRT ds;
+	/* 0x0(sp) */ DISP_SPRT ds;
 	/* f20 58 */ float line_w;
 	/* f24 62 */ float line_scr;
 }
@@ -5020,12 +5104,12 @@
 // *****************************************************************************
 
 /* 00138a90 000001f8 */ static void _EEExceptionHandler(/* s5 21 */ u_int stat, /* s3 19 */ u_int cause, /* s6 22 */ u_int epc, /* s4 20 */ u_int bva, /* s2 18 */ u_int bpa, /* s1 17 */ u_long128 *gpr) {
-	/* -0x240(sp) */ char str[512];
+	/* 0x0(sp) */ char str[512];
 }
 
 /* 00138c88 0000021c */ void _IOPExceptionHandler() {
 	/* s0 16 */ int &raiReg[45];
-	/* -0x420(sp) */ char str[1024];
+	/* 0x0(sp) */ char str[1024];
 }
 
 /* 00138ea8 00000028 */ static int _DmacHandler(/* a1 5 */ int iChan, /* a1 5 */ void *pArg, /* a2 6 */ void *pAddr) {}
@@ -5051,7 +5135,7 @@
 /* 00139050 0000002c */ void iopexceptionInitialize(/* a0 4 */ IOPEXCEPTIONCREATIONDATA *pCD) {}
 
 /* 002db3e0 00000080 */ void _strcatf(/* s0 16 */ char *strDest, /* s1 17 */ char *pStr) {
-	/* -0x80(sp) */ va_list VaList;
+	/* 0x0(sp) */ va_list VaList;
 }
 
 // *****************************************************************************
@@ -5077,7 +5161,10 @@
 }
 
 /* 001393d8 00000044 */ void CFile::Close(/* s0 16 */ CFile *this) {}
-/* 00139420 00000098 */ int CFile::Seek(/* s0 16 */ CFile *this, /* s2 18 */ int iOffset, /* s1 17 */ int iFrom) {}
+
+/* 00139420 00000098 */ int CFile::Seek(/* s0 16 */ CFile *this, /* s2 18 */ int iOffset, /* s1 17 */ int iFrom) {
+	/* sdata 3efbd0 */ static char __FUNCTION__[5];
+}
 
 /* 001394b8 000000c8 */ unsigned int CFile::GetLength(/* s2 18 */ CFile *this) {
 	/* rdata 3a57b0 */ static char __FUNCTION__[10];
@@ -5088,8 +5175,8 @@
 /* 00139580 0000001c */ unsigned int CFile::SeekToEnd(/* a0 4 */ CFile *this) {}
 /* 001395a0 00000020 */ void CFile::SeekToBegin(/* a0 4 */ CFile *this) {}
 
-/* 001395c0 00000bf4 */ string CFile::GetFileName() {
-	/* -0x670(sp) */ CFileName fn;
+/* 001395c0 00000bf4 */ string CFile::GetFileName(/* a1 5 */ CFile *this) {
+	/* 0x0(sp) */ CFileName fn;
 	/* s2 18 */ CFileName *this;
 	/* s0 16 */ char *pStr;
 	/* s1 17 */ basic_string<char,string_char_traits<char>,ctl::custom_allocator<char> > *this;
@@ -5100,10 +5187,11 @@
 	/* s3 19 */ basic_string<char,string_char_traits<char>,ctl::custom_allocator<char> > *this;
 	/* s1 17 */ basic_string<char,string_char_traits<char>,ctl::custom_allocator<char> > *this;
 	/* s0 16 */ basic_string<char,string_char_traits<char>,ctl::custom_allocator<char> > *this;
-	/* -0x5c0(sp) */ char strDrive[260];
-	/* -0x4b0(sp) */ char strDir[260];
-	/* -0x3a0(sp) */ char strFile[260];
-	/* -0x290(sp) */ char strExt[260];
+	/* fp 30 */ CFileName *this;
+	/* 0xb0(sp) */ char strDrive[260];
+	/* 0x1c0(sp) */ char strDir[260];
+	/* 0x2d0(sp) */ char strFile[260];
+	/* 0x3e0(sp) */ char strExt[260];
 	/* s1 17 */ char *pColon;
 	/* s0 16 */ char *pLastSlash;
 	/* v0 2 */ char *pLastYen;
@@ -5124,7 +5212,9 @@
 	/* a0 4 */ Rep *this;
 }
 
-/* 0013a1b8 00000bf4 */ string CFile::GetFileTitle() {
+/* 0013a1b8 00000bf4 */ string CFile::GetFileTitle(/* a1 5 */ CFile *this) {
+	/* 0x0(sp) */ CFileName fn;
+	/* s2 18 */ CFileName *this;
 	/* s0 16 */ char *pStr;
 	/* s1 17 */ basic_string<char,string_char_traits<char>,ctl::custom_allocator<char> > *this;
 	/* fp 30 */ basic_string<char,string_char_traits<char>,ctl::custom_allocator<char> > *this;
@@ -5134,9 +5224,11 @@
 	/* s3 19 */ basic_string<char,string_char_traits<char>,ctl::custom_allocator<char> > *this;
 	/* s1 17 */ basic_string<char,string_char_traits<char>,ctl::custom_allocator<char> > *this;
 	/* s0 16 */ basic_string<char,string_char_traits<char>,ctl::custom_allocator<char> > *this;
-	/* -0x4b0(sp) */ char strDir[260];
-	/* -0x3a0(sp) */ char strFile[260];
-	/* -0x290(sp) */ char strExt[260];
+	/* fp 30 */ CFileName *this;
+	/* 0xb0(sp) */ char strDrive[260];
+	/* 0x1c0(sp) */ char strDir[260];
+	/* 0x2d0(sp) */ char strFile[260];
+	/* 0x3e0(sp) */ char strExt[260];
 	/* s1 17 */ char *pColon;
 	/* s0 16 */ char *pLastSlash;
 	/* v0 2 */ char *pLastYen;
@@ -5157,20 +5249,20 @@
 	/* a0 4 */ Rep *this;
 }
 
-/* 0013adb0 00000088 */ string CFile::GetFilePath() {
+/* 0013adb0 00000088 */ string CFile::GetFilePath(/* a1 5 */ CFile *this) {
 	/* s1 17 */ char *s;
 }
 
 /* 0013ae38 00000008 */ void CStdioFile::WriteString(/* a0 4 */ CStdioFile *this, /* a1 5 */ char *lpsz) {}
-/* 0013ae40 00000008 */ char* CStdioFile::ReadString(/* a1 5 */ char *lpsz, /* a2 6 */ unsigned int nMax) {}
+/* 0013ae40 00000008 */ char* CStdioFile::ReadString(/* a0 4 */ CStdioFile *this, /* a1 5 */ char *lpsz, /* a2 6 */ unsigned int nMax) {}
 
-/* 002db45c 000000d4 */ char* basic_string<char, string_char_traits<char>, ctl::custom_allocator<char> >::Rep::clone(/* s2 18 */ Rep *this) {
+/* ffffffff 000000d4 */ char* basic_string<char, string_char_traits<char>, ctl::custom_allocator<char> >::Rep::clone(/* s2 18 */ Rep *this) {
 	/* s1 17 */ size_t extra;
 	/* a1 5 */ size_t s;
 	/* v1 3 */ size_t i;
 }
 
-/* 002db45c 00000280 */ basic_string<char,string_char_traits<char>,ctl::custom_allocator<char> >& basic_string<char, string_char_traits<char>, ctl::custom_allocator<char> >::replace(/* s4 20 */ basic_string<char,string_char_traits<char>,ctl::custom_allocator<char> > *this, /* s1 17 */ size_t pos, /* s2 18 */ size_t n1, /* fp 30 */ char *s, /* s3 19 */ size_t n2) {
+/* ffffffff 00000280 */ basic_string<char,string_char_traits<char>,ctl::custom_allocator<char> >& basic_string<char, string_char_traits<char>, ctl::custom_allocator<char> >::replace(/* s4 20 */ basic_string<char,string_char_traits<char>,ctl::custom_allocator<char> > *this, /* s1 17 */ size_t pos, /* s2 18 */ size_t n1, /* fp 30 */ char *s, /* s3 19 */ size_t n2) {
 	/* s5 21 */ size_t len;
 	/* s7 23 */ size_t newlen;
 	/* a2 6 */ size_t s;
@@ -5184,37 +5276,37 @@
 	/* a2 6 */ size_t n;
 }
 
-/* 002db45c 00000158 */ basic_string<char,string_char_traits<char>,ctl::custom_allocator<char> >& basic_string<char, string_char_traits<char>, ctl::custom_allocator<char> >::replace(/* s4 20 */ basic_string<char,string_char_traits<char>,ctl::custom_allocator<char> > *this, /* s6 22 */ size_t pos1, /* s5 21 */ size_t n1, /* s3 19 */ basic_string<char,string_char_traits<char>,ctl::custom_allocator<char> > &str, /* s0 16 */ size_t pos2, /* s2 18 */ size_t n2) {
+/* ffffffff 00000158 */ basic_string<char,string_char_traits<char>,ctl::custom_allocator<char> >& basic_string<char, string_char_traits<char>, ctl::custom_allocator<char> >::replace(/* s4 20 */ basic_string<char,string_char_traits<char>,ctl::custom_allocator<char> > *this, /* s6 22 */ size_t pos1, /* s5 21 */ size_t n1, /* s3 19 */ basic_string<char,string_char_traits<char>,ctl::custom_allocator<char> > &str, /* s0 16 */ size_t pos2, /* s2 18 */ size_t n2) {
 	/* s1 17 */ size_t len2;
 	/* a0 4 */ Rep *this;
 }
 
-/* 002db45c 0000003c */ type_info& CFile type_info function() {}
+/* ffffffff 0000003c */ type_info& CFile type_info function() {}
 
-/* 002db45c 00000090 */ int CFile::OnError(/* s0 16 */ CFile *this, /* a1 5 */ char *pStr) {
-	/* -0x170(sp) */ char str[256];
+/* ffffffff 00000090 */ int CFile::OnError(/* s0 16 */ CFile *this, /* a1 5 */ char *pStr) {
+	/* 0x0(sp) */ char str[256];
 }
 
-/* 002db45c 0000002c */ char* CFile::ErrorString(/* a0 4 */ CFile *this) {
+/* ffffffff 0000002c */ char* CFile::ErrorString(/* a0 4 */ CFile *this) {
 	/* a0 4 */ basic_string<char,string_char_traits<char>,ctl::custom_allocator<char> > *this;
 }
 
-/* 002db45c 0000004c */ type_info& CStdioFile type_info function() {}
-/* 002db45c 00000030 */ CStdioFile* CStdioFile::CStdioFile() {}
-/* 002db45c 00000064 */ void CStdioFile::~CStdioFile(/* s0 16 */ int __in_chrg) {}
-/* 002db45c 0000004c */ type_info& CFileName type_info function() {}
-/* 002db45c 00000228 */ void CFileName::~CFileName(/* s1 17 */ int __in_chrg) {}
-/* 002db45c 0000003c */ type_info& ctl::custom_allocator<char> type_info function() {}
-/* 002db45c 0000001c */ void ctl::custom_allocator<char>::custom_deallocate(/* a0 4 */ custom_allocator<char> *this, /* a1 5 */ void *_Ptr) {}
-/* 002db45c 0000001c */ char* ctl::custom_allocator<char>::custom_allocate(/* a0 4 */ custom_allocator<char> *this, /* a1 5 */ size_t _Count) {}
-/* 002db45c 0000003c */ type_info& basic_string<char, string_char_traits<char>, ctl::custom_allocator<char> > type_info function() {}
+/* ffffffff 0000004c */ type_info& CStdioFile type_info function() {}
+/* ffffffff 00000030 */ CStdioFile* CStdioFile::CStdioFile(/* s0 16 */ CStdioFile *this) {}
+/* ffffffff 00000064 */ void CStdioFile::~CStdioFile(/* s1 17 */ CStdioFile *this, /* s0 16 */ int __in_chrg) {}
+/* ffffffff 0000004c */ type_info& CFileName type_info function() {}
+/* ffffffff 00000228 */ void CFileName::~CFileName(/* s0 16 */ CFileName *this, /* s1 17 */ int __in_chrg) {}
+/* ffffffff 0000003c */ type_info& ctl::custom_allocator<char> type_info function() {}
+/* ffffffff 0000001c */ void ctl::custom_allocator<char>::custom_deallocate(/* a0 4 */ custom_allocator<char> *this, /* a1 5 */ void *_Ptr) {}
+/* ffffffff 0000001c */ char* ctl::custom_allocator<char>::custom_allocate(/* a0 4 */ custom_allocator<char> *this, /* a1 5 */ size_t _Count) {}
+/* ffffffff 0000003c */ type_info& basic_string<char, string_char_traits<char>, ctl::custom_allocator<char> > type_info function() {}
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/graphics/graph3d/eeFindFile.cpp
 // *****************************************************************************
 
 /* 0013ae48 000005a0 */ CFindFile* CFindFile::CFindFile(/* fp 30 */ CFindFile *this) {
-	/* -0x60(sp) */ basic_string<char,string_char_traits<char>,ctl::custom_allocator<char> > *this;
+	/* 0xc0(sp) */ basic_string<char,string_char_traits<char>,ctl::custom_allocator<char> > *this;
 	/* s5 21 */ basic_string<char,string_char_traits<char>,ctl::custom_allocator<char> > *this;
 	/* s6 22 */ vector<basic_string<char, string_char_traits<char>, ctl::custom_allocator<char> > > *this;
 	/* s4 20 */ vector<sce_dirent> *this;
@@ -5222,61 +5314,61 @@
 	/* s2 18 */ vector<sce_dirent> *this;
 	/* s1 17 */ vector<sce_dirent> *this;
 	/* s0 16 */ size_t pos;
-	/* -0xe0(sp) */ sce_dirent *__first;
+	/* 0x40(sp) */ sce_dirent *__first;
 	/* v1 3 */ sce_dirent *__last;
 	/* v0 2 */ sce_dirent *__first;
-	/* -0xe0(sp) */ sce_dirent *__first;
+	/* 0x40(sp) */ sce_dirent *__first;
 	/* v1 3 */ sce_dirent *__last;
 	/* v0 2 */ sce_dirent *__first;
-	/* -0xe0(sp) */ sce_dirent *__first;
+	/* 0x40(sp) */ sce_dirent *__first;
 	/* v1 3 */ sce_dirent *__last;
 	/* v0 2 */ sce_dirent *__first;
-	/* -0xe0(sp) */ sce_dirent *__first;
+	/* 0x40(sp) */ sce_dirent *__first;
 	/* v1 3 */ sce_dirent *__last;
 	/* v0 2 */ sce_dirent *__first;
-	/* -0x110(sp) */ string *__first;
+	/* 0x10(sp) */ string *__first;
 	/* s1 17 */ string *__last;
 	/* s0 16 */ string *__first;
 }
 
 /* 0013b3e8 00000318 */ void CFindFile::~CFindFile(/* s6 22 */ CFindFile *this, /* s7 23 */ int __in_chrg) {
 	/* a2 6 */ vector<sce_dirent> *this;
-	/* -0xa0(sp) */ sce_dirent *__first;
+	/* 0x0(sp) */ sce_dirent *__first;
 	/* v1 3 */ sce_dirent *__last;
 	/* v0 2 */ sce_dirent *__first;
 	/* a2 6 */ vector<sce_dirent> *this;
-	/* -0xa0(sp) */ sce_dirent *__first;
+	/* 0x0(sp) */ sce_dirent *__first;
 	/* v1 3 */ sce_dirent *__last;
 	/* v0 2 */ sce_dirent *__first;
 	/* a2 6 */ vector<sce_dirent> *this;
-	/* -0xa0(sp) */ sce_dirent *__first;
+	/* 0x0(sp) */ sce_dirent *__first;
 	/* v1 3 */ sce_dirent *__last;
 	/* v0 2 */ sce_dirent *__first;
 	/* a2 6 */ vector<sce_dirent> *this;
-	/* -0xa0(sp) */ sce_dirent *__first;
+	/* 0x0(sp) */ sce_dirent *__first;
 	/* v1 3 */ sce_dirent *__last;
 	/* v0 2 */ sce_dirent *__first;
 	/* s1 17 */ vector<basic_string<char, string_char_traits<char>, ctl::custom_allocator<char> > > *this;
-	/* -0x9c(sp) */ string *__first;
+	/* 0x4(sp) */ string *__first;
 	/* s2 18 */ string *__last;
 	/* s0 16 */ string *__first;
 }
 
 /* 0013b700 000005ec */ int CFindFile::IsMatchSpec(/* a0 4 */ CFindFile *this, /* s3 19 */ char *pFileName, /* s5 21 */ char *strFileSpec) {
-	/* -0xa70(sp) */ char strSrcFile[256];
-	/* -0x970(sp) */ char strSrcDot[2];
-	/* -0x960(sp) */ char strSrcExt[256];
-	/* -0x860(sp) */ char strSpecFile[256];
-	/* -0x760(sp) */ char strSpecDot[2];
-	/* -0x750(sp) */ char strSpecExt[256];
+	/* 0x400(sp) */ char strSrcFile[256];
+	/* 0x500(sp) */ char strSrcDot[2];
+	/* 0x510(sp) */ char strSrcExt[256];
+	/* 0x610(sp) */ char strSpecFile[256];
+	/* 0x710(sp) */ char strSpecDot[2];
+	/* 0x720(sp) */ char strSpecExt[256];
 	/* s0 16 */ char *string2;
-	/* -0xe70(sp) */ char str1[256];
-	/* -0xd70(sp) */ char str2[256];
+	/* 0x0(sp) */ char str1[256];
+	/* 0x100(sp) */ char str2[256];
 	/* a1 5 */ char *pCur;
 	/* a1 5 */ char *pCur;
 	/* s0 16 */ char *string2;
-	/* -0xc70(sp) */ char str1[256];
-	/* -0xb70(sp) */ char str2[256];
+	/* 0x200(sp) */ char str1[256];
+	/* 0x300(sp) */ char str2[256];
 	/* a1 5 */ char *pCur;
 	/* a1 5 */ char *pCur;
 	/* s0 16 */ char *pLastSlash;
@@ -5285,16 +5377,16 @@
 	/* s1 17 */ char *pDot;
 	/* s0 16 */ char *pFnameTop;
 	/* v0 2 */ int iLen;
-	/* -0x650(sp) */ char str1[256];
-	/* -0x550(sp) */ char str2[256];
+	/* 0x820(sp) */ char str1[256];
+	/* 0x920(sp) */ char str2[256];
 	/* a1 5 */ char *pCur;
 	/* a1 5 */ char *pCur;
-	/* -0x450(sp) */ char str1[256];
-	/* -0x350(sp) */ char str2[256];
+	/* 0xa20(sp) */ char str1[256];
+	/* 0xb20(sp) */ char str2[256];
 	/* a1 5 */ char *pCur;
 	/* a1 5 */ char *pCur;
-	/* -0x250(sp) */ char str1[256];
-	/* -0x150(sp) */ char str2[256];
+	/* 0xc20(sp) */ char str1[256];
+	/* 0xd20(sp) */ char str2[256];
 	/* a1 5 */ char *pCur;
 	/* a1 5 */ char *pCur;
 }
@@ -5304,11 +5396,11 @@
 	/* s2 18 */ vector<basic_string<char, string_char_traits<char>, ctl::custom_allocator<char> >,ctl::custom_allocator<basic_string<char, string_char_traits<char>, ctl::custom_allocator<char> > > > *this;
 	/* s1 17 */ string *__first;
 	/* s4 20 */ string *__last;
-	/* -0x1b0(sp) */ string *__first;
+	/* 0x10(sp) */ string *__first;
 	/* fp 30 */ string *__last;
 	/* s0 16 */ string *__first;
-	/* -0x190(sp) */ char strSpec[256];
-	/* -0x90(sp) */ char strOR[2];
+	/* 0x30(sp) */ char strSpec[256];
+	/* 0x130(sp) */ char strOR[2];
 	/* s1 17 */ basic_string<char,string_char_traits<char>,ctl::custom_allocator<char> > *this;
 	/* a0 4 */ Rep *this;
 }
@@ -5317,46 +5409,47 @@
 
 /* 0013bfb0 00000928 */ int CFindFile::ScanDirectory(/* s6 22 */ CFindFile *this) {
 	/* s1 17 */ int iFD;
-	/* -0x68(sp) */ int bRet;
+	/* 0x568(sp) */ int bRet;
 	/* a0 4 */ basic_string<char,string_char_traits<char>,ctl::custom_allocator<char> > *this;
 	/* s3 19 */ vector<sce_dirent,ctl::custom_allocator<sce_dirent> > *this;
 	/* v0 2 */ sce_dirent *__first;
 	/* a1 5 */ sce_dirent *__last;
-	/* -0x5d0(sp) */ sce_dirent *__first;
+	/* 0x0(sp) */ sce_dirent *__first;
 	/* a0 4 */ sce_dirent *__last;
 	/* v1 3 */ sce_dirent *__first;
 	/* s5 21 */ vector<sce_dirent,ctl::custom_allocator<sce_dirent> > *this;
 	/* v0 2 */ sce_dirent *__first;
 	/* a1 5 */ sce_dirent *__last;
-	/* -0x5d0(sp) */ sce_dirent *__first;
+	/* 0x0(sp) */ sce_dirent *__first;
 	/* a0 4 */ sce_dirent *__last;
 	/* v1 3 */ sce_dirent *__first;
-	/* -0x70(sp) */ vector<sce_dirent,ctl::custom_allocator<sce_dirent> > *this;
+	/* 0x560(sp) */ vector<sce_dirent,ctl::custom_allocator<sce_dirent> > *this;
 	/* v0 2 */ sce_dirent *__first;
 	/* a1 5 */ sce_dirent *__last;
-	/* -0x5d0(sp) */ sce_dirent *__first;
+	/* 0x0(sp) */ sce_dirent *__first;
 	/* a0 4 */ sce_dirent *__last;
 	/* v1 3 */ sce_dirent *__first;
-	/* -0x6c(sp) */ vector<sce_dirent,ctl::custom_allocator<sce_dirent> > *this;
+	/* 0x564(sp) */ vector<sce_dirent,ctl::custom_allocator<sce_dirent> > *this;
 	/* v0 2 */ sce_dirent *__first;
 	/* a1 5 */ sce_dirent *__last;
-	/* -0x5d0(sp) */ sce_dirent *__first;
+	/* 0x0(sp) */ sce_dirent *__first;
 	/* a0 4 */ sce_dirent *__last;
 	/* v1 3 */ sce_dirent *__first;
-	/* -0x5c0(sp) */ sce_dirent de;
+	/* 0x10(sp) */ sce_dirent de;
 	/* v0 2 */ int iRet;
 	/* s7 23 */ int i;
+	/* v1 3 */ basic_string<char,string_char_traits<char>,ctl::custom_allocator<char> > *this;
 	/* s4 20 */ int j;
 	/* s1 17 */ vector<sce_dirent,ctl::custom_allocator<sce_dirent> > *this;
 	/* fp 30 */ int i;
 	/* s4 20 */ char *pDirName;
 	/* s6 22 */ vector<sce_dirent,ctl::custom_allocator<sce_dirent> > *this;
-	/* -0x470(sp) */ char str1[256];
-	/* -0x370(sp) */ char str2[256];
+	/* 0x160(sp) */ char str1[256];
+	/* 0x260(sp) */ char str2[256];
 	/* a1 5 */ char *pCur;
 	/* a1 5 */ char *pCur;
-	/* -0x270(sp) */ char str1[256];
-	/* -0x170(sp) */ char str2[256];
+	/* 0x360(sp) */ char str1[256];
+	/* 0x460(sp) */ char str2[256];
 	/* a1 5 */ char *pCur;
 	/* a1 5 */ char *pCur;
 	/* s5 21 */ vector<sce_dirent,ctl::custom_allocator<sce_dirent> > *this;
@@ -5379,37 +5472,43 @@
 	/* s4 20 */ vector<basic_string<char, string_char_traits<char>, ctl::custom_allocator<char> >,ctl::custom_allocator<basic_string<char, string_char_traits<char>, ctl::custom_allocator<char> > > > *this;
 	/* s1 17 */ string *__first;
 	/* s5 21 */ string *__last;
-	/* -0x80(sp) */ string *__first;
+	/* 0x10(sp) */ string *__first;
 	/* fp 30 */ string *__last;
 	/* s0 16 */ string *__first;
 	/* a2 6 */ vector<sce_dirent,ctl::custom_allocator<sce_dirent> > *this;
 	/* a0 4 */ sce_dirent *__first;
 	/* a1 5 */ sce_dirent *__last;
-	/* -0x60(sp) */ sce_dirent *__first;
+	/* 0x30(sp) */ sce_dirent *__first;
 	/* v1 3 */ sce_dirent *__last;
 	/* v0 2 */ sce_dirent *__first;
 	/* a1 5 */ vector<sce_dirent,ctl::custom_allocator<sce_dirent> > *this;
 	/* v0 2 */ sce_dirent *__first;
 	/* a2 6 */ sce_dirent *__last;
-	/* -0x60(sp) */ sce_dirent *__first;
+	/* 0x30(sp) */ sce_dirent *__first;
 	/* a0 4 */ sce_dirent *__last;
 	/* v1 3 */ sce_dirent *__first;
 	/* a2 6 */ vector<sce_dirent,ctl::custom_allocator<sce_dirent> > *this;
 	/* v0 2 */ sce_dirent *__first;
 	/* a1 5 */ sce_dirent *__last;
-	/* -0x60(sp) */ sce_dirent *__first;
+	/* 0x30(sp) */ sce_dirent *__first;
 	/* a0 4 */ sce_dirent *__last;
 	/* v1 3 */ sce_dirent *__first;
 	/* a3 7 */ vector<sce_dirent,ctl::custom_allocator<sce_dirent> > *this;
 	/* v1 3 */ sce_dirent *__first;
 	/* a2 6 */ sce_dirent *__last;
-	/* -0x60(sp) */ sce_dirent *__first;
+	/* 0x30(sp) */ sce_dirent *__first;
 	/* a0 4 */ sce_dirent *__last;
 	/* v0 2 */ sce_dirent *__first;
 	/* s0 16 */ size_t pos;
 }
 
-/* 002db45c 00000280 */ basic_string<char,string_char_traits<char>,ctl::custom_allocator<char> >& basic_string<char, string_char_traits<char>, ctl::custom_allocator<char> >::replace(/* s3 19 */ basic_string<char,string_char_traits<char>,ctl::custom_allocator<char> > *this, /* s1 17 */ size_t pos, /* s2 18 */ size_t n1, /* s5 21 */ size_t n2, /* s7 23 */ char c) {
+/* ffffffff 000000d4 */ char* basic_string<char, string_char_traits<char>, ctl::custom_allocator<char> >::Rep::clone(/* s2 18 */ Rep *this) {
+	/* s1 17 */ size_t extra;
+	/* a1 5 */ size_t s;
+	/* v1 3 */ size_t i;
+}
+
+/* ffffffff 00000280 */ basic_string<char,string_char_traits<char>,ctl::custom_allocator<char> >& basic_string<char, string_char_traits<char>, ctl::custom_allocator<char> >::replace(/* s3 19 */ basic_string<char,string_char_traits<char>,ctl::custom_allocator<char> > *this, /* s1 17 */ size_t pos, /* s2 18 */ size_t n1, /* s5 21 */ size_t n2, /* s7 23 */ char c) {
 	/* s4 20 */ size_t len;
 	/* fp 30 */ size_t newlen;
 	/* a2 6 */ size_t s;
@@ -5421,18 +5520,18 @@
 	/* a3 7 */ size_t pos;
 	/* v1 3 */ char *s;
 	/* a2 6 */ size_t n;
-	/* -0x70(sp) */ char c;
+	/* 0x10(sp) */ char c;
 }
 
-/* 002db45c 00000174 */ void basic_string<char, string_char_traits<char>, ctl::custom_allocator<char> >::alloc(/* s2 18 */ basic_string<char,string_char_traits<char>,ctl::custom_allocator<char> > *this, /* a1 5 */ size_t __size, /* s3 19 */ bool __save) {
+/* ffffffff 00000174 */ void basic_string<char, string_char_traits<char>, ctl::custom_allocator<char> >::alloc(/* s2 18 */ basic_string<char,string_char_traits<char>,ctl::custom_allocator<char> > *this, /* a1 5 */ size_t __size, /* s3 19 */ bool __save) {
 	/* a0 4 */ size_t s;
 	/* s0 16 */ size_t extra;
 	/* a1 5 */ size_t s;
 	/* s0 16 */ size_t i;
 }
 
-/* 002db45c 000003e8 */ void vector<basic_string<char, string_char_traits<char>, ctl::custom_allocator<char> >, ctl::custom_allocator<basic_string<char, string_char_traits<char>, ctl::custom_allocator<char> > > >::_M_insert_aux(/* s1 17 */ vector<basic_string<char, string_char_traits<char>, ctl::custom_allocator<char> >,ctl::custom_allocator<basic_string<char, string_char_traits<char>, ctl::custom_allocator<char> > > > *this, /* s7 23 */ string *__position, /* s2 18 */ string &__x) {
-	/* -0xc0(sp) */ string __x_copy;
+/* ffffffff 000003e8 */ void vector<basic_string<char, string_char_traits<char>, ctl::custom_allocator<char> >, ctl::custom_allocator<basic_string<char, string_char_traits<char>, ctl::custom_allocator<char> > > >::_M_insert_aux(/* s1 17 */ vector<basic_string<char, string_char_traits<char>, ctl::custom_allocator<char> >,ctl::custom_allocator<basic_string<char, string_char_traits<char>, ctl::custom_allocator<char> > > > *this, /* s7 23 */ string *__position, /* s2 18 */ string &__x) {
+	/* 0x0(sp) */ string __x_copy;
 	/* v0 2 */ basic_string<char,string_char_traits<char>,ctl::custom_allocator<char> > &__value;
 	/* a0 4 */ Rep *this;
 	/* a0 4 */ Rep *this;
@@ -5445,52 +5544,76 @@
 	/* fp 30 */ size_t __len;
 	/* v0 2 */ string *__new_finish;
 	/* a0 4 */ Rep *this;
-	/* -0x70(sp) */ string *__first;
+	/* 0x50(sp) */ string *__first;
 	/* s0 16 */ string *__first;
 }
 
-/* 002db45c 00000530 */ void vector<sce_dirent, ctl::custom_allocator<sce_dirent> >::_M_insert_aux(/* s0 16 */ vector<sce_dirent,ctl::custom_allocator<sce_dirent> > *this, /* s4 20 */ sce_dirent *__position, /* s1 17 */ sce_dirent &__x) {
-	/* -0x190(sp) */ sce_dirent __x_copy;
+/* ffffffff 00000280 */ basic_string<char,string_char_traits<char>,ctl::custom_allocator<char> >& basic_string<char, string_char_traits<char>, ctl::custom_allocator<char> >::replace(/* s4 20 */ basic_string<char,string_char_traits<char>,ctl::custom_allocator<char> > *this, /* s1 17 */ size_t pos, /* s2 18 */ size_t n1, /* fp 30 */ char *s, /* s3 19 */ size_t n2) {
+	/* s5 21 */ size_t len;
+	/* s7 23 */ size_t newlen;
+	/* a2 6 */ size_t s;
+	/* s0 16 */ size_t extra;
+	/* s0 16 */ size_t i;
+	/* a0 4 */ size_t pos;
+	/* a1 5 */ char *s;
+	/* a2 6 */ size_t n;
+	/* a3 7 */ size_t pos;
+	/* v1 3 */ char *s;
+	/* a2 6 */ size_t n;
+}
+
+/* ffffffff 00000530 */ void vector<sce_dirent, ctl::custom_allocator<sce_dirent> >::_M_insert_aux(/* s0 16 */ vector<sce_dirent,ctl::custom_allocator<sce_dirent> > *this, /* s4 20 */ sce_dirent *__position, /* s1 17 */ sce_dirent &__x) {
+	/* 0x0(sp) */ sce_dirent __x_copy;
 	/* v0 2 */ sce_dirent &__value;
 	/* t0 8 */ sce_dirent *__last;
 	/* a0 4 */ sce_dirent *__result;
 	/* a3 7 */ ptrdiff_t __n;
 	/* s3 19 */ size_t __len;
 	/* v0 2 */ sce_dirent *__new_finish;
-	/* -0x40(sp) */ sce_dirent *__first;
+	/* 0x150(sp) */ sce_dirent *__first;
 	/* v0 2 */ sce_dirent *__first;
 }
 
-/* 002db45c 00000090 */ string* basic_string<char, string_char_traits<char>, ctl::custom_allocator<char> > * __uninitialized_copy_aux<basic_string<char, string_char_traits<char>, ctl::custom_allocator<char> > *, basic_string<char, string_char_traits<char>, ctl::custom_allocator<char> > *>(/* s1 17 */ string *__first, /* s2 18 */ string *__last, /* a2 6 */ string *__result) {
+/* ffffffff 00000090 */ string* basic_string<char, string_char_traits<char>, ctl::custom_allocator<char> > * __uninitialized_copy_aux<basic_string<char, string_char_traits<char>, ctl::custom_allocator<char> > *, basic_string<char, string_char_traits<char>, ctl::custom_allocator<char> > *>(/* s1 17 */ string *__first, /* s2 18 */ string *__last, /* a2 6 */ string *__result) {
 	/* s0 16 */ string *__cur;
 	/* a1 5 */ Rep *this;
 }
 
-/* 002db45c 000000d4 */ sce_dirent* sce_dirent * __uninitialized_copy_aux<sce_dirent *, sce_dirent *>(/* a0 4 */ sce_dirent *__first, /* a1 5 */ sce_dirent *__last, /* a2 6 */ sce_dirent *__result) {
+/* ffffffff 000000d4 */ sce_dirent* sce_dirent * __uninitialized_copy_aux<sce_dirent *, sce_dirent *>(/* a0 4 */ sce_dirent *__first, /* a1 5 */ sce_dirent *__last, /* a2 6 */ sce_dirent *__result) {
 	/* a2 6 */ sce_dirent *__cur;
 }
 
-/* 002db45c 0000003c */ type_info& ctl::custom_allocator<basic_string<char, string_char_traits<char>, ctl::custom_allocator<char> > > type_info function() {}
-/* 002db45c 0000003c */ type_info& ctl::custom_allocator<sce_dirent> type_info function() {}
-/* 002db45c 0000003c */ type_info& CFindFile type_info function() {}
+/* ffffffff 0000003c */ type_info& ctl::custom_allocator<basic_string<char, string_char_traits<char>, ctl::custom_allocator<char> > > type_info function() {}
+/* ffffffff 0000003c */ type_info& ctl::custom_allocator<sce_dirent> type_info function() {}
+/* ffffffff 0000003c */ type_info& CFindFile type_info function() {}
 
-/* 002db45c 00000090 */ int CFindFile::OnError(/* s0 16 */ CFindFile *this, /* a1 5 */ char *pStr) {
-	/* -0x170(sp) */ char str[256];
+/* ffffffff 00000090 */ int CFindFile::OnError(/* s0 16 */ CFindFile *this, /* a1 5 */ char *pStr) {
+	/* 0x0(sp) */ char str[256];
 }
 
-/* 002db45c 0000002c */ char* CFindFile::ErrorString(/* a0 4 */ CFindFile *this) {}
-/* 002db45c 00000024 */ int CFindFile::GetNumMatchFile(/* a0 4 */ CFindFile *this) {}
-/* 002db45c 00000020 */ sce_dirent& CFindFile::GetMatchFileRef(/* a0 4 */ CFindFile *this, /* a1 5 */ int iIndex) {}
-/* 002db45c 00000024 */ int CFindFile::GetNumFile(/* a0 4 */ CFindFile *this) {}
-/* 002db45c 00000020 */ sce_dirent& CFindFile::GetFileRef(/* a0 4 */ CFindFile *this, /* a1 5 */ int iIndex) {}
-/* 002db45c 00000024 */ int CFindFile::GetNumSubDirectory(/* a0 4 */ CFindFile *this) {}
-/* 002db45c 00000020 */ sce_dirent& CFindFile::GetSubDirectoryRef(/* a0 4 */ CFindFile *this, /* a1 5 */ int iIndex) {}
-/* 002db45c 00000024 */ int CFindFile::GetNumSubDirectoryAll(/* a0 4 */ CFindFile *this) {}
-/* 002db45c 00000020 */ sce_dirent& CFindFile::GetSubDirectoryAllRef(/* a0 4 */ CFindFile *this, /* a1 5 */ int iIndex) {}
-/* 002db45c 0000002c */ char* CFindFile::CurrentDirectory(/* a0 4 */ CFindFile *this) {}
-/* 002db45c 0000001c */ void ctl::custom_allocator<basic_string<char, string_char_traits<char>, ctl::custom_allocator<char> > >::custom_deallocate(/* a0 4 */ custom_allocator<basic_string<char, string_char_traits<char>, ctl::custom_allocator<char> > > *this, /* a1 5 */ void *_Ptr) {}
-/* 002db45c 0000001c */ void ctl::custom_allocator<sce_dirent>::custom_deallocate(/* a0 4 */ custom_allocator<sce_dirent> *this, /* a1 5 */ void *_Ptr) {}
-/* 002db45c 0000001c */ string* ctl::custom_allocator<basic_string<char, string_char_traits<char>, ctl::custom_allocator<char> > >::custom_allocate(/* a0 4 */ custom_allocator<basic_string<char, string_char_traits<char>, ctl::custom_allocator<char> > > *this, /* a1 5 */ size_t _Count) {}
+/* ffffffff 0000002c */ char* CFindFile::ErrorString(/* a0 4 */ CFindFile *this) {
+	/* a0 4 */ basic_string<char,string_char_traits<char>,ctl::custom_allocator<char> > *this;
+}
+
+/* ffffffff 00000024 */ int CFindFile::GetNumMatchFile(/* a0 4 */ CFindFile *this) {}
+/* ffffffff 00000020 */ sce_dirent& CFindFile::GetMatchFileRef(/* a0 4 */ CFindFile *this, /* a1 5 */ int iIndex) {}
+/* ffffffff 00000024 */ int CFindFile::GetNumFile(/* a0 4 */ CFindFile *this) {}
+/* ffffffff 00000020 */ sce_dirent& CFindFile::GetFileRef(/* a0 4 */ CFindFile *this, /* a1 5 */ int iIndex) {}
+/* ffffffff 00000024 */ int CFindFile::GetNumSubDirectory(/* a0 4 */ CFindFile *this) {}
+/* ffffffff 00000020 */ sce_dirent& CFindFile::GetSubDirectoryRef(/* a0 4 */ CFindFile *this, /* a1 5 */ int iIndex) {}
+/* ffffffff 00000024 */ int CFindFile::GetNumSubDirectoryAll(/* a0 4 */ CFindFile *this) {}
+/* ffffffff 00000020 */ sce_dirent& CFindFile::GetSubDirectoryAllRef(/* a0 4 */ CFindFile *this, /* a1 5 */ int iIndex) {}
+
+/* ffffffff 0000002c */ char* CFindFile::CurrentDirectory(/* a0 4 */ CFindFile *this) {
+	/* a0 4 */ basic_string<char,string_char_traits<char>,ctl::custom_allocator<char> > *this;
+}
+
+/* ffffffff 0000003c */ type_info& ctl::custom_allocator<char> type_info function() {}
+/* ffffffff 0000001c */ void ctl::custom_allocator<char>::custom_deallocate(/* a0 4 */ custom_allocator<char> *this, /* a1 5 */ void *_Ptr) {}
+/* ffffffff 0000001c */ void ctl::custom_allocator<basic_string<char, string_char_traits<char>, ctl::custom_allocator<char> > >::custom_deallocate(/* a0 4 */ custom_allocator<basic_string<char, string_char_traits<char>, ctl::custom_allocator<char> > > *this, /* a1 5 */ void *_Ptr) {}
+/* ffffffff 0000001c */ void ctl::custom_allocator<sce_dirent>::custom_deallocate(/* a0 4 */ custom_allocator<sce_dirent> *this, /* a1 5 */ void *_Ptr) {}
+/* ffffffff 0000001c */ char* ctl::custom_allocator<char>::custom_allocate(/* a0 4 */ custom_allocator<char> *this, /* a1 5 */ size_t _Count) {}
+/* ffffffff 0000001c */ string* ctl::custom_allocator<basic_string<char, string_char_traits<char>, ctl::custom_allocator<char> > >::custom_allocate(/* a0 4 */ custom_allocator<basic_string<char, string_char_traits<char>, ctl::custom_allocator<char> > > *this, /* a1 5 */ size_t _Count) {}
 /* 002db45c 00000030 */ sce_dirent* ctl::custom_allocator<sce_dirent>::custom_allocate(/* a0 4 */ custom_allocator<sce_dirent> *this, /* v0 2 */ size_t _Count) {}
 
 // *****************************************************************************
@@ -5571,7 +5694,7 @@
 }
 
 /* 0013d930 000003ec */ void* SetEffects(/* s2 18 */ int id, /* s0 16 */ int fl) {
-	/* -0x80(sp) */ va_list ap;
+	/* 0x0(sp) */ va_list ap;
 	/* s1 17 */ EFFECT_CONT *ec;
 }
 
@@ -5631,20 +5754,20 @@
 	/* v1 3 */ EFFECT_CONT *ecm;
 }
 
-/* 0013ec60 00000480 */ static void EffectZSort(/* -0x70(sp) */ int PDeformBlurFlg) {
+/* 0013ec60 00000480 */ static void EffectZSort(/* 0xb0(sp) */ int PDeformBlurFlg) {
 	/* s2 18 */ int i;
 	/* s4 20 */ int j;
 	/* s0 16 */ int n;
 	/* s5 21 */ int num;
-	/* -0x120(sp) */ sceVu0IVECTOR ivec;
-	/* -0x110(sp) */ float vpos[4];
-	/* -0x100(sp) */ float wpos[4];
-	/* -0xf0(sp) */ float wlm[4][4];
-	/* -0xb0(sp) */ float slm[4][4];
+	/* 0x0(sp) */ sceVu0IVECTOR ivec;
+	/* 0x10(sp) */ float vpos[4];
+	/* 0x20(sp) */ float wpos[4];
+	/* 0x30(sp) */ float wlm[4][4];
+	/* 0x70(sp) */ float slm[4][4];
 	/* fp 30 */ EFFECT_CONT *ecm;
 	/* s0 16 */ EFFECT_CONT *ec;
 	/* bss 4232b0 */ static fixed_array<int,48> efzsort;
-	/* -0x6c(sp) */ GRA3DCAMERA *pCam;
+	/* 0xb4(sp) */ GRA3DCAMERA *pCam;
 }
 
 /* 0013f0e0 000002f4 */ static void EffectZSort2() {
@@ -5652,14 +5775,15 @@
 	/* s4 20 */ int j;
 	/* s0 16 */ int n;
 	/* s5 21 */ int num;
-	/* -0x120(sp) */ sceVu0IVECTOR ivec;
-	/* -0x110(sp) */ float vpos[4];
-	/* -0x100(sp) */ float wpos[4];
-	/* -0xf0(sp) */ float wlm[4][4];
-	/* -0xb0(sp) */ float slm[4][4];
+	/* 0x0(sp) */ sceVu0IVECTOR ivec;
+	/* 0x10(sp) */ float vpos[4];
+	/* 0x20(sp) */ float wpos[4];
+	/* 0x30(sp) */ float wlm[4][4];
+	/* 0x70(sp) */ float slm[4][4];
 	/* fp 30 */ EFFECT_CONT *ecm;
 	/* a0 4 */ EFFECT_CONT *ec;
 	/* bss 423370 */ static fixed_array<int,48> efzsort;
+	/* 0xb0(sp) */ GRA3DCAMERA *pCam;
 }
 
 /* 0013f3d8 000000a8 */ static void EffectInPhoto(/* s0 16 */ EFFECT_CONT *ecm, /* s1 17 */ int PDeformBlurFlg) {}
@@ -5697,7 +5821,7 @@
 /* 0013f960 00000100 */ void EffInKeepOutFlowCtrl(/* s0 16 */ EFFECT_CONT *ec) {}
 
 /* 0013fa60 000000e8 */ void EffectCandleFlameYuramekiCtrl(/* s2 18 */ float *PlayerNowPos, /* a2 6 */ float *PlayerOldPos) {
-	/* -0x40(sp) */ float TmpVector[4];
+	/* 0x0(sp) */ float TmpVector[4];
 	/* a0 4 */ EFFECT_CONT *pEffCont;
 	/* f0 38 */ float Speed;
 	/* s1 17 */ int i;
@@ -5720,17 +5844,17 @@
 	/* s0 16 */ int Ret;
 }
 
-/* 002dbc60 00000054 */ EFFECT_CONT* EFFECT_CONT * _fixed_array_verifyrange<EFFECT_CONT>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
-/* 002dbc60 00000054 */ float* float * _fixed_array_verifyrange<float>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
-/* 002dbc60 00000054 */ int* int * _fixed_array_verifyrange<int>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
-/* 002dbc60 00000054 */ SCREEN_EFFECT_PARAMETER** SCREEN_EFFECT_PARAMETER * * _fixed_array_verifyrange<SCREEN_EFFECT_PARAMETER *>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ EFFECT_CONT* EFFECT_CONT * _fixed_array_verifyrange<EFFECT_CONT>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ float* float * _fixed_array_verifyrange<float>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ int* int * _fixed_array_verifyrange<int>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ SCREEN_EFFECT_PARAMETER** SCREEN_EFFECT_PARAMETER * * _fixed_array_verifyrange<SCREEN_EFFECT_PARAMETER *>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
 
 /* 0013fd38 000000a0 */ static void __static_initialization_and_destruction_0(/* a0 4 */ int __initialize_p, /* a1 5 */ int __priority) {
 	/* v0 2 */ SCREEN_EFFECT_PARAMETER **ra;
 }
 
-/* 002dbc60 0000003c */ type_info& EFFECT_CONT type_info function() {}
-/* 002dbc60 0000004c */ type_info& SCREEN_EFFECT_PARAMETER * type_info function() {}
+/* ffffffff 0000003c */ type_info& EFFECT_CONT type_info function() {}
+/* ffffffff 0000004c */ type_info& SCREEN_EFFECT_PARAMETER * type_info function() {}
 /* 002dbc60 0000003c */ type_info& SCREEN_EFFECT_PARAMETER type_info function() {}
 /* 0013fdd8 00000020 */ static void global constructors keyed to ScreenEffectParam00() {}
 
@@ -5755,13 +5879,13 @@
 
 /* 0013ffb0 00000050 */ int EffectIsReadyButterflyModel() {
 	/* s0 16 */ int IsReady;
-	/* -0x20(sp) */ int ModelAddr;
-	/* -0x1c(sp) */ int AnimAddr;
+	/* 0x0(sp) */ int ModelAddr;
+	/* 0x4(sp) */ int AnimAddr;
 }
 
 /* 00140000 00000060 */ void EffectInitAniCtrlButterflyOne(/* s0 16 */ ANI_CTRL *pAniCtrl) {
-	/* -0x20(sp) */ int ModelAddr;
-	/* -0x1c(sp) */ int AnimAddr;
+	/* 0x0(sp) */ int ModelAddr;
+	/* 0x4(sp) */ int AnimAddr;
 }
 
 /* 00140060 000000d4 */ static void EffectButterflyMakeMatrix(/* s0 16 */ ANI_CTRL *pAniCtrl, /* s2 18 */ float *Pos, /* s1 17 */ float *Rot) {
@@ -5773,29 +5897,29 @@
 }
 
 /* 001401b0 000000e0 */ static void EffectDrawButterflyFrea(/* s1 17 */ float *Pos, /* f20 58 */ float RotX, /* f21 59 */ float RotY, /* s0 16 */ u_int Alpha) {
-	/* -0xa0(sp) */ float matWorldLocal[4][4];
-	/* -0x60(sp) */ DRAW_ENV DrawEnv;
+	/* 0x0(sp) */ float matWorldLocal[4][4];
+	/* 0x40(sp) */ DRAW_ENV DrawEnv;
 }
 
 /* 00140290 00000210 */ void EffectButterflyMain() {
 	/* s4 20 */ BUTTERFLY_DISP_CTRL *pCtrl;
 	/* s1 17 */ SLL_CELL *pCell;
 	/* fp 30 */ SINGLE_LINK_LIST *pParticleList;
-	/* -0x80(sp) */ float Pos[4];
-	/* -0x70(sp) */ float RotX;
-	/* -0x6c(sp) */ float RotY;
+	/* 0x0(sp) */ float Pos[4];
+	/* 0x10(sp) */ float RotX;
+	/* 0x14(sp) */ float RotY;
 	/* s0 16 */ GRA3DCAMERA *pCam;
 	/* s0 16 */ BUTTERFLY_DISP *pButterfly;
 	/* f0 38 */ float FreaAlpha;
 }
 
-/* 001404a0 00000050 */ static int EffectButterflyUpdate() {
+/* 001404a0 00000050 */ static int EffectButterflyUpdate(/* a0 4 */ BUTTERFLY_DISP *pButterfly) {
 	/* a1 5 */ int Update;
 }
 
-/* 001404f0 00000440 */ static int EffectButterflyUpdateTypeDefault() {
-	/* -0xa0(sp) */ float mtx[4][4];
-	/* -0x60(sp) */ float pos[4];
+/* 001404f0 00000440 */ static int EffectButterflyUpdateTypeDefault(/* s1 17 */ BUTTERFLY_DISP *pButterfly) {
+	/* 0x0(sp) */ float mtx[4][4];
+	/* 0x40(sp) */ float pos[4];
 	/* f24 62 */ float VelWrkX;
 	/* f2 40 */ float VelWrkY;
 	/* f0 38 */ float VelWrkZ;
@@ -5811,8 +5935,8 @@
 	/* f21 59 */ float FarDistance;
 }
 
-/* 001409c0 000002fc */ static int EffectButterflyUpdateTypeMoveToTarget() {
-	/* -0x50(sp) */ float pos[4];
+/* 001409c0 000002fc */ static int EffectButterflyUpdateTypeMoveToTarget(/* s1 17 */ BUTTERFLY_DISP *pButterfly) {
+	/* 0x0(sp) */ float pos[4];
 	/* s5 21 */ int RetVal;
 	/* f0 38 */ float RandVal;
 	/* f20 58 */ float Speed;
@@ -5821,54 +5945,54 @@
 
 /* 00140cc0 000001f0 */ void EffectButterflyReq(/* a0 4 */ float *Position) {
 	/* s2 18 */ BUTTERFLY_DISP_CTRL *pCtrl;
-	/* -0x360(sp) */ BUTTERFLY_DISP Butterfly;
+	/* 0x0(sp) */ BUTTERFLY_DISP Butterfly;
 	/* v0 2 */ SLL_CELL *pCell;
-	/* -0xa0(sp) */ float mtx[4][4];
-	/* -0x60(sp) */ float pos[4];
-	/* -0x50(sp) */ float RotX;
-	/* -0x4c(sp) */ float RotY;
+	/* 0x2c0(sp) */ float mtx[4][4];
+	/* 0x300(sp) */ float pos[4];
+	/* 0x310(sp) */ float RotX;
+	/* 0x314(sp) */ float RotY;
 	/* a3 7 */ int MotNo;
 	/* f20 58 */ float SpeedRate;
 }
 
 /* 00140eb0 000001e0 */ void EffectButterflyReqTarget(/* s7 23 */ int Id, /* s4 20 */ int Type, /* s0 16 */ float *Position, /* s1 17 */ float *Target) {
 	/* s5 21 */ BUTTERFLY_DISP_CTRL *pCtrl;
-	/* -0x340(sp) */ BUTTERFLY_DISP Butterfly;
+	/* 0x0(sp) */ BUTTERFLY_DISP Butterfly;
 	/* v0 2 */ SLL_CELL *pCell;
-	/* -0x80(sp) */ float pos[4];
-	/* -0x70(sp) */ float DirVector[4];
-	/* -0x60(sp) */ float RotX;
-	/* -0x5c(sp) */ float RotY;
+	/* 0x2c0(sp) */ float pos[4];
+	/* 0x2d0(sp) */ float DirVector[4];
+	/* 0x2e0(sp) */ float RotX;
+	/* 0x2e4(sp) */ float RotY;
 	/* a3 7 */ int MotNo;
 	/* f20 58 */ float Speed;
 	/* s6 22 */ BUTTERFLY_TARGET_PARAMETER *pButterflyTarget;
 }
 
 /* 00141090 00000528 */ static void EffectButterflyGetVelocity(/* s5 21 */ float *Velocity, /* s1 17 */ float *Position, /* s0 16 */ float *Target, /* s4 20 */ float *Direction, /* t0 8 */ int Type, /* f26 64 */ float Speed, /* s2 18 */ int LockOn) {
-	/* -0x140(sp) */ float TgtPosVector[4];
-	/* -0x130(sp) */ float WrkVelocity[4];
-	/* -0x120(sp) */ float VelRotX;
-	/* -0x11c(sp) */ float VelRotY;
-	/* -0x118(sp) */ float DirRotX;
-	/* -0x114(sp) */ float DirRotY;
+	/* 0x0(sp) */ float TgtPosVector[4];
+	/* 0x10(sp) */ float WrkVelocity[4];
+	/* 0x20(sp) */ float VelRotX;
+	/* 0x24(sp) */ float VelRotY;
+	/* 0x28(sp) */ float DirRotX;
+	/* 0x2c(sp) */ float DirRotY;
 	/* f25 63 */ float TurnMax;
 	/* s3 19 */ BUTTERFLY_TARGET_PARAMETER *pButterflyTarget;
-	/* -0x110(sp) */ float TmpMat[4][4];
-	/* -0xd0(sp) */ float NormalTgtPosVector[4];
-	/* -0xc0(sp) */ float NormalTgtPosVectorY0[4];
+	/* 0x30(sp) */ float TmpMat[4][4];
+	/* 0x70(sp) */ float NormalTgtPosVector[4];
+	/* 0x80(sp) */ float NormalTgtPosVectorY0[4];
 	/* f20 58 */ float RotX;
 	/* f21 59 */ float RotY;
 	/* f12 50 */ float InnerProduct;
 	/* f2 40 */ float Angle;
-	/* -0xb0(sp) */ float TmpMat[4][4];
+	/* 0x90(sp) */ float TmpMat[4][4];
 	/* f1 39 */ float Sabun;
 	/* f20 58 */ float RotY;
 }
 
 /* 001415b8 00000048 */ static void ButterflyDelete(/* s1 17 */ SINGLE_LINK_LIST *pSLL, /* s0 16 */ SLL_CELL *pCell) {}
 
-/* 00141600 0000003c */ static void EffectGetButterflyPosition(/* s0 16 */ float *Position) {
-	/* -0x50(sp) */ float LocalWorld[4][4];
+/* 00141600 0000003c */ static void EffectGetButterflyPosition(/* s0 16 */ float *Position, /* a1 5 */ BUTTERFLY_DISP *pButterfly) {
+	/* 0x0(sp) */ float LocalWorld[4][4];
 	/* v0 2 */ float *pv1;
 }
 
@@ -5883,20 +6007,29 @@
 	/* v0 2 */ SINGLE_LINK_LIST *pSLL;
 }
 
-/* 00141748 00000040 */ void EffectButterflyFadeOut(/* a0 4 */ int Id) {}
+/* 00141748 00000040 */ void EffectButterflyFadeOut(/* a0 4 */ int Id) {
+	/* s0 16 */ BUTTERFLY_DISP *pButterfly;
+}
 
 /* 00141788 00000094 */ void EffectButterflyAllFadeOut() {
 	/* a0 4 */ SLL_CELL *pCell;
+	/* v0 2 */ SINGLE_LINK_LIST *pSLL;
+	/* s0 16 */ BUTTERFLY_DISP *pButterfly;
 }
 
 /* 00141820 00000034 */ void EffectButterflyChangeTarget(/* a0 4 */ int Id, /* s0 16 */ float *Target) {
+	/* v0 2 */ BUTTERFLY_DISP *pButterfly;
 	/* v1 3 */ float *pv0;
 }
 
-/* 00141858 0000002c */ void EffectButterflyChangeType(/* a0 4 */ int Id, /* s0 16 */ int Type) {}
+/* 00141858 0000002c */ void EffectButterflyChangeType(/* a0 4 */ int Id, /* s0 16 */ int Type) {
+	/* v0 2 */ BUTTERFLY_DISP *pButterfly;
+}
 
 /* 00141888 00000098 */ void EffectButterflyAllChangeTarget(/* s1 17 */ float *Target) {
 	/* a0 4 */ SLL_CELL *pCell;
+	/* v0 2 */ SINGLE_LINK_LIST *pSLL;
+	/* v1 3 */ BUTTERFLY_DISP *pButterfly;
 	/* v0 2 */ float *pv0;
 }
 
@@ -5911,34 +6044,35 @@
 /* 001419d8 000000d0 */ void EffectButterflyParticleMain() {
 	/* s3 19 */ BUTTERFLY_PARTICLE_CTRL *pCtrl;
 	/* s1 17 */ SLL_CELL *pCell;
-	/* -0x40(sp) */ float RotX;
-	/* -0x3c(sp) */ float RotY;
+	/* s0 16 */ GRA3DCAMERA *pCam;
+	/* 0x0(sp) */ float RotX;
+	/* 0x4(sp) */ float RotY;
 	/* s0 16 */ BUTTERFLY_PARTICLE *pParticle;
 }
 
 /* 00141aa8 00000054 */ static void EffectButterflyParticleReq(/* a0 4 */ SINGLE_LINK_LIST *pSLL, /* a1 5 */ float *Position, /* t0 8 */ float *Velocity, /* a3 7 */ float *Acceleration) {
-	/* -0x50(sp) */ BUTTERFLY_PARTICLE Particle;
+	/* 0x0(sp) */ BUTTERFLY_PARTICLE Particle;
 }
 
 /* 00141b00 000002ac */ static void EffectButterflyParticleReqAdjustParam(/* s5 21 */ SINGLE_LINK_LIST *pSLL, /* s4 20 */ float *Position, /* s0 16 */ float *Rot) {
-	/* -0x110(sp) */ float TmpMat[4][4];
-	/* -0xd0(sp) */ float Accel[4];
-	/* -0xc0(sp) */ float Velocity[4];
+	/* 0x0(sp) */ float TmpMat[4][4];
+	/* 0x40(sp) */ float Accel[4];
+	/* 0x50(sp) */ float Velocity[4];
 	/* f21 59 */ float RotX;
 	/* f20 58 */ float RotY;
 	/* v0 2 */ int ReqNum;
 	/* s0 16 */ int i;
 	/* f30 68 */ float ButterflyRotX;
 	/* f29 67 */ float ButterflyRotY;
-	/* -0xb0(sp) */ float TmpVec[4];
+	/* 0x60(sp) */ float TmpVec[4];
 }
 
 /* 00141db0 00000110 */ static void ButterflyParticleOneDraw(/* s0 16 */ BUTTERFLY_PARTICLE *pParticle, /* f20 58 */ float RotX, /* f21 59 */ float RotY) {
-	/* -0x90(sp) */ float matWorldLocal[4][4];
-	/* -0x50(sp) */ DRAW_ENV DrawEnv;
+	/* 0x0(sp) */ float matWorldLocal[4][4];
+	/* 0x40(sp) */ DRAW_ENV DrawEnv;
 }
 
-/* 00141ec0 000000a8 */ static int ButterflyParticleUpdate() {
+/* 00141ec0 000000a8 */ static int ButterflyParticleUpdate(/* s0 16 */ BUTTERFLY_PARTICLE *pParticle) {
 	/* s2 18 */ int RetVal;
 }
 
@@ -5947,15 +6081,15 @@
 	/* a1 5 */ SLL_CELL *pCell;
 }
 
-/* 002e20e0 00000054 */ GRA3DLIGHTSTATUS* GRA3DLIGHTSTATUS * _fixed_array_verifyrange<GRA3DLIGHTSTATUS>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
-/* 002e20e0 00000054 */ BUTTERFLY_TARGET_PARAMETER** BUTTERFLY_TARGET_PARAMETER * * _fixed_array_verifyrange<BUTTERFLY_TARGET_PARAMETER *>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ GRA3DLIGHTSTATUS* GRA3DLIGHTSTATUS * _fixed_array_verifyrange<GRA3DLIGHTSTATUS>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ BUTTERFLY_TARGET_PARAMETER** BUTTERFLY_TARGET_PARAMETER * * _fixed_array_verifyrange<BUTTERFLY_TARGET_PARAMETER *>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
 
 /* 00141fd8 00000024 */ static void __static_initialization_and_destruction_0(/* a0 4 */ int __initialize_p, /* a1 5 */ int __priority) {
 	/* v0 2 */ BUTTERFLY_TARGET_PARAMETER **ra;
 }
 
-/* 002e20e0 0000003c */ type_info& GRA3DLIGHTSTATUS type_info function() {}
-/* 002e20e0 0000004c */ type_info& BUTTERFLY_TARGET_PARAMETER * type_info function() {}
+/* ffffffff 0000003c */ type_info& GRA3DLIGHTSTATUS type_info function() {}
+/* ffffffff 0000004c */ type_info& BUTTERFLY_TARGET_PARAMETER * type_info function() {}
 /* 002e20e0 0000003c */ type_info& BUTTERFLY_TARGET_PARAMETER type_info function() {}
 /* 00142000 00000020 */ static void global constructors keyed to ButterflyTargetType00() {}
 
@@ -5986,56 +6120,56 @@
 /* 00142428 00001324 */ static void SetEneDmgEffect1_Sub2(/* s0 16 */ int num) {
 	/* sbss 3f4b70 */ static reference_fixed_array<SPRT_DAT,14> camdat;
 	/* data 2e5090 */ static u_char rgb[2][2][3][3];
-	/* -0x570(sp) */ fixed_array<float[4],4> wpos;
-	/* -0x530(sp) */ float cpos[4];
+	/* 0x0(sp) */ fixed_array<float[4],4> wpos;
+	/* 0x40(sp) */ float cpos[4];
 	/* s3 19 */ int i;
 	/* s5 21 */ int j;
 	/* v1 3 */ int n;
-	/* -0xd0(sp) */ int st;
-	/* -0x520(sp) */ float rot_x;
-	/* -0x51c(sp) */ float rot_y;
+	/* 0x4a0(sp) */ int st;
+	/* 0x50(sp) */ float rot_x;
+	/* 0x54(sp) */ float rot_y;
 	/* f1 39 */ float fx;
 	/* f3 41 */ float fy;
 	/* f2 40 */ float fz;
 	/* f22 60 */ float scmax;
-	/* -0x510(sp) */ fixed_array<float,4> scl;
-	/* -0x500(sp) */ float wlm[4][4];
-	/* -0x4c0(sp) */ float slm[4][4];
-	/* -0xcc(sp) */ int mono;
-	/* -0x480(sp) */ fixed_array<int,4> clip;
-	/* -0x470(sp) */ fixed_array<unsigned int,4> tw;
-	/* -0x460(sp) */ fixed_array<unsigned int,4> th;
-	/* -0x450(sp) */ fixed_array<long unsigned int,4> tex0;
-	/* -0x430(sp) */ float ppos[4][4][4];
-	/* -0x330(sp) */ float bpos[4];
-	/* -0x320(sp) */ sceVu0IVECTOR ivec[4][4];
-	/* -0x220(sp) */ U32DATA ts[4][4];
-	/* -0x1e0(sp) */ U32DATA tt[4][4];
-	/* -0x1a0(sp) */ U32DATA tq[4][4];
-	/* -0x160(sp) */ float dist[4];
-	/* -0x150(sp) */ float bww[4];
-	/* -0x140(sp) */ float bhh[4];
-	/* -0x130(sp) */ float szw[4];
-	/* -0x120(sp) */ float szh[4];
-	/* -0x110(sp) */ reference_fixed_array<unsigned int,4> textbl;
+	/* 0x60(sp) */ fixed_array<float,4> scl;
+	/* 0x70(sp) */ float wlm[4][4];
+	/* 0xb0(sp) */ float slm[4][4];
+	/* 0x4a4(sp) */ int mono;
+	/* 0xf0(sp) */ fixed_array<int,4> clip;
+	/* 0x100(sp) */ fixed_array<unsigned int,4> tw;
+	/* 0x110(sp) */ fixed_array<unsigned int,4> th;
+	/* 0x120(sp) */ fixed_array<long unsigned int,4> tex0;
+	/* 0x140(sp) */ float ppos[4][4][4];
+	/* 0x240(sp) */ float bpos[4];
+	/* 0x250(sp) */ sceVu0IVECTOR ivec[4][4];
+	/* 0x350(sp) */ U32DATA ts[4][4];
+	/* 0x390(sp) */ U32DATA tt[4][4];
+	/* 0x3d0(sp) */ U32DATA tq[4][4];
+	/* 0x410(sp) */ float dist[4];
+	/* 0x420(sp) */ float bww[4];
+	/* 0x430(sp) */ float bhh[4];
+	/* 0x440(sp) */ float szw[4];
+	/* 0x450(sp) */ float szh[4];
+	/* 0x460(sp) */ reference_fixed_array<unsigned int,4> textbl;
 	/* s1 17 */ u_int clpz1;
-	/* -0xc8(sp) */ u_int clpz2;
-	/* -0xc4(sp) */ ENDMG1 *dmg1;
+	/* 0x4a8(sp) */ u_int clpz2;
+	/* 0x4ac(sp) */ ENDMG1 *dmg1;
 	/* s6 22 */ int ndpkt;
-	/* -0xc0(sp) */ Q_WORDDATA *pbuf;
-	/* -0xbc(sp) */ GRA3DCAMERA *pCam;
-	/* -0xb8(sp) */ float &cam_pos[4];
+	/* 0x4b0(sp) */ Q_WORDDATA *pbuf;
+	/* 0x4b4(sp) */ GRA3DCAMERA *pCam;
+	/* 0x4b8(sp) */ float &cam_pos[4];
 }
 
 /* 00143750 0000003c */ void SetEneDmgEffect1_Sub() {
 	/* s0 16 */ int i;
 }
 
-/* 00143790 000009a0 */ static void SetEneDmgEffect2_Sub2(/* s1 17 */ NEW_PERTICLE *np, /* -0x90(sp) */ float *bpos1, /* -0x8c(sp) */ float *bpos2, /* -0x88(sp) */ u_char r1, /* -0x84(sp) */ u_char g1, /* -0x80(sp) */ u_char b1, /* -0x7c(sp) */ u_char r2, /* -0x78(sp) */ u_char g2, /* 0x0(sp) */ int b2) {
-	/* -0x74(sp) */ u_char b2;
+/* 00143790 000009a0 */ static void SetEneDmgEffect2_Sub2(/* s1 17 */ NEW_PERTICLE *np, /* 0x300(sp) */ float *bpos1, /* 0x304(sp) */ float *bpos2, /* 0x308(sp) */ u_char r1, /* 0x30c(sp) */ u_char g1, /* 0x310(sp) */ u_char b1, /* 0x314(sp) */ u_char r2, /* 0x318(sp) */ u_char g2, /* 0x390(sp) */ int b2) {
+	/* 0x31c(sp) */ u_char b2;
 	/* s2 18 */ int i;
 	/* s0 16 */ int n;
-	/* -0x380(sp) */ fixed_array<int,10> tbl;
+	/* 0x10(sp) */ fixed_array<int,10> tbl;
 	/* f0 38 */ float fx;
 	/* f2 40 */ float fy;
 	/* f1 39 */ float fz;
@@ -6045,29 +6179,30 @@
 	/* f22 60 */ float r1l;
 	/* f23 61 */ float r2l;
 	/* f4 42 */ float r2r;
-	/* -0x350(sp) */ fixed_array<float[4],30> wwpos;
-	/* -0x170(sp) */ float bpos3[4];
-	/* -0x160(sp) */ float opos1[4];
-	/* -0x150(sp) */ float wpos[3][4];
-	/* -0x120(sp) */ fixed_array<float[4],3> wkpos;
-	/* -0xf0(sp) */ float rot[4];
-	/* -0xe0(sp) */ float wlm[4][4];
-	/* -0xa0(sp) */ float rottt[4];
+	/* 0x40(sp) */ fixed_array<float[4],30> wwpos;
+	/* 0x220(sp) */ float bpos3[4];
+	/* 0x230(sp) */ float opos1[4];
+	/* 0x240(sp) */ float wpos[3][4];
+	/* 0x270(sp) */ fixed_array<float[4],3> wkpos;
+	/* 0x2a0(sp) */ float rot[4];
+	/* 0x2b0(sp) */ float wlm[4][4];
+	/* 0x2f0(sp) */ float rottt[4];
+	/* s7 23 */ GRA3DCAMERA *pCam;
 	/* s5 21 */ float &cam_pos[4];
 	/* v1 3 */ float *pv0;
 }
 
 /* 00144130 00000b1c */ void SetEneDmgEffect2_Sub() {
 	/* s2 18 */ int fl;
-	/* -0x200(sp) */ u_char rgb1[3][8];
-	/* -0x1e0(sp) */ u_char rgb2[3][8];
-	/* -0xe8(sp) */ int mono;
-	/* -0xe4(sp) */ int c;
+	/* 0x10(sp) */ u_char rgb1[3][8];
+	/* 0x30(sp) */ u_char rgb2[3][8];
+	/* 0x128(sp) */ int mono;
+	/* 0x12c(sp) */ int c;
 	/* s3 19 */ int i;
-	/* -0xe0(sp) */ int j;
-	/* -0xdc(sp) */ int k;
+	/* 0x130(sp) */ int j;
+	/* 0x134(sp) */ int k;
 	/* v1 3 */ int n;
-	/* -0xd8(sp) */ int nyoro_num;
+	/* 0x138(sp) */ int nyoro_num;
 	/* f0 38 */ float fx;
 	/* f3 41 */ float fy;
 	/* f2 40 */ float fz;
@@ -6080,18 +6215,19 @@
 	/* f2 40 */ float r1r;
 	/* f0 38 */ float r2r;
 	/* bss 423470 */ static float bpos1[4];
-	/* -0x1c0(sp) */ float bpos2[4];
-	/* -0x1b0(sp) */ float opos1[4];
-	/* -0x1a0(sp) */ float rot[4];
-	/* -0x190(sp) */ float wpos[4];
-	/* -0x180(sp) */ float ppp2[4];
-	/* -0x170(sp) */ float ppp[4];
-	/* -0x160(sp) */ float wlm[4][4];
+	/* 0x50(sp) */ float bpos2[4];
+	/* 0x60(sp) */ float opos1[4];
+	/* 0x70(sp) */ float rot[4];
+	/* 0x80(sp) */ float wpos[4];
+	/* 0x90(sp) */ float ppp2[4];
+	/* 0xa0(sp) */ float ppp[4];
+	/* 0xb0(sp) */ float wlm[4][4];
 	/* s1 17 */ NEW_PERTICLE *np;
-	/* -0xd0(sp) */ float &cam_pos[4];
-	/* -0x120(sp) */ DRAW_ENV de;
-	/* -0xf0(sp) */ float rot_x;
-	/* -0xec(sp) */ float rot_y;
+	/* 0x13c(sp) */ GRA3DCAMERA *pCam;
+	/* 0x140(sp) */ float &cam_pos[4];
+	/* 0xf0(sp) */ DRAW_ENV de;
+	/* 0x120(sp) */ float rot_x;
+	/* 0x124(sp) */ float rot_y;
 	/* f20 58 */ float f;
 }
 
@@ -6113,19 +6249,19 @@
 	/* s1 17 */ int HitEffectLabel;
 	/* f2 40 */ float Progress;
 	/* a1 5 */ int NowTime;
-	/* -0x40(sp) */ float tx;
-	/* -0x3c(sp) */ float ty;
+	/* 0x0(sp) */ float tx;
+	/* 0x4(sp) */ float ty;
 }
 
 /* 00145318 00000060 */ void EneDmgScreenEffectReq(/* a0 4 */ float *EneMposP0, /* a1 5 */ int DmgType, /* v1 3 */ int EneStatus, /* f12 50 */ float DistPE) {}
 
 /* 00145378 00000114 */ int EneDmgParticleEffectReq(/* s0 16 */ ENE_DMG_PARTICLE_REQ *pEneDmgReq) {
-	/* -0xf60(sp) */ ENEDMG_P_WRK ParticleWork;
+	/* 0x0(sp) */ ENEDMG_P_WRK ParticleWork;
 	/* f1 39 */ float l;
 }
 
-/* 00145490 0000007c */ int EffectEndParticleEffectReq() {
-	/* -0xf60(sp) */ ENEDMG_P_WRK ParticleWork;
+/* 00145490 0000007c */ int EffectEndParticleEffectReq(/* a3 7 */ ENE_DMG_PARTICLE_REQ *pEneDmgReq) {
+	/* 0x0(sp) */ ENEDMG_P_WRK ParticleWork;
 	/* f0 38 */ float SpeedRate;
 }
 
@@ -6138,16 +6274,20 @@
 }
 
 /* 001455e8 00000b54 */ void EneDmgMain() {
-	/* -0x70(sp) */ float tx;
-	/* -0x6c(sp) */ float ty;
+	/* 0x0(sp) */ float tx;
+	/* 0x4(sp) */ float ty;
 	/* s0 16 */ SLL_CELL *pCell;
+	/* v0 2 */ SINGLE_LINK_LIST *pSLL;
 }
 
 /* 00146140 00000074 */ void EffectEndParticleMain() {
 	/* s0 16 */ SLL_CELL *pCell;
+	/* v0 2 */ SINGLE_LINK_LIST *pSLL;
 }
 
-/* 001461b8 0000001c */ int IsActiveEneDmgParticle() {}
+/* 001461b8 0000001c */ int IsActiveEneDmgParticle() {
+	/* v0 2 */ SINGLE_LINK_LIST *pSLL;
+}
 
 /* 001461d8 00000084 */ static void EneDmgParticleColorGet(/* t0 8 */ int *Color, /* a1 5 */ int Type, /* a2 6 */ int EffectType) {
 	/* data 2e50c0 */ static sceVu0IVECTOR HitDamegeCol;
@@ -6158,11 +6298,11 @@
 
 /* 00146278 0000032c */ static void EneDmgParticle(/* s6 22 */ SINGLE_LINK_LIST *pSLL, /* s4 20 */ SLL_CELL *pCell) {
 	/* s1 17 */ ENEDMG_P_WRK *edp;
-	/* -0x70(sp) */ sceVu0IVECTOR Color;
+	/* 0x0(sp) */ sceVu0IVECTOR Color;
 	/* s5 21 */ int SpreadTime;
 	/* s2 18 */ int i;
-	/* -0x60(sp) */ float rot_x;
-	/* -0x5c(sp) */ float rot_y;
+	/* 0x10(sp) */ float rot_x;
+	/* 0x14(sp) */ float rot_y;
 	/* s7 23 */ float &cam_dir[4];
 	/* f20 58 */ float AlphaRate;
 }
@@ -6192,15 +6332,15 @@
 }
 
 /* 001467b0 00000240 */ static void EneDmgParticleSuctionInit(/* s2 18 */ ENEDMG_P_WRK *pEneDmgPWrk, /* s0 16 */ float *Start, /* s1 17 */ float *End) {
-	/* -0xa0(sp) */ float wlm[4][4];
-	/* -0x60(sp) */ float zero[4];
-	/* -0x50(sp) */ float rot_x;
-	/* -0x4c(sp) */ float rot_y;
+	/* 0x0(sp) */ float wlm[4][4];
+	/* 0x40(sp) */ float zero[4];
+	/* 0x50(sp) */ float rot_x;
+	/* 0x54(sp) */ float rot_y;
 	/* s1 17 */ int i;
 }
 
 /* 001469f0 00000188 */ static int EneDmgParticleSuction(/* s1 17 */ ENEDMG_P_WRK *pEneDmgPWrk) {
-	/* -0x60(sp) */ float SubVec[4];
+	/* 0x0(sp) */ float SubVec[4];
 	/* s2 18 */ int i;
 	/* f0 38 */ float fx;
 	/* f3 41 */ float fy;
@@ -6210,7 +6350,7 @@
 }
 
 /* 00146b78 000002cc */ static int EneDmgParticleSuctionOne(/* s2 18 */ ENEDMG_PARTICLE_ONE *pParticle, /* s1 17 */ float *StartPos, /* s0 16 */ float *SubVec, /* f21 59 */ float Length, /* f23 61 */ float LengthDiv6) {
-	/* -0x60(sp) */ float bpos3[4];
+	/* 0x0(sp) */ float bpos3[4];
 	/* f20 58 */ float f2;
 	/* f0 38 */ float PosRate;
 	/* f20 58 */ float RotRate;
@@ -6221,45 +6361,47 @@
 	/* s2 18 */ int i;
 }
 
-/* 00146ef0 000004c0 */ static int EneDmgParticleSuctionTail(/* s4 20 */ ENEDMG_P_TAIL_WRK *pEneDmgTail, /* -0x60(sp) */ ENEDMG_PARTICLE_ONE *pParticle) {
-	/* -0x310(sp) */ float wlm[4][4];
-	/* -0x2d0(sp) */ float wpos[3][4];
-	/* -0x2a0(sp) */ fixed_array<float[4],30> wwpos;
-	/* -0xc0(sp) */ float rot[4];
-	/* -0xb0(sp) */ float rottt[4];
+/* 00146ef0 000004c0 */ static int EneDmgParticleSuctionTail(/* s4 20 */ ENEDMG_P_TAIL_WRK *pEneDmgTail, /* 0x2c0(sp) */ ENEDMG_PARTICLE_ONE *pParticle) {
+	/* 0x10(sp) */ float wlm[4][4];
+	/* 0x50(sp) */ float wpos[3][4];
+	/* 0x80(sp) */ fixed_array<float[4],30> wwpos;
+	/* 0x260(sp) */ float rot[4];
+	/* 0x270(sp) */ float rottt[4];
+	/* s6 22 */ GRA3DCAMERA *pCam;
 	/* s5 21 */ float &cam_pos[4];
-	/* -0xa0(sp) */ fixed_array<int,10> tbl;
+	/* 0x280(sp) */ fixed_array<int,10> tbl;
 	/* s2 18 */ int i;
 	/* s3 19 */ int n;
-	/* -0x5c(sp) */ int ret;
-	/* -0x70(sp) */ u_char rgb2[3][3];
+	/* 0x2c4(sp) */ int ret;
+	/* 0x2b0(sp) */ u_char rgb2[3][3];
 	/* v0 2 */ u_char alpha;
 }
 
-/* 001473b0 00000794 */ static void DrawNewPerticleSub(/* -0xe0(sp) */ int num, /* -0xdc(sp) */ sceVu0FVECTOR *pos, /* s0 16 */ u_char r1, /* s1 17 */ u_char g1, /* s4 20 */ u_char b1, /* s2 18 */ u_char r2, /* s3 19 */ u_char g2, /* s5 21 */ u_char b2, /* 0x0(sp) */ int a) {
-	/* -0xd8(sp) */ u_char a;
-	/* -0xd4(sp) */ u_int clpz2;
-	/* -0xd0(sp) */ u_char rr1;
+/* 001473b0 00000794 */ static void DrawNewPerticleSub(/* 0x380(sp) */ int num, /* 0x384(sp) */ sceVu0FVECTOR *pos, /* s0 16 */ u_char r1, /* s1 17 */ u_char g1, /* s4 20 */ u_char b1, /* s2 18 */ u_char r2, /* s3 19 */ u_char g2, /* s5 21 */ u_char b2, /* 0x460(sp) */ int a) {
+	/* 0x388(sp) */ u_char a;
+	/* 0x38c(sp) */ u_int clpz2;
+	/* 0x390(sp) */ u_char rr1;
 	/* s6 22 */ u_char gg1;
-	/* -0xc0(sp) */ u_char bb1;
+	/* 0x3a0(sp) */ u_char bb1;
 	/* a0 4 */ u_char rr2;
 	/* v0 2 */ u_char gg2;
 	/* v1 3 */ u_char bb2;
-	/* -0xb0(sp) */ int i;
-	/* -0xac(sp) */ int j;
+	/* 0x3b0(sp) */ int i;
+	/* 0x3b4(sp) */ int j;
 	/* s4 20 */ int k;
 	/* v0 2 */ int alp;
 	/* v0 2 */ int cl;
-	/* -0xa8(sp) */ int tagnum;
-	/* -0xa4(sp) */ int cnt;
-	/* -0x460(sp) */ fixed_array<int,30> clip;
-	/* -0x3e0(sp) */ fixed_array<int[4],30> ivec;
-	/* -0x200(sp) */ fixed_array<long unsigned int,30> xyzf;
+	/* 0x3b8(sp) */ int tagnum;
+	/* 0x3bc(sp) */ int cnt;
+	/* 0x0(sp) */ fixed_array<int,30> clip;
+	/* 0x80(sp) */ fixed_array<int[4],30> ivec;
+	/* 0x260(sp) */ fixed_array<long unsigned int,30> xyzf;
 	/* s1 17 */ u_long rgbaq1;
-	/* -0xa0(sp) */ u_long rgbaq2;
-	/* -0x98(sp) */ u_long reg;
-	/* -0x90(sp) */ int ndpkt;
-	/* -0x8c(sp) */ Q_WORDDATA *pbuf;
+	/* 0x3c0(sp) */ u_long rgbaq2;
+	/* 0x3c8(sp) */ u_long reg;
+	/* 0x3d0(sp) */ int ndpkt;
+	/* 0x3d4(sp) */ Q_WORDDATA *pbuf;
+	/* s7 23 */ GRA3DCAMERA *pCam;
 }
 
 /* 00147b48 00000008 */ int EneDmgParticleSuctionNumGet() {}
@@ -6325,19 +6467,20 @@
 /* 00149308 00000034 */ static void EneDmgLargeHitEffectFuu_BInit(/* s0 16 */ ENE_DMG_LARGE_HIT *pLargeHit) {}
 
 /* 00149340 00000394 */ static void EneDmgLargeHitEffectDisp(/* s4 20 */ ENE_DMG_LARGE_HIT *pLargeHit, /* f22 60 */ float Scale, /* f23 61 */ float RotZ) {
-	/* -0x21d0(sp) */ float LocalWorldMat[4][4];
-	/* -0x2190(sp) */ float LocalScreenMat[4][4];
-	/* -0x2150(sp) */ float RotScaleMat[4][4];
-	/* -0x2110(sp) */ float stqparam[3][4];
-	/* -0x20e0(sp) */ fixed_array<float[4],256> VtxBuf;
-	/* -0x10e0(sp) */ fixed_array<float[4],256> StqBuf;
-	/* -0xe0(sp) */ float Pos[4];
+	/* 0x0(sp) */ float LocalWorldMat[4][4];
+	/* 0x40(sp) */ float LocalScreenMat[4][4];
+	/* 0x80(sp) */ float RotScaleMat[4][4];
+	/* 0xc0(sp) */ float stqparam[3][4];
+	/* 0xf0(sp) */ fixed_array<float[4],256> VtxBuf;
+	/* 0x10f0(sp) */ fixed_array<float[4],256> StqBuf;
+	/* 0x20f0(sp) */ float Pos[4];
 	/* s5 21 */ int VertexNum;
 	/* f20 58 */ float EffectW;
 	/* f21 59 */ float EffectH;
 	/* s1 17 */ int i;
-	/* -0xd0(sp) */ float RotX;
-	/* -0xcc(sp) */ float RotY;
+	/* 0x2100(sp) */ float RotX;
+	/* 0x2104(sp) */ float RotY;
+	/* s3 19 */ GRA3DCAMERA *pCam;
 }
 
 /* 001496d8 000001d4 */ static void EneDmgLargeHitMakeVertex(/* a0 4 */ sceVu0FVECTOR *pVtxBuf, /* a1 5 */ float *Center, /* f12 50 */ float Width, /* f13 51 */ float Height, /* a2 6 */ u_int VertexNumW, /* a3 7 */ u_int VertexNumH) {
@@ -6349,40 +6492,41 @@
 	/* a1 5 */ u_int i;
 }
 
-/* 001498b0 00000364 */ void EneDmgLargeHitMakePacket(/* s3 19 */ sceVu0FVECTOR *pVertexBuf, /* fp 30 */ int VertexNum, /* s0 16 */ float *LocalWorldMat[4], /* s6 22 */ u_char *pCenterRgba, /* s5 21 */ u_char *pOutsideRgba, /* -0x60(sp) */ sceVu0FVECTOR *pStq, /* s4 20 */ u_long tex0) {
-	/* -0x1460(sp) */ fixed_array<int[4],256> VertexBuf_I;
-	/* -0x460(sp) */ fixed_array<int,256> clip;
+/* 001498b0 00000364 */ void EneDmgLargeHitMakePacket(/* s3 19 */ sceVu0FVECTOR *pVertexBuf, /* fp 30 */ int VertexNum, /* s0 16 */ float *LocalWorldMat[4], /* s6 22 */ u_char *pCenterRgba, /* s5 21 */ u_char *pOutsideRgba, /* 0x1400(sp) */ sceVu0FVECTOR *pStq, /* s4 20 */ u_long tex0) {
+	/* 0x0(sp) */ fixed_array<int[4],256> VertexBuf_I;
+	/* 0x1000(sp) */ fixed_array<int,256> clip;
 	/* s1 17 */ Q_WORDDATA *pPacket;
 	/* s2 18 */ int i;
 	/* s3 19 */ u_long *plong;
+	/* v0 2 */ GRA3DCAMERA *pCam;
 }
 
 /* 00149c18 00000038 */ ENE_DMG_LARGE_HIT_PARAMETER* EffEneDmgLargeHitParameterPtrGet(/* s0 16 */ int Label) {}
 /* 00149c50 00000038 */ ENE_DMG_BLUR_CONTRAST_PARAMETER* EffEneDmgLargeHitBlurParameterPtrGet(/* s0 16 */ int Label) {}
-/* 002e3590 00000054 */ ENDMG1* ENDMG1 * _fixed_array_verifyrange<ENDMG1>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
-/* 002e3590 00000054 */ ENE_WRK* ENE_WRK * _fixed_array_verifyrange<ENE_WRK>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
-/* 002e3590 00000054 */ sceVu0FVECTOR* float [3] * _fixed_array_verifyrange<float [3]>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
-/* 002e3590 00000054 */ float* float * _fixed_array_verifyrange<float>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
-/* 002e3590 00000054 */ int* int * _fixed_array_verifyrange<int>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
-/* 002e3590 00000054 */ u_long* unsigned long * _fixed_array_verifyrange<unsigned long>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
-/* 002e3590 00000054 */ SPRT_DAT* SPRT_DAT * _fixed_array_verifyrange<SPRT_DAT>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
-/* 002e3590 00000054 */ u_int* unsigned int * _fixed_array_verifyrange<unsigned int>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
-/* 002e3590 00000054 */ NEW_PERTICLE* NEW_PERTICLE * _fixed_array_verifyrange<NEW_PERTICLE>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
-/* 002e3590 00000054 */ float*[4][4] float [3][3] * _fixed_array_verifyrange<float [3][3]>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
-/* 002e3590 00000054 */ TAIL_DMG2_DAT* TAIL_DMG2_DAT * _fixed_array_verifyrange<TAIL_DMG2_DAT>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
-/* 002e3590 00000054 */ ENEDMG_PARTICLE_ONE* ENEDMG_PARTICLE_ONE * _fixed_array_verifyrange<ENEDMG_PARTICLE_ONE>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
-/* 002e3590 00000054 */ int*[4] int [3] * _fixed_array_verifyrange<int [3]>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
-/* 002e3590 00000054 */ ENE_DMG_LARGE_HIT* ENE_DMG_LARGE_HIT * _fixed_array_verifyrange<ENE_DMG_LARGE_HIT>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
-/* 002e3590 00000054 */ u_char* unsigned char * _fixed_array_verifyrange<unsigned char>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
-/* 002e3590 00000054 */ ENE_DMG_LARGE_HIT_PARAMETER** ENE_DMG_LARGE_HIT_PARAMETER * * _fixed_array_verifyrange<ENE_DMG_LARGE_HIT_PARAMETER *>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
-/* 002e3590 00000054 */ ENE_DMG_BLUR_CONTRAST_PARAMETER** ENE_DMG_BLUR_CONTRAST_PARAMETER * * _fixed_array_verifyrange<ENE_DMG_BLUR_CONTRAST_PARAMETER *>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ ENDMG1* ENDMG1 * _fixed_array_verifyrange<ENDMG1>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ ENE_WRK* ENE_WRK * _fixed_array_verifyrange<ENE_WRK>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ sceVu0FVECTOR* float [3] * _fixed_array_verifyrange<float [3]>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ float* float * _fixed_array_verifyrange<float>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ int* int * _fixed_array_verifyrange<int>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ u_long* unsigned long * _fixed_array_verifyrange<unsigned long>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ SPRT_DAT* SPRT_DAT * _fixed_array_verifyrange<SPRT_DAT>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ u_int* unsigned int * _fixed_array_verifyrange<unsigned int>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ NEW_PERTICLE* NEW_PERTICLE * _fixed_array_verifyrange<NEW_PERTICLE>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ float*[4][4] float [3][3] * _fixed_array_verifyrange<float [3][3]>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ TAIL_DMG2_DAT* TAIL_DMG2_DAT * _fixed_array_verifyrange<TAIL_DMG2_DAT>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ ENEDMG_PARTICLE_ONE* ENEDMG_PARTICLE_ONE * _fixed_array_verifyrange<ENEDMG_PARTICLE_ONE>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ int*[4] int [3] * _fixed_array_verifyrange<int [3]>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ ENE_DMG_LARGE_HIT* ENE_DMG_LARGE_HIT * _fixed_array_verifyrange<ENE_DMG_LARGE_HIT>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ u_char* unsigned char * _fixed_array_verifyrange<unsigned char>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ ENE_DMG_LARGE_HIT_PARAMETER** ENE_DMG_LARGE_HIT_PARAMETER * * _fixed_array_verifyrange<ENE_DMG_LARGE_HIT_PARAMETER *>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ ENE_DMG_BLUR_CONTRAST_PARAMETER** ENE_DMG_BLUR_CONTRAST_PARAMETER * * _fixed_array_verifyrange<ENE_DMG_BLUR_CONTRAST_PARAMETER *>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
 
 /* 00149c88 00000098 */ static void __static_initialization_and_destruction_0(/* a0 4 */ int __initialize_p, /* a1 5 */ int __priority) {
 	/* v0 2 */ ENE_DMG_BLUR_CONTRAST_PARAMETER **ra;
 	/* v0 2 */ int *ra;
 }
 
-/* 002e3590 000004f0 */ void EneDmgParticleOneDraw(/* s2 18 */ ENEDMG_PARTICLE_ONE *pEneParticle, /* f30 68 */ float rot_x, /* f31 69 */ float rot_y, /* s3 19 */ int r, /* s4 20 */ int g, /* s7 23 */ int b, /* f21 59 */ float AlphaRate, /* s0 16 */ int Type) {
+/* ffffffff 000004f0 */ void EneDmgParticleOneDraw(/* s2 18 */ ENEDMG_PARTICLE_ONE *pEneParticle, /* f30 68 */ float rot_x, /* f31 69 */ float rot_y, /* s3 19 */ int r, /* s4 20 */ int g, /* s7 23 */ int b, /* f21 59 */ float AlphaRate, /* s0 16 */ int Type) {
 	/* f7 45 */ float BouStartScaleX;
 	/* f8 46 */ float BouStartScaleY;
 	/* f0 38 */ float BouStartAlpha;
@@ -6390,13 +6534,13 @@
 	/* f9 47 */ float WakkaStartScaleX;
 	/* f0 38 */ float WakkaStartAlpha;
 	/* f6 44 */ float WakkaEndAlpha;
-	/* -0x1b0(sp) */ DRAW_ENV de;
+	/* 0x0(sp) */ DRAW_ENV de;
 	/* f25 63 */ float ParticleSizeW;
 	/* f24 62 */ float ParticleSizeH;
-	/* -0x180(sp) */ float wlm[4][4];
-	/* -0x140(sp) */ float RotMat[4][4];
-	/* -0x100(sp) */ float LocalWorldMat2[4][4];
-	/* -0xc0(sp) */ float zero[4];
+	/* 0x30(sp) */ float wlm[4][4];
+	/* 0x70(sp) */ float RotMat[4][4];
+	/* 0xb0(sp) */ float LocalWorldMat2[4][4];
+	/* 0xf0(sp) */ float zero[4];
 	/* f28 66 */ float BouScaleX;
 	/* f26 64 */ float BouScaleY;
 	/* f27 65 */ float BouAlpha;
@@ -6407,19 +6551,19 @@
 	/* f23 61 */ float AlphaBase;
 }
 
-/* 002e3590 0000003c */ type_info& ENDMG1 type_info function() {}
-/* 002e3590 0000003c */ type_info& ENE_WRK type_info function() {}
-/* 002e3590 0000003c */ type_info& float [3] type_info function() {}
-/* 002e3590 0000003c */ type_info& SPRT_DAT type_info function() {}
-/* 002e3590 0000003c */ type_info& NEW_PERTICLE type_info function() {}
-/* 002e3590 0000003c */ type_info& float [3][3] type_info function() {}
-/* 002e3590 0000003c */ type_info& TAIL_DMG2_DAT type_info function() {}
-/* 002e3590 0000003c */ type_info& ENEDMG_PARTICLE_ONE type_info function() {}
-/* 002e3590 0000003c */ type_info& int [3] type_info function() {}
-/* 002e3590 0000003c */ type_info& ENE_DMG_LARGE_HIT type_info function() {}
-/* 002e3590 0000004c */ type_info& ENE_DMG_LARGE_HIT_PARAMETER * type_info function() {}
-/* 002e3590 0000004c */ type_info& ENE_DMG_BLUR_CONTRAST_PARAMETER * type_info function() {}
-/* 002e3590 0000003c */ type_info& ENE_DMG_LARGE_HIT_PARAMETER type_info function() {}
+/* ffffffff 0000003c */ type_info& ENDMG1 type_info function() {}
+/* ffffffff 0000003c */ type_info& ENE_WRK type_info function() {}
+/* ffffffff 0000003c */ type_info& float [3] type_info function() {}
+/* ffffffff 0000003c */ type_info& SPRT_DAT type_info function() {}
+/* ffffffff 0000003c */ type_info& NEW_PERTICLE type_info function() {}
+/* ffffffff 0000003c */ type_info& float [3][3] type_info function() {}
+/* ffffffff 0000003c */ type_info& TAIL_DMG2_DAT type_info function() {}
+/* ffffffff 0000003c */ type_info& ENEDMG_PARTICLE_ONE type_info function() {}
+/* ffffffff 0000003c */ type_info& int [3] type_info function() {}
+/* ffffffff 0000003c */ type_info& ENE_DMG_LARGE_HIT type_info function() {}
+/* ffffffff 0000004c */ type_info& ENE_DMG_LARGE_HIT_PARAMETER * type_info function() {}
+/* ffffffff 0000004c */ type_info& ENE_DMG_BLUR_CONTRAST_PARAMETER * type_info function() {}
+/* ffffffff 0000003c */ type_info& ENE_DMG_LARGE_HIT_PARAMETER type_info function() {}
 /* 002e3590 0000003c */ type_info& ENE_DMG_BLUR_CONTRAST_PARAMETER type_info function() {}
 /* 00149d20 00000020 */ static void global constructors keyed to SmallHit() {}
 
@@ -6450,10 +6594,10 @@
 /* 0014a2b8 000000a8 */ void* CallPartsDeform5(/* s1 17 */ int type, /* f12 50 */ float sclx, /* f20 58 */ float scly, /* s2 18 */ void *pos, /* s3 19 */ float *vol) {}
 /* 0014a360 000000c0 */ void* CallPartsDeform5_2(/* s1 17 */ int type, /* f12 50 */ float sclx, /* f20 58 */ float scly, /* s2 18 */ void *pos, /* s3 19 */ float *vol, /* s4 20 */ float *pSpd, /* s5 21 */ float *pRate) {}
 
-/* 0014a420 000000ec */ void* CallPartsDeform6(/* s2 18 */ int type, /* f20 58 */ float scale, /* s5 21 */ void *pos, /* s6 22 */ u_int in, /* s4 20 */ u_int keep, /* s3 19 */ u_int out, /* s1 17 */ int alp, /* s7 23 */ float *pSpd, /* fp 30 */ float *pRate, /* 0x0(sp) */ int r, /* 0x8(sp) */ int g, /* 0x10(sp) */ int b) {
-	/* 0x0(sp) */ int r;
-	/* 0x8(sp) */ int g;
-	/* 0x10(sp) */ int b;
+/* 0014a420 000000ec */ void* CallPartsDeform6(/* s2 18 */ int type, /* f20 58 */ float scale, /* s5 21 */ void *pos, /* s6 22 */ u_int in, /* s4 20 */ u_int keep, /* s3 19 */ u_int out, /* s1 17 */ int alp, /* s7 23 */ float *pSpd, /* fp 30 */ float *pRate, /* 0xb0(sp) */ int r, /* 0xb8(sp) */ int g, /* 0xc0(sp) */ int b) {
+	/* 0xb0(sp) */ int r;
+	/* 0xb8(sp) */ int g;
+	/* 0xc0(sp) */ int b;
 }
 
 /* 0014a510 00000308 */ void SetPartsDeform(/* s0 16 */ EFFECT_CONT *ec) {
@@ -6473,9 +6617,9 @@
 /* 0014a860 00000014 */ void SetVURand(/* f12 50 */ float x) {}
 /* 0014a878 0000006c */ int CalcPartsDeformXYZ(/* a0 4 */ int *vi, /* a1 5 */ float *vf) {}
 
-/* 0014a8e8 00000614 */ static void MakePartsDeformPacket(/* -0x90(sp) */ int pnumw, /* -0x8c(sp) */ int pnumh, /* s5 21 */ float *vt[4], /* s0 16 */ float *wlm[4], /* s6 22 */ float *stq[4], /* -0x88(sp) */ u_char *use_alpha, /* f20 58 */ float aprate, /* s7 23 */ u_long tex0, /* -0x84(sp) */ int Red, /* 0x0(sp) */ int Green, /* 0x8(sp) */ int Blue, /* 0x10(sp) */ int DrawEnvType) {
-	/* 0x0(sp) */ int Green;
-	/* 0x8(sp) */ int Blue;
+/* 0014a8e8 00000614 */ static void MakePartsDeformPacket(/* 0x16a0(sp) */ int pnumw, /* 0x16a4(sp) */ int pnumh, /* s5 21 */ float *vt[4], /* s0 16 */ float *wlm[4], /* s6 22 */ float *stq[4], /* 0x16a8(sp) */ u_char *use_alpha, /* f20 58 */ float aprate, /* s7 23 */ u_long tex0, /* 0x16ac(sp) */ int Red, /* 0x1730(sp) */ int Green, /* 0x1738(sp) */ int Blue, /* 0x1740(sp) */ int DrawEnvType) {
+	/* 0x1730(sp) */ int Green;
+	/* 0x1738(sp) */ int Blue;
 	/* fp 30 */ int DrawEnvType;
 	/* s4 20 */ int i;
 	/* s5 21 */ int j;
@@ -6483,8 +6627,8 @@
 	/* s0 16 */ int l;
 	/* s3 19 */ u_long *plong;
 	/* s2 18 */ Q_WORDDATA *ppbuf;
-	/* -0x1730(sp) */ fixed_array<int,289> clip;
-	/* -0x12a0(sp) */ fixed_array<int[4],289> vtiw;
+	/* 0x0(sp) */ fixed_array<int,289> clip;
+	/* 0x490(sp) */ fixed_array<int[4],289> vtiw;
 	/* v0 2 */ GRA3DCAMERA *pCam;
 	/* rdata 3a6620 */ static DRAW_ENV_5 DoorSealEnv;
 }
@@ -6499,8 +6643,8 @@
 }
 
 /* 0014afe0 0000008c */ static int PartsDeformClipCheck(/* s0 16 */ float *slm[4]) {
-	/* -0x30(sp) */ float fzero[4];
-	/* -0x20(sp) */ int ivec[4];
+	/* 0x0(sp) */ float fzero[4];
+	/* 0x10(sp) */ int ivec[4];
 	/* v0 2 */ int clip_flg;
 }
 
@@ -6512,9 +6656,9 @@
 
 /* 0014b0e8 00000054 */ static float PartsDeformAddIso(/* f20 58 */ float now_iso, /* f21 59 */ float add_val) {}
 
-/* 0014b140 00000aa8 */ static u_char SubPartsDeform1(/* s7 23 */ EFFECT_CONT *ec, /* s0 16 */ u_char num, /* -0xd0(sp) */ int page, /* fp 30 */ int sbj, /* f31 69 */ float sclx, /* -0xcc(sp) */ float scly, /* f27 65 */ float vol, /* t0 8 */ int fl, /* f28 66 */ float spd, /* f29 67 */ float rate, /* -0xc8(sp) */ float trate) {
+/* 0014b140 00000aa8 */ static u_char SubPartsDeform1(/* s7 23 */ EFFECT_CONT *ec, /* s0 16 */ u_char num, /* 0x2510(sp) */ int page, /* fp 30 */ int sbj, /* f31 69 */ float sclx, /* 0x2514(sp) */ float scly, /* f27 65 */ float vol, /* t0 8 */ int fl, /* f28 66 */ float spd, /* f29 67 */ float rate, /* 0x2518(sp) */ float trate) {
 	/* s6 22 */ EFFINFO2 *pefi;
-	/* -0xc4(sp) */ u_char ret_num;
+	/* 0x251c(sp) */ u_char ret_num;
 	/* s1 17 */ int i;
 	/* s3 19 */ int j;
 	/* s2 18 */ int k;
@@ -6526,19 +6670,19 @@
 	/* f26 64 */ float cnth;
 	/* f23 61 */ float tsw;
 	/* f24 62 */ float tsh;
-	/* -0x25c0(sp) */ float rot_x;
-	/* -0x25bc(sp) */ float rot_y;
+	/* 0x20(sp) */ float rot_x;
+	/* 0x24(sp) */ float rot_y;
 	/* f0 38 */ float f3;
 	/* f9 47 */ float f4;
 	/* f20 58 */ float xx;
 	/* f21 59 */ float yy;
-	/* -0x25b0(sp) */ float stqparam[3][4];
-	/* -0xc0(sp) */ u_long tex0;
-	/* -0x2580(sp) */ fixed_array<float[4],289> stq;
-	/* -0x1370(sp) */ fixed_array<float[4],289> vt;
-	/* -0x160(sp) */ float vpos[4];
-	/* -0x150(sp) */ float slm[4][4];
-	/* -0x110(sp) */ float wlm[4][4];
+	/* 0x30(sp) */ float stqparam[3][4];
+	/* 0x2520(sp) */ u_long tex0;
+	/* 0x60(sp) */ fixed_array<float[4],289> stq;
+	/* 0x1270(sp) */ fixed_array<float[4],289> vt;
+	/* 0x2480(sp) */ float vpos[4];
+	/* 0x2490(sp) */ float slm[4][4];
+	/* 0x24d0(sp) */ float wlm[4][4];
 	/* f0 38 */ float wfw;
 	/* f1 39 */ float wfh;
 	/* f21 59 */ float ml;
@@ -6548,6 +6692,7 @@
 	/* sdata 3efde8 */ static float renz;
 	/* sbss 3f4bb0 */ static reference_fixed_array<int,10> passflg;
 	/* data 2fbb70 */ static float passcnt[10];
+	/* s4 20 */ GRA3DCAMERA *pCam;
 	/* s3 19 */ float &cam_dir[4];
 	/* f20 58 */ float fw;
 }
@@ -6586,7 +6731,7 @@
 	/* f1 39 */ float f4;
 }
 
-/* 0014c230 00000210 */ static void PartsDeformCalcWaveRotZ(/* s5 21 */ float *vt[4], /* s2 18 */ int vnumw, /* s1 17 */ int vnumh, /* f29 67 */ float tsw, /* f28 66 */ float tsh, /* f27 65 */ float cntw, /* f26 64 */ float cnth, /* f16 54 */ float base_iso) {
+/* 0014c230 00000210 */ static void PartsDeformCalcWaveRotZ(/* s5 21 */ float *vt[4], /* s2 18 */ int vnumw, /* s1 17 */ int vnumh, /* f29 67 */ float tsw, /* f28 66 */ float tsh, /* f27 65 */ float cntw, /* f26 64 */ float cnth, /* f16 54 */ float base_iso, /* s3 19 */ EFFINFO2 *pefi) {
 	/* s4 20 */ int pnumw;
 	/* s0 16 */ int pnumh;
 	/* s1 17 */ int i;
@@ -6599,7 +6744,7 @@
 	/* f1 39 */ float f4;
 }
 
-/* 0014c440 000001c8 */ static void PartsDeformCalcWaveBound(/* a0 4 */ float *vt[4], /* s1 17 */ int vnumw, /* a2 6 */ int vnumh, /* f26 64 */ float tsw, /* f25 63 */ float tsh, /* f29 67 */ float cntw, /* f28 66 */ float cnth, /* -0xa0(sp) */ float base_iso, /* f31 69 */ float renz) {
+/* 0014c440 000001c8 */ static void PartsDeformCalcWaveBound(/* a0 4 */ float *vt[4], /* s1 17 */ int vnumw, /* a2 6 */ int vnumh, /* f26 64 */ float tsw, /* f25 63 */ float tsh, /* f29 67 */ float cntw, /* f28 66 */ float cnth, /* 0x0(sp) */ float base_iso, /* f31 69 */ float renz) {
 	/* s2 18 */ int i;
 	/* f24 62 */ float wfw;
 	/* f23 61 */ float wfh;
@@ -6624,10 +6769,10 @@
 	/* f1 39 */ float wfh;
 }
 
-/* 0014ccb0 00000738 */ static u_char SubPartsDeform2(/* fp 30 */ EFFECT_CONT *ec, /* s0 16 */ u_char num, /* a2 6 */ int page, /* -0xc0(sp) */ int sbj, /* f30 68 */ float sclx, /* f31 69 */ float scly, /* f23 61 */ float vol, /* t0 8 */ int fl, /* f25 63 */ float spd, /* f28 66 */ float rate, /* f17 55 */ float trate) {
+/* 0014ccb0 00000738 */ static u_char SubPartsDeform2(/* fp 30 */ EFFECT_CONT *ec, /* s0 16 */ u_char num, /* a2 6 */ int page, /* 0x2520(sp) */ int sbj, /* f30 68 */ float sclx, /* f31 69 */ float scly, /* f23 61 */ float vol, /* t0 8 */ int fl, /* f25 63 */ float spd, /* f28 66 */ float rate, /* f17 55 */ float trate) {
 	/* bss 42f480 */ static fixed_array<EFFINFO2,5> pefi_once;
 	/* s7 23 */ EFFINFO2 *pefi;
-	/* -0xbc(sp) */ u_char ret_num;
+	/* 0x2524(sp) */ u_char ret_num;
 	/* s4 20 */ int i;
 	/* s3 19 */ int j;
 	/* s2 18 */ int k;
@@ -6637,19 +6782,20 @@
 	/* f21 59 */ float cnth;
 	/* f22 60 */ float tsw;
 	/* f24 62 */ float tsh;
-	/* -0x25c0(sp) */ float rot_x;
-	/* -0x25bc(sp) */ float rot_y;
-	/* -0x25b0(sp) */ PDEFORM_PARA para;
+	/* 0x20(sp) */ float rot_x;
+	/* 0x24(sp) */ float rot_y;
+	/* 0x30(sp) */ PDEFORM_PARA para;
 	/* f26 64 */ float comp;
 	/* f27 65 */ float aprate;
 	/* f20 58 */ float xx;
 	/* f21 59 */ float yy;
-	/* -0x25a0(sp) */ float stqparam[3][4];
-	/* -0x2570(sp) */ fixed_array<float[4],289> stq;
-	/* -0x1360(sp) */ fixed_array<float[4],289> vt;
-	/* -0x150(sp) */ float vpos[4];
-	/* -0x140(sp) */ float slm[4][4];
-	/* -0x100(sp) */ float wlm[4][4];
+	/* 0x40(sp) */ float stqparam[3][4];
+	/* 0x70(sp) */ fixed_array<float[4],289> stq;
+	/* 0x1280(sp) */ fixed_array<float[4],289> vt;
+	/* 0x2490(sp) */ float vpos[4];
+	/* 0x24a0(sp) */ float slm[4][4];
+	/* 0x24e0(sp) */ float wlm[4][4];
+	/* s5 21 */ GRA3DCAMERA *pCam;
 	/* s4 20 */ float &cam_dir[4];
 }
 
@@ -6664,51 +6810,51 @@
 	/* f20 58 */ float l;
 }
 
-/* 0014d8e8 00000378 */ static void PartsDeform2CalcWaveY2(/* s0 16 */ float *vt[4], /* s2 18 */ int vnumw, /* -0x90(sp) */ int vnumh, /* f21 59 */ float comp, /* f20 58 */ float rate, /* f14 52 */ float spd, /* s6 22 */ EFFINFO2 *pefi) {
+/* 0014d8e8 00000378 */ static void PartsDeform2CalcWaveY2(/* s0 16 */ float *vt[4], /* s2 18 */ int vnumw, /* 0x0(sp) */ int vnumh, /* f21 59 */ float comp, /* f20 58 */ float rate, /* f14 52 */ float spd, /* s1 17 */ PDEFORM_PARA *pPara, /* s6 22 */ EFFINFO2 *pefi) {
 	/* s3 19 */ int i;
 	/* f21 59 */ float vtrate;
 	/* f25 63 */ float add;
 }
 
-/* 0014dc60 00000284 */ static void PartsDeform2CalcWaveType2(/* -0x90(sp) */ float *vt[4], /* -0x8c(sp) */ int vnumw, /* s2 18 */ int vnumh, /* f12 50 */ float comp, /* f13 51 */ float rate, /* f24 62 */ float spd, /* s4 20 */ EFFINFO2 *pefi) {
+/* 0014dc60 00000284 */ static void PartsDeform2CalcWaveType2(/* 0x50(sp) */ float *vt[4], /* 0x54(sp) */ int vnumw, /* s2 18 */ int vnumh, /* f12 50 */ float comp, /* f13 51 */ float rate, /* f24 62 */ float spd, /* a3 7 */ PDEFORM_PARA *pPara, /* s4 20 */ EFFINFO2 *pefi) {
 	/* f1 39 */ float add;
 	/* f1 39 */ float ll;
 	/* f20 58 */ float fw;
 	/* s1 17 */ int i;
 	/* s2 18 */ int j;
-	/* -0xe0(sp) */ fixed_array<float,17> SinCalcBuf;
+	/* 0x0(sp) */ fixed_array<float,17> SinCalcBuf;
 }
 
 /* 0014dee8 00000020 */ int GetCornHitCheck(/* a0 4 */ float *bpos, /* f12 50 */ float power) {
-	/* -0x20(sp) */ float rrate;
-	/* -0x1c(sp) */ float lrate;
+	/* 0x0(sp) */ float rrate;
+	/* 0x4(sp) */ float lrate;
 }
 
 /* 0014df08 000001d4 */ int GetCornHitCheck2(/* s1 17 */ float *bpos, /* f21 59 */ float power, /* s3 19 */ float *rrate, /* s2 18 */ float *lrate) {
-	/* -0xe0(sp) */ float wlm1[4][4];
-	/* -0xa0(sp) */ float wlm2[4][4];
-	/* -0x60(sp) */ float wpos[4];
+	/* 0x0(sp) */ float wlm1[4][4];
+	/* 0x40(sp) */ float wlm2[4][4];
+	/* 0x80(sp) */ float wpos[4];
 	/* f22 60 */ float rot_x;
 	/* f20 58 */ float rot_y;
 	/* f3 41 */ float lc;
-	/* -0x50(sp) */ float work[4];
+	/* 0x90(sp) */ float work[4];
 }
 
 /* 0014e0e0 000009c0 */ void SetRenzFlare(/* s5 21 */ EFFECT_CONT *ec) {
 	/* sdata 3efdf0 */ static float f1bk;
-	/* -0x200(sp) */ float wlm[4][4];
-	/* -0x1c0(sp) */ float slm[4][4];
-	/* -0x180(sp) */ float tpos[4];
-	/* -0x170(sp) */ float pos1[4];
-	/* -0x160(sp) */ float vpos[4];
-	/* -0x150(sp) */ float trot[4];
-	/* -0x140(sp) */ float wppos[4];
+	/* 0x0(sp) */ float wlm[4][4];
+	/* 0x40(sp) */ float slm[4][4];
+	/* 0x80(sp) */ float tpos[4];
+	/* 0x90(sp) */ float pos1[4];
+	/* 0xa0(sp) */ float vpos[4];
+	/* 0xb0(sp) */ float trot[4];
+	/* 0xc0(sp) */ float wppos[4];
 	/* f20 58 */ float t1rot_x;
 	/* f22 60 */ float t2rot_x;
 	/* f21 59 */ float t1rot_y;
 	/* f23 61 */ float t2rot_y;
-	/* -0x130(sp) */ float f1;
-	/* -0x12c(sp) */ float f2;
+	/* 0xd0(sp) */ float f1;
+	/* 0xd4(sp) */ float f2;
 	/* f24 62 */ float rx;
 	/* f20 58 */ float ry;
 	/* f22 60 */ float mx;
@@ -6716,24 +6862,25 @@
 	/* f23 61 */ float ang;
 	/* s4 20 */ int i;
 	/* s0 16 */ float &cam_dir[4];
-	/* -0x120(sp) */ EFRENZ efrenz[9];
+	/* s6 22 */ GRA3DCAMERA *pCam;
+	/* 0xe0(sp) */ EFRENZ efrenz[9];
 }
 
 /* 0014eaa0 000004ac */ static void SetStarRay(/* s0 16 */ float *bpos, /* s2 18 */ int tp, /* f26 64 */ float sc, /* s1 17 */ int num, /* f29 67 */ float aang) {
 	/* s2 18 */ int i;
-	/* -0x140(sp) */ fixed_array<int,4> x;
-	/* -0x130(sp) */ fixed_array<int,4> y;
+	/* 0x0(sp) */ fixed_array<int,4> x;
+	/* 0x10(sp) */ fixed_array<int,4> y;
 	/* s6 22 */ u_int z;
 	/* f27 65 */ float div;
 	/* f22 60 */ float f;
 	/* f21 59 */ float ss;
 	/* f20 58 */ float cc;
 	/* f28 66 */ float ang;
-	/* -0x120(sp) */ float pos2[4][2];
-	/* -0x100(sp) */ float pos[4][3];
+	/* 0x20(sp) */ float pos2[4][2];
+	/* 0x40(sp) */ float pos[4][3];
 	/* fp 30 */ u_char rr;
-	/* -0xb0(sp) */ u_char gg;
-	/* -0xac(sp) */ u_char bb;
+	/* 0x90(sp) */ u_char gg;
+	/* 0x94(sp) */ u_char bb;
 	/* f25 63 */ float bx;
 	/* f24 62 */ float by;
 	/* s4 20 */ Q_WORDDATA *pbuf;
@@ -6744,7 +6891,7 @@
 
 /* 0014ef78 00000078 */ void EffectLightComeInRegist(/* s1 17 */ void *pSgdTop, /* a1 5 */ int MapBuffId, /* s0 16 */ int Type) {
 	/* s2 18 */ LIGHT_COME_IN_CTRL *pCtrl;
-	/* -0x40(sp) */ LIGHT_COME_IN_DATA LightData;
+	/* 0x0(sp) */ LIGHT_COME_IN_DATA LightData;
 }
 
 /* 0014eff0 000000a0 */ void EffectLightComeInDeleteMapBuffId(/* s3 19 */ int MapBuffId) {
@@ -6758,18 +6905,18 @@
 }
 
 /* 0014f0d0 00000094 */ static void EffectLightComeInMatrix2Rot(/* a0 4 */ float *LWMatrix[4], /* s2 18 */ float *pRotX, /* s1 17 */ float *pRotY) {
-	/* -0x80(sp) */ float TmpMat[4][4];
-	/* -0x40(sp) */ float BaseVec[4];
-	/* -0x30(sp) */ float DirVec[4];
+	/* 0x0(sp) */ float TmpMat[4][4];
+	/* 0x40(sp) */ float BaseVec[4];
+	/* 0x50(sp) */ float DirVec[4];
 }
 
 /* 0014f168 00000180 */ static float EffectLightComeInCalcAlphaRateCamDir(/* s0 16 */ void *pSgdTop) {
 	/* v0 2 */ float &CamDir[4];
 	/* s0 16 */ SGDCOORDINATE *pSgCoord;
-	/* -0x30(sp) */ float CamRotX;
-	/* -0x2c(sp) */ float CamRotY;
-	/* -0x28(sp) */ float LightRotX;
-	/* -0x24(sp) */ float LightRotY;
+	/* 0x0(sp) */ float CamRotX;
+	/* 0x4(sp) */ float CamRotY;
+	/* 0x8(sp) */ float LightRotX;
+	/* 0xc(sp) */ float LightRotY;
 	/* f0 38 */ float AlphaRate;
 }
 
@@ -6797,24 +6944,24 @@
 /* 0014f530 0000004c */ static void EffectLightComeInSetVertexColor(/* a0 4 */ void *pSgdTop, /* a1 5 */ int Type) {}
 
 /* 0014f580 00000358 */ static void EffectLightComeInSetVertexColorNormal(/* s0 16 */ void *pSgdTop) {
-	/* -0x70(sp) */ VECTOR3 vSetColor0;
-	/* -0x60(sp) */ VECTOR3 vSetColor1;
-	/* -0x50(sp) */ VECTOR3 vSetColor2;
-	/* -0x40(sp) */ VECTOR3 vSetColor3;
+	/* 0x0(sp) */ VECTOR3 vSetColor0;
+	/* 0x10(sp) */ VECTOR3 vSetColor1;
+	/* 0x20(sp) */ VECTOR3 vSetColor2;
+	/* 0x30(sp) */ VECTOR3 vSetColor3;
 }
 
 /* 0014f8d8 00000350 */ static void EffectLightComeInSetVertexColorF607(/* s0 16 */ void *pSgdTop) {
-	/* -0x70(sp) */ VECTOR3 vSetColor0;
-	/* -0x60(sp) */ VECTOR3 vSetColor1;
-	/* -0x50(sp) */ VECTOR3 vSetColor2;
-	/* -0x40(sp) */ VECTOR3 vSetColor3;
+	/* 0x0(sp) */ VECTOR3 vSetColor0;
+	/* 0x10(sp) */ VECTOR3 vSetColor1;
+	/* 0x20(sp) */ VECTOR3 vSetColor2;
+	/* 0x30(sp) */ VECTOR3 vSetColor3;
 }
 
 /* 0014fc28 00000348 */ static void EffectLightComeInSetVertexColorF609(/* s0 16 */ void *pSgdTop) {
-	/* -0x70(sp) */ VECTOR3 vSetColor0;
-	/* -0x60(sp) */ VECTOR3 vSetColor1;
-	/* -0x50(sp) */ VECTOR3 vSetColor2;
-	/* -0x40(sp) */ VECTOR3 vSetColor3;
+	/* 0x0(sp) */ VECTOR3 vSetColor0;
+	/* 0x10(sp) */ VECTOR3 vSetColor1;
+	/* 0x20(sp) */ VECTOR3 vSetColor2;
+	/* 0x30(sp) */ VECTOR3 vSetColor3;
 }
 
 /* 0014ff70 00000024 */ static int EffectLightComeInGetScrollU(/* a0 4 */ int Type) {
@@ -6852,7 +6999,7 @@
 /* 00150348 0000011c */ void EffectWaterFlowRegist(/* s1 17 */ void *pSgdTop, /* s3 19 */ int Id, /* s2 18 */ int MoveType) {
 	/* data 2fbba0 */ static float SePosition[3][4];
 	/* s4 20 */ SINGLE_LINK_LIST *pList;
-	/* -0x50(sp) */ WATER_FLOW_DATA WaterFlowData;
+	/* 0x0(sp) */ WATER_FLOW_DATA WaterFlowData;
 	/* s0 16 */ int Alpha;
 }
 
@@ -6864,6 +7011,7 @@
 
 /* 00150590 00000070 */ void EffectWaterFlowExec() {
 	/* s0 16 */ SLL_CELL *pCell;
+	/* v0 2 */ SINGLE_LINK_LIST *pSLL;
 }
 
 /* 00150600 00000084 */ static int EffectWaterFlowGetChangeFrame(/* a0 4 */ int MoveType, /* a1 5 */ int MoveDataNo) {
@@ -6878,25 +7026,25 @@
 }
 
 /* 001507c0 0000004c */ void* EffectCameraFlashReq() {
-	/* -0x30(sp) */ float Position[4];
-	/* -0x20(sp) */ float PositionTex[4];
+	/* 0x0(sp) */ float Position[4];
+	/* 0x10(sp) */ float PositionTex[4];
 }
 
 /* 00150810 00000094 */ static int EffectCameraFlashGetPosition(/* s0 16 */ float *Position, /* s1 17 */ float *PositionTex) {
-	/* -0x80(sp) */ float LocalWorld[4][4];
+	/* 0x0(sp) */ float LocalWorld[4][4];
 	/* v1 3 */ ANI_CTRL *pAniCtrl;
-	/* -0x40(sp) */ float Offset[4];
-	/* -0x30(sp) */ float OffsetTex[4];
+	/* 0x40(sp) */ float Offset[4];
+	/* 0x50(sp) */ float OffsetTex[4];
 }
 
 /* 001508a8 00000134 */ void SetCameraFlash(/* s0 16 */ EFFECT_CONT *ec) {
-	/* -0x30(sp) */ float PositionTex[4];
+	/* 0x0(sp) */ float PositionTex[4];
 	/* s1 17 */ int ExecFlg;
 }
 
 /* 001509e0 00000150 */ static void CameraFlashMakeVertex(/* s2 18 */ float *pVtxBuf[4], /* s3 19 */ float *Center, /* f12 50 */ float Radius, /* s5 21 */ int VertexNum) {
-	/* -0xb0(sp) */ float RotMat[4][4];
-	/* -0x70(sp) */ float BaseVec[4];
+	/* 0x0(sp) */ float RotMat[4][4];
+	/* 0x40(sp) */ float BaseVec[4];
 	/* f20 58 */ float RotZ;
 	/* s1 17 */ int i;
 	/* v1 3 */ int PolygonNum;
@@ -6912,22 +7060,23 @@
 	/* v0 2 */ int AlphaMaxCenter;
 	/* v1 3 */ int AlphaMaxEdge;
 	/* t2 10 */ int AlphaOutTime;
-	/* -0x30(sp) */ u_char CenterRgba[4];
-	/* -0x20(sp) */ u_char EdgeRgba[4];
+	/* 0x0(sp) */ u_char CenterRgba[4];
+	/* 0x10(sp) */ u_char EdgeRgba[4];
 	/* f3 41 */ float Progress;
 }
 
 /* 00150c30 000002d8 */ static void EffectCameraFlashDrawSub(/* s3 19 */ float *Position, /* f20 58 */ float PolygonScale, /* f22 60 */ float Scale, /* s5 21 */ u_char *CenterRgba, /* s6 22 */ u_char *EdgeRgba, /* s4 20 */ u_long AlphaBlend) {
-	/* -0x2e0(sp) */ float LocalWorldMat[4][4];
-	/* -0x2a0(sp) */ float LocalScreenMat[4][4];
-	/* -0x260(sp) */ float ScaleMat[4][4];
-	/* -0x220(sp) */ float stqparam[3][4];
-	/* -0x1f0(sp) */ float VtxBuf[10][4];
-	/* -0x150(sp) */ float StqBuf[10][4];
+	/* 0x0(sp) */ float LocalWorldMat[4][4];
+	/* 0x40(sp) */ float LocalScreenMat[4][4];
+	/* 0x80(sp) */ float ScaleMat[4][4];
+	/* 0xc0(sp) */ float stqparam[3][4];
+	/* 0xf0(sp) */ float VtxBuf[10][4];
+	/* 0x190(sp) */ float StqBuf[10][4];
 	/* a0 4 */ int i;
-	/* -0xb0(sp) */ float RotX;
-	/* -0xac(sp) */ float RotY;
-	/* -0xa0(sp) */ float Center[4];
+	/* 0x230(sp) */ float RotX;
+	/* 0x234(sp) */ float RotY;
+	/* s2 18 */ GRA3DCAMERA *pCam;
+	/* 0x240(sp) */ float Center[4];
 }
 
 /* 00150f08 000001dc */ static int EffectCameraFlashDrawTex(/* s2 18 */ float *Position, /* s0 16 */ int Count) {
@@ -6938,13 +7087,13 @@
 	/* a3 7 */ int AlphaInTime;
 	/* v0 2 */ int AlphaOutTime;
 	/* s1 17 */ int AllTime;
-	/* -0xc0(sp) */ u_char Rgba[4];
+	/* 0x0(sp) */ u_char Rgba[4];
 	/* v1 3 */ u_long AlphaBlend;
-	/* -0xb0(sp) */ float LocalWorldMat[4][4];
-	/* -0x70(sp) */ float RotX;
-	/* -0x6c(sp) */ float RotY;
+	/* 0x10(sp) */ float LocalWorldMat[4][4];
+	/* 0x50(sp) */ float RotX;
+	/* 0x54(sp) */ float RotY;
 	/* v0 2 */ float &rCamDir[4];
-	/* -0x60(sp) */ DRAW_ENV DrawEnv;
+	/* 0x60(sp) */ DRAW_ENV DrawEnv;
 	/* f0 38 */ float Progress;
 }
 
@@ -6952,7 +7101,7 @@
 
 /* 00151110 00000048 */ void EffectModelAlphaChangeRegist(/* v1 3 */ void *pSgdTop, /* a2 6 */ int Id) {
 	/* a0 4 */ SINGLE_LINK_LIST *pList;
-	/* -0x30(sp) */ MODEL_ALPHA_CAHNGE_DATA AlphaChangeData;
+	/* 0x0(sp) */ MODEL_ALPHA_CAHNGE_DATA AlphaChangeData;
 }
 
 /* 00151158 000000a0 */ void EffectModelAlphaChangeDelete(/* s3 19 */ int Id) {
@@ -6969,6 +7118,7 @@
 
 /* 001512b0 000000f4 */ void EffectModelAlphaChangeExec() {
 	/* s1 17 */ SLL_CELL *pCell;
+	/* v0 2 */ SINGLE_LINK_LIST *pSLL;
 	/* s0 16 */ MODEL_ALPHA_CAHNGE_DATA *pData;
 	/* f1 39 */ float Progress;
 	/* a1 5 */ int Alpha;
@@ -6976,6 +7126,7 @@
 
 /* 001513a8 000000c4 */ void EffectModelAlphaChangeReq(/* s4 20 */ int Id, /* s3 19 */ int AlphaStart, /* s2 18 */ int AlphaEnd, /* s1 17 */ int Time) {
 	/* s0 16 */ SLL_CELL *pCell;
+	/* v0 2 */ SINGLE_LINK_LIST *pSLL;
 	/* a0 4 */ MODEL_ALPHA_CAHNGE_DATA *pData;
 }
 
@@ -6983,7 +7134,7 @@
 
 /* 00151498 000000e8 */ void EffectTourouFreaRegist(/* a0 4 */ void *pHandle, /* a1 5 */ int Id) {
 	/* s1 17 */ SINGLE_LINK_LIST *pList;
-	/* -0x40(sp) */ TOUROU_FREA_DATA TourouFreaData;
+	/* 0x0(sp) */ TOUROU_FREA_DATA TourouFreaData;
 	/* s0 16 */ int AllTime;
 }
 
@@ -7019,13 +7170,14 @@
 /* 00151860 00000080 */ TOUROU_FREA_DATA* EffectTourouFreaGetDataPtr(/* s1 17 */ void *pHandle) {
 	/* s0 16 */ SLL_CELL *pCell;
 	/* s2 18 */ TOUROU_FREA_DATA *pRetPtr;
+	/* v0 2 */ SINGLE_LINK_LIST *pSLL;
 }
 
 /* 001518e0 00000024 */ static void EffectTourouBaseInit() {}
 
 /* 00151908 000000d0 */ void EffectTourouBaseRegist(/* a0 4 */ void *pSgdTop, /* a1 5 */ int Id) {
 	/* s0 16 */ SINGLE_LINK_LIST *pList;
-	/* -0x40(sp) */ TOUROU_BASE_DATA TourouBaseData;
+	/* 0x0(sp) */ TOUROU_BASE_DATA TourouBaseData;
 	/* v0 2 */ int TimeMin;
 	/* v0 2 */ int Alpha;
 }
@@ -7037,8 +7189,8 @@
 }
 
 /* 00151a78 00000114 */ static void EffectTourouBaseGetColor(/* a0 4 */ int *Color, /* a1 5 */ int Counter, /* a2 6 */ int AllTime) {
-	/* -0x20(sp) */ int ColorMax[4];
-	/* -0x10(sp) */ int ColorMin[4];
+	/* 0x0(sp) */ int ColorMax[4];
+	/* 0x10(sp) */ int ColorMin[4];
 	/* f4 42 */ float Progress;
 }
 
@@ -7049,18 +7201,19 @@
 /* 00151c30 00000080 */ TOUROU_BASE_DATA* EffectTourouBaseGetDataPtr(/* s1 17 */ void *pSgdTop) {
 	/* s0 16 */ SLL_CELL *pCell;
 	/* s2 18 */ TOUROU_BASE_DATA *pRetPtr;
+	/* v0 2 */ SINGLE_LINK_LIST *pSLL;
 }
 
-/* 002e51f0 00000054 */ EFFINFO2* EFFINFO2 * _fixed_array_verifyrange<EFFINFO2>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
-/* 002e51f0 00000054 */ int* int * _fixed_array_verifyrange<int>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
-/* 002e51f0 00000054 */ int*[4] int [3] * _fixed_array_verifyrange<int [3]>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
-/* 002e51f0 00000054 */ EFFPOS* EFFPOS * _fixed_array_verifyrange<EFFPOS>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
-/* 002e51f0 00000054 */ float*[4] float [3] * _fixed_array_verifyrange<float [3]>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
-/* 002e51f0 00000054 */ float* float * _fixed_array_verifyrange<float>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ EFFINFO2* EFFINFO2 * _fixed_array_verifyrange<EFFINFO2>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ int* int * _fixed_array_verifyrange<int>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ int*[4] int [3] * _fixed_array_verifyrange<int [3]>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ EFFPOS* EFFPOS * _fixed_array_verifyrange<EFFPOS>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ float*[4] float [3] * _fixed_array_verifyrange<float [3]>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ float* float * _fixed_array_verifyrange<float>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
 /* 00151cb0 00000008 */ static void __static_initialization_and_destruction_0(/* a0 4 */ int __initialize_p, /* a1 5 */ int __priority) {}
-/* 002e51f0 0000003c */ type_info& EFFINFO2 type_info function() {}
-/* 002e51f0 0000003c */ type_info& int [3] type_info function() {}
-/* 002e51f0 0000003c */ type_info& EFFPOS type_info function() {}
+/* ffffffff 0000003c */ type_info& EFFINFO2 type_info function() {}
+/* ffffffff 0000003c */ type_info& int [3] type_info function() {}
+/* ffffffff 0000003c */ type_info& EFFPOS type_info function() {}
 /* 002e51f0 0000003c */ type_info& float [3] type_info function() {}
 /* 00151cb8 00000020 */ static void global constructors keyed to efi() {}
 
@@ -7091,33 +7244,33 @@
 
 /* 00152050 00000a58 */ static void SubCandleFlame(/* s5 21 */ EFFECT_CONT *ec) {
 	/* sdata 3efe74 */ static float RandVal;
-	/* -0x360(sp) */ float LocalWorld[4][4];
-	/* -0x320(sp) */ float TmpMatrix[4][4];
-	/* -0x2e0(sp) */ float LocalScreen[2][4][4];
-	/* -0x260(sp) */ float ScaleMatrix[2][4][4];
-	/* -0x1e0(sp) */ sceVu0IVECTOR ivec[2][4];
-	/* -0x160(sp) */ float vpos[4];
-	/* -0x150(sp) */ float FreaPos[4];
-	/* -0x140(sp) */ float wpos[4][4];
+	/* 0x0(sp) */ float LocalWorld[4][4];
+	/* 0x40(sp) */ float TmpMatrix[4][4];
+	/* 0x80(sp) */ float LocalScreen[2][4][4];
+	/* 0x100(sp) */ float ScaleMatrix[2][4][4];
+	/* 0x180(sp) */ sceVu0IVECTOR ivec[2][4];
+	/* 0x200(sp) */ float vpos[4];
+	/* 0x210(sp) */ float FreaPos[4];
+	/* 0x220(sp) */ float wpos[4][4];
 	/* f21 59 */ float ReqScale;
-	/* -0x100(sp) */ float ScaleAnimeW[2];
-	/* -0xf0(sp) */ float ScaleAnimeH[2];
-	/* -0xe0(sp) */ int Alpha[2];
-	/* -0x80(sp) */ int DispFlameNum;
-	/* -0xd0(sp) */ float rot_x;
-	/* -0xcc(sp) */ float rot_y;
+	/* 0x260(sp) */ float ScaleAnimeW[2];
+	/* 0x270(sp) */ float ScaleAnimeH[2];
+	/* 0x280(sp) */ int Alpha[2];
+	/* 0x2e0(sp) */ int DispFlameNum;
+	/* 0x290(sp) */ float rot_x;
+	/* 0x294(sp) */ float rot_y;
 	/* s3 19 */ int i;
 	/* s4 20 */ int j;
 	/* a2 6 */ int ClipFlg;
-	/* -0x7c(sp) */ u_char mr;
-	/* -0x78(sp) */ u_char mg;
-	/* -0x74(sp) */ u_char mb;
+	/* 0x2e4(sp) */ u_char mr;
+	/* 0x2e8(sp) */ u_char mg;
+	/* 0x2ec(sp) */ u_char mb;
 	/* s2 18 */ GRA3DCAMERA *pCam;
 	/* s7 23 */ float &cam_pos[4];
 	/* s0 16 */ int Flame1Count;
 	/* v1 3 */ u_int ScaleAnmFrame;
 	/* s1 17 */ int ScaleAnmType;
-	/* -0xc0(sp) */ u_long tex0[2];
+	/* 0x2a0(sp) */ u_long tex0[2];
 	/* s0 16 */ int TexNo;
 }
 
@@ -7130,33 +7283,34 @@
 }
 
 /* 00152b18 000001e8 */ static void CandleFlameMakePacket(/* s0 16 */ sceVu0IVECTOR *pIvec, /* s1 17 */ u_long Tex0, /* s7 23 */ u_int Depth, /* s6 22 */ int R, /* s5 21 */ int G, /* s4 20 */ int B, /* s3 19 */ int Alpha) {
-	/* -0x80(sp) */ float st[4][2];
+	/* 0x0(sp) */ float st[4][2];
 	/* s2 18 */ Q_WORDDATA *pbuf;
 	/* t4 12 */ int i;
-	/* -0x60(sp) */ U32DATA ts;
-	/* -0x5c(sp) */ U32DATA tt;
-	/* -0x58(sp) */ U32DATA tq;
+	/* 0x20(sp) */ U32DATA ts;
+	/* 0x24(sp) */ U32DATA tt;
+	/* 0x28(sp) */ U32DATA tq;
 }
 
 /* 00152d00 000003a0 */ void DrawFrea(/* s1 17 */ float *Position, /* f20 58 */ float Scale, /* s6 22 */ int Depth, /* s5 21 */ int R, /* s4 20 */ int G, /* fp 30 */ int B, /* s7 23 */ int Alpha) {
-	/* -0x220(sp) */ float LocalWorld[4][4];
-	/* -0x1e0(sp) */ float TmpMatrix[4][4];
-	/* -0x1a0(sp) */ float LocalScreen[4][4];
-	/* -0x160(sp) */ float ScaleMatrix[4][4];
-	/* -0x120(sp) */ sceVu0IVECTOR ivec[4];
-	/* -0xe0(sp) */ float frea_pos[4][4];
-	/* -0xa0(sp) */ float st[4][2];
-	/* -0x80(sp) */ float rot_x;
-	/* -0x7c(sp) */ float rot_y;
+	/* 0x0(sp) */ float LocalWorld[4][4];
+	/* 0x40(sp) */ float TmpMatrix[4][4];
+	/* 0x80(sp) */ float LocalScreen[4][4];
+	/* 0xc0(sp) */ float ScaleMatrix[4][4];
+	/* 0x100(sp) */ sceVu0IVECTOR ivec[4];
+	/* 0x140(sp) */ float frea_pos[4][4];
+	/* 0x180(sp) */ float st[4][2];
+	/* 0x1a0(sp) */ float rot_x;
+	/* 0x1a4(sp) */ float rot_y;
 	/* s0 16 */ Q_WORDDATA *pbuf;
 	/* t2 10 */ int ndpkt;
 	/* s2 18 */ int i;
 	/* a2 6 */ int ClipFlg;
+	/* s0 16 */ GRA3DCAMERA *pCam;
 }
 
 /* 001530a0 000000b8 */ void EffOthCandleFlameYuramekiReq(/* s1 17 */ EFFECT_CONT *pEffCont, /* a1 5 */ float *PlayerPos) {
-	/* -0x40(sp) */ float CandlePos[4];
-	/* -0x30(sp) */ float TmpVector[4];
+	/* 0x0(sp) */ float CandlePos[4];
+	/* 0x10(sp) */ float TmpVector[4];
 	/* f0 38 */ float Distance;
 }
 
@@ -7192,31 +7346,32 @@
 	/* s1 17 */ int i;
 }
 
-/* 00153730 0000087c */ static void* ManyCandleCtrl(/* -0xb0(sp) */ MANY_CANDLE_CTRL *pCandleCtrl) {
-	/* -0x4200(sp) */ float WorkMat[4][4];
-	/* -0x41c0(sp) */ float LocalWorld[4][4];
-	/* -0x4180(sp) */ float LocalScreen[4][4];
-	/* -0x4140(sp) */ float BaseMat[4][4];
-	/* -0x4100(sp) */ float FreaBaseMat[4][4];
+/* 00153730 0000087c */ static void* ManyCandleCtrl(/* 0x4150(sp) */ MANY_CANDLE_CTRL *pCandleCtrl) {
+	/* 0x0(sp) */ float WorkMat[4][4];
+	/* 0x40(sp) */ float LocalWorld[4][4];
+	/* 0x80(sp) */ float LocalScreen[4][4];
+	/* 0xc0(sp) */ float BaseMat[4][4];
+	/* 0x100(sp) */ float FreaBaseMat[4][4];
+	/* s2 18 */ GRA3DCAMERA *pCam;
 	/* s1 17 */ float &CamPos[4];
-	/* -0x40c0(sp) */ float RotX;
-	/* -0x40bc(sp) */ float RotY;
-	/* -0x40b0(sp) */ fixed_array<int[4],480> ivec;
-	/* -0x22b0(sp) */ fixed_array<int[4],480> ivecFrea;
-	/* -0xac(sp) */ int PolyNo;
+	/* 0x140(sp) */ float RotX;
+	/* 0x144(sp) */ float RotY;
+	/* 0x150(sp) */ fixed_array<int[4],480> ivec;
+	/* 0x1f50(sp) */ fixed_array<int[4],480> ivecFrea;
+	/* 0x4154(sp) */ int PolyNo;
 	/* s3 19 */ int i;
 	/* fp 30 */ int j;
-	/* -0x4b0(sp) */ fixed_array<int,120> Order;
-	/* -0x2d0(sp) */ fixed_array<int,120> ToPolyNo;
-	/* -0xa8(sp) */ int ColorR;
-	/* -0xa4(sp) */ int ColorG;
-	/* -0xa0(sp) */ int ColorB;
-	/* -0x98(sp) */ u_long Tex0;
-	/* -0x90(sp) */ u_long FreaTex0;
+	/* 0x3d50(sp) */ fixed_array<int,120> Order;
+	/* 0x3f30(sp) */ fixed_array<int,120> ToPolyNo;
+	/* 0x4158(sp) */ int ColorR;
+	/* 0x415c(sp) */ int ColorG;
+	/* 0x4160(sp) */ int ColorB;
+	/* 0x4168(sp) */ u_long Tex0;
+	/* 0x4170(sp) */ u_long FreaTex0;
 	/* f22 60 */ float FlameScale;
 	/* f21 59 */ float FreaScale;
 	/* f23 61 */ float FreaOffsetY;
-	/* -0xc0(sp) */ float FreaPosition[4];
+	/* 0x4140(sp) */ float FreaPosition[4];
 	/* s6 22 */ int ClipFlg;
 	/* s0 16 */ int Count;
 	/* s1 17 */ int BufNo;
@@ -7228,48 +7383,50 @@
 	/* s1 17 */ int i;
 }
 
-/* 00154080 00000254 */ void EffectCandleFlameDraw(/* -0x80(sp) */ float *Position, /* s3 19 */ int *Color, /* f20 58 */ float Scale, /* s2 18 */ int Count) {
-	/* -0x190(sp) */ float WorkMat[4][4];
-	/* -0x150(sp) */ float LocalWorld[4][4];
-	/* -0x110(sp) */ float LocalScreen[4][4];
+/* 00154080 00000254 */ void EffectCandleFlameDraw(/* 0x110(sp) */ float *Position, /* s3 19 */ int *Color, /* f20 58 */ float Scale, /* s2 18 */ int Count) {
+	/* 0x0(sp) */ float WorkMat[4][4];
+	/* 0x40(sp) */ float LocalWorld[4][4];
+	/* 0x80(sp) */ float LocalScreen[4][4];
+	/* s6 22 */ GRA3DCAMERA *pCam;
 	/* s1 17 */ float &CamPos[4];
-	/* -0xd0(sp) */ float RotX;
-	/* -0xcc(sp) */ float RotY;
-	/* -0xc0(sp) */ sceVu0IVECTOR ivec[4];
+	/* 0xc0(sp) */ float RotX;
+	/* 0xc4(sp) */ float RotY;
+	/* 0xd0(sp) */ sceVu0IVECTOR ivec[4];
 	/* s5 21 */ int i;
-	/* -0x7c(sp) */ int ColorR;
-	/* -0x78(sp) */ int ColorG;
+	/* 0x114(sp) */ int ColorR;
+	/* 0x118(sp) */ int ColorG;
 	/* s7 23 */ int ColorB;
-	/* -0x70(sp) */ u_long Tex0;
+	/* 0x120(sp) */ u_long Tex0;
 	/* s1 17 */ int ClipFlg;
 }
 
 /* 001542d8 00000064 */ void SetHalo(/* s0 16 */ EFFECT_CONT *ec) {}
 
-/* 00154340 000003cc */ void SubHalo(/* s1 17 */ float *p, /* -0x78(sp) */ int type, /* -0x74(sp) */ int textp, /* a3 7 */ u_int z, /* -0x70(sp) */ u_char r, /* -0x6c(sp) */ u_char g, /* fp 30 */ u_char b, /* s7 23 */ u_char alp, /* f20 58 */ float sc) {
-	/* -0x1a0(sp) */ float wlm[4][4];
-	/* -0x160(sp) */ float slm[4][4];
-	/* -0x120(sp) */ int ipos[4];
-	/* -0x110(sp) */ sceVu0IVECTOR ivec[4];
-	/* -0xd0(sp) */ float vpos[4];
-	/* -0xc0(sp) */ float wpos[4][4];
+/* 00154340 000003cc */ void SubHalo(/* s1 17 */ float *p, /* 0x128(sp) */ int type, /* 0x12c(sp) */ int textp, /* a3 7 */ u_int z, /* 0x130(sp) */ u_char r, /* 0x134(sp) */ u_char g, /* fp 30 */ u_char b, /* s7 23 */ u_char alp, /* f20 58 */ float sc) {
+	/* 0x0(sp) */ float wlm[4][4];
+	/* 0x40(sp) */ float slm[4][4];
+	/* 0x80(sp) */ int ipos[4];
+	/* 0x90(sp) */ sceVu0IVECTOR ivec[4];
+	/* 0xd0(sp) */ float vpos[4];
+	/* 0xe0(sp) */ float wpos[4][4];
 	/* sdata 3efe78 */ static int rnbk;
 	/* sdata 3efe7c */ static float scw;
 	/* sdata 3efe80 */ static float sch;
 	/* f20 58 */ float f;
-	/* -0x80(sp) */ float rot_x;
-	/* -0x7c(sp) */ float rot_y;
+	/* 0x120(sp) */ float rot_x;
+	/* 0x124(sp) */ float rot_y;
 	/* s4 20 */ int i;
 	/* s3 19 */ int rn;
 	/* s1 17 */ int w;
 	/* v0 2 */ int n;
+	/* s2 18 */ GRA3DCAMERA *pCam;
 }
 
 /* 00154710 00000130 */ void InitHeatHaze() {
 	/* s0 16 */ int i;
 }
 
-/* 00154840 0000052c */ static int draw_distortion_particles(/* fp 30 */ float *local_screen[4][4], /* s6 22 */ float *local_clip[4][4], /* a2 6 */ int fr, /* -0x90(sp) */ int t_particles, /* -0x8c(sp) */ PARTICLE *pParticles, /* f22 60 */ float psize, /* f20 58 */ float distortion_amount, /* s0 16 */ int type) {
+/* 00154840 0000052c */ static int draw_distortion_particles(/* fp 30 */ float *local_screen[4][4], /* s6 22 */ float *local_clip[4][4], /* a2 6 */ int fr, /* 0x90(sp) */ int t_particles, /* 0x94(sp) */ PARTICLE *pParticles, /* f22 60 */ float psize, /* f20 58 */ float distortion_amount, /* s0 16 */ int type) {
 	/* s2 18 */ int i;
 	/* s3 19 */ int n;
 	/* s6 22 */ int num;
@@ -7280,26 +7437,26 @@
 	/* f20 58 */ float rr;
 	/* f21 59 */ float gg;
 	/* f22 60 */ float bb;
-	/* -0x120(sp) */ float warp_add[4];
-	/* -0x110(sp) */ float screen_size[4];
-	/* -0x100(sp) */ float particle_size[4];
+	/* 0x0(sp) */ float warp_add[4];
+	/* 0x10(sp) */ float screen_size[4];
+	/* 0x20(sp) */ float particle_size[4];
 	/* s7 23 */ int dtex;
-	/* -0xf0(sp) */ float ones[4];
-	/* -0xe0(sp) */ float st_add[4];
-	/* -0xd0(sp) */ float st_scale[4];
+	/* 0x30(sp) */ float ones[4];
+	/* 0x40(sp) */ float st_add[4];
+	/* 0x50(sp) */ float st_scale[4];
 	/* a0 4 */ int ndpkt;
 	/* s4 20 */ Q_WORDDATA *pbuf;
-	/* -0xc0(sp) */ DRAW_ENV_5 env;
+	/* 0x60(sp) */ DRAW_ENV_5 env;
 	/* v0 2 */ unsigned int clip_flags;
 }
 
-/* 00154d70 00000510 */ int draw_distortion_particles2(/* s2 18 */ float *local_screen[4][4], /* s0 16 */ float *local_clip[4][4], /* s5 21 */ int t_particles, /* -0x80(sp) */ PARTICLE *pParticles, /* f23 61 */ float psize, /* s4 20 */ u_long Tex0, /* -0x78(sp) */ u_long AlphaBlend) {
-	/* -0x140(sp) */ float screen_size[4];
-	/* -0x130(sp) */ float particle_size[4];
-	/* -0x120(sp) */ float stq[5][4];
-	/* -0xd0(sp) */ float ones[4];
-	/* -0xc0(sp) */ float st_add[4];
-	/* -0xb0(sp) */ float st_scale[4];
+/* 00154d70 00000510 */ int draw_distortion_particles2(/* s2 18 */ float *local_screen[4][4], /* s0 16 */ float *local_clip[4][4], /* s5 21 */ int t_particles, /* 0xc0(sp) */ PARTICLE *pParticles, /* f23 61 */ float psize, /* s4 20 */ u_long Tex0, /* 0xc8(sp) */ u_long AlphaBlend) {
+	/* 0x0(sp) */ float screen_size[4];
+	/* 0x10(sp) */ float particle_size[4];
+	/* 0x20(sp) */ float stq[5][4];
+	/* 0x70(sp) */ float ones[4];
+	/* 0x80(sp) */ float st_add[4];
+	/* 0x90(sp) */ float st_scale[4];
 	/* s1 17 */ Q_WORDDATA *pbuf;
 	/* s3 19 */ int ndpkt;
 	/* s2 18 */ int i;
@@ -7307,8 +7464,8 @@
 	/* f20 58 */ float rr;
 	/* f21 59 */ float gg;
 	/* f22 60 */ float bb;
-	/* -0xa0(sp) */ float FogDivVec[4];
-	/* -0x90(sp) */ float FogSubVec[4];
+	/* 0xa0(sp) */ float FogDivVec[4];
+	/* 0xb0(sp) */ float FogSubVec[4];
 	/* v0 2 */ unsigned int clip_flags;
 	/* a0 4 */ sceVu0IVECTOR *pVec1;
 	/* v1 3 */ sceVu0IVECTOR *pVec2;
@@ -7336,7 +7493,7 @@
 	/* f8 46 */ float center;
 }
 
-/* 00155688 00000ec8 */ void* ContHeatHaze(/* s3 19 */ void *addr, /* s5 21 */ int type, /* s2 18 */ float *pos, /* fp 30 */ float *pos2, /* -0xb8(sp) */ int st, /* f28 66 */ float r, /* f29 67 */ float g, /* f30 68 */ float b, /* f31 69 */ float a, /* f21 59 */ float size, /* f27 65 */ float arate) {
+/* 00155688 00000ec8 */ void* ContHeatHaze(/* s3 19 */ void *addr, /* s5 21 */ int type, /* s2 18 */ float *pos, /* fp 30 */ float *pos2, /* 0x158(sp) */ int st, /* f28 66 */ float r, /* f29 67 */ float g, /* f30 68 */ float b, /* f31 69 */ float a, /* f21 59 */ float size, /* f27 65 */ float arate) {
 	/* sbss 3f4bb8 */ static float pcnt1;
 	/* sbss 3f4bbc */ static float pcnt2;
 	/* s7 23 */ int n1;
@@ -7345,21 +7502,22 @@
 	/* f20 58 */ float fw1;
 	/* f26 64 */ float lng;
 	/* f24 62 */ float escl;
-	/* -0x210(sp) */ float wpos[4];
-	/* -0x200(sp) */ float local_clip[4][4];
-	/* -0x1c0(sp) */ float local_world[4][4];
-	/* -0x180(sp) */ float local_screen[4][4];
-	/* -0x140(sp) */ float work[4][4];
-	/* -0x100(sp) */ float ppos[4];
-	/* -0xf0(sp) */ float pvel[4];
-	/* -0xb4(sp) */ float &cam_dir[4];
+	/* 0x0(sp) */ float wpos[4];
+	/* 0x10(sp) */ float local_clip[4][4];
+	/* 0x50(sp) */ float local_world[4][4];
+	/* 0x90(sp) */ float local_screen[4][4];
+	/* 0xd0(sp) */ float work[4][4];
+	/* 0x110(sp) */ float ppos[4];
+	/* 0x120(sp) */ float pvel[4];
+	/* s6 22 */ GRA3DCAMERA *pCam;
+	/* 0x15c(sp) */ float &cam_dir[4];
 	/* s4 20 */ float &cam_pos[4];
-	/* -0xe0(sp) */ float zero_vec[4];
+	/* 0x130(sp) */ float zero_vec[4];
 	/* f0 38 */ float fx;
 	/* f3 41 */ float fy;
 	/* f2 40 */ float fz;
-	/* -0xc0(sp) */ float rx;
-	/* -0xbc(sp) */ float rz;
+	/* 0x150(sp) */ float rx;
+	/* 0x154(sp) */ float rz;
 	/* f0 38 */ float fx;
 	/* f2 40 */ float fy;
 	/* f3 41 */ float fz;
@@ -7396,7 +7554,7 @@
 
 /* 001568f8 00000084 */ static void ItemEffectReqSub(/* a0 4 */ float *Pos, /* t0 8 */ int ItemNo, /* a3 7 */ int Type) {
 	/* v0 2 */ SINGLE_LINK_LIST *pList;
-	/* -0x50(sp) */ ITEM_EFFECT_DATA ItemEffectData;
+	/* 0x0(sp) */ ITEM_EFFECT_DATA ItemEffectData;
 }
 
 /* 00156980 0000001c */ void ItemEffectReq(/* a0 4 */ float *Pos, /* a1 5 */ int ItemNo, /* a2 6 */ int EffectType) {}
@@ -7414,8 +7572,8 @@
 }
 
 /* 00156b28 00000924 */ void ItemEffectDrawOne(/* s1 17 */ int ItemNo) {
-	/* -0x270(sp) */ DRAW_ENV DrawEnv00;
-	/* -0x240(sp) */ DRAW_ENV DrawEnv01;
+	/* 0x0(sp) */ DRAW_ENV DrawEnv00;
+	/* 0x30(sp) */ DRAW_ENV DrawEnv01;
 	/* s0 16 */ SLL_CELL *pCell;
 	/* s5 21 */ ITEM_EFFECT_DATA *pRetData;
 	/* t7 15 */ SINGLE_LINK_LIST *pSLL;
@@ -7426,17 +7584,19 @@
 	/* f21 59 */ float cnt;
 	/* f22 60 */ float wait;
 	/* f20 58 */ float out;
-	/* -0x210(sp) */ float rot_x;
-	/* -0x20c(sp) */ float rot_y;
+	/* 0x60(sp) */ float rot_x;
+	/* 0x64(sp) */ float rot_y;
 	/* f24 62 */ float size;
-	/* -0x200(sp) */ float wpos[4];
-	/* -0x1f0(sp) */ sceVu0FMATRIX wlm[5];
+	/* 0x70(sp) */ float wpos[4];
+	/* 0x80(sp) */ sceVu0FMATRIX wlm[5];
+	/* s3 19 */ GRA3DCAMERA *pCam;
 	/* s1 17 */ float &cam_pos[4];
 	/* s4 20 */ DRAW_ENV *pDrawEnv;
-	/* -0xb0(sp) */ float LocalWorld[4][4];
+	/* 0x1c0(sp) */ float LocalWorld[4][4];
+	/* s3 19 */ GRA3DCAMERA *pCam;
 	/* s0 16 */ float &CamPos[4];
-	/* -0x20c(sp) */ float RotX;
-	/* -0x210(sp) */ float RotY;
+	/* 0x64(sp) */ float RotX;
+	/* 0x60(sp) */ float RotY;
 }
 
 /* 00157450 00000260 */ void SetEneFire(/* s1 17 */ EFFECT_CONT *ec) {
@@ -7449,37 +7609,38 @@
 	/* f24 62 */ float ar;
 	/* a0 4 */ u_int col;
 	/* s2 18 */ u_int ty;
-	/* -0x70(sp) */ float pos1[4];
-	/* -0x60(sp) */ float pos2[4];
+	/* 0x0(sp) */ float pos1[4];
+	/* 0x10(sp) */ float pos2[4];
 }
 
 /* 001576b0 0000000c */ void CallAmuletFire() {}
 
-/* 001576c0 00000b1c */ void* ContTorch(/* s1 17 */ void *addr, /* s5 21 */ int type, /* s2 18 */ float *pos, /* s3 19 */ float *pos2, /* -0xc8(sp) */ int st, /* -0xc4(sp) */ float r, /* f30 68 */ float g, /* f31 69 */ float b, /* -0xc0(sp) */ float a, /* f21 59 */ float size, /* f17 55 */ float arate, /* s4 20 */ int tp2, /* f29 67 */ float ar, /* f20 58 */ float sr) {
+/* 001576c0 00000b1c */ void* ContTorch(/* s1 17 */ void *addr, /* s5 21 */ int type, /* s2 18 */ float *pos, /* s3 19 */ float *pos2, /* 0x138(sp) */ int st, /* 0x13c(sp) */ float r, /* f30 68 */ float g, /* f31 69 */ float b, /* 0x140(sp) */ float a, /* f21 59 */ float size, /* f17 55 */ float arate, /* s4 20 */ int tp2, /* f29 67 */ float ar, /* f20 58 */ float sr) {
 	/* f26 64 */ float rrate;
 	/* f22 60 */ float escl;
-	/* -0xbc(sp) */ float ysp1;
-	/* -0xb8(sp) */ float ysp2;
+	/* 0x144(sp) */ float ysp1;
+	/* 0x148(sp) */ float ysp2;
 	/* s0 16 */ int i;
 	/* s2 18 */ int j;
 	/* f25 63 */ float wind;
-	/* -0x200(sp) */ float work[4][4];
-	/* -0x1c0(sp) */ float local_clip[4][4];
-	/* -0x180(sp) */ float local_world[4][4];
-	/* -0x140(sp) */ float local_screen[4][4];
-	/* -0x100(sp) */ float ppos[4];
-	/* -0xf0(sp) */ float pvel[4];
-	/* -0xe0(sp) */ float wpos[4];
+	/* 0x0(sp) */ float work[4][4];
+	/* 0x40(sp) */ float local_clip[4][4];
+	/* 0x80(sp) */ float local_world[4][4];
+	/* 0xc0(sp) */ float local_screen[4][4];
+	/* 0x100(sp) */ float ppos[4];
+	/* 0x110(sp) */ float pvel[4];
+	/* 0x120(sp) */ float wpos[4];
+	/* fp 30 */ GRA3DCAMERA *pCam;
 	/* s0 16 */ float &cam_pos[4];
 	/* f0 38 */ float fx;
 	/* f2 40 */ float fy;
 	/* f1 39 */ float fz;
-	/* -0xd0(sp) */ float rx;
-	/* -0xcc(sp) */ float rz;
+	/* 0x130(sp) */ float rx;
+	/* 0x134(sp) */ float rz;
 }
 
 /* 001581e0 00000234 */ void SetTorch(/* s0 16 */ EFFECT_CONT *ec) {
-	/* -0x60(sp) */ float pos[4];
+	/* 0x0(sp) */ float pos[4];
 	/* s2 18 */ int st;
 	/* v1 3 */ int life;
 	/* f22 60 */ float tr;
@@ -7505,13 +7666,14 @@
 }
 
 /* 00158898 0000017c */ static void* CloudOfDustCtrl(/* s3 19 */ CLOUD_OF_DUST_CTRL *pCod, /* f20 58 */ float size) {
-	/* -0x150(sp) */ float work[4][4];
-	/* -0x110(sp) */ float local_clip[4][4];
-	/* -0xd0(sp) */ float local_world[4][4];
-	/* -0x90(sp) */ float local_screen[4][4];
+	/* 0x0(sp) */ float work[4][4];
+	/* 0x40(sp) */ float local_clip[4][4];
+	/* 0x80(sp) */ float local_world[4][4];
+	/* 0xc0(sp) */ float local_screen[4][4];
+	/* s4 20 */ GRA3DCAMERA *pCam;
 	/* s0 16 */ float &cam_pos[4];
-	/* -0x50(sp) */ float RotX;
-	/* -0x4c(sp) */ float RotY;
+	/* 0x100(sp) */ float RotX;
+	/* 0x104(sp) */ float RotY;
 }
 
 /* 00158a18 000000fc */ void SetDust(/* s0 16 */ EFFECT_CONT *ec) {
@@ -7520,14 +7682,14 @@
 }
 
 /* 00158b18 00000538 */ void SetDustLeaf(/* s5 21 */ float *pos, /* fp 30 */ int type) {
-	/* -0xe0(sp) */ u_char rgb1[3];
-	/* -0xd0(sp) */ u_char rgb2[3];
+	/* 0x0(sp) */ u_char rgb1[3];
+	/* 0x10(sp) */ u_char rgb2[3];
 	/* s6 22 */ u_char mr;
 	/* s7 23 */ u_char mg;
-	/* -0xc0(sp) */ u_char mb;
-	/* -0xbc(sp) */ u_char mrr;
-	/* -0xb8(sp) */ u_char mrg;
-	/* -0xb4(sp) */ u_char mrb;
+	/* 0x20(sp) */ u_char mb;
+	/* 0x24(sp) */ u_char mrr;
+	/* 0x28(sp) */ u_char mrg;
+	/* 0x2c(sp) */ u_char mrb;
 	/* s1 17 */ int i;
 	/* s2 18 */ int num;
 	/* v1 3 */ int status;
@@ -7543,7 +7705,7 @@
 /* 00159050 0000001c */ void SetLeaf(/* a0 4 */ float *pos) {}
 /* 00159070 0000001c */ void SetDust2(/* a0 4 */ float *pos) {}
 
-/* 00159090 0000082c */ void RunLeafSub(/* -0xa0(sp) */ EFF_LEAF *lep) {
+/* 00159090 0000082c */ void RunLeafSub(/* 0x740(sp) */ EFF_LEAF *lep) {
 	/* f21 59 */ float f;
 	/* f20 58 */ float ss;
 	/* f0 38 */ float cc;
@@ -7552,27 +7714,28 @@
 	/* s5 21 */ int j;
 	/* s0 16 */ int k;
 	/* s2 18 */ int w;
-	/* -0x9c(sp) */ int th;
-	/* -0x98(sp) */ int tw;
-	/* -0x7e0(sp) */ fixed_array<int,16> so;
-	/* -0x94(sp) */ int leaf_num;
-	/* -0x7a0(sp) */ int disp[32];
+	/* 0x744(sp) */ int th;
+	/* 0x748(sp) */ int tw;
+	/* 0x0(sp) */ fixed_array<int,16> so;
+	/* 0x74c(sp) */ int leaf_num;
+	/* 0x40(sp) */ int disp[32];
 	/* f23 61 */ float grv1y;
 	/* t3 11 */ u_char rr;
 	/* t4 12 */ u_char gg;
 	/* t1 9 */ u_char bb;
 	/* s1 17 */ u_long tx0;
-	/* -0x720(sp) */ float rot_x;
-	/* -0x71c(sp) */ float rot_y;
-	/* -0x710(sp) */ int ivec[16][5][4];
-	/* -0x210(sp) */ float wlm[4][4];
-	/* -0x1d0(sp) */ float slm[4][4];
-	/* -0x190(sp) */ float bpos[4];
-	/* -0x180(sp) */ float wpos[4];
-	/* -0x170(sp) */ float ppos[2][5][4];
+	/* 0xc0(sp) */ float rot_x;
+	/* 0xc4(sp) */ float rot_y;
+	/* 0xd0(sp) */ int ivec[16][5][4];
+	/* 0x5d0(sp) */ float wlm[4][4];
+	/* 0x610(sp) */ float slm[4][4];
+	/* 0x650(sp) */ float bpos[4];
+	/* 0x660(sp) */ float wpos[4];
+	/* 0x670(sp) */ float ppos[2][5][4];
 	/* s4 20 */ Q_WORDDATA *pbuf;
 	/* s6 22 */ int ndpkt;
-	/* -0x8c(sp) */ float &cam_pos[4];
+	/* 0x750(sp) */ GRA3DCAMERA *pCam;
+	/* 0x754(sp) */ float &cam_pos[4];
 }
 
 /* 001598c0 00000070 */ void RunLeaf() {
@@ -7598,39 +7761,41 @@
 	/* s1 17 */ int i;
 }
 
-/* 00159c48 00000890 */ static void* HazeCtrl(/* -0xa0(sp) */ HAZE_CTRL *pHazeCtrl, /* f12 50 */ float size) {
-	/* -0x1480(sp) */ float WorkMat[4][4];
-	/* -0x1440(sp) */ float LocalWorld[4][4];
-	/* -0x1400(sp) */ float LocalScreen[4][4];
-	/* -0x13c0(sp) */ float BaseMat[4][4];
+/* 00159c48 00000890 */ static void* HazeCtrl(/* 0x13e0(sp) */ HAZE_CTRL *pHazeCtrl, /* f12 50 */ float size) {
+	/* 0x0(sp) */ float WorkMat[4][4];
+	/* 0x40(sp) */ float LocalWorld[4][4];
+	/* 0x80(sp) */ float LocalScreen[4][4];
+	/* 0xc0(sp) */ float BaseMat[4][4];
+	/* 0x13e4(sp) */ GRA3DCAMERA *pCam;
 	/* s1 17 */ float &cam_pos[4];
-	/* -0x1380(sp) */ float RotX;
-	/* -0x137c(sp) */ float RotY;
-	/* -0x1370(sp) */ fixed_array<int[4],256> ivec;
-	/* -0x98(sp) */ int PolyNo;
-	/* -0x370(sp) */ float PolyDat[4][4];
+	/* 0x100(sp) */ float RotX;
+	/* 0x104(sp) */ float RotY;
+	/* 0x110(sp) */ fixed_array<int[4],256> ivec;
+	/* 0x13e8(sp) */ int PolyNo;
+	/* 0x1110(sp) */ float PolyDat[4][4];
 	/* s5 21 */ int i;
 	/* s6 22 */ int j;
-	/* -0x330(sp) */ fixed_array<int,64> Order;
-	/* -0x230(sp) */ fixed_array<int,64> ToPolyNo;
+	/* 0x1150(sp) */ fixed_array<int,64> Order;
+	/* 0x1250(sp) */ fixed_array<int,64> ToPolyNo;
 	/* s0 16 */ HAZE_PARAMETER *pHazeParam;
-	/* -0x94(sp) */ int ColorR;
-	/* -0x90(sp) */ int ColorG;
-	/* -0x8c(sp) */ int ColorB;
+	/* 0x13ec(sp) */ int ColorR;
+	/* 0x13f0(sp) */ int ColorG;
+	/* 0x13f4(sp) */ int ColorB;
 	/* f21 59 */ float AlphaRate;
 	/* fp 30 */ int ClipFlg;
 	/* s1 17 */ int BufNo;
 	/* s0 16 */ int Key;
 	/* s1 17 */ HAZE_PARTICLE *pPart;
+	/* s0 16 */ sceVu0IVECTOR *pIvec;
 	/* s1 17 */ u_long Tex0;
 	/* s3 19 */ int Alpha;
-	/* -0xd0(sp) */ float st[4][2];
+	/* 0x13b0(sp) */ float st[4][2];
 	/* s2 18 */ Q_WORDDATA *pbuf;
 	/* t5 13 */ int i;
-	/* -0x84(sp) */ U32DATA ts;
-	/* -0x80(sp) */ U32DATA tt;
-	/* -0x7c(sp) */ U32DATA tq;
-	/* -0xb0(sp) */ float AllVelocity[4];
+	/* 0x13fc(sp) */ U32DATA ts;
+	/* 0x1400(sp) */ U32DATA tt;
+	/* 0x1404(sp) */ U32DATA tq;
+	/* 0x13d0(sp) */ float AllVelocity[4];
 }
 
 /* 0015a4d8 0000009c */ void SetHaze(/* s0 16 */ EFFECT_CONT *ec) {}
@@ -7638,7 +7803,7 @@
 /* 0015a578 000001b0 */ static void EffectHazeParticleReqOneFrame(/* s1 17 */ HAZE_CTRL *pHazeCtrl) {
 	/* v0 2 */ HAZE_PARTICLE *pParticle;
 	/* s2 18 */ HAZE_PARAMETER *pHazeParam;
-	/* -0xa0(sp) */ float Offset[4];
+	/* 0x0(sp) */ float Offset[4];
 	/* f20 58 */ float Frequency;
 	/* f0 38 */ float RandVal;
 	/* s3 19 */ int ReqNum;
@@ -7652,8 +7817,8 @@
 
 /* 0015a7b0 000003dc */ static void EffectHazeInitParticle(/* s4 20 */ HAZE_PARTICLE *pHazeParticle, /* s2 18 */ float *CenterPos, /* s3 19 */ float *Offset, /* a3 7 */ int HazeType) {
 	/* s0 16 */ HAZE_PARAMETER *pHazeParam;
-	/* -0xf0(sp) */ float matWork[4][4];
-	/* -0xb0(sp) */ float vWork[4];
+	/* 0x0(sp) */ float matWork[4][4];
+	/* 0x40(sp) */ float vWork[4];
 	/* f21 59 */ float RotY;
 	/* f1 39 */ float Length;
 	/* s1 17 */ int LifeTime;
@@ -7666,8 +7831,8 @@
 	/* f26 64 */ float SpeedYMin;
 	/* f24 62 */ float SpeedZMax;
 	/* f27 65 */ float SpeedZMin;
-	/* -0xa0(sp) */ float RotZMax;
-	/* -0x9c(sp) */ float RotZMin;
+	/* 0x50(sp) */ float RotZMax;
+	/* 0x54(sp) */ float RotZMin;
 	/* f31 69 */ float RotZTime;
 }
 
@@ -7726,12 +7891,12 @@
 
 /* 0015b1e8 00000220 */ void EffectThunderLightExec() {
 	/* s0 16 */ THUNDER_LIGHT_CTRL *pTlCtrl;
-	/* -0x30(sp) */ SND_3D_SET Snd3d;
+	/* 0x0(sp) */ SND_3D_SET Snd3d;
 }
 
 /* 0015b408 00000048 */ void EffectThunderLightSetRoomLight() {
 	/* v0 2 */ THUNDER_LIGHT_CTRL *pTlCtrl;
-	/* -0x80(sp) */ G3DLIGHT TmpLight;
+	/* 0x0(sp) */ G3DLIGHT TmpLight;
 }
 
 /* 0015b450 00000098 */ void EffectThunderLightGetG3dLight(/* a0 4 */ G3DLIGHT *pLight) {}
@@ -7741,15 +7906,16 @@
 }
 
 /* 0015b4f8 000000a0 */ void SetDoorSeal(/* s0 16 */ EFFECT_CONT *ec) {
-	/* -0x30(sp) */ float BasePos[4];
+	/* 0x0(sp) */ float BasePos[4];
 }
 
 /* 0015b598 000001b4 */ static void SubDoorSeal(/* s5 21 */ float *pPosition[4], /* s4 20 */ float *BasePos, /* f20 58 */ float AlphaRate) {
-	/* -0xe0(sp) */ float LocalWorld[4][4];
-	/* -0xa0(sp) */ float RotX;
-	/* -0x9c(sp) */ float RotY;
-	/* -0x90(sp) */ DRAW_ENV DrawEnv;
-	/* -0x60(sp) */ float Offset[4];
+	/* 0x0(sp) */ float LocalWorld[4][4];
+	/* s6 22 */ GRA3DCAMERA *pCam;
+	/* 0x40(sp) */ float RotX;
+	/* 0x44(sp) */ float RotY;
+	/* 0x50(sp) */ DRAW_ENV DrawEnv;
+	/* 0x80(sp) */ float Offset[4];
 }
 
 /* 0015b750 0000001c */ static void DoorSealDisappearInit() {
@@ -7798,11 +7964,11 @@
 }
 
 /* 0015bd70 00000198 */ void DoorSealDisappearDraw() {
-	/* -0xc0(sp) */ float LocalWorld[4][4];
+	/* 0x0(sp) */ float LocalWorld[4][4];
 	/* s4 20 */ DOOR_SEAL_DISAPPEAR_CTRL *pCtrl;
 	/* data 2fc678 */ static DRAW_ENV DrawEnv;
-	/* -0x80(sp) */ float BasePos[4];
-	/* -0x70(sp) */ DOOR_SEAL_CAMERA_BACKUP CameraBak;
+	/* 0x40(sp) */ float BasePos[4];
+	/* 0x50(sp) */ DOOR_SEAL_CAMERA_BACKUP CameraBak;
 	/* v0 2 */ int Alpha;
 	/* v0 2 */ int DeformAlphaMax;
 	/* v1 3 */ int BlurAlphaMax;
@@ -7816,22 +7982,22 @@
 	/* f0 38 */ float OffsetY;
 }
 
-/* 002fbc20 00000054 */ HEAT_HAZE* HEAT_HAZE * _fixed_array_verifyrange<HEAT_HAZE>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
-/* 002fbc20 00000054 */ float* float * _fixed_array_verifyrange<float>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
-/* 002fbc20 00000054 */ MANY_CANDLE_PARTICLE* MANY_CANDLE_PARTICLE * _fixed_array_verifyrange<MANY_CANDLE_PARTICLE>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
-/* 002fbc20 00000054 */ sceVu0IVECTOR* int [3] * _fixed_array_verifyrange<int [3]>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
-/* 002fbc20 00000054 */ int* int * _fixed_array_verifyrange<int>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
-/* 002fbc20 00000054 */ PARTICLE* PARTICLE * _fixed_array_verifyrange<PARTICLE>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
-/* 002fbc20 00000054 */ EFF_LEAF* EFF_LEAF * _fixed_array_verifyrange<EFF_LEAF>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
-/* 002fbc20 00000054 */ EFF_LEAF_ONE* EFF_LEAF_ONE * _fixed_array_verifyrange<EFF_LEAF_ONE>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
-/* 002fbc20 00000054 */ HAZE_PARTICLE* HAZE_PARTICLE * _fixed_array_verifyrange<HAZE_PARTICLE>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ HEAT_HAZE* HEAT_HAZE * _fixed_array_verifyrange<HEAT_HAZE>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ float* float * _fixed_array_verifyrange<float>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ MANY_CANDLE_PARTICLE* MANY_CANDLE_PARTICLE * _fixed_array_verifyrange<MANY_CANDLE_PARTICLE>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ sceVu0IVECTOR* int [3] * _fixed_array_verifyrange<int [3]>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ int* int * _fixed_array_verifyrange<int>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ PARTICLE* PARTICLE * _fixed_array_verifyrange<PARTICLE>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ EFF_LEAF* EFF_LEAF * _fixed_array_verifyrange<EFF_LEAF>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ EFF_LEAF_ONE* EFF_LEAF_ONE * _fixed_array_verifyrange<EFF_LEAF_ONE>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ HAZE_PARTICLE* HAZE_PARTICLE * _fixed_array_verifyrange<HAZE_PARTICLE>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
 /* 0015bf30 00000008 */ static void __static_initialization_and_destruction_0(/* a0 4 */ int __initialize_p, /* a1 5 */ int __priority) {}
-/* 002fbc20 0000003c */ type_info& HEAT_HAZE type_info function() {}
-/* 002fbc20 0000003c */ type_info& MANY_CANDLE_PARTICLE type_info function() {}
-/* 002fbc20 0000003c */ type_info& int [3] type_info function() {}
-/* 002fbc20 0000003c */ type_info& PARTICLE type_info function() {}
-/* 002fbc20 0000003c */ type_info& EFF_LEAF type_info function() {}
-/* 002fbc20 0000003c */ type_info& EFF_LEAF_ONE type_info function() {}
+/* ffffffff 0000003c */ type_info& HEAT_HAZE type_info function() {}
+/* ffffffff 0000003c */ type_info& MANY_CANDLE_PARTICLE type_info function() {}
+/* ffffffff 0000003c */ type_info& int [3] type_info function() {}
+/* ffffffff 0000003c */ type_info& PARTICLE type_info function() {}
+/* ffffffff 0000003c */ type_info& EFF_LEAF type_info function() {}
+/* ffffffff 0000003c */ type_info& EFF_LEAF_ONE type_info function() {}
 /* 002fbc20 0000003c */ type_info& HAZE_PARTICLE type_info function() {}
 /* 0015bf38 00000020 */ static void global constructors keyed to HazeParameter() {}
 
@@ -7891,10 +8057,10 @@
 }
 
 /* 0015c530 00000210 */ static void EffectRainParticleDraw(/* s0 16 */ EFFECT_RAIN_PARTICLE *pParticle, /* s3 19 */ int *Color0, /* s4 20 */ int *Color1) {
-	/* -0xf0(sp) */ float matWorldLocal[4][4];
-	/* -0xb0(sp) */ float matLocalScreen[4][4];
-	/* -0x70(sp) */ float vLinePos[2][4];
-	/* -0x50(sp) */ int ivLinePos[2][4];
+	/* 0x0(sp) */ float matWorldLocal[4][4];
+	/* 0x40(sp) */ float matLocalScreen[4][4];
+	/* 0x80(sp) */ float vLinePos[2][4];
+	/* 0xa0(sp) */ int ivLinePos[2][4];
 	/* s1 17 */ GRA3DCAMERA *pCam;
 	/* s2 18 */ int ClipFlg;
 	/* a2 6 */ int i;
@@ -7907,13 +8073,14 @@
 /* 0015c7a0 000000d0 */ void EffectRainDraw() {
 	/* s1 17 */ EFFECT_RAIN_CTRL *pRainCtrl;
 	/* s2 18 */ int i;
-	/* -0x50(sp) */ DRAW_ENV_NOTEX EnvNoTex;
+	/* 0x0(sp) */ DRAW_ENV_NOTEX EnvNoTex;
 }
 
-/* 0015c870 00000150 */ static int EffectRainParticleHitCheck(/* a1 5 */ float *Offset) {
+/* 0015c870 00000150 */ static int EffectRainParticleHitCheck(/* a0 4 */ EFFECT_RAIN_PARTICLE *pParticle, /* a1 5 */ float *Offset) {
 	/* v1 3 */ int Hit;
 	/* v0 2 */ RAIN_HIT_BOX *pBox;
 	/* a2 6 */ int Inside;
+	/* v0 2 */ RAIN_HIT_BOX *pBox;
 	/* a2 6 */ int Inside;
 }
 
@@ -7937,7 +8104,7 @@
 }
 
 /* 0015cd08 00000280 */ static void EffectSprayParticleReqOneFrame(/* s0 16 */ EFFECT_SPRAY_CTRL *pSprayCtrl, /* a1 5 */ float *Offset) {
-	/* -0x90(sp) */ float Velocity[4];
+	/* 0x0(sp) */ float Velocity[4];
 	/* s2 18 */ EFFECT_SPRAY_PARTICLE *pParticle;
 	/* s4 20 */ int AppearNum;
 	/* s3 19 */ int i;
@@ -7953,23 +8120,24 @@
 /* 0015cfd8 0000002c */ void EffectSprayAllDraw() {}
 
 /* 0015d008 00000134 */ static void EffectSprayDraw(/* s0 16 */ EFFECT_SPRAY_CTRL *pSprayCtrl) {
-	/* -0x40(sp) */ float RotX;
-	/* -0x3c(sp) */ float RotY;
+	/* s1 17 */ GRA3DCAMERA *pCam;
+	/* 0x0(sp) */ float RotX;
+	/* 0x4(sp) */ float RotY;
 	/* s2 18 */ int i;
 	/* f0 38 */ float Progress;
 	/* f14 52 */ float Scale;
 }
 
 /* 0015d140 00000120 */ static void EffectSprayParticleDraw(/* s2 18 */ float *Position, /* f21 59 */ float RotX, /* f20 58 */ float RotY, /* s0 16 */ int R, /* s1 17 */ int G, /* s3 19 */ int B, /* s4 20 */ int Alpha, /* f23 61 */ float ScaleX, /* f22 60 */ float ScaleY) {
-	/* -0xc0(sp) */ float matWorldLocal[4][4];
-	/* -0x80(sp) */ DRAW_ENV DrawEnv;
+	/* 0x0(sp) */ float matWorldLocal[4][4];
+	/* 0x40(sp) */ DRAW_ENV DrawEnv;
 }
 
 /* 0015d260 0000000c */ static void EffectSprayParticleClear(/* a0 4 */ EFFECT_SPRAY_PARTICLE *pParticle) {}
 
 /* 0015d270 00000184 */ static void EffectSprayParticleInit(/* s2 18 */ EFFECT_SPRAY_PARTICLE *pParticle, /* s0 16 */ float *pRectVec[4], /* s4 20 */ float *Offset, /* s3 19 */ float *Velocity, /* s5 21 */ int LifeTime, /* f23 61 */ float StartScale, /* f22 60 */ float LastScale) {
-	/* -0x90(sp) */ float SideVector[2][4];
-	/* -0x70(sp) */ float InsideVector[4];
+	/* 0x0(sp) */ float SideVector[2][4];
+	/* 0x20(sp) */ float InsideVector[4];
 }
 
 /* 0015d3f8 0000004c */ void EffectDropOfWaterInit() {
@@ -7979,13 +8147,14 @@
 /* 0015d448 00000100 */ void EffectDropOfWaterDraw() {
 	/* s2 18 */ EFFECT_DROP_CTRL *pDropCtrl;
 	/* s0 16 */ EFFECT_DROP_PARTICLE *pParticle;
-	/* -0x40(sp) */ float RotX;
-	/* -0x3c(sp) */ float RotY;
+	/* 0x0(sp) */ float RotX;
+	/* 0x4(sp) */ float RotY;
+	/* s0 16 */ GRA3DCAMERA *pCam;
 	/* s1 17 */ SLL_CELL *pCell;
 	/* v0 2 */ SINGLE_LINK_LIST *pSLL;
 }
 
-/* 0015d548 0000006c */ static int EffectDropParticleUpdate() {
+/* 0015d548 0000006c */ static int EffectDropParticleUpdate(/* s0 16 */ EFFECT_DROP_PARTICLE *pParticle) {
 	/* s1 17 */ int RetVal;
 }
 
@@ -8000,17 +8169,17 @@
 }
 
 /* 0015d740 000001f0 */ static void EffectDropParticleReqOneFrame(/* s1 17 */ EFFECT_DROP_CTRL *pDropCtrl) {
-	/* -0xa0(sp) */ float Position[4];
+	/* 0x0(sp) */ float Position[4];
 	/* f1 39 */ float Frequency;
 	/* f0 38 */ float RandVal;
 	/* v1 3 */ int ReqNum;
 	/* s2 18 */ int i;
-	/* -0x90(sp) */ EFFECT_DROP_PARTICLE Particle;
-	/* -0x60(sp) */ float Velocity[4];
+	/* 0x10(sp) */ EFFECT_DROP_PARTICLE Particle;
+	/* 0x40(sp) */ float Velocity[4];
 	/* s0 16 */ int PosNo;
 }
 
-/* 0015d930 0000002c */ static void EffectDropParticleInit(/* a1 5 */ float *Position, /* v1 3 */ float *Velocity, /* f12 50 */ float Gravity, /* f13 51 */ float GroundHeight) {}
+/* 0015d930 0000002c */ static void EffectDropParticleInit(/* a0 4 */ EFFECT_DROP_PARTICLE *pParticle, /* a1 5 */ float *Position, /* v1 3 */ float *Velocity, /* f12 50 */ float Gravity, /* f13 51 */ float GroundHeight) {}
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/graphics/effect/effect_rdr.c
@@ -8075,9 +8244,9 @@
 }
 
 /* 0015e398 000000b0 */ static void RDPFireCalcMovePos(/* s1 17 */ float *Position, /* s0 16 */ float *CenterPos, /* f12 50 */ float Radius, /* f20 58 */ float RotY) {
-	/* -0x80(sp) */ float matLocalWorld[4][4];
-	/* -0x40(sp) */ float LocalPos[4];
-	/* -0x30(sp) */ float Offset[4];
+	/* 0x0(sp) */ float matLocalWorld[4][4];
+	/* 0x40(sp) */ float LocalPos[4];
+	/* 0x50(sp) */ float Offset[4];
 }
 
 /* 0015e448 00000248 */ void RDPFireMoveCtrl() {
@@ -8092,10 +8261,10 @@
 	/* s0 16 */ int i;
 }
 
-/* 002fc740 00000054 */ EFFRDR_RSV* EFFRDR_RSV * _fixed_array_verifyrange<EFFRDR_RSV>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
-/* 002fc740 00000054 */ BURN_FIRE* BURN_FIRE * _fixed_array_verifyrange<BURN_FIRE>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ EFFRDR_RSV* EFFRDR_RSV * _fixed_array_verifyrange<EFFRDR_RSV>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ BURN_FIRE* BURN_FIRE * _fixed_array_verifyrange<BURN_FIRE>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
 /* 0015e738 00000008 */ static void __static_initialization_and_destruction_0(/* a0 4 */ int __initialize_p, /* a1 5 */ int __priority) {}
-/* 002fc740 0000003c */ type_info& EFFRDR_RSV type_info function() {}
+/* ffffffff 0000003c */ type_info& EFFRDR_RSV type_info function() {}
 /* 002fc740 0000003c */ type_info& BURN_FIRE type_info function() {}
 /* 0015e740 00000020 */ static void global constructors keyed to burn_fire() {}
 
@@ -8127,9 +8296,9 @@
 	/* s1 17 */ u_char colcol;
 	/* f22 60 */ float yline;
 	/* f23 61 */ float xline;
-	/* -0x130(sp) */ DISP_SPRT2 ds;
-	/* -0xa0(sp) */ SPRT_DAT2 sd2;
-	/* -0x70(sp) */ SPRT_DAT2 sd3;
+	/* 0x0(sp) */ DISP_SPRT2 ds;
+	/* 0x90(sp) */ SPRT_DAT2 sd2;
+	/* 0xc0(sp) */ SPRT_DAT2 sd3;
 }
 
 /* 0015edc0 00000110 */ void SetBlur(/* s0 16 */ EFFECT_CONT *ec) {}
@@ -8144,8 +8313,8 @@
 /* 0015f348 0000005c */ void CallBlur3(/* a0 4 */ int in, /* a1 5 */ int keep, /* a2 6 */ int out, /* a3 7 */ u_char alpha, /* f12 50 */ float scale, /* f13 51 */ float rot, /* f14 52 */ float cx, /* f15 53 */ float cy) {}
 
 /* 0015f3a8 00000160 */ static void SubFocus(/* s0 16 */ int ef) {
-	/* -0xf0(sp) */ SPRT_DAT2 sd;
-	/* -0xc0(sp) */ DISP_SPRT2 ds;
+	/* 0x0(sp) */ SPRT_DAT2 sd;
+	/* 0x30(sp) */ DISP_SPRT2 ds;
 	/* f22 60 */ float hw;
 }
 
@@ -8168,13 +8337,13 @@
 /* 0015fc50 00000038 */ void CallDeform2(/* v0 2 */ int in, /* t1 9 */ int keep, /* t2 10 */ int out, /* a3 7 */ int type, /* t0 8 */ int max) {}
 /* 0015fc88 00000024 */ static void _SetScrData(/* a0 4 */ Q_WORDDATA *dst, /* a1 5 */ SCRDEF *src) {}
 
-/* 0015fcb0 00000234 */ static void MakeScrDeformPacket(/* t3 11 */ int pnumw, /* -0x60(sp) */ int pnumh, /* s1 17 */ u_long tex0, /* -0x5c(sp) */ SCRDEF *scrdef[33], /* s0 16 */ int alp) {
+/* 0015fcb0 00000234 */ static void MakeScrDeformPacket(/* t3 11 */ int pnumw, /* 0x30(sp) */ int pnumh, /* s1 17 */ u_long tex0, /* 0x34(sp) */ SCRDEF *scrdef[33], /* s0 16 */ int alp) {
 	/* s3 19 */ int i;
 	/* fp 30 */ int j;
 	/* s2 18 */ Q_WORDDATA *ppbuf;
 }
 
-/* 0015fee8 00000608 */ static void SetDeform0(/* -0x80(sp) */ int type, /* f20 58 */ float rate, /* fp 30 */ u_char alp) {
+/* 0015fee8 00000608 */ static void SetDeform0(/* 0x2820(sp) */ int type, /* f20 58 */ float rate, /* fp 30 */ u_char alp) {
 	/* sdata 3eff90 */ static float r;
 	/* sdata 3eff94 */ static float add;
 	/* sdata 3eff98 */ static int swch;
@@ -8185,12 +8354,12 @@
 	/* s0 16 */ Q_WORDDATA *pbuf;
 	/* f1 39 */ float ll;
 	/* f23 61 */ float fw;
-	/* -0x28a0(sp) */ float tx[17][25];
-	/* -0x21f0(sp) */ float ty[17][25];
-	/* -0x1b40(sp) */ float vtw[17][25][4];
+	/* 0x0(sp) */ float tx[17][25];
+	/* 0x6b0(sp) */ float ty[17][25];
+	/* 0xd60(sp) */ float vtw[17][25][4];
 }
 
-/* 001604f0 00000980 */ static void SetDeform2(/* -0xa0(sp) */ int type, /* f24 62 */ float rate, /* -0x9c(sp) */ u_char alp) {
+/* 001604f0 00000980 */ static void SetDeform2(/* 0x81d0(sp) */ int type, /* f24 62 */ float rate, /* 0x81d4(sp) */ u_char alp) {
 	/* bss 46e8f0 */ static float rrr[825];
 	/* bss 46f5d8 */ static float lll[825];
 	/* bss 4702c0 */ static float mm1[825];
@@ -8216,20 +8385,20 @@
 	/* f22 60 */ float cnth;
 	/* f20 58 */ float fx;
 	/* f0 38 */ float fy;
-	/* -0x8270(sp) */ float rot_x;
-	/* -0x826c(sp) */ float rot_y;
-	/* -0x8260(sp) */ float tx[825];
-	/* -0x7570(sp) */ float ty[825];
-	/* -0x6880(sp) */ float slm[4][4];
-	/* -0x6840(sp) */ float wlm[4][4];
-	/* -0x6800(sp) */ float pos[4];
-	/* -0x67f0(sp) */ float vt[825][4];
-	/* -0x3460(sp) */ float vtw[825][4];
+	/* 0x0(sp) */ float rot_x;
+	/* 0x4(sp) */ float rot_y;
+	/* 0x10(sp) */ float tx[825];
+	/* 0xd00(sp) */ float ty[825];
+	/* 0x19f0(sp) */ float slm[4][4];
+	/* 0x1a30(sp) */ float wlm[4][4];
+	/* 0x1a70(sp) */ float pos[4];
+	/* 0x1a80(sp) */ float vt[825][4];
+	/* 0x4e10(sp) */ float vtw[825][4];
 	/* t3 11 */ Q_WORDDATA *pbuf;
 	/* s2 18 */ GRA3DCAMERA *pCam;
 }
 
-/* 00160e70 00000748 */ static void SetDeform3(/* -0xc0(sp) */ int type, /* f20 58 */ float rate, /* s7 23 */ u_char alp) {
+/* 00160e70 00000748 */ static void SetDeform3(/* 0x8130(sp) */ int type, /* f20 58 */ float rate, /* s7 23 */ u_char alp) {
 	/* sdata 3effa8 */ static float r;
 	/* sdata 3effac */ static float add;
 	/* sdata 3effb0 */ static int swch;
@@ -8247,10 +8416,10 @@
 	/* f28 66 */ float cnth;
 	/* f20 58 */ float fx;
 	/* f0 38 */ float fy;
-	/* -0x81f0(sp) */ float tx[25][33];
-	/* -0x7500(sp) */ float ty[25][33];
-	/* -0x6810(sp) */ float vt[25][33][4];
-	/* -0x3480(sp) */ float vtw[25][33][4];
+	/* 0x0(sp) */ float tx[25][33];
+	/* 0xcf0(sp) */ float ty[25][33];
+	/* 0x19e0(sp) */ float vt[25][33][4];
+	/* 0x4d70(sp) */ float vtw[25][33][4];
 	/* s0 16 */ Q_WORDDATA *pbuf;
 }
 
@@ -8267,12 +8436,12 @@
 	/* f22 60 */ float fx;
 	/* f20 58 */ float fy;
 	/* f24 62 */ float fz;
-	/* -0x67d0(sp) */ SCRDEF scrdef[25][33];
+	/* 0x0(sp) */ SCRDEF scrdef[25][33];
 	/* s0 16 */ DEFWORK *pdef;
-	/* -0xb0(sp) */ sceGsTex0 sd1;
+	/* 0x6720(sp) */ sceGsTex0 sd1;
 }
 
-/* 00161a80 000004cc */ static void SetDeform5(/* -0xa8(sp) */ int type, /* f21 59 */ float rate, /* -0xa4(sp) */ u_char alp) {
+/* 00161a80 000004cc */ static void SetDeform5(/* 0x6728(sp) */ int type, /* f21 59 */ float rate, /* 0x672c(sp) */ u_char alp) {
 	/* sdata 3effbc */ static float r;
 	/* sdata 3effc0 */ static float add;
 	/* s2 18 */ int i;
@@ -8288,13 +8457,14 @@
 	/* f22 60 */ float fx;
 	/* f20 58 */ float fy;
 	/* f24 62 */ float fz;
+	/* 0x0(sp) */ SCRDEF scrdef[25][33];
 	/* f0 38 */ float xx;
 	/* f2 40 */ float yy;
-	/* -0xb0(sp) */ sceGsTex0 sd1;
+	/* 0x6720(sp) */ sceGsTex0 sd1;
 	/* s0 16 */ DEFWORK *pdef;
 }
 
-/* 00161f50 0000050c */ static void SetDeform6(/* -0xa8(sp) */ int type, /* f20 58 */ float rate, /* -0xa4(sp) */ u_char alp) {
+/* 00161f50 0000050c */ static void SetDeform6(/* 0x6728(sp) */ int type, /* f20 58 */ float rate, /* 0x672c(sp) */ u_char alp) {
 	/* sdata 3effc4 */ static float r;
 	/* sdata 3effc8 */ static float add;
 	/* s2 18 */ int i;
@@ -8310,27 +8480,28 @@
 	/* f22 60 */ float fx;
 	/* f20 58 */ float fy;
 	/* f24 62 */ float fz;
+	/* 0x0(sp) */ SCRDEF scrdef[25][33];
 	/* s0 16 */ DEFWORK *pdef;
-	/* -0xb0(sp) */ sceGsTex0 sd1;
+	/* 0x6720(sp) */ sceGsTex0 sd1;
 }
 
 /* 00162460 000000f0 */ void SubContrast2(/* a0 4 */ u_char col, /* a1 5 */ u_char alp) {
-	/* -0xe0(sp) */ SPRT_DAT2 sd;
-	/* -0xb0(sp) */ DISP_SPRT2 ds;
+	/* 0x0(sp) */ SPRT_DAT2 sd;
+	/* 0x30(sp) */ DISP_SPRT2 ds;
 }
 
 /* 00162550 00000048 */ void SetContrast2(/* s0 16 */ EFFECT_CONT *ec) {}
 
 /* 00162598 000000b8 */ void SubContrast3(/* a0 4 */ u_char col, /* a1 5 */ u_char alp) {
-	/* -0xe0(sp) */ SPRT_DAT2 sd;
-	/* -0xb0(sp) */ DISP_SPRT2 ds;
+	/* 0x0(sp) */ SPRT_DAT2 sd;
+	/* 0x30(sp) */ DISP_SPRT2 ds;
 }
 
 /* 00162650 00000048 */ void SetContrast3(/* s0 16 */ EFFECT_CONT *ec) {}
 
 /* 00162698 00000174 */ void SubNega(/* a0 4 */ u_char r, /* a1 5 */ u_char g, /* a2 6 */ u_char b, /* a3 7 */ u_char alp, /* t0 8 */ u_char alp2) {
-	/* -0x100(sp) */ SPRT_DAT2 sd;
-	/* -0xd0(sp) */ DISP_SPRT2 ds;
+	/* 0x0(sp) */ SPRT_DAT2 sd;
+	/* 0x30(sp) */ DISP_SPRT2 ds;
 }
 
 /* 00162810 00000128 */ void SetNega(/* s0 16 */ EFFECT_CONT *ec) {
@@ -8352,19 +8523,20 @@
 	/* f21 59 */ float z;
 	/* f0 38 */ float fn;
 	/* s3 19 */ int fl;
-	/* -0x110(sp) */ SPRT_DAT2 sd;
-	/* -0xe0(sp) */ DISP_SPRT2 ds;
+	/* 0xf0(sp) */ SPRT_DAT2 sd;
+	/* 0x120(sp) */ DISP_SPRT2 ds;
 }
 
-/* 00162e00 00000290 */ void SetForcusDepth(/* -0x70(sp) */ EFFECT_CONT *ec) {
+/* 00162e00 00000290 */ void SetForcusDepth(/* 0x190(sp) */ EFFECT_CONT *ec) {
 	/* s4 20 */ int i;
-	/* -0x200(sp) */ int zi[2];
-	/* -0x1f0(sp) */ float bai[2];
-	/* -0x1e0(sp) */ float wlm[4][4];
-	/* -0x1a0(sp) */ float slm[4][4];
-	/* -0x160(sp) */ float vt[4];
-	/* -0x150(sp) */ float vtww[4];
-	/* -0x140(sp) */ sceVu0IVECTOR ivec;
+	/* 0x0(sp) */ int zi[2];
+	/* 0x10(sp) */ float bai[2];
+	/* 0x20(sp) */ float wlm[4][4];
+	/* 0x60(sp) */ float slm[4][4];
+	/* 0xa0(sp) */ float vt[4];
+	/* 0xb0(sp) */ float vtww[4];
+	/* 0xc0(sp) */ sceVu0IVECTOR ivec;
+	/* s1 17 */ GRA3DCAMERA *pCam;
 	/* s3 19 */ float &cam_pos[4];
 }
 
@@ -8373,8 +8545,8 @@
 }
 
 /* 00163130 000001dc */ static void MakeRDither3(/* a0 4 */ u_char alpmx, /* s2 18 */ u_char colmx) {
-	/* -0x4440(sp) */ u_char pat[16384];
-	/* -0x440(sp) */ u_int pal[256];
+	/* 0x0(sp) */ u_char pat[16384];
+	/* 0x4000(sp) */ u_int pal[256];
 	/* s0 16 */ int i;
 	/* bss 473660 */ static void gs_limage1;
 	/* bss 4736c0 */ static void gs_limage2;
@@ -8387,17 +8559,18 @@
 	/* sdata 3efff0 */ static float cy;
 	/* sdata 3efff4 */ static int fl;
 	/* s2 18 */ int alpr;
-	/* -0x140(sp) */ float tx;
-	/* -0x13c(sp) */ float ty;
-	/* -0x138(sp) */ float otx;
-	/* -0x134(sp) */ float oty;
+	/* 0x0(sp) */ float tx;
+	/* 0x4(sp) */ float ty;
+	/* 0x8(sp) */ float otx;
+	/* 0xc(sp) */ float oty;
 	/* f21 59 */ float mvx;
 	/* f20 58 */ float mvy;
 	/* fp 30 */ u_char r;
 	/* s5 21 */ u_char g;
 	/* s7 23 */ u_char b;
-	/* -0x130(sp) */ SPRT_DAT2 sd;
-	/* -0x100(sp) */ DISP_SPRT2 ds;
+	/* s1 17 */ GRA3DCAMERA *pCam;
+	/* 0x10(sp) */ SPRT_DAT2 sd;
+	/* 0x40(sp) */ DISP_SPRT2 ds;
 	/* v0 2 */ float *pv0;
 	/* v0 2 */ float *pv0;
 }
@@ -8418,20 +8591,21 @@
 	/* sdata 3f0004 */ static int fl;
 	/* a0 4 */ int clamp_u;
 	/* a1 5 */ int clamp_v;
-	/* -0x110(sp) */ float tx;
-	/* -0x10c(sp) */ float ty;
-	/* -0x108(sp) */ float otx;
-	/* -0x104(sp) */ float oty;
+	/* 0x0(sp) */ float tx;
+	/* 0x4(sp) */ float ty;
+	/* 0x8(sp) */ float otx;
+	/* 0xc(sp) */ float oty;
 	/* f3 41 */ float mvx;
 	/* f4 42 */ float mvy;
-	/* -0x100(sp) */ SPRT_DAT2 sd;
-	/* -0xd0(sp) */ DISP_SPRT2 ds;
+	/* 0x10(sp) */ SPRT_DAT2 sd;
+	/* 0x40(sp) */ DISP_SPRT2 ds;
+	/* s1 17 */ GRA3DCAMERA *pCam;
 	/* v0 2 */ float *pv0;
 }
 
 /* 001644a8 0000012c */ void SubFadeFrame(/* a0 4 */ u_char alp, /* a1 5 */ u_int pri) {
-	/* -0xe0(sp) */ SPRT_DAT2 sd;
-	/* -0xb0(sp) */ DISP_SPRT2 ds;
+	/* 0x0(sp) */ SPRT_DAT2 sd;
+	/* 0x30(sp) */ DISP_SPRT2 ds;
 }
 
 /* 001645d8 00000048 */ void SetFadeFrame(/* s0 16 */ EFFECT_CONT *ec) {}
@@ -8462,19 +8636,19 @@
 
 /* 00164f80 00000188 */ void ScreenSaverDraw() {
 	/* s0 16 */ SCREEN_SAVER_CTRL *pCtrl;
-	/* -0x140(sp) */ SPRT_DAT sprt_dat;
-	/* -0x120(sp) */ DISP_SPRT DispSprt;
-	/* -0x90(sp) */ EFFECT_CONT EffectCont;
+	/* 0x0(sp) */ SPRT_DAT sprt_dat;
+	/* 0x20(sp) */ DISP_SPRT DispSprt;
+	/* 0xb0(sp) */ EFFECT_CONT EffectCont;
 }
 
 /* 00165108 000000a4 */ void BrightnessAdjustmentFilterDraw() {
-	/* -0xc0(sp) */ DISP_SQAR DispSqar;
-	/* -0x40(sp) */ SQAR_DAT SqarDat;
+	/* 0x0(sp) */ DISP_SQAR DispSqar;
+	/* 0x80(sp) */ SQAR_DAT SqarDat;
 	/* s0 16 */ int BrightnessFilterAlpha;
 }
 
-/* 002fd500 00000054 */ float* float * _fixed_array_verifyrange<float>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
-/* 002fd500 00000054 */ SCREEN_SAVER_TEX* SCREEN_SAVER_TEX * _fixed_array_verifyrange<SCREEN_SAVER_TEX>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ float* float * _fixed_array_verifyrange<float>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ SCREEN_SAVER_TEX* SCREEN_SAVER_TEX * _fixed_array_verifyrange<SCREEN_SAVER_TEX>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
 /* 001651b0 00000008 */ static void __static_initialization_and_destruction_0(/* a0 4 */ int __initialize_p, /* a1 5 */ int __priority) {}
 /* 002fd500 0000003c */ type_info& SCREEN_SAVER_TEX type_info function() {}
 /* 001651b8 00000020 */ static void global constructors keyed to eff_blur() {}
@@ -8491,30 +8665,30 @@
 /* 00165240 00000034 */ static char** char * * _fixed_array_verifyrange<char *>(/* a0 4 */ size_t v, /* a1 5 */ size_t _max) {}
 /* 00165278 00000034 */ static unsigned int** unsigned int * * _fixed_array_verifyrange<unsigned int *>(/* a0 4 */ size_t v, /* a1 5 */ size_t _max) {}
 
-/* 001652b0 000002fc */ void SetEffSQITex(/* fp 30 */ int n, /* s7 23 */ int *v, /* s0 16 */ int tp, /* f12 50 */ float w, /* f13 51 */ float h, /* s1 17 */ u_char r, /* s2 18 */ u_char g, /* s3 19 */ u_char b, /* -0x60(sp) */ u_char a) {
+/* 001652b0 000002fc */ void SetEffSQITex(/* fp 30 */ int n, /* s7 23 */ int *v, /* s0 16 */ int tp, /* f12 50 */ float w, /* f13 51 */ float h, /* s1 17 */ u_char r, /* s2 18 */ u_char g, /* s3 19 */ u_char b, /* 0x50(sp) */ u_char a) {
 	/* s5 21 */ u_char rr;
 	/* s6 22 */ u_char gg;
 	/* s4 20 */ u_char bb;
 	/* t3 11 */ int i;
 	/* s0 16 */ int tw;
 	/* s1 17 */ int th;
-	/* -0xb0(sp) */ int xx[2];
-	/* -0xa0(sp) */ int yy[2];
+	/* 0x0(sp) */ int xx[2];
+	/* 0x10(sp) */ int yy[2];
 	/* s2 18 */ u_long tx0;
 	/* t4 12 */ int ndpkt;
 	/* s3 19 */ Q_WORDDATA *pbuf;
 	/* f0 38 */ float div;
 }
 
-/* 001655b0 000003a0 */ void SetEffSQTex(/* s6 22 */ int n, /* s4 20 */ float *v, /* fp 30 */ int tp, /* f12 50 */ float w, /* f13 51 */ float h, /* s0 16 */ u_char r, /* s1 17 */ u_char g, /* s5 21 */ u_char b, /* -0x60(sp) */ u_char a) {
+/* 001655b0 000003a0 */ void SetEffSQTex(/* s6 22 */ int n, /* s4 20 */ float *v, /* fp 30 */ int tp, /* f12 50 */ float w, /* f13 51 */ float h, /* s0 16 */ u_char r, /* s1 17 */ u_char g, /* s5 21 */ u_char b, /* 0x20(sp) */ u_char a) {
 	/* s2 18 */ u_char rr;
 	/* s3 19 */ u_char gg;
 	/* s1 17 */ u_char bb;
 	/* t3 11 */ int i;
 	/* s5 21 */ int tw;
 	/* s6 22 */ int th;
-	/* -0x80(sp) */ int xx[4];
-	/* -0x70(sp) */ int yy[4];
+	/* 0x0(sp) */ int xx[4];
+	/* 0x10(sp) */ int yy[4];
 	/* s7 23 */ u_long tx0;
 	/* s0 16 */ Q_WORDDATA *pbuf;
 	/* t4 12 */ int ndpkt;
@@ -8538,14 +8712,14 @@
 /* 00165b30 00000104 */ int ScreenCtrl() {}
 
 /* 00165c38 0000019c */ void SetPanel2(/* s1 17 */ u_int pri, /* f22 60 */ float x1, /* f23 61 */ float y1, /* f20 58 */ float x2, /* f21 59 */ float y2, /* s0 16 */ int z, /* s5 21 */ u_char r, /* s4 20 */ u_char g, /* s3 19 */ u_char b, /* s6 22 */ u_char a) {
-	/* -0x100(sp) */ SQAR_DAT sq;
-	/* -0xe0(sp) */ DISP_SQAR dq;
+	/* 0x0(sp) */ SQAR_DAT sq;
+	/* 0x20(sp) */ DISP_SQAR dq;
 	/* t0 8 */ int i;
 }
 
 /* 00165dd8 000000ac */ void SetScreenZ(/* s0 16 */ int addr) {
-	/* -0xe0(sp) */ SPRT_DAT2 sd;
-	/* -0xb0(sp) */ DISP_SPRT2 ds;
+	/* 0x0(sp) */ SPRT_DAT2 sd;
+	/* 0x30(sp) */ DISP_SPRT2 ds;
 }
 
 /* 00165e88 000004d0 */ void Set3DPosTexure(/* s0 16 */ float *wlm[4], /* s2 18 */ DRAW_ENV *de, /* s1 17 */ int texno, /* f21 59 */ float w, /* f20 58 */ float h, /* a3 7 */ u_char r, /* t0 8 */ u_char g, /* t1 9 */ u_char b, /* t2 10 */ u_char a) {
@@ -8559,21 +8733,21 @@
 	/* s0 16 */ Q_WORDDATA *pbuf;
 	/* t4 12 */ int ndpkt;
 	/* t1 9 */ int ClipFlg;
-	/* -0x6c(sp) */ u_int clpz2;
+	/* 0x164(sp) */ u_int clpz2;
 	/* s1 17 */ sceGsTex0 *pTx0;
-	/* -0x1d0(sp) */ float slm[4][4];
-	/* -0x190(sp) */ sceVu0IVECTOR ivec[4];
-	/* -0x150(sp) */ float ppos[4][4];
-	/* -0x110(sp) */ float stq[2];
-	/* -0x100(sp) */ U32DATA ts[4];
-	/* -0xf0(sp) */ U32DATA tt[4];
-	/* -0xe0(sp) */ U32DATA tq[4];
+	/* 0x0(sp) */ float slm[4][4];
+	/* 0x40(sp) */ sceVu0IVECTOR ivec[4];
+	/* 0x80(sp) */ float ppos[4][4];
+	/* 0xc0(sp) */ float stq[2];
+	/* 0xd0(sp) */ U32DATA ts[4];
+	/* 0xe0(sp) */ U32DATA tt[4];
+	/* 0xf0(sp) */ U32DATA tq[4];
 	/* a1 5 */ GRA3DCAMERA *pCam;
-	/* -0xd0(sp) */ DRAW_ENV_5 env;
+	/* 0x100(sp) */ DRAW_ENV_5 env;
 	/* v0 2 */ int Col;
 }
 
-/* 00166358 000004c8 */ void Set3DPosTexure2(/* s2 18 */ DRAW_ENV *de, /* s1 17 */ int texno, /* f21 59 */ float w, /* f20 58 */ float h, /* a3 7 */ u_char r, /* t0 8 */ u_char g, /* t1 9 */ u_char b, /* t2 10 */ u_char a, /* s5 21 */ int MonochroModeFlg) {
+/* 00166358 000004c8 */ void Set3DPosTexure2(/* s0 16 */ float *wlm[4], /* s2 18 */ DRAW_ENV *de, /* s1 17 */ int texno, /* f21 59 */ float w, /* f20 58 */ float h, /* a3 7 */ u_char r, /* t0 8 */ u_char g, /* t1 9 */ u_char b, /* t2 10 */ u_char a, /* s5 21 */ int MonochroModeFlg) {
 	/* fp 30 */ u_char r;
 	/* s3 19 */ u_char g;
 	/* s4 20 */ u_char b;
@@ -8583,13 +8757,17 @@
 	/* s0 16 */ Q_WORDDATA *pbuf;
 	/* t4 12 */ int ndpkt;
 	/* t1 9 */ int ClipFlg;
-	/* -0x6c(sp) */ u_int clpz2;
+	/* 0x164(sp) */ u_int clpz2;
 	/* s1 17 */ sceGsTex0 *pTx0;
-	/* -0x1d0(sp) */ float slm[4][4];
-	/* -0x110(sp) */ float stq[2];
-	/* -0xf0(sp) */ U32DATA tt[4];
-	/* -0xe0(sp) */ U32DATA tq[4];
-	/* -0xd0(sp) */ DRAW_ENV_5 env;
+	/* 0x0(sp) */ float slm[4][4];
+	/* 0x40(sp) */ sceVu0IVECTOR ivec[4];
+	/* 0x80(sp) */ float ppos[4][4];
+	/* 0xc0(sp) */ float stq[2];
+	/* 0xd0(sp) */ U32DATA ts[4];
+	/* 0xe0(sp) */ U32DATA tt[4];
+	/* 0xf0(sp) */ U32DATA tq[4];
+	/* a1 5 */ GRA3DCAMERA *pCam;
+	/* 0x100(sp) */ DRAW_ENV_5 env;
 	/* v0 2 */ int Col;
 }
 
@@ -8602,24 +8780,26 @@
 	/* v1 3 */ int xx;
 	/* s2 18 */ int yy;
 	/* s0 16 */ int clip;
-	/* -0x120(sp) */ float wlm[4][4];
-	/* -0xe0(sp) */ float slm[4][4];
-	/* -0xa0(sp) */ float fzero[4];
-	/* -0x90(sp) */ sceVu0IVECTOR ivec;
+	/* 0x0(sp) */ float wlm[4][4];
+	/* 0x40(sp) */ float slm[4][4];
+	/* 0x80(sp) */ float fzero[4];
+	/* 0x90(sp) */ sceVu0IVECTOR ivec;
+	/* a1 5 */ GRA3DCAMERA *pCam;
 	/* bss 478500 */ static void gs_simage;
-	/* -0x80(sp) */ Q_WORDDATA q;
+	/* 0xa0(sp) */ Q_WORDDATA q;
 	/* s1 17 */ int n1;
 	/* s3 19 */ int n2;
 	/* s0 16 */ sceDmaChan *DmaVif;
 }
 
 /* 00166a90 0000013c */ void GetCamI2DPos(/* s0 16 */ float *pos, /* s4 20 */ float *tx, /* s3 19 */ float *ty) {
-	/* -0xf0(sp) */ float wlm[4][4];
-	/* -0xb0(sp) */ float slm[4][4];
-	/* -0x70(sp) */ float vt[4];
-	/* -0x60(sp) */ float vtw[4];
+	/* 0x0(sp) */ float wlm[4][4];
+	/* 0x40(sp) */ float slm[4][4];
+	/* 0x80(sp) */ float vt[4];
+	/* 0x90(sp) */ float vtw[4];
 	/* f21 59 */ float pl;
-	/* -0x50(sp) */ float tmp_pos[4];
+	/* 0xa0(sp) */ float tmp_pos[4];
+	/* s1 17 */ GRA3DCAMERA *pCam;
 }
 
 /* 00166bd0 00000110 */ void Vector2Rot(/* a0 4 */ float *dir, /* s1 17 */ float *x, /* s0 16 */ float *y) {
@@ -8629,7 +8809,7 @@
 }
 
 /* 00166ce0 0000004c */ void Get2PosRot(/* v0 2 */ float *v1, /* a1 5 */ float *v2, /* s1 17 */ float *x, /* s0 16 */ float *y) {
-	/* -0x30(sp) */ float dir[4];
+	/* 0x0(sp) */ float dir[4];
 }
 
 /* 00166d30 000000f8 */ void Get2PosRot2(/* a0 4 */ float *v1, /* a1 5 */ float *v2, /* s1 17 */ float *x, /* s0 16 */ float *z) {
@@ -8638,7 +8818,7 @@
 }
 
 /* 00166e28 000000a4 */ void GetTrgtRotType2(/* s1 17 */ float *p0, /* s0 16 */ float *p1, /* s2 18 */ float *rot, /* s3 19 */ int id) {
-	/* -0x40(sp) */ float dist[4];
+	/* 0x0(sp) */ float dist[4];
 }
 
 /* 00166ed0 0000005c */ float Get2PLength(/* a0 4 */ float *v1, /* a1 5 */ float *v2) {
@@ -8674,65 +8854,74 @@
 }
 
 /* 00167298 00000080 */ void EffectSndFileReadyReq(/* s1 17 */ int FileNo) {
-	/* -0x30(sp) */ EFFECT_SOUNDFILE_DATA TmpFileData;
+	/* 0x0(sp) */ EFFECT_SOUNDFILE_DATA TmpFileData;
 	/* s0 16 */ EFFECT_SOUNDFILE_DATA *pSndData;
 	/* v0 2 */ SLL_CELL *pCell;
 }
 
 /* 00167318 000000a0 */ static void EffectSndFileReadyRemove(/* s2 18 */ int FileNo) {
 	/* s0 16 */ SLL_CELL *pCell;
+	/* v0 2 */ SINGLE_LINK_LIST *pSLL;
 }
 
 /* 001673b8 00000080 */ static int EffectSndGetBankNo(/* s1 17 */ int FileNo) {
 	/* s0 16 */ SLL_CELL *pCell;
 	/* s2 18 */ int BankNo;
+	/* v0 2 */ SINGLE_LINK_LIST *pSLL;
 }
 
 /* 00167438 000000a0 */ static int EffectSndFileIsReady(/* s1 17 */ int FileNo) {
 	/* s0 16 */ SLL_CELL *pCell;
 	/* s2 18 */ int IsReady;
+	/* v0 2 */ SINGLE_LINK_LIST *pSLL;
 	/* v1 3 */ EFFECT_SOUNDFILE_DATA *pFileData;
 }
 
 /* 001674d8 00000098 */ static void EffectSndFileReadyCtrl() {
 	/* s1 17 */ SLL_CELL *pCell;
+	/* v0 2 */ SINGLE_LINK_LIST *pSLL;
 	/* s0 16 */ EFFECT_SOUNDFILE_DATA *pFileData;
 }
 
 /* 00167570 000000a4 */ static void EffectSndFileReadyAllReleaseAndRemove() {
 	/* s0 16 */ SLL_CELL *pCell;
+	/* v0 2 */ SINGLE_LINK_LIST *pSLL;
 	/* v0 2 */ int BankNo;
 }
 
 /* 00167618 0000004c */ void EffectSndFileRelease(/* s0 16 */ int FileNo) {
-	/* -0x20(sp) */ EFFECT_FILEDEL_DATA TmpDelData;
+	/* 0x0(sp) */ EFFECT_FILEDEL_DATA TmpDelData;
 }
 
 /* 00167668 0000007c */ static int EffectSndFileDeleteRegisteredCheck(/* s1 17 */ int FileNo) {
 	/* s0 16 */ SLL_CELL *pCell;
 	/* s2 18 */ int Registered;
+	/* v0 2 */ SINGLE_LINK_LIST *pSLL;
 }
 
 /* 001676e8 000000a0 */ static void EffectSndFileDeleteRemove(/* s2 18 */ int FileNo) {
 	/* s0 16 */ SLL_CELL *pCell;
+	/* v0 2 */ SINGLE_LINK_LIST *pSLL;
 }
 
 /* 00167788 00000070 */ static void EffectSndFileDeleteAllRemove() {
 	/* a1 5 */ SLL_CELL *pCell;
+	/* v0 2 */ SINGLE_LINK_LIST *pSLL;
 }
 
 /* 001677f8 000000cc */ static void EffectSndFileDeleteCtrl() {
 	/* s0 16 */ SLL_CELL *pCell;
+	/* v0 2 */ SINGLE_LINK_LIST *pSLL;
 	/* s1 17 */ EFFECT_FILEDEL_DATA *pDelData;
 	/* v0 2 */ int BankNo;
 }
 
 /* 001678c8 00000180 */ static void EffectSndPlaySub(/* s0 16 */ int FileNo, /* s3 19 */ int No, /* s6 22 */ int Effect, /* s4 20 */ int FadeTime, /* s1 17 */ float *pPosition[4], /* s5 21 */ u_int DeleteKey) {
 	/* s2 18 */ int BankNo;
-	/* -0x80(sp) */ EFFECT_SOUNDPLAY_DATA TmpPlayData;
+	/* 0x0(sp) */ EFFECT_SOUNDPLAY_DATA TmpPlayData;
 	/* s4 20 */ int LoopFlg;
 	/* s0 16 */ int PlayId;
-	/* -0x50(sp) */ SND_3D_SET Snd3d;
+	/* 0x30(sp) */ SND_3D_SET Snd3d;
 	/* t3 11 */ SND_3D_SET *pSnd3d;
 }
 
@@ -8741,52 +8930,61 @@
 
 /* 00167a88 000000fc */ void EffectSndStop(/* s4 20 */ int FileNo, /* s3 19 */ int No, /* s2 18 */ int FadeFlg) {
 	/* s0 16 */ SLL_CELL *pCell;
+	/* v0 2 */ SINGLE_LINK_LIST *pSLL;
 	/* a0 4 */ EFFECT_SOUNDPLAY_DATA *pPlayData;
 }
 
 /* 00167b88 000000e8 */ void EffectSndStopDeleteKey(/* s3 19 */ u_int DeleteKey, /* s2 18 */ int FadeFlg) {
 	/* s0 16 */ SLL_CELL *pCell;
+	/* v0 2 */ SINGLE_LINK_LIST *pSLL;
 	/* a0 4 */ EFFECT_SOUNDPLAY_DATA *pPlayData;
 }
 
 /* 00167c70 000000a0 */ void EffectSndAllStop() {
 	/* s0 16 */ SLL_CELL *pCell;
+	/* v0 2 */ SINGLE_LINK_LIST *pSLL;
 }
 
 /* 00167d10 00000084 */ void EffectSndAllPause() {
 	/* a0 4 */ SLL_CELL *pCell;
+	/* v0 2 */ SINGLE_LINK_LIST *pSLL;
 }
 
 /* 00167d98 00000084 */ void EffectSndAllRestart() {
 	/* a0 4 */ SLL_CELL *pCell;
+	/* v0 2 */ SINGLE_LINK_LIST *pSLL;
 }
 
 /* 00167e20 0000007c */ static int EffectSndFilePlayUseCheck(/* s1 17 */ int FileNo) {
 	/* s0 16 */ SLL_CELL *pCell;
 	/* s2 18 */ int UseFlg;
+	/* v0 2 */ SINGLE_LINK_LIST *pSLL;
 }
 
 /* 00167ea0 00000144 */ static void EffectSndPlayCtrl() {
 	/* s0 16 */ SLL_CELL *pCell;
+	/* v0 2 */ SINGLE_LINK_LIST *pSLL;
 	/* s2 18 */ EFFECT_SOUNDPLAY_DATA *pPlayData;
 	/* s0 16 */ int BankNo;
-	/* -0x50(sp) */ SND_3D_SET Snd3d;
+	/* 0x0(sp) */ SND_3D_SET Snd3d;
+	/* t3 11 */ SND_3D_SET *pSnd3d;
 	/* a3 7 */ int LoopFlg;
 }
 
 /* 00167fe8 000000b4 */ void EffectLeavesFallReq(/* a0 4 */ float *CenterPos, /* s1 17 */ int Id) {
-	/* -0x90(sp) */ LEAVES_FALL_CTRL TmpLeavesFallCtrl;
-	/* -0x30(sp) */ float Speed[4];
+	/* 0x20(sp) */ LEAVES_FALL_CTRL TmpLeavesFallCtrl;
+	/* 0x80(sp) */ float Speed[4];
 }
 
 /* 001680a0 000000ac */ void EffectLeavesFallCut(/* s2 18 */ int Id) {
 	/* s0 16 */ SLL_CELL *pCell;
+	/* v0 2 */ SINGLE_LINK_LIST *pSLL;
 	/* a0 4 */ LEAVES_FALL_CTRL *pLfCtrl;
 }
 
 /* 00168150 00000248 */ static void EffectLeavesFallParticleInit(/* s0 16 */ LEAVES_PARTICLE *pParticle, /* s2 18 */ float *CenterPos, /* a2 6 */ int Area, /* s3 19 */ float *FallSpeed, /* t0 8 */ short int FallDistance, /* s4 20 */ short int *Color) {}
 
-/* 00168398 000001a4 */ static int EffectLeavesFallCtrlInit(/* s0 16 */ LEAVES_FALL_CTRL *pLfCtrl, /* s2 18 */ float *CenterPos, /* s6 22 */ int Area, /* s1 17 */ int FallMax, /* s5 21 */ float *FallSpeed, /* s7 23 */ int Height, /* fp 30 */ int StopTime, /* -0x60(sp) */ int ColR, /* 0x0(sp) */ int ColG, /* 0x8(sp) */ int ColB, /* 0x10(sp) */ int Alpha) {
+/* 00168398 000001a4 */ static int EffectLeavesFallCtrlInit(/* s0 16 */ LEAVES_FALL_CTRL *pLfCtrl, /* s2 18 */ float *CenterPos, /* s6 22 */ int Area, /* s1 17 */ int FallMax, /* s5 21 */ float *FallSpeed, /* s7 23 */ int Height, /* fp 30 */ int StopTime, /* 0x0(sp) */ int ColR, /* 0x60(sp) */ int ColG, /* 0x68(sp) */ int ColB, /* 0x70(sp) */ int Alpha) {
 	/* v0 2 */ int ColG;
 	/* v0 2 */ int ColB;
 	/* v0 2 */ int Alpha;
@@ -8799,25 +8997,29 @@
 
 /* 00168610 00000070 */ void EffectLeavesFallExec() {
 	/* s0 16 */ SLL_CELL *pCell;
+	/* v0 2 */ SINGLE_LINK_LIST *pSLL;
 }
 
 /* 00168680 000005d4 */ static void EffectLeavesFallExecSub(/* s3 19 */ LEAVES_FALL_CTRL *pLfCtrl) {
 	/* s0 16 */ LEAVES_PARTICLE *pParticleTop;
-	/* -0x70(sp) */ int i;
+	/* 0x130(sp) */ int i;
 	/* s0 16 */ float *Rot;
-	/* -0x68(sp) */ int TexNo;
-	/* -0x170(sp) */ float matLocalWorld[4][4];
-	/* -0x130(sp) */ float matLocalScreen[4][4];
+	/* 0x138(sp) */ int TexNo;
+	/* 0x30(sp) */ float matLocalWorld[4][4];
+	/* 0x70(sp) */ float matLocalScreen[4][4];
+	/* 0xb0(sp) */ sceVu0IVECTOR ivec[4];
+	/* 0xf0(sp) */ float ppos[4][4];
 	/* t5 13 */ int i;
 	/* s6 22 */ int th;
 	/* s5 21 */ int tw;
 	/* a2 6 */ int ClipFlg;
-	/* -0x64(sp) */ u_char mr;
-	/* -0x60(sp) */ u_char mg;
+	/* 0x13c(sp) */ u_char mr;
+	/* 0x140(sp) */ u_char mg;
 	/* s4 20 */ u_char mb;
 	/* t6 14 */ Q_WORDDATA *pbuf;
 	/* t7 15 */ int ndpkt;
 	/* s0 16 */ u_long tex0;
+	/* s5 21 */ GRA3DCAMERA *pCam;
 }
 
 /* 00168c58 0000027c */ static void EffectLeavesUpdateTrans(/* s0 16 */ float *leaf, /* s2 18 */ float *axel, /* s1 17 */ float *aim, /* s3 19 */ float *FallSpeed) {
@@ -8827,13 +9029,13 @@
 /* 00168ed8 000001f0 */ static void EffectLeavesUpdateRot(/* a0 4 */ float *rotation, /* a1 5 */ float *axel, /* a2 6 */ float *aim) {}
 
 /* 001690c8 000000b4 */ static void EffectLeavesLight(/* a0 4 */ float *leaf, /* s1 17 */ short int *rgba, /* s0 16 */ short int *Color) {
-	/* -0x30(sp) */ float tes1;
-	/* -0x2c(sp) */ float tes2;
+	/* 0x0(sp) */ float tes1;
+	/* 0x4(sp) */ float tes2;
 }
 
-/* 002fd560 00000054 */ float*[4] float [3] * _fixed_array_verifyrange<float [3]>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
-/* 002fd560 00000054 */ u_char* unsigned char * _fixed_array_verifyrange<unsigned char>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
-/* 002fd560 00000054 */ short int* short * _fixed_array_verifyrange<short>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ float*[4] float [3] * _fixed_array_verifyrange<float [3]>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ u_char* unsigned char * _fixed_array_verifyrange<unsigned char>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ short int* short * _fixed_array_verifyrange<short>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
 /* 002fd560 0000003c */ type_info& float [3] type_info function() {}
 
 // *****************************************************************************
@@ -8856,37 +9058,37 @@
 }
 
 /* 00169470 000000f4 */ void SetTorch2(/* s0 16 */ EFFECT_CONT *ec) {
-	/* -0x60(sp) */ float pos[4];
+	/* 0x0(sp) */ float pos[4];
 	/* s1 17 */ TORCH2_PARAMETER *pParam;
 	/* s2 18 */ TORCH2_BURST_PARAMETER *pBurstParam;
 }
 
-/* 00169568 00000614 */ void ContTorch2(/* s4 20 */ TORCH_CTRL *pTc, /* s5 21 */ float *pos, /* -0x98(sp) */ int Depth, /* s3 19 */ TORCH2_PARAMETER *pParam, /* s2 18 */ TORCH2_BURST_PARAMETER *pBurstParam) {
-	/* -0x1f0(sp) */ float work[4][4];
-	/* -0x1b0(sp) */ float local_clip[4][4];
-	/* -0x170(sp) */ float local_world[4][4];
-	/* -0x130(sp) */ float local_screen[4][4];
-	/* -0xf0(sp) */ float ppos[4];
-	/* -0xe0(sp) */ float pvel[4];
-	/* -0xd0(sp) */ float wpos[4];
-	/* -0xc0(sp) */ float Diff[4];
-	/* -0xb0(sp) */ float Wind[4];
+/* 00169568 00000614 */ void ContTorch2(/* s4 20 */ TORCH_CTRL *pTc, /* s5 21 */ float *pos, /* 0x158(sp) */ int Depth, /* s3 19 */ TORCH2_PARAMETER *pParam, /* s2 18 */ TORCH2_BURST_PARAMETER *pBurstParam) {
+	/* 0x0(sp) */ float work[4][4];
+	/* 0x40(sp) */ float local_clip[4][4];
+	/* 0x80(sp) */ float local_world[4][4];
+	/* 0xc0(sp) */ float local_screen[4][4];
+	/* 0x100(sp) */ float ppos[4];
+	/* 0x110(sp) */ float pvel[4];
+	/* 0x120(sp) */ float wpos[4];
+	/* 0x130(sp) */ float Diff[4];
+	/* 0x140(sp) */ float Wind[4];
 	/* s6 22 */ GRA3DCAMERA *pCam;
 	/* s0 16 */ int i;
-	/* -0xa0(sp) */ float Range;
-	/* -0x9c(sp) */ float StartScale;
+	/* 0x150(sp) */ float Range;
+	/* 0x154(sp) */ float StartScale;
 	/* f22 60 */ float FreaSize;
 	/* f23 61 */ float FreaAlpha;
 	/* s7 23 */ int FreaR;
 	/* fp 30 */ int FreaG;
-	/* -0x94(sp) */ int FreaB;
-	/* -0x90(sp) */ u_long AlphaBlend;
+	/* 0x15c(sp) */ int FreaB;
+	/* 0x160(sp) */ u_long AlphaBlend;
 	/* f20 58 */ float WholeScale;
 	/* v0 2 */ int ParticleNum;
 }
 
 /* 00169b80 000000b0 */ static void Torch2BasePosMoveInfluence(/* v1 3 */ PARTICLE *pPartTop, /* a1 5 */ float *Diff, /* f12 50 */ float WholeScale, /* a2 6 */ int InitLifeTime, /* a3 7 */ int ParticleFollowMove) {
-	/* -0x30(sp) */ float LocalDiff[4];
+	/* 0x0(sp) */ float LocalDiff[4];
 	/* s1 17 */ int i;
 }
 
@@ -8931,10 +9133,11 @@
 }
 
 /* 0016a240 00000168 */ static void* ContTorchSpark(/* s3 19 */ SPARK_CTRL *pSc, /* s1 17 */ float *pos, /* f21 59 */ float size, /* f20 58 */ float sr, /* s5 21 */ TORCH2_SPARK_PARAMETER *pSparkParam) {
-	/* -0x150(sp) */ float work[4][4];
-	/* -0x110(sp) */ float local_clip[4][4];
-	/* -0xd0(sp) */ float local_world[4][4];
-	/* -0x90(sp) */ float local_screen[4][4];
+	/* 0x0(sp) */ float work[4][4];
+	/* 0x40(sp) */ float local_clip[4][4];
+	/* 0x80(sp) */ float local_world[4][4];
+	/* 0xc0(sp) */ float local_screen[4][4];
+	/* s4 20 */ GRA3DCAMERA *pCam;
 }
 
 /* 0016a3a8 000002b4 */ static void AddSparkParticle(/* s2 18 */ SPARK_CTRL *pSc, /* f12 50 */ float Scale, /* s1 17 */ TORCH2_SPARK_PARAMETER *pSparkParam) {
@@ -8973,8 +9176,8 @@
 }
 
 /* 0016ab50 00000144 */ static void Torch2WindVectorMake(/* s1 17 */ float *Wind) {
-	/* -0x80(sp) */ float TmpMat[4][4];
-	/* -0x40(sp) */ float TmpVec[4];
+	/* 0x0(sp) */ float TmpMat[4][4];
+	/* 0x40(sp) */ float TmpVec[4];
 	/* f20 58 */ float RotX;
 	/* f21 59 */ float RotY;
 }
@@ -8991,8 +9194,8 @@
 /* 0016ade0 00000018 */ void EffectTorch2BigFreaInit() {}
 
 /* 0016adf8 00000110 */ void EffectTorch2BigFreaMain() {
-	/* -0x40(sp) */ float Position[4];
-	/* -0x30(sp) */ float Offset[4];
+	/* 0x10(sp) */ float Position[4];
+	/* 0x20(sp) */ float Offset[4];
 	/* v0 2 */ int Alpha;
 	/* v1 3 */ int AlphaMax;
 }
@@ -9001,33 +9204,34 @@
 /* 0016af30 0000000c */ void EffectTorch2BigFreaCut() {}
 
 /* 0016af40 00000098 */ void SetTorch2BigFrea(/* s0 16 */ EFFECT_CONT *ec) {
-	/* -0x30(sp) */ float Position[4];
+	/* 0x0(sp) */ float Position[4];
 	/* f20 58 */ float ScaleX;
 }
 
 /* 0016afd8 00000130 */ static void Torch2BigFreaDraw(/* s1 17 */ float *Position, /* f21 59 */ float ScaleX, /* f20 58 */ float ScaleY, /* s4 20 */ int R, /* s2 18 */ int G, /* s3 19 */ int B, /* s5 21 */ int Alpha) {
-	/* -0xd0(sp) */ float matWorldLocal[4][4];
-	/* -0x90(sp) */ DRAW_ENV DrawEnv;
-	/* -0x60(sp) */ float RotX;
-	/* -0x5c(sp) */ float RotY;
+	/* 0x0(sp) */ float matWorldLocal[4][4];
+	/* 0x40(sp) */ DRAW_ENV DrawEnv;
+	/* s0 16 */ GRA3DCAMERA *pCam;
+	/* 0x70(sp) */ float RotX;
+	/* 0x74(sp) */ float RotY;
 }
 
-/* 002fd5b0 00000054 */ TORCH2_PARAMETER** TORCH2_PARAMETER * * _fixed_array_verifyrange<TORCH2_PARAMETER *>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
-/* 002fd5b0 00000054 */ TORCH2_BURST_PARAMETER** TORCH2_BURST_PARAMETER * * _fixed_array_verifyrange<TORCH2_BURST_PARAMETER *>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
-/* 002fd5b0 00000054 */ TORCH2_SPARK_PARAMETER** TORCH2_SPARK_PARAMETER * * _fixed_array_verifyrange<TORCH2_SPARK_PARAMETER *>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
-/* 002fd5b0 00000054 */ PARTICLE* PARTICLE * _fixed_array_verifyrange<PARTICLE>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
-/* 002fd5b0 00000054 */ float* float * _fixed_array_verifyrange<float>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ TORCH2_PARAMETER** TORCH2_PARAMETER * * _fixed_array_verifyrange<TORCH2_PARAMETER *>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ TORCH2_BURST_PARAMETER** TORCH2_BURST_PARAMETER * * _fixed_array_verifyrange<TORCH2_BURST_PARAMETER *>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ TORCH2_SPARK_PARAMETER** TORCH2_SPARK_PARAMETER * * _fixed_array_verifyrange<TORCH2_SPARK_PARAMETER *>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ PARTICLE* PARTICLE * _fixed_array_verifyrange<PARTICLE>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ float* float * _fixed_array_verifyrange<float>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
 
 /* 0016b108 00000044 */ static void __static_initialization_and_destruction_0(/* a0 4 */ int __initialize_p, /* a1 5 */ int __priority) {
 	/* v0 2 */ TORCH2_SPARK_PARAMETER **ra;
 }
 
-/* 002fd5b0 0000004c */ type_info& TORCH2_PARAMETER * type_info function() {}
-/* 002fd5b0 0000004c */ type_info& TORCH2_BURST_PARAMETER * type_info function() {}
-/* 002fd5b0 0000004c */ type_info& TORCH2_SPARK_PARAMETER * type_info function() {}
-/* 002fd5b0 0000003c */ type_info& PARTICLE type_info function() {}
-/* 002fd5b0 0000003c */ type_info& TORCH2_PARAMETER type_info function() {}
-/* 002fd5b0 0000003c */ type_info& TORCH2_BURST_PARAMETER type_info function() {}
+/* ffffffff 0000004c */ type_info& TORCH2_PARAMETER * type_info function() {}
+/* ffffffff 0000004c */ type_info& TORCH2_BURST_PARAMETER * type_info function() {}
+/* ffffffff 0000004c */ type_info& TORCH2_SPARK_PARAMETER * type_info function() {}
+/* ffffffff 0000003c */ type_info& PARTICLE type_info function() {}
+/* ffffffff 0000003c */ type_info& TORCH2_PARAMETER type_info function() {}
+/* ffffffff 0000003c */ type_info& TORCH2_BURST_PARAMETER type_info function() {}
 /* 002fd5b0 0000003c */ type_info& TORCH2_SPARK_PARAMETER type_info function() {}
 /* 0016b150 00000020 */ static void global constructors keyed to TorchType00() {}
 
@@ -9070,10 +9274,10 @@
 /* 0016b4b0 000000c0 */ void CEneLife::Work(/* a0 4 */ CEneLife *this) {}
 /* 0016b570 00000008 */ void CEneLife::SetDamage(/* a0 4 */ CEneLife *this, /* a1 5 */ int iDamage) {}
 
-/* 0016b578 00000368 */ void CEneLife::Draw(/* s7 23 */ CEneLife *this, /* s6 22 */ int fndr_mx, /* -0x90(sp) */ int fndr_my, /* fp 30 */ int iAlpha) {
+/* 0016b578 00000368 */ void CEneLife::Draw(/* s7 23 */ CEneLife *this, /* s6 22 */ int fndr_mx, /* 0x240(sp) */ int fndr_my, /* fp 30 */ int iAlpha) {
 	/* s0 16 */ int x;
 	/* s1 17 */ int y;
-	/* -0x120(sp) */ DISP_SPRT ds;
+	/* 0x1b0(sp) */ DISP_SPRT ds;
 }
 
 /* 0016b8e0 0000002c */ void CEneLife::Decrease(/* a0 4 */ CEneLife *this, /* f12 50 */ float new_hp_per) {
@@ -9086,7 +9290,7 @@
 
 /* 0016b940 00000008 */ void CEneLife::FrameLenSet(/* a0 4 */ CEneLife *this, /* f12 50 */ float len) {}
 
-/* 002fde40 00000038 */ void CWrkVariable<short, 0, 127>::Work(/* a0 4 */ CWrkVariable<short int,0,127> *this) {
+/* ffffffff 00000038 */ void CWrkVariable<short, 0, 127>::Work(/* a0 4 */ CWrkVariable<short int,0,127> *this) {
 	/* a1 5 */ int iVal;
 }
 
@@ -9116,19 +9320,19 @@
 /* 0016bbf8 00000028 */ void ClearEneMotAttr(/* a0 4 */ ENE_WRK *ew) {}
 
 /* 0016bc20 00000100 */ void SetEneMotAttr(/* s0 16 */ ENE_WRK *ew, /* s1 17 */ ENE_MOT_WRK *emw) {
-	/* -0x30(sp) */ SND_3D_SET s3d;
+	/* 0x0(sp) */ SND_3D_SET s3d;
 }
 
-/* 002fde40 00000054 */ ENE_MOT_CTRL* ENE_MOT_CTRL * _fixed_array_verifyrange<ENE_MOT_CTRL>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
-/* 002fde40 00000054 */ ENE_MOT_WRK*** ENE_MOT_WRK ** * _fixed_array_verifyrange<ENE_MOT_WRK **>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ ENE_MOT_CTRL* ENE_MOT_CTRL * _fixed_array_verifyrange<ENE_MOT_CTRL>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ ENE_MOT_WRK*** ENE_MOT_WRK ** * _fixed_array_verifyrange<ENE_MOT_WRK **>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
 
 /* 0016bd20 00000024 */ static void __static_initialization_and_destruction_0(/* a0 4 */ int __initialize_p, /* a1 5 */ int __priority) {
 	/* v0 2 */ ENE_MOT_WRK ***ra;
 }
 
-/* 002fde40 0000003c */ type_info& ENE_MOT_CTRL type_info function() {}
-/* 002fde40 00000050 */ type_info& ENE_MOT_WRK ** type_info function() {}
-/* 002fde40 0000004c */ type_info& ENE_MOT_WRK * type_info function() {}
+/* ffffffff 0000003c */ type_info& ENE_MOT_CTRL type_info function() {}
+/* ffffffff 00000050 */ type_info& ENE_MOT_WRK ** type_info function() {}
+/* ffffffff 0000004c */ type_info& ENE_MOT_WRK * type_info function() {}
 /* 002fde40 0000003c */ type_info& ENE_MOT_WRK type_info function() {}
 /* 0016bd48 00000020 */ static void global constructors keyed to InitEneMotAlgCtrl() {}
 
@@ -9147,8 +9351,8 @@
 
 /* 0016be80 00000104 */ static void enemyInitAnmSub(/* s1 17 */ int i) {
 	/* s0 16 */ ENE_WRK *ew;
-	/* -0x30(sp) */ int anm_p;
-	/* -0x2c(sp) */ int mdl_p;
+	/* 0x0(sp) */ int anm_p;
+	/* 0x4(sp) */ int mdl_p;
 }
 
 /* 0016bf88 000000a4 */ static void enemyReleaseDataSub(/* s0 16 */ ENE_WRK *ew) {}
@@ -9163,7 +9367,7 @@
 /* 0016c158 000001ac */ static MMANAGE_ERR enemyReqData(/* s2 18 */ ENE_WRK *ew) {
 	/* rdata 3a8848 */ static char __FUNCTION__[13];
 	/* s0 16 */ ENE_DAT_COMMON *cmn;
-	/* -0x40(sp) */ MMANAGE_ERR Err;
+	/* 0x0(sp) */ MMANAGE_ERR Err;
 	/* s3 19 */ int auto_ene_se_no;
 }
 
@@ -9178,9 +9382,9 @@
 /* 0016c3f8 000002c8 */ static int enemyIsReadyData(/* s0 16 */ ENE_WRK *ew) {
 	/* rdata 3a88c0 */ static char __FUNCTION__[17];
 	/* s2 18 */ int LoadOK;
-	/* -0x40(sp) */ int temp;
-	/* -0x3c(sp) */ int dummy_p;
-	/* -0x38(sp) */ int temp;
+	/* 0x0(sp) */ int temp;
+	/* 0x4(sp) */ int dummy_p;
+	/* 0x8(sp) */ int temp;
 	/* s1 17 */ ENE_DAT_COMMON *cmn;
 }
 
@@ -9192,16 +9396,16 @@
 	/* s4 20 */ u_int mdl_no;
 	/* v0 2 */ HeaderSection *hs2;
 	/* s0 16 */ SGDCOORDINATE *cp2;
-	/* -0x80(sp) */ float trot_m[4][4];
+	/* 0x0(sp) */ float trot_m[4][4];
 	/* v0 2 */ ANI_CTRL *ani_ctrl2;
 }
 
 /* 0016c978 00000130 */ static void EneStreamCtrl(/* s1 17 */ ENE_WRK *ew) {
 	/* rdata 3a89a0 */ static char __FUNCTION__[14];
-	/* -0x50(sp) */ SND_3D_SET set;
-	/* -0x40(sp) */ float spd_per_sec[4];
+	/* 0x0(sp) */ SND_3D_SET set;
+	/* 0x10(sp) */ float spd_per_sec[4];
 	/* s0 16 */ int adpcm_no;
-	/* -0x30(sp) */ SND_3D_SET set;
+	/* 0x20(sp) */ SND_3D_SET set;
 }
 
 /* 0016caa8 0000007c */ void EnemyEffectPosUpdate() {
@@ -9216,7 +9420,7 @@
 	/* s1 17 */ int i;
 	/* a1 5 */ int datno;
 	/* s0 16 */ int n;
-	/* -0x70(sp) */ LOOK_AT_PARAM param;
+	/* 0x0(sp) */ LOOK_AT_PARAM param;
 }
 
 /* 0016ce10 00000010 */ void EnemyDrawLock() {}
@@ -9242,22 +9446,22 @@
 
 /* 0016d0b8 00000190 */ static void NearestAutoEneDoJob_In_Circle() {
 	/* s0 16 */ int i;
-	/* -0x40(sp) */ NEAREST_ENE_MANAGE nearest_ene;
+	/* 0x0(sp) */ NEAREST_ENE_MANAGE nearest_ene;
 }
 
 /* 0016d248 0000016c */ static void NearestAutoEneDoJob() {
 	/* s0 16 */ int i;
-	/* -0x40(sp) */ NEAREST_ENE_MANAGE nearest_ene;
+	/* 0x0(sp) */ NEAREST_ENE_MANAGE nearest_ene;
 }
 
 /* 0016d3b8 0000014c */ static void NearestBattleEneDoJob_In_Circle() {
 	/* s0 16 */ int i;
-	/* -0x40(sp) */ NEAREST_ENE_MANAGE nearest_ene;
+	/* 0x0(sp) */ NEAREST_ENE_MANAGE nearest_ene;
 }
 
 /* 0016d508 00000260 */ static void NearestBattleEneDoJob() {
 	/* s0 16 */ int i;
-	/* -0x40(sp) */ NEAREST_ENE_MANAGE nearest_ene;
+	/* 0x0(sp) */ NEAREST_ENE_MANAGE nearest_ene;
 	/* s2 18 */ int bUpdate;
 	/* s3 19 */ int bInCircle;
 	/* s2 18 */ ENE_WRK *ew;
@@ -9265,7 +9469,7 @@
 
 /* 0016d768 00000204 */ static void EnemyHPSetJob() {
 	/* s0 16 */ int i;
-	/* -0x50(sp) */ NEAREST_ENE_MANAGE nearest_ene;
+	/* 0x0(sp) */ NEAREST_ENE_MANAGE nearest_ene;
 	/* s2 18 */ int bUpdate;
 	/* s3 19 */ int bInCircle;
 	/* f20 58 */ float percentage;
@@ -9273,14 +9477,14 @@
 
 /* 0016d970 00000334 */ static void NearestBattleEneDoJob_WithView() {
 	/* s0 16 */ int i;
-	/* -0xb0(sp) */ NEAREST_ENE_MANAGE nearest_ene;
+	/* 0x0(sp) */ NEAREST_ENE_MANAGE nearest_ene;
 	/* f21 59 */ float fRotX;
 	/* f20 58 */ float fRotY;
 	/* f1 39 */ float fRad;
 	/* f20 58 */ float fRot;
-	/* -0xa0(sp) */ float vDir[4];
-	/* -0x90(sp) */ float vAdjustXDir[4];
-	/* -0x80(sp) */ float mMat[4][4];
+	/* 0x10(sp) */ float vDir[4];
+	/* 0x20(sp) */ float vAdjustXDir[4];
+	/* 0x30(sp) */ float mMat[4][4];
 }
 
 /* 0016dca8 00000074 */ void EnemyPhotoMain() {
@@ -9303,7 +9507,7 @@
 }
 
 /* 0016df80 00000478 */ static void SetCommonDat(/* s0 16 */ ENE_WRK *ew, /* s1 17 */ ENE_DAT_COMMON *dat, /* a2 6 */ int hp) {
-	/* -0x40(sp) */ float rot;
+	/* 0x10(sp) */ float rot;
 	/* s1 17 */ ANI_CTRL *ani_ctrl;
 	/* s1 17 */ int n1;
 	/* s2 18 */ int n2;
@@ -9319,11 +9523,11 @@
 	/* rdata 3a8a78 */ static char __FUNCTION__[15];
 	/* a0 4 */ CWaitVariable<short int> *this;
 	/* s1 17 */ int adpcm_no;
-	/* -0x30(sp) */ SND_3D_SET set;
+	/* 0x0(sp) */ SND_3D_SET set;
 }
 
 /* 0016e598 0000012c */ static void JibakuEnemyStart(/* s0 16 */ ENE_WRK *ew) {
-	/* -0x30(sp) */ SND_3D_SET set;
+	/* 0x10(sp) */ SND_3D_SET set;
 }
 
 /* 0016e6c8 000000ac */ static void* GetEneDatP(/* a0 4 */ int ene_type, /* a1 5 */ int dat_no) {
@@ -9349,11 +9553,12 @@
 
 /* 0016e9a8 000002d4 */ static int EneRelease(/* s4 20 */ int wrk_no) {
 	/* s3 19 */ ENE_WRK *ew;
-	/* -0x50(sp) */ float pos[4];
-	/* -0x40(sp) */ float rot[4];
+	/* 0x0(sp) */ float pos[4];
+	/* 0x10(sp) */ float rot[4];
 }
 
 /* 0016ec80 00000268 */ MMANAGE_ERR EneLoadReq(/* s2 18 */ int ene_type, /* s3 19 */ int ene_dat_no, /* s5 21 */ int *pWrkNo) {
+	/* rdata 3a8bb0 */ static char __FUNCTION__[11];
 	/* s1 17 */ int wrk_no;
 	/* s0 16 */ int i;
 	/* s2 18 */ MMANAGE_ERR Err;
@@ -9363,7 +9568,7 @@
 }
 
 /* 0016eee8 00000138 */ int EneActReq(/* s1 17 */ int ene_type, /* s2 18 */ int dat_no) {
-	/* -0x30(sp) */ int wrk_no;
+	/* 0x0(sp) */ int wrk_no;
 	/* s1 17 */ ENE_WRK *ew;
 	/* s0 16 */ int wrk_no;
 	/* s0 16 */ ENE_WRK *ew;
@@ -9389,8 +9594,8 @@
 /* 0016f280 00000008 */ static void EnemyMotionWorkOne(/* a0 4 */ ENE_WRK *ew) {}
 
 /* 0016f288 00000154 */ static void _enemySetLight(/* s2 18 */ ENE_WRK *pEW) {
-	/* -0x1400(sp) */ GRA3DLIGHTDATA LD;
-	/* -0x60(sp) */ GRA3DEMULATIONLIGHTDATACREATIONDATA eldcd;
+	/* 0x0(sp) */ GRA3DLIGHTDATA LD;
+	/* 0x13a0(sp) */ GRA3DEMULATIONLIGHTDATACREATIONDATA eldcd;
 }
 
 /* 0016f3e0 0000001c */ float*[4][4] EnemyGetMatrix(/* a0 4 */ ENE_WRK *ew) {
@@ -9407,8 +9612,8 @@
 	/* s5 21 */ u_int *tmpModelp;
 	/* s4 20 */ u_int mdl_no;
 	/* s1 17 */ ANI_CTRL *ani_ctrl;
-	/* -0xd0(sp) */ float offset[4];
-	/* -0xc0(sp) */ float avWorldBB[8][4];
+	/* 0x0(sp) */ float offset[4];
+	/* 0x10(sp) */ float avWorldBB[8][4];
 	/* s3 19 */ int flg;
 }
 
@@ -9429,7 +9634,7 @@
 /* 0016f858 00000008 */ static void OkuraSanEnemyDebug() {}
 
 /* 0016f860 00000164 */ static void EneRule(/* s0 16 */ ENE_WRK *ew) {
-	/* -0x20(sp) */ u_char act_no;
+	/* 0x0(sp) */ u_char act_no;
 	/* a1 5 */ u_char view_chk;
 }
 
@@ -9443,25 +9648,25 @@
 /* 0016fac0 00000164 */ void EneActSet(/* s0 16 */ ENE_WRK *ew, /* a1 5 */ u_char act_no) {
 	/* s3 19 */ MOVE_BOX *mb;
 	/* s2 18 */ ENEALG_WRK *alg;
-	/* -0x40(sp) */ int temp;
+	/* 0x0(sp) */ int temp;
 	/* a2 6 */ long int eact_data_addr;
 }
 
 /* 0016fc28 000000d4 */ void EneBlinkSet(/* s0 16 */ ENE_WRK *ew) {
 	/* s1 17 */ ENEALG_WRK *alg;
 	/* a1 5 */ long int eact_data_addr;
-	/* -0x30(sp) */ int temp;
+	/* 0x0(sp) */ int temp;
 }
 
 /* 0016fd00 00000128 */ void EneInDispChk(/* s1 17 */ ENE_WRK *ew) {
 	/* f20 58 */ float rot;
-	/* -0x40(sp) */ float tx;
-	/* -0x3c(sp) */ float ty;
+	/* 0x0(sp) */ float tx;
+	/* 0x4(sp) */ float ty;
 }
 
 /* 0016fe28 000000e8 */ void SetEneDepth(/* s0 16 */ ENE_WRK *ew, /* s2 18 */ float *pos) {
-	/* -0x40(sp) */ float tv[4];
-	/* -0x30(sp) */ float rv[4];
+	/* 0x0(sp) */ float tv[4];
+	/* 0x10(sp) */ float rv[4];
 }
 
 /* 0016ff10 00000060 */ void CheckEneDepth() {
@@ -9471,7 +9676,7 @@
 
 /* 0016ff70 000001cc */ static void EneMoveCtrl(/* s2 18 */ ENE_WRK *ew) {
 	/* s0 16 */ MOVE_BOX *mb;
-	/* -0x40(sp) */ float tv[4];
+	/* 0x0(sp) */ float tv[4];
 	/* s1 17 */ u_char i;
 	/* s1 17 */ u_char back_flg;
 }
@@ -9488,12 +9693,12 @@
 
 /* 00170248 000000ac */ static int EneActPreferChk(/* s0 16 */ ENE_WRK *ew, /* s2 18 */ u_char *act_no) {
 	/* s1 17 */ u_char n;
-	/* -0x30(sp) */ u_char prefer_act[4];
+	/* 0x0(sp) */ u_char prefer_act[4];
 }
 
 /* 001702f8 00000174 */ static void EneActRule(/* s0 16 */ ENE_WRK *ew) {
 	/* f2 40 */ float dist;
-	/* -0x30(sp) */ u_char act_no;
+	/* 0x0(sp) */ u_char act_no;
 	/* s1 17 */ MOVE_BOX *pcmw;
 }
 
@@ -9528,8 +9733,8 @@
 /* 00170a60 0000018c */ static void ChangeAtkTarget(/* s0 16 */ ENE_WRK *ew) {}
 
 /* 00170bf0 00000088 */ static void EneBlinkPosSet(/* s2 18 */ ENE_WRK *ew) {
-	/* -0x40(sp) */ float tv[4];
-	/* -0x30(sp) */ float tr[4];
+	/* 0x0(sp) */ float tv[4];
+	/* 0x10(sp) */ float tr[4];
 }
 
 /* 00170c78 00000008 */ static void EneLightCtrl(/* a0 4 */ ENE_WRK *ew) {}
@@ -9592,11 +9797,11 @@
 	/* s3 19 */ int a2;
 	/* v1 3 */ int a3;
 	/* f0 38 */ float f;
-	/* -0x100(sp) */ float wlm[4][4];
-	/* -0xc0(sp) */ float wp[3][4];
-	/* -0x90(sp) */ float mp[3][4];
-	/* -0x60(sp) */ POINT_T p;
-	/* -0x50(sp) */ LINE_T l;
+	/* 0x0(sp) */ float wlm[4][4];
+	/* 0x40(sp) */ float wp[3][4];
+	/* 0x70(sp) */ float mp[3][4];
+	/* 0xa0(sp) */ POINT_T p;
+	/* 0xb0(sp) */ LINE_T l;
 }
 
 /* 001718b0 000000cc */ static void CtrlEarthquake() {
@@ -9611,27 +9816,27 @@
 	/* sbss 3f4bf4 */ static int no;
 }
 
-/* 002fe030 00000054 */ ENE_WRK* ENE_WRK * _fixed_array_verifyrange<ENE_WRK>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
-/* 002fe030 00000030 */ int CWaitVariable<short>::Work(/* a1 5 */ CWaitVariable<short int> *this) {}
-/* 002fe030 00000054 */ int* int * _fixed_array_verifyrange<int>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
-/* 002fe030 00000054 */ G3DLIGHT* G3DLIGHT * _fixed_array_verifyrange<G3DLIGHT>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
-/* 002fe030 00000054 */ GRA3DLIGHTSTATUS* GRA3DLIGHTSTATUS * _fixed_array_verifyrange<GRA3DLIGHTSTATUS>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
-/* 002fe030 00000054 */ u_char* unsigned char * _fixed_array_verifyrange<unsigned char>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
-/* 002fe030 00000054 */ float*[4] float [3] * _fixed_array_verifyrange<float [3]>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
-/* 002fe030 00000054 */ EFFECT_CONT* EFFECT_CONT * _fixed_array_verifyrange<EFFECT_CONT>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ ENE_WRK* ENE_WRK * _fixed_array_verifyrange<ENE_WRK>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000030 */ int CWaitVariable<short>::Work(/* a1 5 */ CWaitVariable<short int> *this) {}
+/* ffffffff 00000054 */ int* int * _fixed_array_verifyrange<int>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ G3DLIGHT* G3DLIGHT * _fixed_array_verifyrange<G3DLIGHT>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ GRA3DLIGHTSTATUS* GRA3DLIGHTSTATUS * _fixed_array_verifyrange<GRA3DLIGHTSTATUS>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ u_char* unsigned char * _fixed_array_verifyrange<unsigned char>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ float*[4] float [3] * _fixed_array_verifyrange<float [3]>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ EFFECT_CONT* EFFECT_CONT * _fixed_array_verifyrange<EFFECT_CONT>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
 
 /* 00171a60 000000bc */ static void __static_initialization_and_destruction_0(/* s3 19 */ int __initialize_p, /* s4 20 */ int __priority) {
 	/* v0 2 */ int *ra;
 }
 
-/* 002fe030 00000090 */ void EnemyStart(/* s0 16 */ int wrk_no) {
+/* ffffffff 00000090 */ void EnemyStart(/* s0 16 */ int wrk_no) {
 	/* s0 16 */ ENE_WRK *ew;
 }
 
-/* 002fe030 0000003c */ type_info& ENE_WRK type_info function() {}
-/* 002fe030 0000003c */ type_info& G3DLIGHT type_info function() {}
-/* 002fe030 0000003c */ type_info& GRA3DLIGHTSTATUS type_info function() {}
-/* 002fe030 0000003c */ type_info& float [3] type_info function() {}
+/* ffffffff 0000003c */ type_info& ENE_WRK type_info function() {}
+/* ffffffff 0000003c */ type_info& G3DLIGHT type_info function() {}
+/* ffffffff 0000003c */ type_info& GRA3DLIGHTSTATUS type_info function() {}
+/* ffffffff 0000003c */ type_info& float [3] type_info function() {}
 /* 002fe030 0000003c */ type_info& EFFECT_CONT type_info function() {}
 /* 00171b20 00000020 */ static void global constructors keyed to ene_wrk() {}
 
@@ -9668,12 +9873,12 @@
 }
 
 /* 00172228 000002c8 */ void EJobC05(/* s4 20 */ ENEALG_WRK *alg) {
-	/* -0x70(sp) */ float rv[4];
-	/* -0x60(sp) */ float tv[4];
+	/* 0x0(sp) */ float rv[4];
+	/* 0x10(sp) */ float tv[4];
 	/* a1 5 */ u_char req;
 	/* s3 19 */ ENE_WRK *ew;
-	/* -0x50(sp) */ float CamPos[4];
-	/* -0x40(sp) */ SND_3D_SET set;
+	/* 0x20(sp) */ float CamPos[4];
+	/* 0x30(sp) */ SND_3D_SET set;
 }
 
 /* 001724f0 0000009c */ void EJobC06(/* s1 17 */ ENEALG_WRK *alg) {
@@ -9725,22 +9930,22 @@
 	/* s3 19 */ PLCMN_WRK *pcw;
 	/* s1 17 */ STATUS_DAT *pcsw;
 	/* s7 23 */ MOVE_BOX *mb;
-	/* -0xc0(sp) */ float tv[4];
-	/* -0xb0(sp) */ float rv[4];
-	/* -0x70(sp) */ u_short adj;
+	/* 0x0(sp) */ float tv[4];
+	/* 0x10(sp) */ float rv[4];
+	/* 0x50(sp) */ u_short adj;
 	/* s0 16 */ u_char id;
 	/* fp 30 */ u_char flag;
 	/* a0 4 */ u_char ani;
 	/* v1 3 */ int n;
-	/* -0xa0(sp) */ float rw[4];
-	/* -0x90(sp) */ u_char pani_tbl[3][2];
-	/* -0x80(sp) */ u_char sani_tbl[3][2];
+	/* 0x20(sp) */ float rw[4];
+	/* 0x30(sp) */ u_char pani_tbl[3][2];
+	/* 0x40(sp) */ u_char sani_tbl[3][2];
 }
 
 /* 001731e8 000001f8 */ void EJobC11(/* s1 17 */ ENEALG_WRK *alg) {
 	/* f20 58 */ float hit_rng;
-	/* -0x70(sp) */ float rot;
-	/* -0x6c(sp) */ float hit_rot;
+	/* 0x0(sp) */ float rot;
+	/* 0x4(sp) */ float hit_rot;
 	/* s4 20 */ u_short id;
 	/* s7 23 */ u_short adj;
 	/* s2 18 */ ENE_WRK *ew;
@@ -9751,8 +9956,8 @@
 
 /* 001733e0 000001f4 */ void EJobC12(/* s1 17 */ ENEALG_WRK *alg) {
 	/* f20 58 */ float hit_rng;
-	/* -0x70(sp) */ float rot;
-	/* -0x6c(sp) */ float hit_rot;
+	/* 0x0(sp) */ float rot;
+	/* 0x4(sp) */ float hit_rot;
 	/* s4 20 */ u_short id;
 	/* s7 23 */ u_short adj;
 	/* s2 18 */ ENE_WRK *ew;
@@ -9765,8 +9970,8 @@
 	/* s3 19 */ int no;
 	/* s4 20 */ ENE_WRK *ew;
 	/* s7 23 */ MOVE_BOX *mb;
-	/* -0x70(sp) */ float f;
-	/* -0x60(sp) */ float tv[4];
+	/* 0x0(sp) */ float f;
+	/* 0x10(sp) */ float tv[4];
 	/* s5 21 */ MOVE_BOX *pcmw;
 	/* bss 478750 */ static float time[10];
 	/* bss 478780 */ static float trot[10][4];
@@ -9790,12 +9995,14 @@
 /* 00173bd0 00000228 */ void EJobC18(/* s0 16 */ ENEALG_WRK *alg) {
 	/* s2 18 */ u_char no;
 	/* s1 17 */ ENE_WRK *ew;
+	/* bss 478820 */ static float time[10];
 	/* bss 478848 */ static float max[10];
 }
 
 /* 00173df8 00000298 */ void EJobC19(/* s1 17 */ ENEALG_WRK *alg) {
 	/* s0 16 */ u_char no;
 	/* s2 18 */ ENE_WRK *ew;
+	/* bss 478870 */ static float time[10];
 	/* bss 478898 */ static float max[10];
 }
 
@@ -9821,6 +10028,7 @@
 /* 001744b8 000001c4 */ void EJobC20(/* s0 16 */ ENEALG_WRK *alg) {
 	/* s1 17 */ u_char no;
 	/* a2 6 */ ENE_WRK *ew;
+	/* bss 4788c0 */ static float time[10];
 	/* bss 4788e8 */ static float max[10];
 }
 
@@ -9856,6 +10064,7 @@
 /* 00174de0 0000016c */ void EJobC2B(/* s0 16 */ ENEALG_WRK *alg) {
 	/* s1 17 */ u_char no;
 	/* a3 7 */ ENE_WRK *ew;
+	/* bss 478960 */ static float time[10];
 	/* bss 478988 */ static float max[10];
 }
 
@@ -9869,6 +10078,7 @@
 /* 001750e0 0000016c */ void EJobC2D(/* s0 16 */ ENEALG_WRK *alg) {
 	/* s1 17 */ u_char no;
 	/* a3 7 */ ENE_WRK *ew;
+	/* bss 478a00 */ static float time[10];
 	/* bss 478a28 */ static float max[10];
 }
 
@@ -9893,11 +10103,12 @@
 	/* a2 6 */ ENE_WRK *ew;
 	/* s3 19 */ u_short adj;
 	/* f2 40 */ float f;
+	/* bss 478aa0 */ static float time[10];
 	/* bss 478ac8 */ static float max[10];
 }
 
 /* 00175858 000000b4 */ void EJobC34(/* s2 18 */ ENEALG_WRK *alg) {
-	/* -0x30(sp) */ SND_3D_SET s3d;
+	/* 0x0(sp) */ SND_3D_SET s3d;
 }
 
 /* 00175910 00000070 */ void EJobC35(/* s1 17 */ ENEALG_WRK *alg) {}
@@ -9969,11 +10180,13 @@
 /* 001765e8 000001d8 */ void EJobC45(/* s0 16 */ ENEALG_WRK *alg) {
 	/* s1 17 */ u_char no;
 	/* a1 5 */ ENE_WRK *ew;
+	/* bss 478af0 */ static float time[10];
 }
 
 /* 001767c0 00000160 */ void EJobC46(/* s0 16 */ ENEALG_WRK *alg) {
 	/* s1 17 */ u_char no;
 	/* v1 3 */ ENE_WRK *ew;
+	/* bss 478b18 */ static float time[10];
 }
 
 /* 00176920 000000bc */ void EJobC47(/* s1 17 */ ENEALG_WRK *alg) {
@@ -9990,7 +10203,7 @@
 /* 00176ab0 000000f0 */ void EJobM00(/* s1 17 */ ENEALG_WRK *alg) {}
 
 /* 00176ba0 0000011c */ void EJobM01(/* s2 18 */ ENEALG_WRK *alg) {
-	/* -0x40(sp) */ float tv[4];
+	/* 0x0(sp) */ float tv[4];
 }
 
 /* 00176cc0 000000f0 */ void EJobM02(/* s1 17 */ ENEALG_WRK *alg) {}
@@ -10012,14 +10225,14 @@
 }
 
 /* 00177380 00000134 */ void EJobM05(/* s2 18 */ ENEALG_WRK *alg) {
-	/* -0x60(sp) */ short int rot[3];
+	/* 0x0(sp) */ short int rot[3];
 	/* s3 19 */ u_char i;
 	/* s4 20 */ MOVE_BOX *mb;
 }
 
 /* 001774b8 0000027c */ void EJobM06(/* s4 20 */ ENEALG_WRK *alg) {
-	/* -0x70(sp) */ float tv[4];
-	/* -0x60(sp) */ float rv[4];
+	/* 0x0(sp) */ float tv[4];
+	/* 0x10(sp) */ float rv[4];
 	/* f20 58 */ float rot;
 	/* s6 22 */ u_char side;
 	/* f20 58 */ float r;
@@ -10033,8 +10246,8 @@
 }
 
 /* 00177738 0000036c */ void EJobM07(/* s2 18 */ ENEALG_WRK *alg) {
-	/* -0x80(sp) */ float tv[4];
-	/* -0x70(sp) */ float rv[4];
+	/* 0x0(sp) */ float tv[4];
+	/* 0x10(sp) */ float rv[4];
 	/* s3 19 */ u_char type1;
 	/* s1 17 */ u_char type2;
 	/* fp 30 */ u_char side;
@@ -10051,7 +10264,7 @@
 }
 
 /* 00177aa8 0000018c */ void EJobM08(/* s3 19 */ ENEALG_WRK *alg) {
-	/* -0x40(sp) */ float tv[4];
+	/* 0x0(sp) */ float tv[4];
 	/* s2 18 */ u_char id;
 	/* s0 16 */ ENE_WRK *ew;
 	/* a1 5 */ PLCMN_WRK *pcw;
@@ -10059,7 +10272,7 @@
 }
 
 /* 00177c38 00000050 */ void EJobM09(/* s0 16 */ ENEALG_WRK *alg) {
-	/* -0x20(sp) */ float tv[4];
+	/* 0x0(sp) */ float tv[4];
 }
 
 /* 00177c88 00000190 */ void EJobM0A(/* s2 18 */ ENEALG_WRK *alg) {
@@ -10069,7 +10282,7 @@
 }
 
 /* 00177e18 000003f4 */ void EJobM0B(/* s1 17 */ ENEALG_WRK *alg) {
-	/* -0x50(sp) */ float rot[4];
+	/* 0x0(sp) */ float rot[4];
 	/* s2 18 */ int no;
 	/* t1 9 */ ENE_WRK *ew;
 	/* s4 20 */ MOVE_BOX *pcmw;
@@ -10082,8 +10295,8 @@
 /* 00178218 00000008 */ void EJobM0D(/* a0 4 */ ENEALG_WRK *alg) {}
 
 /* 00178220 00000348 */ void EJobM0E(/* s1 17 */ ENEALG_WRK *alg) {
-	/* -0x60(sp) */ float tv[4];
-	/* -0x50(sp) */ float tr[4];
+	/* 0x0(sp) */ float tv[4];
+	/* 0x10(sp) */ float tr[4];
 	/* s3 19 */ u_char type;
 	/* a3 7 */ u_char dmin;
 	/* s4 20 */ u_char wmin;
@@ -10114,8 +10327,8 @@
 }
 
 /* 001788a8 00000240 */ void EJobM11(/* s5 21 */ ENEALG_WRK *alg) {
-	/* -0x70(sp) */ float tv[4];
-	/* -0x60(sp) */ float rv[4];
+	/* 0x0(sp) */ float tv[4];
+	/* 0x10(sp) */ float rv[4];
 	/* f20 58 */ float rot;
 	/* s6 22 */ u_char side;
 	/* f1 39 */ float r;
@@ -10127,8 +10340,8 @@
 
 /* 00178ae8 000001f0 */ void EJobM12(/* s4 20 */ ENEALG_WRK *alg) {
 	/* s2 18 */ ENE_WRK *ew;
-	/* -0x70(sp) */ float mv[4];
-	/* -0x60(sp) */ short int x;
+	/* 0x0(sp) */ float mv[4];
+	/* 0x10(sp) */ short int x;
 	/* fp 30 */ short int y;
 	/* s7 23 */ short int z;
 	/* s5 21 */ int i;
@@ -10144,15 +10357,15 @@
 }
 
 /* 00178e58 000000a8 */ void EJobM14(/* s2 18 */ ENEALG_WRK *alg) {
-	/* -0x30(sp) */ float rot;
+	/* 0x0(sp) */ float rot;
 }
 
 /* 00178f00 000001b0 */ void EJobM15(/* s2 18 */ ENEALG_WRK *alg) {
 	/* s0 16 */ u_short time;
 	/* s3 19 */ MOVE_BOX *mb;
 	/* a1 5 */ PLCMN_WRK *pcw;
-	/* -0x60(sp) */ float tv[4];
-	/* -0x50(sp) */ float vw[4];
+	/* 0x0(sp) */ float tv[4];
+	/* 0x10(sp) */ float vw[4];
 	/* f20 58 */ float fmin;
 	/* f21 59 */ float fmax;
 }
@@ -10166,7 +10379,7 @@
 /* 00179198 0000000c */ void EJobB02(/* a0 4 */ ENEALG_WRK *alg) {}
 
 /* 001791a8 00000144 */ void EJobB03(/* s1 17 */ ENEALG_WRK *alg) {
-	/* -0x30(sp) */ u_short adj[5];
+	/* 0x0(sp) */ u_short adj[5];
 }
 
 /* 001792f0 000000b4 */ void EJobB04(/* s1 17 */ ENEALG_WRK *alg) {
@@ -10195,7 +10408,7 @@
 /* 00179790 00000148 */ void EJobB09(/* s2 18 */ ENEALG_WRK *alg) {
 	/* s5 21 */ char dir;
 	/* s4 20 */ u_short adj;
-	/* -0x50(sp) */ float tv[4];
+	/* 0x0(sp) */ float tv[4];
 	/* s1 17 */ MOVE_BOX *mb;
 	/* a1 5 */ PLCMN_WRK *pcw;
 }
@@ -10258,8 +10471,8 @@
 	/* s4 20 */ ENE_WRK *ew;
 	/* s7 23 */ u_short adj;
 	/* s6 22 */ short int rt;
-	/* -0x90(sp) */ float tv[4];
-	/* -0x80(sp) */ float vw[4];
+	/* 0x0(sp) */ float tv[4];
+	/* 0x10(sp) */ float vw[4];
 	/* s0 16 */ MOVE_BOX *mb;
 	/* f22 60 */ float l1;
 	/* f20 58 */ float l2;
@@ -10291,8 +10504,8 @@
 	/* s5 21 */ u_short adj;
 	/* f21 59 */ float l1;
 	/* f20 58 */ float l2;
-	/* -0x70(sp) */ float tv[4];
-	/* -0x60(sp) */ float tr[4];
+	/* 0x0(sp) */ float tv[4];
+	/* 0x10(sp) */ float tr[4];
 	/* s3 19 */ MOVE_BOX *pcmw;
 	/* bss 478b70 */ static float pos[10][4];
 	/* v0 2 */ float *pv0;
@@ -10403,7 +10616,7 @@
 
 /* 0017bcc0 00000030 */ static void EnemyDeadPDeformReset(/* s0 16 */ ENE_WRK *ew) {}
 /* 0017bcf0 00000020 */ void SetEnemyParallelLight(/* a0 4 */ ENE_WRK *ew, /* f12 50 */ float r, /* f13 51 */ float g, /* f14 52 */ float b, /* f15 53 */ float amb) {}
-/* 00300f50 00000054 */ ENE_WRK* ENE_WRK * _fixed_array_verifyrange<ENE_WRK>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ ENE_WRK* ENE_WRK * _fixed_array_verifyrange<ENE_WRK>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
 /* 00300f50 0000003c */ type_info& ENE_WRK type_info function() {}
 
 // *****************************************************************************
@@ -10422,7 +10635,10 @@
 	/* rdata 3a9000 */ static char __FUNCTION__[19];
 }
 
-/* 0017be98 0000008c */ void SetBattleEneDatRot(/* s0 16 */ int dat_no, /* a1 5 */ int iRot) {}
+/* 0017be98 0000008c */ void SetBattleEneDatRot(/* s0 16 */ int dat_no, /* a1 5 */ int iRot) {
+	/* rdata 3a9070 */ static char __FUNCTION__[19];
+}
+
 /* 0017bf28 00000018 */ void release_typeSetSaveJ(/* a0 4 */ MC_SAVE_DATA *save) {}
 /* 0017bf40 00000018 */ void release_typeSetSaveA(/* a0 4 */ MC_SAVE_DATA *save) {}
 /* 0017bf58 00000008 */ void release_typeClear() {}
@@ -10475,7 +10691,7 @@
 
 /* 0017c628 000001b8 */ static void CompulsionSet_ForcedEndState(/* s3 19 */ int event_id) {
 	/* rdata 3a9260 */ static char __FUNCTION__[29];
-	/* -0x100(sp) */ fixed_array<int,50> id_tbl;
+	/* 0x0(sp) */ fixed_array<int,50> id_tbl;
 	/* s2 18 */ int i;
 }
 
@@ -10485,6 +10701,7 @@
 }
 
 /* 0017c980 000000e4 */ void Del_CompulsionSetEventState(/* s2 18 */ int change_id) {
+	/* rdata 3a9338 */ static char __FUNCTION__[28];
 	/* s0 16 */ int i;
 }
 
@@ -10498,21 +10715,21 @@
 /* 0017cb60 00000040 */ void SetSave_EvChangeCtrl(/* s0 16 */ MC_SAVE_DATA *data) {}
 
 /* 0017cba0 000000e0 */ void EvDbg_EventStatePrint() {
-	/* -0x40(sp) */ char *state[7];
+	/* 0x0(sp) */ char *state[7];
 	/* s1 17 */ int i;
 }
 
 /* 0017cc80 00000118 */ void EvDbg_CompulsionSetPrint() {
-	/* -0x50(sp) */ char *state[7];
+	/* 0x0(sp) */ char *state[7];
 	/* s1 17 */ int i;
 }
 
-/* 0030dbf4 00000054 */ EV_CHANGE_CTRL* EV_CHANGE_CTRL * _fixed_array_verifyrange<EV_CHANGE_CTRL>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
-/* 0030dbf4 00000054 */ EVENT_STATE* EVENT_STATE * _fixed_array_verifyrange<EVENT_STATE>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
-/* 0030dbf4 00000054 */ int* int * _fixed_array_verifyrange<int>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ EV_CHANGE_CTRL* EV_CHANGE_CTRL * _fixed_array_verifyrange<EV_CHANGE_CTRL>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ EVENT_STATE* EVENT_STATE * _fixed_array_verifyrange<EVENT_STATE>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ int* int * _fixed_array_verifyrange<int>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
 /* 0017cd98 00000008 */ static void __static_initialization_and_destruction_0(/* a0 4 */ int __initialize_p, /* a1 5 */ int __priority) {}
-/* 0030dbf4 0000003c */ type_info& EV_CHANGE_CTRL type_info function() {}
-/* 0030dbf4 0000003c */ type_info& EVENT_STATE type_info function() {}
+/* ffffffff 0000003c */ type_info& EV_CHANGE_CTRL type_info function() {}
+/* ffffffff 0000003c */ type_info& EVENT_STATE type_info function() {}
 /* 0017cda0 00000020 */ static void global constructors keyed to EvChangeCtrlInit() {}
 
 // *****************************************************************************
@@ -10554,11 +10771,14 @@
 /* 0017d3c0 00000014 */ int CheckEvDisp2DDataLoad() {}
 
 /* 0017d3d8 00000190 */ static void EvDisp2DExe() {
-	/* -0xb0(sp) */ DISP_SPRT ds;
+	/* 0x0(sp) */ DISP_SPRT ds;
 	/* s0 16 */ u_char alpha;
 }
 
-/* 0017d568 000000a0 */ static void EvDisp2DDataMakePkt() {}
+/* 0017d568 000000a0 */ static void EvDisp2DDataMakePkt() {
+	/* rdata 3a97e8 */ static char __FUNCTION__[20];
+}
+
 /* 0017d608 00000040 */ void EvDisp2DEndRelease() {}
 /* 0017d648 000000bc */ void EvDisp2DStartReq(/* t6 14 */ int x, /* t5 13 */ int y, /* v1 3 */ int file_label, /* a3 7 */ int fade_in_time, /* t0 8 */ u_char win_flg, /* t1 9 */ int base_label) {}
 
@@ -10575,11 +10795,14 @@
 /* 0017d918 00000064 */ static int EvChapterDataLoadWait() {}
 
 /* 0017d980 0000017c */ static void EvChapterDispExe() {
-	/* -0xb0(sp) */ DISP_SPRT ds;
+	/* 0x0(sp) */ DISP_SPRT ds;
 	/* s2 18 */ u_char alpha;
 }
 
-/* 0017db00 000000a0 */ static void EvChapterDataMakePkt() {}
+/* 0017db00 000000a0 */ static void EvChapterDataMakePkt() {
+	/* rdata 3a98b8 */ static char __FUNCTION__[21];
+}
+
 /* 0017dba0 0000003c */ void EvChapterDispEndRelease() {}
 
 /* 0017dbe0 000000c0 */ void EvChapterDispStartReq(/* s1 17 */ u_char chapter_num) {
@@ -10599,6 +10822,7 @@
 }
 
 /* 0017dfb8 00000030 */ void EvItemNameDispEndReq(/* a0 4 */ int fade_out_time) {}
+/* 0030dbf4 00000054 */ int* int * _fixed_array_verifyrange<int>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/ingame/event/dat/ev_disp_dat.c
@@ -10653,8 +10877,8 @@
 /* 0017e580 00000224 */ void ev_eneChangeRoom(/* s0 16 */ int room_id) {
 	/* s1 17 */ int i;
 	/* a2 6 */ int n;
-	/* -0x80(sp) */ ENE_DATS old_ene_dats[4];
-	/* -0x60(sp) */ int no_need_flg[4];
+	/* 0x0(sp) */ ENE_DATS old_ene_dats[4];
+	/* 0x20(sp) */ int no_need_flg[4];
 }
 
 /* 0017e7a8 00000008 */ int ev_eneIsReady() {}
@@ -10679,9 +10903,9 @@
 
 /* 0017e908 00000180 */ void SetEventInitStatus(/* s3 19 */ int event_id) {
 	/* rdata 3a9c58 */ static char __FUNCTION__[19];
-	/* -0x110(sp) */ fixed_array<int,50> id_tbl;
+	/* 0x0(sp) */ fixed_array<int,50> id_tbl;
 	/* s2 18 */ int i;
-	/* -0x40(sp) */ EV_EXE_CTRL init_event;
+	/* 0xd0(sp) */ EV_EXE_CTRL init_event;
 }
 
 /* 0017ea88 00000044 */ void SetEventExeStatus(/* s0 16 */ int event_id) {}
@@ -10689,7 +10913,7 @@
 
 /* 0017eb20 00000158 */ void EventEnd_SubStateChange(/* s3 19 */ int event_id) {
 	/* rdata 3a9d10 */ static char __FUNCTION__[24];
-	/* -0x100(sp) */ fixed_array<int,50> id_tbl;
+	/* 0x0(sp) */ fixed_array<int,50> id_tbl;
 	/* s2 18 */ int i;
 }
 
@@ -10717,10 +10941,10 @@
 }
 
 /* 0017efc8 00000040 */ void SetSave_EvExeCtrl(/* s0 16 */ MC_SAVE_DATA *data) {}
-/* 0030dc78 00000054 */ EV_EXE_CTRL* EV_EXE_CTRL * _fixed_array_verifyrange<EV_EXE_CTRL>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
-/* 0030dc78 00000054 */ int* int * _fixed_array_verifyrange<int>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ EV_EXE_CTRL* EV_EXE_CTRL * _fixed_array_verifyrange<EV_EXE_CTRL>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ int* int * _fixed_array_verifyrange<int>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
 /* 0017f008 00000008 */ static void __static_initialization_and_destruction_0(/* a0 4 */ int __initialize_p, /* a1 5 */ int __priority) {}
-/* 0030dc78 0000003c */ type_info& EV_EXE_CTRL type_info function() {}
+/* ffffffff 0000003c */ type_info& EV_EXE_CTRL type_info function() {}
 /* 0017f010 00000020 */ static void global constructors keyed to EventExeInit() {}
 
 // *****************************************************************************
@@ -10739,7 +10963,7 @@
 /* 0017f148 00000038 */ void CEventGazeWrk::SetPoint(/* v1 3 */ CEventGazeWrk *this, /* a1 5 */ float *Pos) {}
 
 /* 0017f180 00000080 */ void CEventSisterGazeWrk::Work(/* a0 4 */ CEventSisterGazeWrk *this) {
-	/* -0x30(sp) */ LOOK_AT_PARAM param;
+	/* 0x0(sp) */ LOOK_AT_PARAM param;
 }
 
 // *****************************************************************************
@@ -10777,26 +11001,26 @@
 	/* v1 3 */ u_int ev_id;
 }
 
-/* 0017f578 0000003c */ void EvGetSubId(/* v0 2 */ int event_no) {}
+/* 0017f578 0000003c */ void EvGetSubId(/* v0 2 */ int event_no, /* s0 16 */ int *id_tbl) {}
 
 /* 0017f5b8 00000010 */ u_char Get1Byte(/* a0 4 */ u_char *dat_addr) {
-	/* -0x10(sp) */ u_char dat;
+	/* 0x0(sp) */ u_char dat;
 }
 
 /* 0017f5c8 00000024 */ u_short Get2Byte(/* a0 4 */ u_char *dat_addr) {
-	/* -0x10(sp) */ u_short dat;
+	/* 0x0(sp) */ u_short dat;
 }
 
 /* 0017f5f0 00000024 */ u_int Get4Byte(/* a0 4 */ u_char *dat_addr) {
-	/* -0x10(sp) */ u_int dat;
+	/* 0x0(sp) */ u_int dat;
 }
 
 /* 0017f618 00000050 */ float EvGetRot360(/* a0 4 */ short int rot360) {
-	/* -0x20(sp) */ float rot;
+	/* 0x0(sp) */ float rot;
 }
 
-/* 0030dc78 00000054 */ EVENT_STATE* EVENT_STATE * _fixed_array_verifyrange<EVENT_STATE>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
-/* 0030dc78 0000003c */ type_info& EVENT_STATE type_info function() {}
+/* ffffffff 00000054 */ EVENT_STATE* EVENT_STATE * _fixed_array_verifyrange<EVENT_STATE>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 0000003c */ type_info& EVENT_STATE type_info function() {}
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/ingame/event/prg/ev_macro.c
@@ -10820,14 +11044,14 @@
 /* 0017f8d0 00000190 */ static void EventMacroLoad_ObjStreamInit() {
 	/* s2 18 */ int i;
 	/* s0 16 */ int stream_id;
-	/* -0x50(sp) */ SND_3D_SET snd_3d_data;
-	/* -0x40(sp) */ float obj_pos[4];
+	/* 0x0(sp) */ SND_3D_SET snd_3d_data;
+	/* 0x10(sp) */ float obj_pos[4];
 }
 
 /* 0017fa60 0000010c */ static void EventMacroLoad_PosStreamInit() {
 	/* s1 17 */ int i;
 	/* s0 16 */ int stream_id;
-	/* -0x40(sp) */ SND_3D_SET snd_3d_data;
+	/* 0x0(sp) */ SND_3D_SET snd_3d_data;
 }
 
 /* 0017fb70 00000050 */ static void EventMacroLoad_EffDitherInit() {}
@@ -10868,21 +11092,21 @@
 }
 
 /* 001801f0 000000d0 */ static int EvPlyrPosSet(/* a0 4 */ EV_EXE_CTRL *ctrl_addr) {
-	/* -0x40(sp) */ float set_plyr_pos[4];
-	/* -0x30(sp) */ float mst_plyr_mst[4];
+	/* 0x0(sp) */ float set_plyr_pos[4];
+	/* 0x10(sp) */ float mst_plyr_mst[4];
 	/* s0 16 */ u_char *dat_addr;
 	/* s1 17 */ float *room_off;
 }
 
 /* 001802c0 00000088 */ static int EvPlyrHeightSet(/* a0 4 */ EV_EXE_CTRL *ctrl_addr) {
-	/* -0x30(sp) */ float set_plyr_height[4];
+	/* 0x0(sp) */ float set_plyr_height[4];
 	/* s0 16 */ u_char *dat_addr;
 	/* s1 17 */ float *room_off;
 }
 
 /* 00180348 00000060 */ static int EvPlyrRotSet(/* a0 4 */ EV_EXE_CTRL *ctrl_addr) {
 	/* a0 4 */ u_char *dat_addr;
-	/* -0x20(sp) */ float set_plyr_rot[4];
+	/* 0x0(sp) */ float set_plyr_rot[4];
 }
 
 /* 001803a8 00000008 */ static int EvPlyrPosMove(/* a0 4 */ EV_EXE_CTRL *ctrl_addr) {}
@@ -10947,32 +11171,32 @@
 
 /* 00180c10 0000006c */ static int EvPlyrGazePointPosSet(/* a0 4 */ EV_EXE_CTRL *ctrl_addr) {
 	/* s0 16 */ u_char *dat_addr;
-	/* -0x20(sp) */ float gaze_point[4];
+	/* 0x0(sp) */ float gaze_point[4];
 }
 
 /* 00180c80 00000008 */ static int EvPlyrGazePointDefSet(/* a0 4 */ EV_EXE_CTRL *ctrl_addr) {}
 
 /* 00180c88 000000f8 */ static int EvSisPosSet(/* a0 4 */ EV_EXE_CTRL *ctrl_addr) {
 	/* rdata 3aa4f0 */ static char __FUNCTION__[12];
-	/* -0x40(sp) */ float set_sis_pos[4];
-	/* -0x30(sp) */ float mst_sis_mst[4];
+	/* 0x0(sp) */ float set_sis_pos[4];
+	/* 0x10(sp) */ float mst_sis_mst[4];
 	/* s0 16 */ u_char *dat_addr;
 	/* s1 17 */ float *room_off;
 }
 
 /* 00180d80 00000088 */ static int EvSisHeightSet(/* a0 4 */ EV_EXE_CTRL *ctrl_addr) {
-	/* -0x30(sp) */ float set_sis_height[4];
+	/* 0x0(sp) */ float set_sis_height[4];
 	/* s0 16 */ u_char *dat_addr;
 	/* s1 17 */ float *room_off;
 }
 
 /* 00180e08 00000058 */ static int EvSisRotSet(/* a0 4 */ EV_EXE_CTRL *ctrl_addr) {
 	/* a0 4 */ u_char *dat_addr;
-	/* -0x20(sp) */ float set_sis_rot[4];
+	/* 0x0(sp) */ float set_sis_rot[4];
 }
 
 /* 00180e60 000000d0 */ static int EvSisPosMove(/* a0 4 */ EV_EXE_CTRL *ctrl_addr) {
-	/* -0x30(sp) */ float set_sis_pos[4];
+	/* 0x0(sp) */ float set_sis_pos[4];
 	/* s0 16 */ u_char *dat_addr;
 	/* s1 17 */ float *room_off;
 }
@@ -11017,7 +11241,7 @@
 
 /* 001812d0 00000094 */ static int EvSisGazePointPosSet(/* a0 4 */ EV_EXE_CTRL *ctrl_addr) {
 	/* s0 16 */ u_char *dat_addr;
-	/* -0x20(sp) */ float gaze_point[4];
+	/* 0x0(sp) */ float gaze_point[4];
 }
 
 /* 00181368 00000024 */ static int EvSisGazePointDefSet(/* a0 4 */ EV_EXE_CTRL *ctrl_addr) {}
@@ -11062,18 +11286,18 @@
 
 /* 00181808 00000078 */ static int EvNpcPosSet(/* a0 4 */ EV_EXE_CTRL *ctrl_addr) {
 	/* s0 16 */ u_char *dat_addr;
-	/* -0x30(sp) */ float npc_pos[4];
+	/* 0x0(sp) */ float npc_pos[4];
 	/* s1 17 */ float *room_off;
 }
 
 /* 00181880 00000044 */ static int EvNpcHeightSet(/* a0 4 */ EV_EXE_CTRL *ctrl_addr) {
 	/* s0 16 */ u_char *dat_addr;
-	/* -0x20(sp) */ float npc_height[4];
+	/* 0x0(sp) */ float npc_height[4];
 }
 
 /* 001818c8 00000044 */ static int EvNpcRotSet(/* a0 4 */ EV_EXE_CTRL *ctrl_addr) {
 	/* s0 16 */ u_char *dat_addr;
-	/* -0x20(sp) */ float set_npc_rot[4];
+	/* 0x0(sp) */ float set_npc_rot[4];
 }
 
 /* 00181910 00000008 */ static int EvNpcPosMove(/* a0 4 */ EV_EXE_CTRL *ctrl_addr) {}
@@ -11088,6 +11312,7 @@
 }
 
 /* 00181a00 00000110 */ static int EvSetObjHitCheck(/* s3 19 */ EV_EXE_CTRL *ctrl_addr) {
+	/* rdata 3aa758 */ static char __FUNCTION__[17];
 	/* s0 16 */ u_char *dat_addr;
 	/* s1 17 */ int obj_id;
 	/* s2 18 */ u_char on_off;
@@ -11147,6 +11372,7 @@
 }
 
 /* 001820f0 000000e0 */ static int EvItemLost(/* s1 17 */ EV_EXE_CTRL *ctrl_addr) {
+	/* rdata 3aa9e8 */ static char __FUNCTION__[11];
 	/* s0 16 */ u_char *dat_addr;
 	/* s2 18 */ u_char item_id;
 	/* s0 16 */ u_char lost_num;
@@ -11160,12 +11386,14 @@
 }
 
 /* 001822b8 000000e4 */ static int EvFileLost(/* s2 18 */ EV_EXE_CTRL *ctrl_addr) {
+	/* rdata 3aaac8 */ static char __FUNCTION__[11];
 	/* s0 16 */ u_char *dat_addr;
 	/* s1 17 */ int file_type;
 	/* s0 16 */ int file_id;
 }
 
 /* 001823a0 000001f8 */ static int EvFileRead(/* s1 17 */ EV_EXE_CTRL *ctrl_addr) {
+	/* rdata 3aab38 */ static char __FUNCTION__[11];
 	/* s4 20 */ int res;
 	/* s0 16 */ u_char *dat_addr;
 	/* s2 18 */ int file_type;
@@ -11195,7 +11423,7 @@
 	/* s2 18 */ int i;
 	/* s0 16 */ int idx;
 	/* s1 17 */ int bit;
-	/* -0x60(sp) */ char aSubFuncArray[3];
+	/* 0x0(sp) */ char aSubFuncArray[3];
 	/* s0 16 */ int idx;
 	/* s1 17 */ int bit;
 }
@@ -11215,12 +11443,14 @@
 }
 
 /* 00182a40 000000f0 */ static int EvMemoUpdate(/* s2 18 */ EV_EXE_CTRL *ctrl_addr) {
+	/* rdata 3aac48 */ static char __FUNCTION__[13];
 	/* s0 16 */ u_char *dat_addr;
 	/* s1 17 */ int memo_label;
 	/* s3 19 */ u_char msg_step;
 }
 
 /* 00182b30 00000084 */ static int EvPuzzleStart(/* s1 17 */ EV_EXE_CTRL *ctrl_addr) {
+	/* rdata 3aacb0 */ static char __FUNCTION__[14];
 	/* a0 4 */ u_char *dat_addr;
 	/* s0 16 */ int puzzle_id;
 }
@@ -11238,12 +11468,12 @@
 
 /* 00182ce0 0000008c */ static int EvSetEvCamVP(/* a0 4 */ EV_EXE_CTRL *ctrl_addr) {
 	/* s0 16 */ u_char *dat_addr;
-	/* -0x20(sp) */ float cam_vp[4];
+	/* 0x0(sp) */ float cam_vp[4];
 }
 
 /* 00182d70 0000008c */ static int EvSetEvCamVR(/* a0 4 */ EV_EXE_CTRL *ctrl_addr) {
 	/* s0 16 */ u_char *dat_addr;
-	/* -0x20(sp) */ float cam_vr[4];
+	/* 0x0(sp) */ float cam_vr[4];
 }
 
 /* 00182e00 00000050 */ static int EvSetEvCamRot(/* a0 4 */ EV_EXE_CTRL *ctrl_addr) {
@@ -11258,13 +11488,13 @@
 
 /* 00182e98 000000e0 */ static int EvCamVPSetObj(/* a0 4 */ EV_EXE_CTRL *ctrl_addr) {
 	/* s0 16 */ u_char *dat_addr;
-	/* -0x30(sp) */ float offset[4];
+	/* 0x0(sp) */ float offset[4];
 	/* f20 58 */ float margin;
 }
 
 /* 00182f78 000000e0 */ static int EvCamVRSetObj(/* a0 4 */ EV_EXE_CTRL *ctrl_addr) {
 	/* s0 16 */ u_char *dat_addr;
-	/* -0x30(sp) */ float offset[4];
+	/* 0x0(sp) */ float offset[4];
 	/* f20 58 */ float margin;
 }
 
@@ -11273,6 +11503,7 @@
 }
 
 /* 00183088 000000e4 */ static int EvMonoDisp(/* s1 17 */ EV_EXE_CTRL *ctrl_addr) {
+	/* rdata 3aad40 */ static char __FUNCTION__[11];
 	/* a0 4 */ u_char *dat_addr;
 	/* v1 3 */ u_char on_off;
 }
@@ -11311,17 +11542,18 @@
 }
 
 /* 00183670 00000148 */ static int EvSound3DObjPlay(/* s5 21 */ EV_EXE_CTRL *ctrl_addr) {
+	/* rdata 3aad90 */ static char __FUNCTION__[17];
 	/* s0 16 */ u_char *dat_addr;
 	/* s1 17 */ int pos;
 	/* s2 18 */ int file_label;
-	/* -0x60(sp) */ SND_3D_SET snd_3d_data;
-	/* -0x50(sp) */ float obj_pos[4];
+	/* 0x0(sp) */ SND_3D_SET snd_3d_data;
+	/* 0x10(sp) */ float obj_pos[4];
 }
 
 /* 001837b8 000000dc */ static int EvSound3DPosPlay(/* s1 17 */ EV_EXE_CTRL *ctrl_addr) {
 	/* s0 16 */ u_char *dat_addr;
-	/* -0x40(sp) */ float snd_pos[4];
-	/* -0x30(sp) */ SND_3D_SET snd_3d_data;
+	/* 0x0(sp) */ float snd_pos[4];
+	/* 0x10(sp) */ SND_3D_SET snd_3d_data;
 }
 
 /* 00183898 000000ec */ static int EvStreamPlay(/* a0 4 */ EV_EXE_CTRL *ctrl_addr) {
@@ -11355,14 +11587,15 @@
 }
 
 /* 00183b50 000001e4 */ static int EvStream3DObjPlay(/* fp 30 */ EV_EXE_CTRL *ctrl_addr) {
+	/* rdata 3aade8 */ static char __FUNCTION__[18];
 	/* s0 16 */ u_char *dat_addr;
 	/* s7 23 */ u_char obj_type;
 	/* s4 20 */ int obj_id;
 	/* s1 17 */ int file_label;
 	/* s6 22 */ int fade_in_time;
 	/* s0 16 */ int stream_id;
-	/* -0x70(sp) */ SND_3D_SET snd_3d_data;
-	/* -0x60(sp) */ float obj_pos[4];
+	/* 0x0(sp) */ SND_3D_SET snd_3d_data;
+	/* 0x10(sp) */ float obj_pos[4];
 	/* s5 21 */ int volume;
 	/* s3 19 */ int loop_flg;
 }
@@ -11372,8 +11605,8 @@
 	/* s3 19 */ int file_label;
 	/* s1 17 */ int fade_in_time;
 	/* s0 16 */ int stream_id;
-	/* -0x60(sp) */ float snd_pos[4];
-	/* -0x50(sp) */ SND_3D_SET snd_3d_data;
+	/* 0x0(sp) */ float snd_pos[4];
+	/* 0x10(sp) */ SND_3D_SET snd_3d_data;
 	/* s4 20 */ int volume;
 	/* s5 21 */ int loop_flg;
 }
@@ -11381,6 +11614,7 @@
 /* 00183eb0 00000028 */ static int EvStreamAllStop(/* a0 4 */ EV_EXE_CTRL *ctrl_addr) {}
 
 /* 00183ed8 00000198 */ static int EvDoorOpen(/* s1 17 */ EV_EXE_CTRL *ctrl_addr) {
+	/* rdata 3aae00 */ static char __FUNCTION__[11];
 	/* s3 19 */ int res;
 	/* a0 4 */ u_char *dat_addr;
 	/* s0 16 */ int door_id;
@@ -11393,17 +11627,20 @@
 }
 
 /* 001840f8 000000e0 */ static int EvDoorLock(/* s1 17 */ EV_EXE_CTRL *ctrl_addr) {
+	/* rdata 3aaea8 */ static char __FUNCTION__[11];
 	/* s0 16 */ u_char *dat_addr;
 	/* s0 16 */ int door_id;
 	/* s2 18 */ u_char lock_id;
 }
 
 /* 001841d8 00000084 */ static int EvDoorUnlock(/* s1 17 */ EV_EXE_CTRL *ctrl_addr) {
+	/* rdata 3aaf18 */ static char __FUNCTION__[13];
 	/* a0 4 */ u_char *dat_addr;
 	/* s0 16 */ int door_id;
 }
 
 /* 00184260 000000c4 */ static int EvLoadRequest(/* s2 18 */ EV_EXE_CTRL *ctrl_addr) {
+	/* rdata 3aaf58 */ static char __FUNCTION__[14];
 	/* v0 2 */ int res;
 	/* v1 3 */ int request_res;
 	/* s0 16 */ u_char *dat_addr;
@@ -11412,6 +11649,7 @@
 }
 
 /* 00184328 000000c4 */ static int EvReleaseRequest(/* s2 18 */ EV_EXE_CTRL *ctrl_addr) {
+	/* rdata 3aafc0 */ static char __FUNCTION__[17];
 	/* v0 2 */ int res;
 	/* v1 3 */ int release_res;
 	/* s0 16 */ u_char *dat_addr;
@@ -11420,12 +11658,14 @@
 }
 
 /* 001843f0 00000140 */ static int EvAreaChange(/* s0 16 */ EV_EXE_CTRL *ctrl_addr) {
+	/* rdata 3ab030 */ static char __FUNCTION__[13];
 	/* a0 4 */ u_char *dat_addr;
 	/* s1 17 */ short int map_id;
 	/* s0 16 */ int iBuffID;
 }
 
 /* 00184530 00000088 */ static int EvBackGroundLoad(/* s1 17 */ EV_EXE_CTRL *ctrl_addr) {
+	/* rdata 3ab070 */ static char __FUNCTION__[17];
 	/* a0 4 */ u_char *dat_addr;
 	/* s0 16 */ short int map_id;
 }
@@ -11473,7 +11713,7 @@
 	/* s2 18 */ int res;
 	/* s0 16 */ u_char *dat_addr;
 	/* s5 21 */ int choice_msg;
-	/* -0x50(sp) */ int choice[3];
+	/* 0x0(sp) */ int choice[3];
 	/* s3 19 */ int choice_num;
 	/* s2 18 */ int i;
 }
@@ -11483,6 +11723,7 @@
 }
 
 /* 00184dc0 0000014c */ static int EvDisp2DStart(/* s1 17 */ EV_EXE_CTRL *ctrl_addr) {
+	/* rdata 3ab1a0 */ static char __FUNCTION__[14];
 	/* s7 23 */ int res;
 	/* s0 16 */ u_char *dat_addr;
 	/* s6 22 */ u_char win_flg;
@@ -11537,6 +11778,7 @@
 /* 001851a8 00000020 */ static int EvFilamentRelease(/* a0 4 */ EV_EXE_CTRL *ctrl_addr) {}
 
 /* 001851c8 0000011c */ static int EvSetObjAlgorithm(/* s2 18 */ EV_EXE_CTRL *ctrl_addr) {
+	/* rdata 3ab238 */ static char __FUNCTION__[18];
 	/* s0 16 */ u_char *dat_addr;
 	/* s1 17 */ u_char obj_type;
 	/* s0 16 */ int obj_id;
@@ -11548,6 +11790,7 @@
 }
 
 /* 00185318 000000e4 */ static int EvEvSetState(/* s1 17 */ EV_EXE_CTRL *ctrl_addr) {
+	/* rdata 3ab2f8 */ static char __FUNCTION__[13];
 	/* s0 16 */ u_char *dat_addr;
 	/* s2 18 */ u_char set_state;
 	/* s0 16 */ int req_id;
@@ -11586,12 +11829,12 @@
 
 /* 00185798 000000c4 */ static int EvSetButterfly(/* s1 17 */ EV_EXE_CTRL *ctrl_addr) {
 	/* s0 16 */ u_char *dat_addr;
-	/* -0x30(sp) */ float set_pos[4];
+	/* 0x0(sp) */ float set_pos[4];
 }
 
 /* 00185860 000000a4 */ static int EvMoveButterfly(/* s1 17 */ EV_EXE_CTRL *ctrl_addr) {
 	/* s0 16 */ u_char *dat_addr;
-	/* -0x30(sp) */ float set_pos[4];
+	/* 0x0(sp) */ float set_pos[4];
 }
 
 /* 00185908 0000002c */ static int EvReleaseButterfly(/* a0 4 */ EV_EXE_CTRL *ctrl_addr) {
@@ -11608,8 +11851,8 @@
 
 /* 00185a48 00000110 */ static int EvEffThunderReq(/* s1 17 */ EV_EXE_CTRL *ctrl_addr) {
 	/* s0 16 */ u_char *dat_addr;
-	/* -0x40(sp) */ float lightning_direction[4];
-	/* -0x30(sp) */ float thunder_position[4];
+	/* 0x0(sp) */ float lightning_direction[4];
+	/* 0x10(sp) */ float thunder_position[4];
 }
 
 /* 00185b58 00000040 */ static int EvSetScreenEffect(/* a0 4 */ EV_EXE_CTRL *ctrl_addr) {
@@ -11620,6 +11863,7 @@
 /* 00185cc0 00000158 */ static int EvSynchroModeEnd(/* s1 17 */ EV_EXE_CTRL *ctrl_addr) {}
 
 /* 00185e18 0000010c */ static int EvItemNameDispStart(/* s3 19 */ EV_EXE_CTRL *ctrl_addr) {
+	/* rdata 3ab3d0 */ static char __FUNCTION__[20];
 	/* s0 16 */ u_char *dat_addr;
 	/* s2 18 */ int msg_type;
 	/* s1 17 */ int msg_id;
@@ -11647,6 +11891,7 @@
 /* 001860b0 00000020 */ static int EvGameOverRequest(/* a0 4 */ EV_EXE_CTRL *ctrl_addr) {}
 
 /* 001860d0 00000094 */ static int EvSubTitleDispReq(/* s1 17 */ EV_EXE_CTRL *ctrl_addr) {
+	/* rdata 3ab458 */ static char __FUNCTION__[18];
 	/* a0 4 */ u_char *dat_addr;
 	/* s0 16 */ int subtitle_label;
 }
@@ -11660,9 +11905,10 @@
 }
 
 /* 00186280 000000f0 */ static int EvSubTitle3DPosDispReq(/* s2 18 */ EV_EXE_CTRL *ctrl_addr) {
+	/* rdata 3ab4e0 */ static char __FUNCTION__[23];
 	/* s0 16 */ u_char *dat_addr;
 	/* s1 17 */ int subtitle_label;
-	/* -0x30(sp) */ float pos[4];
+	/* 0x0(sp) */ float pos[4];
 }
 
 /* 00186370 00000020 */ static int EvSubTitleStop(/* a0 4 */ EV_EXE_CTRL *ctrl_addr) {}
@@ -11692,6 +11938,7 @@
 /* 00186678 0000002c */ static int EvEvElse(/* a0 4 */ EV_EXE_CTRL *ctrl_addr) {}
 
 /* 001866a8 00000154 */ static int EvEvElseIf(/* s2 18 */ EV_EXE_CTRL *ctrl_addr) {
+	/* rdata 3ab568 */ static char __FUNCTION__[11];
 	/* s1 17 */ u_char *dat_addr;
 	/* s0 16 */ u_short if_label;
 }
@@ -11715,12 +11962,14 @@
 }
 
 /* 001869f0 00000134 */ static u_char EvIfGameDifficulty(/* s0 16 */ u_char *dat_addr) {
+	/* rdata 3ab660 */ static char __FUNCTION__[19];
 	/* v0 2 */ u_char res;
 	/* s2 18 */ int difficulty_label;
 	/* s1 17 */ int comparison_label;
 }
 
 /* 00186b28 00000134 */ static u_char EvIfGameClearNum(/* s0 16 */ u_char *dat_addr) {
+	/* rdata 3ab6b8 */ static char __FUNCTION__[17];
 	/* v0 2 */ u_char res;
 	/* s2 18 */ int clear_num;
 	/* s1 17 */ int comparison_label;
@@ -11742,10 +11991,10 @@
 
 /* 00186e88 00000ca4 */ static void Regist_StreamID(/* s4 20 */ int stream_id, /* s5 21 */ int file_label) {
 	/* rdata 3ab7b8 */ static char __FUNCTION__[16];
-	/* -0x60(sp) */ int i;
-	/* -0x1df0(sp) */ char temp[3000];
-	/* -0x1230(sp) */ char temp2[3000];
-	/* -0x670(sp) */ CFileName cfn;
+	/* 0x1d90(sp) */ int i;
+	/* 0x0(sp) */ char temp[3000];
+	/* 0xbc0(sp) */ char temp2[3000];
+	/* 0x1780(sp) */ CFileName cfn;
 	/* s0 16 */ char *pStr;
 	/* s7 23 */ basic_string<char,string_char_traits<char>,ctl::custom_allocator<char> > *this;
 	/* s6 22 */ basic_string<char,string_char_traits<char>,ctl::custom_allocator<char> > *this;
@@ -11754,10 +12003,10 @@
 	/* s2 18 */ basic_string<char,string_char_traits<char>,ctl::custom_allocator<char> > *this;
 	/* s1 17 */ basic_string<char,string_char_traits<char>,ctl::custom_allocator<char> > *this;
 	/* s0 16 */ basic_string<char,string_char_traits<char>,ctl::custom_allocator<char> > *this;
-	/* -0x5c0(sp) */ char strDrive[260];
-	/* -0x4b0(sp) */ char strDir[260];
-	/* -0x3a0(sp) */ char strFile[260];
-	/* -0x290(sp) */ char strExt[260];
+	/* 0x1830(sp) */ char strDrive[260];
+	/* 0x1940(sp) */ char strDir[260];
+	/* 0x1a50(sp) */ char strFile[260];
+	/* 0x1b60(sp) */ char strExt[260];
 	/* s1 17 */ char *pColon;
 	/* s0 16 */ char *pLastSlash;
 	/* v0 2 */ char *pLastYen;
@@ -11853,23 +12102,23 @@
 
 /* 00188588 000000fc */ void EvDbg_EventGhostPrint() {
 	/* s2 18 */ int i;
-	/* -0x40(sp) */ char *ghost_type[4];
+	/* 0x0(sp) */ char *ghost_type[4];
 }
 
-/* 0030dc78 00000054 */ EV_SAVE_STREAM* EV_SAVE_STREAM * _fixed_array_verifyrange<EV_SAVE_STREAM>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
-/* 0030dc78 00000054 */ EV_SAVE_OBJ_STREAM* EV_SAVE_OBJ_STREAM * _fixed_array_verifyrange<EV_SAVE_OBJ_STREAM>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
-/* 0030dc78 00000054 */ EV_SAVE_POS_STREAM* EV_SAVE_POS_STREAM * _fixed_array_verifyrange<EV_SAVE_POS_STREAM>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
-/* 0030dc78 00000054 */ EV_SOUND_CTRL* EV_SOUND_CTRL * _fixed_array_verifyrange<EV_SOUND_CTRL>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
-/* 0030dc78 00000054 */ EV_STREAM_CTRL* EV_STREAM_CTRL * _fixed_array_verifyrange<EV_STREAM_CTRL>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
-/* 0030dc78 00000054 */ EV_GHOST_CTRL* EV_GHOST_CTRL * _fixed_array_verifyrange<EV_GHOST_CTRL>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ EV_SAVE_STREAM* EV_SAVE_STREAM * _fixed_array_verifyrange<EV_SAVE_STREAM>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ EV_SAVE_OBJ_STREAM* EV_SAVE_OBJ_STREAM * _fixed_array_verifyrange<EV_SAVE_OBJ_STREAM>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ EV_SAVE_POS_STREAM* EV_SAVE_POS_STREAM * _fixed_array_verifyrange<EV_SAVE_POS_STREAM>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ EV_SOUND_CTRL* EV_SOUND_CTRL * _fixed_array_verifyrange<EV_SOUND_CTRL>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ EV_STREAM_CTRL* EV_STREAM_CTRL * _fixed_array_verifyrange<EV_STREAM_CTRL>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ EV_GHOST_CTRL* EV_GHOST_CTRL * _fixed_array_verifyrange<EV_GHOST_CTRL>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
 
-/* 0030dc78 000000d4 */ char* basic_string<char, string_char_traits<char>, ctl::custom_allocator<char> >::Rep::clone(/* s2 18 */ Rep *this) {
+/* ffffffff 000000d4 */ char* basic_string<char, string_char_traits<char>, ctl::custom_allocator<char> >::Rep::clone(/* s2 18 */ Rep *this) {
 	/* s1 17 */ size_t extra;
 	/* a1 5 */ size_t s;
 	/* v1 3 */ size_t i;
 }
 
-/* 0030dc78 00000280 */ basic_string<char,string_char_traits<char>,ctl::custom_allocator<char> >& basic_string<char, string_char_traits<char>, ctl::custom_allocator<char> >::replace(/* s4 20 */ basic_string<char,string_char_traits<char>,ctl::custom_allocator<char> > *this, /* s1 17 */ size_t pos, /* s2 18 */ size_t n1, /* fp 30 */ char *s, /* s3 19 */ size_t n2) {
+/* ffffffff 00000280 */ basic_string<char,string_char_traits<char>,ctl::custom_allocator<char> >& basic_string<char, string_char_traits<char>, ctl::custom_allocator<char> >::replace(/* s4 20 */ basic_string<char,string_char_traits<char>,ctl::custom_allocator<char> > *this, /* s1 17 */ size_t pos, /* s2 18 */ size_t n1, /* fp 30 */ char *s, /* s3 19 */ size_t n2) {
 	/* s5 21 */ size_t len;
 	/* s7 23 */ size_t newlen;
 	/* a2 6 */ size_t s;
@@ -11883,23 +12132,23 @@
 	/* a2 6 */ size_t n;
 }
 
-/* 0030dc78 00000158 */ basic_string<char,string_char_traits<char>,ctl::custom_allocator<char> >& basic_string<char, string_char_traits<char>, ctl::custom_allocator<char> >::replace(/* s4 20 */ basic_string<char,string_char_traits<char>,ctl::custom_allocator<char> > *this, /* s6 22 */ size_t pos1, /* s5 21 */ size_t n1, /* s3 19 */ basic_string<char,string_char_traits<char>,ctl::custom_allocator<char> > &str, /* s0 16 */ size_t pos2, /* s2 18 */ size_t n2) {
+/* ffffffff 00000158 */ basic_string<char,string_char_traits<char>,ctl::custom_allocator<char> >& basic_string<char, string_char_traits<char>, ctl::custom_allocator<char> >::replace(/* s4 20 */ basic_string<char,string_char_traits<char>,ctl::custom_allocator<char> > *this, /* s6 22 */ size_t pos1, /* s5 21 */ size_t n1, /* s3 19 */ basic_string<char,string_char_traits<char>,ctl::custom_allocator<char> > &str, /* s0 16 */ size_t pos2, /* s2 18 */ size_t n2) {
 	/* s1 17 */ size_t len2;
 	/* a0 4 */ Rep *this;
 }
 
 /* 00188688 00000008 */ static void __static_initialization_and_destruction_0(/* a0 4 */ int __initialize_p, /* a1 5 */ int __priority) {}
-/* 0030dc78 0000004c */ type_info& CFileName type_info function() {}
-/* 0030dc78 00000228 */ void CFileName::~CFileName(/* s0 16 */ CFileName *this, /* s1 17 */ int __in_chrg) {}
-/* 0030dc78 0000003c */ type_info& ctl::custom_allocator<char> type_info function() {}
-/* 0030dc78 0000003c */ type_info& EV_SAVE_STREAM type_info function() {}
-/* 0030dc78 0000003c */ type_info& EV_SAVE_OBJ_STREAM type_info function() {}
-/* 0030dc78 0000003c */ type_info& EV_SAVE_POS_STREAM type_info function() {}
-/* 0030dc78 0000003c */ type_info& EV_SOUND_CTRL type_info function() {}
-/* 0030dc78 0000003c */ type_info& EV_STREAM_CTRL type_info function() {}
-/* 0030dc78 0000003c */ type_info& EV_GHOST_CTRL type_info function() {}
-/* 0030dc78 0000001c */ void ctl::custom_allocator<char>::custom_deallocate(/* a0 4 */ custom_allocator<char> *this, /* a1 5 */ void *_Ptr) {}
-/* 0030dc78 0000001c */ char* ctl::custom_allocator<char>::custom_allocate(/* a0 4 */ custom_allocator<char> *this, /* a1 5 */ size_t _Count) {}
+/* ffffffff 0000004c */ type_info& CFileName type_info function() {}
+/* ffffffff 00000228 */ void CFileName::~CFileName(/* s0 16 */ CFileName *this, /* s1 17 */ int __in_chrg) {}
+/* ffffffff 0000003c */ type_info& ctl::custom_allocator<char> type_info function() {}
+/* ffffffff 0000003c */ type_info& EV_SAVE_STREAM type_info function() {}
+/* ffffffff 0000003c */ type_info& EV_SAVE_OBJ_STREAM type_info function() {}
+/* ffffffff 0000003c */ type_info& EV_SAVE_POS_STREAM type_info function() {}
+/* ffffffff 0000003c */ type_info& EV_SOUND_CTRL type_info function() {}
+/* ffffffff 0000003c */ type_info& EV_STREAM_CTRL type_info function() {}
+/* ffffffff 0000003c */ type_info& EV_GHOST_CTRL type_info function() {}
+/* ffffffff 0000001c */ void ctl::custom_allocator<char>::custom_deallocate(/* a0 4 */ custom_allocator<char> *this, /* a1 5 */ void *_Ptr) {}
+/* ffffffff 0000001c */ char* ctl::custom_allocator<char>::custom_allocate(/* a0 4 */ custom_allocator<char> *this, /* a1 5 */ size_t _Count) {}
 /* 0030dc78 0000003c */ type_info& basic_string<char, string_char_traits<char>, ctl::custom_allocator<char> > type_info function() {}
 /* 00188690 00000020 */ static void global constructors keyed to EventMacroInit() {}
 
@@ -11926,7 +12175,7 @@
 /* 001888b8 0000006c */ void EventMain() {}
 /* 00188928 0000001c */ void EventEnd() {}
 /* 00188948 00000018 */ void SetSave_EvWrk(/* a0 4 */ MC_SAVE_DATA *data) {}
-/* 0030fb80 00000054 */ EVENT_STATE* EVENT_STATE * _fixed_array_verifyrange<EVENT_STATE>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ EVENT_STATE* EVENT_STATE * _fixed_array_verifyrange<EVENT_STATE>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
 /* 00188960 00000008 */ static void __static_initialization_and_destruction_0(/* a0 4 */ int __initialize_p, /* a1 5 */ int __priority) {}
 /* 0030fb80 0000003c */ type_info& EVENT_STATE type_info function() {}
 /* 00188968 00000020 */ static void global constructors keyed to ev_wrk() {}
@@ -11961,7 +12210,7 @@
 
 /* 00188c68 000000f0 */ void EventSetOpenCondition(/* s1 17 */ int event_id) {
 	/* s0 16 */ u_char *open_addr;
-	/* -0x100(sp) */ fixed_array<int,50> id_tbl;
+	/* 0x0(sp) */ fixed_array<int,50> id_tbl;
 	/* s0 16 */ int i;
 }
 
@@ -11969,10 +12218,10 @@
 	/* s1 17 */ u_char *close_addr;
 }
 
-/* 00188dc0 000001b0 */ static int EventSetCondition(/* -0x60(sp) */ int event_id, /* s4 20 */ u_char *exe_addr) {
+/* 00188dc0 000001b0 */ static int EventSetCondition(/* 0x0(sp) */ int event_id, /* s4 20 */ u_char *exe_addr) {
 	/* rdata 3abb98 */ static char __FUNCTION__[18];
 	/* s7 23 */ u_char regist_flg;
-	/* -0x5c(sp) */ int regist_res;
+	/* 0x4(sp) */ int regist_res;
 	/* s0 16 */ int condition;
 	/* s1 17 */ int i;
 }
@@ -11993,14 +12242,14 @@
 	/* s3 19 */ u_char *exe_addr;
 	/* s2 18 */ int event_id;
 	/* v1 3 */ u_char ev_state;
-	/* -0x440(sp) */ fixed_array<int,250> ev_exe_wait;
+	/* 0x0(sp) */ fixed_array<int,250> ev_exe_wait;
 	/* s6 22 */ int ev_wait_cnt;
 }
 
 /* 00189340 00000224 */ static void EventPriorityJudge(/* s6 22 */ int *ev_exe_wait, /* s7 23 */ int ev_wait_cnt) {
 	/* s3 19 */ int i;
 	/* s0 16 */ int j;
-	/* -0x60(sp) */ u_char ev_pri_high;
+	/* 0x0(sp) */ u_char ev_pri_high;
 	/* fp 30 */ u_char priority_flg;
 	/* s4 20 */ int set_priority;
 }
@@ -12009,6 +12258,7 @@
 /* 00189580 00000014 */ static int EventCloseJudge(/* a0 4 */ int event_id, /* a1 5 */ u_char *exe_addr) {}
 
 /* 00189598 0000014c */ static int EventConditionJudge(/* fp 30 */ int event_id, /* s2 18 */ u_char *exe_addr) {
+	/* rdata 3abc88 */ static char __FUNCTION__[20];
 	/* s3 19 */ int judge_res;
 	/* s0 16 */ u_int condition;
 }
@@ -12038,7 +12288,7 @@
 
 /* 00189a30 00000118 */ static int EvPlyrIntoSight(/* a0 4 */ int event_id, /* s0 16 */ u_char *exe_addr) {
 	/* s2 18 */ int res;
-	/* -0x30(sp) */ float target_pos[4];
+	/* 0x0(sp) */ float target_pos[4];
 	/* s1 17 */ float *room_off;
 }
 
@@ -12061,7 +12311,7 @@
 
 /* 00189dc8 000000d8 */ static int EvSisIntoSight(/* a0 4 */ int event_id, /* s0 16 */ u_char *exe_addr) {
 	/* s1 17 */ int res;
-	/* -0x30(sp) */ float target_pos[4];
+	/* 0x0(sp) */ float target_pos[4];
 }
 
 /* 00189ea0 00000050 */ static int EvGhostExist(/* a0 4 */ int event_id, /* s0 16 */ u_char *exe_addr) {}
@@ -12104,7 +12354,7 @@
 
 /* 0018a4a0 000000c4 */ static int EvObjIntoPlyrSight(/* a0 4 */ int event_id, /* s1 17 */ u_char *exe_addr) {
 	/* s2 18 */ int res;
-	/* -0x30(sp) */ float target_pos[4];
+	/* 0x0(sp) */ float target_pos[4];
 }
 
 /* 0018a568 00000020 */ static int EvBattleEnd(/* a0 4 */ int event_id, /* a1 5 */ u_char *exe_addr) {}
@@ -12132,11 +12382,11 @@
 	/* s2 18 */ int regist_num;
 }
 
-/* 003119e0 00000054 */ EV_CTRL_CENTER* EV_CTRL_CENTER * _fixed_array_verifyrange<EV_CTRL_CENTER>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
-/* 003119e0 00000054 */ EV_PRI_CTRL* EV_PRI_CTRL * _fixed_array_verifyrange<EV_PRI_CTRL>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
-/* 003119e0 00000054 */ int* int * _fixed_array_verifyrange<int>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ EV_CTRL_CENTER* EV_CTRL_CENTER * _fixed_array_verifyrange<EV_CTRL_CENTER>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ EV_PRI_CTRL* EV_PRI_CTRL * _fixed_array_verifyrange<EV_PRI_CTRL>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ int* int * _fixed_array_verifyrange<int>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
 /* 0018a930 00000008 */ static void __static_initialization_and_destruction_0(/* a0 4 */ int __initialize_p, /* a1 5 */ int __priority) {}
-/* 003119e0 0000003c */ type_info& EV_CTRL_CENTER type_info function() {}
+/* ffffffff 0000003c */ type_info& EV_CTRL_CENTER type_info function() {}
 /* 003119e0 0000003c */ type_info& EV_PRI_CTRL type_info function() {}
 /* 0018a938 00000020 */ static void global constructors keyed to EvCtrlCenterInit() {}
 
@@ -12187,7 +12437,7 @@
 	/* s3 19 */ int i;
 	/* s2 18 */ int j;
 	/* s0 16 */ int no;
-	/* -0x50(sp) */ int bank_file_no;
+	/* 0x0(sp) */ int bank_file_no;
 }
 
 /* 0018b078 00000118 */ void ev_seChangeRoom(/* s2 18 */ int room_id) {
@@ -12296,12 +12546,12 @@
 /* 0018be70 00000140 */ static void SetTalkDataPos(/* s0 16 */ u_char tbl_id) {}
 /* 0018bfb0 00000050 */ void TalkCamSet(/* a0 4 */ u_char tbl_id, /* a1 5 */ u_char on_off) {}
 /* 0018c000 00000040 */ void SetSave_EvTalkTbl(/* s0 16 */ MC_SAVE_DATA *data) {}
-/* 00312220 00000054 */ TALK_TBL* TALK_TBL * _fixed_array_verifyrange<TALK_TBL>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
-/* 00312220 00000054 */ TALK_DATA* TALK_DATA * _fixed_array_verifyrange<TALK_DATA>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
-/* 00312220 00000054 */ int* int * _fixed_array_verifyrange<int>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ TALK_TBL* TALK_TBL * _fixed_array_verifyrange<TALK_TBL>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ TALK_DATA* TALK_DATA * _fixed_array_verifyrange<TALK_DATA>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ int* int * _fixed_array_verifyrange<int>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
 /* 0018c040 00000008 */ static void __static_initialization_and_destruction_0(/* a0 4 */ int __initialize_p, /* a1 5 */ int __priority) {}
-/* 00312220 0000003c */ type_info& TALK_TBL type_info function() {}
-/* 00312220 0000003c */ type_info& TALK_DATA type_info function() {}
+/* ffffffff 0000003c */ type_info& TALK_TBL type_info function() {}
+/* ffffffff 0000003c */ type_info& TALK_DATA type_info function() {}
 /* 0018c048 00000020 */ static void global constructors keyed to EvTalkInit() {}
 
 // *****************************************************************************
@@ -12364,9 +12614,9 @@
 }
 
 /* 0018c620 00000018 */ void SetSave_EvTimerCtrl(/* a0 4 */ MC_SAVE_DATA *data) {}
-/* 00312220 00000054 */ REGIST_TIMER* REGIST_TIMER * _fixed_array_verifyrange<REGIST_TIMER>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ REGIST_TIMER* REGIST_TIMER * _fixed_array_verifyrange<REGIST_TIMER>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
 /* 0018c638 00000008 */ static void __static_initialization_and_destruction_0(/* a0 4 */ int __initialize_p, /* a1 5 */ int __priority) {}
-/* 00312220 0000003c */ type_info& REGIST_TIMER type_info function() {}
+/* ffffffff 0000003c */ type_info& REGIST_TIMER type_info function() {}
 /* 0018c640 00000020 */ static void global constructors keyed to EvTimerCtrlInit() {}
 
 // *****************************************************************************
@@ -12434,8 +12684,8 @@
 
 /* 0018c978 00000188 */ int EventCameraMain() {
 	/* s1 17 */ EVENT_CAMERA_CTRL *pEveCamCtrl;
-	/* -0x40(sp) */ float CamPosition[4];
-	/* -0x30(sp) */ float CamTarget[4];
+	/* 0x0(sp) */ float CamPosition[4];
+	/* 0x10(sp) */ float CamTarget[4];
 }
 
 /* 0018cb00 00000078 */ int EventCameraVCIPlay() {}
@@ -12445,8 +12695,8 @@
 }
 
 /* 0018cba0 00000138 */ static void EventCameraVCIPlayFrame(/* s0 16 */ VCI_CAMERA_HEADER *pHead, /* s1 17 */ u_int frame, /* s2 18 */ int RoomNo) {
-	/* -0x40(sp) */ float PosDist;
-	/* -0x3c(sp) */ float TargetDist;
+	/* 0x0(sp) */ float PosDist;
+	/* 0x4(sp) */ float TargetDist;
 	/* f20 58 */ float RollDist;
 	/* f15 53 */ float ProjDist;
 	/* a1 5 */ int AllTime;
@@ -12506,19 +12756,19 @@
 
 /* 0018d720 00000194 */ static void EventCameraSetFromPointDist(/* t1 9 */ VCI_CAMERA_HEADER *pHead, /* t0 8 */ int PointNo, /* f21 59 */ float Dist, /* s3 19 */ int RoomNo, /* s2 18 */ int PointType) {
 	/* v1 3 */ VCI_CAMERA_POINT *pEveCam;
-	/* -0x80(sp) */ float TmpVec[4];
-	/* -0x70(sp) */ float StartPos[4];
-	/* -0x60(sp) */ float EndPos[4];
-	/* -0x50(sp) */ float PointDist;
+	/* 0x0(sp) */ float TmpVec[4];
+	/* 0x10(sp) */ float StartPos[4];
+	/* 0x20(sp) */ float EndPos[4];
+	/* 0x30(sp) */ float PointDist;
 	/* f20 58 */ float Point2PointDist;
 }
 
 /* 0018d8b8 000001cc */ static void EventCameraSetBezier(/* s3 19 */ VCI_CAMERA_HEADER *pHead, /* f21 59 */ float Dist, /* s5 21 */ int RoomNo, /* s4 20 */ int PointType) {
-	/* -0x390(sp) */ fixed_array<float[4],50> ControlPoint;
-	/* -0x70(sp) */ float TmpVec[4];
+	/* 0x0(sp) */ fixed_array<float[4],50> ControlPoint;
+	/* 0x320(sp) */ float TmpVec[4];
 	/* v1 3 */ VCI_CAMERA_POINT *pEveCam;
 	/* s1 17 */ int i;
-	/* -0x60(sp) */ float AllDist;
+	/* 0x330(sp) */ float AllDist;
 	/* f20 58 */ float DistRate;
 }
 
@@ -12549,7 +12799,7 @@
 	/* v1 3 */ VCI_CAMERA_POINT *pPoint;
 }
 
-/* 0018de10 00000034 */ int EventCameraCheckFileId() {
+/* 0018de10 00000034 */ int EventCameraCheckFileId(/* a0 4 */ u_int *pData) {
 	/* a1 5 */ int ret;
 }
 
@@ -12563,8 +12813,8 @@
 }
 
 /* 0018df78 00000190 */ void CalcBezierPoint(/* fp 30 */ float *Point, /* s5 21 */ int n, /* f20 58 */ float t, /* s1 17 */ float *pControlPoint[4]) {
-	/* -0x390(sp) */ fixed_array<float[4],50> WorkVector;
-	/* -0x70(sp) */ float TmpVector[4];
+	/* 0x0(sp) */ fixed_array<float[4],50> WorkVector;
+	/* 0x320(sp) */ float TmpVector[4];
 	/* s7 23 */ int m;
 	/* s0 16 */ int i;
 	/* s3 19 */ int j;
@@ -12572,12 +12822,12 @@
 
 /* 0018e108 000001cc */ static void EventCameraSetHermite(/* s0 16 */ VCI_CAMERA_HEADER *pHead, /* s2 18 */ int PointNo, /* f20 58 */ float Dist, /* s7 23 */ int RoomNo, /* s4 20 */ int PointType) {
 	/* s3 19 */ VCI_CAMERA_POINT *pEveCam;
-	/* -0xc0(sp) */ float TmpVec[4];
-	/* -0xb0(sp) */ float StartPos[4];
-	/* -0xa0(sp) */ float EndPos[4];
-	/* -0x90(sp) */ float DirVector0[4];
-	/* -0x80(sp) */ float DirVector1[4];
-	/* -0x70(sp) */ float PointDist;
+	/* 0x0(sp) */ float TmpVec[4];
+	/* 0x10(sp) */ float StartPos[4];
+	/* 0x20(sp) */ float EndPos[4];
+	/* 0x30(sp) */ float DirVector0[4];
+	/* 0x40(sp) */ float DirVector1[4];
+	/* 0x50(sp) */ float PointDist;
 	/* f0 38 */ float Point2PointDist;
 	/* f21 59 */ float Progress;
 }
@@ -12589,10 +12839,10 @@
 }
 
 /* 0018e3b8 0000012c */ void CalcHermitePoint(/* s0 16 */ float *HermiteVector, /* a1 5 */ float *Point0, /* s1 17 */ float *Point1, /* s4 20 */ float *Direction0, /* s5 21 */ float *Direction1, /* f2 40 */ float ParamU) {
-	/* -0x90(sp) */ float Hermite0[4];
-	/* -0x80(sp) */ float Hermite1[4];
-	/* -0x70(sp) */ float Hermite2[4];
-	/* -0x60(sp) */ float Hermite3[4];
+	/* 0x0(sp) */ float Hermite0[4];
+	/* 0x10(sp) */ float Hermite1[4];
+	/* 0x20(sp) */ float Hermite2[4];
+	/* 0x30(sp) */ float Hermite3[4];
 	/* f0 38 */ float ParamU2;
 	/* f20 58 */ float ParamU3;
 	/* f22 60 */ float Basis1;
@@ -12601,11 +12851,11 @@
 }
 
 /* 0018e4e8 000000c4 */ void EventCameraTest() {
-	/* -0x40(sp) */ float CamPos[4];
-	/* -0x30(sp) */ float CamTargetOffset[4];
+	/* 0x0(sp) */ float CamPos[4];
+	/* 0x10(sp) */ float CamTargetOffset[4];
 }
 
-/* 00312220 00000054 */ float*[4] float [3] * _fixed_array_verifyrange<float [3]>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ float*[4] float [3] * _fixed_array_verifyrange<float [3]>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
 /* 00312220 0000003c */ type_info& float [3] type_info function() {}
 
 // *****************************************************************************
@@ -12615,8 +12865,8 @@
 /* 0018e5b0 0000003c */ void FadeCtrlInit() {}
 
 /* 0018e5f0 00000158 */ void FadeMain() {
-	/* -0xe0(sp) */ DISP_SQAR dsq;
-	/* -0x60(sp) */ SQAR_DAT fade_bg;
+	/* 0x0(sp) */ DISP_SQAR dsq;
+	/* 0x80(sp) */ SQAR_DAT fade_bg;
 }
 
 /* 0018e748 00000010 */ int GetFadeState() {}
@@ -12660,8 +12910,8 @@
 
 /* 0018ec38 0000016c */ void FUYU_GHOST_ONE_DATA::FuyuActReq(/* s2 18 */ FUYU_GHOST_ONE_DATA *this, /* s4 20 */ sceVu0FVECTOR *pFirstEnePos) {
 	/* s3 19 */ int i;
-	/* -0x60(sp) */ float Pos[4];
-	/* -0x50(sp) */ float PlyrPos[4];
+	/* 0x0(sp) */ float Pos[4];
+	/* 0x10(sp) */ float PlyrPos[4];
 	/* a0 4 */ int j;
 }
 
@@ -12678,7 +12928,7 @@
 	/* v1 3 */ int iRandVal;
 	/* v0 2 */ int WaitCnt;
 	/* v0 2 */ int WaitCnt;
-	/* -0x40(sp) */ float PlyrPos[4];
+	/* 0x50(sp) */ float PlyrPos[4];
 }
 
 /* 0018f1f8 0000008c */ void CFEneEntry::Init(/* s0 16 */ CFEneEntry *this) {
@@ -12718,10 +12968,10 @@
 	/* f20 58 */ float fSquare;
 	/* f0 38 */ float fTemp;
 	/* s1 17 */ int i;
-	/* -0x50(sp) */ float Vec[4];
+	/* 0x0(sp) */ float Vec[4];
 }
 
-/* 0031222c 00000024 */ int CWaitVariable<int>::Work(/* a0 4 */ CWaitVariable<int> *this) {}
+/* ffffffff 00000024 */ int CWaitVariable<int>::Work(/* a0 4 */ CWaitVariable<int> *this) {}
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/ingame/photo/filament.c
@@ -12760,22 +13010,22 @@
 	/* s2 18 */ int b;
 	/* fp 30 */ int iWholePK2;
 	/* s7 23 */ int iCorePK2;
-	/* -0x100(sp) */ DISP_SPRT ds;
+	/* 0x0(sp) */ DISP_SPRT ds;
 }
 
-/* 0031222c 00000038 */ void CWrkVariable<short, 0, 128>::Work(/* a0 4 */ CWrkVariable<short int,0,128> *this) {
+/* ffffffff 00000038 */ void CWrkVariable<short, 0, 128>::Work(/* a0 4 */ CWrkVariable<short int,0,128> *this) {
 	/* a1 5 */ int iVal;
 }
 
-/* 0031222c 00000070 */ void CBlinkSwitchVariable<char, 90, 118, 6, 90>::Work(/* a0 4 */ CBlinkSwitchVariable<char,90,118,6,90> *this) {
+/* ffffffff 00000070 */ void CBlinkSwitchVariable<char, 90, 118, 6, 90>::Work(/* a0 4 */ CBlinkSwitchVariable<char,90,118,6,90> *this) {
 	/* a1 5 */ int iValue;
 }
 
-/* 0031222c 00000070 */ void CBlinkSwitchVariable<char, 90, 112, 11, 90>::Work(/* a0 4 */ CBlinkSwitchVariable<char,90,112,11,90> *this) {
+/* ffffffff 00000070 */ void CBlinkSwitchVariable<char, 90, 112, 11, 90>::Work(/* a0 4 */ CBlinkSwitchVariable<char,90,112,11,90> *this) {
 	/* a1 5 */ int iValue;
 }
 
-/* 0031222c 00000070 */ void CBlinkSwitchVariable<char, 90, 116, 13, 90>::Work(/* a0 4 */ CBlinkSwitchVariable<char,90,116,13,90> *this) {
+/* ffffffff 00000070 */ void CBlinkSwitchVariable<char, 90, 116, 13, 90>::Work(/* a0 4 */ CBlinkSwitchVariable<char,90,116,13,90> *this) {
 	/* a1 5 */ int iValue;
 }
 
@@ -12813,6 +13063,7 @@
 }
 
 /* 0018fff0 00000168 */ int FileRead(/* s0 16 */ int file_type, /* s1 17 */ int file_id) {
+	/* rdata 3adef8 */ static char __FUNCTION__[9];
 	/* v0 2 */ int res;
 }
 
@@ -12820,7 +13071,9 @@
 	/* rdata 3adf88 */ static char __FUNCTION__[12];
 }
 
-/* 00190218 000000b4 */ int GetFileTexId(/* s0 16 */ int file_type, /* s1 17 */ int file_id) {}
+/* 00190218 000000b4 */ int GetFileTexId(/* s0 16 */ int file_type, /* s1 17 */ int file_id) {
+	/* rdata 3adfd8 */ static char __FUNCTION__[13];
+}
 
 /* 001902d0 000000b8 */ static char* GetPlyrFileData(/* s0 16 */ int file_type, /* s1 17 */ int file_id) {
 	/* rdata 3ae030 */ static char __FUNCTION__[16];
@@ -12841,7 +13094,10 @@
 	/* rdata 3ae150 */ static int file_id_max[5];
 }
 
-/* 00190550 00000100 */ void SetPlyrFileState(/* s0 16 */ int file_type, /* s1 17 */ int file_id, /* s2 18 */ char state) {}
+/* 00190550 00000100 */ void SetPlyrFileState(/* s0 16 */ int file_type, /* s1 17 */ int file_id, /* s2 18 */ char state) {
+	/* rdata 3ae190 */ static char __FUNCTION__[17];
+}
+
 /* 00190650 00000018 */ void SetSave_PlyrFile(/* a0 4 */ MC_SAVE_DATA *data) {}
 
 /* 00190668 00000078 */ void DebugAllFileGet() {
@@ -12928,14 +13184,14 @@
 /* 001912e8 00000008 */ int isDispLamp() {}
 
 /* 001912f0 000000ec */ void DispChara(/* t2 10 */ int label, /* a1 5 */ u_char ptyp, /* f12 50 */ float x, /* f13 51 */ float y, /* a2 6 */ u_char z, /* s2 18 */ u_char alp, /* t0 8 */ u_char atyp, /* t1 9 */ u_char bln) {
-	/* -0xc0(sp) */ DISP_SPRT ds;
+	/* 0x0(sp) */ DISP_SPRT ds;
 	/* f20 58 */ float bx;
 	/* f21 59 */ float by;
 	/* s0 16 */ u_long areg;
 }
 
-/* 001913e0 0000011c */ void DispCharaRGB(/* t5 13 */ int label, /* a1 5 */ u_char ptyp, /* f12 50 */ float x, /* f13 51 */ float y, /* a2 6 */ u_char z, /* s5 21 */ u_char r, /* s3 19 */ u_char g, /* s2 18 */ u_char b, /* s4 20 */ u_char alp, /* t3 11 */ u_char atyp, /* 0x0(sp) */ int bln) {
-	/* -0xe0(sp) */ DISP_SPRT ds;
+/* 001913e0 0000011c */ void DispCharaRGB(/* t5 13 */ int label, /* a1 5 */ u_char ptyp, /* f12 50 */ float x, /* f13 51 */ float y, /* a2 6 */ u_char z, /* s5 21 */ u_char r, /* s3 19 */ u_char g, /* s2 18 */ u_char b, /* s4 20 */ u_char alp, /* t3 11 */ u_char atyp, /* 0xe0(sp) */ int bln) {
+	/* 0x0(sp) */ DISP_SPRT ds;
 	/* f20 58 */ float bx;
 	/* f21 59 */ float by;
 	/* s0 16 */ u_long areg;
@@ -12944,7 +13200,7 @@
 /* 00191500 0000016c */ void SetNumerousDisp(/* fp 30 */ SPRT_DAT *sprt, /* v1 3 */ int n, /* s7 23 */ int alpha, /* a3 7 */ int chara_width, /* t0 8 */ int pos_x, /* t1 9 */ int pos_y, /* f20 58 */ float scale, /* s6 22 */ int iZeroDispFigure, /* s5 21 */ int bAddAlphaFlg) {
 	/* s3 19 */ int i;
 	/* a1 5 */ int dsp_num;
-	/* -0x100(sp) */ DISP_SPRT ds;
+	/* 0x0(sp) */ DISP_SPRT ds;
 }
 
 /* 00191670 000000f8 */ void DispPointNumberNew(/* a0 4 */ int number, /* s3 19 */ short int adj_x, /* s2 18 */ short int adj_y, /* a3 7 */ u_char malp) {
@@ -12954,13 +13210,13 @@
 	/* s1 17 */ u_int n;
 }
 
-/* 00191768 00000570 */ void DispCameraCharge(/* s5 21 */ short int pos_x, /* s4 20 */ short int pos_y, /* -0x90(sp) */ int battle_master_alp) {
-	/* -0x8c(sp) */ u_char ba;
+/* 00191768 00000570 */ void DispCameraCharge(/* s5 21 */ short int pos_x, /* s4 20 */ short int pos_y, /* 0x90(sp) */ int battle_master_alp) {
+	/* 0x94(sp) */ u_char ba;
 	/* fp 30 */ u_char ba2;
 	/* s3 19 */ int i;
 	/* s0 16 */ int n;
 	/* s2 18 */ CHARGE_GUAGE_ONE *cgop;
-	/* -0x120(sp) */ DISP_SPRT ds;
+	/* 0x0(sp) */ DISP_SPRT ds;
 	/* f20 58 */ float radius_rate;
 }
 
@@ -12970,7 +13226,7 @@
 	/* s4 20 */ u_char a;
 	/* s0 16 */ int i;
 	/* f22 60 */ float radius_rate;
-	/* -0xf0(sp) */ DISP_SPRT ds;
+	/* 0x0(sp) */ DISP_SPRT ds;
 }
 
 /* 00191e50 00000020 */ void finderTriggerEneLifeDecrease(/* f12 50 */ float new_hp_per) {}
@@ -12982,13 +13238,13 @@
 	/* a3 7 */ DISPFMES *dfp;
 }
 
-/* 001920d0 00000310 */ void PutSpriteYW(/* a0 4 */ u_short top_label, /* s4 20 */ u_short end_label, /* f25 63 */ float pos_x, /* f24 62 */ float pos_y, /* f23 61 */ float rot, /* t4 12 */ int rgb, /* f20 58 */ float alp, /* f22 60 */ float scl_x, /* f21 59 */ float scl_y, /* -0x90(sp) */ u_char scl_mode, /* s3 19 */ int pri, /* a3 7 */ u_char by, /* -0x8c(sp) */ u_char blnd, /* -0x88(sp) */ u_char z_sw) {
+/* 001920d0 00000310 */ void PutSpriteYW(/* a0 4 */ u_short top_label, /* s4 20 */ u_short end_label, /* f25 63 */ float pos_x, /* f24 62 */ float pos_y, /* f23 61 */ float rot, /* t4 12 */ int rgb, /* f20 58 */ float alp, /* f22 60 */ float scl_x, /* f21 59 */ float scl_y, /* 0x90(sp) */ u_char scl_mode, /* s3 19 */ int pri, /* a3 7 */ u_char by, /* 0x94(sp) */ u_char blnd, /* 0x98(sp) */ u_char z_sw) {
 	/* s0 16 */ int i;
 	/* f1 39 */ float rot_px;
 	/* f0 38 */ float rot_py;
 	/* f1 39 */ float scl_px;
 	/* f0 38 */ float scl_py;
-	/* -0x120(sp) */ DISP_SPRT ds;
+	/* 0x0(sp) */ DISP_SPRT ds;
 }
 
 /* 001923e0 00000094 */ void SD1toSD2(/* a0 4 */ SPRT_DAT *sd, /* a1 5 */ SPRT_DAT2 *sd2) {}
@@ -13012,22 +13268,22 @@
 
 /* 00192620 000001d4 */ void FinderModeCameraCtrl() {
 	/* s1 17 */ PLYR_WRK *pPlyrWrk;
-	/* -0x70(sp) */ float Position[4];
-	/* -0x60(sp) */ float Target[4];
-	/* -0x50(sp) */ float RotVec[4];
-	/* -0x40(sp) */ float SetCamPos[4];
+	/* 0x0(sp) */ float Position[4];
+	/* 0x10(sp) */ float Target[4];
+	/* 0x20(sp) */ float RotVec[4];
+	/* 0x30(sp) */ float SetCamPos[4];
 }
 
 /* 001927f8 00000364 */ static void SetFinderRot(/* s0 16 */ PLYR_WRK *pPlyrWrk, /* s1 17 */ MOVE_BOX *pMoveBox) {
 	/* f20 58 */ float delta;
-	/* -0x40(sp) */ float ax;
-	/* -0x3c(sp) */ float ay;
+	/* 0x0(sp) */ float ax;
+	/* 0x4(sp) */ float ay;
 	/* f22 60 */ float dist;
 	/* f21 59 */ float spd;
 	/* f20 58 */ float rot;
-	/* -0x38(sp) */ char pad_x;
-	/* -0x37(sp) */ char pad_y;
-	/* -0x36(sp) */ u_char jyuji_on;
+	/* 0x8(sp) */ char pad_x;
+	/* 0x9(sp) */ char pad_y;
+	/* 0xa(sp) */ u_char jyuji_on;
 }
 
 /* 00192b60 00000204 */ static int FinderModePadChk(/* a0 4 */ char *pad_x, /* a1 5 */ char *pad_y, /* a2 6 */ float *ax, /* a3 7 */ float *ay, /* t0 8 */ u_char *jyuji_on) {}
@@ -13044,7 +13300,7 @@
 
 /* 00192e50 0000015c */ void PointSearchCameraCtrl() {
 	/* s0 16 */ MOVE_BOX *pMoveBox;
-	/* -0x30(sp) */ float r;
+	/* 0x0(sp) */ float r;
 }
 
 /* 00192fb0 0000001c */ void ReqFinderCamera() {}
@@ -13109,40 +13365,40 @@
 
 /* 00193b30 00000114 */ void PhotoFlyChk() {
 	/* s1 17 */ FLY_WRK *fw;
-	/* -0x50(sp) */ float tx;
-	/* -0x4c(sp) */ float ty;
+	/* 0x0(sp) */ float tx;
+	/* 0x4(sp) */ float ty;
 	/* s2 18 */ u_char i;
 }
 
 /* 00193c48 0000025c */ static PLCMN_WRK* FlyPlyrHitChk(/* s0 16 */ FLY_WRK *fw) {
-	/* -0x40(sp) */ float pf[4];
-	/* -0x30(sp) */ float pp[4];
+	/* 0x0(sp) */ float pf[4];
+	/* 0x10(sp) */ float pp[4];
 	/* a1 5 */ PLCMN_WRK *p1;
 	/* a0 4 */ PLCMN_WRK *p2;
 	/* s1 17 */ PLCMN_WRK *ret;
 }
 
 /* 00193ea8 00000190 */ static void FlyAtkHit(/* s2 18 */ FLY_WRK *fw, /* s0 16 */ PLCMN_WRK *target) {
-	/* -0x40(sp) */ float rv[4];
+	/* 0x0(sp) */ float rv[4];
 	/* s1 17 */ STATUS_DAT *st;
 }
 
 /* 00194038 00000424 */ void SetFlyOne(/* s0 16 */ FLY_WRK *fw, /* a1 5 */ ENE_WRK *ew, /* s1 17 */ u_char type, /* s3 19 */ float *pos, /* s4 20 */ float *rot, /* t1 9 */ PLCMN_WRK *target) {
-	/* -0xc0(sp) */ float wvec[4];
-	/* -0xb0(sp) */ float mvv[4];
-	/* -0xa0(sp) */ float wmx[4][4];
-	/* -0x60(sp) */ float xrw;
-	/* -0x5c(sp) */ float yrw;
+	/* 0x0(sp) */ float wvec[4];
+	/* 0x10(sp) */ float mvv[4];
+	/* 0x20(sp) */ float wmx[4][4];
+	/* 0x60(sp) */ float xrw;
+	/* 0x64(sp) */ float yrw;
 }
 
 /* 00194460 00000454 */ static void FlyMove(/* s1 17 */ FLY_WRK *fw) {
-	/* -0xb0(sp) */ float wvec[4];
-	/* -0xa0(sp) */ float mvv[4];
-	/* -0x90(sp) */ float wmx[4][4];
+	/* 0x0(sp) */ float wvec[4];
+	/* 0x10(sp) */ float mvv[4];
+	/* 0x20(sp) */ float wmx[4][4];
 	/* f20 58 */ float tr_ang;
-	/* -0x50(sp) */ float xrw;
-	/* -0x4c(sp) */ float yrw;
-	/* -0x48(sp) */ float f;
+	/* 0x60(sp) */ float xrw;
+	/* 0x64(sp) */ float yrw;
+	/* 0x68(sp) */ float f;
 	/* s0 16 */ FLY_DATA *fd;
 }
 
@@ -13170,10 +13426,10 @@
 	/* s0 16 */ int i;
 }
 
-/* 00312948 00000054 */ FLY_WRK* FLY_WRK * _fixed_array_verifyrange<FLY_WRK>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
-/* 00312948 00000054 */ G3DLIGHT* G3DLIGHT * _fixed_array_verifyrange<G3DLIGHT>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ FLY_WRK* FLY_WRK * _fixed_array_verifyrange<FLY_WRK>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ G3DLIGHT* G3DLIGHT * _fixed_array_verifyrange<G3DLIGHT>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
 /* 00194d10 00000008 */ static void __static_initialization_and_destruction_0(/* a0 4 */ int __initialize_p, /* a1 5 */ int __priority) {}
-/* 00312948 0000003c */ type_info& FLY_WRK type_info function() {}
+/* ffffffff 0000003c */ type_info& FLY_WRK type_info function() {}
 /* 00312948 0000003c */ type_info& G3DLIGHT type_info function() {}
 /* 00194d18 00000020 */ static void global constructors keyed to fly_dat() {}
 
@@ -13237,16 +13493,16 @@
 
 /* 001959b0 0000004c */ void FodSetMyLight(/* a0 4 */ FOD_LIGHT *fl, /* a1 5 */ char *pfx, /* a3 7 */ float *eye) {}
 
-/* 00195a00 00000680 */ void FodChangeFodLightToGra3dLight(/* -0x80(sp) */ GRA3DLIGHTDATA *pGra3dLight, /* s6 22 */ FOD_LIGHT *fl, /* -0x7c(sp) */ char *pfx, /* a3 7 */ float *eye) {
+/* 00195a00 00000680 */ void FodChangeFodLightToGra3dLight(/* 0x0(sp) */ GRA3DLIGHTDATA *pGra3dLight, /* s6 22 */ FOD_LIGHT *fl, /* 0x4(sp) */ char *pfx, /* a3 7 */ float *eye) {
 	/* bss 4aefa0 */ static fixed_array<G3DLIGHT,3> ilight;
 	/* bss 4af0f0 */ static fixed_array<G3DLIGHT,3> slight;
 	/* bss 4af240 */ static fixed_array<G3DLIGHT,3> plight;
 	/* s4 20 */ FOD_LIT_SERIAL *fls;
 	/* s2 18 */ G3DLIGHT *org;
 	/* s1 17 */ int i;
-	/* -0x78(sp) */ int il_num;
+	/* 0x8(sp) */ int il_num;
 	/* s5 21 */ int sl_num;
-	/* -0x74(sp) */ int pl_num;
+	/* 0xc(sp) */ int pl_num;
 	/* s3 19 */ int get_light_flg;
 }
 
@@ -13277,8 +13533,8 @@
 }
 
 /* 00196710 000001c0 */ void FodGetCamData(/* s2 18 */ FOD_CAMERA_DATA *pFodCam, /* a1 5 */ FOD_CAM_FRAME *pFodCamFrame, /* s4 20 */ float *offset) {
-	/* -0x60(sp) */ float CamPos[4];
-	/* -0x50(sp) */ float CamTgt[4];
+	/* 0x0(sp) */ float CamPos[4];
+	/* 0x10(sp) */ float CamTgt[4];
 	/* f3 41 */ float CamRoll;
 	/* s1 17 */ float *fdat;
 	/* s3 19 */ int i;
@@ -13290,15 +13546,15 @@
 }
 
 /* 00196988 0000000c */ GRA3DLIGHTDATA* FodGetGra3DLight() {}
-/* 00312a80 00000054 */ FOD_LIT_SERIAL* FOD_LIT_SERIAL * _fixed_array_verifyrange<FOD_LIT_SERIAL>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
-/* 00312a80 00000054 */ float*[4] float [3] * _fixed_array_verifyrange<float [3]>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
-/* 00312a80 00000054 */ G3DLIGHT* G3DLIGHT * _fixed_array_verifyrange<G3DLIGHT>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
-/* 00312a80 00000054 */ GRA3DLIGHTSTATUS* GRA3DLIGHTSTATUS * _fixed_array_verifyrange<GRA3DLIGHTSTATUS>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
-/* 00312a80 00000054 */ u_char* unsigned char * _fixed_array_verifyrange<unsigned char>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ FOD_LIT_SERIAL* FOD_LIT_SERIAL * _fixed_array_verifyrange<FOD_LIT_SERIAL>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ float*[4] float [3] * _fixed_array_verifyrange<float [3]>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ G3DLIGHT* G3DLIGHT * _fixed_array_verifyrange<G3DLIGHT>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ GRA3DLIGHTSTATUS* GRA3DLIGHTSTATUS * _fixed_array_verifyrange<GRA3DLIGHTSTATUS>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ u_char* unsigned char * _fixed_array_verifyrange<unsigned char>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
 /* 00196998 00000008 */ static void __static_initialization_and_destruction_0(/* a0 4 */ int __initialize_p, /* a1 5 */ int __priority) {}
-/* 00312a80 0000003c */ type_info& FOD_LIT_SERIAL type_info function() {}
-/* 00312a80 0000003c */ type_info& float [3] type_info function() {}
-/* 00312a80 0000003c */ type_info& G3DLIGHT type_info function() {}
+/* ffffffff 0000003c */ type_info& FOD_LIT_SERIAL type_info function() {}
+/* ffffffff 0000003c */ type_info& float [3] type_info function() {}
+/* ffffffff 0000003c */ type_info& G3DLIGHT type_info function() {}
 /* 00312a80 0000003c */ type_info& GRA3DLIGHTSTATUS type_info function() {}
 /* 001969a0 00000020 */ static void global constructors keyed to FodLight() {}
 
@@ -13329,9 +13585,9 @@
 	/* s1 17 */ int count;
 	/* t2 10 */ int count2;
 	/* t5 13 */ int new_count;
-	/* -0xb0(sp) */ int array[12];
-	/* -0x80(sp) */ int array2[12];
-	/* -0x50(sp) */ int no_overlap_array[12];
+	/* 0x0(sp) */ int array[12];
+	/* 0x30(sp) */ int array2[12];
+	/* 0x60(sp) */ int no_overlap_array[12];
 	/* v0 2 */ int no;
 }
 
@@ -13347,20 +13603,20 @@
 	/* rdata 3ae7f0 */ static char __FUNCTION__[19];
 	/* s4 20 */ int i;
 	/* v0 2 */ int no;
-	/* -0xc0(sp) */ int need_flg[12];
-	/* -0x90(sp) */ int exist_flg[12];
+	/* 0x0(sp) */ int need_flg[12];
+	/* 0x30(sp) */ int exist_flg[12];
 	/* s2 18 */ int file_no;
 	/* s1 17 */ int i;
-	/* -0x60(sp) */ int no;
+	/* 0x60(sp) */ int no;
 	/* a1 5 */ int i;
 }
 
 /* 00197190 000001fc */ void foot_sePlay(/* s6 22 */ float *pos, /* s0 16 */ int vol, /* s2 18 */ int pitch) {
-	/* -0x70(sp) */ SND_3D_SET set;
+	/* 0x0(sp) */ SND_3D_SET set;
 	/* v1 3 */ int file_no;
 	/* s4 20 */ int rnd_pitch;
 	/* s0 16 */ int i;
-	/* -0x60(sp) */ int no;
+	/* 0x10(sp) */ int no;
 }
 
 // *****************************************************************************
@@ -13379,12 +13635,12 @@
 /* 001975b8 00000064 */ void FrameRateSelDispMain() {}
 
 /* 00197620 00000084 */ static void FrameRateSelTitleDisp(/* a0 4 */ int off_x, /* a1 5 */ int off_y, /* a2 6 */ u_char alpha) {
-	/* -0xb0(sp) */ DISP_SPRT ds;
+	/* 0x0(sp) */ DISP_SPRT ds;
 	/* s0 16 */ int i;
 }
 
 /* 001976a8 00000134 */ static void FrameRateSelItemDisp(/* s0 16 */ int off_x, /* s1 17 */ int off_y, /* s2 18 */ u_char alpha) {
-	/* -0xc0(sp) */ DISP_SPRT rate_ds;
+	/* 0x0(sp) */ DISP_SPRT rate_ds;
 }
 
 /* 001977e0 000000b4 */ static void FrameRateSelCursorDisp(/* a0 4 */ int off_x, /* a1 5 */ int off_y, /* a2 6 */ u_char alpha) {}
@@ -13459,9 +13715,9 @@
 	/* f20 58 */ float ss;
 	/* f0 38 */ float cc;
 	/* f26 64 */ float div;
-	/* -0xf0(sp) */ u_int matt;
-	/* -0xec(sp) */ u_int mu;
-	/* -0xe8(sp) */ u_int mv;
+	/* 0xf0(sp) */ u_int matt;
+	/* 0xf4(sp) */ u_int mu;
+	/* 0xf8(sp) */ u_int mv;
 	/* f22 60 */ float mw;
 	/* f21 59 */ float mh;
 	/* f7 45 */ float mx;
@@ -13470,32 +13726,32 @@
 	/* f24 62 */ float mcry;
 	/* f6 44 */ float mcsx;
 	/* f3 41 */ float mcsy;
-	/* -0xe4(sp) */ u_int mz;
+	/* 0xfc(sp) */ u_int mz;
 	/* f2 40 */ float msw;
 	/* f4 42 */ float msh;
 	/* f23 61 */ float mrot;
-	/* -0x1e0(sp) */ u_long mtex0;
-	/* -0xe0(sp) */ u_long mtex1;
-	/* -0xd8(sp) */ u_long mtexa;
-	/* -0xd0(sp) */ u_long malpr;
-	/* -0xc8(sp) */ u_long mzbuf;
-	/* -0xc0(sp) */ u_long mtest;
-	/* -0xb8(sp) */ u_long mgftg;
-	/* -0xb0(sp) */ u_char mr;
-	/* -0xac(sp) */ u_char mg;
-	/* -0xa8(sp) */ u_char mb;
-	/* -0xa4(sp) */ u_char ma;
-	/* -0xa0(sp) */ u_char mlud;
-	/* -0x1d0(sp) */ float x[4];
-	/* -0x1c0(sp) */ float y[4];
-	/* -0x1b0(sp) */ float x2[4];
-	/* -0x1a0(sp) */ float y2[4];
-	/* -0x190(sp) */ u_int xx[4];
-	/* -0x180(sp) */ u_int yy[4];
-	/* -0x170(sp) */ u_int uu[4];
-	/* -0x160(sp) */ u_int vv[4];
-	/* -0x150(sp) */ sceVu0IVECTOR itmp;
-	/* -0x140(sp) */ float ftmp[4];
+	/* 0x0(sp) */ u_long mtex0;
+	/* 0x100(sp) */ u_long mtex1;
+	/* 0x108(sp) */ u_long mtexa;
+	/* 0x110(sp) */ u_long malpr;
+	/* 0x118(sp) */ u_long mzbuf;
+	/* 0x120(sp) */ u_long mtest;
+	/* 0x128(sp) */ u_long mgftg;
+	/* 0x130(sp) */ u_char mr;
+	/* 0x134(sp) */ u_char mg;
+	/* 0x138(sp) */ u_char mb;
+	/* 0x13c(sp) */ u_char ma;
+	/* 0x140(sp) */ u_char mlud;
+	/* 0x10(sp) */ float x[4];
+	/* 0x20(sp) */ float y[4];
+	/* 0x30(sp) */ float x2[4];
+	/* 0x40(sp) */ float y2[4];
+	/* 0x50(sp) */ u_int xx[4];
+	/* 0x60(sp) */ u_int yy[4];
+	/* 0x70(sp) */ u_int uu[4];
+	/* 0x80(sp) */ u_int vv[4];
+	/* 0x90(sp) */ sceVu0IVECTOR itmp;
+	/* 0xa0(sp) */ float ftmp[4];
 	/* t1 9 */ Q_WORDDATA *pbuf;
 	/* t2 10 */ int n;
 }
@@ -13521,32 +13777,32 @@
 	/* f21 59 */ float ss;
 	/* f16 54 */ float cc;
 	/* f25 63 */ float div;
-	/* -0x1a0(sp) */ float mx[4];
-	/* -0x190(sp) */ float my[4];
+	/* 0x0(sp) */ float mx[4];
+	/* 0x10(sp) */ float my[4];
 	/* f23 61 */ float mcrx;
 	/* f22 60 */ float mcry;
 	/* f2 40 */ float mcsx;
 	/* f3 41 */ float mcsy;
-	/* -0xb0(sp) */ u_int mz;
+	/* 0xf0(sp) */ u_int mz;
 	/* f1 39 */ float msw;
 	/* f4 42 */ float msh;
 	/* f24 62 */ float mrot;
-	/* -0xa8(sp) */ u_long mtexa;
-	/* -0xa0(sp) */ u_long malpr;
-	/* -0x98(sp) */ u_long mzbuf;
-	/* -0x90(sp) */ u_long mtest;
-	/* -0x180(sp) */ u_char mr[4];
-	/* -0x170(sp) */ u_char mg[4];
-	/* -0x160(sp) */ u_char mb[4];
+	/* 0xf8(sp) */ u_long mtexa;
+	/* 0x100(sp) */ u_long malpr;
+	/* 0x108(sp) */ u_long mzbuf;
+	/* 0x110(sp) */ u_long mtest;
+	/* 0x20(sp) */ u_char mr[4];
+	/* 0x30(sp) */ u_char mg[4];
+	/* 0x40(sp) */ u_char mb[4];
 	/* fp 30 */ u_char ma;
-	/* -0x150(sp) */ float x[4];
-	/* -0x140(sp) */ float y[4];
-	/* -0x130(sp) */ float x2[4];
-	/* -0x120(sp) */ float y2[4];
-	/* -0x110(sp) */ u_int xx[4];
-	/* -0x100(sp) */ u_int yy[4];
-	/* -0xf0(sp) */ float ftmp[4];
-	/* -0xe0(sp) */ sceVu0IVECTOR itmp;
+	/* 0x50(sp) */ float x[4];
+	/* 0x60(sp) */ float y[4];
+	/* 0x70(sp) */ float x2[4];
+	/* 0x80(sp) */ float y2[4];
+	/* 0x90(sp) */ u_int xx[4];
+	/* 0xa0(sp) */ u_int yy[4];
+	/* 0xb0(sp) */ float ftmp[4];
+	/* 0xc0(sp) */ sceVu0IVECTOR itmp;
 	/* t2 10 */ Q_WORDDATA *pbuf;
 }
 
@@ -13559,11 +13815,11 @@
 	/* f20 58 */ float ss;
 	/* f0 38 */ float cc;
 	/* f24 62 */ float div;
-	/* -0xf0(sp) */ u_int matt;
+	/* 0xf0(sp) */ u_int matt;
 	/* s7 23 */ u_int mu1;
-	/* -0xec(sp) */ u_int mv1;
+	/* 0xf4(sp) */ u_int mv1;
 	/* s6 22 */ u_int mu2;
-	/* -0xe8(sp) */ u_int mv2;
+	/* 0xf8(sp) */ u_int mv2;
 	/* f5 43 */ float mw;
 	/* f10 48 */ float mh;
 	/* f7 45 */ float mx;
@@ -13572,42 +13828,42 @@
 	/* f22 60 */ float mcry;
 	/* f6 44 */ float mcsx;
 	/* f3 41 */ float mcsy;
-	/* -0xe4(sp) */ u_int mz;
+	/* 0xfc(sp) */ u_int mz;
 	/* f2 40 */ float msw;
 	/* f4 42 */ float msh;
 	/* f21 59 */ float mrot;
-	/* -0x1e0(sp) */ u_long mtex0;
-	/* -0xe0(sp) */ u_long mtex1;
-	/* -0xd8(sp) */ u_long mtexa;
-	/* -0xd0(sp) */ u_long malpr;
-	/* -0xc8(sp) */ u_long mzbuf;
-	/* -0xc0(sp) */ u_long mtest;
-	/* -0xb8(sp) */ u_long mgftg;
-	/* -0xb0(sp) */ u_long mclmp;
-	/* -0xa8(sp) */ u_char mr;
-	/* -0xa4(sp) */ u_char mg;
-	/* -0xa0(sp) */ u_char mb;
-	/* -0x9c(sp) */ u_char ma;
-	/* -0x90(sp) */ u_char mlud;
-	/* -0x1d0(sp) */ float x[4];
-	/* -0x1c0(sp) */ float y[4];
-	/* -0x1b0(sp) */ float x2[4];
-	/* -0x1a0(sp) */ float y2[4];
-	/* -0x190(sp) */ u_int xx[4];
-	/* -0x180(sp) */ u_int yy[4];
-	/* -0x170(sp) */ u_int uu[4];
-	/* -0x160(sp) */ u_int vv[4];
+	/* 0x0(sp) */ u_long mtex0;
+	/* 0x100(sp) */ u_long mtex1;
+	/* 0x108(sp) */ u_long mtexa;
+	/* 0x110(sp) */ u_long malpr;
+	/* 0x118(sp) */ u_long mzbuf;
+	/* 0x120(sp) */ u_long mtest;
+	/* 0x128(sp) */ u_long mgftg;
+	/* 0x130(sp) */ u_long mclmp;
+	/* 0x138(sp) */ u_char mr;
+	/* 0x13c(sp) */ u_char mg;
+	/* 0x140(sp) */ u_char mb;
+	/* 0x144(sp) */ u_char ma;
+	/* 0x150(sp) */ u_char mlud;
+	/* 0x10(sp) */ float x[4];
+	/* 0x20(sp) */ float y[4];
+	/* 0x30(sp) */ float x2[4];
+	/* 0x40(sp) */ float y2[4];
+	/* 0x50(sp) */ u_int xx[4];
+	/* 0x60(sp) */ u_int yy[4];
+	/* 0x70(sp) */ u_int uu[4];
+	/* 0x80(sp) */ u_int vv[4];
 	/* f1 39 */ float ww;
 	/* f9 47 */ float hh;
-	/* -0x150(sp) */ sceVu0IVECTOR itmp;
-	/* -0x140(sp) */ float ftmp[4];
+	/* 0x90(sp) */ sceVu0IVECTOR itmp;
+	/* 0xa0(sp) */ float ftmp[4];
 	/* t1 9 */ Q_WORDDATA *pbuf;
 	/* t2 10 */ int n;
 }
 
 /* 00199fd8 00000190 */ void SetPanel(/* s0 16 */ u_int pri, /* f22 60 */ float x1, /* f23 61 */ float y1, /* f20 58 */ float x2, /* f21 59 */ float y2, /* s4 20 */ u_char r, /* s3 19 */ u_char g, /* s2 18 */ u_char b, /* s5 21 */ u_char a) {
-	/* -0x100(sp) */ SQAR_DAT sq;
-	/* -0xe0(sp) */ DISP_SQAR dq;
+	/* 0x0(sp) */ SQAR_DAT sq;
+	/* 0x20(sp) */ DISP_SQAR dq;
 	/* t1 9 */ int i;
 }
 
@@ -13616,13 +13872,13 @@
 }
 
 /* 0019a1f8 00000264 */ void LocalCopyLtoBAdrs(/* s3 19 */ int type, /* s4 20 */ int ee_adrs, /* a2 6 */ int v_adrs) {
-	/* -0x3b0(sp) */ void gs_simage[8];
+	/* 0x0(sp) */ void gs_simage[8];
 	/* s1 17 */ int i;
 }
 
 /* 0019a460 00000030 */ void LocalCopyLtoB(/* a0 4 */ int type, /* a1 5 */ int no, /* a2 6 */ int addr) {}
 
-/* 0019a490 000001e0 */ void LocalCopyBtoLAdrs(/* a0 4 */ int type, /* -0x60(sp) */ int ee_adrs, /* a2 6 */ int v_adrs) {
+/* 0019a490 000001e0 */ void LocalCopyBtoLAdrs(/* a0 4 */ int type, /* 0x0(sp) */ int ee_adrs, /* a2 6 */ int v_adrs) {
 	/* a2 6 */ int addr;
 	/* s6 22 */ int bline;
 	/* s3 19 */ int rline;
@@ -13632,7 +13888,7 @@
 	/* v1 3 */ int dbw;
 	/* v0 2 */ Q_WORDDATA *pbuf;
 	/* a1 5 */ int frtype;
-	/* -0x5c(sp) */ int div;
+	/* 0x4(sp) */ int div;
 }
 
 /* 0019a670 00000030 */ void LocalCopyBtoL(/* a0 4 */ int type, /* a1 5 */ int no, /* a2 6 */ int addr) {}
@@ -13685,7 +13941,7 @@
 // *****************************************************************************
 
 /* 0019ad58 000001f8 */ void g3dbvBoxFromVertices(/* s1 17 */ float *box[4], /* s0 16 */ float *av[4]) {
-	/* -0x30(sp) */ float vScale[4];
+	/* 0x0(sp) */ float vScale[4];
 	/* s1 17 */ float *pv0;
 	/* v0 2 */ float *pv2;
 }
@@ -13693,8 +13949,8 @@
 /* 0019af50 0000001c */ void g3dbvInnerEllipseFromVertices(/* a0 4 */ float *e[4], /* a1 5 */ float *avVertices[4]) {}
 
 /* 0019af70 00000134 */ int g3dbvIsEllipseInclude(/* a0 4 */ float *e[4], /* a1 5 */ float *v) {
-	/* -0x50(sp) */ float vInv[4];
-	/* -0x40(sp) */ float matInv[4][4];
+	/* 0x0(sp) */ float vInv[4];
+	/* 0x10(sp) */ float matInv[4][4];
 }
 
 // *****************************************************************************
@@ -13703,26 +13959,26 @@
 
 /* 0019b0a8 00000084 */ void g3dCalcScreenGSPrimitiveMatrix(/* s0 16 */ float *mat[4], /* f21 59 */ float fAspectX, /* f22 60 */ float fAspectY, /* f23 61 */ float fAspectZ, /* f24 62 */ float fCenterX, /* f25 63 */ float fCenterY, /* f20 58 */ float fCenterZ) {}
 
-/* 0019b130 000000fc */ void g3dCalcViewScreenMatrixPerspective(/* f24 62 */ float fScrZ, /* f22 60 */ float fAspectX, /* f23 61 */ float fAspectY, /* f25 63 */ float fCenterX, /* f26 64 */ float fCenterY, /* f17 55 */ float fZmin, /* f18 56 */ float fZmax, /* f19 57 */ float fNearZ, /* 0x0(sp) */ float fFarZ) {
+/* 0019b130 000000fc */ void g3dCalcViewScreenMatrixPerspective(/* s0 16 */ float *mat[4], /* f24 62 */ float fScrZ, /* f22 60 */ float fAspectX, /* f23 61 */ float fAspectY, /* f25 63 */ float fCenterX, /* f26 64 */ float fCenterY, /* f17 55 */ float fZmin, /* f18 56 */ float fZmax, /* f19 57 */ float fNearZ, /* 0x90(sp) */ float fFarZ) {
 	/* f0 38 */ float fFarZ;
 	/* f20 58 */ float fCenterZ;
 	/* f21 59 */ float fAspectZ;
-	/* -0x90(sp) */ float matScreenGSPrimitive[4][4];
+	/* 0x0(sp) */ float matScreenGSPrimitive[4][4];
 }
 
-/* 0019b230 000000e4 */ void g3dCalcViewScreenMatrixOrtho(/* f12 50 */ float fScrZ, /* f13 51 */ float fAspectX, /* f14 52 */ float fAspectY, /* f15 53 */ float fCenterX, /* f16 54 */ float fCenterY, /* f17 55 */ float fZmin, /* f18 56 */ float fZmax, /* f19 57 */ float fNearZ, /* 0x0(sp) */ float fFarZ) {
+/* 0019b230 000000e4 */ void g3dCalcViewScreenMatrixOrtho(/* s0 16 */ float *mat[4], /* f12 50 */ float fScrZ, /* f13 51 */ float fAspectX, /* f14 52 */ float fAspectY, /* f15 53 */ float fCenterX, /* f16 54 */ float fCenterY, /* f17 55 */ float fZmin, /* f18 56 */ float fZmax, /* f19 57 */ float fNearZ, /* 0x50(sp) */ float fFarZ) {
 	/* f0 38 */ float fFarZ;
-	/* -0x50(sp) */ float matScreenGSPrimitive[4][4];
+	/* 0x0(sp) */ float matScreenGSPrimitive[4][4];
 	/* v0 2 */ float *pm2[4];
 }
 
-/* 0019b318 000000f4 */ void g3dCalcViewClipMatrixPerspective(/* f12 50 */ float fScrZ, /* f25 63 */ float fAspectX, /* f24 62 */ float fAspectY, /* f21 59 */ float fNearZ, /* f20 58 */ float fFarZ, /* f17 55 */ float fClipVolumeX, /* f18 56 */ float fClipVolumeY) {
+/* 0019b318 000000f4 */ void g3dCalcViewClipMatrixPerspective(/* s0 16 */ float *mat[4], /* f12 50 */ float fScrZ, /* f25 63 */ float fAspectX, /* f24 62 */ float fAspectY, /* f21 59 */ float fNearZ, /* f20 58 */ float fFarZ, /* f17 55 */ float fClipVolumeX, /* f18 56 */ float fClipVolumeY) {
 	/* f12 50 */ float fRScrZ;
 	/* f23 61 */ float fGSX;
 	/* f22 60 */ float fGSY;
 }
 
-/* 0019b410 000000bc */ void g3dCalcViewClipMatrixOrtho(/* f12 50 */ float fScrZ, /* f21 59 */ float fAspectX, /* f22 60 */ float fAspectY, /* f23 61 */ float fNearZ, /* f20 58 */ float fFarZ, /* f24 62 */ float fClipVolumeX, /* f25 63 */ float fClipVolumeY) {}
+/* 0019b410 000000bc */ void g3dCalcViewClipMatrixOrtho(/* s0 16 */ float *mat[4], /* f12 50 */ float fScrZ, /* f21 59 */ float fAspectX, /* f22 60 */ float fAspectY, /* f23 61 */ float fNearZ, /* f20 58 */ float fFarZ, /* f24 62 */ float fClipVolumeX, /* f25 63 */ float fClipVolumeY) {}
 /* 0019b4d0 0000003c */ float g3dCalcDistanceToScreen(/* f12 50 */ float fFov, /* f20 58 */ float fClipValueAbs) {}
 
 // *****************************************************************************
@@ -13735,7 +13991,7 @@
 }
 
 /* 0019b5f0 00000044 */ static void _CalcAmbient() {
-	/* -0x10(sp) */ float vWork[4];
+	/* 0x0(sp) */ float vWork[4];
 	/* v0 2 */ float *pv0;
 	/* a0 4 */ float *pv2;
 }
@@ -13776,8 +14032,13 @@
 	/* rdata 3aec38 */ static char __FUNCTION__[21];
 }
 
-/* 0019be30 000000fc */ int g3dSetGlobalState(/* s0 16 */ G3DGLOBALSTATETYPE State, /* s1 17 */ unsigned int uiValue) {}
-/* 0019bf30 000000a8 */ unsigned int& g3dGetGlobalStateRef(/* s0 16 */ G3DGLOBALSTATETYPE State) {}
+/* 0019be30 000000fc */ int g3dSetGlobalState(/* s0 16 */ G3DGLOBALSTATETYPE State, /* s1 17 */ unsigned int uiValue) {
+	/* rdata 3aec50 */ static char __FUNCTION__[18];
+}
+
+/* 0019bf30 000000a8 */ unsigned int& g3dGetGlobalStateRef(/* s0 16 */ G3DGLOBALSTATETYPE State) {
+	/* rdata 3aeca8 */ static char __FUNCTION__[21];
+}
 
 /* 0019bfd8 00000084 */ void g3dSetAmbient(/* s0 16 */ float *vAmbient) {
 	/* rdata 3aecc0 */ static char __FUNCTION__[14];
@@ -13792,7 +14053,10 @@
 	/* a1 5 */ G3DVU1TRANSFORM &rT;
 	/* v0 2 */ float *pm0[4];
 	/* v1 3 */ float *pm1[4];
+	/* v1 3 */ float *pm0[4];
 	/* v0 2 */ float *pm2[4];
+	/* v0 2 */ float *pm0[4];
+	/* v0 2 */ float *pm0[4];
 }
 
 /* 0019c338 000000a8 */ float&[4][4] g3dGetTransformRef(/* s0 16 */ G3DTRANSFORMSTATETYPE State) {
@@ -13803,23 +14067,38 @@
 	/* rdata 3aed50 */ static char __FUNCTION__[15];
 }
 
-/* 0019c4f8 00000058 */ G3DMATERIAL& g3dGetMaterialRef() {}
-/* 0019c550 000000bc */ int g3dLightEnable(/* s0 16 */ int iLightId, /* s1 17 */ int bEnable) {}
-/* 0019c610 000000ac */ int g3dIsLightEnable(/* s0 16 */ int iLightId) {}
+/* 0019c4f8 00000058 */ G3DMATERIAL& g3dGetMaterialRef() {
+	/* rdata 3aed70 */ static char __FUNCTION__[18];
+}
+
+/* 0019c550 000000bc */ int g3dLightEnable(/* s0 16 */ int iLightId, /* s1 17 */ int bEnable) {
+	/* rdata 3aed88 */ static char __FUNCTION__[15];
+}
+
+/* 0019c610 000000ac */ int g3dIsLightEnable(/* s0 16 */ int iLightId) {
+	/* rdata 3aedc8 */ static char __FUNCTION__[17];
+}
 
 /* 0019c6c0 00000380 */ int g3dSetLight(/* s2 18 */ int iLightId, /* s0 16 */ G3DLIGHT *pLight) {
 	/* rdata 3aedf0 */ static char __FUNCTION__[12];
 }
 
-/* 0019ca40 000000a8 */ G3DLIGHT& g3dGetLightRef(/* s0 16 */ int iLightId) {}
-/* 0019cae8 00000080 */ int g3dApplyLight() {}
+/* 0019ca40 000000a8 */ G3DLIGHT& g3dGetLightRef(/* s0 16 */ int iLightId) {
+	/* rdata 3aef98 */ static char __FUNCTION__[15];
+}
+
+/* 0019cae8 00000080 */ int g3dApplyLight() {
+	/* rdata 3aefa8 */ static char __FUNCTION__[14];
+}
 
 /* 0019cb68 00000120 */ int g3dSetTexture(/* s1 17 */ int iStage, /* s0 16 */ CTexture *pTexture) {
-	/* -0x60(sp) */ sceGifPackAd aGPA[2];
+	/* rdata 3aefb8 */ static char __FUNCTION__[14];
+	/* 0x0(sp) */ sceGifPackAd aGPA[2];
 }
 
 /* 0019cc88 0000059c */ void g3dCalcVertexColor(/* s1 17 */ float *vDest, /* s5 21 */ float *vVertex, /* s0 16 */ float *vNormal, /* s6 22 */ float *vColorSource) {
-	/* -0x50(sp) */ float vWork[4];
+	/* rdata 3aefe8 */ static char __FUNCTION__[19];
+	/* 0x0(sp) */ float vWork[4];
 	/* s4 20 */ G3DVU1MEMLAYOUT_PACKED &rLO;
 	/* s2 18 */ G3DVU1LIGHT &rL;
 	/* s3 19 */ int iLightingType;
@@ -13827,9 +14106,12 @@
 	/* f0 38 */ float fMax;
 }
 
-/* 0019d228 000000e4 */ int g3dSetGsRegister(/* s1 17 */ long int lData, /* s0 16 */ long int lAddress, /* s2 18 */ int iDmaChan) {}
+/* 0019d228 000000e4 */ int g3dSetGsRegister(/* s1 17 */ long int lData, /* s0 16 */ long int lAddress, /* s2 18 */ int iDmaChan) {
+	/* rdata 3af000 */ static char __FUNCTION__[17];
+}
 
 /* 0019d310 00000244 */ int g3dSetGsRegisters(/* s7 23 */ sceGifPackAd *aGPA, /* s6 22 */ int iNum, /* a2 6 */ int iDmaChan) {
+	/* rdata 3af048 */ static char __FUNCTION__[18];
 	/* s3 19 */ _PACKET *pPacket;
 	/* s5 21 */ int iNumRegist;
 	/* a2 6 */ int i;
@@ -13844,66 +14126,75 @@
 
 /* 0019d608 000000c0 */ void g3dCalcGsPrimitiveCoord(/* s1 17 */ sceGsXyz *pGsXyz, /* s0 16 */ float *vScreenCoord) {
 	/* rdata 3af0e8 */ static char __FUNCTION__[24];
-	/* -0x30(sp) */ sceVu0IVECTOR iv;
+	/* 0x0(sp) */ sceVu0IVECTOR iv;
 }
 
 /* 0019d6c8 000000ac */ void g3dCalcScreenCoord(/* s1 17 */ float *vScreenCoord, /* s0 16 */ sceGsXyz *pGsXyz) {
-	/* -0x30(sp) */ sceVu0IVECTOR iv;
+	/* rdata 3af100 */ static char __FUNCTION__[19];
+	/* 0x0(sp) */ sceVu0IVECTOR iv;
 }
 
-/* 00315630 00000008 */ void _Vu0LoadMaterialConstant(/* a0 4 */ G3DMATERIAL *pMat) {}
-/* 00315630 00000010 */ void _Vu0LoadMaterialLambert(/* a0 4 */ G3DMATERIAL *pMat) {}
-/* 00315630 0000001c */ void _Vu0LoadMaterialPhong(/* a0 4 */ G3DMATERIAL *pMat) {}
-/* 00315630 00000020 */ void _Vu0CalcColorDataConstant(/* a0 4 */ void *pCD, /* a1 5 */ void *pL) {}
-/* 00315630 00000054 */ void _Vu0CalcColorDataLambert(/* a0 4 */ void *pCD, /* a1 5 */ void *pL) {}
-/* 00315630 00000078 */ void _Vu0CalcColorDataPhong(/* a0 4 */ void *pCD, /* a1 5 */ void *pL) {}
-/* 00315630 00000014 */ void _Vu0LoadColorDataConstant(/* a0 4 */ void *pCD) {}
-/* 00315630 00000020 */ void _Vu0LoadColorDataLambert(/* a0 4 */ void *pCD) {}
-/* 00315630 0000002c */ void _Vu0LoadColorDataPhong(/* a0 4 */ void *pCD) {}
-/* 00315630 00000008 */ void _Vu0LoadColorCoeffConstant() {}
-/* 00315630 0000006c */ void _Vu0LoadColorCoeffLambert() {}
-/* 00315630 0000019c */ void _Vu0LoadColorCoeffPhong() {}
-/* 00315630 000000bc */ void _Vu0CalcVertexColorDirectinalLightConstant(/* a0 4 */ float *vDestColor) {}
-/* 00315630 000000f8 */ void _Vu0CalcVertexColorDirectinalLightLambert(/* a0 4 */ float *vDestColor) {}
-/* 00315630 00000134 */ void _Vu0CalcVertexColorDirectinalLightPhong(/* a0 4 */ float *vDestColor) {}
+/* ffffffff 00000008 */ void _Vu0LoadMaterialConstant(/* a0 4 */ G3DMATERIAL *pMat) {}
+/* ffffffff 00000010 */ void _Vu0LoadMaterialLambert(/* a0 4 */ G3DMATERIAL *pMat) {}
+/* ffffffff 0000001c */ void _Vu0LoadMaterialPhong(/* a0 4 */ G3DMATERIAL *pMat) {}
+/* ffffffff 00000020 */ void _Vu0CalcColorDataConstant(/* a0 4 */ void *pCD, /* a1 5 */ void *pL) {}
+/* ffffffff 00000054 */ void _Vu0CalcColorDataLambert(/* a0 4 */ void *pCD, /* a1 5 */ void *pL) {}
+/* ffffffff 00000078 */ void _Vu0CalcColorDataPhong(/* a0 4 */ void *pCD, /* a1 5 */ void *pL) {}
+/* ffffffff 00000014 */ void _Vu0LoadColorDataConstant(/* a0 4 */ void *pCD) {}
+/* ffffffff 00000020 */ void _Vu0LoadColorDataLambert(/* a0 4 */ void *pCD) {}
+/* ffffffff 0000002c */ void _Vu0LoadColorDataPhong(/* a0 4 */ void *pCD) {}
+/* ffffffff 00000008 */ void _Vu0LoadColorCoeffConstant() {}
+/* ffffffff 0000006c */ void _Vu0LoadColorCoeffLambert() {}
+/* ffffffff 0000019c */ void _Vu0LoadColorCoeffPhong() {}
+/* ffffffff 000000bc */ void _Vu0CalcVertexColorDirectinalLightConstant(/* a0 4 */ float *vDestColor) {}
+/* ffffffff 000000f8 */ void _Vu0CalcVertexColorDirectinalLightLambert(/* a0 4 */ float *vDestColor) {}
+/* ffffffff 00000134 */ void _Vu0CalcVertexColorDirectinalLightPhong(/* a0 4 */ float *vDestColor) {}
 /* 0019d778 0000010c */ static void _Vu0CalcVertexColorPointLightConstant(/* a0 4 */ float *vDestColor) {}
 /* 0019d888 0000014c */ static void _Vu0CalcVertexColorPointLightLambert(/* a0 4 */ float *vDestColor) {}
 /* 0019d9d8 00000188 */ static void _Vu0CalcVertexColorPointLightPhong(/* a0 4 */ float *vDestColor) {}
-/* 00315630 0000017c */ void _Vu0CalcVertexColorSpotLightConstant(/* a0 4 */ float *vDestColor) {}
-/* 00315630 000001b8 */ void _Vu0CalcVertexColorSpotLightLambert(/* a0 4 */ float *vDestColor) {}
-/* 00315630 000001f4 */ void _Vu0CalcVertexColorSpotLightPhong(/* a0 4 */ float *vDestColor) {}
+/* ffffffff 0000017c */ void _Vu0CalcVertexColorSpotLightConstant(/* a0 4 */ float *vDestColor) {}
+/* ffffffff 000001b8 */ void _Vu0CalcVertexColorSpotLightLambert(/* a0 4 */ float *vDestColor) {}
+/* ffffffff 000001f4 */ void _Vu0CalcVertexColorSpotLightPhong(/* a0 4 */ float *vDestColor) {}
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/graphics/graph3d/g3dDebug.c
 // *****************************************************************************
 
 /* 0019db60 00000124 */ static void _Assert(/* s1 17 */ char *pStr) {
-	/* -0x820(sp) */ char str[2048];
+	/* 0x0(sp) */ char str[2048];
 }
 
 /* 0019dc88 0000008c */ static void _Warning(/* s1 17 */ char *pStr) {}
 /* 0019dd18 00000014 */ static int _IsVifcodeMpg(/* a0 4 */ tVIF_CODE *pVC) {}
 
-/* 0019dd30 000000b8 */ static int _IsVifcodeUnpack() {
-	/* -0x40(sp) */ int aiVif1CommandUnpack[13];
+/* 0019dd30 000000b8 */ static int _IsVifcodeUnpack(/* a0 4 */ tVIF_CODE *pVC) {
+	/* 0x0(sp) */ int aiVif1CommandUnpack[13];
 	/* a2 6 */ int i;
 }
 
-/* 0019dde8 00000268 */ static int* _ParseDmaPacket() {
+/* 0019dde8 00000268 */ static int* _ParseDmaPacket(/* s0 16 */ tVIF_CODE *pVC) {
 	/* rdata 3af2f8 */ static char __FUNCTION__[16];
 	/* s1 17 */ int *piNext;
 	/* v1 3 */ int iNumInstruct;
 }
 
-/* 0019e050 00000070 */ void g3ddbgPrintf(/* a0 4 */ char *pStr) {}
+/* 0019e050 00000070 */ void g3ddbgPrintf(/* a0 4 */ char *pStr) {
+	/* 0x0(sp) */ char str[2048];
+}
 
 /* 0019e0c0 000001a8 */ int g3ddbgDumpMemoryCompare(/* s4 20 */ void *p0, /* s3 19 */ void *p1, /* s5 21 */ int iSize) {
 	/* s6 22 */ int bRet;
 	/* s0 16 */ int i;
 }
 
-/* 0019e268 0000006c */ void g3ddbgAssert(/* a0 4 */ bool b, /* a1 5 */ char *pStr) {}
-/* 0019e2d8 00000080 */ void g3ddbgWarning(/* a0 4 */ bool b, /* a1 5 */ char *pStr) {}
+/* 0019e268 0000006c */ void g3ddbgAssert(/* a0 4 */ bool b, /* a1 5 */ char *pStr) {
+	/* 0x0(sp) */ char str[2048];
+}
+
+/* 0019e2d8 00000080 */ void g3ddbgWarning(/* a0 4 */ bool b, /* a1 5 */ char *pStr) {
+	/* 0x0(sp) */ char str[2048];
+}
+
 /* 0019e358 0000001c */ void _SetLineInfo(/* a0 4 */ char *pFileName, /* a1 5 */ int iLine, /* a2 6 */ char *pFunctionName, /* a3 7 */ char *pExpression) {}
 /* 0019e378 0000000c */ _G3DLINEINFO& _GetLineInfo() {}
 /* 0019e388 00000028 */ void g3ddbgWaitVU1() {}
@@ -13918,8 +14209,8 @@
 /* 0019e538 00000104 */ void g3ddbgLoadVu0FloatingPointRegisters(/* a0 4 */ float *av[4]) {}
 /* 0019e640 00000104 */ void g3ddbgStoreVu0FloatingPointRegisters(/* a0 4 */ float *av[4]) {}
 
-/* 0019e748 0000014c */ void g3ddbgDumpVu0FloatingPointRegisters() {
-	/* -0x260(sp) */ float vf[32][4];
+/* 0019e748 0000014c */ void g3ddbgDumpVu0FloatingPointRegisters(/* a0 4 */ float *av[4]) {
+	/* 0x0(sp) */ float vf[32][4];
 	/* s3 19 */ int i;
 	/* s2 18 */ int j;
 	/* s1 17 */ char *pFormat;
@@ -13934,9 +14225,9 @@
 	/* rdata 3b0cd0 */ static char __FUNCTION__[30];
 }
 
-/* 0019e8a8 00000170 */ void g3ddbgVerifyVifCode() {
+/* 0019e8a8 00000170 */ void g3ddbgVerifyVifCode(/* s0 16 */ tVIF_CODE *pVC) {
 	/* rdata 3b1bf0 */ static char __FUNCTION__[20];
-	/* -0x60(sp) */ int aiVif1Command[20];
+	/* 0x0(sp) */ int aiVif1Command[20];
 	/* a1 5 */ int i;
 }
 
@@ -13948,7 +14239,11 @@
 	/* s3 19 */ int iSize;
 }
 
-/* 0019ec60 00000170 */ void g3ddbgVerifyDmaBuffer(/* a0 4 */ void *pBuffer) {}
+/* 0019ec60 00000170 */ void g3ddbgVerifyDmaBuffer(/* a0 4 */ void *pBuffer) {
+	/* rdata 3b1cc8 */ static char __FUNCTION__[22];
+	/* s1 17 */ G3DDMACHAINTAG *pDCT;
+}
+
 /* 0019edd0 000004fc */ void g3ddbgDumpVif1Stat() {}
 
 /* 0019f2d0 0000004c */ void g3ddbgDumpVif1Code() {
@@ -13958,17 +14253,17 @@
 /* 0019f320 00000008 */ void g3ddbgInfinitePrintConsole(/* a0 4 */ int b) {}
 
 /* 0019f328 000002f0 */ void g3ddbgPrintConsole(/* s0 16 */ char *pStr) {
-	/* -0x590(sp) */ char str[1024];
+	/* 0x0(sp) */ char str[1024];
 	/* s0 16 */ int frame;
-	/* -0x180(sp) */ sceVif1Packet packet;
-	/* -0x160(sp) */ sceDmaEnv env;
+	/* 0x410(sp) */ sceVif1Packet packet;
+	/* 0x430(sp) */ sceDmaEnv env;
 	/* s0 16 */ sceDmaChan *p1;
-	/* -0x140(sp) */ u_long giftagAD[2];
-	/* -0x130(sp) */ long128 buff[10];
+	/* 0x450(sp) */ u_long giftagAD[2];
+	/* 0x460(sp) */ long128 buff[10];
 }
 
 /* 00315630 00000080 */ void _strcatf(/* s0 16 */ char *strDest, /* s1 17 */ char *pStr) {
-	/* -0x80(sp) */ va_list VaList;
+	/* 0x0(sp) */ va_list VaList;
 }
 
 /* 0019f618 00000008 */ static int _VSyncCallback() {}
@@ -14000,6 +14295,7 @@
 /* 0019f8e0 0000002c */ int g3dDmaFlush() {}
 
 /* 0019f910 0000016c */ int g3dDmaCopyPacket(/* s0 16 */ void *pPacket, /* s2 18 */ int iQWSize) {
+	/* rdata 3b20e0 */ static char __FUNCTION__[17];
 	/* s1 17 */ float *pSrc[4];
 	/* s0 16 */ float *pDest[4];
 	/* a1 5 */ int i;
@@ -14009,8 +14305,8 @@
 /* 0019fab8 00000040 */ int g3dDmaSetGsRegister(/* a3 7 */ sceGifPackAd *pGPA) {}
 
 /* 0019faf8 0000010c */ int g3dDmaSetGsRegisters(/* s2 18 */ sceGifPackAd *aGPA, /* s1 17 */ int iNum) {
-	/* -0x40(sp) */ int qwVif1Code[4];
-	/* -0x30(sp) */ void gt;
+	/* 0x0(sp) */ int qwVif1Code[4];
+	/* 0x10(sp) */ void gt;
 	/* v0 2 */ int *pQW[4];
 	/* a1 5 */ int i;
 }
@@ -14030,26 +14326,26 @@
 // *****************************************************************************
 
 /* 0019fd98 000000d8 */ float g3dCalcAngle(/* a0 4 */ float *vDirection, /* a1 5 */ float *vOrigin, /* a2 6 */ float *vTarget) {
-	/* -0x30(sp) */ float vDir0[4];
-	/* -0x20(sp) */ float vDir1[4];
+	/* 0x0(sp) */ float vDir0[4];
+	/* 0x10(sp) */ float vDir1[4];
 }
 
 /* 0019fe70 00000014 */ void g3dMatrixSetPosition(/* a0 4 */ float *mat[4], /* a1 5 */ float *vPos) {
 	/* a0 4 */ float *pv0;
 }
 
-/* 0019fe88 00000190 */ void g3dMatrixSetDirection(/* a1 5 */ float *vDir, /* a2 6 */ int bFixUp) {
-	/* -0x10(sp) */ float vFixUp[4];
+/* 0019fe88 00000190 */ void g3dMatrixSetDirection(/* t0 8 */ float *mat[4], /* a1 5 */ float *vDir, /* a2 6 */ int bFixUp) {
+	/* 0x0(sp) */ float vFixUp[4];
 	/* a3 7 */ float &rvY[4];
 	/* v0 2 */ float &rvZ[4];
 }
 
-/* 001a0018 00000030 */ void g3dMatrixSetTarget(/* a1 5 */ float *vTarget, /* a2 6 */ int bFixUp) {
-	/* -0x20(sp) */ float v[4];
+/* 001a0018 00000030 */ void g3dMatrixSetTarget(/* a0 4 */ float *mat[4], /* a1 5 */ float *vTarget, /* a2 6 */ int bFixUp) {
+	/* 0x0(sp) */ float v[4];
 }
 
-/* 001a0048 00000118 */ void g3dMatrixSetRoll(/* f12 50 */ float fRoll) {
-	/* -0x70(sp) */ float matRot[4][4];
+/* 001a0048 00000118 */ void g3dMatrixSetRoll(/* s0 16 */ float *mat[4], /* f12 50 */ float fRoll) {
+	/* 0x0(sp) */ float matRot[4][4];
 	/* s1 17 */ float *pm1[4];
 	/* f0 38 */ float rz;
 	/* f12 50 */ float f;
@@ -14059,19 +14355,22 @@
 }
 
 /* 001a0160 00000040 */ float g3dMatrixGetRoll(/* a0 4 */ float *mat[4]) {}
-/* 001a01a0 00000238 */ void g3dMatrixRotationByAxis(/* a1 5 */ float *vAxis, /* f12 50 */ float fAngle) {}
 
-/* 001a03d8 00000210 */ void g3dMatrixInverseTransform(/* s2 18 */ float *matDest[4], /* s0 16 */ float *matSrc[4]) {
-	/* -0x80(sp) */ float matWork[4][4];
-	/* -0x40(sp) */ float vScale[4];
-	/* -0x30(sp) */ float vTrans[4];
+/* 001a01a0 00000238 */ void g3dMatrixRotationByAxis(/* s3 19 */ float *mat[4], /* a1 5 */ float *vAxis, /* f12 50 */ float fAngle) {
+	/* 0x0(sp) */ float matRot[4][4];
 }
 
-/* 001a05e8 0000009c */ void g3dMatrixSetColumn(/* s1 17 */ float *v, /* s0 16 */ int iCol) {
+/* 001a03d8 00000210 */ void g3dMatrixInverseTransform(/* s2 18 */ float *matDest[4], /* s0 16 */ float *matSrc[4]) {
+	/* 0x0(sp) */ float matWork[4][4];
+	/* 0x40(sp) */ float vScale[4];
+	/* 0x50(sp) */ float vTrans[4];
+}
+
+/* 001a05e8 0000009c */ void g3dMatrixSetColumn(/* s2 18 */ float *mat[4], /* s1 17 */ float *v, /* s0 16 */ int iCol) {
 	/* rdata 3b2120 */ static char __FUNCTION__[19];
 }
 
-/* 001a0688 00000094 */ void g3dMatrixSetColumnXYZ(/* s1 17 */ float *v, /* s0 16 */ int iCol) {
+/* 001a0688 00000094 */ void g3dMatrixSetColumnXYZ(/* s2 18 */ float *mat[4], /* s1 17 */ float *v, /* s0 16 */ int iCol) {
 	/* rdata 3b2168 */ static char __FUNCTION__[22];
 }
 
@@ -14083,29 +14382,29 @@
 /* 001a07e0 00000034 */ void g3dCalcPlaneFromPointNormal(/* a0 4 */ float *plane, /* a1 5 */ float *vPoint, /* v1 3 */ float *vNormal) {}
 
 /* 001a0818 00000114 */ void g3dCalcPlaneFromPoints(/* a0 4 */ float *plane, /* t0 8 */ float *vP0, /* a2 6 */ float *vP1, /* a3 7 */ float *vP2) {
-	/* -0x50(sp) */ float vNorm[4];
-	/* -0x40(sp) */ float vCross[4];
-	/* -0x30(sp) */ float vDir01[4];
-	/* -0x20(sp) */ float vDir02[4];
+	/* 0x0(sp) */ float vNorm[4];
+	/* 0x10(sp) */ float vCross[4];
+	/* 0x20(sp) */ float vDir01[4];
+	/* 0x30(sp) */ float vDir02[4];
 }
 
 /* 001a0930 00000438 */ int g3dCalcIntersectionSphereAndLine(/* s0 16 */ float *avRet[4], /* a1 5 */ float *vCenter, /* f20 58 */ float fRadius, /* a2 6 */ float *vStart, /* a3 7 */ float *vDir) {
 	/* rdata 3b21a8 */ static char __FUNCTION__[33];
-	/* -0x40(sp) */ float vStartTrans[4];
-	/* -0x30(sp) */ float vDirNormalized[4];
+	/* 0x0(sp) */ float vStartTrans[4];
+	/* 0x10(sp) */ float vDirNormalized[4];
 	/* f5 43 */ float fB;
 	/* f1 39 */ float fC;
 	/* f3 41 */ float fD;
 }
 
 /* 001a0d68 00000098 */ float g3dCalcEllipseEffectiveRadius(/* a0 4 */ float *e[4], /* a1 5 */ float *plane) {
-	/* -0x10(sp) */ float vvv[4];
+	/* 0x0(sp) */ float vvv[4];
 }
 
-/* 001a0e00 00000240 */ int g3dCalcIntersectionEllipseAndLine(/* s0 16 */ float *e[4], /* a2 6 */ float *vStart, /* a3 7 */ float *vDir) {
-	/* -0x80(sp) */ float matInv[4][4];
-	/* -0x40(sp) */ float vStartInv[4];
-	/* -0x30(sp) */ float vDirInv[4];
+/* 001a0e00 00000240 */ int g3dCalcIntersectionEllipseAndLine(/* s1 17 */ float *avRet[4], /* s0 16 */ float *e[4], /* a2 6 */ float *vStart, /* a3 7 */ float *vDir) {
+	/* 0x0(sp) */ float matInv[4][4];
+	/* 0x40(sp) */ float vStartInv[4];
+	/* 0x50(sp) */ float vDirInv[4];
 	/* a1 5 */ int iNumIntersection;
 	/* v1 3 */ int i;
 }
@@ -14147,7 +14446,7 @@
 	/* s2 18 */ int remb;
 	/* a1 5 */ int ah;
 	/* a2 6 */ int sizeb;
-	/* -0x50(sp) */ u_char tmpbuf[16];
+	/* 0x0(sp) */ u_char tmpbuf[16];
 	/* t3 11 */ u_long oldIMR;
 }
 
@@ -14170,7 +14469,7 @@
 	/* sdata 3f0c80 */ static int bOnce;
 }
 
-/* 001a2740 0000018c */ float g3dCalcLightDistanceAttenuation(/* s1 17 */ float *vVertexPosition) {
+/* 001a2740 0000018c */ float g3dCalcLightDistanceAttenuation(/* s0 16 */ G3DLIGHT *pLight, /* s1 17 */ float *vVertexPosition) {
 	/* rdata 3b2908 */ static char __FUNCTION__[32];
 	/* f20 58 */ float fScope;
 	/* f21 59 */ float fRelativeDistance1;
@@ -14178,7 +14477,8 @@
 	/* f0 38 */ float f;
 }
 
-/* 001a28d0 000000f8 */ float g3dCalcLightAttenuation(/* s1 17 */ float *vVertex) {
+/* 001a28d0 000000f8 */ float g3dCalcLightAttenuation(/* s0 16 */ G3DLIGHT *pLight, /* s1 17 */ float *vVertex) {
+	/* rdata 3b2950 */ static char __FUNCTION__[24];
 	/* f20 58 */ float fRet;
 }
 
@@ -14196,13 +14496,13 @@
 
 /* 001a2aa0 0000019c */ static int _IsBBLightingupSpot(/* s2 18 */ G3DLIGHT *pLight, /* s3 19 */ float *avBB[4]) {
 	/* rdata 3b29c0 */ static char __FUNCTION__[20];
-	/* -0x50(sp) */ float plane[4];
+	/* 0x0(sp) */ float plane[4];
 	/* s1 17 */ float *pv;
 	/* f21 59 */ float fAllowableError;
 	/* a0 4 */ int i;
 }
 
-/* 001a2c40 00000008 */ static int _IsBBLightingupPoint(/* a0 4 */ G3DLIGHT *pLight) {}
+/* 001a2c40 00000008 */ static int _IsBBLightingupPoint(/* a0 4 */ G3DLIGHT *pLight, /* a1 5 */ float *avBB[4]) {}
 /* 001a2c48 000000ac */ static void _ConvertEmulateDirectionallightDataToG3DLIGHT(/* s1 17 */ G3DLIGHT *pDest, /* s0 16 */ G3D_EMULATE_DIRECTIONALLIGHT_DATA *pEDD) {}
 
 /* 001a2cf8 00000120 */ static void _BlendEmulatedDirectionalLight(/* a0 4 */ G3D_EMULATE_DIRECTIONALLIGHT_DATA *pDest, /* a1 5 */ G3D_EMULATE_DIRECTIONALLIGHT_DATA *pSrc0, /* a2 6 */ G3D_EMULATE_DIRECTIONALLIGHT_DATA *pSrc1) {
@@ -14213,32 +14513,34 @@
 /* 001a2e18 0000022c */ static void _BlendEmulatedDirectionalLight(/* s1 17 */ G3D_EMULATE_DIRECTIONALLIGHT_DATA *pDest, /* s2 18 */ G3D_EMULATE_DIRECTIONALLIGHT_DATA *aSrc, /* s0 16 */ int iNumSrc) {
 	/* rdata 3b2a68 */ static char __FUNCTION__[31];
 	/* f20 58 */ float fTotal;
-	/* -0x40(sp) */ float vDestWork[4];
+	/* 0x0(sp) */ float vDestWork[4];
 	/* v0 2 */ int i;
 	/* v1 3 */ int i;
 	/* v1 3 */ int i;
 }
 
-/* 001a3048 00000118 */ void gra3dSetLightIntens(/* s0 16 */ G3DLIGHT *pLight, /* f20 58 */ float fIntens) {}
+/* 001a3048 00000118 */ void gra3dSetLightIntens(/* s0 16 */ G3DLIGHT *pLight, /* f20 58 */ float fIntens) {
+	/* rdata 3b2aa8 */ static char __FUNCTION__[20];
+}
 
 /* 001a3160 000002f4 */ void g3dEmulateDirectionalLight(/* s2 18 */ G3D_EMULATE_DIRECTIONALLIGHT_DATA *pEDD, /* s1 17 */ G3DLIGHT *pLight, /* s3 19 */ float *vPos) {
 	/* rdata 3b2b08 */ static char __FUNCTION__[27];
 }
 
 /* 001a3458 00000054 */ float g3dCalcLightPower(/* v0 2 */ G3DLIGHT *pLight, /* a2 6 */ float *vPos) {
-	/* -0x40(sp) */ G3D_EMULATE_DIRECTIONALLIGHT_DATA edd;
+	/* 0x0(sp) */ G3D_EMULATE_DIRECTIONALLIGHT_DATA edd;
 }
 
 /* 001a34b0 00000038 */ void gra3dEmulateDirectionalLight(/* s0 16 */ G3DLIGHT *pDest, /* a1 5 */ G3DLIGHT *pLight, /* a2 6 */ G3DLIGHTTYPE iLightType, /* a3 7 */ float *vPos) {
-	/* -0x40(sp) */ G3D_EMULATE_DIRECTIONALLIGHT_DATA edd;
+	/* 0x0(sp) */ G3D_EMULATE_DIRECTIONALLIGHT_DATA edd;
 }
 
-/* 001a34e8 0000027c */ void g3dGenerateDirectionalLightByEmulatedData(/* -0x60(sp) */ G3DLIGHT *aDest, /* s7 23 */ G3D_EMULATE_DIRECTIONALLIGHT_DATA *aSrc, /* s4 20 */ int iNumEmulated) {
+/* 001a34e8 0000027c */ void g3dGenerateDirectionalLightByEmulatedData(/* 0xa0(sp) */ G3DLIGHT *aDest, /* s7 23 */ G3D_EMULATE_DIRECTIONALLIGHT_DATA *aSrc, /* s4 20 */ int iNumEmulated) {
 	/* rdata 3b2ba0 */ static char __FUNCTION__[42];
-	/* -0x100(sp) */ G3D_EMULATE_DIRECTIONALLIGHT_DATA aTop[3];
+	/* 0x0(sp) */ G3D_EMULATE_DIRECTIONALLIGHT_DATA aTop[3];
 	/* s1 17 */ int i;
 	/* s6 22 */ int i;
-	/* -0x70(sp) */ float afCos[3];
+	/* 0x90(sp) */ float afCos[3];
 	/* v0 2 */ float *pfMax;
 	/* s1 17 */ int iIndex;
 	/* s0 16 */ int iIndex2;
@@ -14248,86 +14550,86 @@
 	/* a1 5 */ G3D_EMULATE_DIRECTIONALLIGHT_DATA &rEmuDirLight;
 }
 
-/* 001a3768 00000114 */ int g3dIsBBLightingup(/* s2 18 */ G3DLIGHT *pLight) {
+/* 001a3768 00000114 */ int g3dIsBBLightingup(/* s2 18 */ G3DLIGHT *pLight, /* s3 19 */ float *avBB[4]) {
 	/* rdata 3b2bf8 */ static char __FUNCTION__[18];
-	/* -0x40(sp) */ LPFUNC_ISBBLIGHTINGUP aFunc[3];
+	/* 0x0(sp) */ LPFUNC_ISBBLIGHTINGUP aFunc[3];
 	/* v1 3 */ LPFUNC_ISBBLIGHTINGUP pFunc;
 }
 
-/* 001a3880 000001ec */ void g3dSortLightForBoundingBoxByPowerOrder(/* s5 21 */ int iNum, /* s7 23 */ LIGHTCOMPAREDATA *aCD, /* a2 6 */ G3DLIGHT **apLightSrc) {
+/* 001a3880 000001ec */ void g3dSortLightForBoundingBoxByPowerOrder(/* s5 21 */ int iNum, /* s7 23 */ LIGHTCOMPAREDATA *aCD, /* a2 6 */ G3DLIGHT **apLightSrc, /* fp 30 */ float *avBB[4]) {
 	/* rdata 3b2c80 */ static char __FUNCTION__[39];
 	/* s6 22 */ G3DLIGHTTYPE lt;
 	/* s3 19 */ int i;
 	/* s0 16 */ G3DLIGHT *pL;
 	/* f1 39 */ float colscale;
 	/* f1 39 */ float spower;
-	/* -0x60(sp) */ LIGHTCOMPAREDATA *__first;
+	/* 0x0(sp) */ LIGHTCOMPAREDATA *__first;
 	/* s0 16 */ LIGHTCOMPAREDATA *__last;
-	/* -0x5c(sp) */ greater __comp;
+	/* 0x4(sp) */ greater __comp;
 }
 
 /* 001a3a70 0000018c */ void g3dBlendLight(/* s5 21 */ G3DLIGHT *pLight, /* s0 16 */ G3DLIGHT **apSrc, /* s6 22 */ int iNumSrc, /* s7 23 */ float *vTarget) {
 	/* rdata 3b2ce0 */ static char __FUNCTION__[14];
-	/* -0x1a0(sp) */ G3D_EMULATE_DIRECTIONALLIGHT_DATA EDDDest;
-	/* -0x170(sp) */ G3D_EMULATE_DIRECTIONALLIGHT_DATA aEDDSrc[6];
+	/* 0x0(sp) */ G3D_EMULATE_DIRECTIONALLIGHT_DATA EDDDest;
+	/* 0x30(sp) */ G3D_EMULATE_DIRECTIONALLIGHT_DATA aEDDSrc[6];
 	/* s1 17 */ int i;
 }
 
-/* 00315670 00000044 */ float* float * max_element<float *>(/* a0 4 */ float *__first, /* a1 5 */ float *__last) {
+/* ffffffff 00000044 */ float* float * max_element<float *>(/* a0 4 */ float *__first, /* a1 5 */ float *__last) {
 	/* v0 2 */ float *__result;
 }
 
-/* 00315670 00000060 */ int int indexof<float>(/* a0 4 */ float *arraytop, /* a1 5 */ float *obj) {
+/* ffffffff 00000060 */ int int indexof<float>(/* a0 4 */ float *arraytop, /* a1 5 */ float *obj) {
 	/* sdata 3f0cf0 */ static char __FUNCTION__[8];
 }
 
-/* 00315670 000001c4 */ void void __introsort_loop<LIGHTCOMPAREDATA *, LIGHTCOMPAREDATA, int, LIGHTCOMPAREDATA::greater>(/* s0 16 */ LIGHTCOMPAREDATA *__first, /* s1 17 */ LIGHTCOMPAREDATA *__last, /* s2 18 */ int __depth_limit, /* -0x60(sp) */ greater __comp) {
+/* ffffffff 000001c4 */ void void __introsort_loop<LIGHTCOMPAREDATA *, LIGHTCOMPAREDATA, int, LIGHTCOMPAREDATA::greater>(/* s0 16 */ LIGHTCOMPAREDATA *__first, /* s1 17 */ LIGHTCOMPAREDATA *__last, /* s2 18 */ int __depth_limit, /* 0x0(sp) */ greater __comp) {
 	/* v0 2 */ LIGHTCOMPAREDATA *__cut;
 	/* v0 2 */ LIGHTCOMPAREDATA &__b;
 	/* a1 5 */ LIGHTCOMPAREDATA &__c;
-	/* -0x40(sp) */ greater __comp;
+	/* 0x20(sp) */ greater __comp;
 }
 
-/* 00315670 0000008c */ void void __final_insertion_sort<LIGHTCOMPAREDATA *, LIGHTCOMPAREDATA::greater>(/* a3 7 */ LIGHTCOMPAREDATA *__first, /* s1 17 */ LIGHTCOMPAREDATA *__last, /* -0x30(sp) */ greater __comp) {}
-/* 00315670 000000e8 */ LIGHTCOMPAREDATA* LIGHTCOMPAREDATA * __unguarded_partition<LIGHTCOMPAREDATA *, LIGHTCOMPAREDATA, LIGHTCOMPAREDATA::greater>(/* a0 4 */ LIGHTCOMPAREDATA *__first, /* a1 5 */ LIGHTCOMPAREDATA *__last, /* a3 7 */ LIGHTCOMPAREDATA __pivot, /* -0x20(sp) */ greater __comp) {}
+/* ffffffff 0000008c */ void void __final_insertion_sort<LIGHTCOMPAREDATA *, LIGHTCOMPAREDATA::greater>(/* a3 7 */ LIGHTCOMPAREDATA *__first, /* s1 17 */ LIGHTCOMPAREDATA *__last, /* 0x0(sp) */ greater __comp) {}
+/* ffffffff 000000e8 */ LIGHTCOMPAREDATA* LIGHTCOMPAREDATA * __unguarded_partition<LIGHTCOMPAREDATA *, LIGHTCOMPAREDATA, LIGHTCOMPAREDATA::greater>(/* a0 4 */ LIGHTCOMPAREDATA *__first, /* a1 5 */ LIGHTCOMPAREDATA *__last, /* a3 7 */ LIGHTCOMPAREDATA __pivot, /* 0x10(sp) */ greater __comp) {}
 
-/* 00315670 00000130 */ void void __partial_sort<LIGHTCOMPAREDATA *, LIGHTCOMPAREDATA, LIGHTCOMPAREDATA::greater>(/* -0x60(sp) */ LIGHTCOMPAREDATA *__first, /* s1 17 */ LIGHTCOMPAREDATA *__middle, /* s3 19 */ LIGHTCOMPAREDATA *__last, /* -0x5c(sp) */ greater __comp) {
+/* ffffffff 00000130 */ void void __partial_sort<LIGHTCOMPAREDATA *, LIGHTCOMPAREDATA, LIGHTCOMPAREDATA::greater>(/* 0x0(sp) */ LIGHTCOMPAREDATA *__first, /* s1 17 */ LIGHTCOMPAREDATA *__middle, /* s3 19 */ LIGHTCOMPAREDATA *__last, /* 0x4(sp) */ greater __comp) {
 	/* s0 16 */ LIGHTCOMPAREDATA *__i;
-	/* -0x50(sp) */ LIGHTCOMPAREDATA __value;
-	/* -0x40(sp) */ greater __comp;
+	/* 0x10(sp) */ LIGHTCOMPAREDATA __value;
+	/* 0x20(sp) */ greater __comp;
 }
 
-/* 00315670 00000130 */ void void __insertion_sort<LIGHTCOMPAREDATA *, LIGHTCOMPAREDATA::greater>(/* -0x50(sp) */ LIGHTCOMPAREDATA *__first, /* s1 17 */ LIGHTCOMPAREDATA *__last, /* -0x4c(sp) */ greater __comp) {
+/* ffffffff 00000130 */ void void __insertion_sort<LIGHTCOMPAREDATA *, LIGHTCOMPAREDATA::greater>(/* 0x0(sp) */ LIGHTCOMPAREDATA *__first, /* s1 17 */ LIGHTCOMPAREDATA *__last, /* 0x4(sp) */ greater __comp) {
 	/* s0 16 */ LIGHTCOMPAREDATA *__i;
 	/* a2 6 */ LIGHTCOMPAREDATA *__first;
-	/* -0x4b(sp) */ greater __comp;
-	/* -0x40(sp) */ LIGHTCOMPAREDATA __val;
+	/* 0x5(sp) */ greater __comp;
+	/* 0x10(sp) */ LIGHTCOMPAREDATA __val;
 	/* a1 5 */ LIGHTCOMPAREDATA *__last;
 	/* v1 3 */ LIGHTCOMPAREDATA *__result;
 	/* v0 2 */ ptrdiff_t __n;
 }
 
-/* 00315670 00000074 */ void void __unguarded_insertion_sort_aux<LIGHTCOMPAREDATA *, LIGHTCOMPAREDATA, LIGHTCOMPAREDATA::greater>(/* a0 4 */ LIGHTCOMPAREDATA *__first, /* s1 17 */ LIGHTCOMPAREDATA *__last, /* -0x40(sp) */ greater __comp) {
+/* ffffffff 00000074 */ void void __unguarded_insertion_sort_aux<LIGHTCOMPAREDATA *, LIGHTCOMPAREDATA, LIGHTCOMPAREDATA::greater>(/* a0 4 */ LIGHTCOMPAREDATA *__first, /* s1 17 */ LIGHTCOMPAREDATA *__last, /* 0x0(sp) */ greater __comp) {
 	/* s0 16 */ LIGHTCOMPAREDATA *__i;
 }
 
-/* 00315670 00000100 */ void void sort_heap<LIGHTCOMPAREDATA *, LIGHTCOMPAREDATA::greater>(/* s1 17 */ LIGHTCOMPAREDATA *__first, /* s2 18 */ LIGHTCOMPAREDATA *__last, /* -0x80(sp) */ greater __comp) {}
+/* ffffffff 00000100 */ void void sort_heap<LIGHTCOMPAREDATA *, LIGHTCOMPAREDATA::greater>(/* s1 17 */ LIGHTCOMPAREDATA *__first, /* s2 18 */ LIGHTCOMPAREDATA *__last, /* 0x0(sp) */ greater __comp) {}
 
-/* 00315670 000000c4 */ void void __make_heap<LIGHTCOMPAREDATA *, LIGHTCOMPAREDATA::greater, LIGHTCOMPAREDATA, int>(/* s3 19 */ LIGHTCOMPAREDATA *__first, /* a1 5 */ LIGHTCOMPAREDATA *__last, /* -0x50(sp) */ greater __comp) {
+/* ffffffff 000000c4 */ void void __make_heap<LIGHTCOMPAREDATA *, LIGHTCOMPAREDATA::greater, LIGHTCOMPAREDATA, int>(/* s3 19 */ LIGHTCOMPAREDATA *__first, /* a1 5 */ LIGHTCOMPAREDATA *__last, /* 0x0(sp) */ greater __comp) {
 	/* s0 16 */ ptrdiff_t __parent;
 }
 
-/* 00315670 00000118 */ void void __adjust_heap<LIGHTCOMPAREDATA *, int, LIGHTCOMPAREDATA, LIGHTCOMPAREDATA::greater>(/* t1 9 */ LIGHTCOMPAREDATA *__first, /* a1 5 */ int __holeIndex, /* a2 6 */ int __len, /* a3 7 */ LIGHTCOMPAREDATA __value, /* -0x20(sp) */ greater __comp) {
+/* ffffffff 00000118 */ void void __adjust_heap<LIGHTCOMPAREDATA *, int, LIGHTCOMPAREDATA, LIGHTCOMPAREDATA::greater>(/* t1 9 */ LIGHTCOMPAREDATA *__first, /* a1 5 */ int __holeIndex, /* a2 6 */ int __len, /* a3 7 */ LIGHTCOMPAREDATA __value, /* 0x10(sp) */ greater __comp) {
 	/* t2 10 */ int __topIndex;
 	/* a3 7 */ int __secondChild;
 	/* v0 2 */ LIGHTCOMPAREDATA &__X;
 }
 
-/* 00315670 00000090 */ void void __unguarded_linear_insert<LIGHTCOMPAREDATA *, LIGHTCOMPAREDATA, LIGHTCOMPAREDATA::greater>(/* a0 4 */ LIGHTCOMPAREDATA *__last, /* a3 7 */ LIGHTCOMPAREDATA __val, /* -0x10(sp) */ greater __comp) {
+/* ffffffff 00000090 */ void void __unguarded_linear_insert<LIGHTCOMPAREDATA *, LIGHTCOMPAREDATA, LIGHTCOMPAREDATA::greater>(/* a0 4 */ LIGHTCOMPAREDATA *__last, /* a3 7 */ LIGHTCOMPAREDATA __val, /* 0x10(sp) */ greater __comp) {
 	/* v0 2 */ LIGHTCOMPAREDATA *__next;
 }
 
-/* 00315670 000000e4 */ void void __push_heap<LIGHTCOMPAREDATA *, int, LIGHTCOMPAREDATA, LIGHTCOMPAREDATA::greater>(/* t1 9 */ LIGHTCOMPAREDATA *__first, /* a1 5 */ int __holeIndex, /* a2 6 */ int __topIndex, /* t2 10 */ LIGHTCOMPAREDATA __value, /* -0x10(sp) */ greater __comp) {
+/* ffffffff 000000e4 */ void void __push_heap<LIGHTCOMPAREDATA *, int, LIGHTCOMPAREDATA, LIGHTCOMPAREDATA::greater>(/* t1 9 */ LIGHTCOMPAREDATA *__first, /* a1 5 */ int __holeIndex, /* a2 6 */ int __topIndex, /* t2 10 */ LIGHTCOMPAREDATA __value, /* 0x10(sp) */ greater __comp) {
 	/* v1 3 */ int __parent;
 }
 
@@ -14341,6 +14643,7 @@
 }
 
 /* 001a3e38 00000238 */ float g3dCosf(/* f20 58 */ float f) {
+	/* sdata 3f0d10 */ static char __FUNCTION__[8];
 	/* f20 58 */ float fRet;
 }
 
@@ -14355,13 +14658,17 @@
 }
 
 /* 001a4408 00000278 */ float g3dAcosf(/* f12 50 */ float f) {
+	/* rdata 3b2e28 */ static char __FUNCTION__[9];
 	/* f20 58 */ float fRet;
 	/* f0 38 */ float min;
 }
 
-/* 001a4680 000000ec */ float g3dLogf2(/* f21 59 */ float fBase, /* f20 58 */ float f) {}
+/* 001a4680 000000ec */ float g3dLogf2(/* f21 59 */ float fBase, /* f20 58 */ float f) {
+	/* rdata 3b2e38 */ static char __FUNCTION__[9];
+}
 
 /* 001a4770 00000134 */ int g3dLogi2(/* s3 19 */ int iBase, /* s1 17 */ int i) {
+	/* rdata 3b2e68 */ static char __FUNCTION__[9];
 	/* s2 18 */ int iRet;
 	/* s0 16 */ int iWork;
 }
@@ -14382,7 +14689,10 @@
 	/* a0 4 */ CAutoTransform<G3DTS_VIEW> *this;
 }
 
-/* 001a4968 000000c8 */ void CRenderTarget::~CRenderTarget(/* s2 18 */ CRenderTarget *this, /* s4 20 */ int __in_chrg) {}
+/* 001a4968 000000c8 */ void CRenderTarget::~CRenderTarget(/* s2 18 */ CRenderTarget *this, /* s4 20 */ int __in_chrg) {
+	/* s1 17 */ CAutoTransform<G3DTS_VIEW> *this;
+	/* s3 19 */ CAutoGsRegisters<3> *this;
+}
 
 /* 001a4a30 00000078 */ int CRenderTarget::Create(/* s1 17 */ CRenderTarget *this, /* s0 16 */ RENDERTARGETCREATIONDATA *pCD) {
 	/* sdata 3f0d30 */ static char __FUNCTION__[7];
@@ -14391,21 +14701,24 @@
 /* 001a4aa8 00000214 */ void CRenderTarget::Begin(/* s1 17 */ CRenderTarget *this) {
 	/* s0 16 */ int iWidth;
 	/* v0 2 */ int iHeight;
-	/* -0x90(sp) */ sceGifPackAd aGPA0[3];
+	/* 0x0(sp) */ sceGifPackAd aGPA0[3];
+	/* s3 19 */ CAutoGsRegisters<3> *this;
 	/* s4 20 */ sceGifPackAd *aGPA;
 	/* s1 17 */ int i;
 }
 
-/* 001a4cc0 000000d0 */ void CRenderTarget::End(/* a0 4 */ CRenderTarget *this) {}
+/* 001a4cc0 000000d0 */ void CRenderTarget::End(/* a0 4 */ CRenderTarget *this) {
+	/* s2 18 */ CAutoGsRegisters<3> *this;
+}
 
 /* 001a4d90 00000218 */ void CRenderTarget::Clear(/* s3 19 */ CRenderTarget *this, /* a1 5 */ G3DCOLOR Color) {
 	/* s0 16 */ int iHeight;
 	/* s1 17 */ int iWidth;
-	/* -0x130(sp) */ long unsigned int ulScissor;
+	/* 0x0(sp) */ long unsigned int ulScissor;
 	/* f21 59 */ float fScreenWidthHalf;
 	/* f20 58 */ float fScreenHeightHalf;
-	/* -0x120(sp) */ CSprite sprite;
-	/* -0xa0(sp) */ G3DSPRITEDATA spritedata;
+	/* 0x10(sp) */ CSprite sprite;
+	/* 0x90(sp) */ G3DSPRITEDATA spritedata;
 }
 
 /* 001a4fa8 0000001c */ void CRenderTarget::Clear(/* a0 4 */ CRenderTarget *this) {}
@@ -14413,20 +14726,20 @@
 /* 001a5010 00000054 */ void CRenderTarget::SetHeight(/* s0 16 */ CRenderTarget *this, /* a1 5 */ int iHeight) {}
 /* 001a5068 00000020 */ int CRenderTarget::GetWidth(/* a0 4 */ CRenderTarget *this) {}
 /* 001a5088 00000020 */ int CRenderTarget::GetHeight(/* a0 4 */ CRenderTarget *this) {}
-/* 00315670 0000004c */ type_info& IAutoState type_info function() {}
-/* 00315670 00000034 */ void IAutoState::~IAutoState(/* a0 4 */ IAutoState *this, /* a1 5 */ int __in_chrg) {}
-/* 00315670 00000050 */ type_info& CAutoGsRegisters<3> type_info function() {}
-/* 00315670 00000050 */ type_info& CAutoTransform<0> type_info function() {}
-/* 00315670 0000004c */ type_info& CRenderTarget type_info function() {}
-/* 00315670 00000008 */ void CRenderTarget::SetClearColor(/* a0 4 */ CRenderTarget *this, /* a1 5 */ G3DCOLOR Color) {}
-/* 00315670 00000008 */ sceGsTex0& CRenderTarget::GetGsTex0Ref(/* a0 4 */ CRenderTarget *this) {}
-/* 00315670 0000003c */ type_info& CSprite type_info function() {}
-/* 00315670 00000034 */ void CSprite::~CSprite(/* a0 4 */ CSprite *this, /* a1 5 */ int __in_chrg) {}
-/* 00315670 00000074 */ void CAutoGsRegisters<3>::~CAutoGsRegisters(/* s1 17 */ int __in_chrg) {}
-/* 00315670 00000074 */ void CAutoTransform<0>::~CAutoTransform(/* s1 17 */ int __in_chrg) {}
-/* 00315670 000000d0 */ void CAutoGsRegisters<3>::Pop() {}
-/* 00315670 000000cc */ void CAutoTransform<0>::Pop() {}
-/* 00315670 0000003c */ type_info& IG3DCompatible type_info function() {}
+/* ffffffff 0000004c */ type_info& IAutoState type_info function() {}
+/* ffffffff 00000034 */ void IAutoState::~IAutoState(/* a0 4 */ IAutoState *this, /* a1 5 */ int __in_chrg) {}
+/* ffffffff 00000050 */ type_info& CAutoGsRegisters<3> type_info function() {}
+/* ffffffff 00000050 */ type_info& CAutoTransform<0> type_info function() {}
+/* ffffffff 0000004c */ type_info& CRenderTarget type_info function() {}
+/* ffffffff 00000008 */ void CRenderTarget::SetClearColor(/* a0 4 */ CRenderTarget *this, /* a1 5 */ G3DCOLOR Color) {}
+/* ffffffff 00000008 */ sceGsTex0& CRenderTarget::GetGsTex0Ref(/* a0 4 */ CRenderTarget *this) {}
+/* ffffffff 0000003c */ type_info& CSprite type_info function() {}
+/* ffffffff 00000034 */ void CSprite::~CSprite(/* a0 4 */ CSprite *this, /* a1 5 */ int __in_chrg) {}
+/* ffffffff 00000074 */ void CAutoGsRegisters<3>::~CAutoGsRegisters(/* s0 16 */ CAutoGsRegisters<3> *this, /* s1 17 */ int __in_chrg) {}
+/* ffffffff 00000074 */ void CAutoTransform<0>::~CAutoTransform(/* s0 16 */ CAutoTransform<G3DTS_VIEW> *this, /* s1 17 */ int __in_chrg) {}
+/* ffffffff 000000d0 */ void CAutoGsRegisters<3>::Pop(/* s2 18 */ CAutoGsRegisters<3> *this) {}
+/* ffffffff 000000cc */ void CAutoTransform<0>::Pop(/* s2 18 */ CAutoTransform<G3DTS_VIEW> *this) {}
+/* ffffffff 0000003c */ type_info& IG3DCompatible type_info function() {}
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/graphics/graph3d/g3dSprite.cpp
@@ -14441,14 +14754,17 @@
 	/* a1 5 */ int iRegs1;
 	/* s2 18 */ int iRegs3;
 	/* t0 8 */ int iRegs4;
-	/* -0xa0(sp) */ float vScreenCoordLT[4];
-	/* -0x80(sp) */ float vScreenCoordRB[4];
+	/* 0x0(sp) */ float vScreenCoordLT[4];
+	/* 0x20(sp) */ float vScreenCoordRB[4];
 }
 
 /* 001a5390 000001c8 */ void CSprite::Draw(/* s0 16 */ CSprite *this) {
 	/* a2 6 */ PACKETHEADER *pHeader;
 	/* a1 5 */ GIFPACKET_WITHOUTTEXTURE *pGifPacket;
 }
+
+/* ffffffff 0000003c */ type_info& CSprite type_info function() {}
+/* ffffffff 00000034 */ void CSprite::~CSprite(/* a0 4 */ CSprite *this, /* a1 5 */ int __in_chrg) {}
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/graphics/graph3d/g3dTexture.cpp
@@ -14461,13 +14777,13 @@
 }
 
 /* 001a5640 0000002c */ void CTexture::PreLoad(/* a0 4 */ CTexture *this) {}
-/* 00315670 0000003c */ type_info& IG3DResource type_info function() {}
-/* 00315670 00000034 */ void IG3DResource::~IG3DResource(/* a0 4 */ IG3DResource *this, /* a1 5 */ int __in_chrg) {}
-/* 00315670 00000008 */ void IG3DResource::PreLoad(/* a0 4 */ IG3DResource *this) {}
-/* 00315670 0000004c */ type_info& CTexture type_info function() {}
-/* 00315670 00000034 */ void CTexture::~CTexture(/* a0 4 */ CTexture *this, /* a1 5 */ int __in_chrg) {}
-/* 00315670 00000008 */ G3DTEXTUREDATA& CTexture::GetTextureDataRef(/* a0 4 */ CTexture *this) {}
-/* 00315670 00000008 */ unsigned char* CTexture::GetImage(/* a0 4 */ CTexture *this) {}
+/* ffffffff 0000003c */ type_info& IG3DResource type_info function() {}
+/* ffffffff 00000034 */ void IG3DResource::~IG3DResource(/* a0 4 */ IG3DResource *this, /* a1 5 */ int __in_chrg) {}
+/* ffffffff 00000008 */ void IG3DResource::PreLoad(/* a0 4 */ IG3DResource *this) {}
+/* ffffffff 0000004c */ type_info& CTexture type_info function() {}
+/* ffffffff 00000034 */ void CTexture::~CTexture(/* a0 4 */ CTexture *this, /* a1 5 */ int __in_chrg) {}
+/* ffffffff 00000008 */ G3DTEXTUREDATA& CTexture::GetTextureDataRef(/* a0 4 */ CTexture *this) {}
+/* ffffffff 00000008 */ unsigned char* CTexture::GetImage(/* a0 4 */ CTexture *this) {}
 /* 00315670 00000008 */ int CTexture::GetSize(/* a0 4 */ CTexture *this) {}
 
 // *****************************************************************************
@@ -14477,11 +14793,11 @@
 /* 001a5670 000002c0 */ static void _GetVif1CmdInfo(/* s4 20 */ _VIF1CMDINFO *pRet, /* s3 19 */ G3DVIF1CMDDATA *pVCD) {
 	/* rdata 3b30a0 */ static char __FUNCTION__[16];
 	/* s0 16 */ G3DVIF1REGISTERLAYOUT_DIRECT &rVRL;
-	/* -0x150(sp) */ _VIF1CMDINFO aVCI[10];
+	/* 0x0(sp) */ _VIF1CMDINFO aVCI[10];
 	/* a0 4 */ int i;
 }
 
-/* 001a5930 00000178 */ static int _UpdateValue(/* a2 6 */ _VIF1CMDINFO *pVCI) {
+/* 001a5930 00000178 */ static int _UpdateValue(/* a2 6 */ _VIF1CMDINFO *pVCI, /* t1 9 */ G3DVIF1CMDDATA *pVCD) {
 	/* rdata 3b30c0 */ static char __FUNCTION__[13];
 }
 
@@ -14493,12 +14809,12 @@
 	/* rdata 3b3198 */ static char __FUNCTION__[19];
 	/* s4 20 */ unsigned int &rauiPacket[1];
 	/* s2 18 */ int iWSize;
-	/* -0x80(sp) */ unsigned int auiDefaultVif1Code[2];
+	/* 0x0(sp) */ unsigned int auiDefaultVif1Code[2];
 	/* v1 3 */ int iFraction;
 	/* a0 4 */ int i;
 	/* s3 19 */ int i;
 	/* s0 16 */ G3DVIF1CMDDATA &rVCD;
-	/* -0x70(sp) */ _VIF1CMDINFO VCI;
+	/* 0x10(sp) */ _VIF1CMDINFO VCI;
 	/* a0 4 */ int j;
 	/* v1 3 */ int i;
 }
@@ -14532,9 +14848,9 @@
 /* 001a60f0 0000001c */ void GalleryEnd() {}
 
 /* 001a6110 000002d8 */ static void GalleryTopPad() {
-	/* -0x70(sp) */ int pic_num[3];
-	/* -0x60(sp) */ int pic_mode[3];
-	/* -0x50(sp) */ int mov_no[5];
+	/* 0x0(sp) */ int pic_num[3];
+	/* 0x10(sp) */ int pic_mode[3];
+	/* 0x20(sp) */ int mov_no[5];
 	/* a0 4 */ int ncsr;
 	/* s0 16 */ int end_flg;
 }
@@ -14549,7 +14865,7 @@
 /* 001a66c0 00000068 */ void GalPK2SendVram(/* s0 16 */ int tex_id, /* a1 5 */ void *tex_addr) {}
 
 /* 001a6728 00000094 */ int GalPictureLoadReq(/* a0 4 */ int id, /* a1 5 */ int no) {
-	/* -0x30(sp) */ int pic_top[3];
+	/* 0x0(sp) */ int pic_top[3];
 	/* s0 16 */ int file_no;
 }
 
@@ -14584,58 +14900,58 @@
 }
 
 /* 001a6d78 00000380 */ void GalleryDispTop() {
-	/* -0x1a0(sp) */ SQAR_DAT SqarDat;
-	/* -0x180(sp) */ DISP_SQAR DispSqar;
-	/* -0x100(sp) */ DISP_SPRT spr;
+	/* 0x0(sp) */ SQAR_DAT SqarDat;
+	/* 0x20(sp) */ DISP_SQAR DispSqar;
+	/* 0xa0(sp) */ DISP_SPRT spr;
 	/* s0 16 */ int i;
 	/* s2 18 */ int alpha;
 }
 
 /* 001a70f8 000000d8 */ void GalleryDispView() {
-	/* -0xc0(sp) */ DISP_SPRT spr;
+	/* 0x0(sp) */ DISP_SPRT spr;
 	/* s1 17 */ int i;
 	/* s0 16 */ int alpha;
 }
 
 /* 001a71d0 00000184 */ static void GalDispPicture(/* s1 17 */ int alp) {
-	/* -0xb0(sp) */ DISP_SPRT spr;
+	/* 0x0(sp) */ DISP_SPRT spr;
 }
 
 /* 001a7358 000001b4 */ static void GalDispViewPage(/* s1 17 */ int alp) {
-	/* -0xc0(sp) */ DISP_SPRT spr;
+	/* 0x0(sp) */ DISP_SPRT spr;
 }
 
 /* 001a7510 00000008 */ void GalleryDispMovie() {}
 
 /* 001a7518 000003e4 */ static void GalDispMenuCsr(/* s5 21 */ int csr, /* s4 20 */ int alp) {
-	/* -0x1f0(sp) */ int pic_menu_sp_no[3];
-	/* -0x1e0(sp) */ int mov_menu_sp_no[5];
-	/* -0x1c0(sp) */ int csr_pos_left[8];
-	/* -0x1a0(sp) */ int csr_pos_right[8][5];
-	/* -0x100(sp) */ int csr_pos_y[8];
+	/* 0x0(sp) */ int pic_menu_sp_no[3];
+	/* 0x10(sp) */ int mov_menu_sp_no[5];
+	/* 0x30(sp) */ int csr_pos_left[8];
+	/* 0x50(sp) */ int csr_pos_right[8][5];
+	/* 0xf0(sp) */ int csr_pos_y[8];
 	/* s0 16 */ SPRT_DAT *spp;
-	/* -0xe0(sp) */ DISP_SPRT spr;
+	/* 0x110(sp) */ DISP_SPRT spr;
 	/* s2 18 */ int i;
 }
 
 /* 001a7900 000000bc */ static void GalDispTitle(/* a0 4 */ int place, /* a1 5 */ int mx, /* a2 6 */ int my, /* s2 18 */ int alp) {
-	/* -0xb0(sp) */ DISP_SPRT spr;
+	/* 0x0(sp) */ DISP_SPRT spr;
 	/* s0 16 */ int i;
 }
 
 /* 001a79c0 00000044 */ static void GalDispCaption(/* a0 4 */ int place, /* v0 2 */ int alp) {}
 
 /* 001a7a08 0000017c */ static void GalDispWinMsg(/* s3 19 */ int csr, /* s4 20 */ int alp) {
-	/* -0xf0(sp) */ int msg_id[10];
+	/* 0x0(sp) */ int msg_id[10];
 	/* s0 16 */ SPRT_DAT *spp;
-	/* -0xc0(sp) */ DISP_SPRT spr;
+	/* 0x30(sp) */ DISP_SPRT spr;
 	/* s1 17 */ int i;
 }
 
 /* 001a7b88 000001cc */ static void GalDispBgMask(/* s3 19 */ int alp) {
-	/* -0x170(sp) */ DISP_SQAR DispSqar;
-	/* -0xf0(sp) */ SQAR_DAT SqarDat;
-	/* -0xd0(sp) */ DISP_SPRT spr;
+	/* 0x0(sp) */ DISP_SQAR DispSqar;
+	/* 0x80(sp) */ SQAR_DAT SqarDat;
+	/* 0xa0(sp) */ DISP_SPRT spr;
 	/* s1 17 */ int i;
 }
 
@@ -14679,7 +14995,7 @@
 }
 
 /* 001a83e8 00000054 */ static void GameDataSaveMcCheckInit() {
-	/* -0x50(sp) */ char path_name[55];
+	/* 0x0(sp) */ char path_name[55];
 }
 
 /* 001a8440 00000154 */ static void GameDataSaveMcCheckWait() {
@@ -14688,6 +15004,7 @@
 
 /* 001a8598 00000094 */ static void GameDataSaveMcHeadLoadInit() {
 	/* s0 16 */ int size;
+	/* 0x0(sp) */ char path_name[55];
 }
 
 /* 001a8630 000001b8 */ static void GameDataSaveMcHeadLoadWait() {
@@ -14717,18 +15034,20 @@
 
 /* 001a8e28 00000098 */ static void GameDataSaveMcSystemLoadInit() {
 	/* s0 16 */ int size;
+	/* 0x0(sp) */ char path_name[55];
 }
 
 /* 001a8ec0 00000194 */ static void GameDataSaveMcSystemLoadWait() {
 	/* s1 17 */ int mc_res;
 	/* s0 16 */ int size;
-	/* -0x80(sp) */ CLEAR_FLG_CTRL buff_flg_ctrl;
+	/* 0x0(sp) */ CLEAR_FLG_CTRL buff_flg_ctrl;
 }
 
 /* 001a9058 0000029c */ static void GameDataSaveMcSaveInit() {
 	/* rdata 3b3718 */ static char __FUNCTION__[23];
 	/* sbss 3f4c68 */ static reference_fixed_array<int,3> save_file_label;
 	/* s1 17 */ int size;
+	/* 0x0(sp) */ char path_name[55];
 }
 
 /* 001a92f8 0000008c */ static void GameDataSaveMcSaveWait() {
@@ -14767,8 +15086,10 @@
 }
 
 /* 001a9a68 00000284 */ static void GameDataSaveMcNewMakeSaveInit() {
+	/* rdata 3b3778 */ static char __FUNCTION__[30];
 	/* sbss 3f4c70 */ static reference_fixed_array<int,3> save_file_label;
 	/* s2 18 */ int size;
+	/* 0x0(sp) */ char path_name[55];
 }
 
 /* 001a9cf0 0000008c */ static void GameDataSaveMcNewMakeSaveWait() {
@@ -14804,7 +15125,7 @@
 /* 001aa1b8 00000018 */ static void GameDataSaveDispInit() {}
 
 /* 001aa1d0 00000224 */ void GameDataSaveDispMain() {
-	/* -0x40(sp) */ u_char rgb;
+	/* 0x0(sp) */ u_char rgb;
 	/* s1 17 */ u_char alpha;
 }
 
@@ -14858,13 +15179,13 @@
 
 /* 001aabf8 00000304 */ static void GameResultBgDisp(/* s0 16 */ int off_x, /* s1 17 */ int off_y, /* s2 18 */ u_char alpha) {
 	/* rdata 3b39c8 */ static char __FUNCTION__[17];
-	/* -0xd0(sp) */ DISP_SPRT bg_ds;
+	/* 0x0(sp) */ DISP_SPRT bg_ds;
 	/* s0 16 */ int i;
 }
 
 /* 001aaf00 00000080 */ static void GameResultFadeBlackBgDisp(/* a0 4 */ int off_x, /* a1 5 */ int off_y, /* a2 6 */ u_char alpha) {
-	/* -0xb0(sp) */ DISP_SQAR dsq;
-	/* -0x30(sp) */ SQAR_DAT black_bg;
+	/* 0x0(sp) */ DISP_SQAR dsq;
+	/* 0x80(sp) */ SQAR_DAT black_bg;
 }
 
 /* 001aaf80 00000050 */ void init_GameResult() {}
@@ -14925,44 +15246,44 @@
 
 /* 001abc00 0000018c */ static float GameResultTopLineAnimCtrl(/* s1 17 */ char *anim_step, /* s0 16 */ char *anim_timer) {
 	/* rdata 3b3b88 */ static char __FUNCTION__[26];
-	/* -0x50(sp) */ POS_ANIM_TBL line_pos_tbl[2];
+	/* 0x0(sp) */ POS_ANIM_TBL line_pos_tbl[2];
 	/* f2 40 */ float end_pos;
 	/* s2 18 */ short int end_time;
 	/* f20 58 */ float pos;
 }
 
 /* 001abd90 000000b0 */ static void GameResultTopTitleDisp(/* a0 4 */ int off_x, /* a1 5 */ int off_y, /* s2 18 */ u_char alpha) {
-	/* -0xc0(sp) */ DISP_SPRT bg_ds;
+	/* 0x0(sp) */ DISP_SPRT bg_ds;
 	/* s0 16 */ int i;
 }
 
 /* 001abe40 00000104 */ static void GameResultTopDifficultyDisp(/* s2 18 */ int dif_label, /* s1 17 */ int off_x, /* s3 19 */ int off_y, /* a3 7 */ u_char alpha) {
-	/* -0xd0(sp) */ DISP_SPRT difficulty_ds;
+	/* 0x0(sp) */ DISP_SPRT difficulty_ds;
 	/* rdata 3b3be8 */ static int difficulty_tex_tbl[4];
 }
 
 /* 001abf48 000001bc */ static void GameResultTopClearTime(/* s4 20 */ TIME_INFO clear_time, /* a1 5 */ int off_x, /* a2 6 */ int off_y, /* s2 18 */ u_char alpha) {
-	/* -0xe0(sp) */ DISP_SPRT time_ds;
+	/* 0x10(sp) */ DISP_SPRT time_ds;
 	/* s1 17 */ int i;
 }
 
 /* 001ac108 00000124 */ static void GameResultTopScoreTime(/* s3 19 */ int score, /* a1 5 */ int off_x, /* a2 6 */ int off_y, /* s2 18 */ u_char alpha) {
-	/* -0xd0(sp) */ DISP_SPRT score_ds;
+	/* 0x0(sp) */ DISP_SPRT score_ds;
 	/* s0 16 */ int i;
 }
 
 /* 001ac230 00000104 */ static void GameResultTopRankDisp(/* s2 18 */ int rank, /* s1 17 */ int off_x, /* s3 19 */ int off_y, /* a3 7 */ u_char alpha) {
-	/* -0xd0(sp) */ DISP_SPRT rank_ds;
+	/* 0x0(sp) */ DISP_SPRT rank_ds;
 	/* rdata 3b3bf8 */ static int rank_tex_tbl[7];
 }
 
 /* 001ac338 00000130 */ static void GameResultTopLineDisp(/* f20 58 */ float y, /* s2 18 */ u_char alpha) {
-	/* -0xc0(sp) */ DISP_SPRT line_ds;
+	/* 0x0(sp) */ DISP_SPRT line_ds;
 	/* s0 16 */ int i;
 }
 
 /* 001ac468 00000028 */ static void GameResultTopCaptionDisp(/* a0 4 */ int off_x, /* a1 5 */ int off_y, /* a2 6 */ u_char alpha) {}
-/* 003165dc 00000054 */ int* int * _fixed_array_verifyrange<int>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ int* int * _fixed_array_verifyrange<int>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
 /* 003165dc 00000054 */ char* char * _fixed_array_verifyrange<char>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
 /* 001ac490 00000008 */ static void __static_initialization_and_destruction_0(/* a0 4 */ int __initialize_p, /* a1 5 */ int __priority) {}
 /* 001ac498 00000020 */ static void global constructors keyed to GameResultTopInit() {}
@@ -14988,8 +15309,8 @@
 }
 
 /* 001ac650 000000f0 */ void GameOverScreenBgDisp(/* a0 4 */ u_char alpha, /* s3 19 */ u_char r, /* s2 18 */ u_char g, /* s1 17 */ u_char b, /* s4 20 */ u_int pri) {
-	/* -0xd0(sp) */ DISP_SQAR dsq;
-	/* -0x50(sp) */ SQAR_DAT gameover_bg;
+	/* 0x0(sp) */ DISP_SQAR dsq;
+	/* 0x80(sp) */ SQAR_DAT gameover_bg;
 	/* a2 6 */ int i;
 }
 
@@ -15083,7 +15404,7 @@
 }
 
 /* 001ad548 00000048 */ static void GameOverLoadMcCheckInit() {
-	/* -0x50(sp) */ char path_name[55];
+	/* 0x0(sp) */ char path_name[55];
 }
 
 /* 001ad590 000000bc */ static void GameOverLoadMcCheckWait() {
@@ -15092,6 +15413,7 @@
 
 /* 001ad650 00000094 */ static void GameOverLoadMcHeadLoadInit() {
 	/* s0 16 */ int size;
+	/* 0x0(sp) */ char path_name[55];
 }
 
 /* 001ad6e8 00000178 */ static void GameOverLoadMcHeadLoadWait() {
@@ -15120,6 +15442,7 @@
 
 /* 001aded8 00000098 */ static void GameOverLoadMcSysLoadInit() {
 	/* s0 16 */ int size;
+	/* 0x0(sp) */ char path_name[55];
 }
 
 /* 001adf70 00000128 */ static void GameOverLoadMcSysLoadWait() {
@@ -15129,6 +15452,7 @@
 
 /* 001ae098 000000ac */ static void GameOverLoadMcLoadInit() {
 	/* s0 16 */ int size;
+	/* 0x0(sp) */ char path_name[55];
 }
 
 /* 001ae148 00000134 */ static void GameOverLoadMcLoadWait() {
@@ -15160,7 +15484,7 @@
 
 /* 001ae640 000001f0 */ void GameOverLoadDispMain() {
 	/* rdata 3b4010 */ static char __FUNCTION__[21];
-	/* -0x30(sp) */ u_char rgb;
+	/* 0x0(sp) */ u_char rgb;
 	/* s1 17 */ u_char alpha;
 }
 
@@ -15213,7 +15537,7 @@
 }
 
 /* 001af410 000000a8 */ static void GameOverMenuTopTitleDisp(/* a0 4 */ int off_x, /* a1 5 */ int off_y, /* s2 18 */ u_char alpha) {
-	/* -0xc0(sp) */ DISP_SPRT title_ds;
+	/* 0x0(sp) */ DISP_SPRT title_ds;
 	/* s0 16 */ int i;
 }
 
@@ -15295,7 +15619,7 @@
 /* 001afdd8 00000034 */ static unsigned int** unsigned int * * _fixed_array_verifyrange<unsigned int *>(/* a0 4 */ size_t v, /* a1 5 */ size_t _max) {}
 
 /* 001afe10 00000058 */ static void _MakeColorToMonotone(/* a1 5 */ float *v) {
-	/* -0x20(sp) */ float fAverage;
+	/* 0x0(sp) */ float fAverage;
 }
 
 /* 001afe68 00000048 */ static void _MakeColorToMonotone(/* a2 6 */ int *v) {}
@@ -15332,28 +15656,29 @@
 /* 001b04a0 000001ac */ void gra3dSetLightData(/* s6 22 */ GRA3DLIGHTDATA *pLightData, /* s4 20 */ float *vTrans) {
 	/* rdata 3b4420 */ static char __FUNCTION__[18];
 	/* s3 19 */ int i;
-	/* -0xd0(sp) */ G3DLIGHT L;
+	/* 0x0(sp) */ G3DLIGHT L;
 	/* s5 21 */ float *pv0;
 }
 
-/* 001b0650 000003d8 */ void gra3dEmulateLightData(/* s7 23 */ GRA3DLIGHTDATA *pLDDest, /* s0 16 */ GRA3DLIGHTDATA *pLDSrc, /* -0x70(sp) */ float *vPosition, /* s5 21 */ float fMagnification) {
-	/* -0x7d0(sp) */ G3D_EMULATE_DIRECTIONALLIGHT_DATA raEmuDirLight[39];
-	/* -0x80(sp) */ int iNumLightEnable;
+/* 001b0650 000003d8 */ void gra3dEmulateLightData(/* s7 23 */ GRA3DLIGHTDATA *pLDDest, /* s0 16 */ GRA3DLIGHTDATA *pLDSrc, /* 0x760(sp) */ float *vPosition, /* s5 21 */ float fMagnification) {
+	/* 0x0(sp) */ G3D_EMULATE_DIRECTIONALLIGHT_DATA raEmuDirLight[39];
+	/* 0x750(sp) */ int iNumLightEnable;
 	/* s2 18 */ int i;
-	/* -0x7c(sp) */ G3D_EMULATE_DIRECTIONALLIGHT_DATA *__first;
+	/* 0x754(sp) */ G3D_EMULATE_DIRECTIONALLIGHT_DATA *__first;
 	/* s0 16 */ G3D_EMULATE_DIRECTIONALLIGHT_DATA *__last;
-	/* -0x78(sp) */ greater __comp;
+	/* 0x758(sp) */ greater __comp;
 	/* s1 17 */ int i;
 	/* s0 16 */ int i;
 	/* s1 17 */ int bEnable;
 }
 
-/* 001b0a28 000003d0 */ void gra3dEmulateLightDataObj(/* s7 23 */ GRA3DLIGHTDATA *pLDDest, /* s0 16 */ GRA3DLIGHTDATA *pLDSrc, /* -0x70(sp) */ float *vPosition, /* s5 21 */ float fMagnification) {
-	/* -0x80(sp) */ int iNumLightEnable;
+/* 001b0a28 000003d0 */ void gra3dEmulateLightDataObj(/* s7 23 */ GRA3DLIGHTDATA *pLDDest, /* s0 16 */ GRA3DLIGHTDATA *pLDSrc, /* 0x760(sp) */ float *vPosition, /* s5 21 */ float fMagnification) {
+	/* 0x0(sp) */ G3D_EMULATE_DIRECTIONALLIGHT_DATA raEmuDirLight[39];
+	/* 0x750(sp) */ int iNumLightEnable;
 	/* s2 18 */ int i;
-	/* -0x7c(sp) */ G3D_EMULATE_DIRECTIONALLIGHT_DATA *__first;
+	/* 0x754(sp) */ G3D_EMULATE_DIRECTIONALLIGHT_DATA *__first;
 	/* s0 16 */ G3D_EMULATE_DIRECTIONALLIGHT_DATA *__last;
-	/* -0x78(sp) */ greater __comp;
+	/* 0x758(sp) */ greater __comp;
 	/* s1 17 */ int i;
 	/* s0 16 */ int i;
 	/* s1 17 */ int bEnable;
@@ -15362,20 +15687,21 @@
 /* 001b0df8 0000001c */ static void _SetClipValue(/* f12 50 */ float minx, /* f13 51 */ float maxx, /* f14 52 */ float miny, /* f15 53 */ float maxy) {}
 
 /* 001b0e18 00000044 */ static int _GetClipValueCheck() {
-	/* -0x20(sp) */ float vClip[4];
+	/* 0x0(sp) */ float vClip[4];
 }
 
 /* 001b0e60 00000080 */ int gra3dIsBBInViewvolume(/* s0 16 */ float *avBBTransformed[4], /* a1 5 */ float *avBBClipped[4], /* s1 17 */ float *avBBWorld[4]) {
 	/* rdata 3b44b0 */ static char __FUNCTION__[22];
 }
 
-/* 001b0ee0 0000004c */ int CheckModelBoundingBox() {
-	/* -0x110(sp) */ float avWork[16][4];
+/* 001b0ee0 0000004c */ int CheckModelBoundingBox(/* s0 16 */ float *avBBWorld[4]) {
+	/* 0x0(sp) */ float avWork[16][4];
 }
 
 /* 001b0f30 000001ec */ void gra3dExecPrelight(/* s2 18 */ SGDFILEHEADER *pSGDHead, /* s1 17 */ float *vTrans, /* s0 16 */ float *vRot) {
+	/* rdata 3b44e0 */ static char __FUNCTION__[18];
 	/* s3 19 */ float *pm1[4];
-	/* -0x50(sp) */ float vRot[4];
+	/* 0x0(sp) */ float vRot[4];
 	/* f1 39 */ float f;
 	/* f20 58 */ float f1;
 	/* f21 59 */ float f2;
@@ -15389,7 +15715,10 @@
 	/* f21 59 */ float f2;
 }
 
-/* 001b1120 00000230 */ void gra3dExecPrelight(/* s1 17 */ SGDFILEHEADER *pSGDHead, /* s3 19 */ float *mat[4]) {}
+/* 001b1120 00000230 */ void gra3dExecPrelight(/* s1 17 */ SGDFILEHEADER *pSGDHead, /* s3 19 */ float *mat[4]) {
+	/* rdata 3b4538 */ static char __FUNCTION__[18];
+}
+
 /* 001b1350 0000000c */ GRA3DCAMERA* gra3dGetCamera() {}
 /* 001b1360 00000020 */ float&[4] gra3dcamGetPosition() {}
 /* 001b1380 00000020 */ float&[4] gra3dcamGetDirection() {}
@@ -15397,7 +15726,7 @@
 /* 001b13c0 00000034 */ void gra3dcamSetPosition(/* a1 5 */ float *vPos) {}
 
 /* 001b13f8 00000034 */ void gra3dcamSetPosition(/* f12 50 */ float x, /* f13 51 */ float y, /* f14 52 */ float z) {
-	/* -0x20(sp) */ float v[4];
+	/* 0x0(sp) */ float v[4];
 }
 
 /* 001b1430 0000000c */ float&[4] gra3dcamGetPositionOld() {}
@@ -15413,7 +15742,7 @@
 }
 
 /* 001b1560 00000038 */ void gra3dcamSetTarget(/* f12 50 */ float x, /* f13 51 */ float y, /* f14 52 */ float z, /* a1 5 */ int bFixUp) {
-	/* -0x20(sp) */ float v[4];
+	/* 0x0(sp) */ float v[4];
 }
 
 /* 001b1598 00000028 */ void gra3dcamSetRoll(/* f12 50 */ float fRad) {}
@@ -15433,7 +15762,7 @@
 }
 
 /* 001b1820 00000078 */ void gra3dSetGsRegisterDefault() {
-	/* -0x60(sp) */ sceGifPackAd aGPA[5];
+	/* 0x0(sp) */ sceGifPackAd aGPA[5];
 }
 
 /* 001b1898 00000090 */ static void _GetCameraDirectionInverse(/* a0 4 */ float *v) {
@@ -15473,19 +15802,19 @@
 /* 001b1f30 00000008 */ int gra3dIsFogEnable() {}
 /* 001b1f38 00000070 */ static void _ModifyFogParam() {}
 /* 001b1fa8 00000024 */ void gra3dEnableFog(/* a0 4 */ int b) {}
-/* 001b1fd0 00000054 */ void g3dCalcVu1Fog(/* s1 17 */ G3DVU1FOG *pVu1Fog) {}
-/* 001b2028 00000044 */ float g3dCalcFA() {}
-/* 001b2070 00000034 */ float g3dCalcFB() {}
+/* 001b1fd0 00000054 */ void g3dCalcVu1Fog(/* s1 17 */ G3DVU1FOG *pVu1Fog, /* s0 16 */ G3DFOG *pFog) {}
+/* 001b2028 00000044 */ float g3dCalcFA(/* a0 4 */ G3DFOG *pFog) {}
+/* 001b2070 00000034 */ float g3dCalcFB(/* a0 4 */ G3DFOG *pFog) {}
 /* 001b20a8 00000008 */ int gra3dIsMonotoneDrawEnable() {}
 /* 001b20b0 00000008 */ void gra3dMonotoneDrawEnable(/* a0 4 */ int bEnable) {}
 /* 001b20b8 00000020 */ void _ClearMaterialData(/* a0 4 */ void *pMatData) {}
 /* 001b20d8 000000ec */ void gra3dSetValidLightId(/* v1 3 */ int iLightType, /* a0 4 */ unsigned int iIndex, /* a2 6 */ int iLightTypeIndex) {}
 
 /* 001b21c8 000002ac */ static void _UpdateLight_Directional() {
-	/* -0x80(sp) */ float vCamDirInverse[4];
+	/* 0x0(sp) */ float vCamDirInverse[4];
 	/* s1 17 */ int i;
-	/* -0x70(sp) */ float vNormalizedDir[4];
-	/* -0x60(sp) */ float vTemp[4];
+	/* 0x10(sp) */ float vNormalizedDir[4];
+	/* 0x20(sp) */ float vTemp[4];
 	/* a0 4 */ G3DLIGHT &rLight;
 }
 
@@ -15506,32 +15835,33 @@
 }
 
 /* 001b2750 000001dc */ static void _SetVu1LightData_Point(/* s2 18 */ GRA3DVU1LIGHTDATA_POINT *pVu1LightDataPoint) {
-	/* -0x70(sp) */ int gnum;
+	/* 0x0(sp) */ int gnum;
 	/* s6 22 */ int gcount;
 	/* s4 20 */ int i;
 	/* a3 7 */ G3DLIGHT &rL;
 }
 
-/* 001b2930 000003cc */ static void _SetVu1LightData_Spot(/* s2 18 */ GRA3DVU1LIGHTDATA_SPOT *pVu1LightDataSpot, /* -0x70(sp) */ float *wlmtx[4]) {
-	/* -0x6c(sp) */ int gnum;
+/* 001b2930 000003cc */ static void _SetVu1LightData_Spot(/* s2 18 */ GRA3DVU1LIGHTDATA_SPOT *pVu1LightDataSpot, /* 0x40(sp) */ float *wlmtx[4]) {
+	/* 0x44(sp) */ int gnum;
 	/* s7 23 */ int gcount;
-	/* -0xb0(sp) */ float dtmp[4];
-	/* -0xa0(sp) */ float stmp[4];
-	/* -0x90(sp) */ float vCamDirInv[4];
+	/* 0x0(sp) */ float dtmp[4];
+	/* 0x10(sp) */ float stmp[4];
+	/* 0x20(sp) */ float vCamDirInv[4];
 	/* s6 22 */ int i;
 	/* s1 17 */ G3DLIGHT &rL;
-	/* -0x80(sp) */ float vNorm[4];
+	/* 0x30(sp) */ float vNorm[4];
 }
 
 /* 001b2d00 000000f8 */ static void _SetVu1LightData_Directional(/* a0 4 */ GRA3DVU1LIGHTDATA_DIRECTIONAL *pVu1LightDataDirectional, /* a1 5 */ float *mat[4]) {
 	/* v0 2 */ float *pm0[4];
+	/* v1 3 */ float *pm1[4];
 }
 
 /* 001b2df8 00000400 */ void g3dSetVu1LightData(/* s2 18 */ GRA3DVU1LIGHTDATA *pVu1LightData, /* s1 17 */ SGDCOORDINATE *cp0, /* s3 19 */ SGDCOORDINATE *cp1) {
 	/* rdata 3b4758 */ static char __FUNCTION__[19];
-	/* -0xf0(sp) */ float matWork[4][4];
-	/* -0xb0(sp) */ float matSpot[4][4];
-	/* -0x70(sp) */ float matDirectional[4][4];
+	/* 0x0(sp) */ float matWork[4][4];
+	/* 0x40(sp) */ float matSpot[4][4];
+	/* 0x80(sp) */ float matDirectional[4][4];
 	/* s0 16 */ float *matDest[4];
 	/* t0 8 */ float *matSrc[4];
 	/* a2 6 */ int i;
@@ -15540,7 +15870,7 @@
 /* 001b31f8 00000054 */ void gra3dVu1TransGTEOP() {}
 /* 001b3250 00000034 */ void SetVU1Header() {}
 
-/* 001b3288 0000015c */ int gra3dIsLightTypeEnable(/* -0x20(sp) */ G3DLIGHTTYPE type) {
+/* 001b3288 0000015c */ int gra3dIsLightTypeEnable(/* 0x0(sp) */ G3DLIGHTTYPE type) {
 	/* rdata 3b47b8 */ static char __FUNCTION__[23];
 }
 
@@ -15553,18 +15883,32 @@
 	/* v0 2 */ G3DLIGHT *pDest;
 }
 
-/* 001b37e0 00000194 */ G3DLIGHT& gra3dGetLightRef(/* s0 16 */ int iLightId) {}
-/* 001b3978 00000084 */ void gra3dLightEnable(/* s0 16 */ int iLightId, /* s1 17 */ int bEnable) {}
-/* 001b3a00 00000078 */ int gra3dIsLightEnable(/* s0 16 */ int iLightId) {}
+/* 001b37e0 00000194 */ G3DLIGHT& gra3dGetLightRef(/* s0 16 */ int iLightId) {
+	/* rdata 3b4a10 */ static char __FUNCTION__[17];
+}
+
+/* 001b3978 00000084 */ void gra3dLightEnable(/* s0 16 */ int iLightId, /* s1 17 */ int bEnable) {
+	/* rdata 3b4aa0 */ static char __FUNCTION__[17];
+}
+
+/* 001b3a00 00000078 */ int gra3dIsLightEnable(/* s0 16 */ int iLightId) {
+	/* rdata 3b4ad0 */ static char __FUNCTION__[19];
+}
 
 /* 001b3a78 000000b8 */ void gra3dSetLightStatus(/* s0 16 */ int iLightId, /* s1 17 */ GRA3DLIGHTSTATUS *pS) {
 	/* rdata 3b4ae8 */ static char __FUNCTION__[20];
 }
 
-/* 001b3b30 00000078 */ GRA3DLIGHTSTATUS& gra3dGetLightStatusRef(/* s0 16 */ int iLightId) {}
+/* 001b3b30 00000078 */ GRA3DLIGHTSTATUS& gra3dGetLightStatusRef(/* s0 16 */ int iLightId) {
+	/* rdata 3b4b00 */ static char __FUNCTION__[23];
+}
+
 /* 001b3ba8 0000002c */ void gra3dApplyLight() {}
 /* 001b3bd8 00000008 */ void gra3dDrawPrimitive(/* a0 4 */ void *pData, /* a1 5 */ int iSize) {}
-/* 001b3be0 00000084 */ void* g3dGetVu1MaterialCache(/* a0 4 */ G3DLIGHTTYPE type, /* a1 5 */ int iIndex) {}
+
+/* 001b3be0 00000084 */ void* g3dGetVu1MaterialCache(/* a0 4 */ G3DLIGHTTYPE type, /* a1 5 */ int iIndex) {
+	/* rdata 3b4b18 */ static char __FUNCTION__[23];
+}
 
 /* 001b3c68 00000088 */ static float SetMaxColor255(/* s1 17 */ float *dcol, /* s0 16 */ float *col) {
 	/* f1 39 */ float fDiv;
@@ -15574,7 +15918,7 @@
 	/* f20 58 */ float fAmbientScale;
 	/* s1 17 */ G3DMATERIAL &rMat;
 	/* s0 16 */ float &rvAmbient[4];
-	/* -0x70(sp) */ float vWork[4];
+	/* 0x0(sp) */ float vWork[4];
 	/* s4 20 */ float &lmatParallel_DiffuseColor[3][4];
 	/* s7 23 */ float &lmatParallel_SpecularColor[3][4];
 	/* s2 18 */ int i;
@@ -15582,18 +15926,20 @@
 	/* f0 38 */ float sc;
 }
 
-/* 001b3f10 00000278 */ void gra3dCalcVu1MaterialDataPoint(/* -0x80(sp) */ GRA3DVU1MATERIALDATA_POINT *_pPointData) {
+/* 001b3f10 00000278 */ void gra3dCalcVu1MaterialDataPoint(/* 0x0(sp) */ GRA3DVU1MATERIALDATA_POINT *_pPointData) {
+	/* s7 23 */ G3DMATERIAL &rMat;
 	/* f22 60 */ float fSpecularScale;
 	/* f21 59 */ float fDiffuseScale;
-	/* -0x7c(sp) */ int i;
+	/* 0x4(sp) */ int i;
 	/* s5 21 */ GRA3DVU1MATERIALCACHE_POINT *pMatCache;
 	/* s4 20 */ int j;
 }
 
-/* 001b4188 00000268 */ void gra3dCalcVu1MaterialDataSpot(/* -0x80(sp) */ GRA3DVU1MATERIALDATA_SPOT *_pSpotData) {
+/* 001b4188 00000268 */ void gra3dCalcVu1MaterialDataSpot(/* 0x10(sp) */ GRA3DVU1MATERIALDATA_SPOT *_pSpotData) {
+	/* 0x14(sp) */ G3DMATERIAL &rMat;
 	/* f22 60 */ float fSpecularScale;
 	/* f21 59 */ float fDiffuseScale;
-	/* -0x78(sp) */ int i;
+	/* 0x18(sp) */ int i;
 	/* s5 21 */ GRA3DVU1MATERIALCACHE_SPOT *pMatCache;
 	/* s6 22 */ int j;
 }
@@ -15601,7 +15947,7 @@
 /* 001b43f0 00000150 */ void gra3dSetMaterial(/* a1 5 */ SGDMATERIAL *pMat) {
 	/* f0 38 */ float fDiffuseScale;
 	/* f1 39 */ float fSpecularScale;
-	/* -0x60(sp) */ G3DMATERIAL mat;
+	/* 0x0(sp) */ G3DMATERIAL mat;
 }
 
 /* 001b4540 00000098 */ int gra3dSetTransform(/* a0 4 */ GRA3DTRANSFORMSTATETYPE state, /* a1 5 */ float *mat[4]) {
@@ -15612,7 +15958,7 @@
 /* 001b4618 00000098 */ void _gra3dEnableTextureForce(/* a3 7 */ int bEnable) {}
 
 /* 001b46b0 00000064 */ void gra3dCalcVertexColor(/* s0 16 */ float *vDest, /* a1 5 */ float *vVertex, /* a2 6 */ float *vNormal, /* a3 7 */ float *vSrcColor) {
-	/* -0x20(sp) */ float vFirst[4];
+	/* 0x0(sp) */ float vFirst[4];
 }
 
 /* 001b4718 00000078 */ static int _SetRegisterSpecified(/* a0 4 */ long int lData, /* a1 5 */ long int lAddress) {
@@ -15642,12 +15988,12 @@
 /* 001b4918 00000060 */ static void _ModifyGra3dScratchpadDefault() {}
 
 /* 001b4978 00000260 */ static void _ModifyScratchpad() {
-	/* -0x20(sp) */ G3DCREATIONDATA g3dCD;
+	/* 0x0(sp) */ G3DCREATIONDATA g3dCD;
 	/* a2 6 */ G3DCOREOBJECT *pScratchpad;
 	/* a1 5 */ G3DCOREOBJECT *pStatic;
 	/* v0 2 */ GRA3DSCRATCHPADLAYOUT *pScratchpad;
 	/* a0 4 */ GRA3DSCRATCHPADLAYOUT *pStatic;
-	/* -0x1c(sp) */ GRA3DSHADOWCREATIONDATA gra3dshadowCD;
+	/* 0x4(sp) */ GRA3DSHADOWCREATIONDATA gra3dshadowCD;
 	/* a2 6 */ GRA3DSCRATCHPADLAYOUT_MAPSHADOW *pScratchpad;
 	/* a1 5 */ GRA3DSCRATCHPADLAYOUT_MAPSHADOW *pStatic;
 }
@@ -15657,86 +16003,86 @@
 /* 001b4c08 00000020 */ static void _OnExitApp() {}
 
 /* 001b4c28 000000f8 */ void gra3dInit(/* s1 17 */ void *pPacket, /* s0 16 */ int iSize) {
-	/* -0x30(sp) */ GRA3DSGDCREATIONDATA gra3dsgdCD;
+	/* 0x0(sp) */ GRA3DSGDCREATIONDATA gra3dsgdCD;
 }
 
 /* 001b4d20 00000034 */ void gra3dDraw() {}
-/* 00317d40 00000034 */ void void fill<float *, float>(/* a0 4 */ float *__first, /* a1 5 */ float *__last, /* a2 6 */ float &__value) {}
-/* 00317d40 00000054 */ GRA3DLIGHTSTATUS* GRA3DLIGHTSTATUS * _fixed_array_verifyrange<GRA3DLIGHTSTATUS>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
-/* 00317d40 00000054 */ G3DLIGHT* G3DLIGHT * _fixed_array_verifyrange<G3DLIGHT>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000034 */ void void fill<float *, float>(/* a0 4 */ float *__first, /* a1 5 */ float *__last, /* a2 6 */ float &__value) {}
+/* ffffffff 00000054 */ GRA3DLIGHTSTATUS* GRA3DLIGHTSTATUS * _fixed_array_verifyrange<GRA3DLIGHTSTATUS>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ G3DLIGHT* G3DLIGHT * _fixed_array_verifyrange<G3DLIGHT>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
 
-/* 00317d40 000001ec */ void void __introsort_loop<G3D_EMULATE_DIRECTIONALLIGHT_DATA *, G3D_EMULATE_DIRECTIONALLIGHT_DATA, int, G3D_EMULATE_DIRECTIONALLIGHT_DATA::greater>(/* s0 16 */ G3D_EMULATE_DIRECTIONALLIGHT_DATA *__first, /* s1 17 */ G3D_EMULATE_DIRECTIONALLIGHT_DATA *__last, /* s2 18 */ int __depth_limit, /* -0x80(sp) */ greater __comp) {
+/* ffffffff 000001ec */ void void __introsort_loop<G3D_EMULATE_DIRECTIONALLIGHT_DATA *, G3D_EMULATE_DIRECTIONALLIGHT_DATA, int, G3D_EMULATE_DIRECTIONALLIGHT_DATA::greater>(/* s0 16 */ G3D_EMULATE_DIRECTIONALLIGHT_DATA *__first, /* s1 17 */ G3D_EMULATE_DIRECTIONALLIGHT_DATA *__last, /* s2 18 */ int __depth_limit, /* 0x0(sp) */ greater __comp) {
 	/* v0 2 */ G3D_EMULATE_DIRECTIONALLIGHT_DATA *__cut;
 	/* t0 8 */ G3D_EMULATE_DIRECTIONALLIGHT_DATA *this;
 	/* v0 2 */ G3D_EMULATE_DIRECTIONALLIGHT_DATA &__b;
 	/* a1 5 */ G3D_EMULATE_DIRECTIONALLIGHT_DATA &__c;
-	/* -0x40(sp) */ greater __comp;
+	/* 0x40(sp) */ greater __comp;
 }
 
-/* 00317d40 0000008c */ void void __final_insertion_sort<G3D_EMULATE_DIRECTIONALLIGHT_DATA *, G3D_EMULATE_DIRECTIONALLIGHT_DATA::greater>(/* a3 7 */ G3D_EMULATE_DIRECTIONALLIGHT_DATA *__first, /* s1 17 */ G3D_EMULATE_DIRECTIONALLIGHT_DATA *__last, /* -0x30(sp) */ greater __comp) {}
-/* 00317d40 00000054 */ int* int * _fixed_array_verifyrange<int>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 0000008c */ void void __final_insertion_sort<G3D_EMULATE_DIRECTIONALLIGHT_DATA *, G3D_EMULATE_DIRECTIONALLIGHT_DATA::greater>(/* a3 7 */ G3D_EMULATE_DIRECTIONALLIGHT_DATA *__first, /* s1 17 */ G3D_EMULATE_DIRECTIONALLIGHT_DATA *__last, /* 0x0(sp) */ greater __comp) {}
+/* ffffffff 00000054 */ int* int * _fixed_array_verifyrange<int>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
 
-/* 00317d40 00000044 */ float* float * max_element<float *>(/* a0 4 */ float *__first, /* a1 5 */ float *__last) {
+/* ffffffff 00000044 */ float* float * max_element<float *>(/* a0 4 */ float *__first, /* a1 5 */ float *__last) {
 	/* v0 2 */ float *__result;
 }
 
-/* 00317d40 0000000c */ G3DCOREOBJECT* G3DCOREOBJECT * GetStaticInstance<G3DCOREOBJECT>() {
+/* ffffffff 0000000c */ G3DCOREOBJECT* G3DCOREOBJECT * GetStaticInstance<G3DCOREOBJECT>() {
 	/* bss 4af730 */ static G3DCOREOBJECT obj;
 }
 
-/* 00317d40 0000000c */ GRA3DSCRATCHPADLAYOUT* GRA3DSCRATCHPADLAYOUT * GetStaticInstance<GRA3DSCRATCHPADLAYOUT>() {
+/* ffffffff 0000000c */ GRA3DSCRATCHPADLAYOUT* GRA3DSCRATCHPADLAYOUT * GetStaticInstance<GRA3DSCRATCHPADLAYOUT>() {
 	/* bss 4b08a0 */ static GRA3DSCRATCHPADLAYOUT obj;
 }
 
-/* 00317d40 0000000c */ GRA3DSCRATCHPADLAYOUT_MAPSHADOW* GRA3DSCRATCHPADLAYOUT_MAPSHADOW * GetStaticInstance<GRA3DSCRATCHPADLAYOUT_MAPSHADOW>() {
+/* ffffffff 0000000c */ GRA3DSCRATCHPADLAYOUT_MAPSHADOW* GRA3DSCRATCHPADLAYOUT_MAPSHADOW * GetStaticInstance<GRA3DSCRATCHPADLAYOUT_MAPSHADOW>() {
 	/* bss 4b0ce0 */ static GRA3DSCRATCHPADLAYOUT_MAPSHADOW obj;
 }
 
-/* 00317d40 00000178 */ G3D_EMULATE_DIRECTIONALLIGHT_DATA* G3D_EMULATE_DIRECTIONALLIGHT_DATA * __unguarded_partition<G3D_EMULATE_DIRECTIONALLIGHT_DATA *, G3D_EMULATE_DIRECTIONALLIGHT_DATA, G3D_EMULATE_DIRECTIONALLIGHT_DATA::greater>(/* a0 4 */ G3D_EMULATE_DIRECTIONALLIGHT_DATA *__first, /* a1 5 */ G3D_EMULATE_DIRECTIONALLIGHT_DATA *__last, /* t6 14 */ G3D_EMULATE_DIRECTIONALLIGHT_DATA __pivot, /* -0x40(sp) */ greater __comp) {
-	/* -0x3c(sp) */ G3D_EMULATE_DIRECTIONALLIGHT_DATA *__a;
-	/* -0x30(sp) */ G3D_EMULATE_DIRECTIONALLIGHT_DATA __tmp;
+/* ffffffff 00000178 */ G3D_EMULATE_DIRECTIONALLIGHT_DATA* G3D_EMULATE_DIRECTIONALLIGHT_DATA * __unguarded_partition<G3D_EMULATE_DIRECTIONALLIGHT_DATA *, G3D_EMULATE_DIRECTIONALLIGHT_DATA, G3D_EMULATE_DIRECTIONALLIGHT_DATA::greater>(/* a0 4 */ G3D_EMULATE_DIRECTIONALLIGHT_DATA *__first, /* a1 5 */ G3D_EMULATE_DIRECTIONALLIGHT_DATA *__last, /* t6 14 */ G3D_EMULATE_DIRECTIONALLIGHT_DATA __pivot, /* 0x0(sp) */ greater __comp) {
+	/* 0x4(sp) */ G3D_EMULATE_DIRECTIONALLIGHT_DATA *__a;
+	/* 0x10(sp) */ G3D_EMULATE_DIRECTIONALLIGHT_DATA __tmp;
 	/* t4 12 */ G3D_EMULATE_DIRECTIONALLIGHT_DATA *this;
 }
 
-/* 00317d40 000001dc */ void void __partial_sort<G3D_EMULATE_DIRECTIONALLIGHT_DATA *, G3D_EMULATE_DIRECTIONALLIGHT_DATA, G3D_EMULATE_DIRECTIONALLIGHT_DATA::greater>(/* -0xb0(sp) */ G3D_EMULATE_DIRECTIONALLIGHT_DATA *__first, /* s1 17 */ G3D_EMULATE_DIRECTIONALLIGHT_DATA *__middle, /* s2 18 */ G3D_EMULATE_DIRECTIONALLIGHT_DATA *__last, /* -0xac(sp) */ greater __comp) {
+/* ffffffff 000001dc */ void void __partial_sort<G3D_EMULATE_DIRECTIONALLIGHT_DATA *, G3D_EMULATE_DIRECTIONALLIGHT_DATA, G3D_EMULATE_DIRECTIONALLIGHT_DATA::greater>(/* 0x0(sp) */ G3D_EMULATE_DIRECTIONALLIGHT_DATA *__first, /* s1 17 */ G3D_EMULATE_DIRECTIONALLIGHT_DATA *__middle, /* s2 18 */ G3D_EMULATE_DIRECTIONALLIGHT_DATA *__last, /* 0x4(sp) */ greater __comp) {
 	/* s0 16 */ G3D_EMULATE_DIRECTIONALLIGHT_DATA *__i;
-	/* -0xa0(sp) */ G3D_EMULATE_DIRECTIONALLIGHT_DATA __value;
-	/* -0x70(sp) */ greater __comp;
+	/* 0x10(sp) */ G3D_EMULATE_DIRECTIONALLIGHT_DATA __value;
+	/* 0x40(sp) */ greater __comp;
 	/* t3 11 */ G3D_EMULATE_DIRECTIONALLIGHT_DATA *this;
 	/* a3 7 */ G3D_EMULATE_DIRECTIONALLIGHT_DATA *this;
 }
 
-/* 00317d40 00000230 */ void void __insertion_sort<G3D_EMULATE_DIRECTIONALLIGHT_DATA *, G3D_EMULATE_DIRECTIONALLIGHT_DATA::greater>(/* -0xb0(sp) */ G3D_EMULATE_DIRECTIONALLIGHT_DATA *__first, /* s3 19 */ G3D_EMULATE_DIRECTIONALLIGHT_DATA *__last, /* -0xac(sp) */ greater __comp) {
+/* ffffffff 00000230 */ void void __insertion_sort<G3D_EMULATE_DIRECTIONALLIGHT_DATA *, G3D_EMULATE_DIRECTIONALLIGHT_DATA::greater>(/* 0x0(sp) */ G3D_EMULATE_DIRECTIONALLIGHT_DATA *__first, /* s3 19 */ G3D_EMULATE_DIRECTIONALLIGHT_DATA *__last, /* 0x4(sp) */ greater __comp) {
 	/* s0 16 */ G3D_EMULATE_DIRECTIONALLIGHT_DATA *__i;
 	/* t2 10 */ G3D_EMULATE_DIRECTIONALLIGHT_DATA *__first;
-	/* -0xab(sp) */ greater __comp;
-	/* -0xa0(sp) */ G3D_EMULATE_DIRECTIONALLIGHT_DATA __val;
+	/* 0x5(sp) */ greater __comp;
+	/* 0x10(sp) */ G3D_EMULATE_DIRECTIONALLIGHT_DATA __val;
 	/* t0 8 */ G3D_EMULATE_DIRECTIONALLIGHT_DATA *__last;
 	/* a3 7 */ G3D_EMULATE_DIRECTIONALLIGHT_DATA *__result;
 	/* t1 9 */ ptrdiff_t __n;
 	/* a1 5 */ G3D_EMULATE_DIRECTIONALLIGHT_DATA *this;
 }
 
-/* 00317d40 000000c4 */ void void __unguarded_insertion_sort_aux<G3D_EMULATE_DIRECTIONALLIGHT_DATA *, G3D_EMULATE_DIRECTIONALLIGHT_DATA, G3D_EMULATE_DIRECTIONALLIGHT_DATA::greater>(/* a0 4 */ G3D_EMULATE_DIRECTIONALLIGHT_DATA *__first, /* s2 18 */ G3D_EMULATE_DIRECTIONALLIGHT_DATA *__last, /* -0x80(sp) */ greater __comp) {
+/* ffffffff 000000c4 */ void void __unguarded_insertion_sort_aux<G3D_EMULATE_DIRECTIONALLIGHT_DATA *, G3D_EMULATE_DIRECTIONALLIGHT_DATA, G3D_EMULATE_DIRECTIONALLIGHT_DATA::greater>(/* a0 4 */ G3D_EMULATE_DIRECTIONALLIGHT_DATA *__first, /* s2 18 */ G3D_EMULATE_DIRECTIONALLIGHT_DATA *__last, /* 0x0(sp) */ greater __comp) {
 	/* s0 16 */ G3D_EMULATE_DIRECTIONALLIGHT_DATA *__i;
 }
 
-/* 00317d40 000001ec */ void void sort_heap<G3D_EMULATE_DIRECTIONALLIGHT_DATA *, G3D_EMULATE_DIRECTIONALLIGHT_DATA::greater>(/* s1 17 */ G3D_EMULATE_DIRECTIONALLIGHT_DATA *__first, /* s2 18 */ G3D_EMULATE_DIRECTIONALLIGHT_DATA *__last, /* -0x110(sp) */ greater __comp) {
-	/* -0x10c(sp) */ G3D_EMULATE_DIRECTIONALLIGHT_DATA *__first;
+/* ffffffff 000001ec */ void void sort_heap<G3D_EMULATE_DIRECTIONALLIGHT_DATA *, G3D_EMULATE_DIRECTIONALLIGHT_DATA::greater>(/* s1 17 */ G3D_EMULATE_DIRECTIONALLIGHT_DATA *__first, /* s2 18 */ G3D_EMULATE_DIRECTIONALLIGHT_DATA *__last, /* 0x0(sp) */ greater __comp) {
+	/* 0x4(sp) */ G3D_EMULATE_DIRECTIONALLIGHT_DATA *__first;
 	/* v1 3 */ G3D_EMULATE_DIRECTIONALLIGHT_DATA *__last;
-	/* -0x108(sp) */ greater __comp;
-	/* -0x104(sp) */ G3D_EMULATE_DIRECTIONALLIGHT_DATA *__first;
-	/* -0x100(sp) */ greater __comp;
+	/* 0x8(sp) */ greater __comp;
+	/* 0xc(sp) */ G3D_EMULATE_DIRECTIONALLIGHT_DATA *__first;
+	/* 0x10(sp) */ greater __comp;
 	/* a1 5 */ G3D_EMULATE_DIRECTIONALLIGHT_DATA *__last;
-	/* -0xf0(sp) */ G3D_EMULATE_DIRECTIONALLIGHT_DATA __value;
-	/* -0xc0(sp) */ greater __comp;
+	/* 0x20(sp) */ G3D_EMULATE_DIRECTIONALLIGHT_DATA __value;
+	/* 0x50(sp) */ greater __comp;
 }
 
-/* 00317d40 0000011c */ void void __make_heap<G3D_EMULATE_DIRECTIONALLIGHT_DATA *, G3D_EMULATE_DIRECTIONALLIGHT_DATA::greater, G3D_EMULATE_DIRECTIONALLIGHT_DATA, int>(/* s3 19 */ G3D_EMULATE_DIRECTIONALLIGHT_DATA *__first, /* a1 5 */ G3D_EMULATE_DIRECTIONALLIGHT_DATA *__last, /* -0x90(sp) */ greater __comp) {
+/* ffffffff 0000011c */ void void __make_heap<G3D_EMULATE_DIRECTIONALLIGHT_DATA *, G3D_EMULATE_DIRECTIONALLIGHT_DATA::greater, G3D_EMULATE_DIRECTIONALLIGHT_DATA, int>(/* s3 19 */ G3D_EMULATE_DIRECTIONALLIGHT_DATA *__first, /* a1 5 */ G3D_EMULATE_DIRECTIONALLIGHT_DATA *__last, /* 0x0(sp) */ greater __comp) {
 	/* s1 17 */ ptrdiff_t __parent;
 }
 
-/* 00317d40 000001dc */ void void __adjust_heap<G3D_EMULATE_DIRECTIONALLIGHT_DATA *, int, G3D_EMULATE_DIRECTIONALLIGHT_DATA, G3D_EMULATE_DIRECTIONALLIGHT_DATA::greater>(/* t2 10 */ G3D_EMULATE_DIRECTIONALLIGHT_DATA *__first, /* t1 9 */ int __holeIndex, /* t3 11 */ int __len, /* t4 12 */ G3D_EMULATE_DIRECTIONALLIGHT_DATA __value, /* -0x50(sp) */ greater __comp) {
+/* ffffffff 000001dc */ void void __adjust_heap<G3D_EMULATE_DIRECTIONALLIGHT_DATA *, int, G3D_EMULATE_DIRECTIONALLIGHT_DATA, G3D_EMULATE_DIRECTIONALLIGHT_DATA::greater>(/* t2 10 */ G3D_EMULATE_DIRECTIONALLIGHT_DATA *__first, /* t1 9 */ int __holeIndex, /* t3 11 */ int __len, /* t4 12 */ G3D_EMULATE_DIRECTIONALLIGHT_DATA __value, /* 0x0(sp) */ greater __comp) {
 	/* t5 13 */ int __topIndex;
 	/* t0 8 */ int __secondChild;
 	/* v0 2 */ G3D_EMULATE_DIRECTIONALLIGHT_DATA &__X;
@@ -15747,11 +16093,11 @@
 	/* a3 7 */ G3D_EMULATE_DIRECTIONALLIGHT_DATA *this;
 }
 
-/* 00317d40 000000dc */ void void __unguarded_linear_insert<G3D_EMULATE_DIRECTIONALLIGHT_DATA *, G3D_EMULATE_DIRECTIONALLIGHT_DATA, G3D_EMULATE_DIRECTIONALLIGHT_DATA::greater>(/* a0 4 */ G3D_EMULATE_DIRECTIONALLIGHT_DATA *__last, /* a1 5 */ G3D_EMULATE_DIRECTIONALLIGHT_DATA __val, /* -0x10(sp) */ greater __comp) {
+/* ffffffff 000000dc */ void void __unguarded_linear_insert<G3D_EMULATE_DIRECTIONALLIGHT_DATA *, G3D_EMULATE_DIRECTIONALLIGHT_DATA, G3D_EMULATE_DIRECTIONALLIGHT_DATA::greater>(/* a0 4 */ G3D_EMULATE_DIRECTIONALLIGHT_DATA *__last, /* a1 5 */ G3D_EMULATE_DIRECTIONALLIGHT_DATA __val, /* 0x0(sp) */ greater __comp) {
 	/* a3 7 */ G3D_EMULATE_DIRECTIONALLIGHT_DATA *__next;
 }
 
-/* 00317d40 00000134 */ void void __push_heap<G3D_EMULATE_DIRECTIONALLIGHT_DATA *, int, G3D_EMULATE_DIRECTIONALLIGHT_DATA, G3D_EMULATE_DIRECTIONALLIGHT_DATA::greater>(/* t2 10 */ G3D_EMULATE_DIRECTIONALLIGHT_DATA *__first, /* a1 5 */ int __holeIndex, /* t3 11 */ int __topIndex, /* a3 7 */ G3D_EMULATE_DIRECTIONALLIGHT_DATA __value, /* -0x10(sp) */ greater __comp) {
+/* ffffffff 00000134 */ void void __push_heap<G3D_EMULATE_DIRECTIONALLIGHT_DATA *, int, G3D_EMULATE_DIRECTIONALLIGHT_DATA, G3D_EMULATE_DIRECTIONALLIGHT_DATA::greater>(/* t2 10 */ G3D_EMULATE_DIRECTIONALLIGHT_DATA *__first, /* a1 5 */ int __holeIndex, /* t3 11 */ int __topIndex, /* a3 7 */ G3D_EMULATE_DIRECTIONALLIGHT_DATA __value, /* 0x0(sp) */ greater __comp) {
 	/* t1 9 */ int __parent;
 	/* v1 3 */ G3D_EMULATE_DIRECTIONALLIGHT_DATA *this;
 	/* v1 3 */ G3D_EMULATE_DIRECTIONALLIGHT_DATA *this;
@@ -15760,7 +16106,7 @@
 /* 001b4d58 00000008 */ static void __static_initialization_and_destruction_0(/* a0 4 */ int __initialize_p, /* a1 5 */ int __priority) {}
 /* 001b4d60 00000018 */ static void _Vu0LoadMatrix_4_5_6_7(/* a0 4 */ float *mat[4]) {}
 /* 001b4d78 00000020 */ static void _Vu0ApplyMatrixWithoutTrans_4_5_6_7(/* a0 4 */ float *vDest, /* a1 5 */ float *vSrc) {}
-/* 00317d40 0000003c */ type_info& GRA3DLIGHTSTATUS type_info function() {}
+/* ffffffff 0000003c */ type_info& GRA3DLIGHTSTATUS type_info function() {}
 /* 00317d40 0000003c */ type_info& G3DLIGHT type_info function() {}
 /* 001b4d98 00000020 */ static void global constructors keyed to g_Vu0Matrix() {}
 
@@ -15782,7 +16128,7 @@
 }
 
 /* 001b4fb8 00000170 */ int gra3dbbIsInFogArea(/* s0 16 */ float *matWorldScreen[4], /* s1 17 */ G3DFOG *pFog, /* s2 18 */ float *avBBWorld[4]) {
-	/* -0x70(sp) */ float vWork[4];
+	/* 0x0(sp) */ float vWork[4];
 	/* s2 18 */ int i;
 	/* f20 58 */ float f;
 }
@@ -15800,7 +16146,7 @@
 }
 
 /* 001b5260 00000054 */ float gra3dbbCalcRadiusXZ(/* s0 16 */ float *avBB[4]) {
-	/* -0x20(sp) */ float vCenterBase[4];
+	/* 0x0(sp) */ float vCenterBase[4];
 }
 
 /* 001b52b8 00000058 */ void gra3dbbCalcInnerEllipse(/* a0 4 */ float *vEllipse, /* a1 5 */ float *avBB[4]) {}
@@ -15809,37 +16155,37 @@
 	/* a3 7 */ int i;
 }
 
-/* 001b5348 000003dc */ void gra3dbbApplyFromBounds(/* s2 18 */ float *avBBDest[4], /* s0 16 */ float *vMin, /* s1 17 */ float *vMax) {
+/* 001b5348 000003dc */ void gra3dbbApplyFromBounds(/* s2 18 */ float *avBBDest[4], /* s0 16 */ float *vMin, /* s1 17 */ float *vMax, /* s3 19 */ float *mat[4]) {
 	/* s3 19 */ float *vDest;
 	/* f21 59 */ float fX;
 	/* f20 58 */ float fY;
 	/* f22 60 */ float fZ;
-	/* -0xb0(sp) */ float v[4];
+	/* 0x0(sp) */ float v[4];
 	/* s3 19 */ float *vDest;
 	/* f21 59 */ float fX;
 	/* f20 58 */ float fY;
 	/* f22 60 */ float fZ;
-	/* -0xa0(sp) */ float v[4];
+	/* 0x10(sp) */ float v[4];
 	/* s3 19 */ float *vDest;
 	/* f21 59 */ float fX;
 	/* f20 58 */ float fY;
 	/* f22 60 */ float fZ;
-	/* -0x90(sp) */ float v[4];
+	/* 0x20(sp) */ float v[4];
 	/* s3 19 */ float *vDest;
 	/* f21 59 */ float fX;
 	/* f20 58 */ float fY;
 	/* f22 60 */ float fZ;
-	/* -0x80(sp) */ float v[4];
+	/* 0x30(sp) */ float v[4];
 	/* s3 19 */ float *vDest;
 	/* f21 59 */ float fX;
 	/* f20 58 */ float fY;
 	/* f22 60 */ float fZ;
-	/* -0x70(sp) */ float v[4];
+	/* 0x40(sp) */ float v[4];
 	/* s3 19 */ float *vDest;
 	/* f21 59 */ float fX;
 	/* f20 58 */ float fY;
 	/* f22 60 */ float fZ;
-	/* -0x60(sp) */ float v[4];
+	/* 0x50(sp) */ float v[4];
 	/* s0 16 */ float *vDest;
 }
 
@@ -15896,13 +16242,13 @@
 
 /* 001b5c88 00000548 */ void gra3ddbgDrawRangedCone(/* s5 21 */ float *vPosition, /* s3 19 */ float *vDirection, /* f22 60 */ float fRange, /* f23 61 */ float fAngle, /* s6 22 */ G3DCOLOR col) {
 	/* f21 59 */ float fRadiusOfCircle;
-	/* -0x210(sp) */ float avPointOnCircle[8][4];
+	/* 0x0(sp) */ float avPointOnCircle[8][4];
 	/* f21 59 */ float fOffsetY;
-	/* -0x190(sp) */ float vPoint[4];
-	/* -0x180(sp) */ float vEnd[4];
-	/* -0x170(sp) */ float plane[4];
-	/* -0x160(sp) */ float vTemp[4];
-	/* -0x150(sp) */ float mat[4][4];
+	/* 0x80(sp) */ float vPoint[4];
+	/* 0x90(sp) */ float vEnd[4];
+	/* 0xa0(sp) */ float plane[4];
+	/* 0xb0(sp) */ float vTemp[4];
+	/* 0xc0(sp) */ float mat[4][4];
 	/* s1 17 */ int i;
 	/* v1 3 */ int i;
 	/* v1 3 */ int i;
@@ -15913,10 +16259,10 @@
 }
 
 /* 001b61d0 00000220 */ void gra3ddbgDrawSprite(/* v0 2 */ G3DFREGION *pRegion, /* f12 50 */ float fZ, /* s0 16 */ G3DCOLOR col, /* a2 6 */ sceGsTex0 *pGsTex0) {
-	/* -0x60(sp) */ float vScreenCoordLT[4];
-	/* -0x40(sp) */ float vScreenCoordRB[4];
-	/* -0x20(sp) */ sceGsXyz lt;
-	/* -0x18(sp) */ sceGsXyz rb;
+	/* 0x0(sp) */ float vScreenCoordLT[4];
+	/* 0x20(sp) */ float vScreenCoordRB[4];
+	/* 0x40(sp) */ sceGsXyz lt;
+	/* 0x48(sp) */ sceGsXyz rb;
 	/* v0 2 */ _PACKET_DRAWSPRITE *pPacket;
 }
 
@@ -15932,8 +16278,8 @@
 	/* s1 17 */ int i;
 }
 
-/* 00318210 00000054 */ G3DLIGHT* G3DLIGHT * _fixed_array_verifyrange<G3DLIGHT>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
-/* 00318210 0000003c */ type_info& G3DLIGHT type_info function() {}
+/* ffffffff 00000054 */ G3DLIGHT* G3DLIGHT * _fixed_array_verifyrange<G3DLIGHT>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 0000003c */ type_info& G3DLIGHT type_info function() {}
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/graphics/graph3d/gra3dDma.c
@@ -15960,23 +16306,23 @@
 /* 001b6a58 00000034 */ static unsigned int** unsigned int * * _fixed_array_verifyrange<unsigned int *>(/* a0 4 */ size_t v, /* a1 5 */ size_t _max) {}
 
 /* 001b6a90 0000000c */ void _DrawShadowTexture() {
-	/* -0xd0(sp) */ sceGifPackAd aGPA[6];
-	/* -0x70(sp) */ CAutoGsRegisters<6> ARs;
+	/* 0x0(sp) */ sceGifPackAd aGPA[6];
+	/* 0x60(sp) */ CAutoGsRegisters<6> ARs;
 }
 
 /* 001b6aa0 00000264 */ void gra3dCalcShadowLight(/* s4 20 */ G3DLIGHT *pLight, /* s6 22 */ float *vTarget) {
 	/* s5 21 */ LIGHTCOMPAREDATA &aLCD[39];
-	/* -0x110(sp) */ G3DLIGHT lAdjust;
+	/* 0x10(sp) */ G3DLIGHT lAdjust;
 	/* s1 17 */ int i;
 	/* s0 16 */ LIGHTCOMPAREDATA &rLCD;
-	/* -0x120(sp) */ LIGHTCOMPAREDATA *__first;
-	/* -0x11c(sp) */ greater __comp;
+	/* 0x0(sp) */ LIGHTCOMPAREDATA *__first;
+	/* 0x4(sp) */ greater __comp;
 	/* f0 38 */ float sc;
 }
 
 /* 001b6d08 000000b8 */ void gra3dPrelightScene(/* s0 16 */ int RoomNo) {
 	/* s2 18 */ MLOAD_HEAD *hp;
-	/* -0x30(sp) */ float vOffset[4];
+	/* 0x0(sp) */ float vOffset[4];
 }
 
 /* 001b6dc0 00000024 */ void gra3dPrelight() {}
@@ -16000,9 +16346,9 @@
 	/* s4 20 */ int bEnableSelfreflection;
 	/* fp 30 */ int bEmulateSelfreflection;
 	/* s6 22 */ int bEnableFlashlight;
-	/* -0x60(sp) */ int bEmulateFlashlight;
+	/* 0x0(sp) */ int bEmulateFlashlight;
 	/* s7 23 */ int bEnableFlashlight2;
-	/* -0x5c(sp) */ int bEmulateFlashlight2;
+	/* 0x4(sp) */ int bEmulateFlashlight2;
 	/* f0 38 */ float sc;
 	/* v1 3 */ G3DLIGHT *pDest;
 	/* v0 2 */ G3DLIGHT *pSrc;
@@ -16010,21 +16356,21 @@
 	/* v0 2 */ G3DLIGHT *pSrc;
 }
 
-/* 001b7408 000000fc */ static void _SetLightToShadow() {
-	/* -0x13c0(sp) */ GRA3DLIGHTDATA LD;
+/* 001b7408 000000fc */ static void _SetLightToShadow(/* s0 16 */ GRA3DEMULATIONLIGHTDATACREATIONDATA *pData) {
+	/* 0x0(sp) */ GRA3DLIGHTDATA LD;
 	/* s1 17 */ GRA3DLIGHTID lightId;
 }
 
-/* 001b7508 000000f0 */ void gra3dDrawSGDShadowCharacter(/* s0 16 */ ANI_CTRL *pAC, /* s2 18 */ SGDCOORDINATE *pCoord, /* s1 17 */ GRA3DEMULATIONLIGHTDATACREATIONDATA *pELDCD) {
-	/* -0xb0(sp) */ float vBBCenter[4];
-	/* -0xa0(sp) */ G3DLIGHT shadowlight;
+/* 001b7508 000000f0 */ void gra3dDrawSGDShadowCharacter(/* s0 16 */ ANI_CTRL *pAC, /* s2 18 */ SGDCOORDINATE *pCoord, /* s3 19 */ float *avBBWorld[4], /* s1 17 */ GRA3DEMULATIONLIGHTDATACREATIONDATA *pELDCD) {
+	/* 0x0(sp) */ float vBBCenter[4];
+	/* 0x10(sp) */ G3DLIGHT shadowlight;
 }
 
 /* 001b75f8 00000018 */ void gra3dStartSpecialLight() {}
 /* 001b7610 00000008 */ void gra3dEndSpecialLight() {}
 
 /* 001b7618 00000164 */ void gra3dUpdateSpecialLight() {
-	/* -0x40(sp) */ float f;
+	/* 0x0(sp) */ float f;
 }
 
 /* 001b7780 00000008 */ int gra3dIsSpecialLightActive() {}
@@ -16035,62 +16381,64 @@
 	/* s0 16 */ int iAreaId;
 }
 
-/* 00318210 00000034 */ void void fill<float *, float>(/* a0 4 */ float *__first, /* a1 5 */ float *__last, /* a2 6 */ float &__value) {}
-/* 00318210 00000028 */ void void ZeroArray<LIGHTCOMPAREDATA>(/* a0 4 */ LIGHTCOMPAREDATA *a, /* a1 5 */ int n) {}
+/* ffffffff 00000034 */ void void fill<float *, float>(/* a0 4 */ float *__first, /* a1 5 */ float *__last, /* a2 6 */ float &__value) {}
+/* ffffffff 00000028 */ void void ZeroArray<LIGHTCOMPAREDATA>(/* a0 4 */ LIGHTCOMPAREDATA *a, /* a1 5 */ int n) {}
 
-/* 00318210 000001c4 */ void void __introsort_loop<LIGHTCOMPAREDATA *, LIGHTCOMPAREDATA, int, LIGHTCOMPAREDATA::greater>(/* s0 16 */ LIGHTCOMPAREDATA *__first, /* s1 17 */ LIGHTCOMPAREDATA *__last, /* s2 18 */ int __depth_limit, /* -0x60(sp) */ greater __comp) {
+/* ffffffff 000001c4 */ void void __introsort_loop<LIGHTCOMPAREDATA *, LIGHTCOMPAREDATA, int, LIGHTCOMPAREDATA::greater>(/* s0 16 */ LIGHTCOMPAREDATA *__first, /* s1 17 */ LIGHTCOMPAREDATA *__last, /* s2 18 */ int __depth_limit, /* 0x0(sp) */ greater __comp) {
 	/* v0 2 */ LIGHTCOMPAREDATA *__cut;
 	/* v0 2 */ LIGHTCOMPAREDATA &__b;
 	/* a1 5 */ LIGHTCOMPAREDATA &__c;
-	/* -0x40(sp) */ greater __comp;
+	/* 0x20(sp) */ greater __comp;
 }
 
-/* 00318210 0000008c */ void void __final_insertion_sort<LIGHTCOMPAREDATA *, LIGHTCOMPAREDATA::greater>(/* a3 7 */ LIGHTCOMPAREDATA *__first, /* s1 17 */ LIGHTCOMPAREDATA *__last, /* -0x30(sp) */ greater __comp) {}
-/* 00318210 00000054 */ GRA3DLIGHTSTATUS* GRA3DLIGHTSTATUS * _fixed_array_verifyrange<GRA3DLIGHTSTATUS>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
-/* 00318210 000000e8 */ LIGHTCOMPAREDATA* LIGHTCOMPAREDATA * __unguarded_partition<LIGHTCOMPAREDATA *, LIGHTCOMPAREDATA, LIGHTCOMPAREDATA::greater>(/* a0 4 */ LIGHTCOMPAREDATA *__first, /* a1 5 */ LIGHTCOMPAREDATA *__last, /* a3 7 */ LIGHTCOMPAREDATA __pivot, /* -0x20(sp) */ greater __comp) {}
+/* ffffffff 0000008c */ void void __final_insertion_sort<LIGHTCOMPAREDATA *, LIGHTCOMPAREDATA::greater>(/* a3 7 */ LIGHTCOMPAREDATA *__first, /* s1 17 */ LIGHTCOMPAREDATA *__last, /* 0x0(sp) */ greater __comp) {}
+/* ffffffff 00000054 */ G3DLIGHT* G3DLIGHT * _fixed_array_verifyrange<G3DLIGHT>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ GRA3DLIGHTSTATUS* GRA3DLIGHTSTATUS * _fixed_array_verifyrange<GRA3DLIGHTSTATUS>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 000000e8 */ LIGHTCOMPAREDATA* LIGHTCOMPAREDATA * __unguarded_partition<LIGHTCOMPAREDATA *, LIGHTCOMPAREDATA, LIGHTCOMPAREDATA::greater>(/* a0 4 */ LIGHTCOMPAREDATA *__first, /* a1 5 */ LIGHTCOMPAREDATA *__last, /* a3 7 */ LIGHTCOMPAREDATA __pivot, /* 0x10(sp) */ greater __comp) {}
 
-/* 00318210 00000130 */ void void __partial_sort<LIGHTCOMPAREDATA *, LIGHTCOMPAREDATA, LIGHTCOMPAREDATA::greater>(/* -0x60(sp) */ LIGHTCOMPAREDATA *__first, /* s1 17 */ LIGHTCOMPAREDATA *__middle, /* s3 19 */ LIGHTCOMPAREDATA *__last, /* -0x5c(sp) */ greater __comp) {
+/* ffffffff 00000130 */ void void __partial_sort<LIGHTCOMPAREDATA *, LIGHTCOMPAREDATA, LIGHTCOMPAREDATA::greater>(/* 0x0(sp) */ LIGHTCOMPAREDATA *__first, /* s1 17 */ LIGHTCOMPAREDATA *__middle, /* s3 19 */ LIGHTCOMPAREDATA *__last, /* 0x4(sp) */ greater __comp) {
 	/* s0 16 */ LIGHTCOMPAREDATA *__i;
-	/* -0x50(sp) */ LIGHTCOMPAREDATA __value;
-	/* -0x40(sp) */ greater __comp;
+	/* 0x10(sp) */ LIGHTCOMPAREDATA __value;
+	/* 0x20(sp) */ greater __comp;
 }
 
-/* 00318210 00000130 */ void void __insertion_sort<LIGHTCOMPAREDATA *, LIGHTCOMPAREDATA::greater>(/* -0x50(sp) */ LIGHTCOMPAREDATA *__first, /* s1 17 */ LIGHTCOMPAREDATA *__last, /* -0x4c(sp) */ greater __comp) {
+/* ffffffff 00000130 */ void void __insertion_sort<LIGHTCOMPAREDATA *, LIGHTCOMPAREDATA::greater>(/* 0x0(sp) */ LIGHTCOMPAREDATA *__first, /* s1 17 */ LIGHTCOMPAREDATA *__last, /* 0x4(sp) */ greater __comp) {
 	/* s0 16 */ LIGHTCOMPAREDATA *__i;
 	/* a2 6 */ LIGHTCOMPAREDATA *__first;
-	/* -0x4b(sp) */ greater __comp;
-	/* -0x40(sp) */ LIGHTCOMPAREDATA __val;
+	/* 0x5(sp) */ greater __comp;
+	/* 0x10(sp) */ LIGHTCOMPAREDATA __val;
 	/* a1 5 */ LIGHTCOMPAREDATA *__last;
 	/* v1 3 */ LIGHTCOMPAREDATA *__result;
 	/* v0 2 */ ptrdiff_t __n;
 }
 
-/* 00318210 00000074 */ void void __unguarded_insertion_sort_aux<LIGHTCOMPAREDATA *, LIGHTCOMPAREDATA, LIGHTCOMPAREDATA::greater>(/* a0 4 */ LIGHTCOMPAREDATA *__first, /* s1 17 */ LIGHTCOMPAREDATA *__last, /* -0x40(sp) */ greater __comp) {
+/* ffffffff 00000074 */ void void __unguarded_insertion_sort_aux<LIGHTCOMPAREDATA *, LIGHTCOMPAREDATA, LIGHTCOMPAREDATA::greater>(/* a0 4 */ LIGHTCOMPAREDATA *__first, /* s1 17 */ LIGHTCOMPAREDATA *__last, /* 0x0(sp) */ greater __comp) {
 	/* s0 16 */ LIGHTCOMPAREDATA *__i;
 }
 
-/* 00318210 00000100 */ void void sort_heap<LIGHTCOMPAREDATA *, LIGHTCOMPAREDATA::greater>(/* s1 17 */ LIGHTCOMPAREDATA *__first, /* s2 18 */ LIGHTCOMPAREDATA *__last, /* -0x80(sp) */ greater __comp) {}
+/* ffffffff 00000100 */ void void sort_heap<LIGHTCOMPAREDATA *, LIGHTCOMPAREDATA::greater>(/* s1 17 */ LIGHTCOMPAREDATA *__first, /* s2 18 */ LIGHTCOMPAREDATA *__last, /* 0x0(sp) */ greater __comp) {}
 
-/* 00318210 000000c4 */ void void __make_heap<LIGHTCOMPAREDATA *, LIGHTCOMPAREDATA::greater, LIGHTCOMPAREDATA, int>(/* s3 19 */ LIGHTCOMPAREDATA *__first, /* a1 5 */ LIGHTCOMPAREDATA *__last, /* -0x50(sp) */ greater __comp) {
+/* ffffffff 000000c4 */ void void __make_heap<LIGHTCOMPAREDATA *, LIGHTCOMPAREDATA::greater, LIGHTCOMPAREDATA, int>(/* s3 19 */ LIGHTCOMPAREDATA *__first, /* a1 5 */ LIGHTCOMPAREDATA *__last, /* 0x0(sp) */ greater __comp) {
 	/* s0 16 */ ptrdiff_t __parent;
 }
 
-/* 00318210 00000118 */ void void __adjust_heap<LIGHTCOMPAREDATA *, int, LIGHTCOMPAREDATA, LIGHTCOMPAREDATA::greater>(/* t1 9 */ LIGHTCOMPAREDATA *__first, /* a1 5 */ int __holeIndex, /* a2 6 */ int __len, /* a3 7 */ LIGHTCOMPAREDATA __value, /* -0x20(sp) */ greater __comp) {
+/* ffffffff 00000118 */ void void __adjust_heap<LIGHTCOMPAREDATA *, int, LIGHTCOMPAREDATA, LIGHTCOMPAREDATA::greater>(/* t1 9 */ LIGHTCOMPAREDATA *__first, /* a1 5 */ int __holeIndex, /* a2 6 */ int __len, /* a3 7 */ LIGHTCOMPAREDATA __value, /* 0x10(sp) */ greater __comp) {
 	/* t2 10 */ int __topIndex;
 	/* a3 7 */ int __secondChild;
 	/* v0 2 */ LIGHTCOMPAREDATA &__X;
 }
 
-/* 00318210 00000090 */ void void __unguarded_linear_insert<LIGHTCOMPAREDATA *, LIGHTCOMPAREDATA, LIGHTCOMPAREDATA::greater>(/* a0 4 */ LIGHTCOMPAREDATA *__last, /* a3 7 */ LIGHTCOMPAREDATA __val, /* -0x10(sp) */ greater __comp) {
+/* ffffffff 00000090 */ void void __unguarded_linear_insert<LIGHTCOMPAREDATA *, LIGHTCOMPAREDATA, LIGHTCOMPAREDATA::greater>(/* a0 4 */ LIGHTCOMPAREDATA *__last, /* a3 7 */ LIGHTCOMPAREDATA __val, /* 0x10(sp) */ greater __comp) {
 	/* v0 2 */ LIGHTCOMPAREDATA *__next;
 }
 
-/* 00318210 000000e4 */ void void __push_heap<LIGHTCOMPAREDATA *, int, LIGHTCOMPAREDATA, LIGHTCOMPAREDATA::greater>(/* t1 9 */ LIGHTCOMPAREDATA *__first, /* a1 5 */ int __holeIndex, /* a2 6 */ int __topIndex, /* t2 10 */ LIGHTCOMPAREDATA __value, /* -0x10(sp) */ greater __comp) {
+/* ffffffff 000000e4 */ void void __push_heap<LIGHTCOMPAREDATA *, int, LIGHTCOMPAREDATA, LIGHTCOMPAREDATA::greater>(/* t1 9 */ LIGHTCOMPAREDATA *__first, /* a1 5 */ int __holeIndex, /* a2 6 */ int __topIndex, /* t2 10 */ LIGHTCOMPAREDATA __value, /* 0x10(sp) */ greater __comp) {
 	/* v1 3 */ int __parent;
 }
 
 /* 001b7878 00000070 */ static void __static_initialization_and_destruction_0(/* a0 4 */ int __initialize_p, /* a1 5 */ int __priority) {}
-/* 00318210 0000003c */ type_info& GRA3DLIGHTSTATUS type_info function() {}
+/* ffffffff 0000003c */ type_info& G3DLIGHT type_info function() {}
+/* ffffffff 0000003c */ type_info& GRA3DLIGHTSTATUS type_info function() {}
 /* 001b78e8 00000020 */ static void global constructors keyed to _DrawShadowTexture() {}
 
 // *****************************************************************************
@@ -16129,8 +16477,12 @@
 	/* s2 18 */ SGDVUVNDESC &rVUVNDesc;
 	/* s3 19 */ SGDVUVNDATA *pVUVNData;
 	/* a3 7 */ SGDVECTORINFO *pVI;
+	/* s4 20 */ DVECTOR &ravDest[1];
+	/* s5 21 */ _VECTORADDRESS &raVA[1];
 	/* s1 17 */ void *src;
 	/* a1 5 */ size_t qwcount;
+	/* a0 4 */ u_long128 *pqwDest;
+	/* v1 3 */ u_long128 *pqwSrc;
 	/* t1 9 */ int i;
 	/* s0 16 */ SGDCOORDINATE *pCoord0;
 	/* v0 2 */ SGDCOORDINATE *pCoord1;
@@ -16174,16 +16526,20 @@
 	/* s3 19 */ int qwc;
 	/* s5 21 */ GRA3DVU1MATERIALPACKET_POINT *pPacketPoint;
 	/* s0 16 */ GRA3DVU1MATERIALPACKET_SPOT *pPacketSpot;
+	/* s0 16 */ GRA3DMATERIALINDEXCACHE *pMatIndexCachePoint;
 	/* s4 20 */ GRA3DMATERIALINDEXCACHE *pMatIndexCacheSpot;
 	/* s1 17 */ int bEnablePoint;
 	/* s3 19 */ int bEnableSpot;
 	/* a2 6 */ int i;
 	/* a2 6 */ int i;
+	/* v0 2 */ GRA3DVU1MATERIALCACHE_SPOT *pMatCache;
+	/* v0 2 */ GRA3DVU1MATERIALCACHE_POINT *pMatCache;
 }
 
 /* 001b8798 00000020 */ static void GsImageProcess(/* a0 4 */ SGDPROCUNITHEADER *pPUHead) {}
 
 /* 001b87b8 000000fc */ static void _SetCoordData(/* s1 17 */ SGDPROCUNITHEADER *pPUHead) {
+	/* rdata 3b72d0 */ static char __FUNCTION__[14];
 	/* s0 16 */ GRA3DVU1LIGHTPACKET *pVu1LightPacket;
 }
 
@@ -16191,24 +16547,25 @@
 /* 001b88c0 00000008 */ SGDPROCUNITHEADER* _GetVUVNPRIM() {}
 
 /* 001b88c8 00000280 */ static int CheckBoundingBox(/* s3 19 */ SGDPROCUNITHEADER *pPUHead) {
-	/* -0x2f0(sp) */ float avWork[16][4];
+	/* 0x0(sp) */ float avWork[16][4];
 	/* s2 18 */ SGDBOUNDINGBOXDESC &rBBDesc;
 	/* a0 4 */ int clip1;
-	/* -0x1f0(sp) */ SGDCOORDINATE Coord;
-	/* -0x110(sp) */ SGDCOORDINATE Coord;
+	/* 0x100(sp) */ SGDCOORDINATE Coord;
+	/* 0x1e0(sp) */ SGDCOORDINATE Coord;
 }
 
 /* 001b8b48 000000f8 */ static void SgSortUnitPrim(/* s0 16 */ SGDPROCUNITHEADER *pPUHead) {
 	/* rdata 3b7300 */ static char __FUNCTION__[15];
 }
 
-/* 001b8c40 00000110 */ static float&[4][4] _CalcWeightedLocalWorldMatrix(/* -0x50(sp) */ float *matRet[4], /* a1 5 */ float *matLocalWorld[4]) {
+/* 001b8c40 00000110 */ static float&[4][4] _CalcWeightedLocalWorldMatrix(/* 0x0(sp) */ float *matRet[4], /* a1 5 */ float *matLocalWorld[4]) {
 	/* f1 39 */ float fABS;
-	/* -0x40(sp) */ float matTemp[4][4];
+	/* 0x10(sp) */ float matTemp[4][4];
 }
 
 /* 001b8d50 00000090 */ static void SetCoordData(/* s2 18 */ GRA3DVU1LIGHTDATA *pVu1LightData, /* a1 5 */ SGDPROCUNITHEADER *pPUHead) {
 	/* s0 16 */ SGDCOORDINATEDESC &rCoordDesc;
+	/* s1 17 */ SGDCOORDINATE *pCoord0;
 	/* v0 2 */ SGDCOORDINATE *pCoord1;
 }
 
@@ -16217,7 +16574,7 @@
 	/* s4 20 */ int i;
 	/* s1 17 */ _ONELIST &rList;
 	/* sdata 3f12d8 */ static int s_iWriteSize;
-	/* -0x90(sp) */ float matWork[4][4];
+	/* 0x0(sp) */ float matWork[4][4];
 	/* s0 16 */ int j;
 }
 
@@ -16228,27 +16585,27 @@
 
 /* 001b9008 00000100 */ static void SgSortUnitPrimPost(/* s1 17 */ SGDPROCUNITHEADER *pPUHead) {}
 
-/* 001b9108 000003dc */ static void SetPreRenderMeshData(/* a2 6 */ SGDPROCUNITHEADER *pPUHead, /* -0x90(sp) */ int bAddColor) {
+/* 001b9108 000003dc */ static void SetPreRenderMeshData(/* a2 6 */ SGDPROCUNITHEADER *pPUHead, /* 0x40(sp) */ int bAddColor) {
 	/* rdata 3b73c8 */ static char __FUNCTION__[21];
-	/* -0x8c(sp) */ SGDVUVNDESC &rVUVNDesc;
-	/* -0x88(sp) */ SGDVUVNDATA_PRESET &rVUVNData;
+	/* 0x44(sp) */ SGDVUVNDESC &rVUVNDesc;
+	/* 0x48(sp) */ SGDVUVNDATA_PRESET &rVUVNData;
 	/* v1 3 */ SGDVUMESHDATA_PRESET &rVUMeshData;
-	/* -0x84(sp) */ int mtype;
-	/* -0x80(sp) */ int gloops;
-	/* -0x7c(sp) */ _SGDVUMESHCOLORDATA *pVMCD;
-	/* -0x78(sp) */ int iVertexCount;
-	/* -0x74(sp) */ int j;
+	/* 0x4c(sp) */ int mtype;
+	/* 0x50(sp) */ int gloops;
+	/* 0x54(sp) */ _SGDVUMESHCOLORDATA *pVMCD;
+	/* 0x58(sp) */ int iVertexCount;
+	/* 0x5c(sp) */ int j;
 	/* s3 19 */ int loops;
-	/* -0x70(sp) */ VECTOR3 &ravColor[1];
+	/* 0x60(sp) */ VECTOR3 &ravColor[1];
 	/* s6 22 */ int i;
 	/* s2 18 */ VECTOR3 &rvColor;
 	/* s0 16 */ int iVertexIndex;
-	/* -0xd0(sp) */ float vV[4];
-	/* -0xc0(sp) */ float vN[4];
+	/* 0x0(sp) */ float vV[4];
+	/* 0x10(sp) */ float vN[4];
 	/* v1 3 */ VECTOR3 *pvVSrc;
 	/* a3 7 */ VECTOR3 *pvNSrc;
-	/* -0xb0(sp) */ float pcol[4];
-	/* -0xa0(sp) */ float first[4];
+	/* 0x20(sp) */ float pcol[4];
+	/* 0x30(sp) */ float first[4];
 }
 
 /* 001b94e8 000000a8 */ static void SelectLight(/* a1 5 */ SGDPROCUNITHEADER *pPUHead) {}
@@ -16274,7 +16631,9 @@
 	/* s1 17 */ SGDCOORDINATE *pCoord;
 }
 
-/* 001b9948 000000c0 */ void gra3dsgdSetCoordinate(/* s1 17 */ SGDCOORDINATE *pCU, /* s0 16 */ int iIndex) {}
+/* 001b9948 000000c0 */ void gra3dsgdSetCoordinate(/* s1 17 */ SGDCOORDINATE *pCU, /* s0 16 */ int iIndex) {
+	/* rdata 3b7590 */ static char __FUNCTION__[22];
+}
 
 /* 001b9a08 0000012c */ static void ClearPreRenderMeshData(/* a0 4 */ SGDPROCUNITHEADER *pPUHead) {
 	/* rdata 3b75a8 */ static char __FUNCTION__[23];
@@ -16283,6 +16642,7 @@
 	/* a0 4 */ _SGDVUMESHCOLORDATA *pVMCD;
 	/* s0 16 */ int j;
 	/* a2 6 */ int loops;
+	/* v0 2 */ VECTOR3 &ravColor[1];
 	/* a1 5 */ int i;
 }
 
@@ -16293,9 +16653,9 @@
 	/* s2 18 */ SGDBOUNDINGBOXDESC &rBBDesc;
 	/* s1 17 */ GRA3DCAMERA *pCam;
 	/* s0 16 */ float &rMat[4][4];
-	/* -0x190(sp) */ float matWorldScreen[4][4];
-	/* -0x150(sp) */ float matWorldClip[4][4];
-	/* -0x110(sp) */ SGDCOORDINATE CU;
+	/* 0x0(sp) */ float matWorldScreen[4][4];
+	/* 0x40(sp) */ float matWorldClip[4][4];
+	/* 0x80(sp) */ SGDCOORDINATE CU;
 }
 
 /* 001b9e90 00000194 */ static void SetVUMeshDataP(/* s0 16 */ SGDPROCUNITHEADER *pPUHead) {
@@ -16316,7 +16676,10 @@
 }
 
 /* 001ba0c8 000000f4 */ void gra3dsgdDrawPresetDataObject(/* s0 16 */ SGDPROCUNITHEADER *pPUHead) {}
-/* 001ba1c0 0000015c */ static void SgSortPreProcessP(/* s0 16 */ SGDPROCUNITHEADER *pPUHead) {}
+
+/* 001ba1c0 0000015c */ static void SgSortPreProcessP(/* s0 16 */ SGDPROCUNITHEADER *pPUHead) {
+	/* rdata 3b76e8 */ static char __FUNCTION__[18];
+}
 
 /* 001ba320 00000064 */ int gra3dsgdGetNumBlock() {
 	/* rdata 3b7768 */ static char __FUNCTION__[20];
@@ -16343,9 +16706,10 @@
 }
 
 /* 001ba680 000007d0 */ void _gra3dDrawSGD(/* s3 19 */ SGDFILEHEADER *pSGDTop, /* s6 22 */ SGDRENDERTYPE type, /* s0 16 */ SGDCOORDINATE *pCoord, /* s4 20 */ int pnum) {
+	/* rdata 3b7828 */ static char __FUNCTION__[14];
 	/* s7 23 */ int bPreset;
 	/* s5 21 */ SGDPROCUNITHEADER **pk;
-	/* -0x80(sp) */ CoordCache CC;
+	/* 0x0(sp) */ CoordCache CC;
 	/* s1 17 */ int iNumBlock;
 	/* s2 18 */ int i;
 	/* s2 18 */ int i;
@@ -16389,6 +16753,7 @@
 /* 001bb068 00000098 */ static void SgChangeSTUnitPrim(/* s0 16 */ SGDPROCUNITHEADER *pPUHead, /* s1 17 */ int bPreset, /* f21 59 */ float fAddS, /* f20 58 */ float fAddT) {}
 
 /* 001bb100 000001c8 */ void gra3dChangeST(/* s0 16 */ SGDFILEHEADER *pSGDTop, /* f21 59 */ float fAddS, /* f20 58 */ float fAddT) {
+	/* rdata 3b7998 */ static char __FUNCTION__[14];
 	/* s2 18 */ int bPreset;
 	/* s1 17 */ int i;
 }
@@ -16401,9 +16766,11 @@
 	/* a0 4 */ _SGDVUMESHCOLORDATA *pVMCD;
 	/* s0 16 */ int j;
 	/* v1 3 */ int loops;
+	/* a2 6 */ VECTOR3 &ravColor[1];
 	/* a1 5 */ int i;
 	/* s0 16 */ int j;
 	/* a1 5 */ int loops;
+	/* v0 2 */ VECTOR3 &ravColor[1];
 	/* v1 3 */ int i;
 }
 
@@ -16415,30 +16782,30 @@
 }
 
 /* 001bb6e0 000000cc */ static void void G3DLIGHTTYPE::_SelectLightByType<4>(/* s0 16 */ G3DLIGHTTYPE type, /* a2 6 */ float *avBB[4]) {
-	/* -0x30(sp) */ int aiIndex[4];
+	/* 0x0(sp) */ int aiIndex[4];
 	/* s2 18 */ int j;
 	/* v0 2 */ int iIndex;
 }
 
 /* 001bb7b0 000001c0 */ static void void _CalcValidLightIndexByType<4>(/* s6 22 */ int *aiRet, /* s0 16 */ G3DLIGHTTYPE type, /* s5 21 */ float *avBB[4]) {
-	/* -0x60(sp) */ fixed_array<_LIGHTCOMPAREDATA,4> aLCD;
+	/* 0x0(sp) */ fixed_array<_LIGHTCOMPAREDATA,4> aLCD;
 	/* s1 17 */ int i;
 	/* s0 16 */ int iId;
 	/* f0 38 */ float colscale;
 	/* s0 16 */ int i;
 }
 
-/* 00318210 00000034 */ void void fill<_LIGHTCOMPAREDATA *, _LIGHTCOMPAREDATA>(/* a0 4 */ _LIGHTCOMPAREDATA *__first, /* a1 5 */ _LIGHTCOMPAREDATA *__last, /* a2 6 */ _LIGHTCOMPAREDATA &__value) {}
+/* ffffffff 00000034 */ void void fill<_LIGHTCOMPAREDATA *, _LIGHTCOMPAREDATA>(/* a0 4 */ _LIGHTCOMPAREDATA *__first, /* a1 5 */ _LIGHTCOMPAREDATA *__last, /* a2 6 */ _LIGHTCOMPAREDATA &__value) {}
 
 /* 001bb970 00000104 */ static void void _SortLightCompareData<4>(/* s0 16 */ fixed_array<_LIGHTCOMPAREDATA,4> &raLCD, /* f20 58 */ float fMaxPower, /* s5 21 */ int iIndex) {
 	/* s4 20 */ int j;
 	/* s2 18 */ int k;
 }
 
-/* 00318210 00000054 */ _LIGHTCOMPAREDATA* _LIGHTCOMPAREDATA * _fixed_array_verifyrange<_LIGHTCOMPAREDATA>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
-/* 00318210 00000044 */ void _CalcWeightedVertexBuffer(/* a0 4 */ float *dp, /* a1 5 */ float *v) {}
-/* 00318210 00000044 */ void _CalcWeightedNormalBuffer(/* a0 4 */ float *dp, /* a1 5 */ float *v) {}
-/* 00318210 0000003c */ type_info& _LIGHTCOMPAREDATA type_info function() {}
+/* ffffffff 00000054 */ _LIGHTCOMPAREDATA* _LIGHTCOMPAREDATA * _fixed_array_verifyrange<_LIGHTCOMPAREDATA>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000044 */ void _CalcWeightedVertexBuffer(/* a0 4 */ float *dp, /* a1 5 */ float *v) {}
+/* ffffffff 00000044 */ void _CalcWeightedNormalBuffer(/* a0 4 */ float *dp, /* a1 5 */ float *v) {}
+/* ffffffff 0000003c */ type_info& _LIGHTCOMPAREDATA type_info function() {}
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/graphics/graph3d/gra3dSGDData.c
@@ -16456,13 +16823,13 @@
 /* 001bbb90 000001b0 */ static void RebuildTRI2Files(/* s3 19 */ SGDPROCUNITHEADER *pPUHead) {
 	/* rdata 3b7a58 */ static char __FUNCTION__[17];
 	/* s2 18 */ SGDTEXTUREIMAGEDESC &rTexDesc;
-	/* -0x50(sp) */ TRI2SIZEDATA TRI2SizeData;
+	/* 0x0(sp) */ TRI2SIZEDATA TRI2SizeData;
 	/* s1 17 */ SGDTRI2FILEHEADER *pTRI2Head;
 	/* s4 20 */ int i;
 }
 
 /* 001bbd40 00000008 */ static void MappingCoordinateData(/* a0 4 */ u_int *intpointer, /* a1 5 */ HeaderSection *hs) {}
-/* 001bbd48 00000008 */ static void MappingVUVNDataPreset(/* a1 5 */ int mtype, /* a2 6 */ int gloops, /* a3 7 */ int hsize) {}
+/* 001bbd48 00000008 */ static void MappingVUVNDataPreset(/* a0 4 */ u_int *intpointer, /* a1 5 */ int mtype, /* a2 6 */ int gloops, /* a3 7 */ int hsize) {}
 
 /* 001bbd50 0000014c */ static void MappingVUVNData(/* a0 4 */ SGDPROCUNITHEADER *pPUHead, /* a1 5 */ SGDFILEHEADER *pSGDHead) {
 	/* v1 3 */ SGDVECTORINFO *pVectorInfo;
@@ -16490,7 +16857,7 @@
 /* 001bbfd0 00000008 */ static void RebuildTRI2FilesInverse(/* a0 4 */ SGDPROCUNITHEADER *pPUHead) {}
 /* 001bbfd8 00000008 */ static void MappingCoordinateDataInverse(/* a0 4 */ SGDPROCUNITHEADER *intpointer, /* a1 5 */ SGDFILEHEADER *hs) {}
 /* 001bbfe0 00000008 */ static void MappingVUVNDataInverse(/* a0 4 */ SGDPROCUNITHEADER *pPUHead, /* a1 5 */ SGDFILEHEADER *pSGDHead) {}
-/* 001bbfe8 00000008 */ static void MappingVUVNDataPresetInverse(/* a1 5 */ int mtype, /* a2 6 */ int gloops, /* a3 7 */ int hsize) {}
+/* 001bbfe8 00000008 */ static void MappingVUVNDataPresetInverse(/* a0 4 */ u_int *intpointer, /* a1 5 */ int mtype, /* a2 6 */ int gloops, /* a3 7 */ int hsize) {}
 
 /* 001bbff0 00000060 */ static void MappingMeshDataInverse(/* a0 4 */ SGDPROCUNITHEADER *pPUHeader, /* a3 7 */ u_int *vuvnprim, /* a2 6 */ SGDFILEHEADER *pSGDHead) {
 	/* a1 5 */ int mtype;
@@ -16526,12 +16893,13 @@
 }
 
 /* 001bc818 00000080 */ void sgdCalcCoordinate(/* a0 4 */ SGDFILEHEADER *pSGDData, /* v1 3 */ float *matLocalWorld[4]) {
+	/* rdata 3b7e28 */ static char __FUNCTION__[18];
 	/* a1 5 */ int iNumBlock;
 }
 
 /* 001bc898 0000008c */ void sgdCalcCoordinateMatrix(/* s0 16 */ SGDCOORDINATE *pCoord) {}
 
-/* 001bc928 00000394 */ void sgdVerifyLightData(/* -0x70(sp) */ GRA3DLIGHTDATA *pRet, /* s4 20 */ ZERO2LIGHTDATAFILE *pZLD) {
+/* 001bc928 00000394 */ void sgdVerifyLightData(/* 0x0(sp) */ GRA3DLIGHTDATA *pRet, /* s4 20 */ ZERO2LIGHTDATAFILE *pZLD) {
 	/* rdata 3b7e50 */ static char __FUNCTION__[19];
 	/* s1 17 */ int i;
 	/* v1 3 */ float *pv0;
@@ -16571,10 +16939,23 @@
 	/* a1 5 */ float *avBBSrc[4];
 	/* v1 3 */ float &rvSrc[4];
 	/* v0 2 */ float &rvDest[4];
+	/* v1 3 */ float &rvSrc[4];
+	/* v0 2 */ float &rvDest[4];
+	/* v1 3 */ float &rvSrc[4];
+	/* v0 2 */ float &rvDest[4];
+	/* v1 3 */ float &rvSrc[4];
+	/* v0 2 */ float &rvDest[4];
+	/* v1 3 */ float &rvSrc[4];
+	/* v0 2 */ float &rvDest[4];
+	/* v1 3 */ float &rvSrc[4];
+	/* v0 2 */ float &rvDest[4];
+	/* v1 3 */ float &rvSrc[4];
+	/* v0 2 */ float &rvDest[4];
 }
 
 /* 001bd118 00000520 */ void sgdRemapInverse(/* s2 18 */ SGDFILEHEADER *pSGDHead) {
 	/* rdata 3b8098 */ static char __FUNCTION__[16];
+	/* s6 22 */ SGDPROCUNITHEADER **apProcUnitHead;
 	/* s5 21 */ unsigned int i;
 	/* s1 17 */ SGDCOORDINATE &rCoord;
 	/* s0 16 */ int iIndex;
@@ -16586,12 +16967,17 @@
 }
 
 /* 001bd638 00000008 */ void sgdEnableOptimizeTexture(/* a0 4 */ int b) {}
+/* ffffffff 00000054 */ G3DLIGHT* G3DLIGHT * _fixed_array_verifyrange<G3DLIGHT>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
 
-/* 00318210 00000090 */ int int indexof<SGDCOORDINATE>(/* a0 4 */ SGDCOORDINATE *arraytop, /* a1 5 */ SGDCOORDINATE *obj) {
+/* ffffffff 00000090 */ int int indexof<SGDCOORDINATE>(/* a0 4 */ SGDCOORDINATE *arraytop, /* a1 5 */ SGDCOORDINATE *obj) {
 	/* sdata 3f1370 */ static char __FUNCTION__[8];
 }
 
-/* 00318210 00000090 */ int int indexof<SGDMATERIAL>(/* a0 4 */ SGDMATERIAL *arraytop, /* a1 5 */ SGDMATERIAL *obj) {}
+/* ffffffff 00000090 */ int int indexof<SGDMATERIAL>(/* a0 4 */ SGDMATERIAL *arraytop, /* a1 5 */ SGDMATERIAL *obj) {
+	/* sdata 3f1378 */ static char __FUNCTION__[8];
+}
+
+/* ffffffff 0000003c */ type_info& G3DLIGHT type_info function() {}
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/graphics/graph3d/gra3dShadow.c
@@ -16624,14 +17010,14 @@
 	/* a0 4 */ int s;
 	/* v0 2 */ int e;
 	/* data 3185b0 */ static float shadowtex[4][4];
-	/* -0x10(sp) */ float kei[4];
+	/* 0x0(sp) */ float kei[4];
 }
 
 /* 001bd9f0 000002ec */ static int CheckBoundingBoxShadowTrace(/* s1 17 */ float *lwmtx[4], /* s2 18 */ float *tmpv[4], /* a2 6 */ float *dir) {
 	/* s1 17 */ int i;
 	/* s0 16 */ int clip;
-	/* -0xb0(sp) */ float tmpmat[4][4];
-	/* -0x70(sp) */ float setmat[4][4];
+	/* 0x0(sp) */ float tmpmat[4][4];
+	/* 0x40(sp) */ float setmat[4][4];
 	/* data 3185f0 */ static float clipmtx[4][4];
 	/* data 318630 */ static BoundLine boundline[12];
 	/* s3 19 */ int clip0;
@@ -16648,19 +17034,19 @@
 /* 001bddb0 0000058c */ void AssignShadowPrim(/* s7 23 */ SGDPROCUNITHEADER *pPUHead) {
 	/* fp 30 */ int i;
 	/* s5 21 */ int cn;
-	/* -0xd0(sp) */ float tmpvec[4];
-	/* -0xc0(sp) */ CoordCache CC;
+	/* 0x0(sp) */ float tmpvec[4];
+	/* 0x10(sp) */ CoordCache CC;
 	/* s1 17 */ GRA3DSCRATCHPADLAYOUT_MAPSHADOW *pSL;
-	/* -0x90(sp) */ CoordCache CC;
+	/* 0x40(sp) */ CoordCache CC;
 }
 
 /* 001be340 00000244 */ static void SetUpShadow() {
 	/* s0 16 */ GRA3DVU1MEMLAYOUT_MAPSHADOW_DIRECT &rVu1Mem;
-	/* -0x70(sp) */ sceGifPackAd aGPA[3];
+	/* 0x0(sp) */ sceGifPackAd aGPA[3];
 }
 
 /* 001be588 0000017c */ static void GetRotMatrixZAxis(/* s1 17 */ float *matDest[4], /* s0 16 */ float *vSrc) {
-	/* -0x40(sp) */ float vWork[4];
+	/* 0x0(sp) */ float vWork[4];
 	/* s0 16 */ float *pm1[4];
 	/* f12 50 */ float ry;
 	/* f12 50 */ float f;
@@ -16673,38 +17059,38 @@
 }
 
 /* 001be708 000001fc */ static void _CalcProjectionShadowMatrix(/* s1 17 */ float *matProjection[4], /* f12 50 */ float ax, /* f13 51 */ float ay, /* f14 52 */ float fTextureScale, /* a1 5 */ int iTexWidth, /* a2 6 */ int iTexHeight, /* a1 5 */ float *vLightDir, /* s2 18 */ float *avBBWorld[4]) {
-	/* -0xd0(sp) */ float vScale[4];
-	/* -0xc0(sp) */ float matRot[4][4];
-	/* -0x80(sp) */ float vTransInverse[4];
-	/* -0x70(sp) */ float planeCull[4];
-	/* -0x60(sp) */ int aiBBIndex[8];
-	/* -0x40(sp) */ float culval[8];
+	/* 0x0(sp) */ float vScale[4];
+	/* 0x10(sp) */ float matRot[4][4];
+	/* 0x50(sp) */ float vTransInverse[4];
+	/* 0x60(sp) */ float planeCull[4];
+	/* 0x70(sp) */ int aiBBIndex[8];
+	/* 0x90(sp) */ float culval[8];
 	/* a1 5 */ int i;
 }
 
 /* 001be908 00000184 */ static void CalcShadowHeight(/* a0 4 */ float *bbox[4]) {
 	/* rdata 3b81e8 */ static char __FUNCTION__[17];
 	/* s1 17 */ u_int tmp;
-	/* -0x40(sp) */ float tmpvec[4];
-	/* -0x30(sp) */ sceVu0IVECTOR itmp;
+	/* 0x0(sp) */ float tmpvec[4];
+	/* 0x10(sp) */ sceVu0IVECTOR itmp;
 }
 
 /* 001bea90 00000148 */ static void _CalcCullingMatrix() {
-	/* -0x60(sp) */ float tmpmat[4][4];
-	/* -0x20(sp) */ float tmpvec[4];
+	/* 0x0(sp) */ float tmpmat[4][4];
+	/* 0x40(sp) */ float tmpvec[4];
 	/* v1 3 */ int i;
 	/* v0 2 */ float *pm0[4];
 }
 
 /* 001bebd8 0000005c */ static void _SetCameraCoord() {
-	/* -0x20(sp) */ float tmpvec[4];
+	/* 0x0(sp) */ float tmpvec[4];
 }
 
 /* 001bec38 0000017c */ static void _CalcAspectRatioForRenderShadow(/* s1 17 */ float *pAX, /* s2 18 */ float *pAY) {
-	/* -0x90(sp) */ float matWorldScreen[4][4];
+	/* 0x0(sp) */ float matWorldScreen[4][4];
 	/* f21 59 */ float xmax;
 	/* f22 60 */ float ymax;
-	/* -0x50(sp) */ float tmpvec[4];
+	/* 0x40(sp) */ float tmpvec[4];
 	/* v1 3 */ int i;
 }
 
@@ -16713,23 +17099,23 @@
 
 /* 001bee68 00000244 */ static void _RenderShadow(/* s5 21 */ SGDFILEHEADER *pSGDTop, /* s4 20 */ SGDCOORDINATE *pCoord, /* s3 19 */ int iObjectIndex) {
 	/* rdata 3b8250 */ static char __FUNCTION__[14];
-	/* -0x100(sp) */ sceGifPackAd aGPA0[5];
+	/* 0x0(sp) */ sceGifPackAd aGPA0[5];
 	/* s1 17 */ int iWidth;
 	/* s0 16 */ int iHeight;
-	/* -0x60(sp) */ sceGifPackAd aGPA1[2];
+	/* 0xa0(sp) */ sceGifPackAd aGPA1[2];
 }
 
-/* 001bf0b0 00000144 */ static void _DrawShadow(/* f20 58 */ float ax, /* f21 59 */ float ay) {
+/* 001bf0b0 00000144 */ static void _DrawShadow(/* a0 4 */ GRA3DCAMERA *pCamera, /* f20 58 */ float ax, /* f21 59 */ float ay) {
 	/* s3 19 */ int i;
 	/* s1 17 */ size_t i;
 }
 
 /* 001bf1f8 00000244 */ void gra3dshadowInit(/* a0 4 */ GRA3DSHADOWCREATIONDATA *pCD) {
-	/* -0x40(sp) */ sceGsTex0 gsTex0;
-	/* -0x30(sp) */ RENDERTARGETCREATIONDATA rtCD;
+	/* 0x0(sp) */ sceGsTex0 gsTex0;
+	/* 0x10(sp) */ RENDERTARGETCREATIONDATA rtCD;
 }
 
-/* 001bf440 00000284 */ void gra3dshadowAddProjectModel(/* -0x40(sp) */ SGDFILEHEADER *pSGDTop) {
+/* 001bf440 00000284 */ void gra3dshadowAddProjectModel(/* 0x0(sp) */ SGDFILEHEADER *pSGDTop) {
 	/* rdata 3b82a0 */ static char __FUNCTION__[27];
 	/* s0 16 */ size_t i;
 	/* s0 16 */ size_t i;
@@ -16748,8 +17134,8 @@
 }
 
 /* 001bf708 00000234 */ static void _CalcColor() {
-	/* -0xc0(sp) */ float vWork[4];
-	/* -0xb0(sp) */ originholder<G3DLIGHT> oh;
+	/* 0x0(sp) */ float vWork[4];
+	/* 0x10(sp) */ originholder<G3DLIGHT> oh;
 	/* s2 18 */ originholder<G3DLIGHT> *this;
 	/* s1 17 */ float *pv0;
 	/* s0 16 */ float *pv1;
@@ -16778,28 +17164,28 @@
 
 /* 001bfc40 000001d8 */ void gra3dshadowDrawSGD(/* s0 16 */ SGDFILEHEADER *pSGDTop, /* s2 18 */ SGDCOORDINATE *pCoord, /* s3 19 */ int iObjectIndex) {
 	/* rdata 3b83e0 */ static char __FUNCTION__[19];
-	/* -0x220(sp) */ GRA3DCAMERA camOrigin;
-	/* -0x40(sp) */ float vvv[4];
+	/* 0x0(sp) */ GRA3DCAMERA camOrigin;
+	/* 0x1e0(sp) */ float vvv[4];
 }
 
 /* 001bfe18 00000174 */ void DispShadowSprite() {
 	/* v0 2 */ qword *base;
-	/* -0x30(sp) */ sceVu0IVECTOR urp;
-	/* -0x20(sp) */ sceVu0IVECTOR dlp;
+	/* 0x0(sp) */ sceVu0IVECTOR urp;
+	/* 0x10(sp) */ sceVu0IVECTOR dlp;
 }
 
-/* 00318210 00000044 */ float* float * min_element<float *>(/* a0 4 */ float *__first, /* a1 5 */ float *__last) {
+/* ffffffff 00000044 */ float* float * min_element<float *>(/* a0 4 */ float *__first, /* a1 5 */ float *__last) {
 	/* v0 2 */ float *__result;
 }
 
-/* 00318210 00000054 */ SGDFILEHEADER** SGDFILEHEADER * * _fixed_array_verifyrange<SGDFILEHEADER *>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
-/* 00318210 00000034 */ void void fill<SGDFILEHEADER **, SGDFILEHEADER *>(/* a0 4 */ SGDFILEHEADER **__first, /* a1 5 */ SGDFILEHEADER **__last, /* a2 6 */ SGDFILEHEADER *&__value) {}
+/* ffffffff 00000054 */ SGDFILEHEADER** SGDFILEHEADER * * _fixed_array_verifyrange<SGDFILEHEADER *>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000034 */ void void fill<SGDFILEHEADER **, SGDFILEHEADER *>(/* a0 4 */ SGDFILEHEADER **__first, /* a1 5 */ SGDFILEHEADER **__last, /* a2 6 */ SGDFILEHEADER *&__value) {}
 
 /* 001bff90 0000007c */ static void __static_initialization_and_destruction_0(/* s0 16 */ int __initialize_p, /* a1 5 */ int __priority) {
 	/* a1 5 */ SGDFILEHEADER *&val;
 }
 
-/* 00318210 0000004c */ type_info& SGDFILEHEADER * type_info function() {}
+/* ffffffff 0000004c */ type_info& SGDFILEHEADER * type_info function() {}
 /* 00318210 0000003c */ type_info& SGDFILEHEADER type_info function() {}
 /* 001c0010 00000020 */ static void global constructors keyed to g_gra3dShadowDebug() {}
 /* 001c0030 00000020 */ static void global destructors keyed to g_gra3dShadowDebug() {}
@@ -16818,13 +17204,13 @@
 /* 001c0128 000000ec */ static void _MakeTRI2FileHeader(/* t3 11 */ SGDTRI2FILEHEADER *pTRI2Head, /* a1 5 */ short int sVRAMAddress, /* v1 3 */ unsigned int uiPageSize) {}
 
 /* 001c0218 00000094 */ static void _MakeTRI2FileByVRAMImage(/* s1 17 */ SGDTRI2FILEHEADER *pTRI2Head, /* a1 5 */ short int sVRAMAddress, /* s2 18 */ unsigned int uiPageSize) {
-	/* -0x90(sp) */ void spi;
+	/* 0x0(sp) */ void spi;
 }
 
 /* 001c02b0 000001e4 */ void gra3dGetTRI2SizeData(/* s3 19 */ TRI2SIZEDATA *pSD, /* a1 5 */ TRI2SIZEDATA *pSDPrev, /* s1 17 */ SGDTRI2FILEHEADER *pTRI2Head) {
 	/* rdata 3b84f8 */ static char __FUNCTION__[21];
 	/* s0 16 */ void *pLI;
-	/* -0x50(sp) */ TRI2SIZEDATA SDWork;
+	/* 0x0(sp) */ TRI2SIZEDATA SDWork;
 	/* a2 6 */ sceGsBitbltbuf &rgsBbb;
 	/* a3 7 */ unsigned int uiTexSize;
 }
@@ -16842,7 +17228,7 @@
 	/* s4 20 */ int iNewNumTexture;
 	/* s2 18 */ SGDTRI2FILEHEADER *pTRI2HeadWork;
 	/* s1 17 */ int minaddr;
-	/* -0x50(sp) */ int tsize;
+	/* 0x0(sp) */ int tsize;
 }
 
 // *****************************************************************************
@@ -16873,17 +17259,17 @@
 	/* s1 17 */ int i;
 	/* s2 18 */ int n;
 	/* t5 13 */ int np;
-	/* -0x720(sp) */ u_char rgb[12][6];
+	/* 0x0(sp) */ u_char rgb[12][6];
 	/* f22 60 */ float f;
 	/* f25 63 */ float add;
-	/* -0x6d0(sp) */ float ncf[38][4];
-	/* -0x470(sp) */ sceVu0IVECTOR nci[38];
-	/* -0x210(sp) */ float trf[4][4];
-	/* -0x1d0(sp) */ sceVu0IVECTOR tri[4];
-	/* -0x190(sp) */ float wpos[4];
-	/* -0x180(sp) */ float slm1[4][4];
-	/* -0x140(sp) */ float slm2[4][4];
-	/* -0x100(sp) */ float wlm[4][4];
+	/* 0x50(sp) */ float ncf[38][4];
+	/* 0x2b0(sp) */ sceVu0IVECTOR nci[38];
+	/* 0x510(sp) */ float trf[4][4];
+	/* 0x550(sp) */ sceVu0IVECTOR tri[4];
+	/* 0x590(sp) */ float wpos[4];
+	/* 0x5a0(sp) */ float slm1[4][4];
+	/* 0x5e0(sp) */ float slm2[4][4];
+	/* 0x620(sp) */ float wlm[4][4];
 	/* v0 2 */ u_int clpx2;
 	/* v0 2 */ u_int clpy2;
 	/* s4 20 */ u_int clpz2;
@@ -16891,8 +17277,8 @@
 }
 
 /* 001c0f50 00000114 */ void SetLine2DPacket(/* f12 50 */ float x1, /* f13 51 */ float y1, /* f14 52 */ float x2, /* f15 53 */ float y2, /* a0 4 */ u_char r, /* a1 5 */ u_char g, /* a2 6 */ u_char b, /* a3 7 */ u_char a) {
-	/* -0x50(sp) */ float temp[4];
-	/* -0x40(sp) */ sceVu0IVECTOR itmp;
+	/* 0x0(sp) */ float temp[4];
+	/* 0x10(sp) */ sceVu0IVECTOR itmp;
 	/* v0 2 */ Q_WORDDATA *pbuf;
 }
 
@@ -16902,53 +17288,57 @@
 	/* s1 17 */ int i;
 	/* s3 19 */ int n;
 	/* t5 13 */ int np;
-	/* -0x710(sp) */ u_char rgb[12][6];
+	/* 0x0(sp) */ u_char rgb[12][6];
 	/* f22 60 */ float f;
 	/* f27 65 */ float add;
-	/* -0x180(sp) */ float wpos[4];
-	/* -0x170(sp) */ float slm1[4][4];
-	/* -0x130(sp) */ float slm2[4][4];
-	/* -0xf0(sp) */ float wlm[4][4];
+	/* 0x50(sp) */ float ncf[38][4];
+	/* 0x2b0(sp) */ sceVu0IVECTOR nci[38];
+	/* 0x510(sp) */ float trf[4][4];
+	/* 0x550(sp) */ sceVu0IVECTOR tri[4];
+	/* 0x590(sp) */ float wpos[4];
+	/* 0x5a0(sp) */ float slm1[4][4];
+	/* 0x5e0(sp) */ float slm2[4][4];
+	/* 0x620(sp) */ float wlm[4][4];
 	/* t6 14 */ Q_WORDDATA *pbuf;
 }
 
-/* 001c1780 0000038c */ void Draw3DSquare(/* s0 16 */ float *mpos1, /* s2 18 */ float *mpos2, /* s4 20 */ float *mpos3, /* s5 21 */ float *mpos4, /* s7 23 */ u_char r, /* fp 30 */ u_char g, /* -0x70(sp) */ u_char b, /* s6 22 */ u_char a) {
+/* 001c1780 0000038c */ void Draw3DSquare(/* s0 16 */ float *mpos1, /* s2 18 */ float *mpos2, /* s4 20 */ float *mpos3, /* s5 21 */ float *mpos4, /* s7 23 */ u_char r, /* fp 30 */ u_char g, /* 0xf0(sp) */ u_char b, /* s6 22 */ u_char a) {
 	/* v1 3 */ int i;
 	/* a0 4 */ int clip;
-	/* -0x160(sp) */ float wlm[4][4];
-	/* -0x120(sp) */ float slm[4][4];
-	/* -0xe0(sp) */ float fzero[4];
-	/* -0xd0(sp) */ sceVu0IVECTOR ivec[4];
+	/* 0x0(sp) */ float wlm[4][4];
+	/* 0x40(sp) */ float slm[4][4];
+	/* 0x80(sp) */ float fzero[4];
+	/* 0x90(sp) */ sceVu0IVECTOR ivec[4];
 	/* v0 2 */ Q_WORDDATA *pbuf;
-	/* -0x90(sp) */ DRAW_ENV_NOTEX env;
+	/* 0xd0(sp) */ DRAW_ENV_NOTEX env;
 }
 
 /* 001c1b10 00000150 */ void DrawCrossLineA(/* s0 16 */ float *bpos, /* a1 5 */ u_char alp) {
-	/* -0x60(sp) */ float mpos1[4];
-	/* -0x50(sp) */ float mpos2[4];
+	/* 0x10(sp) */ float mpos1[4];
+	/* 0x20(sp) */ float mpos2[4];
 }
 
 /* 001c1c60 0000001c */ void DrawCrossLine(/* a0 4 */ float *bpos) {}
 
-/* 001c1c80 000002c4 */ static void DrawLinePacket(/* s0 16 */ float *mpos1, /* s7 23 */ u_char r1, /* fp 30 */ u_char g1, /* s6 22 */ u_char b1, /* s5 21 */ u_char a1, /* s4 20 */ float *mpos2, /* -0x70(sp) */ u_char r2, /* -0x6c(sp) */ u_char g2, /* 0x0(sp) */ int b2, /* 0x8(sp) */ int a2, /* 0x10(sp) */ DRAW_ENV_NOTEX *envp) {
-	/* -0x68(sp) */ u_char b2;
-	/* -0x64(sp) */ u_char a2;
+/* 001c1c80 000002c4 */ static void DrawLinePacket(/* s0 16 */ float *mpos1, /* s7 23 */ u_char r1, /* fp 30 */ u_char g1, /* s6 22 */ u_char b1, /* s5 21 */ u_char a1, /* s4 20 */ float *mpos2, /* 0xb0(sp) */ u_char r2, /* 0xb4(sp) */ u_char g2, /* 0x120(sp) */ int b2, /* 0x128(sp) */ int a2, /* 0x130(sp) */ DRAW_ENV_NOTEX *envp) {
+	/* 0xb8(sp) */ u_char b2;
+	/* 0xbc(sp) */ u_char a2;
 	/* v1 3 */ int i;
 	/* a0 4 */ int clip;
-	/* -0x120(sp) */ float wlm[4][4];
-	/* -0xe0(sp) */ float slm[4][4];
-	/* -0xa0(sp) */ float fzero[4];
-	/* -0x90(sp) */ sceVu0IVECTOR ivec[2];
+	/* 0x0(sp) */ float wlm[4][4];
+	/* 0x40(sp) */ float slm[4][4];
+	/* 0x80(sp) */ float fzero[4];
+	/* 0x90(sp) */ sceVu0IVECTOR ivec[2];
 	/* s0 16 */ Q_WORDDATA *pbuf;
 	/* s1 17 */ GRA3DCAMERA *pCam;
 }
 
-/* 001c1f48 00000070 */ void DrawLine(/* a0 4 */ float *mpos1, /* a1 5 */ u_char r1, /* a2 6 */ u_char g1, /* a3 7 */ u_char b1, /* t0 8 */ u_char a1, /* t1 9 */ float *mpos2, /* t2 10 */ u_char r2, /* t3 11 */ u_char g2, /* 0x0(sp) */ int b2, /* 0x8(sp) */ int a2) {
-	/* -0x30(sp) */ DRAW_ENV_NOTEX env;
+/* 001c1f48 00000070 */ void DrawLine(/* a0 4 */ float *mpos1, /* a1 5 */ u_char r1, /* a2 6 */ u_char g1, /* a3 7 */ u_char b1, /* t0 8 */ u_char a1, /* t1 9 */ float *mpos2, /* t2 10 */ u_char r2, /* t3 11 */ u_char g2, /* 0x50(sp) */ int b2, /* 0x58(sp) */ int a2) {
+	/* 0x20(sp) */ DRAW_ENV_NOTEX env;
 }
 
-/* 001c1fb8 00000070 */ void DrawLineTestOff(/* a0 4 */ float *mpos1, /* a1 5 */ u_char r1, /* a2 6 */ u_char g1, /* a3 7 */ u_char b1, /* t0 8 */ u_char a1, /* t1 9 */ float *mpos2, /* t2 10 */ u_char r2, /* t3 11 */ u_char g2, /* 0x0(sp) */ int b2, /* 0x8(sp) */ int a2) {
-	/* -0x30(sp) */ DRAW_ENV_NOTEX env;
+/* 001c1fb8 00000070 */ void DrawLineTestOff(/* a0 4 */ float *mpos1, /* a1 5 */ u_char r1, /* a2 6 */ u_char g1, /* a3 7 */ u_char b1, /* t0 8 */ u_char a1, /* t1 9 */ float *mpos2, /* t2 10 */ u_char r2, /* t3 11 */ u_char g2, /* 0x50(sp) */ int b2, /* 0x58(sp) */ int a2) {
+	/* 0x20(sp) */ DRAW_ENV_NOTEX env;
 }
 
 /* 001c2028 00000080 */ void DrawCrossLineLast(/* s0 16 */ float *bpos) {
@@ -16962,18 +17352,18 @@
 /* 001c2220 0000003c */ void SetSquareS(/* a0 4 */ int pri, /* f12 50 */ float x1, /* f13 51 */ float y1, /* f16 54 */ float x4, /* f15 53 */ float y4, /* a1 5 */ u_char r, /* a2 6 */ u_char g, /* a3 7 */ u_char b, /* t0 8 */ u_char a) {}
 
 /* 001c2260 000002b0 */ void SetSquare(/* a0 4 */ int pri, /* f22 60 */ float x1, /* f26 64 */ float y1, /* f23 61 */ float x2, /* f27 65 */ float y2, /* f24 62 */ float x3, /* f28 66 */ float y3, /* f25 63 */ float x4, /* f21 59 */ float y4, /* s4 20 */ u_char r, /* s5 21 */ u_char g, /* s6 22 */ u_char b, /* s3 19 */ u_char a) {
-	/* -0xd0(sp) */ int x[4];
-	/* -0xc0(sp) */ int y[4];
+	/* 0x0(sp) */ int x[4];
+	/* 0x10(sp) */ int y[4];
 	/* s1 17 */ int z;
 	/* s0 16 */ int mpri;
 	/* f20 58 */ float div;
 	/* v0 2 */ Q_WORDDATA *pbuf;
-	/* -0xb0(sp) */ DRAW_ENV_NOTEX env;
+	/* 0x20(sp) */ DRAW_ENV_NOTEX env;
 }
 
-/* 001c2510 000002b8 */ void SetSquare2s(/* a0 4 */ int pri, /* f22 60 */ float x1, /* f24 62 */ float y1, /* f23 61 */ float x4, /* f21 59 */ float y4, /* s4 20 */ u_char r1, /* s5 21 */ u_char g1, /* s6 22 */ u_char b1, /* s7 23 */ u_char r2, /* fp 30 */ u_char g2, /* -0x90(sp) */ u_char b2, /* s3 19 */ u_char a) {
-	/* -0xd0(sp) */ int x[4];
-	/* -0xc0(sp) */ int y[4];
+/* 001c2510 000002b8 */ void SetSquare2s(/* a0 4 */ int pri, /* f22 60 */ float x1, /* f24 62 */ float y1, /* f23 61 */ float x4, /* f21 59 */ float y4, /* s4 20 */ u_char r1, /* s5 21 */ u_char g1, /* s6 22 */ u_char b1, /* s7 23 */ u_char r2, /* fp 30 */ u_char g2, /* 0x40(sp) */ u_char b2, /* s3 19 */ u_char a) {
+	/* 0x0(sp) */ int x[4];
+	/* 0x10(sp) */ int y[4];
 	/* s2 18 */ int z;
 	/* s0 16 */ int mpri;
 	/* f20 58 */ float div;
@@ -16981,39 +17371,39 @@
 }
 
 /* 001c27c8 000001ac */ void SetSquareZ(/* s0 16 */ int pri, /* f21 59 */ float x1, /* f24 62 */ float y1, /* f22 60 */ float x4, /* f23 61 */ float y4, /* s1 17 */ int z) {
-	/* -0x80(sp) */ int x[4];
-	/* -0x70(sp) */ int y[4];
+	/* 0x0(sp) */ int x[4];
+	/* 0x10(sp) */ int y[4];
 	/* f20 58 */ float div;
 	/* v0 2 */ Q_WORDDATA *pbuf;
-	/* -0x60(sp) */ DRAW_ENV_NOTEX env;
+	/* 0x20(sp) */ DRAW_ENV_NOTEX env;
 }
 
 /* 001c2978 0000003c */ void SetSquareSN(/* a0 4 */ int pri, /* f12 50 */ float x1, /* f13 51 */ float y1, /* f16 54 */ float x4, /* f15 53 */ float y4, /* a1 5 */ u_char r, /* a2 6 */ u_char g, /* a3 7 */ u_char b, /* t0 8 */ u_char a) {}
 /* 001c29b8 00000008 */ void SetSquareN(/* a0 4 */ int pri, /* f12 50 */ float x1, /* f13 51 */ float y1, /* f14 52 */ float x2, /* f15 53 */ float y2, /* f16 54 */ float x3, /* f17 55 */ float y3, /* f18 56 */ float x4, /* f19 57 */ float y4, /* a1 5 */ u_char r, /* a2 6 */ u_char g, /* a3 7 */ u_char b, /* t0 8 */ u_char a) {}
 
 /* 001c29c0 00000258 */ void SetTriangle(/* a0 4 */ int pri, /* f22 60 */ float x1, /* f25 63 */ float y1, /* f23 61 */ float x2, /* f26 64 */ float y2, /* f24 62 */ float x3, /* f21 59 */ float y3, /* s6 22 */ u_char r, /* s4 20 */ u_char g, /* s5 21 */ u_char b, /* s3 19 */ u_char a) {
-	/* -0xc0(sp) */ int x[3];
-	/* -0xb0(sp) */ int y[3];
+	/* 0x0(sp) */ int x[3];
+	/* 0x10(sp) */ int y[3];
 	/* s2 18 */ int z;
 	/* s0 16 */ int mpri;
 	/* f20 58 */ float div;
 	/* v0 2 */ Q_WORDDATA *pbuf;
-	/* -0xa0(sp) */ DRAW_ENV_NOTEX env;
+	/* 0x20(sp) */ DRAW_ENV_NOTEX env;
 }
 
-/* 001c2c18 000002f8 */ void SetTriangleZ(/* a0 4 */ int pri, /* f26 64 */ float x1, /* f27 65 */ float y1, /* f22 60 */ float z1, /* f24 62 */ float x2, /* f28 66 */ float y2, /* f25 63 */ float z2, /* f23 61 */ float x3, /* f21 59 */ float y3, /* 0x0(sp) */ float z3, /* s2 18 */ u_char r, /* s3 19 */ u_char g, /* s4 20 */ u_char b, /* s1 17 */ u_char a) {
+/* 001c2c18 000002f8 */ void SetTriangleZ(/* a0 4 */ int pri, /* f26 64 */ float x1, /* f27 65 */ float y1, /* f22 60 */ float z1, /* f24 62 */ float x2, /* f28 66 */ float y2, /* f25 63 */ float z2, /* f23 61 */ float x3, /* f21 59 */ float y3, /* 0xc0(sp) */ float z3, /* s2 18 */ u_char r, /* s3 19 */ u_char g, /* s4 20 */ u_char b, /* s1 17 */ u_char a) {
 	/* f29 67 */ float z3;
-	/* -0xc0(sp) */ int x[3];
-	/* -0xb0(sp) */ int y[3];
+	/* 0x0(sp) */ int x[3];
+	/* 0x10(sp) */ int y[3];
 	/* f20 58 */ float div;
 	/* a2 6 */ Q_WORDDATA *pbuf;
 	/* a0 4 */ int ndpkt;
-	/* -0xa0(sp) */ DRAW_ENV_NOTEX env;
+	/* 0x20(sp) */ DRAW_ENV_NOTEX env;
 }
 
 /* 001c2f10 000001e8 */ void SetLine(/* a0 4 */ int pri, /* f22 60 */ float x1, /* f23 61 */ float y1, /* f24 62 */ float x2, /* f21 59 */ float y2, /* s6 22 */ u_char r, /* s4 20 */ u_char g, /* s5 21 */ u_char b, /* s3 19 */ u_char a) {
-	/* -0xb0(sp) */ int x[2];
-	/* -0xa0(sp) */ int y[2];
+	/* 0x0(sp) */ int x[2];
+	/* 0x10(sp) */ int y[2];
 	/* s2 18 */ int z;
 	/* s0 16 */ int mpri;
 	/* f20 58 */ float div;
@@ -17029,8 +17419,8 @@
 }
 
 /* 001c33f8 00000228 */ void SetLine2PC(/* a0 4 */ int pri, /* f21 59 */ float x1, /* f24 62 */ float y1, /* s5 21 */ u_char r1, /* s3 19 */ u_char g1, /* s4 20 */ u_char b1, /* f22 60 */ float x2, /* f23 61 */ float y2, /* s6 22 */ u_char r2, /* s7 23 */ u_char g2, /* fp 30 */ u_char b2, /* s0 16 */ u_char a) {
-	/* -0xc0(sp) */ int x[2];
-	/* -0xb0(sp) */ int y[2];
+	/* 0x0(sp) */ int x[2];
+	/* 0x10(sp) */ int y[2];
 	/* s0 16 */ int z;
 	/* s2 18 */ int mpri;
 	/* f20 58 */ float div;
@@ -17039,46 +17429,48 @@
 
 /* 001c3620 000001a0 */ void DrawPoint(/* s0 16 */ float *mpos, /* s3 19 */ int no) {
 	/* v0 2 */ int clip;
-	/* -0xf0(sp) */ float wlm[4][4];
-	/* -0xb0(sp) */ float slm[4][4];
-	/* -0x70(sp) */ float fzero[4];
-	/* -0x60(sp) */ sceVu0IVECTOR ivec;
+	/* 0x0(sp) */ float wlm[4][4];
+	/* 0x40(sp) */ float slm[4][4];
+	/* 0x80(sp) */ float fzero[4];
+	/* 0x90(sp) */ sceVu0IVECTOR ivec;
 	/* s0 16 */ Q_WORDDATA *pbuf;
-	/* -0x50(sp) */ DRAW_ENV_NOTEX env;
+	/* s1 17 */ GRA3DCAMERA *pCam;
+	/* 0xa0(sp) */ DRAW_ENV_NOTEX env;
 }
 
 /* 001c37c0 000001d4 */ void DrawPoint2(/* s2 18 */ float *mpos, /* a1 5 */ u_char r, /* a2 6 */ u_char g, /* a3 7 */ u_char b, /* t0 8 */ u_char a) {
 	/* v0 2 */ int clip;
-	/* -0x110(sp) */ float wlm[4][4];
-	/* -0xd0(sp) */ float slm[4][4];
-	/* -0x90(sp) */ float fzero[4];
-	/* -0x80(sp) */ sceVu0IVECTOR ivec;
+	/* 0x0(sp) */ float wlm[4][4];
+	/* 0x40(sp) */ float slm[4][4];
+	/* 0x80(sp) */ float fzero[4];
+	/* 0x90(sp) */ sceVu0IVECTOR ivec;
 	/* s0 16 */ Q_WORDDATA *pbuf;
-	/* -0x70(sp) */ DRAW_ENV_NOTEX env;
+	/* s1 17 */ GRA3DCAMERA *pCam;
+	/* 0xa0(sp) */ DRAW_ENV_NOTEX env;
 }
 
-/* 001c3998 00000578 */ void DrawSphere(/* f23 61 */ float f, /* f22 60 */ float x, /* f21 59 */ float y, /* f20 58 */ float z, /* s5 21 */ u_char r, /* s4 20 */ u_char g, /* s3 19 */ u_char b, /* s2 18 */ u_char a, /* -0x80(sp) */ float *vScale) {
+/* 001c3998 00000578 */ void DrawSphere(/* f23 61 */ float f, /* f22 60 */ float x, /* f21 59 */ float y, /* f20 58 */ float z, /* s5 21 */ u_char r, /* s4 20 */ u_char g, /* s3 19 */ u_char b, /* s2 18 */ u_char a, /* 0x4b0(sp) */ float *vScale) {
 	/* fp 30 */ int i;
-	/* -0x520(sp) */ float pos1[4];
-	/* -0x510(sp) */ float pos2[4];
-	/* -0x500(sp) */ float m_point[30][4];
-	/* -0x320(sp) */ float vdata[12][4];
-	/* -0x260(sp) */ int tindices[30][2];
-	/* -0x170(sp) */ int bunkatu[20][3];
+	/* 0x10(sp) */ float pos1[4];
+	/* 0x20(sp) */ float pos2[4];
+	/* 0x30(sp) */ float m_point[30][4];
+	/* 0x210(sp) */ float vdata[12][4];
+	/* 0x2d0(sp) */ int tindices[30][2];
+	/* 0x3c0(sp) */ int bunkatu[20][3];
 }
 
-/* 001c3f10 000004cc */ void DrawTube(/* -0x80(sp) */ float *p1, /* -0x7c(sp) */ float *p2, /* f21 59 */ float rad, /* s3 19 */ u_char r, /* s4 20 */ u_char g, /* s5 21 */ u_char b, /* s6 22 */ u_char a) {
-	/* -0x2f0(sp) */ float vdata[16][4];
-	/* -0x1f0(sp) */ int tindices[16][2];
-	/* -0x170(sp) */ float pos11[4];
-	/* -0x160(sp) */ float pos12[4];
-	/* -0x150(sp) */ float pos21[4];
-	/* -0x140(sp) */ float pos22[4];
-	/* -0x130(sp) */ float tmp[4];
-	/* -0x120(sp) */ float y_ziku[4];
-	/* -0x110(sp) */ float n[4];
-	/* -0x100(sp) */ float mtx[2][4][4];
-	/* -0x78(sp) */ int i;
+/* 001c3f10 000004cc */ void DrawTube(/* 0x280(sp) */ float *p1, /* 0x284(sp) */ float *p2, /* f21 59 */ float rad, /* s3 19 */ u_char r, /* s4 20 */ u_char g, /* s5 21 */ u_char b, /* s6 22 */ u_char a) {
+	/* 0x10(sp) */ float vdata[16][4];
+	/* 0x110(sp) */ int tindices[16][2];
+	/* 0x190(sp) */ float pos11[4];
+	/* 0x1a0(sp) */ float pos12[4];
+	/* 0x1b0(sp) */ float pos21[4];
+	/* 0x1c0(sp) */ float pos22[4];
+	/* 0x1d0(sp) */ float tmp[4];
+	/* 0x1e0(sp) */ float y_ziku[4];
+	/* 0x1f0(sp) */ float n[4];
+	/* 0x200(sp) */ float mtx[2][4][4];
+	/* 0x288(sp) */ int i;
 	/* f20 58 */ float rot_x;
 	/* f20 58 */ float rot_z;
 }
@@ -17086,31 +17478,33 @@
 /* 001c43e0 00000048 */ void CaptureScreen(/* a0 4 */ u_int addr) {}
 
 /* 001c4428 0000011c */ void DrawScreen(/* a0 4 */ u_int pri, /* a1 5 */ u_int addr, /* a2 6 */ u_char r, /* a3 7 */ u_char g, /* t0 8 */ u_char b, /* t1 9 */ u_char a) {
-	/* -0xf0(sp) */ SPRT_DAT2 sd;
-	/* -0xc0(sp) */ DISP_SPRT2 ds;
+	/* 0x0(sp) */ SPRT_DAT2 sd;
+	/* 0x30(sp) */ DISP_SPRT2 ds;
 }
 
-/* 001c4548 000003f8 */ void MakePacket3D(/* s4 20 */ float *pa3DPos[4], /* s1 17 */ int iNum, /* -0xb0(sp) */ int iR, /* -0xac(sp) */ int iG, /* fp 30 */ int iB, /* s7 23 */ int iA, /* f26 64 */ float fUX, /* f25 63 */ float fUY, /* f22 60 */ float fUW, /* f24 62 */ float fUH, /* -0x130(sp) */ sceGsTex0 Tex0, /* s6 22 */ int iZOffset) {
+/* 001c4548 000003f8 */ void MakePacket3D(/* s4 20 */ float *pa3DPos[4], /* s1 17 */ int iNum, /* 0x80(sp) */ int iR, /* 0x84(sp) */ int iG, /* fp 30 */ int iB, /* s7 23 */ int iA, /* f26 64 */ float fUX, /* f25 63 */ float fUY, /* f22 60 */ float fUW, /* f24 62 */ float fUH, /* 0x0(sp) */ sceGsTex0 Tex0, /* s6 22 */ int iZOffset) {
 	/* t3 11 */ int i;
 	/* s2 18 */ Q_WORDDATA *pbuf;
 	/* s3 19 */ int ndpkt;
 	/* t4 12 */ u_int clpz1;
 	/* t9 25 */ u_int clpz2;
-	/* -0x120(sp) */ sceVu0IVECTOR ivec[4];
-	/* -0xe0(sp) */ U32DATA ts[4];
-	/* -0xd0(sp) */ U32DATA tt[4];
-	/* -0xc0(sp) */ U32DATA tq[4];
+	/* 0x10(sp) */ sceVu0IVECTOR ivec[4];
+	/* 0x50(sp) */ U32DATA ts[4];
+	/* 0x60(sp) */ U32DATA tt[4];
+	/* 0x70(sp) */ U32DATA tq[4];
 	/* f21 59 */ float fTW;
 	/* f20 58 */ float fTH;
+	/* s0 16 */ GRA3DCAMERA *pCam;
 	/* s0 16 */ int iWrkNum;
 	/* a2 6 */ int ClipFlg;
 }
 
-/* 001c4940 000001ec */ void MakeBillBoardPacket(/* s3 19 */ float *Pos, /* f20 58 */ float fWidth, /* f22 60 */ float fHeight, /* s6 22 */ int iR, /* s7 23 */ int iG, /* fp 30 */ int iB, /* -0xa0(sp) */ int iA, /* f23 61 */ float fUX, /* f24 62 */ float fUY, /* f25 63 */ float fUW, /* f26 64 */ float fUH, /* -0x120(sp) */ sceGsTex0 Tex0, /* -0x9c(sp) */ int iZOffset) {
-	/* -0x110(sp) */ float aPos[4][4];
-	/* -0xd0(sp) */ float TempVec[4];
-	/* -0xc0(sp) */ float AddVecW[4];
-	/* -0xb0(sp) */ float AddVecH[4];
+/* 001c4940 000001ec */ void MakeBillBoardPacket(/* s3 19 */ float *Pos, /* f20 58 */ float fWidth, /* f22 60 */ float fHeight, /* s6 22 */ int iR, /* s7 23 */ int iG, /* fp 30 */ int iB, /* 0x80(sp) */ int iA, /* f23 61 */ float fUX, /* f24 62 */ float fUY, /* f25 63 */ float fUW, /* f26 64 */ float fUH, /* 0x0(sp) */ sceGsTex0 Tex0, /* 0x84(sp) */ int iZOffset) {
+	/* 0x10(sp) */ float aPos[4][4];
+	/* 0x50(sp) */ float TempVec[4];
+	/* 0x60(sp) */ float AddVecW[4];
+	/* 0x70(sp) */ float AddVecH[4];
+	/* s0 16 */ GRA3DCAMERA *pCam;
 }
 
 // *****************************************************************************
@@ -17119,26 +17513,26 @@
 
 /* 001c4b30 0000005c */ void heapCtrlReset(/* s0 16 */ HEAP_WRK *wrk, /* s2 18 */ void *adrs, /* s1 17 */ unsigned int size) {}
 
-/* 001c4b90 00000078 */ void heapCtrlInit(/* s2 18 */ void *adrs, /* s1 17 */ unsigned int size) {
-	/* -0x40(sp) */ SemaParam semap;
+/* 001c4b90 00000078 */ void heapCtrlInit(/* s0 16 */ HEAP_WRK *wrk, /* s2 18 */ void *adrs, /* s1 17 */ unsigned int size) {
+	/* 0x0(sp) */ SemaParam semap;
 }
 
-/* 001c4c08 00000064 */ void* heapCtrlMalloc(/* s0 16 */ size_t size) {
+/* 001c4c08 00000064 */ void* heapCtrlMalloc(/* s1 17 */ HEAP_WRK *wrk, /* s0 16 */ size_t size) {
 	/* s0 16 */ void *ret;
 }
 
-/* 001c4c70 00000054 */ void heapCtrlFree(/* s1 17 */ void *ap) {}
+/* 001c4c70 00000054 */ void heapCtrlFree(/* s0 16 */ HEAP_WRK *wrk, /* s1 17 */ void *ap) {}
 
-/* 001c4cc8 00000048 */ unsigned int heapCtrlMemSize(/* a1 5 */ HEAP_MEMMODE mode) {
+/* 001c4cc8 00000048 */ unsigned int heapCtrlMemSize(/* s0 16 */ HEAP_WRK *wrk, /* a1 5 */ HEAP_MEMMODE mode) {
 	/* s1 17 */ unsigned int ret;
 }
 
-/* 001c4d10 00000048 */ unsigned int heapCtrlQueryMaxOneSize() {
+/* 001c4d10 00000048 */ unsigned int heapCtrlQueryMaxOneSize(/* s0 16 */ HEAP_WRK *wrk) {
 	/* s1 17 */ unsigned int ret;
 }
 
-/* 001c4d58 00000048 */ void* SAFE_MALLOC(/* a1 5 */ void *buf, /* a2 6 */ int size) {}
-/* 001c4da0 00000098 */ void heapCtrlDrawMemory(/* s6 22 */ void (*draw_rect_func)(/* parameters unknown */), /* s1 17 */ void (*draw_line_func)(/* parameters unknown */), /* s2 18 */ int xx, /* s3 19 */ int yy, /* s4 20 */ int ww, /* s5 21 */ int hh) {}
+/* 001c4d58 00000048 */ void* SAFE_MALLOC(/* a0 4 */ HEAP_WRK *wrk, /* a1 5 */ void *buf, /* a2 6 */ int size) {}
+/* 001c4da0 00000098 */ void heapCtrlDrawMemory(/* s0 16 */ HEAP_WRK *wrk, /* s6 22 */ void (*draw_rect_func)(/* parameters unknown */), /* s1 17 */ void (*draw_line_func)(/* parameters unknown */), /* s2 18 */ int xx, /* s3 19 */ int yy, /* s4 20 */ int ww, /* s5 21 */ int hh) {}
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/ingame/puzzle/hina/hina_pzl.c
@@ -17176,14 +17570,14 @@
 }
 
 /* 001c5748 000000c0 */ static void HinaPuzzleDollPosChange() {
-	/* -0x20(sp) */ char blank_tate;
-	/* -0x1f(sp) */ char blank_yoko;
+	/* 0x0(sp) */ char blank_tate;
+	/* 0x1(sp) */ char blank_yoko;
 }
 
 /* 001c5808 00000094 */ static int HinaPuzzleChangeCheck(/* s0 16 */ int csr_tate, /* s1 17 */ int csr_yoko) {
 	/* a0 4 */ int res;
-	/* -0x30(sp) */ char blank_tate;
-	/* -0x2f(sp) */ char blank_yoko;
+	/* 0x0(sp) */ char blank_tate;
+	/* 0x1(sp) */ char blank_yoko;
 }
 
 /* 001c58a0 00000094 */ static void HinaPuzzleGetBlankPos(/* a0 4 */ char *tate, /* a1 5 */ char *yoko) {
@@ -17217,12 +17611,12 @@
 /* 001c5ee0 0000001c */ static void HinaPuzzleTimeOverDisp(/* a0 4 */ int off_x, /* a1 5 */ int off_y, /* a2 6 */ u_char alpha) {}
 
 /* 001c5f00 000000c0 */ static void HinaPuzzleBgDisp(/* a0 4 */ int off_x, /* a1 5 */ int off_y, /* s2 18 */ u_char alpha) {
-	/* -0xc0(sp) */ DISP_SPRT bg_ds;
+	/* 0x0(sp) */ DISP_SPRT bg_ds;
 	/* s1 17 */ int i;
 }
 
 /* 001c5fc0 00000100 */ static void HinaPuzzleStandFleaDisp(/* s1 17 */ int off_x, /* s2 18 */ int off_y, /* s3 19 */ u_char alpha) {
-	/* -0xd0(sp) */ DISP_SPRT stand_ds;
+	/* 0x0(sp) */ DISP_SPRT stand_ds;
 	/* s0 16 */ u_char rgb;
 	/* s1 17 */ int i;
 }
@@ -17232,7 +17626,7 @@
 }
 
 /* 001c6118 00000228 */ static void HinaPuzzleDollsFleaDisp(/* s2 18 */ int off_x, /* s3 19 */ int off_y, /* s4 20 */ u_char alpha) {
-	/* -0xc0(sp) */ DISP_SPRT flea_ds;
+	/* 0x0(sp) */ DISP_SPRT flea_ds;
 	/* s0 16 */ u_char rgb;
 	/* a0 4 */ int i;
 	/* rdata 3b8f48 */ static float scale_tbl[4];
@@ -17243,14 +17637,14 @@
 }
 
 /* 001c6398 0000024c */ static void HinaPuzzleDollsDisp(/* s5 21 */ int off_x, /* s7 23 */ int off_y, /* s6 22 */ u_char alpha) {
-	/* -0x100(sp) */ DISP_SPRT doll_ds;
+	/* 0x0(sp) */ DISP_SPRT doll_ds;
 	/* s3 19 */ int i;
 	/* s2 18 */ int j;
 	/* rdata 3b8f70 */ static float scale_tbl[4];
 }
 
 /* 001c65e8 00000140 */ static void HinaPuzzleSmokeScreenDisp(/* s0 16 */ int off_x, /* s1 17 */ int off_y, /* a2 6 */ u_char alpha) {
-	/* -0xb0(sp) */ DISP_SPRT smoke_ds;
+	/* 0x0(sp) */ DISP_SPRT smoke_ds;
 }
 
 /* 001c6728 00000058 */ static u_char HinaPuzzleSmokeScreenAnim(/* s0 16 */ short int *timer) {
@@ -17259,12 +17653,12 @@
 }
 
 /* 001c6780 00000258 */ static void HinaPuzzleRemainderTimeDisp(/* s0 16 */ int off_x, /* a1 5 */ int off_y, /* s1 17 */ u_char alpha) {
-	/* -0xd0(sp) */ DISP_SPRT time_ds;
+	/* 0x0(sp) */ DISP_SPRT time_ds;
 	/* s2 18 */ u_char num_alpha;
 }
 
 /* 001c69d8 000000f0 */ static void HinaPuzzleCaptionDisp(/* s0 16 */ int off_x, /* s1 17 */ int off_y, /* a2 6 */ u_char alpha) {
-	/* -0xc0(sp) */ DISP_SPRT time_ds;
+	/* 0x0(sp) */ DISP_SPRT time_ds;
 }
 
 /* 001c6ac8 00000144 */ void HinaPuzzleNumberDisp(/* s1 17 */ int data, /* a1 5 */ int num, /* f21 59 */ float x, /* f20 58 */ float y, /* s7 23 */ u_char alpha, /* fp 30 */ int pri, /* s5 21 */ u_char zero_flg) {
@@ -17277,7 +17671,7 @@
 
 /* 001c6c10 00000150 */ void HinaPuzzleNumberDisp_One(/* s0 16 */ int data, /* f20 58 */ float x, /* f21 59 */ float y, /* s2 18 */ u_char alpha, /* s1 17 */ int pri) {
 	/* rdata 3b8f98 */ static char __FUNCTION__[25];
-	/* -0xc0(sp) */ DISP_SPRT num_ds;
+	/* 0x0(sp) */ DISP_SPRT num_ds;
 }
 
 /* 001c6d60 00000098 */ static u_char HinaPuzzleWarningTimeAnim(/* s0 16 */ int timer) {
@@ -17287,9 +17681,9 @@
 }
 
 /* 001c6df8 00000098 */ static void HinaPuzzleBlackBgDisp() {
-	/* -0xd0(sp) */ u_char alpha;
-	/* -0xc0(sp) */ DISP_SQAR dsq;
-	/* -0x40(sp) */ SQAR_DAT hina_pzl_bg;
+	/* 0x0(sp) */ u_char alpha;
+	/* 0x10(sp) */ DISP_SQAR dsq;
+	/* 0x90(sp) */ SQAR_DAT hina_pzl_bg;
 }
 
 /* 001c6e90 00000104 */ static void HinaPuzzleAnim(/* s1 17 */ char *anim_step, /* s0 16 */ short int *anim_timer, /* s2 18 */ u_char *alpha) {
@@ -17297,28 +17691,28 @@
 }
 
 /* 001c6f98 00000100 */ static void HinaPuzzleExitConfWinDisp(/* s1 17 */ int off_x, /* s0 16 */ int off_y, /* a2 6 */ u_char alpha) {
-	/* -0x70(sp) */ DISP_STR ds;
+	/* 0x0(sp) */ DISP_STR ds;
 }
 
 /* 001c7098 00000074 */ static void HinaPuzzleClearWinDisp(/* s0 16 */ int off_x, /* s1 17 */ int off_y, /* a2 6 */ u_char alpha) {
-	/* -0x60(sp) */ DISP_STR ds;
+	/* 0x0(sp) */ DISP_STR ds;
 }
 
 /* 001c7110 00000074 */ static void HinaPuzzleTimeOverWinDisp(/* s0 16 */ int off_x, /* s1 17 */ int off_y, /* a2 6 */ u_char alpha) {
-	/* -0x60(sp) */ DISP_STR ds;
+	/* 0x0(sp) */ DISP_STR ds;
 }
 
 /* 001c7188 0000004c */ static void HinaPuzzleCmnWinDisp(/* a0 4 */ int off_x, /* a1 5 */ int off_y, /* a2 6 */ u_char alpha) {
-	/* -0x20(sp) */ MSG_WIN_DAT win_dat;
+	/* 0x0(sp) */ MSG_WIN_DAT win_dat;
 }
 
 /* 001c71d8 000000d4 */ void HinaPuzzleCrossScreenDisp(/* s0 16 */ int off_x, /* s1 17 */ int off_y, /* a2 6 */ u_char alpha) {
-	/* -0xd0(sp) */ DISP_SQAR dsq;
-	/* -0x50(sp) */ SQAR_DAT cross_bg;
+	/* 0x0(sp) */ DISP_SQAR dsq;
+	/* 0x80(sp) */ SQAR_DAT cross_bg;
 }
 
 /* 001c72b0 000001e8 */ static void HinaPuzzleCrossDollsDisp(/* s4 20 */ int off_x, /* s6 22 */ int off_y, /* s5 21 */ u_char alpha) {
-	/* -0xf0(sp) */ DISP_SPRT doll_ds;
+	/* 0x0(sp) */ DISP_SPRT doll_ds;
 	/* s2 18 */ int i;
 	/* s1 17 */ int j;
 	/* rdata 3b90a0 */ static float scale_tbl[4];
@@ -17329,14 +17723,14 @@
 // *****************************************************************************
 
 /* 001c7498 00000110 */ int HcBaseIsInTriXZ(/* a0 4 */ float *target, /* a1 5 */ float *tri0, /* a2 6 */ float *tri1, /* a3 7 */ float *tri2) {
-	/* -0x80(sp) */ float p[3][4];
-	/* -0x50(sp) */ float avTemp[3][4];
+	/* 0x0(sp) */ float p[3][4];
+	/* 0x30(sp) */ float avTemp[3][4];
 	/* a0 4 */ int i;
 }
 
 /* 001c75a8 000000c0 */ float HcBasePointLineXZ(/* v0 2 */ float *p0, /* v1 3 */ float *p1, /* s0 16 */ float *v) {
 	/* f1 39 */ float r;
-	/* -0x20(sp) */ float p1p0[4];
+	/* 0x0(sp) */ float p1p0[4];
 }
 
 /* 001c7668 00000194 */ int HcBaseLineIntersect(/* s3 19 */ float *line1_1, /* s4 20 */ float *line1_2, /* s2 18 */ float *line2_1, /* s1 17 */ float *line2_2) {}
@@ -17347,45 +17741,45 @@
 }
 
 /* 001c78d0 00000244 */ int HcBaseLineIntersect2(/* s1 17 */ float *line1_1, /* s4 20 */ float *line1_2, /* s2 18 */ float *line2_1, /* s3 19 */ float *line2_2) {
-	/* -0x90(sp) */ float line12[4];
-	/* -0x80(sp) */ float line1p[4];
-	/* -0x70(sp) */ float outer[4];
-	/* -0x60(sp) */ float outer2[4];
+	/* 0x0(sp) */ float line12[4];
+	/* 0x10(sp) */ float line1p[4];
+	/* 0x20(sp) */ float outer[4];
+	/* 0x30(sp) */ float outer2[4];
 }
 
 /* 001c7b18 000001b0 */ int HcBaseIsLineHitFace(/* s4 20 */ float *pos, /* s3 19 */ float *a, /* s1 17 */ float *b, /* s0 16 */ float *v0, /* t0 8 */ float *v1, /* t1 9 */ float *v2) {
-	/* -0x90(sp) */ float n[4];
-	/* -0x80(sp) */ float v01[4];
-	/* -0x70(sp) */ float v02[4];
-	/* -0x60(sp) */ float face[4];
-	/* -0x50(sp) */ float ab[4];
+	/* 0x0(sp) */ float n[4];
+	/* 0x10(sp) */ float v01[4];
+	/* 0x20(sp) */ float v02[4];
+	/* 0x30(sp) */ float face[4];
+	/* 0x40(sp) */ float ab[4];
 	/* f12 50 */ float t;
 }
 
 /* 001c7cc8 00000134 */ int HcBaseIsNearSegTri(/* a0 4 */ float *pos1, /* t3 11 */ float *pos2, /* v0 2 */ float *tri0, /* a3 7 */ float *tri1, /* t0 8 */ float *tri2) {
 	/* t2 10 */ int j;
-	/* -0x40(sp) */ float trimax[4];
-	/* -0x30(sp) */ float trimin[4];
-	/* -0x20(sp) */ float segmax[4];
-	/* -0x10(sp) */ float segmin[4];
+	/* 0x0(sp) */ float trimax[4];
+	/* 0x10(sp) */ float trimin[4];
+	/* 0x20(sp) */ float segmax[4];
+	/* 0x30(sp) */ float segmin[4];
 }
 
-/* 001c7e00 00000358 */ int HcBasePointRectangle(/* fp 30 */ float *len, /* s6 22 */ float *pos, /* -0x80(sp) */ float *a, /* -0x7c(sp) */ float *b, /* s7 23 */ float *vec[4], /* f22 60 */ float r) {
+/* 001c7e00 00000358 */ int HcBasePointRectangle(/* fp 30 */ float *len, /* s6 22 */ float *pos, /* 0x70(sp) */ float *a, /* 0x74(sp) */ float *b, /* s7 23 */ float *vec[4], /* f22 60 */ float r) {
 	/* s0 16 */ int i;
 	/* s5 21 */ int p_flg;
-	/* -0x78(sp) */ int l_flg;
-	/* -0xf0(sp) */ float line_p1[4];
-	/* -0xe0(sp) */ float line_p2[4];
-	/* -0xd0(sp) */ float tmp1[4];
-	/* -0xc0(sp) */ float tmp2[4];
-	/* -0xb0(sp) */ float p_vec[4];
-	/* -0xa0(sp) */ float l_vec[2][4];
+	/* 0x78(sp) */ int l_flg;
+	/* 0x0(sp) */ float line_p1[4];
+	/* 0x10(sp) */ float line_p2[4];
+	/* 0x20(sp) */ float tmp1[4];
+	/* 0x30(sp) */ float tmp2[4];
+	/* 0x40(sp) */ float p_vec[4];
+	/* 0x50(sp) */ float l_vec[2][4];
 	/* f20 58 */ float p_len;
 	/* f21 59 */ float l_len;
 	/* f0 38 */ float tmp_len;
 }
 
-/* 001c8158 000000c0 */ static int HcBaseIsNearRectangle(/* a1 5 */ float *pos, /* f12 50 */ float r) {
+/* 001c8158 000000c0 */ static int HcBaseIsNearRectangle(/* a0 4 */ float *vec[4], /* a1 5 */ float *pos, /* f12 50 */ float r) {
 	/* f2 40 */ float max_x;
 	/* f1 39 */ float min_x;
 	/* f4 42 */ float max_z;
@@ -17407,7 +17801,7 @@
 /* 001c82f0 00000020 */ void SyncHpBar() {}
 
 /* 001c8310 00000270 */ void CHpBar::Draw(/* a0 4 */ CHpBar *this, /* s1 17 */ int fndr_mx, /* s2 18 */ int fndr_my, /* s4 20 */ int iAlpha) {
-	/* -0xf0(sp) */ DISP_SPRT ds;
+	/* 0x0(sp) */ DISP_SPRT ds;
 	/* f21 59 */ float rate;
 	/* f2 40 */ float hp_per;
 	/* f0 38 */ float per;
@@ -17417,7 +17811,7 @@
 	/* v0 2 */ short int iValue;
 }
 
-/* 003186b0 00000030 */ int CWaitVariable<short>::Work(/* a1 5 */ CWaitVariable<short int> *this) {}
+/* ffffffff 00000030 */ int CWaitVariable<short>::Work(/* a1 5 */ CWaitVariable<short int> *this) {}
 
 /* 003186b0 00000038 */ void CWrkVariable<short, 0, 128>::Work(/* a0 4 */ CWrkVariable<short int,0,128> *this) {
 	/* a1 5 */ int iVal;
@@ -17495,7 +17889,7 @@
 /* 001c91c8 00000008 */ void end_Story_Normal() {}
 
 /* 001c91d0 000002cc */ GPHASE_ENUM one_Story_Normal(/* a0 4 */ GPHASE_ENUM dummy) {
-	/* -0x30(sp) */ GPHASE_ID_ENUM next_gid;
+	/* 0x0(sp) */ GPHASE_ID_ENUM next_gid;
 }
 
 /* 001c94a0 0000001c */ void init_Story_Game_Over_Pre() {}
@@ -17510,7 +17904,7 @@
 /* 001c9670 00000148 */ GPHASE_ENUM one_Story_Damage(/* a0 4 */ GPHASE_ENUM dummy) {}
 
 /* 001c97b8 0000006c */ void init_Story_Door_Open() {
-	/* -0x20(sp) */ float tv[4];
+	/* 0x0(sp) */ float tv[4];
 }
 
 /* 001c9828 0000001c */ void end_Story_Door_Open() {}
@@ -17584,8 +17978,8 @@
 }
 
 /* 001ca8c8 0000007c */ void SetIngameListnerInfo() {
-	/* -0x40(sp) */ SND_3D_SET set;
-	/* -0x30(sp) */ float top[4];
+	/* 0x0(sp) */ SND_3D_SET set;
+	/* 0x10(sp) */ float top[4];
 }
 
 /* 001ca948 00000018 */ void SetSave_IngameWrk(/* a0 4 */ MC_SAVE_DATA *data) {}
@@ -17619,13 +18013,13 @@
 /* 001cac40 0000000c */ float*[4] IgEffectParticleEndPosNoFinderGet() {}
 
 /* 001cac50 0000009c */ void IgEffectParticleEndPosCalcFinder(/* s1 17 */ float *EndPos) {
-	/* -0x70(sp) */ float wlm[4][4];
-	/* -0x30(sp) */ float ppp2[4];
+	/* 0x0(sp) */ float wlm[4][4];
+	/* 0x40(sp) */ float ppp2[4];
 }
 
 /* 001cacf0 00000090 */ void IgEffectParticleEndPosCalcNoFinder(/* s1 17 */ float *EndPos) {
-	/* -0x70(sp) */ float wlm[4][4];
-	/* -0x30(sp) */ float ppp[4];
+	/* 0x0(sp) */ float wlm[4][4];
+	/* 0x40(sp) */ float ppp[4];
 }
 
 /* 001cad80 0000005c */ int CalcParticleNumFromDamage(/* a0 4 */ int damage) {}
@@ -17633,7 +18027,7 @@
 
 /* 001cae80 000000c4 */ void IgEffectEneParticleDmgReq(/* s1 17 */ int num, /* a1 5 */ int damage) {
 	/* s3 19 */ int particle_num;
-	/* -0x60(sp) */ ENE_DMG_PARTICLE_REQ EneDmgParticleReq;
+	/* 0x0(sp) */ ENE_DMG_PARTICLE_REQ EneDmgParticleReq;
 }
 
 /* 001caf48 000000d0 */ void IgEffectEneDmgReqZero(/* s1 17 */ int num, /* a1 5 */ int damage) {}
@@ -17738,7 +18132,7 @@
 /* 001cbeb8 00000058 */ static void IgEffectZeroParticleMain() {}
 
 /* 001cbf10 000000a0 */ static void IgEffectZeroParticleReq(/* s1 17 */ int num) {
-	/* -0x50(sp) */ ENE_DMG_PARTICLE_REQ EneDmgParticleReq;
+	/* 0x0(sp) */ ENE_DMG_PARTICLE_REQ EneDmgParticleReq;
 }
 
 /* 001cbfb0 0000001c */ void IgEffectZeroCamFreqReq() {}
@@ -17747,12 +18141,12 @@
 
 /* 001cc028 000002dc */ void IgEffectStoryMainScreenEffectReq(/* s4 20 */ SCREEN_EFFECT_PARAMETER *pScreenPara) {
 	/* s1 17 */ int Contrast;
-	/* -0x50(sp) */ float tx;
-	/* -0x4c(sp) */ float ty;
-	/* -0x4c(sp) */ float tx;
-	/* -0x50(sp) */ float ty;
-	/* -0x4c(sp) */ float tx;
-	/* -0x50(sp) */ float ty;
+	/* 0x0(sp) */ float tx;
+	/* 0x4(sp) */ float ty;
+	/* 0x4(sp) */ float tx;
+	/* 0x0(sp) */ float ty;
+	/* 0x4(sp) */ float tx;
+	/* 0x0(sp) */ float ty;
 }
 
 /* 001cc308 00000054 */ int IgEffectStoryMainContrastTypeGet() {
@@ -17763,12 +18157,12 @@
 /* 001cc380 00000020 */ int IgEffectStoryMainContrastAlphaGet() {}
 
 /* 001cc3a0 0000005c */ void IgEffectDustReq(/* v0 2 */ ANI_CTRL *pAniCtrl, /* a1 5 */ int BoneId, /* s0 16 */ float *Offset) {
-	/* -0x60(sp) */ float LocalWorld[4][4];
-	/* -0x20(sp) */ float Position[4];
+	/* 0x0(sp) */ float LocalWorld[4][4];
+	/* 0x40(sp) */ float Position[4];
 }
 
 /* 001cc400 0000003c */ void IgEffectPlayerDustReq(/* a0 4 */ ANI_CTRL *pAniCtrl, /* a1 5 */ int BoneId) {
-	/* -0x20(sp) */ float Offset[4];
+	/* 0x0(sp) */ float Offset[4];
 }
 
 /* 001cc440 00000080 */ void IgEffectButterflyReq(/* s0 16 */ float *Position) {
@@ -17785,23 +18179,23 @@
 /* 001cc538 0000013c */ void IgEffectLightComeInModelDrawSub(/* s3 19 */ void *pSgdTop, /* s4 20 */ float *CoordMat[4]) {
 	/* s1 17 */ long int BackupAlpha;
 	/* s2 18 */ long int BackupClamp;
-	/* -0x50(sp) */ float Ambient[4];
-	/* -0x40(sp) */ G3DFOG FogBak;
+	/* 0x0(sp) */ float Ambient[4];
+	/* 0x10(sp) */ G3DFOG FogBak;
 }
 
 /* 001cc678 0000003c */ void IgEffectTourouFreaModelDraw() {
 	/* s0 16 */ void *hdl;
 }
 
-/* 001cc6b8 00000190 */ void IgEffectTourouFreaModelDrawSub(/* s0 16 */ void *pHandle) {
-	/* -0xb0(sp) */ float NewCoord[4][4];
-	/* -0x70(sp) */ float FlamePos[4];
+/* 001cc6b8 00000190 */ void IgEffectTourouFreaModelDrawSub(/* s0 16 */ void *pHandle, /* a1 5 */ float *CoordMat[4]) {
+	/* 0x0(sp) */ float NewCoord[4][4];
+	/* 0x40(sp) */ float FlamePos[4];
 	/* s0 16 */ TOUROU_FREA_DATA *pTourouFrea;
 	/* s4 20 */ long int BackupAlpha;
 	/* s5 21 */ long int BackupZBuf;
-	/* -0x60(sp) */ float RotX;
-	/* -0x5c(sp) */ float RotY;
-	/* -0x50(sp) */ sceVu0IVECTOR FlameColor;
+	/* 0x50(sp) */ float RotX;
+	/* 0x54(sp) */ float RotY;
+	/* 0x60(sp) */ sceVu0IVECTOR FlameColor;
 	/* data 318730 */ static DRAW_ENV DrawEnv;
 }
 
@@ -17810,22 +18204,22 @@
 	/* s1 17 */ void *pSgdTop;
 }
 
-/* 001cc898 0000010c */ void IgEffectTourouBaseModelDrawSub(/* s1 17 */ void *pSgdTop) {
+/* 001cc898 0000010c */ void IgEffectTourouBaseModelDrawSub(/* s1 17 */ void *pSgdTop, /* s2 18 */ float *CoordMat[4]) {
 	/* s0 16 */ TOUROU_BASE_DATA *pTourouBase;
-	/* -0x40(sp) */ VECTOR3 Color;
+	/* 0x0(sp) */ VECTOR3 Color;
 	/* s3 19 */ long int BackupAlpha;
 	/* s4 20 */ long int BackupZBuf;
 }
 
 /* 001cc9a8 0000003c */ void IgEffectEffectEndParticleReq(/* a0 4 */ float *Position, /* a1 5 */ int EffectType) {
-	/* -0x40(sp) */ ENE_DMG_PARTICLE_REQ EneDmgParticleReq;
+	/* 0x0(sp) */ ENE_DMG_PARTICLE_REQ EneDmgParticleReq;
 	/* v0 2 */ int ParticleNum;
 }
 
-/* 00318730 00000054 */ SUBFUNC_PDEFORM_CTRL* SUBFUNC_PDEFORM_CTRL * _fixed_array_verifyrange<SUBFUNC_PDEFORM_CTRL>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
-/* 00318730 00000054 */ ENE_WRK* ENE_WRK * _fixed_array_verifyrange<ENE_WRK>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ SUBFUNC_PDEFORM_CTRL* SUBFUNC_PDEFORM_CTRL * _fixed_array_verifyrange<SUBFUNC_PDEFORM_CTRL>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ ENE_WRK* ENE_WRK * _fixed_array_verifyrange<ENE_WRK>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
 /* 001cc9e8 00000008 */ static void __static_initialization_and_destruction_0(/* a0 4 */ int __initialize_p, /* a1 5 */ int __priority) {}
-/* 00318730 0000003c */ type_info& SUBFUNC_PDEFORM_CTRL type_info function() {}
+/* ffffffff 0000003c */ type_info& SUBFUNC_PDEFORM_CTRL type_info function() {}
 /* 00318730 0000003c */ type_info& ENE_WRK type_info function() {}
 /* 001cc9f0 00000020 */ static void global constructors keyed to IgEffectInit() {}
 
@@ -17863,6 +18257,7 @@
 }
 
 /* 001ccd60 00000150 */ u_char ItemUse(/* s0 16 */ int item_id, /* s3 19 */ u_char use_num) {
+	/* sdata 3f1640 */ static char __FUNCTION__[8];
 	/* s2 18 */ u_char use_res;
 }
 
@@ -17900,6 +18295,7 @@
 }
 
 /* 001cd320 000000cc */ int ItemPlyrSPRecover(/* s0 16 */ int item_id) {
+	/* rdata 3b96f0 */ static char __FUNCTION__[18];
 	/* v1 3 */ int res;
 }
 
@@ -17918,7 +18314,7 @@
 	/* s0 16 */ int i;
 }
 
-/* 00318760 00000054 */ PLYR_ITEM* PLYR_ITEM * _fixed_array_verifyrange<PLYR_ITEM>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ PLYR_ITEM* PLYR_ITEM * _fixed_array_verifyrange<PLYR_ITEM>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
 /* 001cd5e0 00000008 */ static void __static_initialization_and_destruction_0(/* a0 4 */ int __initialize_p, /* a1 5 */ int __priority) {}
 /* 00318760 0000003c */ type_info& PLYR_ITEM type_info function() {}
 /* 001cd5e8 00000020 */ static void global constructors keyed to plyr_item() {}
@@ -17987,8 +18383,8 @@
 /* 001cdc18 0000005c */ static void KaiPzlPrintCen(/* s1 17 */ int label, /* a1 5 */ int x, /* s0 16 */ int y, /* a3 7 */ u_char alpha) {}
 
 /* 001cdc78 00000208 */ static int KaiPuzzleDrawMsg(/* a0 4 */ int csr, /* f12 50 */ float off_x, /* s2 18 */ u_char alpha) {
-	/* -0x110(sp) */ MSG_WIN_DAT win_dat;
-	/* -0x100(sp) */ DISP_STR ds;
+	/* 0x0(sp) */ MSG_WIN_DAT win_dat;
+	/* 0x10(sp) */ DISP_STR ds;
 	/* s0 16 */ int cx;
 	/* s4 20 */ int cy;
 	/* s3 19 */ int ret;
@@ -17997,14 +18393,14 @@
 }
 
 /* 001cde80 00000094 */ static void KaiPuzzleDrawMsgOne(/* a0 4 */ u_char alpha, /* s2 18 */ int label, /* a2 6 */ DISP_STR *ret) {
-	/* -0x70(sp) */ MSG_WIN_DAT win_dat;
+	/* 0x0(sp) */ MSG_WIN_DAT win_dat;
 	/* s1 17 */ DISP_STR *ds;
-	/* -0x60(sp) */ DISP_STR work;
+	/* 0x10(sp) */ DISP_STR work;
 }
 
 /* 001cdf18 00000080 */ static void KaiPuzzleBlackBgDisp(/* a0 4 */ int off_x, /* a1 5 */ int off_y, /* a2 6 */ u_char alpha) {
-	/* -0xb0(sp) */ DISP_SQAR dsq;
-	/* -0x30(sp) */ SQAR_DAT black_bg;
+	/* 0x0(sp) */ DISP_SQAR dsq;
+	/* 0x80(sp) */ SQAR_DAT black_bg;
 }
 
 /* 001cdf98 0000009c */ void KaiPzlDrawCancelWindow(/* a0 4 */ u_char alpha) {
@@ -18084,7 +18480,7 @@
 /* 001cf848 000000a4 */ static void KazaPuzzle2DispInit() {}
 
 /* 001cf8f0 000000b8 */ void KazaPuzzle2DispMain() {
-	/* -0x30(sp) */ u_char fade_alpha;
+	/* 0x0(sp) */ u_char fade_alpha;
 }
 
 /* 001cf9a8 00000120 */ static void KazaPuzzle2Anim(/* s2 18 */ char *anim_step, /* s0 16 */ short int *anim_timer, /* s1 17 */ u_char *alpha) {
@@ -18123,7 +18519,7 @@
 }
 
 /* 001d0040 000000c0 */ static void KazaPuzzle2BgDisp(/* a0 4 */ int off_x, /* a1 5 */ int off_y, /* s2 18 */ u_char alpha) {
-	/* -0xc0(sp) */ DISP_SPRT bg_ds;
+	/* 0x0(sp) */ DISP_SPRT bg_ds;
 	/* s1 17 */ int i;
 }
 
@@ -18133,7 +18529,7 @@
 
 /* 001d0170 00000104 */ static void KazaPuzzle2PanelShadowDisp(/* s0 16 */ int panel_label, /* s2 18 */ int off_x, /* s1 17 */ int off_y, /* s3 19 */ u_char alpha) {
 	/* rdata 3b9b30 */ static char __FUNCTION__[27];
-	/* -0xc0(sp) */ DISP_SPRT shadow_ds;
+	/* 0x0(sp) */ DISP_SPRT shadow_ds;
 	/* rdata 3b9b50 */ static int shadow_tex_tbl[5];
 }
 
@@ -18151,7 +18547,7 @@
 
 /* 001d0478 000001a0 */ static void KazaPuzzle2PanelDisp(/* s0 16 */ int panel_label, /* s2 18 */ int off_x, /* s1 17 */ int off_y, /* s3 19 */ u_char alpha, /* f20 58 */ float rot) {
 	/* rdata 3b9ba8 */ static char __FUNCTION__[21];
-	/* -0xc0(sp) */ DISP_SPRT panel_ds;
+	/* 0x0(sp) */ DISP_SPRT panel_ds;
 	/* rdata 3b9bc0 */ static int panel_tex_tbl[5];
 }
 
@@ -18161,7 +18557,7 @@
 
 /* 001d0688 000000fc */ static void KazaPuzzle2PanelEmbossShadowDisp(/* s0 16 */ int panel_label, /* s2 18 */ int off_x, /* s1 17 */ int off_y, /* s3 19 */ u_char alpha) {
 	/* rdata 3b9bf8 */ static char __FUNCTION__[33];
-	/* -0xc0(sp) */ DISP_SPRT emboss_ds;
+	/* 0x0(sp) */ DISP_SPRT emboss_ds;
 	/* rdata 3b9c20 */ static int emboss_tbl[5];
 }
 
@@ -18170,12 +18566,12 @@
 }
 
 /* 001d07f8 000000c4 */ static void KazaPuzzle2PanelEmbossHighLightDisp(/* s0 16 */ int panel_label, /* s1 17 */ int off_x, /* s2 18 */ int off_y, /* a3 7 */ u_char alpha) {
-	/* -0xc0(sp) */ DISP_SPRT emboss_ds;
+	/* 0x0(sp) */ DISP_SPRT emboss_ds;
 	/* rdata 3b9c60 */ static int emboss_tbl[5];
 }
 
 /* 001d08c0 000000f4 */ static void KazaPuzzle2PanelFlareDisp(/* s1 17 */ int off_x, /* s2 18 */ int off_y, /* a2 6 */ u_char alpha) {
-	/* -0xc0(sp) */ DISP_SPRT flare_ds;
+	/* 0x0(sp) */ DISP_SPRT flare_ds;
 	/* rdata 3b9c78 */ static int flare_tex_tbl[2][2];
 }
 
@@ -18184,56 +18580,56 @@
 }
 
 /* 001d0a10 000000a8 */ static void KazaPuzzle2CapBaseDisp(/* s0 16 */ int off_x, /* s1 17 */ int off_y, /* a2 6 */ u_char alpha) {
-	/* -0xb0(sp) */ DISP_SPRT base_ds;
+	/* 0x0(sp) */ DISP_SPRT base_ds;
 }
 
 /* 001d0ab8 000000a0 */ static void KazaPuzzle2CapDisp(/* s0 16 */ int off_x, /* s1 17 */ int off_y, /* a2 6 */ u_char alpha) {
-	/* -0xb0(sp) */ DISP_SPRT base_ds;
+	/* 0x0(sp) */ DISP_SPRT base_ds;
 }
 
 /* 001d0b58 0000024c */ static void KazaPuzzle2RemainderFrequency(/* s3 19 */ int off_x, /* s4 20 */ int off_y, /* s1 17 */ u_char alpha) {
 	/* rdata 3b9ca0 */ static char __FUNCTION__[30];
-	/* -0xd0(sp) */ DISP_SPRT ds;
+	/* 0x0(sp) */ DISP_SPRT ds;
 	/* rdata 3b9cc0 */ static int num_tex_tbl[10];
 	/* rdata 3b9ce8 */ static int num_tex_tbl_s[10];
 }
 
 /* 001d0da8 00000148 */ static void KazaPuzzle2ScreenMask(/* s0 16 */ int off_x, /* s1 17 */ int off_y, /* s2 18 */ u_char alpha) {
-	/* -0xb0(sp) */ DISP_SPRT ds;
+	/* 0x0(sp) */ DISP_SPRT ds;
 }
 
 /* 001d0ef0 0000004c */ static void KazaPuzzle2CmnWinDisp(/* a0 4 */ int off_x, /* a1 5 */ int off_y, /* a2 6 */ u_char alpha) {
-	/* -0x20(sp) */ MSG_WIN_DAT win_dat;
+	/* 0x0(sp) */ MSG_WIN_DAT win_dat;
 }
 
 /* 001d0f40 00000074 */ static void KazaPuzzle2StartMsgWinDisp(/* s0 16 */ int off_x, /* s1 17 */ int off_y, /* a2 6 */ u_char alpha) {
-	/* -0x60(sp) */ DISP_STR ds;
+	/* 0x0(sp) */ DISP_STR ds;
 }
 
 /* 001d0fb8 00000100 */ static void KazaPuzzle2ExitConfWinDisp(/* s1 17 */ int off_x, /* s0 16 */ int off_y, /* a2 6 */ u_char alpha) {
-	/* -0x70(sp) */ DISP_STR ds;
+	/* 0x0(sp) */ DISP_STR ds;
 }
 
 /* 001d10b8 00000074 */ static void KazaPuzzle2ClearWinDisp(/* s0 16 */ int off_x, /* s1 17 */ int off_y, /* a2 6 */ u_char alpha) {
-	/* -0x60(sp) */ DISP_STR ds;
+	/* 0x0(sp) */ DISP_STR ds;
 }
 
 /* 001d1130 00000074 */ static void KazaPuzzle2FailureWinDisp(/* s0 16 */ int off_x, /* s1 17 */ int off_y, /* a2 6 */ u_char alpha) {
-	/* -0x60(sp) */ DISP_STR ds;
+	/* 0x0(sp) */ DISP_STR ds;
 }
 
 /* 001d11a8 0000007c */ static void KazaPuzzle2CondErrorWinDisp(/* s2 18 */ int off_x, /* s0 16 */ int off_y, /* a2 6 */ u_char alpha) {
-	/* -0x60(sp) */ DISP_STR ds;
+	/* 0x10(sp) */ DISP_STR ds;
 }
 
 /* 001d1228 000000f8 */ void KazaPuzzle2CrossScreenDisp(/* a0 4 */ int off_x, /* a1 5 */ int off_y, /* s0 16 */ u_char alpha) {}
 
 /* 001d1320 00000080 */ static void KazaPuzzle2BlackBgDisp(/* a0 4 */ int off_x, /* a1 5 */ int off_y, /* a2 6 */ u_char alpha) {
-	/* -0xb0(sp) */ DISP_SQAR dsq;
-	/* -0x30(sp) */ SQAR_DAT black_bg;
+	/* 0x0(sp) */ DISP_SQAR dsq;
+	/* 0x80(sp) */ SQAR_DAT black_bg;
 }
 
-/* 003193b0 00000054 */ int* int * _fixed_array_verifyrange<int>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ int* int * _fixed_array_verifyrange<int>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
 /* 003193b0 00000054 */ float* float * _fixed_array_verifyrange<float>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
 /* 001d13a0 000000c8 */ static void __static_initialization_and_destruction_0(/* a0 4 */ int __initialize_p, /* a1 5 */ int __priority) {}
 /* 001d1468 00000020 */ static void global constructors keyed to KazaPuzzle2ExeInit() {}
@@ -18289,7 +18685,7 @@
 }
 
 /* 001d20f0 000000b8 */ void KazaPuzzleDispMain() {
-	/* -0x30(sp) */ u_char fade_alpha;
+	/* 0x0(sp) */ u_char fade_alpha;
 }
 
 /* 001d21a8 00000120 */ static void KazaPuzzleAnim(/* s2 18 */ char *anim_step, /* s0 16 */ short int *anim_timer, /* s1 17 */ u_char *alpha) {
@@ -18324,7 +18720,7 @@
 }
 
 /* 001d2780 000000d0 */ static void KazaPuzzleBgDisp(/* s0 16 */ int off_x, /* s1 17 */ int off_y, /* s2 18 */ u_char alpha) {
-	/* -0xc0(sp) */ DISP_SPRT bg_ds;
+	/* 0x0(sp) */ DISP_SPRT bg_ds;
 	/* s1 17 */ int i;
 }
 
@@ -18334,7 +18730,7 @@
 
 /* 001d28c0 00000104 */ static void KazaPuzzlePanelShadowDisp(/* s0 16 */ int panel_label, /* s2 18 */ int off_x, /* s1 17 */ int off_y, /* s3 19 */ u_char alpha) {
 	/* rdata 3b9f10 */ static char __FUNCTION__[26];
-	/* -0xc0(sp) */ DISP_SPRT shadow_ds;
+	/* 0x0(sp) */ DISP_SPRT shadow_ds;
 	/* rdata 3b9f30 */ static int shadow_tex_tbl[5];
 }
 
@@ -18352,7 +18748,7 @@
 
 /* 001d2bc8 000001a0 */ static void KazaPuzzlePanelDisp(/* s0 16 */ int panel_label, /* s2 18 */ int off_x, /* s1 17 */ int off_y, /* s3 19 */ u_char alpha, /* f20 58 */ float rot) {
 	/* rdata 3b9f88 */ static char __FUNCTION__[20];
-	/* -0xc0(sp) */ DISP_SPRT panel_ds;
+	/* 0x0(sp) */ DISP_SPRT panel_ds;
 	/* rdata 3b9fa0 */ static int panel_tex_tbl[5];
 }
 
@@ -18362,7 +18758,7 @@
 
 /* 001d2dd8 000000fc */ static void KazaPuzzlePanelEmbossShadowDisp(/* s0 16 */ int panel_label, /* s2 18 */ int off_x, /* s1 17 */ int off_y, /* s3 19 */ u_char alpha) {
 	/* rdata 3b9fd8 */ static char __FUNCTION__[32];
-	/* -0xc0(sp) */ DISP_SPRT emboss_ds;
+	/* 0x0(sp) */ DISP_SPRT emboss_ds;
 	/* rdata 3b9ff8 */ static int emboss_tbl[5];
 }
 
@@ -18371,12 +18767,12 @@
 }
 
 /* 001d2f48 000000c4 */ static void KazaPuzzlePanelEmbossHighLightDisp(/* s0 16 */ int panel_label, /* s1 17 */ int off_x, /* s2 18 */ int off_y, /* a3 7 */ u_char alpha) {
-	/* -0xc0(sp) */ DISP_SPRT emboss_ds;
+	/* 0x0(sp) */ DISP_SPRT emboss_ds;
 	/* rdata 3ba038 */ static int emboss_tbl[5];
 }
 
 /* 001d3010 000000f4 */ static void KazaPuzzlePanelFlareDisp(/* s1 17 */ int off_x, /* s2 18 */ int off_y, /* a2 6 */ u_char alpha) {
-	/* -0xc0(sp) */ DISP_SPRT flare_ds;
+	/* 0x0(sp) */ DISP_SPRT flare_ds;
 	/* rdata 3ba050 */ static int flare_tex_tbl[2][2];
 }
 
@@ -18385,42 +18781,42 @@
 }
 
 /* 001d3160 000000a8 */ static void KazaPuzzleCapBaseDisp(/* s0 16 */ int off_x, /* s1 17 */ int off_y, /* a2 6 */ u_char alpha) {
-	/* -0xb0(sp) */ DISP_SPRT base_ds;
+	/* 0x0(sp) */ DISP_SPRT base_ds;
 }
 
 /* 001d3208 000000a0 */ static void KazaPuzzleCapDisp(/* s0 16 */ int off_x, /* s1 17 */ int off_y, /* a2 6 */ u_char alpha) {
-	/* -0xb0(sp) */ DISP_SPRT base_ds;
+	/* 0x0(sp) */ DISP_SPRT base_ds;
 }
 
 /* 001d32a8 0000024c */ static void KazaPuzzleRemainderFrequency(/* s3 19 */ int off_x, /* s4 20 */ int off_y, /* s1 17 */ u_char alpha) {
 	/* rdata 3ba078 */ static char __FUNCTION__[29];
-	/* -0xd0(sp) */ DISP_SPRT ds;
+	/* 0x0(sp) */ DISP_SPRT ds;
 	/* rdata 3ba098 */ static int num_tex_tbl[10];
 	/* rdata 3ba0c0 */ static int num_tex_tbl_s[10];
 }
 
 /* 001d34f8 00000148 */ static void KazaPuzzleScreenMask(/* s0 16 */ int off_x, /* s1 17 */ int off_y, /* s2 18 */ u_char alpha) {
-	/* -0xb0(sp) */ DISP_SPRT ds;
+	/* 0x0(sp) */ DISP_SPRT ds;
 }
 
 /* 001d3640 0000004c */ static void KazaPuzzleCmnWinDisp(/* a0 4 */ int off_x, /* a1 5 */ int off_y, /* a2 6 */ u_char alpha) {
-	/* -0x20(sp) */ MSG_WIN_DAT win_dat;
+	/* 0x0(sp) */ MSG_WIN_DAT win_dat;
 }
 
 /* 001d3690 00000074 */ static void KazaPuzzleStartMsgWinDisp(/* s0 16 */ int off_x, /* s1 17 */ int off_y, /* a2 6 */ u_char alpha) {
-	/* -0x60(sp) */ DISP_STR ds;
+	/* 0x0(sp) */ DISP_STR ds;
 }
 
 /* 001d3708 00000100 */ static void KazaPuzzleExitConfWinDisp(/* s1 17 */ int off_x, /* s0 16 */ int off_y, /* a2 6 */ u_char alpha) {
-	/* -0x70(sp) */ DISP_STR ds;
+	/* 0x0(sp) */ DISP_STR ds;
 }
 
 /* 001d3808 00000074 */ static void KazaPuzzleClearWinDisp(/* s0 16 */ int off_x, /* s1 17 */ int off_y, /* a2 6 */ u_char alpha) {
-	/* -0x60(sp) */ DISP_STR ds;
+	/* 0x0(sp) */ DISP_STR ds;
 }
 
 /* 001d3880 00000074 */ static void KazaPuzzleFailureWinDisp(/* s0 16 */ int off_x, /* s1 17 */ int off_y, /* a2 6 */ u_char alpha) {
-	/* -0x60(sp) */ DISP_STR ds;
+	/* 0x0(sp) */ DISP_STR ds;
 }
 
 /* 001d38f8 000000b0 */ void KazaPuzzleCrossScreenDisp(/* a0 4 */ int off_x, /* a1 5 */ int off_y, /* s1 17 */ u_char alpha) {
@@ -18428,11 +18824,11 @@
 }
 
 /* 001d39a8 00000080 */ static void KazaPuzzleBlackBgDisp(/* a0 4 */ int off_x, /* a1 5 */ int off_y, /* a2 6 */ u_char alpha) {
-	/* -0xb0(sp) */ DISP_SQAR dsq;
-	/* -0x30(sp) */ SQAR_DAT black_bg;
+	/* 0x0(sp) */ DISP_SQAR dsq;
+	/* 0x80(sp) */ SQAR_DAT black_bg;
 }
 
-/* 003193e0 00000054 */ int* int * _fixed_array_verifyrange<int>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ int* int * _fixed_array_verifyrange<int>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
 /* 003193e0 00000054 */ float* float * _fixed_array_verifyrange<float>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
 /* 001d3a28 000000c8 */ static void __static_initialization_and_destruction_0(/* a0 4 */ int __initialize_p, /* a1 5 */ int __priority) {}
 /* 001d3af0 00000020 */ static void global constructors keyed to KazaPuzzleExeInit() {}
@@ -18462,10 +18858,12 @@
 
 /* 001d3dc8 000000fc */ static void LangCheckMain() {
 	/* rdata 3ba198 */ static char __FUNCTION__[14];
-	/* -0x50(sp) */ char path_name[55];
+	/* 0x0(sp) */ char path_name[55];
 }
 
-/* 001d3ec8 00000048 */ static void LangCheckMcCheckInit() {}
+/* 001d3ec8 00000048 */ static void LangCheckMcCheckInit() {
+	/* 0x0(sp) */ char path_name[55];
+}
 
 /* 001d3f10 00000108 */ static void LangCheckMcCheckWait() {
 	/* v1 3 */ int mc_res;
@@ -18473,6 +18871,7 @@
 
 /* 001d4018 00000084 */ static void LangCheckMcLoadInit() {
 	/* s0 16 */ int size;
+	/* 0x0(sp) */ char path_name[55];
 }
 
 /* 001d40a0 00000138 */ static void LangCheckMcLoadWait() {
@@ -18516,24 +18915,24 @@
 /* 001d4818 00000084 */ static void LangSelDispMain() {}
 
 /* 001d48a0 00000064 */ static void LangSelBlackBgDisp(/* a0 4 */ int off_x, /* a1 5 */ int off_y, /* a2 6 */ u_char alpha) {
-	/* -0xb0(sp) */ DISP_SQAR dsq;
-	/* -0x30(sp) */ SQAR_DAT lang_sel_bg;
+	/* 0x0(sp) */ DISP_SQAR dsq;
+	/* 0x80(sp) */ SQAR_DAT lang_sel_bg;
 }
 
 /* 001d4908 000000f4 */ static void LangSelNationalFlagDisp(/* a0 4 */ int off_x, /* a1 5 */ int off_y, /* s3 19 */ u_char alpha) {
-	/* -0xe0(sp) */ DISP_SPRT ds;
+	/* 0x0(sp) */ DISP_SPRT ds;
 	/* s0 16 */ int i;
 	/* rdata 3ba3f0 */ static int tex_label_tbl[5];
 }
 
 /* 001d4a00 000000fc */ static void LangSelCsrFlareDisp(/* s3 19 */ int off_x, /* s2 18 */ int off_y, /* s1 17 */ u_char alpha) {
-	/* -0xe0(sp) */ DISP_SPRT ds;
+	/* 0x0(sp) */ DISP_SPRT ds;
 	/* s0 16 */ int i;
 	/* rdata 3ba408 */ static int flare_tex_tbl[5][2];
 }
 
 /* 001d4b00 00000124 */ static void LangSelCountryNameDisp(/* s6 22 */ int off_x, /* s5 21 */ int off_y, /* s4 20 */ u_char alpha) {
-	/* -0xe0(sp) */ DISP_SPRT ds;
+	/* 0x0(sp) */ DISP_SPRT ds;
 	/* s2 18 */ int i;
 	/* s1 17 */ int j;
 	/* rdata 3ba430 */ static int tex_label_tbl[5][2];
@@ -18604,7 +19003,7 @@
 }
 
 /* 001d52e0 0000004c */ static void LoadGameMcCheckInit() {
-	/* -0x50(sp) */ char path_name[55];
+	/* 0x0(sp) */ char path_name[55];
 }
 
 /* 001d5330 000000e4 */ static void LoadGameMcCheckWait() {
@@ -18613,6 +19012,7 @@
 
 /* 001d5418 0000009c */ static void LoadGameMcHeadLoadInit() {
 	/* s0 16 */ int size;
+	/* 0x0(sp) */ char path_name[55];
 }
 
 /* 001d54b8 0000019c */ static void LoadGameMcHeadLoadWait() {
@@ -18642,6 +19042,7 @@
 
 /* 001d5d30 000000a0 */ static void LoadGameMcSystemLoadInit() {
 	/* s0 16 */ int size;
+	/* 0x0(sp) */ char path_name[55];
 }
 
 /* 001d5dd0 00000158 */ static void LoadGameMcSystemLoadWait() {
@@ -18651,6 +19052,7 @@
 
 /* 001d5f28 000000b0 */ static void LoadGameMcLoadInit() {
 	/* s1 17 */ int size;
+	/* 0x0(sp) */ char path_name[55];
 }
 
 /* 001d5fd8 0000014c */ static void LoadGameMcLoadWait() {
@@ -18684,7 +19086,7 @@
 
 /* 001d6510 000001fc */ void LoadGameDispMain() {
 	/* rdata 3ba780 */ static char __FUNCTION__[17];
-	/* -0x20(sp) */ u_char rgb;
+	/* 0x0(sp) */ u_char rgb;
 }
 
 /* 001d6710 000002b0 */ static void LoadGameFileSelDisp(/* s2 18 */ u_char alpha) {
@@ -18729,24 +19131,24 @@
 }
 
 /* 001d6d60 00000080 */ static void LoadingBlackBgDisp(/* a0 4 */ u_char alpha) {
-	/* -0xb0(sp) */ DISP_SQAR dsq;
-	/* -0x30(sp) */ SQAR_DAT loading_bg;
+	/* 0x0(sp) */ DISP_SQAR dsq;
+	/* 0x80(sp) */ SQAR_DAT loading_bg;
 }
 
 /* 001d6de0 00000330 */ static void LoadingBgDisp(/* s4 20 */ int off_x, /* s2 18 */ int off_y, /* s5 21 */ u_char alpha) {
-	/* -0x130(sp) */ DISP_SPRT loading_ds;
+	/* 0x0(sp) */ DISP_SPRT loading_ds;
 	/* s6 22 */ long int scissor_backup;
 	/* f22 60 */ float moyou_off_x;
 	/* f23 61 */ float kumo_off_x;
 	/* s1 17 */ int i;
-	/* -0xa0(sp) */ POS_ANIM_TBL moyou_x_tbl[2];
-	/* -0x80(sp) */ POS_ANIM_TBL kumo_x_tbl[2];
+	/* 0x90(sp) */ POS_ANIM_TBL moyou_x_tbl[2];
+	/* 0xb0(sp) */ POS_ANIM_TBL kumo_x_tbl[2];
 }
 
 /* 001d7110 0000012c */ static void LoadingNowLoadingDisp(/* a3 7 */ int off_x, /* a1 5 */ int off_y, /* s2 18 */ u_char alpha) {
-	/* -0xf0(sp) */ DISP_SPRT loading_ds;
+	/* 0x0(sp) */ DISP_SPRT loading_ds;
 	/* s1 17 */ int i;
-	/* -0x60(sp) */ ALPHA_ANIM_TBL loading_alpha_tbl[3];
+	/* 0x90(sp) */ ALPHA_ANIM_TBL loading_alpha_tbl[3];
 }
 
 /* 001d7240 0000002c */ void ReleaseLoadingTexMem() {}
@@ -18792,7 +19194,7 @@
 /* 001d77e8 0000002c */ void ReleaseProjectLogoTexMem() {}
 
 /* 001d7818 00000098 */ static void LogoDispMain(/* v1 3 */ int logo_label, /* s1 17 */ u_char alpha) {
-	/* -0xb0(sp) */ DISP_SPRT ds;
+	/* 0x0(sp) */ DISP_SPRT ds;
 }
 
 /* 001d78b0 00000008 */ int LangSelMain() {}
@@ -18872,7 +19274,7 @@
 /* 001d8638 00000034 */ static char** char * * _fixed_array_verifyrange<char *>(/* a0 4 */ size_t v, /* a1 5 */ size_t _max) {}
 /* 001d8670 00000034 */ static unsigned int** unsigned int * * _fixed_array_verifyrange<unsigned int *>(/* a0 4 */ size_t v, /* a1 5 */ size_t _max) {}
 /* 001d86a8 00000044 */ void MAN_DATA::InitializeIn(/* a0 4 */ MAN_DATA *this) {}
-/* 001d86f0 00000028 */ MAN_DATA* MAN_DATA::MAN_DATA() {}
+/* 001d86f0 00000028 */ MAN_DATA* MAN_DATA::MAN_DATA(/* v1 3 */ MAN_DATA *this) {}
 
 /* 001d8718 00000084 */ void ManItemSGDDraw(/* s0 16 */ HeaderSection *l_hs, /* a1 5 */ ANI_CTRL *pAniCtrl, /* a2 6 */ int iItemLabel) {
 	/* s1 17 */ SGDCOORDINATE *l_cp;
@@ -18880,30 +19282,30 @@
 	/* a1 5 */ SGDCOORDINATE *cp;
 }
 
-/* 001d87a0 000000d4 */ void MAN_DATA::AccessoryDraw(/* s3 19 */ int iAlpha) {
+/* 001d87a0 000000d4 */ void MAN_DATA::AccessoryDraw(/* s2 18 */ MAN_DATA *this, /* s3 19 */ int iAlpha) {
 	/* rdata 3bafd8 */ static char __FUNCTION__[14];
 	/* s0 16 */ HeaderSection *item;
 }
 
-/* 001d8878 0000016c */ int MAN_DATA::SetupIn(/* s2 18 */ int mdl_no, /* s4 20 */ int anm_no, /* s5 21 */ int bd_no, /* s3 19 */ int smdl_no, /* s0 16 */ int iAcsNo) {
+/* 001d8878 0000016c */ int MAN_DATA::SetupIn(/* s1 17 */ MAN_DATA *this, /* s2 18 */ int mdl_no, /* s4 20 */ int anm_no, /* s5 21 */ int bd_no, /* s3 19 */ int smdl_no, /* s0 16 */ int iAcsNo) {
 	/* s6 22 */ int ret;
 }
 
-/* 001d89e8 000000ac */ void MAN_DATA::InitIn(/* a1 5 */ int mdl_p, /* s1 17 */ int anm_p, /* s2 18 */ int smdl_p) {}
+/* 001d89e8 000000ac */ void MAN_DATA::InitIn(/* s0 16 */ MAN_DATA *this, /* a1 5 */ int mdl_p, /* s1 17 */ int anm_p, /* s2 18 */ int smdl_p) {}
 
-/* 001d8a98 000000f4 */ int MAN_DATA::ReadyIn(/* s2 18 */ int *mdl_pp, /* s4 20 */ int *anm_pp, /* s3 19 */ int *smdl_pp) {
+/* 001d8a98 000000f4 */ int MAN_DATA::ReadyIn(/* s0 16 */ MAN_DATA *this, /* s2 18 */ int *mdl_pp, /* s4 20 */ int *anm_pp, /* s3 19 */ int *smdl_pp) {
 	/* s1 17 */ int ret;
 }
 
-/* 001d8b90 000000b0 */ void MAN_DATA::ReleaseAnmIn() {}
-/* 001d8c40 0000009c */ void MAN_DATA::ReleaseIn() {}
-/* 00319de8 0000003c */ type_info& MAN_DATA type_info function() {}
-/* 00319de8 00000014 */ int MAN_DATA::Setup(/* a1 5 */ int mdl_no, /* a2 6 */ int anm_no, /* a3 7 */ int bd_no, /* t0 8 */ int smdl_no, /* t1 9 */ int mAcsNo) {}
+/* 001d8b90 000000b0 */ void MAN_DATA::ReleaseAnmIn(/* s0 16 */ MAN_DATA *this) {}
+/* 001d8c40 0000009c */ void MAN_DATA::ReleaseIn(/* s0 16 */ MAN_DATA *this) {}
+/* ffffffff 0000003c */ type_info& MAN_DATA type_info function() {}
+/* ffffffff 00000014 */ int MAN_DATA::Setup(/* a0 4 */ MAN_DATA *this, /* a1 5 */ int mdl_no, /* a2 6 */ int anm_no, /* a3 7 */ int bd_no, /* t0 8 */ int smdl_no, /* t1 9 */ int mAcsNo) {}
 
-/* 00319de8 00000058 */ int MAN_DATA::IsReady() {
-	/* -0x30(sp) */ int mdl_p;
-	/* -0x2c(sp) */ int anm_p;
-	/* -0x28(sp) */ int smdl_p;
+/* 00319de8 00000058 */ int MAN_DATA::IsReady(/* s0 16 */ MAN_DATA *this) {
+	/* 0x0(sp) */ int mdl_p;
+	/* 0x4(sp) */ int anm_p;
+	/* 0x8(sp) */ int smdl_p;
 	/* s1 17 */ int ret;
 }
 
@@ -18970,7 +19372,7 @@
 	/* rdata 3bb128 */ static char __FUNCTION__[23];
 	/* s1 17 */ MAP_CAMERA_CTRL *pMcCtrl;
 	/* s0 16 */ MDAT_CAM_SP *pCamSp;
-	/* -0x40(sp) */ MB_OUT_RECT *pRect;
+	/* 0x0(sp) */ MB_OUT_RECT *pRect;
 	/* s2 18 */ PLCMN_WRK *pPlayerCmnWrk;
 	/* s3 19 */ int GetCamDataType;
 }
@@ -18981,14 +19383,14 @@
 
 /* 001d97a0 00000430 */ static void MapCamSpCameraDiagonal(/* s1 17 */ MDAT_CAM_SP *pCamSp, /* v1 3 */ MB_OUT_RECT *pRect, /* s4 20 */ float *Position) {
 	/* fp 30 */ MAP_CAMERA_CTRL *pMcCtrl;
-	/* -0x100(sp) */ float CamPosition[4];
-	/* -0xf0(sp) */ float CamTarget[4];
-	/* -0xe0(sp) */ float Node0[4];
-	/* -0xd0(sp) */ float Node1[4];
-	/* -0xc0(sp) */ float Point0[4];
-	/* -0xb0(sp) */ float Point1[4];
-	/* -0xa0(sp) */ float Point2[4];
-	/* -0x90(sp) */ float Point3[4];
+	/* 0x0(sp) */ float CamPosition[4];
+	/* 0x10(sp) */ float CamTarget[4];
+	/* 0x20(sp) */ float Node0[4];
+	/* 0x30(sp) */ float Node1[4];
+	/* 0x40(sp) */ float Point0[4];
+	/* 0x50(sp) */ float Point1[4];
+	/* 0x60(sp) */ float Point2[4];
+	/* 0x70(sp) */ float Point3[4];
 	/* f20 58 */ float Length02;
 	/* f20 58 */ float Length13;
 	/* f0 38 */ float Length0N0;
@@ -19000,15 +19402,16 @@
 }
 
 /* 001d9bd0 000003fc */ static void MapCamSpCameraParallel(/* s0 16 */ MDAT_CAM_SP *pCamSp, /* s1 17 */ MB_OUT_RECT *pRect, /* s4 20 */ float *Position) {
+	/* rdata 3bb150 */ static char __FUNCTION__[23];
 	/* s7 23 */ MAP_CAMERA_CTRL *pMcCtrl;
-	/* -0xf0(sp) */ float CamPosition[4];
-	/* -0xe0(sp) */ float CamTarget[4];
-	/* -0xd0(sp) */ float Node0[4];
-	/* -0xc0(sp) */ float Node1[4];
-	/* -0xb0(sp) */ float Point0[4];
-	/* -0xa0(sp) */ float Point1[4];
-	/* -0x90(sp) */ float Point2[4];
-	/* -0x80(sp) */ float Point3[4];
+	/* 0x0(sp) */ float CamPosition[4];
+	/* 0x10(sp) */ float CamTarget[4];
+	/* 0x20(sp) */ float Node0[4];
+	/* 0x30(sp) */ float Node1[4];
+	/* 0x40(sp) */ float Point0[4];
+	/* 0x50(sp) */ float Point1[4];
+	/* 0x60(sp) */ float Point2[4];
+	/* 0x70(sp) */ float Point3[4];
 	/* f20 58 */ float Length01;
 	/* f20 58 */ float Length12;
 	/* f0 38 */ float Length0N0;
@@ -19037,53 +19440,53 @@
 }
 
 /* 001da1f0 0000004c */ static void MapCamSetFovRoll() {
-	/* -0x20(sp) */ float Roll;
+	/* 0x0(sp) */ float Roll;
 	/* f0 38 */ float Fov;
 }
 
 /* 001da240 0000006c */ static void MapCamTypeFix() {
 	/* s2 18 */ MAP_CAMERA_CTRL *pMcCtrl;
-	/* -0x40(sp) */ float Position[4];
-	/* -0x30(sp) */ float Target[4];
+	/* 0x0(sp) */ float Position[4];
+	/* 0x10(sp) */ float Target[4];
 }
 
 /* 001da2b0 0000011c */ static void MapCamTypePositionFollow(/* s1 17 */ int init) {
 	/* s3 19 */ MAP_CAMERA_CTRL *pMcCtrl;
-	/* -0x60(sp) */ float Position[4];
-	/* -0x50(sp) */ float Target[4];
-	/* -0x40(sp) */ float Offset[4];
+	/* 0x0(sp) */ float Position[4];
+	/* 0x10(sp) */ float Target[4];
+	/* 0x20(sp) */ float Offset[4];
 	/* f20 58 */ float margin;
 }
 
 /* 001da3d0 00000128 */ static void MapCamTypeTargetFollow(/* s3 19 */ int init) {
 	/* s0 16 */ MAP_CAMERA_CTRL *pMcCtrl;
-	/* -0x60(sp) */ float Position[4];
-	/* -0x50(sp) */ float Target[4];
-	/* -0x40(sp) */ float Offset[4];
+	/* 0x0(sp) */ float Position[4];
+	/* 0x10(sp) */ float Target[4];
+	/* 0x20(sp) */ float Offset[4];
 	/* f20 58 */ float margin;
 }
 
 /* 001da4f8 00000198 */ static void MapCamTypePositionTargetFollow(/* s3 19 */ int init) {
-	/* -0x60(sp) */ float Position[4];
-	/* -0x50(sp) */ float Target[4];
-	/* -0x40(sp) */ float Offset[4];
+	/* 0x0(sp) */ float Position[4];
+	/* 0x10(sp) */ float Target[4];
+	/* 0x20(sp) */ float Offset[4];
 	/* f20 58 */ float margin;
 	/* f20 58 */ float margin;
 }
 
 /* 001da690 00000130 */ static void MapCamTypeTargetFollowYFix(/* s3 19 */ int init) {
 	/* s0 16 */ MAP_CAMERA_CTRL *pMcCtrl;
-	/* -0x60(sp) */ float Position[4];
-	/* -0x50(sp) */ float Target[4];
-	/* -0x40(sp) */ float Offset[4];
+	/* 0x0(sp) */ float Position[4];
+	/* 0x10(sp) */ float Target[4];
+	/* 0x20(sp) */ float Offset[4];
 	/* f20 58 */ float margin;
 }
 
 /* 001da7c0 00000124 */ static void MapCamTypePositionFollowYFix(/* s2 18 */ int init) {
 	/* s3 19 */ MAP_CAMERA_CTRL *pMcCtrl;
-	/* -0x60(sp) */ float Position[4];
-	/* -0x50(sp) */ float Target[4];
-	/* -0x40(sp) */ float Offset[4];
+	/* 0x0(sp) */ float Position[4];
+	/* 0x10(sp) */ float Target[4];
+	/* 0x20(sp) */ float Offset[4];
 	/* f20 58 */ float margin;
 }
 
@@ -19096,21 +19499,21 @@
 /* 001da930 00000038 */ static void FinderInOverRapCtrl() {}
 
 /* 001da968 00000060 */ void MapCamGra3dcamSetPositionAddOffset(/* s1 17 */ float *Vector, /* a1 5 */ int RoomNo) {
-	/* -0x40(sp) */ float CamPos[4];
-	/* -0x30(sp) */ float RoomCenter[4];
+	/* 0x0(sp) */ float CamPos[4];
+	/* 0x10(sp) */ float RoomCenter[4];
 }
 
 /* 001da9c8 00000064 */ void MapCamGra3dcamSetTargetAddOffset(/* s1 17 */ float *Vector, /* a1 5 */ int RoomNo) {
-	/* -0x40(sp) */ float CamTarget[4];
-	/* -0x30(sp) */ float RoomCenter[4];
+	/* 0x0(sp) */ float CamTarget[4];
+	/* 0x10(sp) */ float RoomCenter[4];
 }
 
 /* 001daa30 00000054 */ void MapCamGra3dcamSetPositionMargin(/* v0 2 */ float *Position, /* a2 6 */ float *NowPosition, /* f12 50 */ float margin) {
-	/* -0x20(sp) */ float DirVec[4];
+	/* 0x0(sp) */ float DirVec[4];
 }
 
 /* 001daa88 00000058 */ void MapCamGra3dcamSetTargetMargin(/* v0 2 */ float *Target, /* a2 6 */ float *NowTarget, /* f12 50 */ float margin) {
-	/* -0x20(sp) */ float DirVec[4];
+	/* 0x0(sp) */ float DirVec[4];
 }
 
 /* 001daae0 000000cc */ static int MapCamCalcFollowPointWithMargin(/* s0 16 */ float *NextPos, /* s2 18 */ float *TargetPos, /* s1 17 */ float *NowPos, /* f21 59 */ float margin) {
@@ -19140,17 +19543,17 @@
 }
 
 /* 001dad30 00000070 */ void ReqPlyrTalkCameraCtrl(/* f20 58 */ float offy, /* f21 59 */ float dist) {
-	/* -0x30(sp) */ float ipos[4];
+	/* 0x0(sp) */ float ipos[4];
 	/* v1 3 */ float *pv0;
 }
 
 /* 001dada0 0000000c */ void EndPlyrApproachCameraCtrl() {}
 
 /* 001dadb0 000004f8 */ static void PlyrApproachCameraCtrl(/* a0 4 */ int RectCamFlg) {
-	/* -0x90(sp) */ float ptv[4];
-	/* -0x80(sp) */ float itv[4];
-	/* -0x70(sp) */ float tw[4];
-	/* -0x60(sp) */ float tr[4];
+	/* 0x0(sp) */ float ptv[4];
+	/* 0x10(sp) */ float itv[4];
+	/* 0x20(sp) */ float tw[4];
+	/* 0x30(sp) */ float tr[4];
 	/* s5 21 */ APPROACH_CAMERA *apcm;
 	/* f21 59 */ float hdist;
 }
@@ -19163,7 +19566,7 @@
 }
 
 /* 001db300 00000080 */ static void PlyrShoulderCameraPositionGet(/* s2 18 */ float *Position, /* s1 17 */ int Type) {
-	/* -0x60(sp) */ float TmpMat[4][4];
+	/* 0x0(sp) */ float TmpMat[4][4];
 	/* rdata 3bb200 */ static float Offset[3][4];
 	/* s0 16 */ PLCMN_WRK *pPlayerCmnWrk;
 }
@@ -19187,13 +19590,13 @@
 }
 
 /* 001db480 00000358 */ static int QuakeCameraMain() {
-	/* -0x130(sp) */ float TmpMat[4][4];
-	/* -0xf0(sp) */ float Val[2][4];
-	/* -0xd0(sp) */ float CameraXd[4];
-	/* -0xc0(sp) */ float CameraYd[4];
-	/* -0xb0(sp) */ float CameraZd[4];
-	/* -0xa0(sp) */ float CameraPosition[4];
-	/* -0x90(sp) */ float CameraTarget[4];
+	/* 0x0(sp) */ float TmpMat[4][4];
+	/* 0x40(sp) */ float Val[2][4];
+	/* 0x60(sp) */ float CameraXd[4];
+	/* 0x70(sp) */ float CameraYd[4];
+	/* 0x80(sp) */ float CameraZd[4];
+	/* 0x90(sp) */ float CameraPosition[4];
+	/* 0xa0(sp) */ float CameraTarget[4];
 	/* f23 61 */ float V0;
 	/* f22 60 */ float V1;
 	/* f20 58 */ float V2;
@@ -19235,7 +19638,7 @@
 	/* s1 17 */ MhCtrl *mh_ctrl;
 	/* f1 39 */ float height;
 	/* f20 58 */ float max_height;
-	/* -0x60(sp) */ float scale_pos[4];
+	/* 0x0(sp) */ float scale_pos[4];
 }
 
 /* 001dbc00 0000016c */ int MhDrawHeight(/* a0 4 */ int id) {
@@ -19243,14 +19646,14 @@
 	/* s0 16 */ int j;
 	/* s5 21 */ int f;
 	/* s2 18 */ MhCtrl *mh_ctrl;
-	/* -0x80(sp) */ fixed_array<float[4],3> v;
+	/* 0x0(sp) */ fixed_array<float[4],3> v;
 }
 
 /* 001dbd70 000000c4 */ int MhHitLineCheck(/* s0 16 */ float *pos1, /* s2 18 */ float *pos2, /* a2 6 */ int id) {
 	/* s0 16 */ int i;
 	/* s1 17 */ MhCtrl *mh_ctrl;
-	/* -0x50(sp) */ float scale_pos1[4];
-	/* -0x40(sp) */ float scale_pos2[4];
+	/* 0x0(sp) */ float scale_pos1[4];
+	/* 0x10(sp) */ float scale_pos2[4];
 }
 
 /* 001dbe38 00000060 */ static int MhSetCtrlP(/* s1 17 */ int addr, /* s0 16 */ int id) {}
@@ -19261,7 +19664,7 @@
 	/* a2 6 */ int j;
 	/* v0 2 */ int w;
 	/* a0 4 */ int h;
-	/* -0x20(sp) */ float offset[4];
+	/* 0x0(sp) */ float offset[4];
 }
 
 /* 001dbfd8 0000002c */ int MhSetOffset2(/* a0 4 */ int id, /* s0 16 */ float *in_offset) {}
@@ -19274,17 +19677,17 @@
 }
 
 /* 001dc0e8 00000160 */ static int MhIsInTriXZ(/* s2 18 */ MhCtrl *mh_ctrl, /* s5 21 */ float *pos, /* v0 2 */ int idx) {
-	/* -0xc0(sp) */ float tri[3][4];
-	/* -0x90(sp) */ float outer[4];
-	/* -0x80(sp) */ float tmp1[4];
-	/* -0x70(sp) */ float tmp2[4];
-	/* -0x60(sp) */ float y_vec[4];
+	/* 0x0(sp) */ float tri[3][4];
+	/* 0x30(sp) */ float outer[4];
+	/* 0x40(sp) */ float tmp1[4];
+	/* 0x50(sp) */ float tmp2[4];
+	/* 0x60(sp) */ float y_vec[4];
 	/* s0 16 */ int i;
-	/* -0x50(sp) */ int idx_num[3];
+	/* 0x70(sp) */ int idx_num[3];
 }
 
 /* 001dc248 000001e8 */ static float MhIsHeightTri(/* s2 18 */ MhCtrl *mh_ctrl, /* s5 21 */ float *pos, /* a2 6 */ int idx) {
-	/* -0xb0(sp) */ fixed_array<float[4],3> v;
+	/* 0x0(sp) */ fixed_array<float[4],3> v;
 	/* s1 17 */ int i;
 	/* s0 16 */ int v_idx;
 	/* f0 38 */ float height;
@@ -19300,16 +19703,16 @@
 }
 
 /* 001dc430 000000f0 */ static int MhIsHitHeightTri(/* s4 20 */ MhCtrl *mh_ctrl, /* s1 17 */ float *pos1, /* s0 16 */ float *pos2, /* s5 21 */ int idx) {
-	/* -0x50(sp) */ float v0[4];
+	/* 0x0(sp) */ float v0[4];
 	/* s3 19 */ SgmVERTEX &raSgmVERTEX[1];
 	/* s2 18 */ int &riv[4];
 }
 
-/* 0031c680 00000054 */ MhCtrl** MhCtrl * * _fixed_array_verifyrange<MhCtrl *>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
-/* 0031c680 00000054 */ float*[4] float [3] * _fixed_array_verifyrange<float [3]>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ MhCtrl** MhCtrl * * _fixed_array_verifyrange<MhCtrl *>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ float*[4] float [3] * _fixed_array_verifyrange<float [3]>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
 /* 001dc520 00000008 */ static void __static_initialization_and_destruction_0(/* a0 4 */ int __initialize_p, /* a1 5 */ int __priority) {}
-/* 0031c680 0000004c */ type_info& MhCtrl * type_info function() {}
-/* 0031c680 0000003c */ type_info& float [3] type_info function() {}
+/* ffffffff 0000004c */ type_info& MhCtrl * type_info function() {}
+/* ffffffff 0000003c */ type_info& float [3] type_info function() {}
 /* 0031c680 0000003c */ type_info& MhCtrl type_info function() {}
 /* 001dc528 00000020 */ static void global constructors keyed to MhFirstInit() {}
 
@@ -19317,20 +19720,20 @@
 // FILE -- /home/zero_rom/zero2np/src/ingame/map/map_hit_check.c
 // *****************************************************************************
 
-/* 001dc548 000002bc */ int MapHitCheck(/* -0x7c(sp) */ float *v0, /* -0x78(sp) */ float *now, /* -0x74(sp) */ float *old, /* f20 58 */ float r, /* -0x70(sp) */ int kai) {
+/* 001dc548 000002bc */ int MapHitCheck(/* 0x34(sp) */ float *v0, /* 0x38(sp) */ float *now, /* 0x3c(sp) */ float *old, /* f20 58 */ float r, /* 0x40(sp) */ int kai) {
 	/* s0 16 */ int i;
 	/* v0 2 */ int j;
 	/* s5 21 */ int k;
 	/* s7 23 */ int rec_num;
-	/* -0x6c(sp) */ int door_rec_num;
+	/* 0x44(sp) */ int door_rec_num;
 	/* fp 30 */ int hit_num;
 	/* s4 20 */ int flg;
-	/* -0xb0(sp) */ float tmp[4];
-	/* -0xa0(sp) */ float a[4];
-	/* -0x90(sp) */ float b[4];
-	/* -0x80(sp) */ float len;
-	/* -0x68(sp) */ int *num_list;
-	/* -0x64(sp) */ int list_num;
+	/* 0x0(sp) */ float tmp[4];
+	/* 0x10(sp) */ float a[4];
+	/* 0x20(sp) */ float b[4];
+	/* 0x30(sp) */ float len;
+	/* 0x48(sp) */ int *num_list;
+	/* 0x4c(sp) */ int list_num;
 	/* v0 2 */ float *vec[4];
 }
 
@@ -19339,29 +19742,30 @@
 	/* s0 16 */ int j;
 	/* s3 19 */ int k;
 	/* s4 20 */ int rec_num;
-	/* -0x100(sp) */ float box[4][4];
-	/* -0xc0(sp) */ float boxmax[4];
-	/* -0xb0(sp) */ float boxmin[4];
-	/* -0x7c(sp) */ int *door_list;
-	/* -0x78(sp) */ int list_num;
+	/* 0x0(sp) */ float box[4][4];
+	/* 0x40(sp) */ float boxmax[4];
+	/* 0x50(sp) */ float boxmin[4];
+	/* 0x80(sp) */ int *num_list;
+	/* 0x84(sp) */ int *door_list;
+	/* 0x88(sp) */ int list_num;
 	/* fp 30 */ int hit_flg;
-	/* -0xa0(sp) */ float vec12[4];
-	/* -0x90(sp) */ float tmp[4];
+	/* 0x60(sp) */ float vec12[4];
+	/* 0x70(sp) */ float tmp[4];
 	/* a1 5 */ float *pvMin;
 	/* a0 4 */ float *pvMax;
 	/* v1 3 */ int i;
 }
 
 /* 001dce80 0000014c */ int MapHitCollisionLine(/* s2 18 */ float *v0, /* s1 17 */ float *v1, /* s0 16 */ float *a, /* a3 7 */ float *b, /* f22 60 */ float len, /* f21 59 */ float r) {
-	/* -0x70(sp) */ float ab[4];
-	/* -0x60(sp) */ float av[4];
-	/* -0x50(sp) */ float ver[4];
+	/* 0x0(sp) */ float ab[4];
+	/* 0x10(sp) */ float av[4];
+	/* 0x20(sp) */ float ver[4];
 	/* f0 38 */ float y;
 	/* f20 58 */ float ver_len;
 }
 
 /* 001dcfd0 000000d8 */ int MapHitCollisionPoint(/* s1 17 */ float *v0, /* s0 16 */ float *v1, /* a2 6 */ float *a, /* f22 60 */ float len, /* f20 58 */ float r) {
-	/* -0x40(sp) */ float av[4];
+	/* 0x0(sp) */ float av[4];
 }
 
 // *****************************************************************************
@@ -19379,7 +19783,7 @@
 /* 001dd178 00000038 */ static MapRecBufCtrl* MrecGetRegBuffID(/* a0 4 */ int buf_no) {}
 /* 001dd1b0 00000014 */ int MrecInitCameraInfo() {}
 
-/* 001dd1c8 00000120 */ int MrecSetCameraInfo(/* a0 4 */ int floor, /* s1 17 */ int DataType) {
+/* 001dd1c8 00000120 */ int MrecSetCameraInfo(/* a0 4 */ int floor, /* fp 30 */ float *pos, /* s1 17 */ int DataType) {
 	/* s4 20 */ int i;
 	/* s6 22 */ int id;
 	/* s3 19 */ int buf_id;
@@ -19405,7 +19809,7 @@
 	/* v1 3 */ MDAT_CAM *cam;
 }
 
-/* 001dd3b0 00000058 */ int MrecGetCameraInterest() {
+/* 001dd3b0 00000058 */ int MrecGetCameraInterest(/* s0 16 */ float *pos) {
 	/* v1 3 */ MDAT_CAM *cam;
 }
 
@@ -19425,13 +19829,13 @@
 /* 001dd4c0 00000020 */ int MrecCheckOnSameCamRect(/* a0 4 */ void *pRectStat, /* a1 5 */ int floor, /* a2 6 */ float *Pos, /* a3 7 */ int DataType) {}
 /* 001dd4e0 00000020 */ int MrecCheckHitRect(/* a0 4 */ int floor, /* a1 5 */ float *Pos, /* a2 6 */ int DataType) {}
 
-/* 001dd500 000000b4 */ int MrecIsInEvent(/* s3 19 */ int label, /* a2 6 */ int floor) {
+/* 001dd500 000000b4 */ int MrecIsInEvent(/* s2 18 */ float *pos, /* s3 19 */ int label, /* a2 6 */ int floor) {
 	/* v0 2 */ int buf_id;
 	/* s0 16 */ int *lp;
 	/* s1 17 */ int i;
 }
 
-/* 001dd5b8 00000090 */ int MrecIsInEventSub(/* s0 16 */ int buf_id, /* a2 6 */ int label) {
+/* 001dd5b8 00000090 */ int MrecIsInEventSub(/* s1 17 */ float *pos, /* s0 16 */ int buf_id, /* a2 6 */ int label) {
 	/* v0 2 */ MB_OUT_RECT *region_p;
 }
 
@@ -19468,7 +19872,7 @@
 /* 001dd980 00000128 */ int MrecLineCross(/* s3 19 */ float *pos1, /* s4 20 */ float *pos2, /* a2 6 */ int list_no, /* a3 7 */ int num) {
 	/* s2 18 */ float *vec[4];
 	/* s1 17 */ int i;
-	/* -0x70(sp) */ float vw[4][4];
+	/* 0x0(sp) */ float vw[4][4];
 }
 
 /* 001ddaa8 000000c8 */ int MrecIsInHitRectangle(/* s3 19 */ float *pos1, /* s5 21 */ float *pos2, /* s2 18 */ float *pos3, /* s4 20 */ float *pos4, /* t0 8 */ int list_no, /* t1 9 */ int num) {
@@ -19478,14 +19882,14 @@
 
 /* 001ddb70 000000dc */ int MrecIsNearRectangle(/* s1 17 */ float *boxmin, /* s0 16 */ float *boxmax, /* a2 6 */ int list_no, /* a3 7 */ int num) {
 	/* v1 3 */ float *vec[4];
-	/* -0x40(sp) */ float vecmin[4];
-	/* -0x30(sp) */ float vecmax[4];
+	/* 0x0(sp) */ float vecmin[4];
+	/* 0x10(sp) */ float vecmax[4];
 	/* a2 6 */ float *pvMin;
 	/* a1 5 */ float *pvMax;
 	/* a0 4 */ int i;
 }
 
-/* 001ddc50 0000015c */ int MrecSetSEInfo() {
+/* 001ddc50 0000015c */ int MrecSetSEInfo(/* 0x0(sp) */ float *pos) {
 	/* s2 18 */ int i;
 	/* s6 22 */ int j;
 	/* s4 20 */ int id;
@@ -19512,7 +19916,7 @@
 	/* s3 19 */ int sam;
 }
 
-/* 001dde98 0000018c */ int MrecPointDoorRectangle(/* -0x70(sp) */ float *len, /* s7 23 */ float *a, /* fp 30 */ float *b, /* s2 18 */ int num, /* f20 58 */ float r) {
+/* 001dde98 0000018c */ int MrecPointDoorRectangle(/* 0x0(sp) */ float *len, /* s6 22 */ float *pos, /* s7 23 */ float *a, /* fp 30 */ float *b, /* s2 18 */ int num, /* f20 58 */ float r) {
 	/* t0 8 */ MB_OUT_RECT *reg_p;
 	/* s3 19 */ int buf_id;
 	/* s5 21 */ int id_num;
@@ -19540,18 +19944,19 @@
 /* 001de210 00000128 */ int MrecDoorLineCross(/* s3 19 */ float *pos1, /* s4 20 */ float *pos2, /* a2 6 */ int list_no, /* a3 7 */ int num) {
 	/* s2 18 */ float *vec[4];
 	/* s1 17 */ int i;
+	/* 0x0(sp) */ float vw[4][4];
 }
 
 /* 001de338 000000dc */ int MrecIsNearDoorRectangle(/* s1 17 */ float *boxmin, /* s0 16 */ float *boxmax, /* a2 6 */ int list_no, /* a3 7 */ int num) {
 	/* v1 3 */ float *vec[4];
-	/* -0x40(sp) */ float vecmin[4];
-	/* -0x30(sp) */ float vecmax[4];
+	/* 0x0(sp) */ float vecmin[4];
+	/* 0x10(sp) */ float vecmax[4];
 	/* a2 6 */ float *pvMin;
 	/* a1 5 */ float *pvMax;
 	/* a0 4 */ int i;
 }
 
-/* 001de418 000000d0 */ int MrecGetStaInfo(/* s5 21 */ float *rot, /* a1 5 */ int floor) {
+/* 001de418 000000d0 */ int MrecGetStaInfo(/* s5 21 */ float *rot, /* a1 5 */ int floor, /* s3 19 */ float *pos) {
 	/* s1 17 */ int i;
 	/* s2 18 */ int buf_id;
 	/* s0 16 */ MB_OUT_RECT *region_p;
@@ -19560,69 +19965,69 @@
 }
 
 /* 001de4e8 00000030 */ float MrecGetStaRot(/* s0 16 */ int rot) {}
-/* 001de518 0000006c */ int MrecIsInRectangle(/* s0 16 */ float *rec[4]) {}
+/* 001de518 0000006c */ int MrecIsInRectangle(/* s2 18 */ float *pos, /* s0 16 */ float *rec[4]) {}
 /* 001de588 00000008 */ MDAT_CAM* MrecGetCameraInfo() {}
 /* 001de590 00000008 */ static MDAT_SE* MrecGetSeInfo() {}
 /* 001de598 0000000c */ static float* MrecGetStaRotTbl() {}
 
-/* 001de5a8 00000144 */ int DrawCameraRect() {
+/* 001de5a8 00000144 */ int DrawCameraRect(/* s6 22 */ float *pos) {
 	/* s7 23 */ MB_OUT_RECT *reg_p;
 	/* s4 20 */ int i;
 	/* s3 19 */ int j;
 	/* s0 16 */ int buf_id;
 	/* s5 21 */ int num;
-	/* -0x90(sp) */ float v[4][4];
+	/* 0x0(sp) */ float v[4][4];
 }
 
-/* 001de6f0 000000e4 */ int DrawCameraRectOne(/* s0 16 */ int i) {
+/* 001de6f0 000000e4 */ int DrawCameraRectOne(/* s0 16 */ int i, /* s4 20 */ float *pos) {
 	/* s3 19 */ int j;
 	/* a0 4 */ int buf_id;
-	/* -0x70(sp) */ float v[4][4];
+	/* 0x0(sp) */ float v[4][4];
 }
 
-/* 001de7d8 00000144 */ int DrawEventRect() {
+/* 001de7d8 00000144 */ int DrawEventRect(/* s6 22 */ float *pos) {
 	/* s7 23 */ MB_OUT_RECT *reg_p;
 	/* s4 20 */ int i;
 	/* s3 19 */ int j;
 	/* s5 21 */ int num;
 	/* s0 16 */ int buf_id;
-	/* -0x90(sp) */ float v[4][4];
+	/* 0x0(sp) */ float v[4][4];
 }
 
-/* 001de920 000000e4 */ int DrawEventRectOne(/* s0 16 */ int i) {
+/* 001de920 000000e4 */ int DrawEventRectOne(/* s0 16 */ int i, /* s4 20 */ float *pos) {
 	/* s3 19 */ int j;
 	/* a0 4 */ int buf_id;
-	/* -0x70(sp) */ float v[4][4];
+	/* 0x0(sp) */ float v[4][4];
 }
 
-/* 001dea08 00000154 */ int DrawMapHitRect() {
+/* 001dea08 00000154 */ int DrawMapHitRect(/* s6 22 */ float *pos) {
 	/* s7 23 */ MB_OUT_RECT *reg_p;
 	/* s4 20 */ int i;
 	/* s3 19 */ int j;
 	/* s5 21 */ int num;
 	/* s0 16 */ int buf_id;
-	/* -0xa0(sp) */ float v[4][4];
+	/* 0x0(sp) */ float v[4][4];
 }
 
-/* 001deb60 000000e4 */ int DrawMapHitRectOne(/* s0 16 */ int i) {
+/* 001deb60 000000e4 */ int DrawMapHitRectOne(/* s0 16 */ int i, /* s4 20 */ float *pos) {
 	/* s3 19 */ int j;
 	/* a0 4 */ int buf_id;
-	/* -0x70(sp) */ float v[4][4];
+	/* 0x0(sp) */ float v[4][4];
 }
 
-/* 001dec48 00000144 */ int DrawSeRect() {
+/* 001dec48 00000144 */ int DrawSeRect(/* s6 22 */ float *pos) {
 	/* s7 23 */ MB_OUT_RECT *reg_p;
 	/* s4 20 */ int i;
 	/* s3 19 */ int j;
 	/* s0 16 */ int buf_id;
 	/* s5 21 */ int num;
-	/* -0x90(sp) */ float v[4][4];
+	/* 0x0(sp) */ float v[4][4];
 }
 
-/* 001ded90 000000e4 */ int DrawSeRectOne(/* s0 16 */ int i) {
+/* 001ded90 000000e4 */ int DrawSeRectOne(/* s0 16 */ int i, /* s4 20 */ float *pos) {
 	/* s3 19 */ int j;
 	/* a0 4 */ int buf_id;
-	/* -0x70(sp) */ float v[4][4];
+	/* 0x0(sp) */ float v[4][4];
 }
 
 // *****************************************************************************
@@ -19674,7 +20079,7 @@
 	/* v1 3 */ int i;
 	/* a0 4 */ int res;
 	/* s2 18 */ int check_sum;
-	/* -0x30(sp) */ int load_check_sum;
+	/* 0x0(sp) */ int load_check_sum;
 	/* s0 16 */ char *addr;
 	/* s1 17 */ char *check_sum_addr;
 }
@@ -19683,7 +20088,8 @@
 	/* v1 3 */ int i;
 	/* s4 20 */ int res;
 	/* s3 19 */ int check_sum;
-	/* -0x50(sp) */ int load_check_sum;
+	/* 0x0(sp) */ int load_check_sum;
+	/* s0 16 */ char *addr;
 	/* s1 17 */ char *check_sum_addr;
 }
 
@@ -19698,7 +20104,7 @@
 /* 001df4a8 000001dc */ int MemoryCardGetCardInfoMain() {
 	/* s3 19 */ int res;
 	/* s0 16 */ int mc_res;
-	/* -0x40(sp) */ int result;
+	/* 0x0(sp) */ int result;
 }
 
 /* 001df688 00000030 */ int MemoryCardGetCardInfoReq(/* a0 4 */ int port, /* a1 5 */ int slot) {}
@@ -19731,7 +20137,7 @@
 /* 001df808 00000184 */ int MemoryCardGetDirInfoMain() {
 	/* s2 18 */ int res;
 	/* v1 3 */ int mc_res;
-	/* -0x40(sp) */ int result;
+	/* 0x0(sp) */ int result;
 }
 
 /* 001df990 00000024 */ int MemoryCardGetDirInfoReq(/* a0 4 */ int port, /* a1 5 */ int slot, /* a2 6 */ char *name) {}
@@ -19762,7 +20168,7 @@
 /* 001dfb38 00000138 */ int MemoryCardFileCloseMain() {
 	/* s1 17 */ int res;
 	/* v1 3 */ int mc_res;
-	/* -0x30(sp) */ int result;
+	/* 0x0(sp) */ int result;
 }
 
 /* 001dfc70 00000014 */ int MemoryCardFileCloseReq(/* a0 4 */ int fd) {}
@@ -19782,7 +20188,7 @@
 	/* a1 5 */ int i;
 }
 
-/* 001dfd00 00000034 */ void SetMemoryCardDataCheckSum(/* a0 4 */ char *addr, /* -0x10(sp) */ int check_sum) {
+/* 001dfd00 00000034 */ void SetMemoryCardDataCheckSum(/* a0 4 */ char *addr, /* 0x0(sp) */ int check_sum) {
 	/* a1 5 */ char *check_sum_addr;
 	/* v1 3 */ int i;
 }
@@ -19796,13 +20202,13 @@
 /* 001dfd60 00000168 */ int MemoryCardAllFileDelMain() {
 	/* s3 19 */ int res;
 	/* v1 3 */ int mc_res;
-	/* -0x70(sp) */ char path_name[55];
+	/* 0x0(sp) */ char path_name[55];
 }
 
 /* 001dfec8 00000108 */ static void SetMemoryCardDelFilePath(/* s4 20 */ char *path_name, /* s3 19 */ int dir_label, /* s5 21 */ int data_pos) {
-	/* -0xe0(sp) */ char fname[55];
-	/* -0xa0(sp) */ char entry_name[55];
-	/* -0x60(sp) */ char dir_name[21];
+	/* 0x0(sp) */ char fname[55];
+	/* 0x40(sp) */ char entry_name[55];
+	/* 0x80(sp) */ char dir_name[21];
 }
 
 // *****************************************************************************
@@ -19814,7 +20220,7 @@
 /* 001dfff0 00000130 */ int MemoryCardDirDelMain() {
 	/* s2 18 */ int res;
 	/* v1 3 */ int mc_res;
-	/* -0x50(sp) */ char dir_name[21];
+	/* 0x0(sp) */ char dir_name[21];
 }
 
 // *****************************************************************************
@@ -19826,7 +20232,7 @@
 /* 001e0188 0000018c */ int MemoryCardFileDelMain() {
 	/* s2 18 */ int res;
 	/* v1 3 */ int mc_res;
-	/* -0x40(sp) */ int result;
+	/* 0x0(sp) */ int result;
 }
 
 /* 001e0318 00000014 */ int MemoryCardFileDelReq(/* a0 4 */ int port, /* a1 5 */ int slot, /* a2 6 */ char *name) {}
@@ -19840,7 +20246,7 @@
 /* 001e0350 0000013c */ int MemoryCardFormatMain() {
 	/* s2 18 */ int res;
 	/* v1 3 */ int mc_res;
-	/* -0x40(sp) */ int result;
+	/* 0x0(sp) */ int result;
 }
 
 /* 001e0490 00000014 */ int MemoryCardFormatReq(/* a0 4 */ int port, /* a1 5 */ int slot) {}
@@ -19854,7 +20260,7 @@
 /* 001e04e0 00000168 */ int MemoryCardIconMain() {
 	/* s1 17 */ int res;
 	/* v1 3 */ int mc_res;
-	/* -0x70(sp) */ char path_name[55];
+	/* 0x0(sp) */ char path_name[55];
 }
 
 /* 001e0648 0000002c */ void LiberateMemoryCardIconDataMem() {}
@@ -19868,7 +20274,7 @@
 /* 001e07b8 000000c8 */ int MemoryCardIconSysMain() {
 	/* s1 17 */ int res;
 	/* v1 3 */ int mc_res;
-	/* -0x60(sp) */ char path_name[55];
+	/* 0x0(sp) */ char path_name[55];
 }
 
 // *****************************************************************************
@@ -19893,7 +20299,7 @@
 /* 001e0a78 00000130 */ int MemoryCardNewMakeMain() {
 	/* s2 18 */ int res;
 	/* v1 3 */ int mc_res;
-	/* -0x50(sp) */ char dir_name[21];
+	/* 0x0(sp) */ char dir_name[21];
 }
 
 // *****************************************************************************
@@ -19908,7 +20314,7 @@
 	/* rdata 3bb6f0 */ static char __FUNCTION__[26];
 	/* s3 19 */ int res;
 	/* v1 3 */ int mc_res;
-	/* -0x70(sp) */ char path_name[55];
+	/* 0x0(sp) */ char path_name[55];
 	/* s1 17 */ int data_file_size;
 	/* a0 4 */ char *check_sum_addr;
 }
@@ -19922,7 +20328,7 @@
 /* 001e0e80 0000014c */ int MemoryCardMakeNewDirMain() {
 	/* s2 18 */ int res;
 	/* v1 3 */ int mc_res;
-	/* -0x40(sp) */ int result;
+	/* 0x0(sp) */ int result;
 }
 
 /* 001e0fd0 00000014 */ int MemoryCardMakeNewDirReq(/* a0 4 */ int port, /* a1 5 */ int slot, /* a2 6 */ char *name) {}
@@ -19947,7 +20353,7 @@
 /* 001e11b8 00000198 */ int MemoryCardFileOpenMain(/* s3 19 */ int *fd) {
 	/* s2 18 */ int res;
 	/* v1 3 */ int mc_res;
-	/* -0x40(sp) */ int result;
+	/* 0x0(sp) */ int result;
 }
 
 /* 001e1350 00000014 */ int MemoryCardFileOpenReq(/* a0 4 */ int port, /* a1 5 */ int slot, /* a2 6 */ char *name, /* a3 7 */ int mode) {}
@@ -19961,7 +20367,7 @@
 /* 001e1390 000001a0 */ int MemoryCardFileReadMain() {
 	/* s2 18 */ int res;
 	/* v1 3 */ int mc_res;
-	/* -0x40(sp) */ int result;
+	/* 0x0(sp) */ int result;
 }
 
 /* 001e1530 00000014 */ int MemoryCardFileReadReq(/* a0 4 */ int fd, /* a1 5 */ void *data_addr, /* a2 6 */ int size) {}
@@ -19992,8 +20398,8 @@
 /* 001e17e8 0000001c */ void MemoryCardSoftResetUnlock() {}
 
 /* 001e1808 000001b4 */ void MemoryCardSetFilePath(/* s4 20 */ char *path_name, /* s3 19 */ int dir_label, /* s2 18 */ int file_label) {
-	/* -0x90(sp) */ char fname[55];
-	/* -0x50(sp) */ char dir_name[21];
+	/* 0x0(sp) */ char fname[55];
+	/* 0x40(sp) */ char dir_name[21];
 }
 
 /* 001e19c0 00000108 */ void SetMemoryCardSaveDataToBuff(/* s2 18 */ char *addr0, /* s0 16 */ int dir_label, /* s1 17 */ int file_label) {
@@ -20002,7 +20408,7 @@
 	/* a2 6 */ int i;
 	/* a1 5 */ int j;
 	/* s0 16 */ int size;
-	/* -0x350(sp) */ MC_SAVE_DATA save_data_buff[100];
+	/* 0x0(sp) */ MC_SAVE_DATA save_data_buff[100];
 }
 
 /* 001e1ac8 00000104 */ void DevelopMemoryCardLoadData(/* s0 16 */ char *addr0, /* a1 5 */ int dir_label, /* a2 6 */ int file_label) {
@@ -20010,6 +20416,7 @@
 	/* a0 4 */ u_char *addr1;
 	/* s2 18 */ int i;
 	/* a2 6 */ int j;
+	/* 0x0(sp) */ MC_SAVE_DATA save_data_buff[100];
 }
 
 /* 001e1bd0 000000d8 */ int GetMemoryCardDirSize(/* s0 16 */ int dir_label) {
@@ -20027,6 +20434,7 @@
 /* 001e1dd0 000000ac */ int GetMemoryCardDataSize(/* v0 2 */ int dir_label, /* a2 6 */ int file_label) {
 	/* a3 7 */ int i;
 	/* s0 16 */ int size;
+	/* 0x0(sp) */ MC_SAVE_DATA save_data_buff[100];
 }
 
 /* 001e1e80 00000128 */ static void SetMemoryCardSaveDataInfo(/* s0 16 */ MC_SAVE_DATA *buff, /* s3 19 */ int dir_label, /* a2 6 */ int file_label) {
@@ -20040,11 +20448,11 @@
 /* 001e2008 00000020 */ int MemoryCardDataLoadWait() {}
 
 /* 001e2028 0000007c */ int GetMemoryCardDataFileNum(/* s0 16 */ int dir_label) {
-	/* -0x30(sp) */ int data_file_num[6];
+	/* 0x0(sp) */ int data_file_num[6];
 }
 
 /* 001e20a8 00000080 */ int GetMemoryCardAllFileNum(/* s0 16 */ int dir_label) {
-	/* -0x30(sp) */ int dir_file_num[6];
+	/* 0x0(sp) */ int dir_file_num[6];
 }
 
 /* 001e2128 00000028 */ void MemoryCardPlayDataHeadInit() {}
@@ -20058,43 +20466,54 @@
 /* 001e2410 00000018 */ void SetSave_PlayDataHead(/* a0 4 */ MC_SAVE_DATA *data) {}
 /* 001e2428 00000078 */ void MemoryCardSetDirName(/* s1 17 */ char *dir_name, /* s0 16 */ int dir_label) {}
 /* 001e24a0 00000054 */ void MemoryCardMakeSearchDirPath(/* s0 16 */ char *path_name, /* s1 17 */ int dir_label) {}
-/* 001e24f8 000000b8 */ void MemoryCardSetIconSysPath(/* s3 19 */ char *path_name, /* s2 18 */ int dir_label) {}
+
+/* 001e24f8 000000b8 */ void MemoryCardSetIconSysPath(/* s3 19 */ char *path_name, /* s2 18 */ int dir_label) {
+	/* 0x0(sp) */ char fname[55];
+	/* 0x40(sp) */ char dir_name[21];
+}
 
 /* 001e25b0 0000025c */ sceMcIconSys MemoryCardSetIconSysData(/* s0 16 */ int dir_label) {
-	/* -0x420(sp) */ sceMcIconSys icon;
+	/* 0x0(sp) */ sceMcIconSys icon;
 }
 
 /* 001e2810 000000a0 */ void MemoryCardSetIconTitleName(/* s1 17 */ char *title, /* s0 16 */ int dir_label) {
-	/* -0x70(sp) */ char title_name[68];
+	/* 0x0(sp) */ char title_name[68];
 }
 
 /* 001e28b0 00000074 */ void MemoryCardSetIconFileName(/* s2 18 */ char *icon_name, /* s1 17 */ int dir_label, /* s0 16 */ int icon_type) {}
-/* 001e2928 000000f4 */ void MemoryCardSetIconFilePath(/* s4 20 */ char *icon_path, /* s2 18 */ int dir_label, /* s3 19 */ int icon_type) {}
+
+/* 001e2928 000000f4 */ void MemoryCardSetIconFilePath(/* s4 20 */ char *icon_path, /* s2 18 */ int dir_label, /* s3 19 */ int icon_type) {
+	/* 0x0(sp) */ char fname[55];
+	/* 0x40(sp) */ char dir_name[21];
+}
+
 /* 001e2a20 00000024 */ int GetIconDataLabel(/* a0 4 */ int dir_label, /* a1 5 */ int icon_type) {}
 /* 001e2a48 00000020 */ int GetIconDataSize(/* a0 4 */ int dir_label, /* a1 5 */ int icon_type) {}
 
 /* 001e2a68 00000154 */ void MemoryCardDebugReqSizeDisp() {
 	/* s0 16 */ int i;
-	/* -0x80(sp) */ char *dir_name[21];
+	/* 0x0(sp) */ char *dir_name[21];
 }
 
 /* 001e2bc0 0000007c */ void MemoryCardPrint(/* a0 4 */ char *str) {
-	/* -0x470(sp) */ va_list ap;
-	/* -0x460(sp) */ char buf[1000];
+	/* 0x0(sp) */ va_list ap;
+	/* 0x10(sp) */ char buf[1000];
 }
 
 /* 001e2c40 000000a8 */ void MemoryCardAssert(/* a0 4 */ char *str) {
 	/* rdata 3bbba8 */ static char __FUNCTION__[17];
-	/* -0x470(sp) */ va_list ap;
+	/* 0x0(sp) */ va_list ap;
+	/* 0x10(sp) */ char buf[1000];
 }
 
 /* 001e2ce8 000000a0 */ void MemoryCardWarning(/* a0 4 */ char *str) {
-	/* -0x470(sp) */ va_list ap;
+	/* 0x0(sp) */ va_list ap;
+	/* 0x10(sp) */ char buf[1000];
 }
 
-/* 0031e3a8 00000054 */ char* char * _fixed_array_verifyrange<char>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
-/* 0031e3a8 00000054 */ int* int * _fixed_array_verifyrange<int>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
-/* 0031e3a8 00000054 */ TIME_INFO* TIME_INFO * _fixed_array_verifyrange<TIME_INFO>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ char* char * _fixed_array_verifyrange<char>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ int* int * _fixed_array_verifyrange<int>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ TIME_INFO* TIME_INFO * _fixed_array_verifyrange<TIME_INFO>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
 /* 001e2d88 00000008 */ static void __static_initialization_and_destruction_0(/* a0 4 */ int __initialize_p, /* a1 5 */ int __priority) {}
 /* 0031e3a8 0000003c */ type_info& TIME_INFO type_info function() {}
 /* 001e2d90 00000020 */ static void global constructors keyed to MemoryCardSoftResetLock() {}
@@ -20108,7 +20527,7 @@
 /* 001e2dd8 00000188 */ int MemoryCardFileWriteMain() {
 	/* s2 18 */ int res;
 	/* v1 3 */ int mc_res;
-	/* -0x40(sp) */ int result;
+	/* 0x0(sp) */ int result;
 }
 
 /* 001e2f60 00000014 */ int MemoryCardFileWriteReq(/* a0 4 */ int fd, /* a1 5 */ void *data_addr, /* a2 6 */ int size) {}
@@ -20136,18 +20555,18 @@
 /* 001e31d0 0000041c */ int motGetEneNeckRot(/* fp 30 */ float *trot_m[4], /* s0 16 */ ANI_CTRL *ani_ctrl, /* s3 19 */ SGDCOORDINATE *cp2, /* s4 20 */ float *e_rot) {
 	/* s7 23 */ SGDCOORDINATE *cp;
 	/* s6 22 */ NECK_CTRL_WORK *nw;
-	/* -0x1f0(sp) */ float p[4];
-	/* -0x1e0(sp) */ float d0[4];
-	/* -0x1d0(sp) */ float d1[4];
-	/* -0x1c0(sp) */ float d2[4];
-	/* -0x1b0(sp) */ float n[4];
-	/* -0x1a0(sp) */ float v0[4];
-	/* -0x190(sp) */ float v1[4];
-	/* -0x180(sp) */ float trot[4];
-	/* -0x170(sp) */ float inm[4][4];
-	/* -0x130(sp) */ float rotm[4][4];
-	/* -0xf0(sp) */ float tmpm[4][4];
-	/* -0xb0(sp) */ float lwm[4][4];
+	/* 0x0(sp) */ float p[4];
+	/* 0x10(sp) */ float d0[4];
+	/* 0x20(sp) */ float d1[4];
+	/* 0x30(sp) */ float d2[4];
+	/* 0x40(sp) */ float n[4];
+	/* 0x50(sp) */ float v0[4];
+	/* 0x60(sp) */ float v1[4];
+	/* 0x70(sp) */ float trot[4];
+	/* 0x80(sp) */ float inm[4][4];
+	/* 0xc0(sp) */ float rotm[4][4];
+	/* 0x100(sp) */ float tmpm[4][4];
+	/* 0x140(sp) */ float lwm[4][4];
 	/* f20 58 */ float scale;
 	/* v1 3 */ int m_no;
 	/* s5 21 */ u_short neck_id;
@@ -20173,15 +20592,15 @@
 	/* f0 38 */ float neck_offset;
 	/* f20 58 */ float lr_limit;
 	/* v1 3 */ HeaderSection *hs;
-	/* -0x20(sp) */ float rot[4];
+	/* 0x0(sp) */ float rot[4];
 	/* f20 58 */ float limit;
 }
 
 /* 001e3770 000000fc */ static void motAddRotOffsetZX(/* s2 18 */ SGDCOORDINATE *cp, /* f21 59 */ float roty, /* f22 60 */ float rotz, /* a1 5 */ float *lwm2[4]) {
 	/* f20 58 */ float scale;
-	/* -0x100(sp) */ float inm[4][4];
-	/* -0xc0(sp) */ float lwm[4][4];
-	/* -0x80(sp) */ float tmpm[4][4];
+	/* 0x0(sp) */ float inm[4][4];
+	/* 0x40(sp) */ float lwm[4][4];
+	/* 0x80(sp) */ float tmpm[4][4];
 }
 
 /* 001e3870 00000070 */ static float GetClampValAddOffsetF(/* f12 50 */ float val, /* f13 51 */ float target_val, /* f14 52 */ float spd_val) {}
@@ -20192,13 +20611,13 @@
 	/* f23 61 */ float rate;
 	/* f24 62 */ float work_flg;
 	/* f21 59 */ float lr_limit;
-	/* -0xb0(sp) */ float rot[4];
-	/* -0xa0(sp) */ float dmy[4];
+	/* 0x0(sp) */ float rot[4];
+	/* 0x10(sp) */ float dmy[4];
 	/* s7 23 */ HeaderSection *hs;
 	/* s2 18 */ SGDCOORDINATE *cp;
 	/* s5 21 */ int i;
-	/* -0x90(sp) */ int eyes[2];
-	/* -0x80(sp) */ float eye_limits[2][2];
+	/* 0x20(sp) */ int eyes[2];
+	/* 0x30(sp) */ float eye_limits[2][2];
 }
 
 /* 001e3d48 000001d4 */ void movGetMoveval(/* s0 16 */ float *spd, /* s4 20 */ float *old_spd, /* s3 19 */ ANI_CTRL *ani_ctrl, /* s2 18 */ u_int frame_num, /* f12 50 */ float frame_f) {
@@ -20208,11 +20627,11 @@
 }
 
 /* 001e3f20 00000188 */ static int motGetTargetRot(/* s3 19 */ float *rot, /* s1 17 */ SGDCOORDINATE *cp, /* s0 16 */ float *target, /* a3 7 */ int xyz) {
-	/* -0x90(sp) */ float v0[4];
-	/* -0x80(sp) */ float v1[4];
-	/* -0x70(sp) */ float d0[4];
-	/* -0x60(sp) */ float d1[4];
-	/* -0x50(sp) */ float n[4];
+	/* 0x0(sp) */ float v0[4];
+	/* 0x10(sp) */ float v1[4];
+	/* 0x20(sp) */ float d0[4];
+	/* 0x30(sp) */ float d1[4];
+	/* 0x40(sp) */ float n[4];
 	/* f0 38 */ float inner;
 }
 
@@ -20221,8 +20640,8 @@
 /* 001e40e0 00000090 */ static int GetPlyrSpd(/* s2 18 */ float *spd, /* a1 5 */ float *new_spd, /* s1 17 */ float *old_spd, /* a3 7 */ ANI_CTRL *ani_ctrl) {
 	/* f20 58 */ float cnt;
 	/* f0 38 */ float allcnt;
-	/* -0x50(sp) */ float inter_a[4];
-	/* -0x40(sp) */ float inter_b[4];
+	/* 0x0(sp) */ float inter_a[4];
+	/* 0x10(sp) */ float inter_b[4];
 }
 
 /* 001e4170 00000008 */ static u_int movGetFrameNum(/* a0 4 */ u_int *mov_p) {}
@@ -20263,7 +20682,7 @@
 /* 001e4410 0000016c */ void DrawGirlSubObj(/* s3 19 */ u_int *mpk_p, /* s7 23 */ u_char alpha) {
 	/* s1 17 */ u_int i;
 	/* s4 20 */ u_int obj_num;
-	/* -0x70(sp) */ float tmpvec[4];
+	/* 0x0(sp) */ float tmpvec[4];
 	/* s2 18 */ HeaderSection *hs;
 	/* s6 22 */ SGDCOORDINATE *cp;
 	/* s0 16 */ u_char alp;
@@ -20431,7 +20850,7 @@
 	/* s0 16 */ int i;
 }
 
-/* 00321618 00000054 */ PLYR_MEMO* PLYR_MEMO * _fixed_array_verifyrange<PLYR_MEMO>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ PLYR_MEMO* PLYR_MEMO * _fixed_array_verifyrange<PLYR_MEMO>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
 /* 001e5828 00000008 */ static void __static_initialization_and_destruction_0(/* a0 4 */ int __initialize_p, /* a1 5 */ int __priority) {}
 /* 00321618 0000003c */ type_info& PLYR_MEMO type_info function() {}
 /* 001e5830 00000020 */ static void global constructors keyed to PlyrMemoInit() {}
@@ -20472,34 +20891,34 @@
 /* 001e5f68 00000024 */ static void SetMenuCaptureData() {}
 
 /* 001e5f90 00000090 */ static void MenuCaptureDataDisp() {
-	/* -0xc0(sp) */ SPRT_DAT sd;
-	/* -0xa0(sp) */ DISP_SPRT ds;
+	/* 0x0(sp) */ SPRT_DAT sd;
+	/* 0x20(sp) */ DISP_SPRT ds;
 }
 
 /* 001e6020 000002c8 */ static void MenuBg_LeftShojiDisp(/* a0 4 */ int off_x, /* a1 5 */ int off_y, /* a2 6 */ u_char alpha) {
 	/* s0 16 */ int i;
-	/* -0xe0(sp) */ DISP_SPRT bg_ds;
+	/* 0x0(sp) */ DISP_SPRT bg_ds;
 	/* sdata 3f2af0 */ static int shoji_tbl[2];
 	/* f20 58 */ float shouji_off_x;
 	/* s2 18 */ u_char shouji_alpha;
 	/* rdata 3bc5b8 */ static POS_ANIM_TBL shouji_x_tbl[3];
 	/* rdata 3bc5e8 */ static ALPHA_ANIM_TBL shouji_alpha_tbl[3];
-	/* -0x50(sp) */ ALPHA_ANIM_TBL in_to_out_alpha_tbl[2];
+	/* 0x90(sp) */ ALPHA_ANIM_TBL in_to_out_alpha_tbl[2];
 }
 
 /* 001e62e8 000002e0 */ static void MenuBg_RightShojiDisp(/* a0 4 */ int off_x, /* a1 5 */ int off_y, /* a2 6 */ u_char alpha) {
 	/* s0 16 */ int i;
-	/* -0xe0(sp) */ DISP_SPRT bg_ds;
+	/* 0x0(sp) */ DISP_SPRT bg_ds;
 	/* sdata 3f2af8 */ static int shoji_tbl[2];
 	/* f20 58 */ float shouji_off_x;
 	/* s2 18 */ u_char shouji_alpha;
 	/* rdata 3bc610 */ static POS_ANIM_TBL shouji_x_tbl[3];
 	/* rdata 3bc640 */ static ALPHA_ANIM_TBL shouji_alpha_tbl[3];
-	/* -0x50(sp) */ ALPHA_ANIM_TBL in_to_out_alpha_tbl[2];
+	/* 0x90(sp) */ ALPHA_ANIM_TBL in_to_out_alpha_tbl[2];
 }
 
 /* 001e65c8 00000778 */ static void MenuBg_TourouDisp(/* a0 4 */ int off_x, /* a1 5 */ int off_y, /* a2 6 */ u_char alpha) {
-	/* -0x1a0(sp) */ DISP_SPRT bg_ds;
+	/* 0x0(sp) */ DISP_SPRT bg_ds;
 	/* s0 16 */ int i;
 	/* f21 59 */ float moyou1_x;
 	/* f20 58 */ float moyou2_x;
@@ -20508,8 +20927,8 @@
 	/* s3 19 */ u_char shdw_alpha;
 	/* s6 22 */ u_char flea_alpha;
 	/* s2 18 */ u_char bg_alpha;
-	/* -0x110(sp) */ SQAR_DAT bg_sqar;
-	/* -0xf0(sp) */ DISP_SQAR dsq;
+	/* 0x90(sp) */ SQAR_DAT bg_sqar;
+	/* 0xb0(sp) */ DISP_SQAR dsq;
 	/* rdata 3bc680 */ static POS_ANIM_TBL moyou1_x_tbl[2];
 	/* rdata 3bc6a0 */ static POS_ANIM_TBL moyou2_x_tbl[2];
 	/* rdata 3bc6c0 */ static ALPHA_ANIM_TBL moyou1_alpha_tbl[14];
@@ -20517,32 +20936,32 @@
 	/* rdata 3bc7b0 */ static ALPHA_ANIM_TBL shdw_alpha_tbl[10];
 	/* rdata 3bc800 */ static ALPHA_ANIM_TBL flea_alpha_tbl[18];
 	/* rdata 3bc890 */ static ALPHA_ANIM_TBL bg_alpha_tbl[3];
-	/* -0x70(sp) */ ALPHA_ANIM_TBL out_alpha_tbl[2];
+	/* 0x130(sp) */ ALPHA_ANIM_TBL out_alpha_tbl[2];
 }
 
 /* 001e6d40 000001d0 */ static void MenuBg_LeftShadowDisp(/* a0 4 */ int off_x, /* a1 5 */ int off_y, /* a2 6 */ u_char alpha) {
-	/* -0xd0(sp) */ DISP_SPRT bg_ds;
+	/* 0x0(sp) */ DISP_SPRT bg_ds;
 	/* f20 58 */ float shadow_off_x;
 	/* s1 17 */ u_char shadow_alpha;
 	/* rdata 3bc8b8 */ static POS_ANIM_TBL shadow_x_tbl[3];
 	/* rdata 3bc8e8 */ static ALPHA_ANIM_TBL shadow_alpha_tbl[3];
-	/* -0x40(sp) */ ALPHA_ANIM_TBL in_to_out_alpha_tbl[2];
+	/* 0x90(sp) */ ALPHA_ANIM_TBL in_to_out_alpha_tbl[2];
 }
 
 /* 001e6f10 000001d4 */ static void MenuBg_RightShadowDisp(/* a0 4 */ int off_x, /* a1 5 */ int off_y, /* a2 6 */ u_char alpha) {
-	/* -0xd0(sp) */ DISP_SPRT bg_ds;
+	/* 0x0(sp) */ DISP_SPRT bg_ds;
 	/* f20 58 */ float shadow_off_x;
 	/* s1 17 */ u_char shadow_alpha;
 	/* rdata 3bc910 */ static POS_ANIM_TBL shadow_x_tbl[3];
 	/* rdata 3bc940 */ static ALPHA_ANIM_TBL shadow_alpha_tbl[3];
-	/* -0x40(sp) */ ALPHA_ANIM_TBL in_to_out_alpha_tbl[2];
+	/* 0x90(sp) */ ALPHA_ANIM_TBL in_to_out_alpha_tbl[2];
 }
 
 /* 001e70e8 0000016c */ static void MenuBg_WallDisp(/* a0 4 */ int off_x, /* a1 5 */ int off_y, /* a2 6 */ u_char alpha) {
-	/* -0xd0(sp) */ DISP_SPRT bg_ds;
+	/* 0x0(sp) */ DISP_SPRT bg_ds;
 	/* s1 17 */ u_char wall_alpha;
 	/* rdata 3bc968 */ static ALPHA_ANIM_TBL wall_alpha_tbl[3];
-	/* -0x40(sp) */ ALPHA_ANIM_TBL in_to_out_alpha_tbl[2];
+	/* 0x90(sp) */ ALPHA_ANIM_TBL in_to_out_alpha_tbl[2];
 }
 
 /* 001e7258 0000002c */ void MapViewInit() {}
@@ -20595,7 +21014,7 @@
 	/* s2 18 */ int i;
 	/* s1 17 */ int disp_num;
 	/* s4 20 */ int data_pos_back_up;
-	/* -0x50(sp) */ fixed_array<char,3> equip_special;
+	/* 0x0(sp) */ fixed_array<char,3> equip_special;
 }
 
 /* 001e7ee0 00000390 */ static void MenuCamEditItemSelPad() {
@@ -20674,11 +21093,11 @@
 /* 001e92b8 000000b0 */ static void MenuCamEditLensNothingErrorDisp(/* s1 17 */ int off_x, /* s2 18 */ int off_y, /* a2 6 */ u_char alpha) {}
 
 /* 001e9368 0000018c */ static void MenuCamEditSelLensEquipPosDisp(/* s3 19 */ int off_x, /* s2 18 */ int off_y, /* s1 17 */ u_char alpha) {
-	/* -0x50(sp) */ u_char rgb;
+	/* 0x0(sp) */ u_char rgb;
 	/* s0 16 */ int i;
 }
 
-/* 001e94f8 00000340 */ static void MenuCamEditSelEquipLensDisp(/* -0x70(sp) */ int off_x, /* -0x6c(sp) */ int off_y, /* s3 19 */ u_char alpha) {
+/* 001e94f8 00000340 */ static void MenuCamEditSelEquipLensDisp(/* 0x0(sp) */ int off_x, /* 0x4(sp) */ int off_y, /* s3 19 */ u_char alpha) {
 	/* s2 18 */ int i;
 	/* s4 20 */ int disp_num;
 	/* s0 16 */ int lens_label;
@@ -20706,15 +21125,15 @@
 
 /* 001ea460 000000d8 */ static void MenuCamEditTitleFrameDisp(/* a0 4 */ int off_x, /* a1 5 */ int off_y, /* s2 18 */ u_char alpha) {
 	/* s0 16 */ int i;
-	/* -0xd0(sp) */ DISP_SPRT title_ds;
+	/* 0x0(sp) */ DISP_SPRT title_ds;
 }
 
 /* 001ea538 00000088 */ static void MenuCamEditTitleDisp(/* s0 16 */ int off_x, /* s1 17 */ int off_y, /* a2 6 */ u_char alpha) {
-	/* -0xb0(sp) */ DISP_SPRT title_ds;
+	/* 0x0(sp) */ DISP_SPRT title_ds;
 }
 
 /* 001ea5c0 00000088 */ static void MenuCamEditBgDisp(/* s0 16 */ int off_x, /* s1 17 */ int off_y, /* a2 6 */ u_char alpha) {
-	/* -0xb0(sp) */ DISP_SPRT bg_ds;
+	/* 0x0(sp) */ DISP_SPRT bg_ds;
 }
 
 /* 001ea648 000000d0 */ static void MenuCamEditMenuFrameDisp(/* a0 4 */ int off_x, /* a1 5 */ int off_y, /* s1 17 */ u_char alpha) {
@@ -20722,14 +21141,14 @@
 }
 
 /* 001ea718 00000164 */ static void MenuCamEditSelFrameDisp(/* f20 58 */ float x, /* f22 60 */ float y, /* f14 52 */ float w, /* a0 4 */ u_char alpha, /* s2 18 */ u_int pri) {
-	/* -0xe0(sp) */ DISP_SPRT frame_ds;
+	/* 0x0(sp) */ DISP_SPRT frame_ds;
 	/* f21 59 */ float one_size;
 	/* f23 61 */ float frame_scl_l;
 	/* f21 59 */ float frame_scl_r;
 }
 
 /* 001ea880 00000164 */ static void MenuCamEditNonSelFrameDisp(/* f20 58 */ float x, /* f22 60 */ float y, /* f14 52 */ float w, /* a0 4 */ u_char alpha, /* s2 18 */ u_int pri) {
-	/* -0xe0(sp) */ DISP_SPRT frame_ds;
+	/* 0x0(sp) */ DISP_SPRT frame_ds;
 	/* f21 59 */ float one_size;
 	/* f23 61 */ float frame_scl_l;
 	/* f21 59 */ float frame_scl_r;
@@ -20737,41 +21156,41 @@
 
 /* 001ea9e8 000000e8 */ static void MenuCamEditMenuItemDisp(/* a0 4 */ int off_x, /* a1 5 */ int off_y, /* s3 19 */ u_char alpha) {
 	/* s0 16 */ int i;
-	/* -0xd0(sp) */ DISP_SPRT item_ds;
+	/* 0x0(sp) */ DISP_SPRT item_ds;
 }
 
 /* 001eaad0 0000020c */ static void MenuCamEditWinDisp(/* s4 20 */ int off_x, /* s5 21 */ int off_y, /* s2 18 */ u_char alpha) {
 	/* s0 16 */ int i;
-	/* -0xe0(sp) */ DISP_SPRT bg_ds;
+	/* 0x0(sp) */ DISP_SPRT bg_ds;
 }
 
 /* 001eace0 000000ec */ static void MenuCamEditBaseDisp(/* s2 18 */ int off_x, /* s3 19 */ int off_y, /* a2 6 */ u_char alpha) {
-	/* -0xc0(sp) */ DISP_SPRT base_ds;
+	/* 0x0(sp) */ DISP_SPRT base_ds;
 	/* sbss 3f4db0 */ static reference_fixed_array<int,12> base_tex_tbl;
 }
 
 /* 001eadd0 00000088 */ static void MenuCamEditReinforcedLensDisp(/* s0 16 */ int off_x, /* s1 17 */ int off_y, /* a2 6 */ u_char alpha) {
-	/* -0xb0(sp) */ DISP_SPRT assist_ds;
+	/* 0x0(sp) */ DISP_SPRT assist_ds;
 }
 
 /* 001eae58 00000088 */ static void MenuCamEditEquipDisp(/* s0 16 */ int off_x, /* s1 17 */ int off_y, /* a2 6 */ u_char alpha) {
-	/* -0xb0(sp) */ DISP_SPRT equip_ds;
+	/* 0x0(sp) */ DISP_SPRT equip_ds;
 }
 
 /* 001eaee0 0000011c */ static void MenuCamEditEquipReinforcedLensDisp(/* a0 4 */ int off_x, /* a1 5 */ int off_y, /* s2 18 */ u_char alpha) {
 	/* s1 17 */ int i;
-	/* -0x40(sp) */ fixed_array<char,3> equip_special;
+	/* 0x0(sp) */ fixed_array<char,3> equip_special;
 }
 
 /* 001eb000 000001e0 */ static void MenuCamEditEquipLensLvDisp(/* a0 4 */ int off_x, /* a1 5 */ int off_y, /* s3 19 */ u_char alpha) {
 	/* s1 17 */ int i;
-	/* -0xf0(sp) */ fixed_array<char,3> equip_special;
-	/* -0xe0(sp) */ DISP_SPRT lv_ds;
+	/* 0x0(sp) */ fixed_array<char,3> equip_special;
+	/* 0x10(sp) */ DISP_SPRT lv_ds;
 }
 
 /* 001eb1e0 00000108 */ static void MenuCamEditHaveStatusDisp(/* a0 4 */ int off_x, /* a1 5 */ int off_y, /* s2 18 */ u_char alpha) {
 	/* s0 16 */ int i;
-	/* -0xc0(sp) */ DISP_SPRT status_ds;
+	/* 0x0(sp) */ DISP_SPRT status_ds;
 }
 
 /* 001eb2e8 00000070 */ static void MenuCamEditBaseFrameBgDisp(/* a0 4 */ int off_x, /* a1 5 */ int off_y, /* s1 17 */ u_char alpha) {
@@ -20784,12 +21203,12 @@
 
 /* 001eb3c8 00000188 */ static void MenuCamEditBaseFrameDisp(/* a0 4 */ int off_x, /* a1 5 */ int off_y, /* s1 17 */ u_char alpha) {
 	/* s0 16 */ int i;
-	/* -0xc0(sp) */ DISP_SPRT frame_ds;
+	/* 0x0(sp) */ DISP_SPRT frame_ds;
 }
 
 /* 001eb550 000000b0 */ static void MenuCamEditBaseItemDisp(/* a0 4 */ int off_x, /* a1 5 */ int off_y, /* s2 18 */ u_char alpha) {
 	/* s0 16 */ int i;
-	/* -0xc0(sp) */ DISP_SPRT item_ds;
+	/* 0x0(sp) */ DISP_SPRT item_ds;
 }
 
 /* 001eb600 0000006c */ static void MenuCamEditBaseLvDisp(/* a0 4 */ int off_x, /* a1 5 */ int off_y, /* a2 6 */ u_char alpha) {}
@@ -20802,7 +21221,7 @@
 /* 001eba68 000001f8 */ static void MenuCamEditLensFrameDisp(/* s7 23 */ int off_x, /* s6 22 */ int off_y, /* s3 19 */ u_char alpha) {
 	/* s2 18 */ int i;
 	/* s0 16 */ int j;
-	/* -0xf0(sp) */ DISP_SPRT frame_ds;
+	/* 0x0(sp) */ DISP_SPRT frame_ds;
 	/* rdata 3bcc38 */ static int frame_tex_tbl[3][2];
 }
 
@@ -20812,7 +21231,7 @@
 }
 
 /* 001ebd40 000000f8 */ static void MenuCamEditLensNameDisp(/* f20 58 */ float x, /* f21 59 */ float y, /* a0 4 */ u_char alpha, /* s0 16 */ int lens_label) {
-	/* -0xd0(sp) */ DISP_SPRT lens_ds;
+	/* 0x0(sp) */ DISP_SPRT lens_ds;
 	/* sbss 3f4db8 */ static reference_fixed_array<int,10> lens_name_tbl;
 }
 
@@ -20838,19 +21257,19 @@
 
 /* 001ec368 000000b8 */ static void MenuCamEditSelEquipLensPosFrameDisp(/* f21 59 */ float x, /* f20 58 */ float y, /* s2 18 */ u_char alpha) {
 	/* s0 16 */ int i;
-	/* -0xd0(sp) */ DISP_SPRT frame_ds;
+	/* 0x0(sp) */ DISP_SPRT frame_ds;
 }
 
 /* 001ec420 000000e4 */ static void MenuCamEditEquipLensPosCsrDisp(/* f20 58 */ float x, /* f21 59 */ float y, /* a0 4 */ u_char alpha, /* a1 5 */ u_char rgb) {
-	/* -0xd0(sp) */ DISP_SPRT csr_ds;
+	/* 0x0(sp) */ DISP_SPRT csr_ds;
 }
 
 /* 001ec508 00000084 */ static void MenuCamEditGemDisp(/* f20 58 */ float x, /* f21 59 */ float y, /* s0 16 */ u_char alpha, /* a1 5 */ u_char flg) {
-	/* -0xb0(sp) */ DISP_SPRT gem_ds;
+	/* 0x0(sp) */ DISP_SPRT gem_ds;
 }
 
 /* 001ec590 0000030c */ static void MenuCamEditGemAnimDisp(/* f21 59 */ float x, /* f22 60 */ float y, /* s3 19 */ u_char alpha, /* a1 5 */ short int timer) {
-	/* -0xe0(sp) */ DISP_SPRT gem_ds;
+	/* 0x0(sp) */ DISP_SPRT gem_ds;
 	/* rdata 3bccb0 */ static ALPHA_ANIM_TBL top_gem_anim_tbl[4];
 	/* rdata 3bccd0 */ static ALPHA_ANIM_TBL blue_flare_alpha_anim_tbl[5];
 	/* rdata 3bccf8 */ static SCL_ANIM_TBL blue_flare_scl_anim_tbl[4];
@@ -20862,57 +21281,57 @@
 }
 
 /* 001ec8a0 000000a0 */ static void MenuCamEditLvDisp(/* f20 58 */ float y, /* a0 4 */ u_char alpha, /* s1 17 */ int lv) {
-	/* -0xc0(sp) */ DISP_SPRT lv_ds;
+	/* 0x0(sp) */ DISP_SPRT lv_ds;
 }
 
 /* 001ec940 000000f0 */ static void MenuCamEditNextPointDisp(/* a2 6 */ int x, /* s2 18 */ int y, /* s3 19 */ u_char alpha, /* s0 16 */ int col_label, /* t0 8 */ int next) {
-	/* -0xc0(sp) */ DISP_SPRT pts_ds;
+	/* 0x10(sp) */ DISP_SPRT pts_ds;
 }
 
 /* 001eca30 000000f8 */ static void MenuCamEditSelFrameBgDisp(/* s0 16 */ int y, /* a1 5 */ u_char alpha) {
-	/* -0xc0(sp) */ DISP_SQAR dsq;
-	/* -0x40(sp) */ SQAR_DAT sel_bg;
+	/* 0x0(sp) */ DISP_SQAR dsq;
+	/* 0x80(sp) */ SQAR_DAT sel_bg;
 }
 
 /* 001ecb28 000000f8 */ static void MenuCamEditFrameBlackBgDisp(/* s0 16 */ int y, /* a1 5 */ u_char alpha) {
-	/* -0xc0(sp) */ DISP_SQAR dsq;
-	/* -0x40(sp) */ SQAR_DAT non_sel_bg;
+	/* 0x0(sp) */ DISP_SQAR dsq;
+	/* 0x80(sp) */ SQAR_DAT non_sel_bg;
 }
 
 /* 001ecc20 00000098 */ static void MenuCamEditFrameBgDisp(/* f20 58 */ float y, /* s2 18 */ u_char alpha) {
 	/* s0 16 */ int i;
-	/* -0xc0(sp) */ DISP_SPRT bg_ds;
+	/* 0x0(sp) */ DISP_SPRT bg_ds;
 }
 
 /* 001eccb8 000001c4 */ static void MenuCamEditSelCsrDisp(/* f12 50 */ float x, /* f24 62 */ float y, /* s1 17 */ u_char alpha) {
 	/* s0 16 */ int i;
 	/* f20 58 */ float pos_x;
-	/* -0xe0(sp) */ DISP_SPRT csr_ds;
+	/* 0x0(sp) */ DISP_SPRT csr_ds;
 }
 
 /* 001ece80 000005f4 */ static void MenuCamEditScrollDisp(/* s0 16 */ int off_x, /* s1 17 */ int off_y, /* s2 18 */ u_char alpha) {
 	/* s1 17 */ int i;
-	/* -0x100(sp) */ DISP_SPRT scroll_ds;
+	/* 0x0(sp) */ DISP_SPRT scroll_ds;
 	/* f25 63 */ float scroll_size;
 	/* f23 61 */ float scroll_y;
 	/* f24 62 */ float center_size;
 	/* f20 58 */ float scroll_scl;
-	/* -0x70(sp) */ u_char rgb;
+	/* 0x90(sp) */ u_char rgb;
 }
 
 /* 001ed478 0000004c */ static void MenuCamEditMsgWindowDisp(/* a0 4 */ int off_x, /* a1 5 */ int off_y, /* a2 6 */ u_char alpha) {}
 /* 001ed4c8 000000c4 */ static void MenuCamEditConfYesNoDisp(/* s1 17 */ int off_x, /* s0 16 */ int off_y, /* a2 6 */ u_char alpha) {}
 /* 001ed590 00000028 */ static void MenuCamEditCaptionDisp(/* a0 4 */ int off_x, /* a1 5 */ int off_y, /* a2 6 */ u_char alpha) {}
-/* 00321670 00000054 */ DISP_LENS_DATA* DISP_LENS_DATA * _fixed_array_verifyrange<DISP_LENS_DATA>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
-/* 00321670 00000054 */ char* char * _fixed_array_verifyrange<char>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
-/* 00321670 00000054 */ CVariable<char,0,3>* CVariable<char, 0, 3> * _fixed_array_verifyrange<CVariable<char, 0, 3> >(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
-/* 00321670 00000054 */ int* int * _fixed_array_verifyrange<int>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ DISP_LENS_DATA* DISP_LENS_DATA * _fixed_array_verifyrange<DISP_LENS_DATA>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ char* char * _fixed_array_verifyrange<char>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ CVariable<char,0,3>* CVariable<char, 0, 3> * _fixed_array_verifyrange<CVariable<char, 0, 3> >(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ int* int * _fixed_array_verifyrange<int>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
 
 /* 001ed5b8 00000034 */ static void __static_initialization_and_destruction_0(/* a0 4 */ int __initialize_p, /* a1 5 */ int __priority) {
 	/* v0 2 */ int *ra;
 }
 
-/* 00321670 0000003c */ type_info& DISP_LENS_DATA type_info function() {}
+/* ffffffff 0000003c */ type_info& DISP_LENS_DATA type_info function() {}
 /* 00321670 0000003c */ type_info& CVariable<char, 0, 3> type_info function() {}
 /* 001ed5f0 00000020 */ static void global constructors keyed to MenuCamEditInit() {}
 
@@ -20976,7 +21395,7 @@
 /* 001edd50 00000078 */ int GetEquipReinforcedLensNum() {
 	/* s0 16 */ int i;
 	/* s1 17 */ int equip_num;
-	/* -0x30(sp) */ fixed_array<char,3> equip_special;
+	/* 0x0(sp) */ fixed_array<char,3> equip_special;
 }
 
 /* 001eddc8 0000005c */ void MenuCamMainMemFree() {}
@@ -20985,39 +21404,39 @@
 /* 001edec8 00000048 */ void MenuCamMainDisp() {}
 
 /* 001edf10 00000128 */ void MenuCamCmnReinforcedLensDisp(/* f20 58 */ float x, /* f21 59 */ float y, /* a0 4 */ u_char alpha, /* s0 16 */ int lens_label) {
-	/* -0xd0(sp) */ DISP_SPRT lens_ds;
+	/* 0x0(sp) */ DISP_SPRT lens_ds;
 	/* sbss 3f4de8 */ static reference_fixed_array<int,10> lens_tbl;
 }
 
-/* 001ee038 000001d4 */ void MenuCamNumberDisp(/* s3 19 */ int data, /* s1 17 */ int num, /* s4 20 */ int x, /* -0x60(sp) */ int y, /* -0x5c(sp) */ u_char alpha, /* -0x58(sp) */ int pri, /* s6 22 */ u_char type, /* fp 30 */ u_char zero_flg) {
+/* 001ee038 000001d4 */ void MenuCamNumberDisp(/* s3 19 */ int data, /* s1 17 */ int num, /* s4 20 */ int x, /* 0x0(sp) */ int y, /* 0x4(sp) */ u_char alpha, /* 0x8(sp) */ int pri, /* s6 22 */ u_char type, /* fp 30 */ u_char zero_flg) {
 	/* rdata 3bcf70 */ static char __FUNCTION__[18];
 	/* a1 5 */ int i;
 	/* v1 3 */ int j;
 	/* v0 2 */ int count;
 	/* a0 4 */ int tmp;
 	/* s0 16 */ int ten_tmp;
-	/* -0x54(sp) */ int off_x;
+	/* 0xc(sp) */ int off_x;
 	/* s2 18 */ u_char set_flg;
 }
 
 /* 001ee210 0000018c */ static void MenuCamNumberDisp_One(/* s1 17 */ int data, /* s3 19 */ int x, /* s4 20 */ int y, /* s5 21 */ u_char alpha, /* s2 18 */ int pri, /* s0 16 */ u_char type) {
 	/* rdata 3bcfb0 */ static char __FUNCTION__[22];
-	/* -0xd0(sp) */ DISP_SPRT num_ds;
+	/* 0x0(sp) */ DISP_SPRT num_ds;
 }
 
 /* 001ee3a0 000000f8 */ void MenuCamCmnAdditionalFunctionDisp(/* f20 58 */ float x, /* f21 59 */ float y, /* a0 4 */ u_char alpha, /* s0 16 */ int add_label) {
-	/* -0xd0(sp) */ DISP_SPRT add_ds;
+	/* 0x0(sp) */ DISP_SPRT add_ds;
 	/* sbss 3f4df0 */ static reference_fixed_array<int,4> add_tbl;
 }
 
 /* 001ee498 000001a0 */ void MenuCamCmnEquipFunctionDisp(/* f20 58 */ float x, /* f21 59 */ float y, /* s4 20 */ u_char alpha, /* s0 16 */ int parts_label, /* a2 6 */ u_char flg) {
-	/* -0xd0(sp) */ DISP_SPRT parts_ds;
+	/* 0x0(sp) */ DISP_SPRT parts_ds;
 	/* sbss 3f4df8 */ static reference_fixed_array<int,4> parts_tbl;
 	/* sbss 3f4e00 */ static reference_fixed_array<int,4> non_parts_tbl;
 }
 
-/* 003216d0 00000054 */ char* char * _fixed_array_verifyrange<char>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
-/* 003216d0 00000054 */ int* int * _fixed_array_verifyrange<int>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ char* char * _fixed_array_verifyrange<char>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ int* int * _fixed_array_verifyrange<int>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/ingame/menu/menu_cam_top.c
@@ -21070,7 +21489,7 @@
 
 /* 001ef328 00000484 */ static void MenuCamTopEquipFuncSelPad() {
 	/* s3 19 */ int i;
-	/* -0x60(sp) */ fixed_array<char,3> equip_special;
+	/* 0x0(sp) */ fixed_array<char,3> equip_special;
 	/* s0 16 */ int no;
 	/* s1 17 */ int idx;
 	/* s2 18 */ int bit;
@@ -21113,61 +21532,61 @@
 
 /* 001efc00 000000d8 */ static void MenuCamTopTitleFrameDisp(/* a0 4 */ int off_x, /* a1 5 */ int off_y, /* s2 18 */ u_char alpha) {
 	/* s0 16 */ int i;
-	/* -0xd0(sp) */ DISP_SPRT title_ds;
+	/* 0x0(sp) */ DISP_SPRT title_ds;
 }
 
 /* 001efcd8 000000b0 */ static void MenuCamTopTitleDisp(/* a0 4 */ int off_x, /* a1 5 */ int off_y, /* s2 18 */ u_char alpha) {
 	/* s0 16 */ int i;
-	/* -0xc0(sp) */ DISP_SPRT title_ds;
+	/* 0x0(sp) */ DISP_SPRT title_ds;
 }
 
 /* 001efd88 0000018c */ static void MenuCamTopBaseDisp(/* s1 17 */ int off_x, /* s2 18 */ int off_y, /* s3 19 */ u_char alpha) {
 	/* s1 17 */ int i;
-	/* -0xd0(sp) */ DISP_SPRT base_ds;
+	/* 0x0(sp) */ DISP_SPRT base_ds;
 }
 
 /* 001eff18 0000036c */ static void MenuCamTopCsrBaseDisp(/* s3 19 */ int off_x, /* s4 20 */ int off_y, /* s2 18 */ u_char alpha) {
 	/* s0 16 */ int i;
 	/* s1 17 */ int disp_data;
-	/* -0x1b0(sp) */ DISP_SPRT base_ds;
+	/* 0x0(sp) */ DISP_SPRT base_ds;
 	/* rdata 3bd228 */ static int base_tex_tbl[4][2];
-	/* -0x120(sp) */ SQAR_DAT sqar_dat[4];
-	/* -0xc0(sp) */ DISP_SQAR dsq;
+	/* 0x90(sp) */ SQAR_DAT sqar_dat[4];
+	/* 0xf0(sp) */ DISP_SQAR dsq;
 	/* a1 5 */ int i;
 }
 
 /* 001f0288 000000b0 */ static void MenuCamTopItemDisp(/* a0 4 */ int off_x, /* a1 5 */ int off_y, /* s2 18 */ u_char alpha) {
 	/* s0 16 */ int i;
-	/* -0xc0(sp) */ DISP_SPRT item_ds;
+	/* 0x0(sp) */ DISP_SPRT item_ds;
 }
 
 /* 001f0338 00000298 */ static void MenuCamTopBasicPerformaneItemDisp(/* a0 4 */ int off_x, /* s4 20 */ int off_y, /* s2 18 */ u_char alpha) {
 	/* s0 16 */ int i;
-	/* -0xe0(sp) */ DISP_SPRT basic_ds;
+	/* 0x0(sp) */ DISP_SPRT basic_ds;
 }
 
 /* 001f05d0 00000110 */ static void MenuCamTopCsrLineDisp(/* t0 8 */ int off_x, /* a1 5 */ int off_y, /* s3 19 */ u_char alpha) {
 	/* s0 16 */ int i;
 	/* v1 3 */ int disp_data;
-	/* -0xd0(sp) */ DISP_SPRT line_ds;
+	/* 0x0(sp) */ DISP_SPRT line_ds;
 	/* rdata 3bd2a8 */ static int line_tex_tbl[4][2];
 }
 
 /* 001f06e0 00000284 */ static void MenuCamTopEquipReinforcedLensDisp(/* s6 22 */ int off_x, /* s4 20 */ int off_y, /* s2 18 */ u_char alpha) {
 	/* s1 17 */ int i;
-	/* -0xf0(sp) */ fixed_array<char,3> equip_special;
-	/* -0xe0(sp) */ DISP_SPRT ds;
+	/* 0x0(sp) */ fixed_array<char,3> equip_special;
+	/* 0x10(sp) */ DISP_SPRT ds;
 }
 
 /* 001f0968 000000dc */ static void MenuCamTopReinforcedLensLvNumDisp(/* s4 20 */ int x, /* s2 18 */ int y, /* a2 6 */ u_char alpha, /* s0 16 */ int lv) {
-	/* -0xd0(sp) */ DISP_SPRT lv_ds;
+	/* 0x0(sp) */ DISP_SPRT lv_ds;
 }
 
 /* 001f0a48 00000048 */ static void MenuCamTopLevelGemNumDisp(/* a0 4 */ int off_x, /* a1 5 */ int off_y, /* a2 6 */ u_char alpha) {}
 /* 001f0a90 00000048 */ static void MenuCamTopGhostPowerDisp(/* a0 4 */ int off_x, /* a1 5 */ int off_y, /* a2 6 */ u_char alpha) {}
 
 /* 001f0ad8 000002c0 */ static void MenuCamTopEquipFilmDisp(/* s2 18 */ int off_x, /* s3 19 */ int off_y, /* s1 17 */ u_char alpha) {
-	/* -0xd0(sp) */ DISP_SPRT film_ds;
+	/* 0x0(sp) */ DISP_SPRT film_ds;
 	/* a1 5 */ int i;
 	/* s0 16 */ int equip_film;
 	/* s4 20 */ int equip_film_num;
@@ -21180,7 +21599,7 @@
 }
 
 /* 001f0ee8 00000140 */ static void MenuCamTopAddFuncLineDisp(/* f20 58 */ float x, /* f21 59 */ float y, /* s0 16 */ u_char alpha, /* a1 5 */ u_char flg) {
-	/* -0xb0(sp) */ DISP_SPRT add_ds;
+	/* 0x0(sp) */ DISP_SPRT add_ds;
 }
 
 /* 001f1028 000001ac */ static void MenuCamTopPlyrHaveEquipFuncDisp(/* a0 4 */ int off_x, /* a1 5 */ int off_y, /* s5 21 */ u_char alpha) {
@@ -21190,14 +21609,14 @@
 }
 
 /* 001f11d8 000000b8 */ static void MenuCamTopEquipFuncLineDisp(/* f20 58 */ float x, /* f21 59 */ float y, /* s0 16 */ u_char alpha) {
-	/* -0xb0(sp) */ DISP_SPRT add_ds;
+	/* 0x0(sp) */ DISP_SPRT add_ds;
 }
 
 /* 001f1290 0000004c */ static void MenuCamTopMsgWindowDisp(/* a0 4 */ int off_x, /* a1 5 */ int off_y, /* a2 6 */ u_char alpha) {}
 /* 001f12e0 00000028 */ static void MenuCamTopCaptionDisp(/* a0 4 */ int off_x, /* a1 5 */ int off_y, /* a2 6 */ u_char alpha) {}
 
 /* 001f1308 000002c0 */ static void MenuCamTopEquipFilmSelDisp(/* s2 18 */ int off_x, /* s3 19 */ int off_y, /* s1 17 */ u_char alpha) {
-	/* -0xd0(sp) */ DISP_SPRT film_ds;
+	/* 0x0(sp) */ DISP_SPRT film_ds;
 	/* a1 5 */ int i;
 	/* s0 16 */ int equip_film;
 	/* s4 20 */ int equip_film_num;
@@ -21205,23 +21624,24 @@
 
 /* 001f15c8 000000dc */ static void MenuCamTopFilmSelCsrDisp(/* v0 2 */ int off_x, /* v1 3 */ int off_y, /* s3 19 */ u_char alpha) {
 	/* s1 17 */ int i;
-	/* -0xe0(sp) */ u_char rgb;
-	/* -0xd0(sp) */ DISP_SPRT csr_ds;
+	/* 0x0(sp) */ u_char rgb;
+	/* 0x10(sp) */ DISP_SPRT csr_ds;
 }
 
 /* 001f16a8 0000017c */ static void MenuCamTopAddFuncSelCsrDisp(/* v0 2 */ int off_x, /* v1 3 */ int off_y, /* s2 18 */ u_char alpha) {
 	/* s0 16 */ int i;
-	/* -0xe0(sp) */ DISP_SPRT csr_ds;
-	/* -0x50(sp) */ u_char rgb;
+	/* 0x0(sp) */ DISP_SPRT csr_ds;
+	/* 0x90(sp) */ u_char rgb;
 }
 
 /* 001f1828 0000017c */ static void MenuCamTopEquipFuncSelCsrDisp(/* v0 2 */ int off_x, /* v1 3 */ int off_y, /* s2 18 */ u_char alpha) {
 	/* s0 16 */ int i;
-	/* -0xe0(sp) */ DISP_SPRT csr_ds;
-	/* -0x50(sp) */ u_char rgb;
+	/* 0x0(sp) */ DISP_SPRT csr_ds;
+	/* 0x90(sp) */ u_char rgb;
 }
 
-/* 003216d0 00000054 */ CVariable<char,0,3>* CVariable<char, 0, 3> * _fixed_array_verifyrange<CVariable<char, 0, 3> >(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ char* char * _fixed_array_verifyrange<char>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ CVariable<char,0,3>* CVariable<char, 0, 3> * _fixed_array_verifyrange<CVariable<char, 0, 3> >(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
 /* 003216d0 0000003c */ type_info& CVariable<char, 0, 3> type_info function() {}
 
 // *****************************************************************************
@@ -21295,12 +21715,15 @@
 }
 
 /* 001f2400 000001cc */ void GetMenuCrossFadeAlpha(/* a0 4 */ u_char *fade_alpha) {
+	/* rdata 3bd4e0 */ static char __FUNCTION__[22];
 	/* s4 20 */ int i;
 	/* rdata 3bd4f8 */ static ALPHA_ANIM_TBL cross_fade_in[2];
 	/* rdata 3bd508 */ static ALPHA_ANIM_TBL cross_fade_out[2];
 }
 
-/* 001f25d0 00000070 */ void* GetCrossFadeDataAddr(/* s0 16 */ int buff_label) {}
+/* 001f25d0 00000070 */ void* GetCrossFadeDataAddr(/* s0 16 */ int buff_label) {
+	/* rdata 3bd538 */ static char __FUNCTION__[21];
+}
 
 /* 001f2640 000000a4 */ int CheckCrossFadeDisp(/* s0 16 */ int buff_label) {
 	/* rdata 3bd580 */ static char __FUNCTION__[19];
@@ -21342,11 +21765,11 @@
 /* 001f2ad0 00000034 */ static unsigned int** unsigned int * * _fixed_array_verifyrange<unsigned int *>(/* a0 4 */ size_t v, /* a1 5 */ size_t _max) {}
 
 /* 001f2b08 0000028c */ void MenuPlyrDataDisp(/* s3 19 */ int x, /* s1 17 */ int y, /* s2 18 */ u_char alpha) {
-	/* -0xd0(sp) */ DISP_SPRT plyr_ds;
+	/* 0x0(sp) */ DISP_SPRT plyr_ds;
 }
 
 /* 001f2d98 00000204 */ static void MenuPlyrHPDisp(/* a0 4 */ int x, /* a1 5 */ int y, /* s4 20 */ u_char alpha) {
-	/* -0xe0(sp) */ DISP_SPRT plyr_ds;
+	/* 0x0(sp) */ DISP_SPRT plyr_ds;
 	/* s2 18 */ int i;
 	/* rdata 3bd6f0 */ static int hp_tex_tbl[4];
 	/* a3 7 */ int hp_all_w;
@@ -21355,16 +21778,16 @@
 
 /* 001f2fa0 000001d4 */ static void MenuCmnPlyrEquipReinforcedLensDisp(/* s3 19 */ int x, /* s7 23 */ int y, /* s2 18 */ u_char alpha) {
 	/* s5 21 */ int i;
-	/* -0x60(sp) */ char equip_special[3];
+	/* 0x0(sp) */ char equip_special[3];
 }
 
 /* 001f3178 000000f0 */ static void MenuCmnReinforcedLensDisp(/* s2 18 */ int x, /* s3 19 */ int y, /* a2 6 */ u_char alpha, /* s0 16 */ int lens_label) {
-	/* -0xc0(sp) */ DISP_SPRT lens_ds;
+	/* 0x0(sp) */ DISP_SPRT lens_ds;
 	/* rdata 3bd700 */ static int lens_tbl[10];
 }
 
 /* 001f3268 000001dc */ static void MenuFilmDisp(/* s4 20 */ int x, /* s1 17 */ int y, /* s3 19 */ u_char alpha) {
-	/* -0xe0(sp) */ DISP_SPRT film_ds;
+	/* 0x0(sp) */ DISP_SPRT film_ds;
 	/* rdata 3bd728 */ static int film_tex[5];
 	/* rdata 3bd740 */ static int film_num_tex[5];
 }
@@ -21372,40 +21795,40 @@
 /* 001f3448 00000040 */ void MenuNumberDisp(/* a0 4 */ int data, /* a1 5 */ int num, /* v0 2 */ int x, /* t4 12 */ int y, /* t0 8 */ u_char alpha, /* t1 9 */ int pri, /* t2 10 */ u_char zero_flg) {}
 
 /* 001f3488 000000a8 */ static void MenuCmnHyphenDisp(/* s1 17 */ int x, /* s0 16 */ int y, /* a2 6 */ u_char alpha, /* s3 19 */ u_int pri) {
-	/* -0xc0(sp) */ DISP_SPRT hyphen_ds;
+	/* 0x0(sp) */ DISP_SPRT hyphen_ds;
 }
 
 /* 001f3530 0000004c */ void MenuCmnConfirmWinDisp(/* a0 4 */ int off_x, /* a1 5 */ int off_y, /* a2 6 */ u_char alpha, /* a3 7 */ u_int pri) {}
 /* 001f3580 00000104 */ void MenuCmnYesNoWinDisp(/* s1 17 */ int off_x, /* s0 16 */ int off_y, /* a2 6 */ u_char alpha, /* s2 18 */ u_int pri) {}
 
 /* 001f3688 0000017c */ void MenuCmnSelFrameDisp(/* f20 58 */ float x, /* f21 59 */ float y, /* f14 52 */ float w, /* a0 4 */ u_char alpha, /* s2 18 */ u_int pri) {
-	/* -0xe0(sp) */ DISP_SPRT frame_ds;
+	/* 0x0(sp) */ DISP_SPRT frame_ds;
 	/* f22 60 */ float one_size;
 	/* f23 61 */ float frame_scl_l;
 	/* f22 60 */ float frame_scl_r;
 }
 
 /* 001f3808 0000017c */ void MenuCmnNonSelFrameDisp(/* f20 58 */ float x, /* f21 59 */ float y, /* f14 52 */ float w, /* a0 4 */ u_char alpha, /* s2 18 */ u_int pri) {
-	/* -0xe0(sp) */ DISP_SPRT frame_ds;
+	/* 0x0(sp) */ DISP_SPRT frame_ds;
 	/* f22 60 */ float one_size;
 	/* f23 61 */ float frame_scl_l;
 	/* f22 60 */ float frame_scl_r;
 }
 
 /* 001f3988 000001e4 */ void MenuCmnLineTateDisp(/* f21 59 */ float x, /* f22 60 */ float y, /* f14 52 */ float h, /* s3 19 */ u_char alpha, /* s1 17 */ u_int pri) {
-	/* -0xe0(sp) */ DISP_SPRT ds;
+	/* 0x0(sp) */ DISP_SPRT ds;
 	/* f20 58 */ float line_h;
 	/* f23 61 */ float line_scr;
 }
 
 /* 001f3b70 000001e4 */ void MenuCmnLineYokoDisp(/* f22 60 */ float x, /* f21 59 */ float y, /* f14 52 */ float w, /* s3 19 */ u_char alpha, /* s1 17 */ u_int pri) {
-	/* -0xe0(sp) */ DISP_SPRT ds;
+	/* 0x0(sp) */ DISP_SPRT ds;
 	/* f20 58 */ float line_w;
 	/* f23 61 */ float line_scr;
 }
 
-/* 00324228 00000054 */ CVariable<char,0,3>* CVariable<char, 0, 3> * _fixed_array_verifyrange<CVariable<char, 0, 3> >(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
-/* 00324228 0000003c */ type_info& CVariable<char, 0, 3> type_info function() {}
+/* ffffffff 00000054 */ CVariable<char,0,3>* CVariable<char, 0, 3> * _fixed_array_verifyrange<CVariable<char, 0, 3> >(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 0000003c */ type_info& CVariable<char, 0, 3> type_info function() {}
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/debug/menu_dat.c
@@ -21420,23 +21843,24 @@
 }
 
 /* 001f3e40 00000164 */ void DbmFWrite(/* t5 13 */ char *str) {
-	/* -0x10080(sp) */ va_list ap;
-	/* -0x10070(sp) */ char buf[65536];
+	/* 0x0(sp) */ va_list ap;
+	/* 0x10(sp) */ char buf[65536];
 	/* a0 4 */ int i;
 }
 
 /* 001f3fa8 00000038 */ void DbmFClose() {}
 
 /* 001f3fe0 00000180 */ void DbmFWriteLabelOne(/* s0 16 */ char *name, /* a1 5 */ char *num) {
-	/* -0x10280(sp) */ char stat_name[512];
-	/* -0x80(sp) */ va_list ap;
+	/* 0x0(sp) */ char stat_name[512];
+	/* 0x200(sp) */ char buf[65536];
+	/* 0x10200(sp) */ va_list ap;
 	/* s0 16 */ int len;
 }
 
 /* 001f4160 00000198 */ void DbmSave(/* s1 17 */ DEBUG_MENU *in, /* a1 5 */ char *path, /* v0 2 */ char *fname, /* s4 20 */ char *label) {
 	/* s2 18 */ int i;
-	/* -0x1d0(sp) */ char FileNameBuf[256];
-	/* -0xd0(sp) */ char stat_name[128];
+	/* 0x0(sp) */ char FileNameBuf[256];
+	/* 0x100(sp) */ char stat_name[128];
 }
 
 // *****************************************************************************
@@ -21475,7 +21899,7 @@
 	/* s0 16 */ int file_id;
 	/* s1 17 */ int count;
 	/* v1 3 */ char state;
-	/* -0x70(sp) */ MENU_FILE_DATA *menu_file_data_tbl[5];
+	/* 0x0(sp) */ MENU_FILE_DATA *menu_file_data_tbl[5];
 }
 
 /* 001f4ad0 000001d4 */ void MenuFile() {
@@ -21540,11 +21964,11 @@
 /* 001f5db0 00000024 */ static void MenuFileDispInit() {}
 
 /* 001f5dd8 000000e4 */ void MenuFileDisp() {
-	/* -0x30(sp) */ u_char alpha;
+	/* 0x0(sp) */ u_char alpha;
 }
 
 /* 001f5ec0 00000148 */ static void MenuFileTitleDisp(/* s2 18 */ int off_x, /* s1 17 */ int off_y, /* a2 6 */ u_char alpha) {
-	/* -0xd0(sp) */ DISP_SPRT title_ds;
+	/* 0x0(sp) */ DISP_SPRT title_ds;
 }
 
 /* 001f6008 00000104 */ static void MenuFileTopDisp(/* s2 18 */ u_char alpha) {
@@ -21565,24 +21989,24 @@
 }
 
 /* 001f63b8 0000008c */ static void MenuFileNoHaveDisp(/* a0 4 */ u_char alpha) {
-	/* -0x60(sp) */ DISP_STR msg_data;
-	/* -0x20(sp) */ MSG_WIN_DAT msg_win;
+	/* 0x0(sp) */ DISP_STR msg_data;
+	/* 0x40(sp) */ MSG_WIN_DAT msg_win;
 }
 
 /* 001f6448 00000134 */ static void MenuFileTopWinDisp(/* v1 3 */ int off_x, /* s2 18 */ int off_y, /* s3 19 */ u_char alpha) {
 	/* s1 17 */ int i;
-	/* -0x170(sp) */ DISP_SPRT win_ds;
-	/* -0xe0(sp) */ DISP_SQAR dsq;
-	/* -0x60(sp) */ SQAR_DAT file_list_bg;
+	/* 0x0(sp) */ DISP_SPRT win_ds;
+	/* 0x90(sp) */ DISP_SQAR dsq;
+	/* 0x110(sp) */ SQAR_DAT file_list_bg;
 }
 
 /* 001f6580 000001b8 */ static void MenuFileTopScrollFrameDisp(/* v0 2 */ int off_x, /* s0 16 */ int off_y, /* s1 17 */ u_char alpha) {
 	/* s0 16 */ int i;
-	/* -0xc0(sp) */ DISP_SPRT scroll_ds;
+	/* 0x0(sp) */ DISP_SPRT scroll_ds;
 }
 
 /* 001f6738 0000053c */ static void MenuFileTopScrollDisp(/* s7 23 */ int off_x, /* s5 21 */ int off_y, /* s4 20 */ u_char alpha) {
-	/* -0xf0(sp) */ DISP_SPRT scroll_ds;
+	/* 0x0(sp) */ DISP_SPRT scroll_ds;
 	/* s6 22 */ int scroll_size;
 	/* s0 16 */ int scroll_y;
 	/* s1 17 */ int center_size;
@@ -21590,18 +22014,18 @@
 }
 
 /* 001f6c78 000000bc */ static void MenuFileTopLensDisp(/* s1 17 */ int off_x, /* s0 16 */ int off_y, /* a2 6 */ u_char alpha) {
-	/* -0xb0(sp) */ DISP_SPRT lens_ds;
+	/* 0x0(sp) */ DISP_SPRT lens_ds;
 }
 
 /* 001f6d38 0000021c */ static void MenuFileTopPictureDisp(/* a0 4 */ int off_x, /* a1 5 */ int off_y, /* s4 20 */ u_char alpha) {
-	/* -0xd0(sp) */ DISP_SPRT file_ds;
+	/* 0x0(sp) */ DISP_SPRT file_ds;
 	/* v1 3 */ int disp_num;
 	/* s1 17 */ int file_type;
-	/* -0x40(sp) */ u_char fade_alpha[2];
+	/* 0x90(sp) */ u_char fade_alpha[2];
 }
 
 /* 001f6f58 000000ac */ static void MenuFileTopTagDisp(/* s1 17 */ int off_x, /* s0 16 */ int off_y, /* a2 6 */ u_char alpha) {
-	/* -0xb0(sp) */ DISP_SPRT tag_ds;
+	/* 0x0(sp) */ DISP_SPRT tag_ds;
 }
 
 /* 001f7008 00000070 */ static void MenuFileTopArrowDisp(/* a0 4 */ int off_x, /* a1 5 */ int off_y, /* a2 6 */ u_char alpha) {}
@@ -21621,9 +22045,9 @@
 
 /* 001f7390 00000134 */ static void MenuFileDocumentWinDisp(/* v1 3 */ int off_x, /* s2 18 */ int off_y, /* s3 19 */ u_char alpha) {
 	/* s1 17 */ int i;
-	/* -0x170(sp) */ DISP_SPRT win_ds;
-	/* -0xe0(sp) */ DISP_SQAR dsq;
-	/* -0x60(sp) */ SQAR_DAT document_bg;
+	/* 0x0(sp) */ DISP_SPRT win_ds;
+	/* 0x90(sp) */ DISP_SQAR dsq;
+	/* 0x110(sp) */ SQAR_DAT document_bg;
 }
 
 /* 001f74c8 00000070 */ static void MenuFileDocumentArrowDisp(/* a0 4 */ int off_x, /* a1 5 */ int off_y, /* a2 6 */ u_char alpha) {}
@@ -21649,18 +22073,19 @@
 
 /* 001f78f8 000000c8 */ static void MenuFilePhotoWinDisp(/* v0 2 */ int off_x, /* v1 3 */ int off_y, /* s2 18 */ u_char alpha) {
 	/* s1 17 */ int i;
-	/* -0xc0(sp) */ DISP_SPRT win_ds;
+	/* 0x0(sp) */ DISP_SPRT win_ds;
 }
 
 /* 001f79c0 0000028c */ static void MenuFilePhotoSmallTexDisp(/* s5 21 */ int off_x, /* s6 22 */ int off_y, /* a2 6 */ u_char alpha) {
-	/* -0xf0(sp) */ DISP_SPRT photo_ds;
+	/* 0x0(sp) */ DISP_SPRT photo_ds;
 	/* s2 18 */ int file_type;
 	/* s4 20 */ int disp_num;
 }
 
 /* 001f7c50 000001e0 */ static void MenuFilePhotoCenterTexDisp(/* a0 4 */ int off_x, /* a1 5 */ int off_y, /* s3 19 */ u_char alpha) {
 	/* s0 16 */ int file_type;
-	/* -0xd0(sp) */ DISP_SPRT photo_ds;
+	/* 0x0(sp) */ DISP_SPRT photo_ds;
+	/* 0x90(sp) */ u_char fade_alpha[2];
 }
 
 /* 001f7e30 00000074 */ static void MenuFilePhotoArrowDisp(/* a0 4 */ int off_x, /* a1 5 */ int off_y, /* a2 6 */ u_char alpha) {}
@@ -21679,23 +22104,24 @@
 
 /* 001f80c8 000000c8 */ static void MenuFileMapWinDisp(/* v0 2 */ int off_x, /* v1 3 */ int off_y, /* s2 18 */ u_char alpha) {
 	/* s1 17 */ int i;
-	/* -0xc0(sp) */ DISP_SPRT win_ds;
+	/* 0x0(sp) */ DISP_SPRT win_ds;
 }
 
 /* 001f8190 0000028c */ static void MenuFileMapSmallTexDisp(/* s5 21 */ int off_x, /* s6 22 */ int off_y, /* a2 6 */ u_char alpha) {
-	/* -0xf0(sp) */ DISP_SPRT map_ds;
+	/* 0x0(sp) */ DISP_SPRT map_ds;
 	/* s2 18 */ int file_type;
 	/* s4 20 */ int disp_num;
 }
 
 /* 001f8420 000001e0 */ static void MenuFileMapCenterTexDisp(/* a0 4 */ int off_x, /* a1 5 */ int off_y, /* s3 19 */ u_char alpha) {
 	/* s0 16 */ int file_type;
-	/* -0xd0(sp) */ DISP_SPRT map_ds;
+	/* 0x0(sp) */ DISP_SPRT map_ds;
+	/* 0x90(sp) */ u_char fade_alpha[2];
 }
 
 /* 001f8600 0000013c */ static void MenuFileMapArrowDisp(/* a2 6 */ int off_x, /* a1 5 */ int off_y, /* s3 19 */ u_char alpha) {
 	/* s0 16 */ int i;
-	/* -0xd0(sp) */ DISP_SPRT arrow_ds;
+	/* 0x0(sp) */ DISP_SPRT arrow_ds;
 	/* s2 18 */ u_char arrow_alpha;
 }
 
@@ -21712,13 +22138,13 @@
 }
 
 /* 001f8960 000000d8 */ static void MenuFileNoReadFrameDisp(/* f21 59 */ float x, /* f20 58 */ float y, /* s3 19 */ u_char alpha) {
-	/* -0xd0(sp) */ DISP_SPRT frame_ds;
+	/* 0x0(sp) */ DISP_SPRT frame_ds;
 	/* sdata 3f2d68 */ static int frame_tbl[2];
 	/* s0 16 */ int i;
 }
 
 /* 001f8a38 00000118 */ static void MenuFileBigArrowDisp(/* f20 58 */ float x, /* f21 59 */ float y, /* a0 4 */ u_char alpha, /* a1 5 */ u_char rgb, /* a2 6 */ char flg) {
-	/* -0xd0(sp) */ DISP_SPRT arrow_ds;
+	/* 0x0(sp) */ DISP_SPRT arrow_ds;
 	/* sdata 3f2d70 */ static int arrow_tbl[2];
 	/* sdata 3f2d78 */ static int shadow_tbl[2];
 	/* sdata 3f2d80 */ static int off_x_tbl[2];
@@ -21726,25 +22152,25 @@
 }
 
 /* 001f8b50 000000dc */ static void MenuFileSmallArrowDisp(/* f20 58 */ float x, /* f21 59 */ float y, /* a0 4 */ u_char alpha, /* a1 5 */ u_char rgb, /* a2 6 */ char flg) {
-	/* -0xe0(sp) */ DISP_SPRT arrow_ds;
-	/* -0x50(sp) */ int arrow_tbl[2];
+	/* 0x0(sp) */ DISP_SPRT arrow_ds;
+	/* 0x90(sp) */ int arrow_tbl[2];
 }
 
 /* 001f8c30 00000160 */ static void MenuFileSelFrameDisp(/* f20 58 */ float x, /* f21 59 */ float y, /* s1 17 */ u_char alpha) {
 	/* s0 16 */ int i;
-	/* -0xc0(sp) */ DISP_SPRT ds;
+	/* 0x0(sp) */ DISP_SPRT ds;
 }
 
 /* 001f8d90 000001c8 */ static void MenuFileNonSelFrameDisp(/* f20 58 */ float x, /* f21 59 */ float y, /* s1 17 */ u_char alpha) {
 	/* s0 16 */ int i;
-	/* -0xc0(sp) */ DISP_SPRT ds;
+	/* 0x0(sp) */ DISP_SPRT ds;
 }
 
-/* 00324228 00000054 */ int* int * _fixed_array_verifyrange<int>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
-/* 00324228 00000054 */ MENU_REF_CTRL* MENU_REF_CTRL * _fixed_array_verifyrange<MENU_REF_CTRL>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
-/* 00324228 00000054 */ MENU_FILE_DATA* MENU_FILE_DATA * _fixed_array_verifyrange<MENU_FILE_DATA>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ int* int * _fixed_array_verifyrange<int>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ MENU_REF_CTRL* MENU_REF_CTRL * _fixed_array_verifyrange<MENU_REF_CTRL>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ MENU_FILE_DATA* MENU_FILE_DATA * _fixed_array_verifyrange<MENU_FILE_DATA>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
 /* 001f8f58 00000008 */ static void __static_initialization_and_destruction_0(/* a0 4 */ int __initialize_p, /* a1 5 */ int __priority) {}
-/* 00324228 0000003c */ type_info& MENU_REF_CTRL type_info function() {}
+/* ffffffff 0000003c */ type_info& MENU_REF_CTRL type_info function() {}
 /* 00324228 0000003c */ type_info& MENU_FILE_DATA type_info function() {}
 /* 001f8f60 00000020 */ static void global constructors keyed to MenuFileTexBackGroundLoad() {}
 
@@ -21798,60 +22224,60 @@
 /* 001f9c60 0000001c */ static void MenuItemDispInit() {}
 
 /* 001f9c80 00000144 */ void MenuItemDisp() {
-	/* -0x20(sp) */ u_char alpha;
+	/* 0x0(sp) */ u_char alpha;
 }
 
 /* 001f9dc8 00000184 */ static void MenuItemTitleDisp(/* s2 18 */ int off_x, /* s1 17 */ int off_y, /* a2 6 */ u_char alpha) {
-	/* -0xd0(sp) */ DISP_SPRT title_ds;
+	/* 0x0(sp) */ DISP_SPRT title_ds;
 }
 
 /* 001f9f50 00000024 */ static void MenuItemPlyrDataDisp(/* a0 4 */ int off_x, /* a1 5 */ int off_y, /* a2 6 */ u_char alpha) {}
 
 /* 001f9f78 00000264 */ static void MenuItemWindowDisp(/* s4 20 */ int off_x, /* s3 19 */ int off_y, /* s5 21 */ u_char alpha) {
-	/* -0x1a0(sp) */ DISP_SPRT title_ds;
+	/* 0x0(sp) */ DISP_SPRT title_ds;
 	/* s1 17 */ int i;
-	/* -0x110(sp) */ DISP_SQAR dsq;
-	/* -0x90(sp) */ SQAR_DAT item_list_bg;
-	/* -0x70(sp) */ SQAR_DAT item_msg_bg;
+	/* 0x90(sp) */ DISP_SQAR dsq;
+	/* 0x110(sp) */ SQAR_DAT item_list_bg;
+	/* 0x130(sp) */ SQAR_DAT item_msg_bg;
 }
 
 /* 001fa1e0 00000698 */ static void MenuItemListScrollDisp(/* t2 10 */ int off_x, /* s7 23 */ int off_y, /* s4 20 */ u_char alpha) {
-	/* -0x1b0(sp) */ DISP_SPRT scroll_ds;
-	/* -0x120(sp) */ DISP_SQAR dsq;
+	/* 0x0(sp) */ DISP_SPRT scroll_ds;
+	/* 0x90(sp) */ DISP_SQAR dsq;
 	/* s5 21 */ int i;
-	/* -0xa0(sp) */ SQAR_DAT scroll_bg_up;
-	/* -0x80(sp) */ SQAR_DAT scroll_bg_down;
+	/* 0x110(sp) */ SQAR_DAT scroll_bg_up;
+	/* 0x130(sp) */ SQAR_DAT scroll_bg_down;
 	/* fp 30 */ int scroll_size;
 	/* s3 19 */ int scroll_y;
 	/* s2 18 */ int center_size;
 }
 
-/* 001fa878 00000588 */ static void MenuPlyrItemDisp(/* s6 22 */ int off_x, /* -0xa0(sp) */ int off_y, /* s3 19 */ u_char alpha) {
+/* 001fa878 00000588 */ static void MenuPlyrItemDisp(/* s6 22 */ int off_x, /* 0xa0(sp) */ int off_y, /* s3 19 */ u_char alpha) {
 	/* s7 23 */ int i;
 	/* s0 16 */ int j;
-	/* -0x9c(sp) */ short int disp_num;
+	/* 0xa4(sp) */ short int disp_num;
 	/* s4 20 */ u_char col_label;
-	/* -0x130(sp) */ DISP_SPRT item_ds;
+	/* 0x10(sp) */ DISP_SPRT item_ds;
 	/* rdata 3bdd18 */ static int item_sel_on[7][4];
 	/* rdata 3bdd88 */ static int item_sel_off[7][3];
 }
 
-/* 001fae00 0000022c */ static void MenuItemExplanation(/* -0x70(sp) */ int off_x, /* -0x6c(sp) */ int off_y, /* s5 21 */ u_char alpha) {
+/* 001fae00 0000022c */ static void MenuItemExplanation(/* 0xa0(sp) */ int off_x, /* 0xa4(sp) */ int off_y, /* s5 21 */ u_char alpha) {
 	/* s7 23 */ int i;
 	/* s4 20 */ int j;
 	/* s0 16 */ int k;
-	/* -0x100(sp) */ DISP_SPRT item_ds;
+	/* 0x10(sp) */ DISP_SPRT item_ds;
 	/* rdata 3bdde0 */ static int item_doc_tex[5][4];
 }
 
 /* 001fb030 0000025c */ static void MenuItemPictureDisp(/* s6 22 */ int off_x, /* s5 21 */ int off_y, /* s4 20 */ u_char alpha) {
-	/* -0xe0(sp) */ DISP_SPRT item_ds;
+	/* 0x0(sp) */ DISP_SPRT item_ds;
 	/* v1 3 */ int disp_num;
-	/* -0x50(sp) */ u_char fade_alpha[2];
+	/* 0x90(sp) */ u_char fade_alpha[2];
 }
 
 /* 001fb290 000000bc */ static void MenuItemLensDisp(/* s1 17 */ int off_x, /* s0 16 */ int off_y, /* a2 6 */ u_char alpha) {
-	/* -0xb0(sp) */ DISP_SPRT item_ds;
+	/* 0x0(sp) */ DISP_SPRT item_ds;
 }
 
 /* 001fb350 00000028 */ static void MenuItemCaptionDisp(/* a0 4 */ int off_x, /* a1 5 */ int off_y, /* a2 6 */ u_char alpha) {}
@@ -21859,11 +22285,11 @@
 /* 001fb3f8 00000144 */ static void MenuItemUseSelDisp(/* s1 17 */ int off_x, /* s0 16 */ int off_y, /* a2 6 */ u_char alpha) {}
 
 /* 001fb540 0000008c */ static void MenuItemNoHaveItemDisp(/* a0 4 */ int off_x, /* a1 5 */ int off_y, /* a2 6 */ u_char alpha) {
-	/* -0x60(sp) */ DISP_STR msg_data;
-	/* -0x20(sp) */ MSG_WIN_DAT msg_win;
+	/* 0x0(sp) */ DISP_STR msg_data;
+	/* 0x40(sp) */ MSG_WIN_DAT msg_win;
 }
 
-/* 00325048 00000054 */ DISP_ITEM_DATA* DISP_ITEM_DATA * _fixed_array_verifyrange<DISP_ITEM_DATA>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ DISP_ITEM_DATA* DISP_ITEM_DATA * _fixed_array_verifyrange<DISP_ITEM_DATA>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
 /* 001fb5d0 00000008 */ static void __static_initialization_and_destruction_0(/* a0 4 */ int __initialize_p, /* a1 5 */ int __priority) {}
 /* 00325048 0000003c */ type_info& DISP_ITEM_DATA type_info function() {}
 /* 001fb5d8 00000020 */ static void global constructors keyed to GetMenuItemTexMem() {}
@@ -21900,7 +22326,7 @@
 	/* s0 16 */ int i;
 	/* f0 38 */ float map_size_w;
 	/* f0 38 */ float map_size_h;
-	/* -0x40(sp) */ u_char fade_alpha[2];
+	/* 0x0(sp) */ u_char fade_alpha[2];
 }
 
 /* 001fc090 00000044 */ static void MenuMapOutReq() {}
@@ -21911,12 +22337,13 @@
 	/* s1 17 */ int j;
 	/* s2 18 */ int area;
 	/* s5 21 */ int floor;
-	/* -0x60(sp) */ int disp_map_label;
-	/* -0x5c(sp) */ int res;
+	/* 0x0(sp) */ int disp_map_label;
+	/* 0x4(sp) */ int res;
 	/* a3 7 */ u_char find_flg;
 }
 
 /* 001fc3f0 00000274 */ static int MenuMapFloorChange(/* s2 18 */ int flg) {
+	/* rdata 3bdf80 */ static char __FUNCTION__[19];
 	/* s2 18 */ int i;
 	/* s0 16 */ int area;
 	/* s1 17 */ int floor;
@@ -21931,16 +22358,16 @@
 
 /* 001fc700 0000012c */ static int MenuMapRoomHitCheck(/* f12 50 */ float x, /* f13 51 */ float y) {
 	/* s5 21 */ int res;
-	/* -0xa0(sp) */ float target[4];
-	/* -0x90(sp) */ float tri0[4];
-	/* -0x80(sp) */ float tri1[4];
-	/* -0x70(sp) */ float tri2[4];
-	/* -0x60(sp) */ float tri3[4];
+	/* 0x0(sp) */ float target[4];
+	/* 0x10(sp) */ float tri0[4];
+	/* 0x20(sp) */ float tri1[4];
+	/* 0x30(sp) */ float tri2[4];
+	/* 0x40(sp) */ float tri3[4];
 }
 
 /* 001fc830 0000010c */ static void MenuMapSetPosition(/* s0 16 */ float *pos, /* f20 58 */ float x, /* f21 59 */ float y) {
-	/* -0x40(sp) */ float map_x;
-	/* -0x3c(sp) */ float map_y;
+	/* 0x0(sp) */ float map_x;
+	/* 0x4(sp) */ float map_y;
 }
 
 /* 001fc940 00000064 */ int MenuMapHitCheck(/* s0 16 */ float *target, /* s3 19 */ float *tri0, /* a2 6 */ float *tri1, /* s1 17 */ float *tri2, /* s2 18 */ float *tri3) {
@@ -21969,33 +22396,33 @@
 }
 
 /* 001fccb0 000000d0 */ static void MenuMapDispStartPos() {
-	/* -0x20(sp) */ float map_plyr_x;
-	/* -0x1c(sp) */ float map_plyr_y;
+	/* 0x0(sp) */ float map_plyr_x;
+	/* 0x4(sp) */ float map_plyr_y;
 }
 
 /* 001fcd80 000001dc */ void MenuMapDisp() {
-	/* -0x60(sp) */ u_char alpha;
+	/* 0x0(sp) */ u_char alpha;
 	/* s3 19 */ long int scissor_backup;
 	/* s4 20 */ int i;
-	/* -0x50(sp) */ u_char fade_alpha[2];
+	/* 0x10(sp) */ u_char fade_alpha[2];
 }
 
 /* 001fcf60 00000184 */ static void MenuMapTitleDisp(/* s2 18 */ int off_x, /* s1 17 */ int off_y, /* a2 6 */ u_char alpha) {
-	/* -0xd0(sp) */ DISP_SPRT title_ds;
+	/* 0x0(sp) */ DISP_SPRT title_ds;
 }
 
 /* 001fd0e8 00000364 */ static void MenuMapBaseDisp(/* v0 2 */ int off_x, /* v1 3 */ int off_y, /* s2 18 */ u_char alpha) {
-	/* -0xc0(sp) */ DISP_SPRT base_ds;
+	/* 0x0(sp) */ DISP_SPRT base_ds;
 	/* s0 16 */ int i;
 }
 
 /* 001fd450 00000584 */ static void MenuMapMapDisp(/* s1 17 */ int map_label, /* a1 5 */ int off_x, /* a2 6 */ int off_y, /* s6 22 */ u_char alpha) {
 	/* rdata 3bdff0 */ static char __FUNCTION__[15];
-	/* -0x150(sp) */ DISP_SPRT map_ds;
+	/* 0x0(sp) */ DISP_SPRT map_ds;
 	/* s2 18 */ int i;
-	/* -0xc0(sp) */ float map_x;
-	/* -0xbc(sp) */ float map_y;
-	/* -0xb0(sp) */ int sel_room_group[20];
+	/* 0x90(sp) */ float map_x;
+	/* 0x94(sp) */ float map_y;
+	/* 0xa0(sp) */ int sel_room_group[20];
 	/* s5 21 */ int buff_cnt;
 }
 
@@ -22012,8 +22439,8 @@
 
 /* 001fdb50 00000078 */ static void CalMapDispStartPos(/* a0 4 */ float *map_x, /* a1 5 */ float *map_y, /* a2 6 */ char scall_flg) {}
 
-/* 001fdbc8 00000234 */ static void MenuMapSavePointDisp(/* s4 20 */ int map_label, /* f21 59 */ float map_x, /* f20 58 */ float map_y, /* -0x80(sp) */ u_char alpha) {
-	/* -0x110(sp) */ DISP_SPRT map_ds;
+/* 001fdbc8 00000234 */ static void MenuMapSavePointDisp(/* s4 20 */ int map_label, /* f21 59 */ float map_x, /* f20 58 */ float map_y, /* 0x90(sp) */ u_char alpha) {
+	/* 0x0(sp) */ DISP_SPRT map_ds;
 }
 
 /* 001fde00 000001f4 */ static void MenuMapDoorDisp(/* s5 21 */ int map_label, /* f21 59 */ float map_x, /* f20 58 */ float map_y, /* s6 22 */ u_char alpha) {
@@ -22024,11 +22451,12 @@
 
 /* 001fdff8 00000248 */ static void MenuMapNormalDoorDisp(/* s3 19 */ int map_label, /* f20 58 */ float map_x, /* f21 59 */ float map_y, /* s2 18 */ u_char alpha, /* s1 17 */ MAP_DOOR_POINT *door_data) {
 	/* rdata 3be088 */ static char __FUNCTION__[22];
-	/* -0xd0(sp) */ DISP_SPRT map_ds;
+	/* 0x0(sp) */ DISP_SPRT map_ds;
 }
 
 /* 001fe240 000003e4 */ static void MenuMapDoubleDoorDisp(/* s4 20 */ int map_label, /* f23 61 */ float map_x, /* f22 60 */ float map_y, /* s3 19 */ u_char alpha, /* s0 16 */ MAP_DOOR_POINT *door_data) {
-	/* -0x100(sp) */ DISP_SPRT map_ds;
+	/* rdata 3be0b8 */ static char __FUNCTION__[22];
+	/* 0x0(sp) */ DISP_SPRT map_ds;
 	/* s1 17 */ int i;
 	/* f21 59 */ float tmp_x;
 	/* f20 58 */ float tmp_y;
@@ -22036,12 +22464,13 @@
 
 /* 001fe628 000002b0 */ static void MenuMapGhostSealNormalDoorDisp(/* s3 19 */ int map_label, /* f20 58 */ float map_x, /* f21 59 */ float map_y, /* s4 20 */ u_char alpha, /* s1 17 */ MAP_DOOR_POINT *door_data) {
 	/* rdata 3be0f0 */ static char __FUNCTION__[31];
-	/* -0xd0(sp) */ DISP_SPRT map_ds;
+	/* 0x0(sp) */ DISP_SPRT map_ds;
 	/* s2 18 */ int seal_state;
 }
 
 /* 001fe8d8 00000430 */ static void MenuMapGhostSealDoubleDoorDisp(/* s2 18 */ int map_label, /* f22 60 */ float map_x, /* f23 61 */ float map_y, /* s3 19 */ u_char alpha, /* s0 16 */ MAP_DOOR_POINT *door_data) {
-	/* -0xe0(sp) */ DISP_SPRT map_ds;
+	/* rdata 3be110 */ static char __FUNCTION__[31];
+	/* 0x0(sp) */ DISP_SPRT map_ds;
 	/* s1 17 */ int i;
 	/* s4 20 */ int seal_state;
 	/* f21 59 */ float tmp_x;
@@ -22049,17 +22478,17 @@
 }
 
 /* 001fed08 000001ac */ static void MenuMapGhostSealMarkDisp(/* s2 18 */ int map_label, /* f20 58 */ float map_x, /* f21 59 */ float map_y, /* a1 5 */ u_char alpha, /* s1 17 */ int ghost_seal_door_label) {
-	/* -0xc0(sp) */ DISP_SPRT map_ds;
+	/* 0x0(sp) */ DISP_SPRT map_ds;
 }
 
 /* 001feeb8 00000244 */ static void MenuMapPlyrPosDisp(/* s2 18 */ int map_label, /* f20 58 */ float map_x, /* f21 59 */ float map_y, /* s3 19 */ u_char alpha) {
-	/* -0xe0(sp) */ float pos_x;
-	/* -0xdc(sp) */ float pos_y;
-	/* -0xd0(sp) */ DISP_SPRT map_ds;
+	/* 0x0(sp) */ float pos_x;
+	/* 0x4(sp) */ float pos_y;
+	/* 0x10(sp) */ DISP_SPRT map_ds;
 }
 
 /* 001ff100 000001cc */ static void MenuMapCenterDisp(/* s0 16 */ int off_x, /* s1 17 */ int off_y, /* s2 18 */ u_char alpha) {
-	/* -0xc0(sp) */ DISP_SPRT center_ds;
+	/* 0x0(sp) */ DISP_SPRT center_ds;
 	/* s0 16 */ int i;
 }
 
@@ -22070,13 +22499,13 @@
 }
 
 /* 001ff528 00000160 */ static void MenuMapSnapShotDisp(/* s3 19 */ int off_x, /* s2 18 */ int off_y, /* a2 6 */ u_char alpha) {
-	/* -0x160(sp) */ DISP_SPRT snap_ds;
-	/* -0xd0(sp) */ DISP_SQAR dsq;
-	/* -0x50(sp) */ SQAR_DAT snap_bg;
+	/* 0x0(sp) */ DISP_SPRT snap_ds;
+	/* 0x90(sp) */ DISP_SQAR dsq;
+	/* 0x110(sp) */ SQAR_DAT snap_bg;
 }
 
 /* 001ff688 000000c8 */ static void MenuMapWindowDisp(/* v0 2 */ int off_x, /* v1 3 */ int off_y, /* s2 18 */ u_char alpha) {
-	/* -0xc0(sp) */ DISP_SPRT win_ds;
+	/* 0x0(sp) */ DISP_SPRT win_ds;
 	/* s1 17 */ int i;
 }
 
@@ -22135,24 +22564,24 @@
 /* 00200360 00000024 */ static void MenuMemoDispInit() {}
 
 /* 00200388 00000108 */ void MenuMemoDisp() {
-	/* -0x30(sp) */ u_char alpha;
+	/* 0x0(sp) */ u_char alpha;
 }
 
 /* 00200490 00000178 */ static void MenuMemoBgDisp(/* v0 2 */ int off_x, /* v1 3 */ int off_y, /* s2 18 */ u_char alpha) {
 	/* s0 16 */ int i;
-	/* -0xd0(sp) */ DISP_SPRT bg_ds;
+	/* 0x0(sp) */ DISP_SPRT bg_ds;
 }
 
 /* 00200608 00000124 */ static void MenuMemoTitleDisp(/* v0 2 */ int off_x, /* v1 3 */ int off_y, /* s2 18 */ u_char alpha) {
 	/* s1 17 */ int i;
-	/* -0xc0(sp) */ DISP_SPRT title_ds;
+	/* 0x0(sp) */ DISP_SPRT title_ds;
 }
 
 /* 00200730 000001f0 */ static void MenuMemoPlyrMemoDisp(/* s7 23 */ int off_x, /* s6 22 */ int off_y, /* s5 21 */ u_char alpha) {
 	/* rdata 3be288 */ static int memo_first_tbl[20][3];
 	/* rdata 3be378 */ static int memo_second_tbl[20][3];
 	/* rdata 3be468 */ static char color_type_tbl[20];
-	/* -0xe0(sp) */ DISP_SPRT memo_ds;
+	/* 0x0(sp) */ DISP_SPRT memo_ds;
 	/* s0 16 */ int i;
 	/* s1 17 */ int j;
 	/* a1 5 */ int tex_label;
@@ -22185,7 +22614,7 @@
 }
 
 /* 00200e00 0000008c */ static void MenuMemoNonReadFrameDisp(/* f20 58 */ float y, /* a0 4 */ u_char alpha) {
-	/* -0xb0(sp) */ DISP_SPRT frame_ds;
+	/* 0x0(sp) */ DISP_SPRT frame_ds;
 }
 
 /* 00200e90 0000007c */ static void MenuMemoContentDisp(/* s3 19 */ int off_x, /* s2 18 */ int off_y, /* a2 6 */ u_char alpha) {}
@@ -22197,11 +22626,11 @@
 }
 
 /* 00201140 0000008c */ static void MenuMemoNotHaveDisp(/* a0 4 */ int off_x, /* a1 5 */ int off_y, /* a2 6 */ u_char alpha) {
-	/* -0x60(sp) */ DISP_STR msg_data;
-	/* -0x20(sp) */ MSG_WIN_DAT msg_win;
+	/* 0x0(sp) */ DISP_STR msg_data;
+	/* 0x40(sp) */ MSG_WIN_DAT msg_win;
 }
 
-/* 003285d8 00000054 */ DISP_MEMO_DATA* DISP_MEMO_DATA * _fixed_array_verifyrange<DISP_MEMO_DATA>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ DISP_MEMO_DATA* DISP_MEMO_DATA * _fixed_array_verifyrange<DISP_MEMO_DATA>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
 /* 002011d0 00000008 */ static void __static_initialization_and_destruction_0(/* a0 4 */ int __initialize_p, /* a1 5 */ int __priority) {}
 /* 003285d8 0000003c */ type_info& DISP_MEMO_DATA type_info function() {}
 /* 002011d8 00000020 */ static void global constructors keyed to GetMenuMemoTexMem() {}
@@ -22250,11 +22679,11 @@
 /* 00202038 00000010 */ static void MenuPhotoDispInit() {}
 
 /* 00202048 000001cc */ void MenuPhotoDisp() {
-	/* -0x30(sp) */ u_char alpha;
+	/* 0x0(sp) */ u_char alpha;
 }
 
 /* 00202218 00000148 */ static void MenuPhotoTitleDisp(/* s2 18 */ int off_x, /* s1 17 */ int off_y, /* a2 6 */ u_char alpha) {
-	/* -0xd0(sp) */ DISP_SPRT title_ds;
+	/* 0x0(sp) */ DISP_SPRT title_ds;
 }
 
 /* 00202360 00000438 */ static void MenuPhotoInfoDisp(/* s5 21 */ int off_x, /* fp 30 */ int off_y, /* s4 20 */ u_char alpha) {
@@ -22263,18 +22692,18 @@
 	/* s6 22 */ int subject_num;
 	/* a3 7 */ int msg_y;
 	/* s7 23 */ PICTURE_WRK *pic_info;
-	/* -0x70(sp) */ DATE_INFO date;
+	/* 0x10(sp) */ DATE_INFO date;
 }
 
 /* 00202798 00000280 */ static void MenuPhotoDataWinDisp(/* v0 2 */ int off_x, /* v1 3 */ int off_y, /* s3 19 */ u_char alpha) {
-	/* -0xd0(sp) */ DISP_SPRT win_ds;
+	/* 0x0(sp) */ DISP_SPRT win_ds;
 	/* s1 17 */ int i;
 }
 
 /* 00202a18 000002f8 */ static void MenuPhotoThumbnailDisp(/* s3 19 */ int off_x, /* s7 23 */ int off_y, /* s1 17 */ u_char alpha) {
 	/* s2 18 */ int i;
-	/* -0x70(sp) */ int sel_num;
-	/* -0x100(sp) */ DISP_SPRT photo_ds;
+	/* 0x90(sp) */ int sel_num;
+	/* 0x0(sp) */ DISP_SPRT photo_ds;
 	/* rdata 3be650 */ static int number_tbl[16][2];
 	/* rdata 3be6d0 */ static int sel_tbl[16];
 	/* rdata 3be710 */ static int bg_tbl[16];
@@ -22282,16 +22711,16 @@
 
 /* 00202d10 000000f0 */ static void MenuPhotoProtectCsr(/* s4 20 */ int off_x, /* s3 19 */ int off_y, /* s2 18 */ u_char alpha) {
 	/* s0 16 */ int i;
-	/* -0xd0(sp) */ DISP_SPRT photo_ds;
+	/* 0x0(sp) */ DISP_SPRT photo_ds;
 	/* rdata 3be750 */ static int protect_tbl[16];
 }
 
 /* 00202e00 0000064c */ static void MenuPhotoLargePhotoWinDisp(/* s1 17 */ int off_x, /* s2 18 */ int off_y, /* s3 19 */ u_char alpha) {
-	/* -0x1a0(sp) */ DISP_SPRT win_ds;
+	/* 0x0(sp) */ DISP_SPRT win_ds;
 	/* s0 16 */ int i;
-	/* -0x110(sp) */ DISP_SQAR dsq;
-	/* -0x90(sp) */ SQAR_DAT win_bg;
-	/* -0x70(sp) */ SQAR_DAT photo_bg;
+	/* 0x90(sp) */ DISP_SQAR dsq;
+	/* 0x110(sp) */ SQAR_DAT win_bg;
+	/* 0x130(sp) */ SQAR_DAT photo_bg;
 	/* rdata 3be7c0 */ static int number_tbl[16][2];
 	/* s1 17 */ int sel_num;
 }
@@ -22301,14 +22730,14 @@
 }
 
 /* 00203538 00000100 */ static void MenuPhotoLargeProtectDisp(/* s0 16 */ int off_x, /* s1 17 */ int off_y, /* s2 18 */ u_char alpha) {
-	/* -0xc0(sp) */ DISP_SPRT protect_ds;
+	/* 0x0(sp) */ DISP_SPRT protect_ds;
 	/* s0 16 */ int i;
 }
 
 /* 00203638 00000028 */ static void MenuPhotoCaptionDisp(/* a0 4 */ int off_x, /* a1 5 */ int off_y, /* a2 6 */ u_char alpha) {}
 
 /* 00203660 000004ac */ static void MenuPhotoSubMenuDisp(/* s2 18 */ int off_x, /* s1 17 */ int off_y, /* a2 6 */ u_char alpha) {
-	/* -0x100(sp) */ DISP_SPRT sub_ds;
+	/* 0x0(sp) */ DISP_SPRT sub_ds;
 	/* s1 17 */ int i;
 	/* rdata 3be840 */ static int sel_tbl[3][2];
 	/* rdata 3be858 */ static int not_sel_tbl[3][2];
@@ -22324,17 +22753,18 @@
 /* 00203b68 00000054 */ static void MenuPhotoNotDelWinDisp(/* a0 4 */ int off_x, /* a1 5 */ int off_y, /* a2 6 */ u_char alpha) {}
 
 /* 00203bc0 00000370 */ static void MenuPhotoSortMenuDisp(/* v0 2 */ int off_x, /* v1 3 */ int off_y, /* s2 18 */ u_char alpha) {
-	/* -0x110(sp) */ DISP_SPRT sub_ds;
+	/* 0x0(sp) */ DISP_SPRT sub_ds;
 	/* s1 17 */ int i;
+	/* rdata 3be8b0 */ static int sel_tbl[3][2];
 	/* rdata 3be8c8 */ static int not_sel_tbl[3][2];
 }
 
 /* 00203f30 0000008c */ static void MenuPhotoNotHaveDisp(/* a0 4 */ int off_x, /* a1 5 */ int off_y, /* a2 6 */ u_char alpha) {
-	/* -0x60(sp) */ DISP_STR msg_data;
-	/* -0x20(sp) */ MSG_WIN_DAT msg_win;
+	/* 0x0(sp) */ DISP_STR msg_data;
+	/* 0x40(sp) */ MSG_WIN_DAT msg_win;
 }
 
-/* 00328df8 00000054 */ PICTURE_SUBJECT* _PICTURE_SUBJECT * _fixed_array_verifyrange<_PICTURE_SUBJECT>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ PICTURE_SUBJECT* _PICTURE_SUBJECT * _fixed_array_verifyrange<_PICTURE_SUBJECT>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
 /* 00328df8 0000003c */ type_info& _PICTURE_SUBJECT type_info function() {}
 
 // *****************************************************************************
@@ -22376,17 +22806,17 @@
 /* 00204948 0000003c */ static void MenuRadioDispInit() {}
 
 /* 00204988 00000128 */ void MenuRadioDisp() {
-	/* -0x20(sp) */ u_char alpha;
+	/* 0x0(sp) */ u_char alpha;
 }
 
 /* 00204ab0 000001b8 */ static void MenuRadioBgDisp(/* v0 2 */ int off_x, /* s1 17 */ int off_y, /* s2 18 */ u_char alpha) {
 	/* s1 17 */ int i;
-	/* -0xd0(sp) */ DISP_SPRT bg_ds;
+	/* 0x0(sp) */ DISP_SPRT bg_ds;
 }
 
 /* 00204c68 00000140 */ static void MenuRadioTitleDisp(/* v0 2 */ int off_x, /* v1 3 */ int off_y, /* s2 18 */ u_char alpha) {
 	/* s0 16 */ int i;
-	/* -0xc0(sp) */ DISP_SPRT title_ds;
+	/* 0x0(sp) */ DISP_SPRT title_ds;
 }
 
 /* 00204da8 000000b0 */ static void MenuRadioCrystalSelDisp(/* s1 17 */ int off_x, /* s2 18 */ int off_y, /* a2 6 */ u_char alpha) {}
@@ -22397,8 +22827,8 @@
 }
 
 /* 00204fb8 00000090 */ static void MenuRadioNoHaveCrystalDisp(/* a0 4 */ u_char alpha) {
-	/* -0x60(sp) */ DISP_STR msg_data;
-	/* -0x20(sp) */ MSG_WIN_DAT msg_win;
+	/* 0x0(sp) */ DISP_STR msg_data;
+	/* 0x40(sp) */ MSG_WIN_DAT msg_win;
 }
 
 /* 00205048 0000019c */ static void MenuRadioCrystalNameFrameDisp(/* fp 30 */ int off_x, /* s7 23 */ int off_y, /* s4 20 */ u_char alpha) {
@@ -22414,66 +22844,66 @@
 
 /* 002052d8 00000178 */ static void MenuRadioScrollFrameDisp(/* t0 8 */ int off_x, /* v1 3 */ int off_y, /* a2 6 */ u_char alpha) {
 	/* f20 58 */ float frame_scl;
-	/* -0xd0(sp) */ DISP_SPRT scroll_ds;
+	/* 0x0(sp) */ DISP_SPRT scroll_ds;
 }
 
 /* 00205450 00000434 */ static void MenuRadioScrollDisp(/* s1 17 */ int off_x, /* s3 19 */ int off_y, /* s2 18 */ u_char alpha) {
-	/* -0xf0(sp) */ DISP_SPRT scroll_ds;
+	/* 0x0(sp) */ DISP_SPRT scroll_ds;
 	/* f20 58 */ float scroll_size;
 	/* f24 62 */ float scroll_y;
 	/* f21 59 */ float center_size;
 	/* f20 58 */ float scroll_scl;
 }
 
-/* 00205888 00000420 */ static void MenuRadioLoadCrystalDisp(/* s2 18 */ int off_x, /* s3 19 */ int off_y, /* -0x60(sp) */ u_char alpha) {
+/* 00205888 00000420 */ static void MenuRadioLoadCrystalDisp(/* s2 18 */ int off_x, /* s3 19 */ int off_y, /* 0x30(sp) */ u_char alpha) {
 	/* rdata 3bea70 */ static char __FUNCTION__[25];
 	/* s1 17 */ int disp_num;
-	/* -0x90(sp) */ u_char fade_alpha[2];
+	/* 0x0(sp) */ u_char fade_alpha[2];
 	/* s4 20 */ u_char crystal_alpha;
 	/* s5 21 */ u_char flare_alpha;
 	/* rdata 3bea90 */ static ALPHA_ANIM_TBL crystal_in_alpha_tbl[2];
-	/* -0x80(sp) */ ALPHA_ANIM_TBL crystal_out_alpha_tbl[2];
+	/* 0x10(sp) */ ALPHA_ANIM_TBL crystal_out_alpha_tbl[2];
 	/* rdata 3beab0 */ static ALPHA_ANIM_TBL crystal_flare_in_alpha_tbl[2];
-	/* -0x70(sp) */ ALPHA_ANIM_TBL crystal_flare_out_alpha_tbl[2];
+	/* 0x20(sp) */ ALPHA_ANIM_TBL crystal_flare_out_alpha_tbl[2];
 }
 
 /* 00205ca8 0000009c */ static void MenuRadioCrystalDisp(/* s1 17 */ int off_x, /* s0 16 */ int off_y, /* a2 6 */ u_char alpha, /* a3 7 */ void *pk2_addr) {
-	/* -0xb0(sp) */ DISP_SPRT crystal_ds;
+	/* 0x0(sp) */ DISP_SPRT crystal_ds;
 }
 
 /* 00205d48 000000c8 */ static void MenuRadioCrystalFlareDisp(/* v0 2 */ int off_x, /* v1 3 */ int off_y, /* s2 18 */ u_char alpha, /* a3 7 */ void *pk2_addr) {
 	/* s1 17 */ int i;
-	/* -0xc0(sp) */ DISP_SPRT flare_ds;
+	/* 0x0(sp) */ DISP_SPRT flare_ds;
 }
 
 /* 00205e10 00000044 */ static void MenuRadioMsgWinDisp(/* a0 4 */ int off_x, /* a1 5 */ int off_y, /* a2 6 */ u_char alpha) {}
 /* 00205e58 00000080 */ static void MenuRadioTopMsgDisp(/* s3 19 */ int off_x, /* s2 18 */ int off_y, /* a2 6 */ u_char alpha) {}
 
 /* 00205ed8 000000c4 */ static void MenuRadioCaptionDisp(/* s2 18 */ int off_x, /* s0 16 */ int off_y, /* a2 6 */ u_char alpha) {
-	/* -0xb0(sp) */ DISP_SPRT cap_ds;
+	/* 0x0(sp) */ DISP_SPRT cap_ds;
 }
 
 /* 00205fa0 00000128 */ static void MenuRadioCrystalPlayCaptionDisp(/* s2 18 */ int off_x, /* v0 2 */ int off_y, /* a2 6 */ u_char alpha) {
-	/* -0xc0(sp) */ DISP_SPRT cap_ds;
+	/* 0x0(sp) */ DISP_SPRT cap_ds;
 }
 
 /* 002060c8 0000014c */ static void MenuRadioSelFrameDisp(/* f20 58 */ float x, /* f22 60 */ float y, /* a0 4 */ u_char alpha) {
-	/* -0xd0(sp) */ DISP_SPRT frame_ds;
+	/* 0x0(sp) */ DISP_SPRT frame_ds;
 	/* f21 59 */ float center_scl;
 }
 
 /* 00206218 000001a4 */ static void MenuRadioNonSelFrameDisp(/* f21 59 */ float x, /* f20 58 */ float y, /* s1 17 */ u_char alpha) {
-	/* -0xc0(sp) */ DISP_SPRT frame_ds;
+	/* 0x0(sp) */ DISP_SPRT frame_ds;
 	/* f22 60 */ float center_scl;
 }
 
 /* 002063c0 000000c0 */ static void MenuRadioNoHearFrameDisp(/* f20 58 */ float x, /* f21 59 */ float y, /* a0 4 */ u_char alpha) {
-	/* -0xc0(sp) */ DISP_SPRT frame_ds;
+	/* 0x0(sp) */ DISP_SPRT frame_ds;
 }
 
 /* 00206480 00000074 */ static void MenuRadioCrystalTitleDebugPad() {}
 /* 002064f8 00000068 */ static void MenuRadioCrystalTitleTimerDebugDisp() {}
-/* 0032a998 00000054 */ DISP_CRYSTAL_DATA* DISP_CRYSTAL_DATA * _fixed_array_verifyrange<DISP_CRYSTAL_DATA>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ DISP_CRYSTAL_DATA* DISP_CRYSTAL_DATA * _fixed_array_verifyrange<DISP_CRYSTAL_DATA>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
 /* 00206560 00000008 */ static void __static_initialization_and_destruction_0(/* a0 4 */ int __initialize_p, /* a1 5 */ int __priority) {}
 /* 0032a998 0000003c */ type_info& DISP_CRYSTAL_DATA type_info function() {}
 /* 00206568 00000020 */ static void global constructors keyed to GetMenuRadioTexMem() {}
@@ -22525,48 +22955,48 @@
 
 /* 002070b8 0000012c */ void MenuSoulDisp() {
 	/* rdata 3bec60 */ static char __FUNCTION__[13];
-	/* -0x20(sp) */ u_char alpha;
+	/* 0x0(sp) */ u_char alpha;
 }
 
 /* 002071e8 00000100 */ static void MenuSoulListSelDisp(/* a0 4 */ int off_x, /* a1 5 */ int off_y, /* a2 6 */ u_char alpha) {}
 
 /* 002072e8 000001e8 */ static void MenuSoulCompMsgDisp(/* s2 18 */ int off_x, /* s3 19 */ int off_y, /* s4 20 */ u_char alpha) {
 	/* s1 17 */ int i;
-	/* -0x170(sp) */ DISP_SPRT cong_ds;
-	/* -0xe0(sp) */ DISP_SQAR dsq;
-	/* -0x60(sp) */ SQAR_DAT black_bg;
+	/* 0x10(sp) */ DISP_SPRT cong_ds;
+	/* 0xa0(sp) */ DISP_SQAR dsq;
+	/* 0x120(sp) */ SQAR_DAT black_bg;
 }
 
 /* 002074d0 00000024 */ static void MenuSoulGhostInfoDisp(/* a0 4 */ int off_x, /* a1 5 */ int off_y, /* a2 6 */ u_char alpha) {}
 
 /* 002074f8 00000150 */ static void MenuSoulBgDisp(/* v0 2 */ int off_x, /* v1 3 */ int off_y, /* s2 18 */ u_char alpha) {
 	/* s1 17 */ int i;
-	/* -0xc0(sp) */ DISP_SPRT bg_ds;
+	/* 0x0(sp) */ DISP_SPRT bg_ds;
 }
 
 /* 00207648 00000124 */ static void MenuSoulTitleDisp(/* v0 2 */ int off_x, /* v1 3 */ int off_y, /* s2 18 */ u_char alpha) {
 	/* s1 17 */ int i;
-	/* -0xc0(sp) */ DISP_SPRT title_ds;
+	/* 0x0(sp) */ DISP_SPRT title_ds;
 }
 
 /* 00207770 0000030c */ static void MenuSoulPhotoDisp(/* s6 22 */ int off_x, /* s7 23 */ int off_y, /* s5 21 */ u_char alpha) {
-	/* -0xf0(sp) */ DISP_SPRT ghost_ds;
+	/* 0x0(sp) */ DISP_SPRT ghost_ds;
 	/* v1 3 */ int disp_num;
-	/* -0x60(sp) */ u_char fade_alpha[2];
+	/* 0x90(sp) */ u_char fade_alpha[2];
 }
 
 /* 00207a80 0000003c */ static void MenuSoulGhostExplainDisp(/* v0 2 */ int msg_id, /* a1 5 */ int off_x, /* a2 6 */ int off_y, /* a3 7 */ u_char alpha) {}
 
-/* 00207ac0 00000194 */ static void MenuSoulNoReadFrameDisp(/* -0x60(sp) */ int off_x, /* s1 17 */ int off_y, /* fp 30 */ u_char alpha) {
+/* 00207ac0 00000194 */ static void MenuSoulNoReadFrameDisp(/* 0x90(sp) */ int off_x, /* s1 17 */ int off_y, /* fp 30 */ u_char alpha) {
 	/* s6 22 */ int i;
 	/* s2 18 */ int j;
 	/* s7 23 */ int disp_num;
 	/* s3 19 */ int ghost_list_label;
-	/* -0xf0(sp) */ DISP_SPRT frame_ds;
+	/* 0x0(sp) */ DISP_SPRT frame_ds;
 	/* s4 20 */ char disp_flg;
 }
 
-/* 00207c58 00000140 */ static void MenuSoulGhostNameDisp(/* -0x60(sp) */ int off_x, /* -0x5c(sp) */ int off_y, /* -0x58(sp) */ u_char alpha) {
+/* 00207c58 00000140 */ static void MenuSoulGhostNameDisp(/* 0x0(sp) */ int off_x, /* 0x4(sp) */ int off_y, /* 0x8(sp) */ u_char alpha) {
 	/* s6 22 */ int i;
 	/* s3 19 */ int j;
 	/* s7 23 */ int disp_num;
@@ -22584,40 +23014,40 @@
 }
 
 /* 00207f68 0000009c */ static void MenuSoulCompleteDisp(/* s1 17 */ int off_x, /* s0 16 */ int off_y, /* a2 6 */ u_char alpha) {
-	/* -0xb0(sp) */ DISP_SPRT complete_ds;
+	/* 0x0(sp) */ DISP_SPRT complete_ds;
 }
 
-/* 00208008 00000214 */ static void MenuSoulOrderSignDisp(/* -0x60(sp) */ int off_x, /* s0 16 */ int off_y, /* fp 30 */ u_char alpha) {
+/* 00208008 00000214 */ static void MenuSoulOrderSignDisp(/* 0x90(sp) */ int off_x, /* s0 16 */ int off_y, /* fp 30 */ u_char alpha) {
 	/* rdata 3becc8 */ static char __FUNCTION__[22];
 	/* s4 20 */ int i;
 	/* s1 17 */ int j;
 	/* s5 21 */ int disp_num;
 	/* s2 18 */ int ghost_list_label;
-	/* -0xf0(sp) */ DISP_SPRT sign_ds;
+	/* 0x0(sp) */ DISP_SPRT sign_ds;
 }
 
 /* 00208220 00000104 */ static void MenuSoulCursorBaseDisp(/* a0 4 */ int off_x, /* a1 5 */ int off_y, /* a2 6 */ u_char alpha) {
-	/* -0xb0(sp) */ DISP_SQAR dsq;
-	/* -0x30(sp) */ SQAR_DAT cursor_base;
+	/* 0x0(sp) */ DISP_SQAR dsq;
+	/* 0x80(sp) */ SQAR_DAT cursor_base;
 }
 
 /* 00208328 000001c0 */ static void MenuSoulCursorDisp(/* s3 19 */ int off_x, /* s2 18 */ int off_y, /* s4 20 */ u_char alpha) {
 	/* s0 16 */ int y;
-	/* -0xd0(sp) */ DISP_SPRT cursor_ds;
+	/* 0x0(sp) */ DISP_SPRT cursor_ds;
 }
 
 /* 002084e8 0000014c */ static void MenuSoulCursorTriangleDisp(/* s3 19 */ int off_x, /* s4 20 */ int off_y, /* a2 6 */ u_char alpha) {
 	/* s0 16 */ int up_y;
 	/* s2 18 */ int down_y;
-	/* -0xd0(sp) */ DISP_SPRT cursor_ds;
+	/* 0x0(sp) */ DISP_SPRT cursor_ds;
 }
 
 /* 00208638 00000114 */ static void MenuSoulScrollArrowDisp(/* v0 2 */ int off_x, /* s0 16 */ int off_y, /* a2 6 */ u_char alpha) {
-	/* -0xc0(sp) */ DISP_SPRT arrow_ds;
+	/* 0x0(sp) */ DISP_SPRT arrow_ds;
 }
 
 /* 00208750 000003a0 */ static void MenuSoulScrollDisp(/* s0 16 */ int off_x, /* s3 19 */ int off_y, /* s2 18 */ u_char alpha) {
-	/* -0xe0(sp) */ DISP_SPRT scroll_ds;
+	/* 0x0(sp) */ DISP_SPRT scroll_ds;
 	/* f20 58 */ float scroll_size;
 	/* f24 62 */ float scroll_y;
 	/* f23 61 */ float center_size;
@@ -22628,8 +23058,8 @@
 /* 00208b18 00000040 */ static void MenuSoulNumberDisp(/* a0 4 */ int data, /* a1 5 */ int num, /* v0 2 */ int x, /* t4 12 */ int y, /* t0 8 */ u_char alpha, /* t1 9 */ int pri, /* t2 10 */ u_char zero_flg) {}
 /* 00208b58 00000028 */ static void MenuSoulNotHaveListDisp(/* a0 4 */ int off_x, /* a1 5 */ int off_y, /* a2 6 */ u_char alpha) {}
 /* 00208b80 00000014 */ void SetSave_ListCompDispFlg(/* a0 4 */ MC_SAVE_DATA *data) {}
-/* 0032ae38 00000054 */ int* int * _fixed_array_verifyrange<int>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
-/* 0032ae38 00000054 */ DISP_SOUL_LIST_DATA* DISP_SOUL_LIST_DATA * _fixed_array_verifyrange<DISP_SOUL_LIST_DATA>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ int* int * _fixed_array_verifyrange<int>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ DISP_SOUL_LIST_DATA* DISP_SOUL_LIST_DATA * _fixed_array_verifyrange<DISP_SOUL_LIST_DATA>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
 /* 00208b98 00000008 */ static void __static_initialization_and_destruction_0(/* a0 4 */ int __initialize_p, /* a1 5 */ int __priority) {}
 /* 0032ae38 0000003c */ type_info& DISP_SOUL_LIST_DATA type_info function() {}
 /* 00208ba0 00000020 */ static void global constructors keyed to MenuSoulListCompFlgInit() {}
@@ -22697,7 +23127,7 @@
 }
 
 /* 002095c0 000001e4 */ static void MenuTopTitleDisp(/* s1 17 */ int off_x, /* s3 19 */ int off_y, /* s2 18 */ u_char alpha) {
-	/* -0xe0(sp) */ DISP_SPRT top_ds;
+	/* 0x0(sp) */ DISP_SPRT top_ds;
 	/* s0 16 */ int i;
 	/* f23 61 */ float title_line_tate;
 }
@@ -22705,19 +23135,19 @@
 /* 002097a8 000002e4 */ static void MenuTopSelectDisp(/* fp 30 */ int off_x, /* s6 22 */ int off_y, /* s2 18 */ u_char alpha) {
 	/* s0 16 */ int i;
 	/* s1 17 */ int disp_menu_cnt;
-	/* -0x190(sp) */ DISP_SPRT sel_ds_1;
-	/* -0x100(sp) */ DISP_SPRT sel_ds_2;
+	/* 0x0(sp) */ DISP_SPRT sel_ds_1;
+	/* 0x90(sp) */ DISP_SPRT sel_ds_2;
 	/* rdata 3bee38 */ static int select_tbl[8][3];
 	/* rdata 3bee98 */ static u_int sel_pk2_tbl[8];
 	/* rdata 3beeb8 */ static u_int non_sel_pk2_tbl[8];
 }
 
 /* 00209a90 00000158 */ static void MenuTopPlayDataDisp(/* s3 19 */ int off_x, /* s2 18 */ int off_y, /* a2 6 */ u_char alpha) {
-	/* -0xd0(sp) */ DISP_SPRT top_ds;
+	/* 0x0(sp) */ DISP_SPRT top_ds;
 }
 
 /* 00209be8 00000124 */ static void MenuTopPlayTimeDisp(/* s2 18 */ int off_x, /* s0 16 */ int off_y, /* a2 6 */ u_char alpha) {
-	/* -0x50(sp) */ TIME_INFO play_time;
+	/* 0x10(sp) */ TIME_INFO play_time;
 }
 
 /* 00209d10 00000064 */ static void MenuTopScoreDisp(/* s0 16 */ int off_x, /* s1 17 */ int off_y, /* a2 6 */ u_char alpha) {}
@@ -22730,7 +23160,7 @@
 
 /* 0020a0c8 0000019c */ static void MenuTopChapterTitleDisp(/* s0 16 */ int off_x, /* s1 17 */ int off_y, /* s2 18 */ u_char alpha) {
 	/* rdata 3beed8 */ static char __FUNCTION__[24];
-	/* -0xe0(sp) */ DISP_SPRT chapter_ds;
+	/* 0x0(sp) */ DISP_SPRT chapter_ds;
 	/* s0 16 */ int i;
 	/* rdata 3beef0 */ static int chapter_tbl[11][3];
 }
@@ -22757,18 +23187,18 @@
 /* 0020a548 00000030 */ void SetInteger(/* f12 50 */ float x, /* f13 51 */ float y, /* t1 9 */ int num) {}
 
 /* 0020a578 000000a0 */ void SetInteger2(/* s2 18 */ int pri, /* f20 58 */ float x, /* f21 59 */ float y, /* s4 20 */ int type, /* a2 6 */ u_char r, /* a3 7 */ u_char g, /* t0 8 */ u_char b, /* t1 9 */ int num) {
-	/* -0x50(sp) */ char cwo[16];
+	/* 0x0(sp) */ char cwo[16];
 }
 
 /* 0020a618 000000b0 */ void SetInteger3(/* s3 19 */ int pri, /* f20 58 */ float x, /* f21 59 */ float y, /* s5 21 */ int type, /* a2 6 */ u_char r, /* a3 7 */ u_char g, /* t0 8 */ u_char b, /* t1 9 */ u_char a, /* t2 10 */ int num) {
-	/* -0x60(sp) */ char cwo[16];
+	/* 0x0(sp) */ char cwo[16];
 }
 
 /* 0020a6c8 00000034 */ void SetASCIIString(/* f12 50 */ float x, /* f13 51 */ float y, /* t2 10 */ char *str) {}
 /* 0020a700 0000002c */ void SetASCIIString2(/* a0 4 */ int pri, /* f12 50 */ float x, /* f13 51 */ float y, /* a1 5 */ int type, /* a2 6 */ u_char r, /* a3 7 */ u_char g, /* t0 8 */ u_char b, /* t2 10 */ char *str) {}
 /* 0020a730 00000008 */ void MessageChangeDrawEnv(/* a0 4 */ DRAW_ENV_5 *p_change_env) {}
 
-/* 0020a738 00000280 */ void SetASCIIString3(/* -0x80(sp) */ int pri, /* f21 59 */ float x, /* f20 58 */ float y, /* s6 22 */ int type, /* -0x7c(sp) */ u_char r, /* -0x78(sp) */ u_char g, /* -0x74(sp) */ u_char b, /* -0x70(sp) */ u_char a, /* s2 18 */ char *str) {
+/* 0020a738 00000280 */ void SetASCIIString3(/* 0x10(sp) */ int pri, /* f21 59 */ float x, /* f20 58 */ float y, /* s6 22 */ int type, /* 0x14(sp) */ u_char r, /* 0x18(sp) */ u_char g, /* 0x1c(sp) */ u_char b, /* 0x20(sp) */ u_char a, /* s2 18 */ char *str) {
 	/* s1 17 */ int i;
 	/* s0 16 */ int n;
 	/* a0 4 */ int code;
@@ -22782,73 +23212,73 @@
 	/* s7 23 */ Q_WORDDATA *pbuf_top;
 }
 
-/* 0020a9b8 0000047c */ void SetASCIIString4(/* -0x80(sp) */ int pri, /* f20 58 */ float x, /* f21 59 */ float y, /* s4 20 */ int type, /* fp 30 */ u_char r, /* s7 23 */ u_char g, /* s6 22 */ u_char b, /* -0x7c(sp) */ char *str) {
-	/* -0x78(sp) */ int i;
+/* 0020a9b8 0000047c */ void SetASCIIString4(/* 0x10(sp) */ int pri, /* f20 58 */ float x, /* f21 59 */ float y, /* s4 20 */ int type, /* fp 30 */ u_char r, /* s7 23 */ u_char g, /* s6 22 */ u_char b, /* 0x14(sp) */ char *str) {
+	/* 0x18(sp) */ int i;
 	/* a0 4 */ int code;
 	/* v1 3 */ u_char c0;
 	/* a0 4 */ u_char c1;
 	/* v1 3 */ u_char c2;
-	/* -0x74(sp) */ u_short *tbl;
+	/* 0x1c(sp) */ u_short *tbl;
 	/* s1 17 */ u_short nfn;
-	/* -0x70(sp) */ int offset;
+	/* 0x20(sp) */ int offset;
 	/* s2 18 */ int xoff;
 	/* s0 16 */ Q_WORDDATA *pbuf;
-	/* -0x6c(sp) */ Q_WORDDATA *pbuf_top;
+	/* 0x24(sp) */ Q_WORDDATA *pbuf_top;
 }
 
 /* 0020ae38 00000008 */ void SetWString2(/* a0 4 */ int pri, /* f12 50 */ float x, /* f13 51 */ float y, /* a1 5 */ u_char r, /* a2 6 */ u_char g, /* a3 7 */ u_char b, /* t0 8 */ char *str) {}
 
 /* 0020ae40 000003e4 */ void SetString(/* f21 59 */ float x, /* f20 58 */ float y, /* s1 17 */ char *fmt) {
-	/* -0x2c0(sp) */ va_list ap;
+	/* 0x0(sp) */ va_list ap;
 	/* s0 16 */ int i;
 	/* s5 21 */ int n;
 	/* a0 4 */ int flag;
 	/* v1 3 */ int len;
 	/* s3 19 */ char cw;
-	/* -0x2b0(sp) */ char cwo[256];
-	/* -0x1b0(sp) */ char str[256];
+	/* 0x10(sp) */ char cwo[256];
+	/* 0x110(sp) */ char str[256];
 	/* s2 18 */ char *buf;
 }
 
-/* 0020b228 000004d4 */ void SetString2(/* -0xb0(sp) */ int pri, /* f20 58 */ float x, /* f21 59 */ float y, /* -0xac(sp) */ int type, /* -0xa8(sp) */ u_char r, /* -0xa4(sp) */ u_char g, /* -0xa0(sp) */ u_char b, /* s1 17 */ char *fmt) {
-	/* -0x2c0(sp) */ va_list ap;
+/* 0020b228 000004d4 */ void SetString2(/* 0x210(sp) */ int pri, /* f20 58 */ float x, /* f21 59 */ float y, /* 0x214(sp) */ int type, /* 0x218(sp) */ u_char r, /* 0x21c(sp) */ u_char g, /* 0x220(sp) */ u_char b, /* s1 17 */ char *fmt) {
+	/* 0x0(sp) */ va_list ap;
 	/* s0 16 */ int i;
 	/* s5 21 */ int n;
 	/* a0 4 */ int flag;
 	/* v1 3 */ int len;
 	/* s3 19 */ char cw;
-	/* -0x2b0(sp) */ char cwo[256];
-	/* -0x1b0(sp) */ char str[256];
+	/* 0x10(sp) */ char cwo[256];
+	/* 0x110(sp) */ char str[256];
 	/* s2 18 */ char *buf;
 }
 
 /* 0020b700 00000018 */ static Q_WORDDATA* SetFontPacketHeader(/* a0 4 */ Q_WORDDATA *pbuf, /* a1 5 */ int num, /* a2 6 */ int type, /* a3 7 */ u_char alp) {}
-/* 0020b718 00000050 */ static Q_WORDDATA* SetFont(/* a0 4 */ Q_WORDDATA *pbuf, /* t5 13 */ int pri, /* a2 6 */ int type, /* a3 7 */ int no, /* t0 8 */ int x, /* t1 9 */ int y, /* t2 10 */ u_char r, /* t3 11 */ u_char g, /* 0x0(sp) */ int b, /* 0x8(sp) */ int a) {}
+/* 0020b718 00000050 */ static Q_WORDDATA* SetFont(/* a0 4 */ Q_WORDDATA *pbuf, /* t5 13 */ int pri, /* a2 6 */ int type, /* a3 7 */ int no, /* t0 8 */ int x, /* t1 9 */ int y, /* t2 10 */ u_char r, /* t3 11 */ u_char g, /* 0x30(sp) */ int b, /* 0x38(sp) */ int a) {}
 
 /* 0020b768 00000120 */ static Q_WORDDATA* SetFontTex(/* t1 9 */ Q_WORDDATA *pbuf, /* a1 5 */ int flg, /* a2 6 */ int bank) {
-	/* -0x20(sp) */ sceGsTex0 Load;
-	/* -0x18(sp) */ sceGsTex0 Change;
-	/* -0x10(sp) */ sceGsTex0 sgt;
+	/* 0x0(sp) */ sceGsTex0 Load;
+	/* 0x8(sp) */ sceGsTex0 Change;
+	/* 0x10(sp) */ sceGsTex0 sgt;
 	/* a2 6 */ int n;
 }
 
 /* 0020b888 0000006c */ void SetFontEnv() {}
 
-/* 0020b8f8 000001dc */ static Q_WORDDATA* SetFontPat(/* t4 12 */ Q_WORDDATA *pbuf, /* a1 5 */ int type, /* s4 20 */ int pri, /* a3 7 */ int fn, /* t0 8 */ int x, /* t1 9 */ int y, /* -0x60(sp) */ int fw, /* fp 30 */ u_char r, /* 0x0(sp) */ int g, /* 0x8(sp) */ int b, /* 0x10(sp) */ int a) {
+/* 0020b8f8 000001dc */ static Q_WORDDATA* SetFontPat(/* t4 12 */ Q_WORDDATA *pbuf, /* a1 5 */ int type, /* s4 20 */ int pri, /* a3 7 */ int fn, /* t0 8 */ int x, /* t1 9 */ int y, /* 0x0(sp) */ int fw, /* fp 30 */ u_char r, /* 0x60(sp) */ int g, /* 0x68(sp) */ int b, /* 0x70(sp) */ int a) {
 	/* s6 22 */ u_char g;
 	/* s7 23 */ u_char b;
 	/* s5 21 */ u_char a;
-	/* -0x5c(sp) */ int px2;
+	/* 0x4(sp) */ int px2;
 	/* t1 9 */ int py2;
 	/* a1 5 */ u_int tw1;
 	/* a3 7 */ u_int th1;
 	/* a2 6 */ u_int tw2;
 	/* v1 3 */ u_int th2;
-	/* -0x58(sp) */ u_int Font_W;
+	/* 0x8(sp) */ u_int Font_W;
 	/* t7 15 */ u_int Font_H;
 	/* t5 13 */ u_int Num_W;
 	/* a0 4 */ int div;
-	/* -0x54(sp) */ int dx;
+	/* 0xc(sp) */ int dx;
 	/* a0 4 */ int dy;
 	/* v1 3 */ int dw;
 	/* t1 9 */ int dh;
@@ -22857,7 +23287,7 @@
 	/* s2 18 */ int off_h;
 }
 
-/* 0020bad8 00000100 */ static Q_WORDDATA* SetUnderLine(/* t4 12 */ Q_WORDDATA *pbuf, /* a1 5 */ int sw, /* s0 16 */ int pri, /* a3 7 */ int x, /* t0 8 */ int y, /* t1 9 */ int fw, /* s1 17 */ u_char r, /* t3 11 */ u_char g, /* 0x0(sp) */ int b, /* 0x8(sp) */ int a) {
+/* 0020bad8 00000100 */ static Q_WORDDATA* SetUnderLine(/* t4 12 */ Q_WORDDATA *pbuf, /* a1 5 */ int sw, /* s0 16 */ int pri, /* a3 7 */ int x, /* t0 8 */ int y, /* t1 9 */ int fw, /* s1 17 */ u_char r, /* t3 11 */ u_char g, /* 0x20(sp) */ int b, /* 0x28(sp) */ int a) {
 	/* t2 10 */ u_char b;
 	/* t1 9 */ u_char a;
 	/* s2 18 */ int px2;
@@ -22889,12 +23319,13 @@
 
 /* 0020be00 000000f0 */ void PrintMsgDef_W(/* s1 17 */ int msg_type, /* s2 18 */ int msg_id) {
 	/* rdata 3bf180 */ static char __FUNCTION__[14];
-	/* -0x70(sp) */ DISP_STR ds;
-	/* -0x30(sp) */ MSG_WIN_DAT win_ctrl;
+	/* 0x0(sp) */ DISP_STR ds;
+	/* 0x40(sp) */ MSG_WIN_DAT win_ctrl;
 }
 
 /* 0020bef0 00000114 */ void SetMsgDefData(/* s1 17 */ DISP_STR *msg_data, /* s0 16 */ int msg_type) {
-	/* -0x50(sp) */ STR_DAT sd;
+	/* rdata 3bf218 */ static char __FUNCTION__[14];
+	/* 0x0(sp) */ STR_DAT sd;
 	/* s0 16 */ int msg_def_id;
 }
 
@@ -22907,8 +23338,9 @@
 	/* rdata 3bf2b8 */ static char __FUNCTION__[9];
 }
 
-/* 0020c1e0 0000012c */ int PrintMsg(/* s0 16 */ int msg_type, /* s1 17 */ int msg_id, /* s7 23 */ int x, /* s2 18 */ int y, /* s3 19 */ int col_label, /* s4 20 */ int alpha, /* s5 21 */ int pri, /* s6 22 */ int x_wide, /* 0x0(sp) */ int y_wide) {
+/* 0020c1e0 0000012c */ int PrintMsg(/* s0 16 */ int msg_type, /* s1 17 */ int msg_id, /* s7 23 */ int x, /* s2 18 */ int y, /* s3 19 */ int col_label, /* s4 20 */ int alpha, /* s5 21 */ int pri, /* s6 22 */ int x_wide, /* 0x60(sp) */ int y_wide) {
 	/* v0 2 */ int y_wide;
+	/* rdata 3bf308 */ static char __FUNCTION__[9];
 }
 
 /* 0020c310 000001b8 */ int PrintMsgOneLine(/* s1 17 */ DISP_STR *disp_addr, /* s0 16 */ MSG_EXE_CTRL *pCtrl, /* s4 20 */ Q_WORDDATA **ppbuf) {
@@ -22917,21 +23349,21 @@
 }
 
 /* 0020c4c8 000000c4 */ int PrintMsg(/* s1 17 */ DISP_STR *disp_addr, /* a1 5 */ int one_line_flg) {
-	/* -0x60(sp) */ MSG_EXE_CTRL ctrl;
+	/* 0x0(sp) */ MSG_EXE_CTRL ctrl;
 	/* s2 18 */ int mask_loop;
-	/* -0x40(sp) */ Q_WORDDATA *pbuf;
+	/* 0x20(sp) */ Q_WORDDATA *pbuf;
 }
 
-/* 0020c590 00000174 */ int PrintMsg_ArrangeOneLine(/* s3 19 */ u_char *pAdrs, /* s7 23 */ int x, /* s4 20 */ int y, /* s1 17 */ int col_label, /* s2 18 */ int alpha, /* s0 16 */ int pri, /* s5 21 */ int x_wide, /* s6 22 */ int y_wide, /* 0x0(sp) */ int arrange) {
+/* 0020c590 00000174 */ int PrintMsg_ArrangeOneLine(/* s3 19 */ u_char *pAdrs, /* s7 23 */ int x, /* s4 20 */ int y, /* s1 17 */ int col_label, /* s2 18 */ int alpha, /* s0 16 */ int pri, /* s5 21 */ int x_wide, /* s6 22 */ int y_wide, /* 0x90(sp) */ int arrange) {
 	/* fp 30 */ int arrange;
 	/* rdata 3bf360 */ static char __FUNCTION__[24];
-	/* -0x90(sp) */ DISP_STR disp_wrk;
+	/* 0x0(sp) */ DISP_STR disp_wrk;
 }
 
 /* 0020c708 00000034 */ static void MsgExeCtrlInit(/* a0 4 */ DISP_STR *data, /* a1 5 */ MSG_EXE_CTRL *ctrl, /* a2 6 */ u_char disp_type) {}
 
 /* 0020c740 00000094 */ static void MesBankExe(/* s1 17 */ DISP_STR *data, /* s2 18 */ MSG_EXE_CTRL *ctrl) {
-	/* -0x30(sp) */ u_char bank_tbl[5];
+	/* 0x0(sp) */ u_char bank_tbl[5];
 }
 
 /* 0020c7d8 00000070 */ static void MesSetExe(/* s0 16 */ DISP_STR *data, /* s1 17 */ MSG_EXE_CTRL *ctrl) {}
@@ -22940,11 +23372,11 @@
 /* 0020c950 00000134 */ static void MesArrangeExe(/* s0 16 */ DISP_STR *data, /* s2 18 */ MSG_WIN_DAT *win, /* s1 17 */ MSG_EXE_CTRL *ctrl) {}
 /* 0020ca88 00000180 */ static void MesRetExe(/* s1 17 */ DISP_STR *data, /* s2 18 */ MSG_WIN_DAT *win, /* s0 16 */ MSG_EXE_CTRL *ctrl) {}
 
-/* 0020cc08 000001a4 */ static void MesExNumExe(/* s2 18 */ DISP_STR *data, /* s1 17 */ MSG_EXE_CTRL *ctrl) {
+/* 0020cc08 000001a4 */ static void MesExNumExe(/* s2 18 */ DISP_STR *data, /* s1 17 */ MSG_EXE_CTRL *ctrl, /* s5 21 */ Q_WORDDATA **ppbuf) {
 	/* rdata 3bf390 */ static char __FUNCTION__[12];
 	/* s3 19 */ int num;
 	/* s0 16 */ int i;
-	/* -0x140(sp) */ char cwo[256];
+	/* 0x0(sp) */ char cwo[256];
 	/* rdata 3bf3a0 */ static u_char normal_tbl[10];
 }
 
@@ -22952,65 +23384,67 @@
 
 /* 0020cdd0 000001cc */ int PrintMsg_T(/* s1 17 */ int msg_type, /* s2 18 */ int msg_id, /* s7 23 */ int x, /* s6 22 */ int y, /* s4 20 */ int col_label, /* s5 21 */ int alpha, /* s3 19 */ int pri) {
 	/* rdata 3bf3c0 */ static char __FUNCTION__[11];
-	/* -0xd0(sp) */ DISP_STR msg_data;
-	/* -0x90(sp) */ DISP_STR disp_wrk;
+	/* 0x0(sp) */ DISP_STR msg_data;
+	/* 0x40(sp) */ DISP_STR disp_wrk;
 }
 
 /* 0020cfa0 00000298 */ int PrintMsg_T(/* s0 16 */ DISP_STR *disp_addr) {
 	/* s4 20 */ int loop;
-	/* -0x70(sp) */ MSG_EXE_CTRL ctrl;
+	/* 0x0(sp) */ MSG_EXE_CTRL ctrl;
 	/* s1 17 */ u_char bank_label;
 	/* s1 17 */ u_char draw_flg;
-	/* -0x50(sp) */ Q_WORDDATA *pbuf;
-	/* -0x40(sp) */ u_char bank_tbl[5];
+	/* 0x20(sp) */ Q_WORDDATA *pbuf;
+	/* 0x30(sp) */ u_char bank_tbl[5];
 }
 
-/* 0020d238 00000448 */ int PrintMsg_P(/* s1 17 */ int msg_type, /* s2 18 */ int msg_id, /* s7 23 */ int x, /* fp 30 */ int y, /* s5 21 */ int col_label, /* s6 22 */ int alpha, /* s3 19 */ int pri, /* -0x5c(sp) */ int x_wide, /* 0x0(sp) */ int y_wide) {
+/* 0020d238 00000448 */ int PrintMsg_P(/* s1 17 */ int msg_type, /* s2 18 */ int msg_id, /* s7 23 */ int x, /* fp 30 */ int y, /* s5 21 */ int col_label, /* s6 22 */ int alpha, /* s3 19 */ int pri, /* 0xa4(sp) */ int x_wide, /* 0x100(sp) */ int y_wide) {
 	/* v0 2 */ int y_wide;
-	/* -0x100(sp) */ DISP_STR msg_data;
-	/* -0xc0(sp) */ DISP_STR disp_wrk;
-	/* -0x80(sp) */ MSG_EXE_CTRL ctrl;
+	/* rdata 3bf470 */ static char __FUNCTION__[11];
+	/* 0x0(sp) */ DISP_STR msg_data;
+	/* 0x40(sp) */ DISP_STR disp_wrk;
+	/* 0x80(sp) */ MSG_EXE_CTRL ctrl;
 	/* s2 18 */ u_char draw_flg;
 	/* s3 19 */ u_char btn_wait_cnt;
 	/* s4 20 */ int loop;
-	/* -0x60(sp) */ Q_WORDDATA *pbuf;
+	/* 0xa0(sp) */ Q_WORDDATA *pbuf;
 }
 
 /* 0020d680 000003ec */ int PrintMsg_W(/* s0 16 */ DISP_STR *disp_addr, /* s1 17 */ MSG_WIN_DAT *win_ctrl) {
 	/* s3 19 */ int loop;
-	/* -0x110(sp) */ MSG_EXE_CTRL ctrl;
+	/* 0x0(sp) */ MSG_EXE_CTRL ctrl;
 	/* s2 18 */ u_char draw_flg;
 	/* s4 20 */ u_char btn_wait_cnt;
-	/* -0xf0(sp) */ int win_x;
-	/* -0xec(sp) */ int win_y;
-	/* -0xe8(sp) */ Q_WORDDATA *pbuf;
+	/* 0x20(sp) */ int win_x;
+	/* 0x24(sp) */ int win_y;
+	/* 0x28(sp) */ Q_WORDDATA *pbuf;
 }
 
 /* 0020da70 00000470 */ int PrintMsg_TW(/* s0 16 */ DISP_STR *disp_addr, /* s4 20 */ MSG_WIN_DAT *win_ctrl) {
 	/* s2 18 */ int loop;
-	/* -0x120(sp) */ MSG_EXE_CTRL ctrl;
+	/* 0x0(sp) */ MSG_EXE_CTRL ctrl;
 	/* s1 17 */ u_char bank_label;
 	/* s1 17 */ u_char draw_flg;
 	/* s3 19 */ u_char btn_wait_cnt;
-	/* -0x100(sp) */ int win_x;
-	/* -0xfc(sp) */ int win_y;
-	/* -0xf8(sp) */ Q_WORDDATA *pbuf;
-	/* -0xf0(sp) */ u_char bank_tbl[5];
+	/* 0x20(sp) */ int win_x;
+	/* 0x24(sp) */ int win_y;
+	/* 0x28(sp) */ Q_WORDDATA *pbuf;
+	/* 0x30(sp) */ u_char bank_tbl[5];
 }
 
-/* 0020dee0 0000028c */ int PrintMsg_Arrange(/* s0 16 */ int msg_type, /* s1 17 */ int msg_id, /* s2 18 */ int x, /* fp 30 */ int y, /* s6 22 */ int col_label, /* s7 23 */ int alpha, /* s5 21 */ int pri, /* -0x60(sp) */ int x_wide, /* 0x0(sp) */ int y_wide, /* 0x8(sp) */ int arrange) {
+/* 0020dee0 0000028c */ int PrintMsg_Arrange(/* s0 16 */ int msg_type, /* s1 17 */ int msg_id, /* s2 18 */ int x, /* fp 30 */ int y, /* s6 22 */ int col_label, /* s7 23 */ int alpha, /* s5 21 */ int pri, /* 0x80(sp) */ int x_wide, /* 0xe0(sp) */ int y_wide, /* 0xe8(sp) */ int arrange) {
 	/* v0 2 */ int y_wide;
 	/* s3 19 */ int arrange;
-	/* -0xe0(sp) */ DISP_STR msg_data;
-	/* -0xa0(sp) */ DISP_STR disp_wrk;
+	/* rdata 3bf580 */ static char __FUNCTION__[17];
+	/* 0x0(sp) */ DISP_STR msg_data;
+	/* 0x40(sp) */ DISP_STR disp_wrk;
 }
 
 /* 0020e170 000003a0 */ void PrintChoice(/* a0 4 */ DISP_STR *msg, /* s1 17 */ MSG_WIN_DAT *win, /* s0 16 */ int choice_msg, /* s5 21 */ int *choice, /* s7 23 */ int csr) {
-	/* -0xd0(sp) */ DISP_STR msg_wrk;
-	/* -0x90(sp) */ MSG_WIN_DAT win_wrk;
+	/* 0x10(sp) */ DISP_STR msg_wrk;
+	/* 0x50(sp) */ MSG_WIN_DAT win_wrk;
 	/* s4 20 */ u_char choice_num;
 	/* v0 2 */ short int choice_y;
-	/* -0x80(sp) */ int choice_length[3];
+	/* 0x60(sp) */ int choice_length[3];
 	/* s2 18 */ int max_length;
 	/* s3 19 */ int i;
 }
@@ -23020,6 +23454,7 @@
 }
 
 /* 0020e748 00000144 */ int GetMsgPageNum(/* s0 16 */ int msg_type, /* s1 17 */ int msg_id) {
+	/* rdata 3bf670 */ static char __FUNCTION__[14];
 	/* a2 6 */ u_char loop;
 	/* a0 4 */ u_char *msg_addr;
 	/* a1 5 */ int page_num;
@@ -23031,22 +23466,23 @@
 /* 0020e8a8 0000003c */ void MsgColChange(/* a0 4 */ DISP_STR *disp, /* a1 5 */ u_char col_label) {}
 /* 0020e8e8 00000094 */ static void SetMsgFont(/* s1 17 */ Q_WORDDATA **pbuf, /* s0 16 */ DISP_STR *disp_addr, /* a2 6 */ int nbank, /* a3 7 */ u_char nfn, /* t0 8 */ u_char nfw, /* t1 9 */ u_char nfh) {}
 
-/* 0020e980 0000016c */ void DrawSelItemMsg(/* fp 30 */ int type, /* -0x70(sp) */ int no, /* s5 21 */ int x, /* s4 20 */ int y, /* s7 23 */ int alpha, /* s0 16 */ int bWithCsr, /* -0x6c(sp) */ int col_id, /* s6 22 */ int pri) {
+/* 0020e980 0000016c */ void DrawSelItemMsg(/* fp 30 */ int type, /* 0x10(sp) */ int no, /* s5 21 */ int x, /* s4 20 */ int y, /* s7 23 */ int alpha, /* s0 16 */ int bWithCsr, /* 0x14(sp) */ int col_id, /* s6 22 */ int pri) {
 	/* s1 17 */ int msg_length;
 }
 
 /* 0020eaf0 0000024c */ int GetMsgLineLength(/* a0 4 */ u_char *msg_addr, /* s3 19 */ u_char **pp_next_addr) {
+	/* rdata 3bf710 */ static char __FUNCTION__[17];
 	/* s1 17 */ u_char *wrk_addr;
 	/* s7 23 */ int nbank;
 	/* s0 16 */ int i;
 	/* fp 30 */ int loop;
 	/* s4 20 */ u_char nfn;
-	/* -0x170(sp) */ char cwo[256];
+	/* 0x0(sp) */ char cwo[256];
 	/* s0 16 */ u_char bank_label;
 	/* s6 22 */ u_char draw_flg;
 	/* s5 21 */ int str_width;
-	/* -0x70(sp) */ u_char bank_tbl[5];
-	/* -0x60(sp) */ int num;
+	/* 0x100(sp) */ u_char bank_tbl[5];
+	/* 0x110(sp) */ int num;
 	/* rdata 3bf728 */ static u_char normal_tbl[10];
 }
 
@@ -23057,42 +23493,42 @@
 /* 0020edf0 0000049c */ int SetMessageV2(/* s7 23 */ DISP_STR *s) {
 	/* s0 16 */ u_char *c;
 	/* v1 3 */ int n;
-	/* -0x80(sp) */ int m;
-	/* -0x7c(sp) */ int loop;
-	/* -0x78(sp) */ int npri;
+	/* 0x120(sp) */ int m;
+	/* 0x124(sp) */ int loop;
+	/* 0x128(sp) */ int npri;
 	/* s4 20 */ int nx;
 	/* s6 22 */ int ny;
-	/* -0x74(sp) */ int nxw;
-	/* -0x70(sp) */ int nyw;
-	/* -0x6c(sp) */ u_char nr;
-	/* -0x68(sp) */ u_char ng;
+	/* 0x12c(sp) */ int nxw;
+	/* 0x130(sp) */ int nyw;
+	/* 0x134(sp) */ u_char nr;
+	/* 0x138(sp) */ u_char ng;
 	/* fp 30 */ u_char nb;
-	/* -0x64(sp) */ u_char na;
+	/* 0x13c(sp) */ u_char na;
 	/* s1 17 */ u_char nfn;
 	/* s2 18 */ u_char nfw;
-	/* -0x180(sp) */ char cwo[256];
+	/* 0x20(sp) */ char cwo[256];
 	/* s3 19 */ Q_WORDDATA *pbuf;
-	/* -0x60(sp) */ Q_WORDDATA *pbuf_top;
+	/* 0x140(sp) */ Q_WORDDATA *pbuf_top;
 }
 
 /* 0020f290 000007e8 */ int SubMessageV3(/* t0 8 */ u_char *s, /* a1 5 */ int pri, /* a2 6 */ int delflg) {
 	/* s2 18 */ u_char *c;
 	/* v1 3 */ int n;
-	/* -0x70(sp) */ int m;
-	/* -0x6c(sp) */ int loop;
-	/* -0x68(sp) */ int npri;
+	/* 0x120(sp) */ int m;
+	/* 0x124(sp) */ int loop;
+	/* 0x128(sp) */ int npri;
 	/* s4 20 */ int nx;
 	/* s7 23 */ int ny;
-	/* -0x64(sp) */ u_char nr;
-	/* -0x60(sp) */ u_char ng;
-	/* -0x5c(sp) */ u_char nb;
+	/* 0x12c(sp) */ u_char nr;
+	/* 0x130(sp) */ u_char ng;
+	/* 0x134(sp) */ u_char nb;
 	/* fp 30 */ u_char na;
 	/* s1 17 */ u_char nfn;
 	/* s3 19 */ u_char nfw;
-	/* -0x58(sp) */ u_char nul;
-	/* -0x170(sp) */ char cwo[256];
+	/* 0x138(sp) */ u_char nul;
+	/* 0x20(sp) */ char cwo[256];
 	/* s6 22 */ Q_WORDDATA *pbuf;
-	/* -0x54(sp) */ Q_WORDDATA *pbuf_top;
+	/* 0x13c(sp) */ Q_WORDDATA *pbuf_top;
 }
 
 /* 0020fa78 00000018 */ int SetMessageV3(/* a0 4 */ u_char *s, /* a1 5 */ int pri) {}
@@ -23107,15 +23543,17 @@
 	/* rdata 3bf840 */ static char __FUNCTION__[15];
 }
 
-/* 0020fc70 000001a8 */ void PrintNumber(/* s5 21 */ int data, /* s0 16 */ int x, /* -0x60(sp) */ int y, /* s3 19 */ u_char col_label, /* s7 23 */ u_char alpha, /* fp 30 */ int pri, /* s6 22 */ u_char type) {
+/* 0020fc70 000001a8 */ void PrintNumber(/* s5 21 */ int data, /* s0 16 */ int x, /* 0x0(sp) */ int y, /* s3 19 */ u_char col_label, /* s7 23 */ u_char alpha, /* fp 30 */ int pri, /* s6 22 */ u_char type) {
+	/* rdata 3bf898 */ static char __FUNCTION__[12];
 	/* v0 2 */ int i;
 	/* v1 3 */ int j;
 	/* a1 5 */ int ten_tmp;
 	/* s4 20 */ u_char set_flg;
 }
 
-/* 0020fe18 00000210 */ void PrintNumber_N(/* s4 20 */ int data, /* s0 16 */ int num, /* s1 17 */ int x, /* -0x60(sp) */ int y, /* s5 21 */ u_char col_label, /* s7 23 */ u_char alpha, /* fp 30 */ int pri, /* s6 22 */ u_char type, /* 0x0(sp) */ int zero_flg) {
-	/* -0x5c(sp) */ u_char zero_flg;
+/* 0020fe18 00000210 */ void PrintNumber_N(/* s4 20 */ int data, /* s0 16 */ int num, /* s1 17 */ int x, /* 0x0(sp) */ int y, /* s5 21 */ u_char col_label, /* s7 23 */ u_char alpha, /* fp 30 */ int pri, /* s6 22 */ u_char type, /* 0x60(sp) */ int zero_flg) {
+	/* 0x4(sp) */ u_char zero_flg;
+	/* rdata 3bf8e8 */ static char __FUNCTION__[14];
 	/* a1 5 */ int i;
 	/* v1 3 */ int j;
 	/* a2 6 */ int ten_tmp;
@@ -23123,25 +23561,27 @@
 }
 
 /* 00210028 00000110 */ void PrintNumber_One(/* a0 4 */ int data, /* t4 12 */ int x, /* a2 6 */ int y, /* a1 5 */ u_char col_label, /* t0 8 */ u_char alpha, /* t1 9 */ int pri, /* t2 10 */ u_char type) {
-	/* -0x80(sp) */ u_char str[2];
-	/* -0x70(sp) */ DISP_STR msg_data;
-	/* -0x30(sp) */ u_char em_size_tbl[10];
-	/* -0x20(sp) */ u_char normal_tbl[10];
+	/* 0x0(sp) */ u_char str[2];
+	/* 0x10(sp) */ DISP_STR msg_data;
+	/* 0x50(sp) */ u_char em_size_tbl[10];
+	/* 0x60(sp) */ u_char normal_tbl[10];
 }
 
-/* 00210138 00000068 */ int GetMsgIDNumMax(/* s0 16 */ int msg_type) {}
+/* 00210138 00000068 */ int GetMsgIDNumMax(/* s0 16 */ int msg_type) {
+	/* rdata 3bf980 */ static char __FUNCTION__[15];
+}
 
 /* 002101a0 000000f8 */ void FontDispSample() {
-	/* -0x180(sp) */ DISP_STR ds;
-	/* -0x140(sp) */ STR_DAT sd;
+	/* 0x0(sp) */ DISP_STR ds;
+	/* 0x40(sp) */ STR_DAT sd;
 	/* v1 3 */ int i;
 	/* a0 4 */ int n;
-	/* -0x110(sp) */ u_char stra[250];
+	/* 0x70(sp) */ u_char stra[250];
 }
 
 /* 00210298 0000009c */ void DebugPrintMsgDef_W(/* s0 16 */ int msg_type, /* s1 17 */ int msg_id, /* a2 6 */ u_char win_flg) {
-	/* -0x80(sp) */ DISP_STR ds;
-	/* -0x40(sp) */ MSG_WIN_DAT win_ctrl;
+	/* 0x0(sp) */ DISP_STR ds;
+	/* 0x40(sp) */ MSG_WIN_DAT win_ctrl;
 }
 
 /* 00210338 00000018 */ void DebugMsgCtrlInit() {}
@@ -23175,24 +23615,24 @@
 /* 00210968 00000034 */ static char** char * * _fixed_array_verifyrange<char *>(/* a0 4 */ size_t v, /* a1 5 */ size_t _max) {}
 /* 002109a0 00000034 */ static unsigned int** unsigned int * * _fixed_array_verifyrange<unsigned int *>(/* a0 4 */ size_t v, /* a1 5 */ size_t _max) {}
 
-/* 002109d8 00000220 */ u_int* mimInitMimeCtrl(/* a0 4 */ MIME_CTRL *m_ctrl, /* a1 5 */ MIME_DAT *mdat, /* s2 18 */ u_int *mim_p, /* -0x70(sp) */ u_int *mdl_p, /* s6 22 */ u_int *tmp_p, /* -0x6c(sp) */ u_int *m_num) {
-	/* -0x68(sp) */ u_int i;
+/* 002109d8 00000220 */ u_int* mimInitMimeCtrl(/* a0 4 */ MIME_CTRL *m_ctrl, /* a1 5 */ MIME_DAT *mdat, /* s2 18 */ u_int *mim_p, /* 0x1a0(sp) */ u_int *mdl_p, /* s6 22 */ u_int *tmp_p, /* 0x1a4(sp) */ u_int *m_num) {
+	/* 0x1a8(sp) */ u_int i;
 	/* s0 16 */ u_int j;
-	/* -0x64(sp) */ u_int mim_num;
-	/* -0x210(sp) */ fixed_array<unsigned int,50> parts_buf;
-	/* -0x140(sp) */ fixed_array<unsigned int *,50> parts_p;
+	/* 0x1ac(sp) */ u_int mim_num;
+	/* 0x0(sp) */ fixed_array<unsigned int,50> parts_buf;
+	/* 0xd0(sp) */ fixed_array<unsigned int *,50> parts_p;
 	/* s3 19 */ u_int *parts;
-	/* -0x60(sp) */ u_int fsize;
+	/* 0x1b0(sp) */ u_int fsize;
 	/* s4 20 */ u_int parts_no;
-	/* -0x5c(sp) */ u_int flg;
+	/* 0x1b4(sp) */ u_int flg;
 }
 
-/* 00210bf8 0000013c */ u_int mimGetBufSize(/* s2 18 */ u_int *mim_p, /* -0x60(sp) */ u_int *mdl_p) {
+/* 00210bf8 0000013c */ u_int mimGetBufSize(/* s2 18 */ u_int *mim_p, /* 0xd0(sp) */ u_int *mdl_p) {
 	/* s5 21 */ u_int i;
 	/* s0 16 */ u_int j;
-	/* -0x5c(sp) */ u_int mim_num;
-	/* -0x58(sp) */ u_int work_buf;
-	/* -0x130(sp) */ fixed_array<unsigned int,50> parts_buf;
+	/* 0xd4(sp) */ u_int mim_num;
+	/* 0xd8(sp) */ u_int work_buf;
+	/* 0x0(sp) */ fixed_array<unsigned int,50> parts_buf;
 	/* s4 20 */ u_int *parts;
 	/* s7 23 */ u_int fsize;
 	/* s3 19 */ u_int parts_no;
@@ -23208,7 +23648,7 @@
 	/* a1 5 */ WMIM_DAT *wmim_tbl;
 	/* s0 16 */ MIME_CTRL *m_ctrl;
 	/* s5 21 */ u_char flg;
-	/* -0xb0(sp) */ char name[100];
+	/* 0x0(sp) */ char name[100];
 	/* v1 3 */ WMIM_DAT *wdat;
 }
 
@@ -23284,7 +23724,7 @@
 	/* v1 3 */ u_int *ko_top;
 	/* f1 39 */ float weight;
 	/* s4 20 */ MIME_DAT *mdat;
-	/* -0x60(sp) */ fixed_array<unsigned char,6> acs_flg;
+	/* 0x0(sp) */ fixed_array<unsigned char,6> acs_flg;
 	/* t0 8 */ u_int koblock_num;
 	/* v1 3 */ u_int *mim_top;
 	/* a0 4 */ u_int frame;
@@ -23308,11 +23748,11 @@
 	/* rdata 3c0040 */ static char __FUNCTION__[13];
 	/* s2 18 */ MIME_DAT *mdat;
 	/* s7 23 */ u_int mim_num;
-	/* -0x60(sp) */ u_int bg_num;
+	/* 0x20(sp) */ u_int bg_num;
 	/* s3 19 */ u_int *pBakDat;
 	/* v0 2 */ u_int stat;
 	/* s4 20 */ u_int i;
-	/* -0x80(sp) */ fixed_array<unsigned char,30> flg;
+	/* 0x0(sp) */ fixed_array<unsigned char,30> flg;
 	/* s1 17 */ MIME_CTRL *m_ctrl;
 	/* s1 17 */ MIME_CTRL *m_ctrl;
 }
@@ -23334,7 +23774,7 @@
 /* 00212078 000001c4 */ void SceneMimSetVertex(/* s3 19 */ ANI_CTRL *ani_ctrl, /* s4 20 */ u_int frame) {
 	/* s0 16 */ MIME_DAT *mdat;
 	/* s2 18 */ u_int i;
-	/* -0x60(sp) */ fixed_array<unsigned char,30> flg;
+	/* 0x0(sp) */ fixed_array<unsigned char,30> flg;
 	/* s1 17 */ MIME_CTRL *m_ctrl;
 }
 
@@ -23356,19 +23796,19 @@
 
 /* 00212348 000002f4 */ void mimWeightCtrl(/* fp 30 */ ANI_CTRL *ani_ctrl, /* a1 5 */ u_int weight_id, /* f20 58 */ float scale) {
 	/* v1 3 */ u_int i;
-	/* -0x100(sp) */ float m[4][4];
-	/* -0xc0(sp) */ float pos[4];
-	/* -0xb0(sp) */ float f[4];
-	/* -0xa0(sp) */ float char_pos[4];
-	/* -0x90(sp) */ float char_v[4];
-	/* -0x80(sp) */ float reverse[4];
-	/* -0x70(sp) */ float force[4];
+	/* 0x0(sp) */ float m[4][4];
+	/* 0x40(sp) */ float pos[4];
+	/* 0x50(sp) */ float f[4];
+	/* 0x60(sp) */ float char_pos[4];
+	/* 0x70(sp) */ float char_v[4];
+	/* 0x80(sp) */ float reverse[4];
+	/* 0x90(sp) */ float force[4];
 	/* s0 16 */ HeaderSection *hs;
 	/* s6 22 */ WMIM_CTRL *w_ctrl;
 	/* s7 23 */ WMIM_DAT *wdat;
 }
 
-/* 0032d28c 00000054 */ u_int* unsigned int * _fixed_array_verifyrange<unsigned int>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ u_int* unsigned int * _fixed_array_verifyrange<unsigned int>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
 /* 0032d28c 00000054 */ u_char* unsigned char * _fixed_array_verifyrange<unsigned char>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
 
 // *****************************************************************************
@@ -23379,7 +23819,7 @@
 	/* s0 16 */ int i;
 }
 
-/* 002126d0 00000068 */ static void SpCmnPrintNumber_NK2(/* a0 4 */ int iData, /* v0 2 */ int iNum, /* v1 3 */ int iX, /* t4 12 */ int iY, /* t7 15 */ u_char ucColLabel, /* t1 9 */ u_char ucAlpha, /* t5 13 */ int iPri, /* t3 11 */ u_char ucMsgType, /* 0x0(sp) */ int ucZeroFlg) {
+/* 002126d0 00000068 */ static void SpCmnPrintNumber_NK2(/* a0 4 */ int iData, /* v0 2 */ int iNum, /* v1 3 */ int iX, /* t4 12 */ int iY, /* t7 15 */ u_char ucColLabel, /* t1 9 */ u_char ucAlpha, /* t5 13 */ int iPri, /* t3 11 */ u_char ucMsgType, /* 0x20(sp) */ int ucZeroFlg) {
 	/* t6 14 */ u_char ucZeroFlg;
 }
 
@@ -23409,38 +23849,38 @@
 
 /* 00212c00 000000dc */ static void MissionDrawScrollbar(/* s3 19 */ int iTop, /* a1 5 */ u_char ucAlpha) {
 	/* s1 17 */ int iList;
-	/* -0x40(sp) */ int iMovY[2];
+	/* 0x0(sp) */ int iMovY[2];
 }
 
 /* 00212ce0 000000b8 */ static void MissionDrawCsrOnly(/* s1 17 */ int iLabel, /* s2 18 */ int iOffX, /* s3 19 */ int iOffY, /* a3 7 */ u_char ucAlpha, /* f20 58 */ float fScale) {
-	/* -0xc0(sp) */ DISP_SPRT ds;
+	/* 0x0(sp) */ DISP_SPRT ds;
 }
 
 /* 00212d98 00000028 */ void MissionCaptionDisp(/* a0 4 */ int off_x, /* a1 5 */ int off_y, /* a2 6 */ u_char alpha) {}
 
 /* 00212dc0 00000134 */ static void MissionDrawCsr(/* s0 16 */ int iCnt, /* s1 17 */ u_char ucAlpha) {
-	/* -0x40(sp) */ u_char ucRgb;
+	/* 0x0(sp) */ u_char ucRgb;
 	/* data 32d330 */ static int iPosY[4][6];
 	/* sdata 3f30b0 */ static char iCsrTime;
 	/* s4 20 */ int iEndCheck;
 }
 
-/* 00212ef8 00000220 */ void MissionDrawSelect(/* a0 4 */ void *pMisTexAddr, /* s6 22 */ int iTopID, /* -0x54(sp) */ int iCsr, /* s2 18 */ u_char ucAlpha) {
+/* 00212ef8 00000220 */ void MissionDrawSelect(/* a0 4 */ void *pMisTexAddr, /* s6 22 */ int iTopID, /* 0xc(sp) */ int iCsr, /* s2 18 */ u_char ucAlpha) {
 	/* s3 19 */ int i;
 	/* data 32d390 */ static int iPosY[6];
 	/* s4 20 */ int iNum;
 	/* s1 17 */ int iType;
 	/* s0 16 */ int iRank;
-	/* -0x60(sp) */ int iHour;
-	/* -0x5c(sp) */ int iMin;
-	/* -0x58(sp) */ int iSec;
+	/* 0x0(sp) */ int iHour;
+	/* 0x4(sp) */ int iMin;
+	/* 0x8(sp) */ int iSec;
 }
 
-/* 00213118 00000384 */ void MissionDrawMiniMenu(/* a0 4 */ void *pOutGameTex, /* -0x90(sp) */ void *pMisTexAddr, /* s1 17 */ int iCsr, /* s3 19 */ u_char ucMstAlpha, /* f21 59 */ float fMove, /* s6 22 */ int iSelCsr, /* s0 16 */ int iFlg) {
+/* 00213118 00000384 */ void MissionDrawMiniMenu(/* a0 4 */ void *pOutGameTex, /* 0xc0(sp) */ void *pMisTexAddr, /* s1 17 */ int iCsr, /* s3 19 */ u_char ucMstAlpha, /* f21 59 */ float fMove, /* s6 22 */ int iSelCsr, /* s0 16 */ int iFlg) {
 	/* s1 17 */ int i;
-	/* -0x150(sp) */ DISP_SPRT aDs;
+	/* 0x0(sp) */ DISP_SPRT aDs;
 	/* s4 20 */ int iPosID;
-	/* -0xc0(sp) */ int iPosY[2][6];
+	/* 0x90(sp) */ int iPosY[2][6];
 	/* s7 23 */ u_char ucAlpha;
 	/* f20 58 */ float fCsrScale;
 	/* s0 16 */ int iMenuY;
@@ -23456,8 +23896,8 @@
 
 /* 002135b0 00000100 */ void MisFadeProc(/* s1 17 */ u_char ucMstAlpha) {
 	/* s0 16 */ int iAlpha;
-	/* -0x70(sp) */ MSG_WIN_DAT sWinDat;
-	/* -0x60(sp) */ DISP_STR sDispStr;
+	/* 0x0(sp) */ MSG_WIN_DAT sWinDat;
+	/* 0x10(sp) */ DISP_STR sDispStr;
 }
 
 // *****************************************************************************
@@ -23554,9 +23994,9 @@
 /* 00214500 00000014 */ void MisDispDeleteFlg(/* a0 4 */ int iFlg) {}
 
 /* 00214518 00000184 */ void MisDispTimeProc() {
-	/* -0x20(sp) */ int iHour;
-	/* -0x1c(sp) */ int iMin;
-	/* -0x18(sp) */ int iSec;
+	/* 0x10(sp) */ int iHour;
+	/* 0x14(sp) */ int iMin;
+	/* 0x18(sp) */ int iSec;
 }
 
 /* 002146a0 00000008 */ void MisDispStartInit() {}
@@ -23576,12 +24016,12 @@
 
 /* 002148c8 00000008 */ void MisDispClearInit() {}
 
-/* 002148d0 0000047c */ void MisDispClear(/* s5 21 */ u_char ucAlpha, /* s7 23 */ int iTime, /* -0x64(sp) */ int iScore, /* fp 30 */ int iShot, /* -0x60(sp) */ void *pMissionTex, /* s0 16 */ void *pRsCmnTex) {
+/* 002148d0 0000047c */ void MisDispClear(/* s5 21 */ u_char ucAlpha, /* s7 23 */ int iTime, /* 0x1c(sp) */ int iScore, /* fp 30 */ int iShot, /* 0x20(sp) */ void *pMissionTex, /* s0 16 */ void *pRsCmnTex) {
 	/* s1 17 */ int i;
 	/* s2 18 */ int iMissionID;
 	/* s6 22 */ int iStat;
 	/* s0 16 */ u_char ucLAlpha;
-	/* -0x80(sp) */ u_char ucAAlpha[8];
+	/* 0x0(sp) */ u_char ucAAlpha[8];
 	/* rdata 3c0360 */ static ALPHA_ANIM_TBL sAlDat[2];
 	/* data 32e968 */ static int iDatList[5][3];
 	/* v1 3 */ int iNowTime;
@@ -23591,9 +24031,9 @@
 /* 00214e98 000000f0 */ void MisDispClearAllS(/* a0 4 */ u_char ucAlpha, /* a1 5 */ int iTime, /* a2 6 */ int iScore, /* a3 7 */ int iShot, /* s0 16 */ void *pMissionTex, /* t1 9 */ void *pRsCmnTex) {}
 
 /* 00214f88 00000178 */ void MisDispBadEnd(/* a0 4 */ u_char ucAlpha, /* s3 19 */ int iTime, /* s4 20 */ int iScore, /* s5 21 */ int iShot, /* s1 17 */ void *pMissionTex, /* s2 18 */ void *pRsCmnTex) {
-	/* -0x50(sp) */ int iHour;
-	/* -0x4c(sp) */ int iMin;
-	/* -0x48(sp) */ int iSec;
+	/* 0x0(sp) */ int iHour;
+	/* 0x4(sp) */ int iMin;
+	/* 0x8(sp) */ int iSec;
 }
 
 // *****************************************************************************
@@ -23623,27 +24063,27 @@
 /* 00215898 00000044 */ static void MisPauseCaptureDataDisp() {}
 
 /* 002158e0 00000120 */ static void MisPauseWinDisp(/* s0 16 */ int off_x, /* s1 17 */ int off_y, /* a2 6 */ u_char alpha) {
-	/* -0xd0(sp) */ DISP_SQAR dsq;
-	/* -0x50(sp) */ SQAR_DAT pause_bg;
+	/* 0x0(sp) */ DISP_SQAR dsq;
+	/* 0x80(sp) */ SQAR_DAT pause_bg;
 }
 
 /* 00215a00 00000088 */ static void MisPauseTitleDisp(/* s0 16 */ int off_x, /* s1 17 */ int off_y, /* a2 6 */ u_char alpha) {
-	/* -0xb0(sp) */ DISP_SPRT title_ds;
+	/* 0x0(sp) */ DISP_SPRT title_ds;
 }
 
 /* 00215a88 00000054 */ static void MisPauseMenuCsrDisp(/* a0 4 */ int off_x, /* a1 5 */ int off_y, /* a2 6 */ u_char alpha) {}
 
 /* 00215ae0 0000014c */ static void MisPauseMenuDisp(/* a0 4 */ int off_x, /* s4 20 */ int off_y, /* s3 19 */ u_char alpha) {
 	/* s0 16 */ int i;
-	/* -0x60(sp) */ int msg_id_tbl[3];
+	/* 0x10(sp) */ int msg_id_tbl[3];
 	/* t0 8 */ int col_label;
 }
 
 /* 00215c30 0000011c */ static void MisPauseMenuReturnTitleWinDisp(/* s1 17 */ int off_x, /* s2 18 */ int off_y, /* a2 6 */ u_char alpha) {}
 
 /* 00215d50 000000b0 */ static void MisPausePadErrorMsgDisp(/* a0 4 */ int off_x, /* a1 5 */ int off_y, /* a2 6 */ u_char alpha) {
-	/* -0xb0(sp) */ DISP_SQAR dsq;
-	/* -0x30(sp) */ SQAR_DAT bg_base;
+	/* 0x0(sp) */ DISP_SQAR dsq;
+	/* 0x80(sp) */ SQAR_DAT bg_base;
 }
 
 // *****************************************************************************
@@ -23690,6 +24130,7 @@
 }
 
 /* 00216230 000000a4 */ int MissionSetStat(/* s0 16 */ int iMissionID, /* a1 5 */ int iStat) {
+	/* rdata 3c05b8 */ static char __FUNCTION__[15];
 	/* a3 7 */ int *pStat;
 	/* a2 6 */ int ret;
 }
@@ -23699,7 +24140,9 @@
 	/* s1 17 */ int iType;
 }
 
-/* 00216368 000000c8 */ int MissionGetStat(/* s0 16 */ int iMissionID, /* s1 17 */ int iType) {}
+/* 00216368 000000c8 */ int MissionGetStat(/* s0 16 */ int iMissionID, /* s1 17 */ int iType) {
+	/* rdata 3c05f0 */ static char __FUNCTION__[15];
+}
 
 /* 00216430 00000094 */ int MissionGetRankPoint(/* s0 16 */ int iMissionID, /* s1 17 */ int iNum) {
 	/* a1 5 */ int i;
@@ -23736,18 +24179,18 @@
 
 /* 00216980 00000118 */ static void MissionResetSaveDataKeepCam() {
 	/* s0 16 */ int iScore;
-	/* -0x70(sp) */ MIS_SAVE_DATA aMcCam;
-	/* -0x60(sp) */ MIS_SAVE_DATA aMcCamEQ;
-	/* -0x50(sp) */ MIS_SAVE_DATA aMcMission;
-	/* -0x40(sp) */ MIS_SAVE_DATA aGenNum;
+	/* 0x0(sp) */ MIS_SAVE_DATA aMcCam;
+	/* 0x10(sp) */ MIS_SAVE_DATA aMcCamEQ;
+	/* 0x20(sp) */ MIS_SAVE_DATA aMcMission;
+	/* 0x30(sp) */ MIS_SAVE_DATA aGenNum;
 }
 
 /* 00216a98 00000128 */ static void MissionInitData(/* s2 18 */ int iMissionID, /* s1 17 */ int iLevel) {
 	/* s0 16 */ int iScore;
-	/* -0x80(sp) */ MIS_SAVE_DATA aMcCam;
-	/* -0x70(sp) */ MIS_SAVE_DATA aMcCamEQ;
-	/* -0x60(sp) */ MIS_SAVE_DATA aMcMission;
-	/* -0x50(sp) */ MIS_SAVE_DATA aGenNum;
+	/* 0x0(sp) */ MIS_SAVE_DATA aMcCam;
+	/* 0x10(sp) */ MIS_SAVE_DATA aMcCamEQ;
+	/* 0x20(sp) */ MIS_SAVE_DATA aMcMission;
+	/* 0x30(sp) */ MIS_SAVE_DATA aGenNum;
 }
 
 /* 00216bc0 0000002c */ void MissionReleaseSaveData() {}
@@ -23755,7 +24198,7 @@
 /* 00216bf0 00000308 */ void MissionSetItem(/* a0 4 */ int iMissionID) {
 	/* s2 18 */ int i;
 	/* s1 17 */ MISSION_TBL *pTblDat;
-	/* -0x70(sp) */ int iFilList[5];
+	/* 0x0(sp) */ int iFilList[5];
 	/* v0 2 */ int iItemID;
 	/* s2 18 */ int iNum;
 	/* v1 3 */ int iItemID;
@@ -23781,7 +24224,11 @@
 /* 002174e8 000000f0 */ static int MissionWindowYesNo() {}
 /* 002175d8 000000cc */ static void MissionSubOK() {}
 /* 002176a8 0000008c */ static void MissionSubExitOK() {}
-/* 00217738 000001dc */ void MissionSelMain() {}
+
+/* 00217738 000001dc */ void MissionSelMain() {
+	/* rdata 3c06c0 */ static char __FUNCTION__[15];
+}
+
 /* 00217918 0000005c */ static void MissionSelOutReq(/* s0 16 */ int iNextPhase) {}
 
 /* 00217978 0000016c */ static void SetMissionSelNextPhase() {
@@ -23791,7 +24238,7 @@
 
 /* 00217ae8 00000010 */ static void MissionSelDispInit() {}
 /* 00217af8 000000dc */ void MissionSelDisp() {}
-/* 0032e9a4 00000054 */ PLYR_ITEM* PLYR_ITEM * _fixed_array_verifyrange<PLYR_ITEM>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ PLYR_ITEM* PLYR_ITEM * _fixed_array_verifyrange<PLYR_ITEM>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
 /* 00217bd8 00000e04 */ static void __static_initialization_and_destruction_0(/* s7 23 */ int __initialize_p, /* a1 5 */ int __priority) {}
 /* 0032e9a4 0000003c */ type_info& PLYR_ITEM type_info function() {}
 /* 002189e0 00000020 */ static void global constructors keyed to MissionGetTimePal() {}
@@ -23810,7 +24257,7 @@
 
 /* 00218ad8 00000140 */ void ModelMemoryFree(/* s2 18 */ int wrk_no) {
 	/* rdata 3c09d0 */ static char __FUNCTION__[16];
-	/* -0x7f0(sp) */ char StringBuf[2000];
+	/* 0x0(sp) */ char StringBuf[2000];
 }
 
 /* 00218c18 00000018 */ int* GetItemSgdAddr(/* a0 4 */ int *pDataTop) {}
@@ -23849,7 +24296,7 @@
 
 /* 00219290 00000138 */ static int MorphSetNewCode(/* t0 8 */ MORPH_CODE_CTRL *morph) {
 	/* a3 7 */ int kind;
-	/* -0x10(sp) */ int arg[4];
+	/* 0x0(sp) */ int arg[4];
 }
 
 /* 002193c8 000000dc */ int MorphSetRate(/* s3 19 */ ANI_CTRL *ani_ctrl, /* f20 58 */ float rate) {
@@ -23956,7 +24403,7 @@
 }
 
 /* 0021a310 0000000c */ static int MorphSetWorkNo(/* a0 4 */ ANI_CTRL *ani_ctrl) {}
-/* 0032e9a8 00000054 */ MORPH_CTRL* MORPH_CTRL * _fixed_array_verifyrange<MORPH_CTRL>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ MORPH_CTRL* MORPH_CTRL * _fixed_array_verifyrange<MORPH_CTRL>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
 /* 0021a320 00000008 */ static void __static_initialization_and_destruction_0(/* a0 4 */ int __initialize_p, /* a1 5 */ int __priority) {}
 /* 0032e9a8 0000003c */ type_info& MORPH_CTRL type_info function() {}
 /* 0021a328 00000020 */ static void global constructors keyed to ch017_morph() {}
@@ -24017,7 +24464,7 @@
 
 /* 0021a9b0 00000054 */ void motClearANI_CTRL(/* s0 16 */ ANI_CTRL *pAniCtrl) {}
 
-/* 0021aa08 000001f0 */ u_int motGetAniWorkArea(/* fp 30 */ u_int *anm_p, /* s4 20 */ u_int *mdl_p, /* -0x60(sp) */ u_int mdl_no) {
+/* 0021aa08 000001f0 */ u_int motGetAniWorkArea(/* fp 30 */ u_int *anm_p, /* s4 20 */ u_int *mdl_p, /* 0x0(sp) */ u_int mdl_no) {
 	/* s1 17 */ u_int work_addr;
 	/* s0 16 */ u_int *top;
 	/* s2 18 */ u_int i;
@@ -24029,9 +24476,10 @@
 /* 0021abf8 0000004c */ static void motInitClearAniCtrl(/* a0 4 */ ANI_CTRL *ani_ctrl) {}
 
 /* 0021ac48 000003b0 */ u_int* motInitAniCtrl(/* s2 18 */ ANI_CTRL *ani_ctrl, /* fp 30 */ u_int *anm_p, /* s5 21 */ u_int *mdl_p, /* s0 16 */ u_int *pkt_p, /* s6 22 */ u_int mdl_no, /* s7 23 */ u_int anm_no) {
+	/* rdata 3c0dc0 */ static char __FUNCTION__[15];
 	/* s1 17 */ u_int *top;
 	/* s4 20 */ u_int i;
-	/* -0x60(sp) */ u_int pack_num;
+	/* 0x0(sp) */ u_int pack_num;
 	/* s0 16 */ MIME_DAT *mim_dat;
 	/* s0 16 */ MIME_DAT *mim_bg;
 	/* s3 19 */ u_int num;
@@ -24056,11 +24504,11 @@
 	/* rdata 3c0e30 */ static char __FUNCTION__[12];
 	/* s3 19 */ MOT_CTRL *m_ctrl;
 	/* s7 23 */ u_char ani_end;
-	/* -0x60(sp) */ u_char loop_end;
+	/* 0x240(sp) */ u_char loop_end;
 	/* a0 4 */ u_char frame_cnt;
 	/* s6 22 */ u_int i;
 	/* fp 30 */ u_int *old_dat_p;
-	/* -0x2a0(sp) */ ANI_CTRL tmp;
+	/* 0x0(sp) */ ANI_CTRL tmp;
 	/* s2 18 */ u_int frame_num;
 	/* s0 16 */ u_int interp_cnt;
 	/* s1 17 */ u_int old_inp_allcnt;
@@ -24094,7 +24542,7 @@
 
 /* 0021ba88 00000128 */ void GetMdlNeckPos(/* s4 20 */ float *pos, /* s3 19 */ ANI_CTRL *ani_ctrl, /* s0 16 */ u_short mdl_no) {
 	/* s2 18 */ u_short id;
-	/* -0x40(sp) */ float p[4];
+	/* 0x0(sp) */ float p[4];
 }
 
 /* 0021bbb0 00000058 */ u_int GetMdlBonePos(/* a0 4 */ float *pos[4], /* a1 5 */ void *ani_hndl) {
@@ -24103,7 +24551,7 @@
 }
 
 /* 0021bc08 000000a8 */ void GetMdlWaistPos(/* s1 17 */ float *pos, /* s2 18 */ ANI_CTRL *ani_ctrl, /* a2 6 */ u_short mdl_no) {
-	/* -0x30(sp) */ float ofs[4];
+	/* 0x0(sp) */ float ofs[4];
 	/* a3 7 */ u_short id;
 }
 
@@ -24133,23 +24581,23 @@
 }
 
 /* 0021be48 00000090 */ int motGetGuujiTuePos(/* a0 4 */ float *p0, /* t2 10 */ ANI_CTRL *ani_ctrl, /* t3 11 */ int flg) {
-	/* -0x30(sp) */ float ofs0[4];
-	/* -0x20(sp) */ float ofs1[4];
+	/* 0x0(sp) */ float ofs0[4];
+	/* 0x10(sp) */ float ofs1[4];
 }
 
 /* 0021bed8 0000010c */ int motGetKusabiPos(/* a0 4 */ float *p0, /* t8 24 */ ANI_CTRL *ani_ctrl, /* t7 15 */ int flg) {
-	/* -0x50(sp) */ float ofs0[4];
-	/* -0x40(sp) */ float ofs1[4];
-	/* -0x30(sp) */ float ofs2[4];
-	/* -0x20(sp) */ float ofs3[4];
+	/* 0x0(sp) */ float ofs0[4];
+	/* 0x10(sp) */ float ofs1[4];
+	/* 0x20(sp) */ float ofs2[4];
+	/* 0x30(sp) */ float ofs3[4];
 }
 
 /* 0021bfe8 00000070 */ int motGetTaimatuPos(/* a0 4 */ float *p0, /* t0 8 */ ANI_CTRL *ani_ctrl) {
-	/* -0x20(sp) */ float ofs0[4];
+	/* 0x0(sp) */ float ofs0[4];
 }
 
 /* 0021c058 00000058 */ int motGetKuroreiPos(/* a0 4 */ float *p0, /* t0 8 */ ANI_CTRL *ani_ctrl) {
-	/* -0x20(sp) */ float ofs0[4];
+	/* 0x0(sp) */ float ofs0[4];
 }
 
 /* 0021c0b0 00000080 */ int motGetBukiUpPos(/* a0 4 */ float *p0, /* a1 5 */ ANI_CTRL *ani_ctrl) {}
@@ -24162,31 +24610,32 @@
 	/* s1 17 */ SGDCOORDINATE *cp;
 	/* v0 2 */ int buf_id;
 	/* a1 5 */ int hip_id;
-	/* -0x70(sp) */ float hip_pos[4];
-	/* -0x60(sp) */ float tmp[4];
-	/* -0x50(sp) */ float x_vec[4];
+	/* 0x0(sp) */ float hip_pos[4];
+	/* 0x10(sp) */ float tmp[4];
+	/* 0x20(sp) */ float x_vec[4];
 }
 
 /* 0021c330 0000017c */ void motInitInterpAnime(/* s2 18 */ ANI_CTRL *ani_ctrl, /* a1 5 */ int flame) {
-	/* -0x40(sp) */ int args[3];
+	/* rdata 3c1148 */ static char __FUNCTION__[19];
+	/* 0x0(sp) */ int args[3];
 	/* s0 16 */ ANI_CODE *ap;
 	/* s1 17 */ MOT_CTRL *m_ctrl;
 	/* s4 20 */ u_int flg;
 }
 
-/* 0021c4b0 00000178 */ static void motSetInterpMatrix(/* a0 4 */ ANI_CTRL *ani_ctrl, /* -0x60(sp) */ float *start[4][4], /* -0x5c(sp) */ float *end[4][4]) {
+/* 0021c4b0 00000178 */ static void motSetInterpMatrix(/* a0 4 */ ANI_CTRL *ani_ctrl, /* 0x80(sp) */ float *start[4][4], /* 0x84(sp) */ float *end[4][4]) {
 	/* s4 20 */ HeaderSection *hs;
-	/* -0xe0(sp) */ float m0[4][4];
-	/* -0xa0(sp) */ float m1[4][4];
+	/* 0x0(sp) */ float m0[4][4];
+	/* 0x40(sp) */ float m1[4][4];
 	/* s3 19 */ MOT_CTRL *m_ctrl;
 	/* s2 18 */ u_int i;
 }
 
 /* 0021c628 000001b8 */ static void motInterpAnm(/* a0 4 */ ANI_CTRL *ani_ctrl, /* a1 5 */ float *start[4][4], /* a2 6 */ float *end[4][4]) {
 	/* s5 21 */ u_int i;
-	/* -0xc0(sp) */ float trans[4];
-	/* -0xb0(sp) */ float scale[4];
-	/* -0xa0(sp) */ float interp[4][4];
+	/* 0x0(sp) */ float trans[4];
+	/* 0x10(sp) */ float scale[4];
+	/* 0x20(sp) */ float interp[4][4];
 	/* s6 22 */ HeaderSection *hs;
 	/* fp 30 */ SGDCOORDINATE *coord;
 	/* f20 58 */ float rate;
@@ -24194,17 +24643,17 @@
 }
 
 /* 0021c7e0 000003b4 */ void motInterpMatrix(/* s4 20 */ float *interp[4], /* s2 18 */ float *m0[4], /* s1 17 */ float *m1[4], /* f22 60 */ float rate) {
-	/* -0x180(sp) */ float m[4][4];
-	/* -0x140(sp) */ float v[4];
+	/* 0x0(sp) */ float m[4][4];
+	/* 0x40(sp) */ float v[4];
 	/* f23 61 */ float r;
 	/* f25 63 */ float cos;
 	/* f24 62 */ float sin;
 	/* f23 61 */ float val;
 	/* f21 59 */ float r2;
-	/* -0x130(sp) */ float v2[4];
-	/* -0x120(sp) */ float m2[4][4];
-	/* -0xe0(sp) */ float dm0[4][4];
-	/* -0xa0(sp) */ float dm1[4][4];
+	/* 0x50(sp) */ float v2[4];
+	/* 0x60(sp) */ float m2[4][4];
+	/* 0xa0(sp) */ float dm0[4][4];
+	/* 0xe0(sp) */ float dm1[4][4];
 }
 
 /* 0021cb98 000002b4 */ void motMatrix2Quaternion(/* s3 19 */ float *q, /* s0 16 */ float *m[4]) {
@@ -24213,7 +24662,7 @@
 	/* s7 23 */ int i;
 	/* s4 20 */ int j;
 	/* s5 21 */ int k;
-	/* -0x60(sp) */ int nxt[3];
+	/* 0x0(sp) */ int nxt[3];
 }
 
 /* 0021ce50 000000bc */ void motQuaternion2Matrix(/* a0 4 */ float *m[4], /* a1 5 */ float *q) {
@@ -24232,38 +24681,42 @@
 }
 
 /* 0021cf10 000000a8 */ void motQuaternionSlerp(/* s2 18 */ float *q, /* s1 17 */ float *q1, /* s0 16 */ float *q2, /* f20 58 */ float rate) {
-	/* -0x40(sp) */ float ret[4];
+	/* 0x0(sp) */ float ret[4];
 	/* f0 38 */ float cosom;
 }
 
 /* 0021cfb8 00000084 */ void LocalRotMatrixX(/* s1 17 */ float *m0[4], /* s0 16 */ float *m1[4], /* f20 58 */ float rx) {
-	/* -0x60(sp) */ float rot[4][4];
+	/* 0x0(sp) */ float rot[4][4];
 }
 
 /* 0021d040 00000084 */ void LocalRotMatrixY(/* s1 17 */ float *m0[4], /* s0 16 */ float *m1[4], /* f20 58 */ float ry) {
-	/* -0x60(sp) */ float rot[4][4];
+	/* 0x0(sp) */ float rot[4][4];
 }
 
 /* 0021d0c8 00000084 */ void LocalRotMatrixZ(/* s1 17 */ float *m0[4], /* s0 16 */ float *m1[4], /* f20 58 */ float rz) {
-	/* -0x60(sp) */ float rot[4][4];
+	/* 0x0(sp) */ float rot[4][4];
 }
 
-/* 0021d150 000003c4 */ void motInversKinematics(/* s7 23 */ SGDCOORDINATE *cp, /* -0x70(sp) */ float *target, /* -0x6c(sp) */ u_int *top_addr, /* a3 7 */ u_char bone_id) {
+/* 0021d150 000003c4 */ void motInversKinematics(/* s7 23 */ SGDCOORDINATE *cp, /* 0x120(sp) */ float *target, /* 0x124(sp) */ u_int *top_addr, /* a3 7 */ u_char bone_id) {
 	/* s3 19 */ u_int parent_id;
-	/* -0x190(sp) */ float end_eff[4];
-	/* -0x180(sp) */ float root[4];
-	/* -0x170(sp) */ float end_root[4];
-	/* -0x160(sp) */ float target_root[4];
+	/* 0x0(sp) */ float end_eff[4];
+	/* 0x10(sp) */ float root[4];
+	/* 0x20(sp) */ float end_root[4];
+	/* 0x30(sp) */ float target_root[4];
 	/* f12 50 */ float inner;
-	/* -0x150(sp) */ float m[4][4];
+	/* 0x40(sp) */ float m[4][4];
 	/* f21 59 */ float r;
-	/* -0x110(sp) */ float raxis[4];
+	/* 0x80(sp) */ float raxis[4];
 }
 
 /* 0021d518 00000008 */ static u_int motGetBoneNum(/* a0 4 */ u_int *mot_p) {}
 /* 0021d520 00000008 */ static u_int motGetFrameNum(/* a0 4 */ u_int *mot_p) {}
 /* 0021d528 00000008 */ static u_int motGetSIFrameNum(/* a0 4 */ u_int *mot_p) {}
-/* 0021d530 0000005c */ static u_int motGetInterpFrameNum(/* s0 16 */ u_int *mot_p) {}
+
+/* 0021d530 0000005c */ static u_int motGetInterpFrameNum(/* s0 16 */ u_int *mot_p) {
+	/* rdata 3c1210 */ static char __FUNCTION__[21];
+}
+
 /* 0021d590 00000010 */ static u_int motCheckIncludeRstPacket(/* a0 4 */ u_int *mot_p) {}
 
 /* 0021d5a0 000000c8 */ static void motAddressMapping(/* s0 16 */ u_int *top_addr) {
@@ -24279,6 +24732,7 @@
 /* 0021d6d0 0000002c */ static void motGetFrameData(/* a0 4 */ RST_DATA *rst, /* a1 5 */ u_int *top_addr, /* a2 6 */ u_int frame) {}
 
 /* 0021d700 00000134 */ static void motGetFrameDataRST(/* s2 18 */ RST_DATA *rst, /* s1 17 */ u_int *top_addr, /* s0 16 */ u_int frame) {
+	/* rdata 3c1270 */ static char __FUNCTION__[19];
 	/* v1 3 */ u_int i;
 	/* s1 17 */ u_int bone_num;
 	/* s0 16 */ float *pkt;
@@ -24319,6 +24773,7 @@
 }
 
 /* 0021df80 00000248 */ void SceneSetCoordFrame(/* a0 4 */ ANI_CTRL *ani_ctrl, /* s2 18 */ u_int frame, /* s3 19 */ u_int type) {
+	/* rdata 3c12f8 */ static char __FUNCTION__[19];
 	/* s0 16 */ MOT_CTRL *m_ctrl;
 	/* s3 19 */ u_int i;
 	/* s4 20 */ HeaderSection *hs;
@@ -24326,27 +24781,27 @@
 	/* bss 4b72c0 */ static fixed_array<RST_DATA,60> rst;
 }
 
-/* 0021e1c8 00000488 */ void SceneSetCoordFrameF(/* -0x70(sp) */ ANI_CTRL *ani_ctrl, /* f12 50 */ float frame, /* s2 18 */ u_int type) {
+/* 0021e1c8 00000488 */ void SceneSetCoordFrameF(/* 0xe0(sp) */ ANI_CTRL *ani_ctrl, /* f12 50 */ float frame, /* s2 18 */ u_int type) {
 	/* s1 17 */ MOT_CTRL *m_ctrl;
 	/* s1 17 */ u_int i;
 	/* s0 16 */ u_int frame_i;
 	/* s6 22 */ HeaderSection *hs;
 	/* s4 20 */ SGDCOORDINATE *cp;
 	/* f20 58 */ float frame_f;
-	/* -0x150(sp) */ float m0[4][4];
-	/* -0x110(sp) */ float m1[4][4];
+	/* 0x0(sp) */ float m0[4][4];
+	/* 0x40(sp) */ float m1[4][4];
 	/* bss 4b7e00 */ static fixed_array<RST_DATA,60> rst0;
 	/* bss 4b8940 */ static fixed_array<RST_DATA,60> rst1;
-	/* -0xd0(sp) */ float interp[4][4];
-	/* -0x90(sp) */ float trans[4];
-	/* -0x80(sp) */ float scale[4];
+	/* 0x80(sp) */ float interp[4][4];
+	/* 0xc0(sp) */ float trans[4];
+	/* 0xd0(sp) */ float scale[4];
 }
 
-/* 0021e650 00000188 */ static void motSceneInterpAnm(/* a0 4 */ ANI_CTRL *ani_ctrl, /* a1 5 */ float *start[4][4], /* a2 6 */ float *end[4][4], /* -0x70(sp) */ RST_DATA *rst0, /* -0x6c(sp) */ RST_DATA *rst1, /* f20 58 */ float rate) {
+/* 0021e650 00000188 */ static void motSceneInterpAnm(/* a0 4 */ ANI_CTRL *ani_ctrl, /* a1 5 */ float *start[4][4], /* a2 6 */ float *end[4][4], /* 0x60(sp) */ RST_DATA *rst0, /* 0x64(sp) */ RST_DATA *rst1, /* f20 58 */ float rate) {
 	/* s6 22 */ u_int i;
-	/* -0xd0(sp) */ float trans[4];
-	/* -0xc0(sp) */ float scale[4];
-	/* -0xb0(sp) */ float interp[4][4];
+	/* 0x0(sp) */ float trans[4];
+	/* 0x10(sp) */ float scale[4];
+	/* 0x20(sp) */ float interp[4][4];
 	/* s7 23 */ HeaderSection *hs;
 	/* fp 30 */ SGDCOORDINATE *coord;
 }
@@ -24360,7 +24815,7 @@
 /* 0021e810 0000009c */ void motPrintVector(/* s5 21 */ char *str, /* s0 16 */ float *vec) {}
 
 /* 0021e8b0 00000058 */ void sceRotMatrixXYZ(/* s1 17 */ float *m0[4], /* a1 5 */ float *m1[4], /* s0 16 */ float *rot) {
-	/* -0x60(sp) */ float mat[4][4];
+	/* 0x0(sp) */ float mat[4][4];
 }
 
 /* 0021e908 00000040 */ void SetCoordinate(/* a0 4 */ ANI_CTRL *ani_ctrl, /* a1 5 */ float *mdl_pos, /* a2 6 */ float *mdl_rot) {
@@ -24378,10 +24833,10 @@
 	/* a1 5 */ SGDCOORDINATE *cp;
 }
 
-/* 0032eef0 00000054 */ float*[4][4] float [3][3] * _fixed_array_verifyrange<float [3][3]>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
-/* 0032eef0 00000054 */ RST_DATA* RST_DATA * _fixed_array_verifyrange<RST_DATA>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ float*[4][4] float [3][3] * _fixed_array_verifyrange<float [3][3]>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ RST_DATA* RST_DATA * _fixed_array_verifyrange<RST_DATA>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
 /* 0021ea18 00000008 */ static void __static_initialization_and_destruction_0(/* a0 4 */ int __initialize_p, /* a1 5 */ int __priority) {}
-/* 0032eef0 0000003c */ type_info& float [3][3] type_info function() {}
+/* ffffffff 0000003c */ type_info& float [3][3] type_info function() {}
 /* 0032eef0 0000003c */ type_info& RST_DATA type_info function() {}
 /* 0021ea20 00000020 */ static void global constructors keyed to motInitANI_CTRL() {}
 
@@ -24410,8 +24865,8 @@
 
 /* 0021ee20 00000170 */ int PlayMovie() {
 	/* s1 17 */ int ret;
-	/* -0xd0(sp) */ SPRT_DAT sd;
-	/* -0xb0(sp) */ DISP_SPRT ds;
+	/* 0x0(sp) */ SPRT_DAT sd;
+	/* 0x20(sp) */ DISP_SPRT ds;
 }
 
 /* 0021ef90 000000d8 */ void EndMovie() {}
@@ -24503,8 +24958,8 @@
 /* 0021fa48 000000b8 */ int CMovieRoom::PlayFilm(/* s0 16 */ CMovieRoom *this) {}
 
 /* 0021fb00 000001c0 */ void CMovieRoom::Draw(/* s0 16 */ CMovieRoom *this) {
-	/* -0x30(sp) */ PLAY_PSS_MPEG_INFO Info;
-	/* -0x20(sp) */ sceGsTex0 Tex0;
+	/* 0x0(sp) */ PLAY_PSS_MPEG_INFO Info;
+	/* 0x10(sp) */ sceGsTex0 Tex0;
 }
 
 /* 0021fcc0 00000050 */ int CMovieRoom::Work(/* s0 16 */ CMovieRoom *this) {}
@@ -24559,33 +25014,33 @@
 /* 00220b18 00000058 */ void MovieRoomMenuDisp() {}
 
 /* 00220b70 00000078 */ static void MovieRoomMenuStartMsgDisp(/* a0 4 */ int off_x, /* a1 5 */ int off_y, /* a2 6 */ u_char alpha) {
-	/* -0x60(sp) */ DISP_STR msg_data;
-	/* -0x20(sp) */ MSG_WIN_DAT msg_win;
+	/* 0x0(sp) */ DISP_STR msg_data;
+	/* 0x40(sp) */ MSG_WIN_DAT msg_win;
 }
 
 /* 00220be8 00000108 */ static void MovieRoomMenuFilmSelDisp(/* s2 18 */ int off_x, /* s1 17 */ int off_y, /* a2 6 */ u_char alpha) {
-	/* -0x70(sp) */ DISP_STR msg_data;
-	/* -0x30(sp) */ MSG_WIN_DAT msg_win;
+	/* 0x0(sp) */ DISP_STR msg_data;
+	/* 0x40(sp) */ MSG_WIN_DAT msg_win;
 }
 
 /* 00220cf0 0000018c */ static void MovieRoomMenuFilmPlayConfDisp(/* s1 17 */ int off_x, /* s2 18 */ int off_y, /* a2 6 */ u_char alpha) {
-	/* -0x80(sp) */ DISP_STR msg_data;
-	/* -0x40(sp) */ MSG_WIN_DAT msg_win;
+	/* 0x0(sp) */ DISP_STR msg_data;
+	/* 0x40(sp) */ MSG_WIN_DAT msg_win;
 }
 
 /* 00220e80 0000018c */ static void MovieRoomMenuExitConfDisp(/* s1 17 */ int off_x, /* s2 18 */ int off_y, /* a2 6 */ u_char alpha) {
-	/* -0x80(sp) */ DISP_STR msg_data;
-	/* -0x40(sp) */ MSG_WIN_DAT msg_win;
+	/* 0x0(sp) */ DISP_STR msg_data;
+	/* 0x40(sp) */ MSG_WIN_DAT msg_win;
 }
 
 /* 00221010 00000078 */ static void MovieRoomMenuNoHaveFilmDisp(/* a0 4 */ int off_x, /* a1 5 */ int off_y, /* a2 6 */ u_char alpha) {
-	/* -0x60(sp) */ DISP_STR msg_data;
-	/* -0x20(sp) */ MSG_WIN_DAT msg_win;
+	/* 0x0(sp) */ DISP_STR msg_data;
+	/* 0x40(sp) */ MSG_WIN_DAT msg_win;
 }
 
 /* 00221088 000001d4 */ static void MovieRoomMenuFilmSetDisp(/* s0 16 */ int off_x, /* s1 17 */ int off_y, /* s4 20 */ u_char alpha) {
-	/* -0x90(sp) */ DISP_STR msg_data;
-	/* -0x50(sp) */ MSG_WIN_DAT msg_win;
+	/* 0x0(sp) */ DISP_STR msg_data;
+	/* 0x40(sp) */ MSG_WIN_DAT msg_win;
 	/* s0 16 */ int x;
 	/* s3 19 */ int y;
 	/* sdata 3f3428 */ static int msg_lbl[2];
@@ -24596,13 +25051,13 @@
 	/* s1 17 */ int i;
 }
 
-/* 00221260 000003e8 */ static void MovieRoomMenuFilmReelDisp(/* s6 22 */ int off_x, /* s5 21 */ int off_y, /* -0x70(sp) */ u_char alpha) {
-	/* -0x130(sp) */ DISP_SPRT win_ds;
-	/* -0x68(sp) */ long int scissor_backup;
-	/* -0xa0(sp) */ float anim_off_x;
+/* 00221260 000003e8 */ static void MovieRoomMenuFilmReelDisp(/* s6 22 */ int off_x, /* s5 21 */ int off_y, /* 0xc0(sp) */ u_char alpha) {
+	/* 0x0(sp) */ DISP_SPRT win_ds;
+	/* 0xc8(sp) */ long int scissor_backup;
+	/* 0x90(sp) */ float anim_off_x;
 	/* s4 20 */ u_char film_alpha;
 	/* fp 30 */ u_char next_alpha;
-	/* -0x90(sp) */ SPRT_DAT film_reel_base;
+	/* 0xa0(sp) */ SPRT_DAT film_reel_base;
 	/* rdata 3c1840 */ static ALPHA_ANIM_TBL move_alpha_tbl1[5];
 	/* rdata 3c1868 */ static ALPHA_ANIM_TBL move_alpha_tbl2[5];
 }
@@ -24613,7 +25068,7 @@
 }
 
 /* 00221700 000000b4 */ static void MovieRoomMenuCursorDisp(/* s1 17 */ int off_x, /* s0 16 */ int off_y, /* a2 6 */ u_char alpha) {
-	/* -0x40(sp) */ u_char rgb;
+	/* 0x0(sp) */ u_char rgb;
 }
 
 /* 002217b8 00000084 */ static void MovieRoomMenuFilmReelNameDisp(/* a0 4 */ int off_x, /* a1 5 */ int off_y, /* s0 16 */ int alpha, /* s1 17 */ int item_label) {}
@@ -24635,6 +25090,7 @@
 }
 
 /* 00221978 000000bc */ void MovieTitleMain(/* s0 16 */ int movie_timer) {
+	/* rdata 3c19f8 */ static char __FUNCTION__[15];
 	/* s1 17 */ MOVIE_TITLE_DAT *data;
 	/* v1 3 */ int tbl_pos;
 }
@@ -24653,12 +25109,12 @@
 	/* f2 40 */ float msg_length;
 	/* f12 50 */ float base_x;
 	/* f14 52 */ float base_length;
-	/* -0x70(sp) */ unsigned char *p_next_line_adrs;
+	/* 0x10(sp) */ unsigned char *p_next_line_adrs;
 	/* s0 16 */ unsigned char *p_now_line_adrs;
 }
 
 /* 00221d18 00000198 */ void MovieTitleBaseDisp(/* f23 61 */ float x, /* f22 60 */ float y, /* f14 52 */ float w, /* s3 19 */ u_char alp, /* s2 18 */ u_int pri) {
-	/* -0xe0(sp) */ DISP_SPRT ds;
+	/* 0x0(sp) */ DISP_SPRT ds;
 	/* f20 58 */ float line_w;
 	/* f21 59 */ float line_scr;
 }
@@ -24671,7 +25127,7 @@
 
 /* 00221eb8 00000068 */ void my_mallocInit(/* a0 4 */ MY_MALLOC *my_malloc, /* a1 5 */ void *adrs, /* a2 6 */ int size) {}
 
-/* 00221f20 000000dc */ void* my_mallocMalloc(/* s2 18 */ int size, /* a2 6 */ int align_bit) {
+/* 00221f20 000000dc */ void* my_mallocMalloc(/* a0 4 */ MY_MALLOC *my_malloc, /* s2 18 */ int size, /* a2 6 */ int align_bit) {
 	/* s0 16 */ MALLOC_HEADER *wrk;
 	/* a2 6 */ MALLOC_HEADER *new_wrk;
 	/* v1 3 */ int align_size;
@@ -24679,17 +25135,23 @@
 	/* a0 4 */ int amari;
 }
 
-/* 00222000 00000098 */ void my_mallocFree(/* a1 5 */ void *adrs) {}
+/* 00222000 00000098 */ void my_mallocFree(/* a0 4 */ MY_MALLOC *my_malloc, /* a1 5 */ void *adrs) {
+	/* a0 4 */ MALLOC_HEADER *wrk;
+}
 
-/* 00222098 0000002c */ int my_mallocQueryTotalFreeMem() {
+/* 00222098 0000002c */ int my_mallocQueryTotalFreeMem(/* a0 4 */ MY_MALLOC *my_malloc) {
+	/* a0 4 */ MALLOC_HEADER *wrk;
 	/* v1 3 */ int free_size;
 }
 
-/* 002220c8 0000002c */ int my_mallocQueryMaxFreeMem() {
+/* 002220c8 0000002c */ int my_mallocQueryMaxFreeMem(/* a0 4 */ MY_MALLOC *my_malloc) {
+	/* a0 4 */ MALLOC_HEADER *wrk;
 	/* a1 5 */ int max_free_size;
 }
 
-/* 002220f8 0000015c */ void my_mallocDrawMemory(/* -0x60(sp) */ void (*draw_rect_func)(/* parameters unknown */), /* s4 20 */ void (*draw_line_func)(/* parameters unknown */), /* -0x5c(sp) */ int xx, /* fp 30 */ int yy, /* -0x58(sp) */ int ww, /* s7 23 */ int hh) {}
+/* 002220f8 0000015c */ void my_mallocDrawMemory(/* s6 22 */ MY_MALLOC *my_malloc, /* 0x0(sp) */ void (*draw_rect_func)(/* parameters unknown */), /* s4 20 */ void (*draw_line_func)(/* parameters unknown */), /* 0x4(sp) */ int xx, /* fp 30 */ int yy, /* 0x8(sp) */ int ww, /* s7 23 */ int hh) {
+	/* s5 21 */ MALLOC_HEADER *wrk;
+}
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/ingame/photo/n_equip_tray.c
@@ -24782,8 +25244,8 @@
 /* 00223960 000000ac */ void CNEquipTraySave::Absorb(/* s1 17 */ CNEquipTraySave *this, /* s3 19 */ int power) {}
 /* 00223a10 000000a4 */ void CNEquipTrayWrk::AbsorbImmediately(/* s1 17 */ CNEquipTrayWrk *this, /* s3 19 */ int power) {}
 
-/* 00223ab8 0000060c */ void CNEquipTrayWrk::AccumulaterDraw(/* s3 19 */ CNEquipTrayWrk *this, /* fp 30 */ int fndr_mx, /* -0x90(sp) */ int fndr_my, /* s5 21 */ int master_alp) {
-	/* -0x1e0(sp) */ DISP_SPRT ds;
+/* 00223ab8 0000060c */ void CNEquipTrayWrk::AccumulaterDraw(/* s3 19 */ CNEquipTrayWrk *this, /* fp 30 */ int fndr_mx, /* 0x150(sp) */ int fndr_my, /* s5 21 */ int master_alp) {
+	/* 0x0(sp) */ DISP_SPRT ds;
 	/* f20 58 */ float fAccumPercent;
 	/* s0 16 */ int i;
 	/* s0 16 */ int i;
@@ -24793,28 +25255,28 @@
 }
 
 /* 002240c8 000000f4 */ void CNEquipTrayWrk::BaseDraw(/* a0 4 */ CNEquipTrayWrk *this, /* a1 5 */ int fndr_mx, /* a2 6 */ int fndr_my, /* s4 20 */ int master_alp) {
-	/* -0x160(sp) */ DISP_SPRT ds;
-	/* -0xd0(sp) */ DISP_SPRT ds;
+	/* 0x0(sp) */ DISP_SPRT ds;
+	/* 0x90(sp) */ DISP_SPRT ds;
 }
 
-/* 002241c0 0000095c */ void CNEquipTrayWrk::Draw(/* s4 20 */ CNEquipTrayWrk *this, /* -0x80(sp) */ int fndr_mx, /* fp 30 */ int fndr_my, /* s5 21 */ int master_alp) {
-	/* -0x78(sp) */ int pk2_no;
-	/* -0x400(sp) */ DISP_SPRT ds;
+/* 002241c0 0000095c */ void CNEquipTrayWrk::Draw(/* s4 20 */ CNEquipTrayWrk *this, /* 0x380(sp) */ int fndr_mx, /* fp 30 */ int fndr_my, /* s5 21 */ int master_alp) {
+	/* 0x388(sp) */ int pk2_no;
+	/* 0x0(sp) */ DISP_SPRT ds;
 	/* f20 58 */ float iYOffset;
-	/* -0x370(sp) */ CVariable<char,0,2> iSlctNo;
+	/* 0x90(sp) */ CVariable<char,0,2> iSlctNo;
 	/* s1 17 */ CVariable<char,0,2> *this;
 	/* v1 3 */ int iVal;
 	/* s3 19 */ int i;
 	/* v1 3 */ int iSubPk2No;
 	/* v1 3 */ int iVal;
 	/* s0 16 */ int i;
-	/* -0x360(sp) */ DISP_SPRT ds;
-	/* -0x2d0(sp) */ CVariable<char,0,2> iSlctNo;
-	/* -0x2c0(sp) */ DISP_SPRT ds;
+	/* 0xa0(sp) */ DISP_SPRT ds;
+	/* 0x130(sp) */ CVariable<char,0,2> iSlctNo;
+	/* 0x140(sp) */ DISP_SPRT ds;
 	/* a1 5 */ int iSubPk2No;
 	/* s1 17 */ CVariable<char,0,2> *this;
 	/* v0 2 */ int iVal;
-	/* -0x230(sp) */ DISP_SPRT ds;
+	/* 0x1d0(sp) */ DISP_SPRT ds;
 	/* f20 58 */ float iYOffset;
 	/* v1 3 */ int iVal;
 	/* s2 18 */ int i;
@@ -24823,8 +25285,8 @@
 	/* s1 17 */ int i;
 	/* s0 16 */ int iFlareAlp;
 	/* f20 58 */ float fScaleRate;
-	/* -0x1a0(sp) */ DISP_SPRT ds;
-	/* -0x110(sp) */ DISP_SPRT ds;
+	/* 0x260(sp) */ DISP_SPRT ds;
+	/* 0x2f0(sp) */ DISP_SPRT ds;
 	/* a2 6 */ int iFlareAlp;
 }
 
@@ -24848,57 +25310,61 @@
 /* 00224e48 00000014 */ void CNEquipTraySave::ResetGage(/* a0 4 */ CNEquipTraySave *this) {}
 /* 00224e60 0000001c */ void CNEquipTraySave::PushGage(/* a0 4 */ CNEquipTraySave *this, /* a1 5 */ int *iGageDat) {}
 /* 00224e80 0000001c */ void CNEquipTraySave::PopGage(/* a0 4 */ CNEquipTraySave *this, /* a1 5 */ int *iGageDat) {}
-/* 00338878 00000054 */ CVariable<char,0,9>* CVariable<char, 0, 9> * _fixed_array_verifyrange<CVariable<char, 0, 9> >(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
-/* 00338878 00000054 */ CVariable<char,0,3>* CVariable<char, 0, 3> * _fixed_array_verifyrange<CVariable<char, 0, 3> >(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ CVariable<char,0,9>* CVariable<char, 0, 9> * _fixed_array_verifyrange<CVariable<char, 0, 9> >(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ CVariable<char,0,3>* CVariable<char, 0, 3> * _fixed_array_verifyrange<CVariable<char, 0, 3> >(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
 
-/* 00338878 00000074 */ void CBlinkVariable<char, 0, 100>::Blink(/* a0 4 */ CBlinkVariable<char,0,100> *this, /* a2 6 */ char tTime) {
+/* ffffffff 00000074 */ void CBlinkVariable<char, 0, 100>::Blink(/* a0 4 */ CBlinkVariable<char,0,100> *this, /* a2 6 */ char tTime) {
 	/* sdata 3f34f8 */ static char __FUNCTION__[6];
 }
 
-/* 00338878 00000050 */ void CFadeVariable<short>::Fade(/* a0 4 */ CFadeVariable<short int> *this, /* a1 5 */ short int tTarget, /* v1 3 */ short int tTime) {}
-/* 00338878 00000074 */ void CBlinkVariable<char, 0, 127>::Blink(/* a0 4 */ CBlinkVariable<char,0,127> *this, /* a2 6 */ char tTime) {}
-/* 00338878 00000050 */ void CFadeVariable<char>::Fade(/* a0 4 */ CFadeVariable<char> *this, /* a1 5 */ char tTarget, /* v1 3 */ char tTime) {}
+/* ffffffff 00000050 */ void CFadeVariable<short>::Fade(/* a0 4 */ CFadeVariable<short int> *this, /* a1 5 */ short int tTarget, /* v1 3 */ short int tTime) {}
 
-/* 00338878 00000058 */ void CBlinkVariable<char, 0, 127>::Work(/* a0 4 */ CBlinkVariable<char,0,127> *this) {
+/* ffffffff 00000074 */ void CBlinkVariable<char, 0, 127>::Blink(/* a0 4 */ CBlinkVariable<char,0,127> *this, /* a2 6 */ char tTime) {
+	/* sdata 3f3500 */ static char __FUNCTION__[6];
+}
+
+/* ffffffff 00000050 */ void CFadeVariable<char>::Fade(/* a0 4 */ CFadeVariable<char> *this, /* a1 5 */ char tTarget, /* v1 3 */ char tTime) {}
+
+/* ffffffff 00000058 */ void CBlinkVariable<char, 0, 127>::Work(/* a0 4 */ CBlinkVariable<char,0,127> *this) {
 	/* v1 3 */ int iValue;
 }
 
-/* 00338878 00000058 */ void CBlinkVariable<char, 0, 100>::Work(/* a0 4 */ CBlinkVariable<char,0,100> *this) {
+/* ffffffff 00000058 */ void CBlinkVariable<char, 0, 100>::Work(/* a0 4 */ CBlinkVariable<char,0,100> *this) {
 	/* v1 3 */ int iValue;
 }
 
-/* 00338878 0000006c */ void CBlinkSwitchVariable<unsigned char, 50, 100, 1, 0>::Work(/* a0 4 */ CBlinkSwitchVariable<unsigned char,50,100,1,0> *this) {
+/* ffffffff 0000006c */ void CBlinkSwitchVariable<unsigned char, 50, 100, 1, 0>::Work(/* a0 4 */ CBlinkSwitchVariable<unsigned char,50,100,1,0> *this) {
 	/* v1 3 */ int iValue;
 }
 
-/* 00338878 0000006c */ void CBlinkSwitchVariable<unsigned char, 0, 60, 20, 0>::Work(/* a0 4 */ CBlinkSwitchVariable<unsigned char,0,60,20,0> *this) {
+/* ffffffff 0000006c */ void CBlinkSwitchVariable<unsigned char, 0, 60, 20, 0>::Work(/* a0 4 */ CBlinkSwitchVariable<unsigned char,0,60,20,0> *this) {
 	/* v1 3 */ int iValue;
 }
 
-/* 00338878 00000074 */ void CFadeVariable<char>::Work(/* a2 6 */ CFadeVariable<char> *this) {}
+/* ffffffff 00000074 */ void CFadeVariable<char>::Work(/* a2 6 */ CFadeVariable<char> *this) {}
 
-/* 00338878 00000038 */ void CWrkVariable<char, 0, 100>::Work(/* a0 4 */ CWrkVariable<char,0,100> *this) {
+/* ffffffff 00000038 */ void CWrkVariable<char, 0, 100>::Work(/* a0 4 */ CWrkVariable<char,0,100> *this) {
 	/* a1 5 */ int iVal;
 }
 
-/* 00338878 00000038 */ void CWrkVariable<short, 0, 128>::Work(/* a0 4 */ CWrkVariable<short int,0,128> *this) {
+/* ffffffff 00000038 */ void CWrkVariable<short, 0, 128>::Work(/* a0 4 */ CWrkVariable<short int,0,128> *this) {
 	/* a1 5 */ int iVal;
 }
 
-/* 00338878 00000038 */ void CWrkVariable<short, 0, 76>::Work(/* a0 4 */ CWrkVariable<short int,0,76> *this) {
+/* ffffffff 00000038 */ void CWrkVariable<short, 0, 76>::Work(/* a0 4 */ CWrkVariable<short int,0,76> *this) {
 	/* a1 5 */ int iVal;
 }
 
-/* 00338878 00000040 */ void CWrkVariable<short, 20, 128>::Work(/* a0 4 */ CWrkVariable<short int,20,128> *this) {
+/* ffffffff 00000040 */ void CWrkVariable<short, 20, 128>::Work(/* a0 4 */ CWrkVariable<short int,20,128> *this) {
 	/* a1 5 */ int iVal;
 }
 
-/* 00338878 0000006c */ void CBlinkSwitchVariable<short, 20, 60, 15, 0>::Work(/* a0 4 */ CBlinkSwitchVariable<short int,20,60,15,0> *this) {
+/* ffffffff 0000006c */ void CBlinkSwitchVariable<short, 20, 60, 15, 0>::Work(/* a0 4 */ CBlinkSwitchVariable<short int,20,60,15,0> *this) {
 	/* v1 3 */ int iValue;
 }
 
-/* 00338878 00000074 */ void CFadeVariable<short>::Work(/* a2 6 */ CFadeVariable<short int> *this) {}
-/* 00338878 0000003c */ type_info& CVariable<char, 0, 9> type_info function() {}
+/* ffffffff 00000074 */ void CFadeVariable<short>::Work(/* a2 6 */ CFadeVariable<short int> *this) {}
+/* ffffffff 0000003c */ type_info& CVariable<char, 0, 9> type_info function() {}
 /* 00338878 0000003c */ type_info& CVariable<char, 0, 3> type_info function() {}
 
 // *****************************************************************************
@@ -24914,11 +25380,11 @@
 /* 00224f40 00000034 */ static unsigned int** unsigned int * * _fixed_array_verifyrange<unsigned int *>(/* a0 4 */ size_t v, /* a1 5 */ size_t _max) {}
 
 /* 00224f78 000000a0 */ void CFinderBase::Draw(/* a0 4 */ CFinderBase *this, /* s0 16 */ int off_x, /* s1 17 */ int off_y, /* s2 18 */ int iAlpha) {
-	/* -0xb0(sp) */ DISP_SPRT ds;
+	/* 0x0(sp) */ DISP_SPRT ds;
 }
 
 /* 00225018 000000e4 */ void CFinderBase::DrawKakiwari(/* a0 4 */ CFinderBase *this, /* a1 5 */ int off_x, /* a2 6 */ int off_y, /* s2 18 */ int iAlpha) {
-	/* -0xe0(sp) */ DISP_SPRT ds;
+	/* 0x0(sp) */ DISP_SPRT ds;
 	/* s0 16 */ int i;
 }
 
@@ -24932,7 +25398,7 @@
 /* 00225238 00000010 */ float CNPlyrCamera::GetFOVRate(/* a0 4 */ CNPlyrCamera *this) {}
 
 /* 00225248 00000218 */ void CNPlyrCamera::DrawSpiritGageBase(/* a0 4 */ CNPlyrCamera *this, /* s0 16 */ int off_x, /* s1 17 */ int off_y, /* s4 20 */ int iAlpha, /* f20 58 */ float fMasterScale) {
-	/* -0xf0(sp) */ DISP_SPRT ds;
+	/* 0x0(sp) */ DISP_SPRT ds;
 }
 
 /* 00225460 00000064 */ void CNPlyrCamera::FinderIn(/* s0 16 */ CNPlyrCamera *this) {}
@@ -24978,15 +25444,15 @@
 }
 
 /* 00225cc8 0000008c */ void CNPlyrCamera::CaptureCircleDraw(/* a0 4 */ CNPlyrCamera *this, /* s0 16 */ int fndr_mx, /* s1 17 */ int fndr_my, /* s2 18 */ int iAlpha) {
-	/* -0xb0(sp) */ DISP_SPRT ds;
+	/* 0x0(sp) */ DISP_SPRT ds;
 }
 
 /* 00225d58 00000020 */ void CNPlyrCamera::PhotoInfoDisp(/* a0 4 */ CNPlyrCamera *this, /* a1 5 */ int iDamage, /* a2 6 */ int iScore, /* a3 7 */ PHOTO_BONUS_SHOT bonus) {}
 /* 00225d78 00000080 */ void CNPlyrCamera::PhotoInfoDispNew(/* s1 17 */ CNPlyrCamera *this, /* a1 5 */ int iDamage, /* s0 16 */ int iScore, /* a3 7 */ BONUS_SHOT_SCORE bonus) {}
 
 /* 00225df8 00000394 */ void CNPlyrCamera::Draw(/* s3 19 */ CNPlyrCamera *this) {
-	/* -0x70(sp) */ float fx;
-	/* -0x6c(sp) */ float fy;
+	/* 0x0(sp) */ float fx;
+	/* 0x4(sp) */ float fy;
 	/* s5 21 */ int fndr_mx;
 	/* s4 20 */ int fndr_my;
 	/* sdata 3f3568 */ static char aFilmTypeNo[5];
@@ -24997,25 +25463,25 @@
 /* 00226190 00000030 */ void CNPlyrCamera::FrameReset(/* s0 16 */ CNPlyrCamera *this) {}
 
 /* 002261c0 00000090 */ void CNPlyrCamera::GetFinderMovePos(/* a0 4 */ CNPlyrCamera *this, /* s1 17 */ float *fx, /* s0 16 */ float *fy) {
-	/* -0x30(sp) */ float fp[2];
+	/* 0x0(sp) */ float fp[2];
 }
 
-/* 00339e88 00000044 */ void CFadeVariable<float>::Fade(/* a0 4 */ CFadeVariable<float> *this, /* f12 50 */ float tTarget, /* f13 51 */ float tTime) {}
+/* ffffffff 00000044 */ void CFadeVariable<float>::Fade(/* a0 4 */ CFadeVariable<float> *this, /* f12 50 */ float tTarget, /* f13 51 */ float tTime) {}
 
-/* 00339e88 0000002c */ void CWrkVariable<int, 0, 128>::Work(/* a1 5 */ CWrkVariable<int,0,128> *this) {
+/* ffffffff 0000002c */ void CWrkVariable<int, 0, 128>::Work(/* a1 5 */ CWrkVariable<int,0,128> *this) {
 	/* v0 2 */ int iVal;
 }
 
-/* 00339e88 00000038 */ void CWrkVariable<short, 0, 128>::Work(/* a0 4 */ CWrkVariable<short int,0,128> *this) {
+/* ffffffff 00000038 */ void CWrkVariable<short, 0, 128>::Work(/* a0 4 */ CWrkVariable<short int,0,128> *this) {
 	/* a1 5 */ int iVal;
 }
 
-/* 00339e88 00000030 */ int CWaitVariable<char>::Work(/* a1 5 */ CWaitVariable<char> *this) {}
-/* 00339e88 00000068 */ void CFadeVariable<float>::Work(/* a0 4 */ CFadeVariable<float> *this) {}
-/* 00339e88 00000030 */ int CWaitVariable<short>::Work(/* a1 5 */ CWaitVariable<short int> *this) {}
-/* 00339e88 00000058 */ void CFadeVariable<int>::Work(/* a0 4 */ CFadeVariable<int> *this) {}
+/* ffffffff 00000030 */ int CWaitVariable<char>::Work(/* a1 5 */ CWaitVariable<char> *this) {}
+/* ffffffff 00000068 */ void CFadeVariable<float>::Work(/* a0 4 */ CFadeVariable<float> *this) {}
+/* ffffffff 00000030 */ int CWaitVariable<short>::Work(/* a1 5 */ CWaitVariable<short int> *this) {}
+/* ffffffff 00000058 */ void CFadeVariable<int>::Work(/* a0 4 */ CFadeVariable<int> *this) {}
 
-/* 00339e88 00000038 */ void CWrkVariable<char, 0, 64>::Work(/* a0 4 */ CWrkVariable<char,0,64> *this) {
+/* ffffffff 00000038 */ void CWrkVariable<char, 0, 64>::Work(/* a0 4 */ CWrkVariable<char,0,64> *this) {
 	/* a1 5 */ int iVal;
 }
 
@@ -25042,20 +25508,20 @@
 /* 002265c0 00000090 */ void NewGameDispMain() {}
 
 /* 00226650 00000050 */ static void NewGameItemDisp(/* a0 4 */ int off_x, /* a1 5 */ int off_y, /* a2 6 */ u_char alpha) {
-	/* -0xa0(sp) */ DISP_SPRT ds;
+	/* 0x0(sp) */ DISP_SPRT ds;
 }
 
 /* 002266a0 00000110 */ static void NewGameDifficultyDisp(/* a0 4 */ int off_x, /* a1 5 */ int off_y, /* s2 18 */ u_char alpha) {
 	/* s0 16 */ int i;
-	/* -0xe0(sp) */ DISP_SPRT dif_ds;
+	/* 0x0(sp) */ DISP_SPRT dif_ds;
 	/* sdata 3f35b0 */ static int dif_tex_tbl[2];
 }
 
 /* 002267b0 000000cc */ static void NewGameCursorDisp(/* a0 4 */ int off_x, /* a1 5 */ int off_y, /* a2 6 */ u_char alpha) {}
 
 /* 00226880 00000074 */ static void NewGameBlackBgDisp(/* a0 4 */ int off_x, /* a1 5 */ int off_y, /* a2 6 */ u_char alpha) {
-	/* -0xb0(sp) */ DISP_SQAR dsq;
-	/* -0x30(sp) */ SQAR_DAT black_bg;
+	/* 0x0(sp) */ DISP_SQAR dsq;
+	/* 0x80(sp) */ SQAR_DAT black_bg;
 }
 
 /* 002268f8 00000038 */ static u_char NewGameBlackOutAnimCtrl(/* a0 4 */ int timer) {
@@ -25133,14 +25599,17 @@
 }
 
 /* 00227148 00000120 */ void OL_LOAD::Print(/* s1 17 */ OL_LOAD *this, /* s4 20 */ char *pBuf) {
-	/* -0xc00(sp) */ char StringBuffer[2000];
-	/* -0x430(sp) */ char StringTemp[1000];
+	/* 0x0(sp) */ char StringBuffer[2000];
+	/* 0x7d0(sp) */ char StringTemp[1000];
 	/* s2 18 */ char *pSBuf;
 	/* s1 17 */ int i;
 }
 
-/* 00227268 00000050 */ OL_LOAD_READY OL_LOAD_ONE::IsReady(/* a0 4 */ OL_LOAD_ONE *this) {}
-/* 002272b8 000000bc */ OL_LOAD_ERR OL_LOAD_ONE::Req(/* s0 16 */ OL_LOAD_ONE *this, /* s1 17 */ int FileNo) {}
+/* 00227268 00000050 */ OL_LOAD_READY OL_LOAD_ONE::IsReady(/* a0 4 */ OL_LOAD_ONE *this, /* a1 5 */ int *mdl_pp) {}
+
+/* 002272b8 000000bc */ OL_LOAD_ERR OL_LOAD_ONE::Req(/* s0 16 */ OL_LOAD_ONE *this, /* s1 17 */ int FileNo) {
+	/* sdata 3f35e8 */ static char __FUNCTION__[4];
+}
 
 /* 00227378 000000b8 */ int OL_LOAD_ONE::Main(/* s0 16 */ OL_LOAD_ONE *this) {
 	/* s1 17 */ int ret;
@@ -25152,21 +25621,22 @@
 	/* v1 3 */ int RetVal;
 }
 
-/* 002274e8 00000bd0 */ void OL_LOAD_ONE::Print(/* fp 30 */ OL_LOAD_ONE *this, /* -0x60(sp) */ char *pSBuf) {
-	/* -0x670(sp) */ CFileName fn;
+/* 002274e8 00000bd0 */ void OL_LOAD_ONE::Print(/* fp 30 */ OL_LOAD_ONE *this, /* 0xa00(sp) */ char *pSBuf) {
+	/* 0x0(sp) */ char StringTemp[1000];
+	/* 0x3f0(sp) */ CFileName fn;
 	/* s4 20 */ CFileName *this;
 	/* s0 16 */ char *pStr;
-	/* -0x5c(sp) */ basic_string<char,string_char_traits<char>,ctl::custom_allocator<char> > *this;
+	/* 0xa04(sp) */ basic_string<char,string_char_traits<char>,ctl::custom_allocator<char> > *this;
 	/* s7 23 */ basic_string<char,string_char_traits<char>,ctl::custom_allocator<char> > *this;
 	/* s6 22 */ basic_string<char,string_char_traits<char>,ctl::custom_allocator<char> > *this;
 	/* s5 21 */ basic_string<char,string_char_traits<char>,ctl::custom_allocator<char> > *this;
 	/* s3 19 */ basic_string<char,string_char_traits<char>,ctl::custom_allocator<char> > *this;
 	/* s1 17 */ basic_string<char,string_char_traits<char>,ctl::custom_allocator<char> > *this;
 	/* s0 16 */ basic_string<char,string_char_traits<char>,ctl::custom_allocator<char> > *this;
-	/* -0x5c0(sp) */ char strDrive[260];
-	/* -0x4b0(sp) */ char strDir[260];
-	/* -0x3a0(sp) */ char strFile[260];
-	/* -0x290(sp) */ char strExt[260];
+	/* 0x4a0(sp) */ char strDrive[260];
+	/* 0x5b0(sp) */ char strDir[260];
+	/* 0x6c0(sp) */ char strFile[260];
+	/* 0x7d0(sp) */ char strExt[260];
 	/* s1 17 */ char *pColon;
 	/* s0 16 */ char *pLastSlash;
 	/* v0 2 */ char *pLastYen;
@@ -25187,15 +25657,15 @@
 	/* a0 4 */ Rep *this;
 }
 
-/* 00339eb0 00000054 */ OL_LOAD_ONE* OL_LOAD_ONE * _fixed_array_verifyrange<OL_LOAD_ONE>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ OL_LOAD_ONE* OL_LOAD_ONE * _fixed_array_verifyrange<OL_LOAD_ONE>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
 
-/* 00339eb0 000000d4 */ char* basic_string<char, string_char_traits<char>, ctl::custom_allocator<char> >::Rep::clone(/* s2 18 */ Rep *this) {
+/* ffffffff 000000d4 */ char* basic_string<char, string_char_traits<char>, ctl::custom_allocator<char> >::Rep::clone(/* s2 18 */ Rep *this) {
 	/* s1 17 */ size_t extra;
 	/* a1 5 */ size_t s;
 	/* v1 3 */ size_t i;
 }
 
-/* 00339eb0 00000280 */ basic_string<char,string_char_traits<char>,ctl::custom_allocator<char> >& basic_string<char, string_char_traits<char>, ctl::custom_allocator<char> >::replace(/* s4 20 */ basic_string<char,string_char_traits<char>,ctl::custom_allocator<char> > *this, /* s1 17 */ size_t pos, /* s2 18 */ size_t n1, /* fp 30 */ char *s, /* s3 19 */ size_t n2) {
+/* ffffffff 00000280 */ basic_string<char,string_char_traits<char>,ctl::custom_allocator<char> >& basic_string<char, string_char_traits<char>, ctl::custom_allocator<char> >::replace(/* s4 20 */ basic_string<char,string_char_traits<char>,ctl::custom_allocator<char> > *this, /* s1 17 */ size_t pos, /* s2 18 */ size_t n1, /* fp 30 */ char *s, /* s3 19 */ size_t n2) {
 	/* s5 21 */ size_t len;
 	/* s7 23 */ size_t newlen;
 	/* a2 6 */ size_t s;
@@ -25209,18 +25679,18 @@
 	/* a2 6 */ size_t n;
 }
 
-/* 00339eb0 00000158 */ basic_string<char,string_char_traits<char>,ctl::custom_allocator<char> >& basic_string<char, string_char_traits<char>, ctl::custom_allocator<char> >::replace(/* s4 20 */ basic_string<char,string_char_traits<char>,ctl::custom_allocator<char> > *this, /* s6 22 */ size_t pos1, /* s5 21 */ size_t n1, /* s3 19 */ basic_string<char,string_char_traits<char>,ctl::custom_allocator<char> > &str, /* s0 16 */ size_t pos2, /* s2 18 */ size_t n2) {
+/* ffffffff 00000158 */ basic_string<char,string_char_traits<char>,ctl::custom_allocator<char> >& basic_string<char, string_char_traits<char>, ctl::custom_allocator<char> >::replace(/* s4 20 */ basic_string<char,string_char_traits<char>,ctl::custom_allocator<char> > *this, /* s6 22 */ size_t pos1, /* s5 21 */ size_t n1, /* s3 19 */ basic_string<char,string_char_traits<char>,ctl::custom_allocator<char> > &str, /* s0 16 */ size_t pos2, /* s2 18 */ size_t n2) {
 	/* s1 17 */ size_t len2;
 	/* a0 4 */ Rep *this;
 }
 
 /* 002280b8 0000004c */ static void __static_initialization_and_destruction_0(/* a0 4 */ int __initialize_p, /* a1 5 */ int __priority) {}
-/* 00339eb0 0000004c */ type_info& CFileName type_info function() {}
-/* 00339eb0 00000228 */ void CFileName::~CFileName(/* s1 17 */ int __in_chrg) {}
-/* 00339eb0 0000003c */ type_info& ctl::custom_allocator<char> type_info function() {}
-/* 00339eb0 0000003c */ type_info& OL_LOAD_ONE type_info function() {}
-/* 00339eb0 0000001c */ void ctl::custom_allocator<char>::custom_deallocate(/* a0 4 */ custom_allocator<char> *this, /* a1 5 */ void *_Ptr) {}
-/* 00339eb0 0000001c */ char* ctl::custom_allocator<char>::custom_allocate(/* a0 4 */ custom_allocator<char> *this, /* a1 5 */ size_t _Count) {}
+/* ffffffff 0000004c */ type_info& CFileName type_info function() {}
+/* ffffffff 00000228 */ void CFileName::~CFileName(/* s0 16 */ CFileName *this, /* s1 17 */ int __in_chrg) {}
+/* ffffffff 0000003c */ type_info& ctl::custom_allocator<char> type_info function() {}
+/* ffffffff 0000003c */ type_info& OL_LOAD_ONE type_info function() {}
+/* ffffffff 0000001c */ void ctl::custom_allocator<char>::custom_deallocate(/* a0 4 */ custom_allocator<char> *this, /* a1 5 */ void *_Ptr) {}
+/* ffffffff 0000001c */ char* ctl::custom_allocator<char>::custom_allocate(/* a0 4 */ custom_allocator<char> *this, /* a1 5 */ size_t _Count) {}
 /* 00339eb0 0000003c */ type_info& basic_string<char, string_char_traits<char>, ctl::custom_allocator<char> > type_info function() {}
 /* 00228108 00000020 */ static void global constructors keyed to ol_load() {}
 
@@ -25296,38 +25766,38 @@
 }
 
 /* 002295e8 000002d4 */ void OptionMainDisp() {
-	/* -0x180(sp) */ DISP_SPRT spr;
-	/* -0xf0(sp) */ DISP_SQAR sqr;
+	/* 0x0(sp) */ DISP_SPRT spr;
+	/* 0x90(sp) */ DISP_SQAR sqr;
 	/* s0 16 */ int i;
 	/* f1 39 */ float snd_pos;
 	/* s3 19 */ int alpha;
 }
 
 /* 002298c0 00000240 */ void OptionOperateDisp() {
-	/* -0x180(sp) */ DISP_SPRT spr;
-	/* -0xf0(sp) */ DISP_SQAR sqr;
+	/* 0x0(sp) */ DISP_SPRT spr;
+	/* 0x90(sp) */ DISP_SQAR sqr;
 	/* s0 16 */ int i;
 	/* s3 19 */ int alpha;
 }
 
 /* 00229b00 00000208 */ void OptionBrightnessDisp() {
-	/* -0xd0(sp) */ DISP_SPRT spr;
+	/* 0x0(sp) */ DISP_SPRT spr;
 	/* s1 17 */ int i;
 	/* s2 18 */ int alpha;
 	/* f0 38 */ float bar_pos;
 }
 
 /* 00229d08 0000027c */ void OptionButtonSetupDisp() {
-	/* -0x1f0(sp) */ DISP_SPRT spr;
+	/* 0x0(sp) */ DISP_SPRT spr;
 	/* s0 16 */ float *scl_p;
-	/* -0x160(sp) */ float scl[35][2];
+	/* 0x90(sp) */ float scl[35][2];
 	/* s1 17 */ int i;
 	/* s3 19 */ int alpha;
 }
 
 /* 00229f88 00000318 */ static void OptDispButtonSetupText(/* s2 18 */ int alp) {
-	/* -0x230(sp) */ int btn_txt[3][15][2];
-	/* -0xc0(sp) */ int txt_pos[15][2];
+	/* 0x0(sp) */ int btn_txt[3][15][2];
+	/* 0x170(sp) */ int txt_pos[15][2];
 	/* s1 17 */ int i;
 	/* a3 7 */ int col;
 }
@@ -25336,71 +25806,71 @@
 
 /* 0022a2e0 00000460 */ static void OptDispCursor(/* s1 17 */ int place, /* s0 16 */ int csr, /* s3 19 */ int alp) {
 	/* s1 17 */ SPRT_DAT *tri_sp_dat;
-	/* -0x100(sp) */ DISP_SPRT spr;
+	/* 0x0(sp) */ DISP_SPRT spr;
 	/* s0 16 */ int i;
 	/* s2 18 */ int csr_y;
 	/* s4 20 */ int csr_type;
 }
 
 /* 0022a740 0000041c */ static void OptDispAHeadText(/* a0 4 */ int place, /* s4 20 */ int csr, /* s5 21 */ int alp) {
-	/* -0x180(sp) */ int text_dat[26][3];
+	/* 0x0(sp) */ int text_dat[26][3];
 	/* s0 16 */ int i;
 	/* a3 7 */ int col;
 	/* s3 19 */ int *txp;
 }
 
 /* 0022ab60 00000228 */ static void OptDispBracket(/* s0 16 */ int place, /* fp 30 */ int csr, /* s4 20 */ int alp) {
-	/* -0x120(sp) */ SPRT_DAT *bracket_sp[3][2];
+	/* 0x0(sp) */ SPRT_DAT *bracket_sp[3][2];
 	/* s0 16 */ SPRT_DAT *spd;
-	/* -0x100(sp) */ DISP_SPRT spr;
+	/* 0x20(sp) */ DISP_SPRT spr;
 	/* s2 18 */ int i;
 	/* s1 17 */ int j;
-	/* -0x70(sp) */ int bracket_lr[3];
+	/* 0xb0(sp) */ int bracket_lr[3];
 }
 
 /* 0022ad88 000002bc */ static void OptDispIcon(/* s0 16 */ int place, /* s6 22 */ int csr, /* s5 21 */ int alpha) {
-	/* -0x130(sp) */ SPRT_DAT *icon[8][2];
-	/* -0xf0(sp) */ DISP_SPRT spr;
+	/* 0x0(sp) */ SPRT_DAT *icon[8][2];
+	/* 0x40(sp) */ DISP_SPRT spr;
 	/* v0 2 */ int alp;
 	/* s4 20 */ int i;
 	/* s2 18 */ int j;
-	/* -0x60(sp) */ int icon_ofs;
+	/* 0xd0(sp) */ int icon_ofs;
 	/* s1 17 */ int icon3_id;
 }
 
 /* 0022b048 00000128 */ static void OptDispTitle(/* s2 18 */ int place, /* a1 5 */ int mx, /* a2 6 */ int my, /* s3 19 */ int alp) {
-	/* -0xd0(sp) */ DISP_SPRT spr;
+	/* 0x0(sp) */ DISP_SPRT spr;
 	/* s0 16 */ int i;
 	/* v1 3 */ int ttl_no;
 }
 
 /* 0022b170 00000148 */ static void OptDispCaption(/* a0 4 */ int place, /* a1 5 */ int csr, /* s0 16 */ int alp) {
-	/* -0xb0(sp) */ DISP_SPRT cap_ds;
+	/* 0x0(sp) */ DISP_SPRT cap_ds;
 	/* s1 17 */ int i;
 }
 
 /* 0022b2b8 00000148 */ static void OptDispWinMsg(/* s1 17 */ int place, /* s2 18 */ int csr, /* s0 16 */ int alp) {
-	/* -0x60(sp) */ int msg_id[14];
+	/* 0x0(sp) */ int msg_id[14];
 	/* a1 5 */ int msg_no;
 }
 
 /* 0022b400 000000b8 */ void OptDispBgMask() {
-	/* -0x150(sp) */ DISP_SQAR DispSqar;
-	/* -0xd0(sp) */ SQAR_DAT SqarDat;
-	/* -0xb0(sp) */ DISP_SPRT spr;
+	/* 0x0(sp) */ DISP_SQAR DispSqar;
+	/* 0x80(sp) */ SQAR_DAT SqarDat;
+	/* 0xa0(sp) */ DISP_SPRT spr;
 	/* s2 18 */ int i;
 }
 
 /* 0022b4b8 000000ec */ static void OptPrintMsgShdw(/* s5 21 */ int msg_id, /* s4 20 */ int x, /* s1 17 */ int y, /* s6 22 */ int col, /* s2 18 */ int alp, /* s0 16 */ int pri, /* s3 19 */ int mode) {}
 
 /* 0022b5a8 000000d8 */ static void OptDispCautionMsg(/* s2 18 */ int msg_id, /* s1 17 */ int alp) {
-	/* -0xc0(sp) */ DISP_SQAR DispSqar;
-	/* -0x40(sp) */ SQAR_DAT SqarDat;
+	/* 0x0(sp) */ DISP_SQAR DispSqar;
+	/* 0x80(sp) */ SQAR_DAT SqarDat;
 }
 
 /* 0022b680 0000011c */ static void OptBrightnessAdjustmentFilterDraw(/* s0 16 */ int alp) {
-	/* -0xb0(sp) */ DISP_SQAR DispSqar;
-	/* -0x30(sp) */ SQAR_DAT SqarDat;
+	/* 0x0(sp) */ DISP_SQAR DispSqar;
+	/* 0x80(sp) */ SQAR_DAT SqarDat;
 }
 
 // *****************************************************************************
@@ -25473,7 +25943,7 @@
 	/* s3 19 */ int i;
 	/* a1 5 */ int j;
 	/* a1 5 */ int loop;
-	/* -0x40(sp) */ int port_slot[2][2];
+	/* 0x0(sp) */ int port_slot[2][2];
 }
 
 /* 0022c048 00000024 */ int padIsConnected(/* a0 4 */ int iId) {}
@@ -25487,13 +25957,13 @@
 	/* v0 2 */ int wrk;
 	/* a0 4 */ int exid;
 	/* s6 22 */ int p_id;
-	/* -0x60(sp) */ int intr;
+	/* 0x0(sp) */ int intr;
 	/* s7 23 */ PAD_STRUCT *psp;
 	/* sbss 3f4ea8 */ static char act_align[6];
 }
 
 /* 0022c518 000001d0 */ int PadReadFunc(/* s0 16 */ PAD_STRUCT *psp, /* s1 17 */ int p_id) {
-	/* -0x40(sp) */ char r_data[32];
+	/* 0x0(sp) */ char r_data[32];
 	/* a0 4 */ int i;
 	/* a2 6 */ int j;
 }
@@ -25590,26 +26060,26 @@
 /* 0022d7b0 00000044 */ static void PauseCaptureDataDisp() {}
 
 /* 0022d7f8 00000120 */ static void PauseWinDisp(/* s0 16 */ int off_x, /* s1 17 */ int off_y, /* a2 6 */ u_char alpha) {
-	/* -0xd0(sp) */ DISP_SQAR dsq;
-	/* -0x50(sp) */ SQAR_DAT pause_bg;
+	/* 0x0(sp) */ DISP_SQAR dsq;
+	/* 0x80(sp) */ SQAR_DAT pause_bg;
 }
 
 /* 0022d918 00000088 */ static void PauseTitleDisp(/* s0 16 */ int off_x, /* s1 17 */ int off_y, /* a2 6 */ u_char alpha) {
-	/* -0xb0(sp) */ DISP_SPRT title_ds;
+	/* 0x0(sp) */ DISP_SPRT title_ds;
 }
 
 /* 0022d9a0 00000054 */ static void PauseMenuCsrDisp(/* a0 4 */ int off_x, /* a1 5 */ int off_y, /* a2 6 */ u_char alpha) {}
 
 /* 0022d9f8 00000110 */ static void PauseMenuDisp(/* a0 4 */ int off_x, /* a1 5 */ int off_y, /* s3 19 */ u_char alpha) {
 	/* s0 16 */ int i;
-	/* -0x60(sp) */ int msg_id_tbl[3];
+	/* 0x10(sp) */ int msg_id_tbl[3];
 }
 
 /* 0022db08 0000011c */ static void PauseMenuReturnTitleWinDisp(/* s1 17 */ int off_x, /* s2 18 */ int off_y, /* a2 6 */ u_char alpha) {}
 
 /* 0022dc28 000000b0 */ static void PausePadErrorMsgDisp(/* a0 4 */ int off_x, /* a1 5 */ int off_y, /* a2 6 */ u_char alpha) {
-	/* -0xb0(sp) */ DISP_SQAR dsq;
-	/* -0x30(sp) */ SQAR_DAT bg_base;
+	/* 0x0(sp) */ DISP_SQAR dsq;
+	/* 0x80(sp) */ SQAR_DAT bg_base;
 }
 
 // *****************************************************************************
@@ -25618,13 +26088,13 @@
 
 /* 0022dcd8 000000e4 */ void SavePCFile() {
 	/* s0 16 */ int fd;
-	/* -0x40(sp) */ char fname[20];
+	/* 0x0(sp) */ char fname[20];
 	/* s1 17 */ void *data_buff_addr;
 }
 
 /* 0022ddc0 000000e4 */ void LoadPCFile() {
 	/* s0 16 */ int fd;
-	/* -0x40(sp) */ char fname[20];
+	/* 0x0(sp) */ char fname[20];
 	/* s1 17 */ void *data_buff_addr;
 }
 
@@ -25702,7 +26172,8 @@
 	/* s2 18 */ u_char get_save_pos;
 }
 
-/* 0022f330 00000360 */ int AddPhotoData(/* s4 20 */ int adr_no, /* -0x68(sp) */ int score, /* -0x64(sp) */ int room_no, /* -0x60(sp) */ int chapter_no, /* -0x70(sp) */ sceCdCLOCK rtc, /* s7 23 */ SUBJECT_WRK *obj, /* s5 21 */ int obj_num) {
+/* 0022f330 00000360 */ int AddPhotoData(/* s4 20 */ int adr_no, /* 0x8(sp) */ int score, /* 0xc(sp) */ int room_no, /* 0x10(sp) */ int chapter_no, /* 0x0(sp) */ sceCdCLOCK rtc, /* s7 23 */ SUBJECT_WRK *obj, /* s5 21 */ int obj_num) {
+	/* rdata 3c2d28 */ static char __FUNCTION__[13];
 	/* s1 17 */ int i;
 	/* s6 22 */ int number;
 	/* s3 19 */ PICTURE_WRK *pic;
@@ -25729,21 +26200,21 @@
 
 /* 0022fb30 0000021c */ void SortPhotoData_Before(/* s0 16 */ PFILE_WRK *photo_file) {
 	/* rdata 3c2df8 */ static char __FUNCTION__[21];
-	/* -0x230(sp) */ PICTURE_WRK sort_buff[16];
+	/* 0x0(sp) */ PICTURE_WRK sort_buff[16];
 	/* s3 19 */ int photo_num;
 	/* s1 17 */ int i;
 }
 
 /* 0022fd50 000002b4 */ void SortPhotoData_Protect(/* s0 16 */ PFILE_WRK *photo_file) {
 	/* rdata 3c2e10 */ static char __FUNCTION__[22];
-	/* -0x230(sp) */ PICTURE_WRK sort_buff[16];
+	/* 0x0(sp) */ PICTURE_WRK sort_buff[16];
 	/* s3 19 */ int set_count;
 	/* s1 17 */ int i;
 }
 
 /* 00230008 000002dc */ void SortPhotoData_NonProtect(/* s0 16 */ PFILE_WRK *photo_file) {
 	/* rdata 3c2e28 */ static char __FUNCTION__[25];
-	/* -0x230(sp) */ PICTURE_WRK sort_buff[16];
+	/* 0x0(sp) */ PICTURE_WRK sort_buff[16];
 	/* s3 19 */ int set_count;
 	/* s1 17 */ int i;
 }
@@ -25751,33 +26222,33 @@
 /* 002302e8 00000b0c */ void SortPhotoData_NewTime(/* s5 21 */ PFILE_WRK *photo_file) {
 	/* s3 19 */ int i;
 	/* s0 16 */ int j;
-	/* -0xb0(sp) */ PICTURE_WRK buff;
-	/* -0x90(sp) */ DATE_INFO date1;
-	/* -0x70(sp) */ DATE_INFO date2;
+	/* 0x0(sp) */ PICTURE_WRK buff;
+	/* 0x20(sp) */ DATE_INFO date1;
+	/* 0x40(sp) */ DATE_INFO date2;
 }
 
 /* 00230df8 00000b0c */ void SortPhotoData_OldTime(/* s5 21 */ PFILE_WRK *photo_file) {
 	/* s3 19 */ int i;
 	/* s0 16 */ int j;
-	/* -0xb0(sp) */ PICTURE_WRK buff;
-	/* -0x90(sp) */ DATE_INFO date1;
-	/* -0x70(sp) */ DATE_INFO date2;
+	/* 0x0(sp) */ PICTURE_WRK buff;
+	/* 0x20(sp) */ DATE_INFO date1;
+	/* 0x40(sp) */ DATE_INFO date2;
 }
 
 /* 00231908 000001e0 */ void SortPhotoData_BigScore(/* s5 21 */ PFILE_WRK *photo_file) {
 	/* s3 19 */ int i;
 	/* s0 16 */ int j;
-	/* -0x60(sp) */ PICTURE_WRK buff;
+	/* 0x0(sp) */ PICTURE_WRK buff;
 }
 
 /* 00231ae8 000001e0 */ void SortPhotoData_SmallScore(/* s5 21 */ PFILE_WRK *photo_file) {
 	/* s3 19 */ int i;
 	/* s0 16 */ int j;
-	/* -0x60(sp) */ PICTURE_WRK buff;
+	/* 0x0(sp) */ PICTURE_WRK buff;
 }
 
 /* 00231cc8 00000094 */ static void DispPhotoName() {
-	/* -0x40(sp) */ DRAW_ENV_5 env;
+	/* 0x10(sp) */ DRAW_ENV_5 env;
 }
 
 /* 00231d60 0000006c */ static void MoviePhaseJobPre() {}
@@ -25794,12 +26265,12 @@
 /* 00231fc0 00000018 */ void FurnPhotoFlgUp() {}
 /* 00231fd8 00000014 */ int FurnPhotoFlgIsUp() {}
 /* 00231ff0 00000008 */ void PhotoDebug() {}
-/* 0033c218 00000054 */ HINT_PHOTO_REQ* _HINT_PHOTO_REQ * _fixed_array_verifyrange<_HINT_PHOTO_REQ>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
-/* 0033c218 00000054 */ PICTURE_WRK* PICTURE_WRK * _fixed_array_verifyrange<PICTURE_WRK>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
-/* 0033c218 00000054 */ PICTURE_SUBJECT* _PICTURE_SUBJECT * _fixed_array_verifyrange<_PICTURE_SUBJECT>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ HINT_PHOTO_REQ* _HINT_PHOTO_REQ * _fixed_array_verifyrange<_HINT_PHOTO_REQ>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ PICTURE_WRK* PICTURE_WRK * _fixed_array_verifyrange<PICTURE_WRK>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ PICTURE_SUBJECT* _PICTURE_SUBJECT * _fixed_array_verifyrange<_PICTURE_SUBJECT>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
 /* 00231ff8 00000008 */ static void __static_initialization_and_destruction_0(/* a0 4 */ int __initialize_p, /* a1 5 */ int __priority) {}
-/* 0033c218 0000003c */ type_info& _HINT_PHOTO_REQ type_info function() {}
-/* 0033c218 0000003c */ type_info& PICTURE_WRK type_info function() {}
+/* ffffffff 0000003c */ type_info& _HINT_PHOTO_REQ type_info function() {}
+/* ffffffff 0000003c */ type_info& PICTURE_WRK type_info function() {}
 /* 0033c218 0000003c */ type_info& _PICTURE_SUBJECT type_info function() {}
 /* 00232000 00000020 */ static void global constructors keyed to pfile_wrk() {}
 
@@ -25819,13 +26290,13 @@
 /* 002321b0 00000008 */ int CPhotoCharger::IsReady(/* a0 4 */ CPhotoCharger *this) {}
 
 /* 002321b8 0000010c */ void CPhotoCharger::Draw(/* a0 4 */ CPhotoCharger *this, /* t0 8 */ int fndr_mx, /* a2 6 */ int fndr_my, /* s2 18 */ int iAlpha) {
-	/* -0xd0(sp) */ DISP_SPRT ds;
+	/* 0x0(sp) */ DISP_SPRT ds;
 	/* s0 16 */ int i;
 }
 
-/* 0033c42c 00000030 */ int CWaitVariable<short>::Work(/* a1 5 */ CWaitVariable<short int> *this) {}
+/* ffffffff 00000030 */ int CWaitVariable<short>::Work(/* a1 5 */ CWaitVariable<short int> *this) {}
 
-/* 0033c42c 00000074 */ void CBlinkVariable<char, 50, 127>::Blink(/* a0 4 */ CBlinkVariable<char,50,127> *this, /* a2 6 */ char tTime) {
+/* ffffffff 00000074 */ void CBlinkVariable<char, 50, 127>::Blink(/* a0 4 */ CBlinkVariable<char,50,127> *this, /* a2 6 */ char tTime) {
 	/* sdata 3f3800 */ static char __FUNCTION__[6];
 }
 
@@ -25895,13 +26366,13 @@
 
 /* 002328e8 00000410 */ void photo_datObjMain() {
 	/* rdata 3c31f8 */ static char __FUNCTION__[17];
-	/* -0x7c(sp) */ MDAT_OBJ *p_nearest_obj;
-	/* -0x90(sp) */ float nearest_pos[4];
+	/* 0x64(sp) */ MDAT_OBJ *p_nearest_obj;
+	/* 0x50(sp) */ float nearest_pos[4];
 	/* f22 60 */ float min2d;
 	/* f21 59 */ float min3d;
 	/* s5 21 */ int i;
 	/* f0 38 */ float dist;
-	/* -0x80(sp) */ float dist2d;
+	/* 0x60(sp) */ float dist2d;
 	/* s2 18 */ PhotoData *ppd;
 	/* v0 2 */ short int iValue;
 }
@@ -25942,10 +26413,10 @@
 /* 00232f50 00000034 */ static char** char * * _fixed_array_verifyrange<char *>(/* a0 4 */ size_t v, /* a1 5 */ size_t _max) {}
 /* 00232f88 00000034 */ static unsigned int** unsigned int * * _fixed_array_verifyrange<unsigned int *>(/* a0 4 */ size_t v, /* a1 5 */ size_t _max) {}
 
-/* 00232fc0 00000600 */ void DrawPhotoBuffer(/* -0xd0(sp) */ u_int pri, /* -0xcc(sp) */ int addr, /* a2 6 */ int szfl, /* a3 7 */ int x, /* t0 8 */ int y, /* -0xc8(sp) */ int szw, /* -0xc4(sp) */ int szh, /* fp 30 */ int mszw, /* 0x0(sp) */ int mszh, /* 0x8(sp) */ int ftype, /* 0x10(sp) */ int alp, /* 0x18(sp) */ int ztype) {
+/* 00232fc0 00000600 */ void DrawPhotoBuffer(/* 0xc0(sp) */ u_int pri, /* 0xc4(sp) */ int addr, /* a2 6 */ int szfl, /* a3 7 */ int x, /* t0 8 */ int y, /* 0xc8(sp) */ int szw, /* 0xcc(sp) */ int szh, /* fp 30 */ int mszw, /* 0x190(sp) */ int mszh, /* 0x198(sp) */ int ftype, /* 0x1a0(sp) */ int alp, /* 0x1a8(sp) */ int ztype) {
 	/* s6 22 */ int mszh;
-	/* 0x8(sp) */ int ftype;
-	/* -0xc0(sp) */ u_char alp;
+	/* 0x198(sp) */ int ftype;
+	/* 0xd0(sp) */ u_char alp;
 	/* s0 16 */ int dbw;
 	/* f27 65 */ float fh;
 	/* f28 66 */ float xx;
@@ -25958,8 +26429,8 @@
 	/* s1 17 */ int oline;
 	/* s4 20 */ int bw;
 	/* v0 2 */ Q_WORDDATA *pbuf;
-	/* -0x190(sp) */ SPRT_DAT2 sd;
-	/* -0x160(sp) */ DISP_SPRT2 ds;
+	/* 0x0(sp) */ SPRT_DAT2 sd;
+	/* 0x30(sp) */ DISP_SPRT2 ds;
 }
 
 /* 002335c0 0000010c */ void CopyScreenToBuffer2(/* s0 16 */ int addr_i, /* s6 22 */ int addr_o, /* a2 6 */ int szfl, /* s5 21 */ int mx, /* t0 8 */ int my, /* s1 17 */ int mw, /* s2 18 */ int mh) {
@@ -25982,7 +26453,7 @@
 
 /* 00233a00 0000004c */ void DrawSPhotoFromSmallPhotoArea2(/* a0 4 */ int n, /* a1 5 */ int pri, /* a2 6 */ int ftype, /* a3 7 */ int x, /* t0 8 */ int y, /* t1 9 */ int szw, /* t2 10 */ int szh, /* t3 11 */ u_char alp) {}
 
-/* 00233a50 00000054 */ void DrawSPhotoFromSmallPhotoAreaAddr2(/* a0 4 */ int addr, /* a1 5 */ int n, /* a2 6 */ int pri, /* a3 7 */ int ftype, /* t0 8 */ int x, /* t1 9 */ int y, /* t2 10 */ int szw, /* t3 11 */ int szh, /* 0x0(sp) */ int alp) {
+/* 00233a50 00000054 */ void DrawSPhotoFromSmallPhotoAreaAddr2(/* a0 4 */ int addr, /* a1 5 */ int n, /* a2 6 */ int pri, /* a3 7 */ int ftype, /* t0 8 */ int x, /* t1 9 */ int y, /* t2 10 */ int szw, /* t3 11 */ int szh, /* 0x30(sp) */ int alp) {
 	/* a1 5 */ int addr2;
 }
 
@@ -26019,26 +26490,26 @@
 	/* s1 17 */ int rgb;
 	/* s0 16 */ int i;
 	/* a1 5 */ int j;
-	/* -0x450(sp) */ DISP_SPRT ds;
-	/* -0x3c0(sp) */ SPRT_DAT sd;
-	/* -0x3a0(sp) */ SQAR_DAT sq;
-	/* -0x380(sp) */ DISP_SQAR dq;
+	/* 0x0(sp) */ DISP_SPRT ds;
+	/* 0x90(sp) */ SPRT_DAT sd;
+	/* 0xb0(sp) */ SQAR_DAT sq;
+	/* 0xd0(sp) */ DISP_SQAR dq;
 	/* t1 9 */ int i;
-	/* -0x250(sp) */ DISP_SPRT ds;
-	/* -0x1c0(sp) */ SPRT_DAT sd;
-	/* -0xf0(sp) */ SQAR_DAT sq;
-	/* -0xd0(sp) */ DISP_SQAR dq;
+	/* 0x200(sp) */ DISP_SPRT ds;
+	/* 0x290(sp) */ SPRT_DAT sd;
+	/* 0x360(sp) */ SQAR_DAT sq;
+	/* 0x380(sp) */ DISP_SQAR dq;
 	/* a1 5 */ int i;
 }
 
 /* 00234758 00000304 */ void DrawPhotoFilterPK2(/* a0 4 */ u_int sw, /* f24 62 */ float x, /* f25 63 */ float y, /* s0 16 */ SPRT_DAT *dat, /* a2 6 */ int photo_cnt, /* a3 7 */ void *tex_adrs, /* s2 18 */ int bGradual) {
-	/* -0xe0(sp) */ DISP_SPRT ds;
+	/* 0x0(sp) */ DISP_SPRT ds;
 	/* s1 17 */ int alp;
 	/* a0 4 */ int time;
 }
 
 /* 00234a60 000004ac */ void DrawPhotoHinttex(/* a0 4 */ u_int sw, /* f22 60 */ float x, /* f21 59 */ float y, /* a1 5 */ int photo_cnt, /* a2 6 */ int photo_spno, /* s4 20 */ u_int *tex_adrs) {
-	/* -0x180(sp) */ DISP_SPRT ds;
+	/* 0x0(sp) */ DISP_SPRT ds;
 	/* s2 18 */ SPRT_DAT *sd;
 	/* s3 19 */ u_char alp;
 	/* s1 17 */ u_char alp2;
@@ -26046,15 +26517,15 @@
 	/* a2 6 */ int max;
 	/* f1 39 */ float f;
 	/* f20 58 */ float pos;
-	/* -0xf0(sp) */ SQAR_DAT sq;
-	/* -0xd0(sp) */ DISP_SQAR dq;
+	/* 0x90(sp) */ SQAR_DAT sq;
+	/* 0xb0(sp) */ DISP_SQAR dq;
 	/* a1 5 */ int i;
 }
 
 /* 00234f10 00000150 */ void DrawPhotoFrame(/* f12 50 */ float x, /* f13 51 */ float y) {
 	/* s0 16 */ int i;
 	/* s2 18 */ u_long tex0;
-	/* -0xe0(sp) */ DISP_SPRT ds;
+	/* 0x0(sp) */ DISP_SPRT ds;
 }
 
 /* 00235060 00000368 */ void DrawSpecialFurnPhoto(/* f20 58 */ float photo_x, /* f21 59 */ float photo_y) {
@@ -26098,7 +26569,7 @@
 /* 00235870 0000000c */ int GetMaxScore() {}
 
 /* 00235880 00000034 */ void GetSystemTime(/* s0 16 */ DATE_INFO *date) {
-	/* -0x20(sp) */ sceCdCLOCK rtc;
+	/* 0x0(sp) */ sceCdCLOCK rtc;
 }
 
 /* 002358b8 00000074 */ void SetDateInfoType(/* s1 17 */ DATE_INFO *date, /* s0 16 */ sceCdCLOCK *rtc) {}
@@ -26138,7 +26609,7 @@
 /* 00235ed0 000000e0 */ void PlyrNormalCtrl() {}
 
 /* 00235fb0 00000054 */ void PlyrMotionMovement() {
-	/* -0x20(sp) */ float tv[4];
+	/* 0x0(sp) */ float tv[4];
 	/* s0 16 */ MOVE_BOX *mb;
 }
 
@@ -26148,8 +26619,8 @@
 /* 00236090 00000438 */ int PlyrDead() {
 	/* sdata 3f3974 */ static int cnt;
 	/* s3 19 */ int ret;
-	/* -0xf0(sp) */ DISP_SQAR dsq;
-	/* -0x70(sp) */ SQAR_DAT fade_bg;
+	/* 0x0(sp) */ DISP_SQAR dsq;
+	/* 0x80(sp) */ SQAR_DAT fade_bg;
 }
 
 /* 002364c8 00000068 */ void PlyrMepachiCtrl() {
@@ -26159,7 +26630,7 @@
 /* 00236530 0000016c */ static void PlyrAttractSisMain() {
 	/* f20 58 */ float dist;
 	/* sbss 3f4ee8 */ static int rand_sec;
-	/* -0x30(sp) */ LOOK_AT_PARAM param;
+	/* 0x0(sp) */ LOOK_AT_PARAM param;
 }
 
 /* 002366a0 00000110 */ void PlyrBattleCheck() {
@@ -26169,11 +26640,11 @@
 /* 002367b0 0000089c */ int PlyrDamageCtrl() {
 	/* s1 17 */ ENE_WRK *ew;
 	/* s6 22 */ int ret;
-	/* -0xa0(sp) */ u_char pani_dmgin_tbl[3][2];
-	/* -0x90(sp) */ u_char pani_dmg_tbl[2];
-	/* -0x80(sp) */ u_char pani_out_tbl[2];
-	/* -0x70(sp) */ u_char pani_avo_tbl[2];
-	/* -0x60(sp) */ float tv[4];
+	/* 0x0(sp) */ u_char pani_dmgin_tbl[3][2];
+	/* 0x10(sp) */ u_char pani_dmg_tbl[2];
+	/* 0x20(sp) */ u_char pani_out_tbl[2];
+	/* 0x30(sp) */ u_char pani_avo_tbl[2];
+	/* 0x40(sp) */ float tv[4];
 }
 
 /* 00237050 00000094 */ u_char PlyrAvoidCheck() {}
@@ -26209,20 +26680,20 @@
 }
 
 /* 002378a8 00000138 */ static void playerSetSearchEne(/* s2 18 */ int iEneWrkNo) {
-	/* -0x40(sp) */ float tv[4];
+	/* 0x0(sp) */ float tv[4];
 }
 
 /* 002379e0 000001e0 */ void ReqCamTraceNearEne(/* v0 2 */ void *ew) {
 	/* s0 16 */ ENE_WRK *ews;
-	/* -0x60(sp) */ float dist[2];
+	/* 0x0(sp) */ float dist[2];
 	/* s1 17 */ u_char i;
 	/* s2 18 */ u_char trgt;
 }
 
 /* 00237bc0 0000026c */ void SetPlyrFinderIn() {
 	/* s0 16 */ ENE_WRK *ew;
-	/* -0x80(sp) */ float tv[4];
-	/* -0x70(sp) */ float dist[2];
+	/* 0x0(sp) */ float tv[4];
+	/* 0x10(sp) */ float dist[2];
 	/* s1 17 */ u_char i;
 	/* s3 19 */ u_char n;
 	/* s2 18 */ u_char trgt;
@@ -26241,32 +26712,32 @@
 /* 00237fb0 00000034 */ void PlyrFinderEnd() {}
 
 /* 00237fe8 000000a8 */ static void PlyrSpotLightLookAt() {
-	/* -0x90(sp) */ float mtx[4][4];
-	/* -0x50(sp) */ float offset[4];
-	/* -0x40(sp) */ LOOK_AT_PARAM param;
+	/* 0x0(sp) */ float mtx[4][4];
+	/* 0x40(sp) */ float offset[4];
+	/* 0x50(sp) */ LOOK_AT_PARAM param;
 }
 
 /* 00238090 00000198 */ static void PlyrKaidanLookAt() {
-	/* -0x90(sp) */ float mtx[4][4];
-	/* -0x50(sp) */ float offset[4];
-	/* -0x40(sp) */ LOOK_AT_PARAM param;
+	/* 0x0(sp) */ float mtx[4][4];
+	/* 0x40(sp) */ float offset[4];
+	/* 0x50(sp) */ LOOK_AT_PARAM param;
 }
 
 /* 00238228 00000164 */ void PlyrNModeCtrl() {
-	/* -0x30(sp) */ float tv[4];
+	/* 0x0(sp) */ float tv[4];
 	/* s0 16 */ MOVE_BOX *mb;
 }
 
 /* 00238390 0000006c */ void PlyrFModeMoveCtrl() {
-	/* -0x20(sp) */ float tv[4];
+	/* 0x0(sp) */ float tv[4];
 	/* s0 16 */ MOVE_BOX *mb;
 }
 
 /* 00238400 00000018 */ float PlyrMovePad() {}
 
-/* 00238418 00000460 */ void PlyrMoveChk(/* s1 17 */ MOVE_BOX *mb, /* s2 18 */ float *tv, /* -0x80(sp) */ float rot) {
-	/* -0x70(sp) */ float fr[4];
-	/* -0x60(sp) */ float rcng;
+/* 00238418 00000460 */ void PlyrMoveChk(/* s1 17 */ MOVE_BOX *mb, /* s2 18 */ float *tv, /* 0x0(sp) */ float rot) {
+	/* 0x10(sp) */ float fr[4];
+	/* 0x20(sp) */ float rcng;
 	/* s5 21 */ u_char run_chk;
 	/* sdata 3f39ae */ static u_char no_rot_cng2;
 	/* sdata 3f39b0 */ static float keep_rot;
@@ -26285,7 +26756,7 @@
 /* 00238ac0 00000164 */ void PlyrMovePadFind(/* s4 20 */ MOVE_BOX *mb, /* s2 18 */ float *tv) {
 	/* f20 58 */ float rot;
 	/* s3 19 */ u_char anime;
-	/* -0x50(sp) */ u_char anime_tbl[4];
+	/* 0x0(sp) */ u_char anime_tbl[4];
 	/* s1 17 */ u_char rl_chk;
 }
 
@@ -26343,8 +26814,8 @@
 	/* v1 3 */ ENE_WRK *ew;
 	/* f21 59 */ float dpe;
 	/* f20 58 */ float dce;
-	/* -0x40(sp) */ float tx;
-	/* -0x3c(sp) */ float ty;
+	/* 0x0(sp) */ float tx;
+	/* 0x4(sp) */ float ty;
 	/* s2 18 */ u_char i;
 }
 
@@ -26352,14 +26823,14 @@
 
 /* 00239a28 0000010c */ void NearEneInfo(/* s2 18 */ PLCMN_WRK *cmn) {
 	/* s0 16 */ ENE_WRK *ew;
-	/* -0x50(sp) */ float dist[2];
+	/* 0x0(sp) */ float dist[2];
 	/* s1 17 */ u_char i;
 	/* s3 19 */ u_char no;
 }
 
 /* 00239b38 000000fc */ void NearAllEneInfo(/* s2 18 */ PLCMN_WRK *cmn) {
 	/* s0 16 */ ENE_WRK *ew;
-	/* -0x50(sp) */ float dist[2];
+	/* 0x0(sp) */ float dist[2];
 	/* s1 17 */ u_char i;
 	/* s3 19 */ u_char no;
 }
@@ -26396,13 +26867,13 @@
 	/* sdata 3f39e4 */ static u_char mpow;
 }
 
-/* 0023a450 00000274 */ int PhotoDmgChk2(/* -0x60(sp) */ int bWithLenz) {
+/* 0023a450 00000274 */ int PhotoDmgChk2(/* 0x40(sp) */ int bWithLenz) {
 	/* s3 19 */ ENE_WRK *ew;
 	/* s7 23 */ int i;
 	/* fp 30 */ u_short dmg;
-	/* -0xa0(sp) */ int bParticleFlg;
+	/* 0x0(sp) */ int bParticleFlg;
 	/* s4 20 */ int dmg_one;
-	/* -0x90(sp) */ ENE_DMG_PARTICLE_REQ EneDmgParticleReq;
+	/* 0x10(sp) */ ENE_DMG_PARTICLE_REQ EneDmgParticleReq;
 	/* v1 3 */ int iPercent;
 	/* a1 5 */ int iSuctionPower;
 	/* a2 6 */ int HitEffectLabel;
@@ -26416,22 +26887,22 @@
 	/* a2 6 */ SHUTTER_CHANCE_STATE SState;
 }
 
-/* 0023abc8 00000990 */ static void PlayerTakePictJob(/* -0x80(sp) */ int iDmg, /* s7 23 */ int bWithLenz) {
+/* 0023abc8 00000990 */ static void PlayerTakePictJob(/* 0x160(sp) */ int iDmg, /* s7 23 */ int bWithLenz) {
 	/* rdata 3c38e8 */ static char __FUNCTION__[18];
 	/* s2 18 */ int i;
-	/* -0x1e0(sp) */ PHOTO_WRK_DEF def;
-	/* -0x1a0(sp) */ BONUS_SHOT_SCORE bonus;
-	/* -0x180(sp) */ SUBJECT_WRK subjects[15];
+	/* 0x0(sp) */ PHOTO_WRK_DEF def;
+	/* 0x40(sp) */ BONUS_SHOT_SCORE bonus;
+	/* 0x60(sp) */ SUBJECT_WRK subjects[15];
 	/* s6 22 */ int cnt;
-	/* -0x7c(sp) */ int iBaseScore;
+	/* 0x164(sp) */ int iBaseScore;
 	/* s3 19 */ int iTotalScore;
 	/* s5 21 */ int iAutoEneCnt;
-	/* -0x78(sp) */ int iRareEneNo;
-	/* -0x74(sp) */ int no_effect_mes_flg;
-	/* -0x70(sp) */ int bHint3D;
-	/* -0x6c(sp) */ int ane_curse_flg;
+	/* 0x168(sp) */ int iRareEneNo;
+	/* 0x16c(sp) */ int no_effect_mes_flg;
+	/* 0x170(sp) */ int bHint3D;
+	/* 0x174(sp) */ int ane_curse_flg;
 	/* s0 16 */ int i;
-	/* -0x120(sp) */ BONUS_SHOT_SCORE no_bonus;
+	/* 0xc0(sp) */ BONUS_SHOT_SCORE no_bonus;
 	/* s2 18 */ BONUS_SHOT_SCORE *this;
 	/* s0 16 */ int i;
 	/* s0 16 */ int iBattleEneCnt;
@@ -26439,18 +26910,18 @@
 	/* s1 17 */ int i;
 	/* s0 16 */ MDAT_OBJ *sp;
 	/* a0 4 */ int ghost_list_no;
-	/* -0x100(sp) */ float tx;
-	/* -0xfc(sp) */ float ty;
-	/* -0xf0(sp) */ float dist[2];
-	/* -0xe0(sp) */ float bpos[4];
-	/* -0xd0(sp) */ float vw[4];
-	/* -0xc0(sp) */ float psrot;
+	/* 0xe0(sp) */ float tx;
+	/* 0xe4(sp) */ float ty;
+	/* 0xf0(sp) */ float dist[2];
+	/* 0x100(sp) */ float bpos[4];
+	/* 0x110(sp) */ float vw[4];
+	/* 0x120(sp) */ float psrot;
 	/* v0 2 */ float *pv0;
-	/* -0xb0(sp) */ sceCdCLOCK rtc;
+	/* 0x130(sp) */ sceCdCLOCK rtc;
 	/* s2 18 */ int i;
 }
 
-/* 0023b558 00000640 */ int PhotoPointCulcEne2(/* s3 19 */ ENE_WRK *ew, /* s4 20 */ BONUS_SHOT_SCORE *bonus, /* s5 21 */ SUBJECT_WRK *subjects, /* -0x70(sp) */ HINT_PHOTO_REQ *hint_picture, /* fp 30 */ int bWithLenz) {
+/* 0023b558 00000640 */ int PhotoPointCulcEne2(/* s3 19 */ ENE_WRK *ew, /* s4 20 */ BONUS_SHOT_SCORE *bonus, /* s5 21 */ SUBJECT_WRK *subjects, /* 0x0(sp) */ HINT_PHOTO_REQ *hint_picture, /* fp 30 */ int bWithLenz) {
 	/* s7 23 */ STATUS_DAT *ews;
 	/* a1 5 */ int i;
 	/* a0 4 */ int point;
@@ -26474,7 +26945,7 @@
 /* 0023bbb0 0000002c */ void GetPlayerFinderPos(/* a0 4 */ float *fx, /* a1 5 */ float *fy) {}
 
 /* 0023bbe0 00000058 */ void SetPlayerPos(/* s1 17 */ float *pos) {
-	/* -0x30(sp) */ float vw[4];
+	/* 0x0(sp) */ float vw[4];
 }
 
 /* 0023bc38 00000018 */ void SetPlayerRot(/* a0 4 */ float *rot) {
@@ -26490,8 +26961,8 @@
 	/* s0 16 */ u_char anime_no;
 	/* a0 4 */ u_char rl_chk;
 	/* s1 17 */ u_char i;
-	/* -0x90(sp) */ u_int psta_chk_tbl[10];
-	/* -0x60(sp) */ u_char pmani_no_tbl[10][4];
+	/* 0x0(sp) */ u_int psta_chk_tbl[10];
+	/* 0x30(sp) */ u_char pmani_no_tbl[10][4];
 }
 
 /* 0023bf38 0000000c */ int GetPlyrFloor() {}
@@ -26528,16 +26999,16 @@
 	/* f28 66 */ float rfrange;
 	/* a1 5 */ int out_info;
 	/* sdata 3f39e8 */ static int old_out_info;
-	/* -0x160(sp) */ float vref[4];
-	/* -0x150(sp) */ float mpos1[4];
-	/* -0x140(sp) */ float mpos2[4];
-	/* -0x130(sp) */ float wpos11[4];
-	/* -0x120(sp) */ float wpos21[4];
-	/* -0x110(sp) */ float wpos12[4];
-	/* -0x100(sp) */ float wpos22[4];
-	/* -0xf0(sp) */ float wlm[4][4];
+	/* 0x10(sp) */ float vref[4];
+	/* 0x20(sp) */ float mpos1[4];
+	/* 0x30(sp) */ float mpos2[4];
+	/* 0x40(sp) */ float wpos11[4];
+	/* 0x50(sp) */ float wpos21[4];
+	/* 0x60(sp) */ float wpos12[4];
+	/* 0x70(sp) */ float wpos22[4];
+	/* 0x80(sp) */ float wlm[4][4];
 	/* f22 60 */ float xrot;
-	/* -0xb0(sp) */ float yrot;
+	/* 0xc0(sp) */ float yrot;
 }
 
 /* 0023c7a8 000000f8 */ static void _SetFlashlightStep(/* a0 4 */ int move_sw) {
@@ -26549,11 +27020,11 @@
 
 /* 0023c8a0 000000dc */ void PlyrFlashlight(/* s2 18 */ int move_sw) {
 	/* rdata 3c3bd0 */ static char __FUNCTION__[15];
-	/* -0x30(sp) */ LPFUNC_SETFLASHLIGHT apFunc[2];
+	/* 0x0(sp) */ LPFUNC_SETFLASHLIGHT apFunc[2];
 }
 
 /* 0023c980 00000200 */ void PlyrSpotMoveCtrl() {
-	/* -0x40(sp) */ float rv[4];
+	/* 0x0(sp) */ float rv[4];
 	/* f20 58 */ float r;
 	/* f21 59 */ float rcng_adj;
 	/* a0 4 */ u_char d;
@@ -26561,8 +27032,8 @@
 
 /* 0023cb80 0000025c */ float GetEnePowerDegree() {
 	/* s1 17 */ ENE_WRK *ew;
-	/* -0x70(sp) */ float sv[4];
-	/* -0x60(sp) */ float dist[2];
+	/* 0x0(sp) */ float sv[4];
+	/* 0x10(sp) */ float dist[2];
 	/* f20 58 */ float degree;
 	/* s2 18 */ u_char i;
 }
@@ -26573,28 +27044,28 @@
 }
 
 /* 0023cef8 000000dc */ float CulcEP(/* a0 4 */ float *v0, /* a1 5 */ float *v1) {
-	/* -0x30(sp) */ float rv[4];
+	/* 0x0(sp) */ float rv[4];
 	/* f1 39 */ float degree;
 	/* f1 39 */ float dx;
 	/* f20 58 */ float dy;
 }
 
 /* 0023cfd8 00000080 */ float CulcEP2(/* a0 4 */ float *v0, /* a1 5 */ float *v1) {
-	/* -0x20(sp) */ float rv[4];
+	/* 0x0(sp) */ float rv[4];
 	/* f20 58 */ float degree;
 }
 
 /* 0023d058 00000144 */ float CulcEP3(/* s1 17 */ float *v1) {
-	/* -0x50(sp) */ float rv[4];
+	/* 0x0(sp) */ float rv[4];
 	/* f20 58 */ float degree;
-	/* -0x40(sp) */ float v0[4];
+	/* 0x10(sp) */ float v0[4];
 	/* f1 39 */ float dist;
 	/* f0 38 */ float multi;
 }
 
 /* 0023d1a0 000000cc */ int InFinderFrameSub(/* s0 16 */ float *pos, /* s2 18 */ float *p_dist, /* f20 58 */ float sight_range, /* f21 59 */ float limit_dist) {
-	/* -0x40(sp) */ float tx;
-	/* -0x3c(sp) */ float ty;
+	/* 0x0(sp) */ float tx;
+	/* 0x4(sp) */ float ty;
 	/* s0 16 */ int ret;
 }
 
@@ -26626,8 +27097,8 @@
 }
 
 /* 0023d620 000001d0 */ void MovePlyrStairs() {
-	/* -0x30(sp) */ float fw;
-	/* -0x2c(sp) */ float rotw;
+	/* 0x0(sp) */ float fw;
+	/* 0x4(sp) */ float rotw;
 }
 
 /* 0023d7f0 00000030 */ int CheckPlyrAnimeEnd(/* a0 4 */ int anime_no) {}
@@ -26639,7 +27110,10 @@
 	/* rdata 3c3d80 */ static char __FUNCTION__[24];
 }
 
-/* 0023daf8 0000005c */ PLAYERFLASHLIGHTTYPE playerGetFlashlightType() {}
+/* 0023daf8 0000005c */ PLAYERFLASHLIGHTTYPE playerGetFlashlightType() {
+	/* rdata 3c3d98 */ static char __FUNCTION__[24];
+}
+
 /* 0023db58 00000054 */ void GetCenterPoint(/* a0 4 */ float *center, /* a1 5 */ float *t1, /* a2 6 */ float *t2) {}
 /* 0023dbb0 00000020 */ void ClearPlyrMoveStatus() {}
 /* 0023dbd0 00000010 */ int IsFinderLocked() {}
@@ -26670,9 +27144,9 @@
 /* 0023de30 00000070 */ int CEneTracer::Init(/* a0 4 */ CEneTracer *this) {}
 
 /* 0023dea0 000001d8 */ void CEneTracer::Work(/* s0 16 */ CEneTracer *this) {
-	/* -0x60(sp) */ float tv[4];
-	/* -0x50(sp) */ float DiffVec[4];
-	/* -0x40(sp) */ float DiffVecUnit[4];
+	/* 0x0(sp) */ float tv[4];
+	/* 0x10(sp) */ float DiffVec[4];
+	/* 0x20(sp) */ float DiffVecUnit[4];
 	/* v1 3 */ float *pv0;
 }
 
@@ -26680,10 +27154,10 @@
 	/* v1 3 */ CWrkVariable<char,0,10> *this;
 }
 
-/* 0033cd90 00000054 */ ENE_WRK* ENE_WRK * _fixed_array_verifyrange<ENE_WRK>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
-/* 0033cd90 00000054 */ u_char* unsigned char * _fixed_array_verifyrange<unsigned char>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
-/* 0033cd90 00000054 */ short int* short * _fixed_array_verifyrange<short>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
-/* 0033cd90 00000030 */ int CWaitVariable<short>::Work(/* a1 5 */ CWaitVariable<short int> *this) {}
+/* ffffffff 00000054 */ ENE_WRK* ENE_WRK * _fixed_array_verifyrange<ENE_WRK>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ u_char* unsigned char * _fixed_array_verifyrange<unsigned char>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ short int* short * _fixed_array_verifyrange<short>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000030 */ int CWaitVariable<short>::Work(/* a1 5 */ CWaitVariable<short int> *this) {}
 /* 0023e0a0 0000003c */ static void __static_initialization_and_destruction_0(/* a0 4 */ int __initialize_p, /* a1 5 */ int __priority) {}
 /* 0033cd90 0000003c */ type_info& ENE_WRK type_info function() {}
 /* 0023e0e0 00000020 */ static void global constructors keyed to plyr_wrk() {}
@@ -26712,9 +27186,9 @@
 /* 0023e348 000000f8 */ void SetupPlyrMdl(/* s3 19 */ int mdl_no, /* s1 17 */ int anm_no, /* s2 18 */ int smdl_no, /* s4 20 */ int acs_no) {}
 
 /* 0023e440 0000010c */ int IsReadyPlyrMdl() {
-	/* -0x30(sp) */ int mdl_p;
-	/* -0x2c(sp) */ int anm_p;
-	/* -0x28(sp) */ int smdl_p;
+	/* 0x0(sp) */ int mdl_p;
+	/* 0x4(sp) */ int anm_p;
+	/* 0x8(sp) */ int smdl_p;
 	/* s1 17 */ int ret;
 }
 
@@ -26756,7 +27230,7 @@
 /* 0023f1e8 00000254 */ void playerSetLight(/* s4 20 */ float *vPosition, /* s3 19 */ GRA3DEMULATIONLIGHTDATACREATIONDATA *pData) {
 	/* rdata 3c3eb8 */ static char __FUNCTION__[15];
 	/* f0 38 */ float amb;
-	/* -0x13d0(sp) */ GRA3DLIGHTDATA LD;
+	/* 0x0(sp) */ GRA3DLIGHTDATA LD;
 	/* v0 2 */ GRA3DLIGHTDATA *pLDSrc;
 	/* s2 18 */ GRA3DLIGHTID lightId;
 }
@@ -26768,16 +27242,16 @@
 
 /* 0023f610 00000224 */ int playerCalcAlpha(/* s0 16 */ ANI_CTRL *pAC) {
 	/* rdata 3c3f00 */ static char __FUNCTION__[16];
-	/* -0x120(sp) */ float avBBWorld[8][4];
-	/* -0xa0(sp) */ float ellipse[4][4];
-	/* -0x60(sp) */ float avRet[2][4];
-	/* -0x40(sp) */ float vDir[4];
+	/* 0x0(sp) */ float avBBWorld[8][4];
+	/* 0x80(sp) */ float ellipse[4][4];
+	/* 0xc0(sp) */ float avRet[2][4];
+	/* 0xe0(sp) */ float vDir[4];
 }
 
 /* 0023f838 00000140 */ void playerDrawShadow() {
 	/* rdata 3c3f38 */ static char __FUNCTION__[17];
 	/* s0 16 */ ANI_CTRL *pAC;
-	/* -0xa0(sp) */ float avBBWorld[8][4];
+	/* 0x0(sp) */ float avBBWorld[8][4];
 	/* s1 17 */ SGDCOORDINATE *pCoord;
 }
 
@@ -26785,16 +27259,16 @@
 /* 0023f990 00000018 */ void PlayerDrawUnlock() {}
 
 /* 0023f9a8 00000274 */ void DrawGirl() {
-	/* -0xc0(sp) */ float work_amb[4];
+	/* 0x0(sp) */ float work_amb[4];
 	/* s2 18 */ HeaderSection *hs;
-	/* -0xb0(sp) */ float tgirlbox[8][4];
+	/* 0x10(sp) */ float tgirlbox[8][4];
 	/* s1 17 */ int iAlpha;
 	/* s0 16 */ HeaderSection *item;
 	/* s0 16 */ HeaderSection *item;
 }
 
 /* 0023fc20 000000c4 */ static void LeftHandCtrl(/* s1 17 */ SGDCOORDINATE *cp) {
-	/* -0x30(sp) */ float target[4];
+	/* 0x0(sp) */ float target[4];
 	/* f20 58 */ float yrot;
 }
 
@@ -26806,7 +27280,10 @@
 /* 0023fde8 00000008 */ void SetPlyrNeckFlg(/* a0 4 */ int flg) {}
 /* 0023fdf0 000000b4 */ static void PlyrNeckMain() {}
 /* 0023fea8 0000000c */ static LOOK_AT_PARAM* PlyrNeckGetParam() {}
-/* 0023feb8 00000090 */ int plyr_mdlBankPlay(/* a0 4 */ int no, /* t6 14 */ int effect, /* v0 2 */ int loop, /* v1 3 */ int fade_time, /* t0 8 */ SND_3D_SET *s3d, /* t0 8 */ int vol, /* t1 9 */ int pitch) {}
+
+/* 0023feb8 00000090 */ int plyr_mdlBankPlay(/* a0 4 */ int no, /* t6 14 */ int effect, /* v0 2 */ int loop, /* v1 3 */ int fade_time, /* t0 8 */ SND_3D_SET *s3d, /* t0 8 */ int vol, /* t1 9 */ int pitch) {
+	/* rdata 3c3fb0 */ static char __FUNCTION__[17];
+}
 
 /* 0023ff48 0000006c */ int plyr_mdlBankIsLoopSnd(/* a0 4 */ int no) {
 	/* rdata 3c4010 */ static char __FUNCTION__[22];
@@ -26821,25 +27298,25 @@
 /* 00240018 0000000c */ int GetSisterAcsNo() {}
 /* 00240028 0000000c */ void SetSisterAcsNo(/* a0 4 */ int iAcsNo) {}
 /* 00240038 00000018 */ void CostumeSetSave(/* a0 4 */ MC_SAVE_DATA *data) {}
-/* 0033d110 00000054 */ G3DLIGHT* G3DLIGHT * _fixed_array_verifyrange<G3DLIGHT>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
-/* 0033d110 00000054 */ GRA3DLIGHTSTATUS* GRA3DLIGHTSTATUS * _fixed_array_verifyrange<GRA3DLIGHTSTATUS>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ G3DLIGHT* G3DLIGHT * _fixed_array_verifyrange<G3DLIGHT>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ GRA3DLIGHTSTATUS* GRA3DLIGHTSTATUS * _fixed_array_verifyrange<GRA3DLIGHTSTATUS>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
 /* 00240050 00000074 */ static void __static_initialization_and_destruction_0(/* a0 4 */ int __initialize_p, /* a1 5 */ int __priority) {}
-/* 0033d110 0000003c */ type_info& G3DLIGHT type_info function() {}
-/* 0033d110 0000003c */ type_info& GRA3DLIGHTSTATUS type_info function() {}
-/* 0033d110 0000004c */ type_info& PLYR_PLYR_DATA type_info function() {}
+/* ffffffff 0000003c */ type_info& G3DLIGHT type_info function() {}
+/* ffffffff 0000003c */ type_info& GRA3DLIGHTSTATUS type_info function() {}
+/* ffffffff 0000004c */ type_info& PLYR_PLYR_DATA type_info function() {}
 
-/* 0033d110 000000f8 */ int PLYR_PLYR_DATA::Setup(/* s0 16 */ PLYR_PLYR_DATA *this, /* s5 21 */ int mdl_no, /* s6 22 */ int anm_no, /* s2 18 */ int bd_no, /* s3 19 */ int smdl_no, /* s4 20 */ int iAcsNo) {
+/* ffffffff 000000f8 */ int PLYR_PLYR_DATA::Setup(/* s0 16 */ PLYR_PLYR_DATA *this, /* s5 21 */ int mdl_no, /* s6 22 */ int anm_no, /* s2 18 */ int bd_no, /* s3 19 */ int smdl_no, /* s4 20 */ int iAcsNo) {
 	/* s1 17 */ int ret;
 }
 
-/* 0033d110 00000104 */ int PLYR_PLYR_DATA::IsReady(/* s0 16 */ PLYR_PLYR_DATA *this) {
-	/* -0x30(sp) */ int mdl_p;
-	/* -0x2c(sp) */ int anm_p;
-	/* -0x28(sp) */ int smdl_p;
+/* ffffffff 00000104 */ int PLYR_PLYR_DATA::IsReady(/* s0 16 */ PLYR_PLYR_DATA *this) {
+	/* 0x0(sp) */ int mdl_p;
+	/* 0x4(sp) */ int anm_p;
+	/* 0x8(sp) */ int smdl_p;
 	/* s1 17 */ int ret;
 }
 
-/* 0033d110 0000003c */ type_info& MAN_DATA type_info function() {}
+/* ffffffff 0000003c */ type_info& MAN_DATA type_info function() {}
 /* 002400c8 00000020 */ static void global constructors keyed to g_iMaxPlayerAlpha() {}
 
 // *****************************************************************************
@@ -26869,11 +27346,11 @@
 /* 00240370 000001c0 */ static int RoomInfoRoomHitCheck(/* s1 17 */ int map_label, /* fp 30 */ int area_label, /* f20 58 */ float x, /* f21 59 */ float y) {
 	/* rdata 3c40d0 */ static char __FUNCTION__[21];
 	/* s7 23 */ int res;
-	/* -0xb0(sp) */ float target[4];
-	/* -0xa0(sp) */ float tri0[4];
-	/* -0x90(sp) */ float tri1[4];
-	/* -0x80(sp) */ float tri2[4];
-	/* -0x70(sp) */ float tri3[4];
+	/* 0x0(sp) */ float target[4];
+	/* 0x10(sp) */ float tri0[4];
+	/* 0x20(sp) */ float tri1[4];
+	/* 0x30(sp) */ float tri2[4];
+	/* 0x40(sp) */ float tri3[4];
 }
 
 /* 00240530 0000003c */ static void RoomInfoSetPosition(/* a0 4 */ float *pos, /* f12 50 */ float x, /* f13 51 */ float y, /* a1 5 */ int map_label) {}
@@ -26883,8 +27360,8 @@
 	/* rdata 3c4160 */ static char __FUNCTION__[13];
 	/* s0 16 */ int map_label;
 	/* s1 17 */ int room_label;
-	/* -0x40(sp) */ float pos_x;
-	/* -0x3c(sp) */ float pos_y;
+	/* 0x0(sp) */ float pos_x;
+	/* 0x4(sp) */ float pos_y;
 }
 
 /* 002406c0 000001a8 */ void ChangeWorldPosToWinPos(/* t1 9 */ float *pos_x, /* t2 10 */ float *pos_y, /* a2 6 */ int map_label, /* a3 7 */ float *pos, /* t0 8 */ int scall) {}
@@ -26904,9 +27381,9 @@
 	/* s0 16 */ int i;
 }
 
-/* 0033d110 00000054 */ ROOM_IN_INFO* ROOM_IN_INFO * _fixed_array_verifyrange<ROOM_IN_INFO>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ ROOM_IN_INFO* ROOM_IN_INFO * _fixed_array_verifyrange<ROOM_IN_INFO>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
 /* 00240a90 00000008 */ static void __static_initialization_and_destruction_0(/* a0 4 */ int __initialize_p, /* a1 5 */ int __priority) {}
-/* 0033d110 0000003c */ type_info& ROOM_IN_INFO type_info function() {}
+/* ffffffff 0000003c */ type_info& ROOM_IN_INFO type_info function() {}
 /* 00240a98 00000020 */ static void global constructors keyed to RoomInInfoInit() {}
 
 // *****************************************************************************
@@ -26929,7 +27406,9 @@
 	/* rdata 3c42a8 */ static char __FUNCTION__[15];
 }
 
-/* 00240c50 00000100 */ static void PzlExeCtrlInit(/* s1 17 */ int puzzle_id) {}
+/* 00240c50 00000100 */ static void PzlExeCtrlInit(/* s1 17 */ int puzzle_id) {
+	/* rdata 3c4320 */ static char __FUNCTION__[15];
+}
 
 /* 00240d50 000000a0 */ static void PzlTexDataLoadReq(/* s0 16 */ int puzzle_id) {
 	/* rdata 3c4388 */ static char __FUNCTION__[18];
@@ -26957,22 +27436,23 @@
 /* 002410f8 00000058 */ static void PzlExeConfDispMain() {}
 
 /* 00241150 00000138 */ static void PzlExeConfWinDisp(/* s1 17 */ int off_x, /* s0 16 */ int off_y, /* a2 6 */ u_char alpha) {
-	/* -0x80(sp) */ DISP_STR ds;
+	/* 0x0(sp) */ DISP_STR ds;
 }
 
 /* 00241288 00000020 */ static void PzlExeConfAfterMsgWinDisp(/* a0 4 */ int off_x, /* a1 5 */ int off_y, /* a2 6 */ u_char alpha) {}
 
 /* 002412a8 00000060 */ static void PzlExeSelCmnWinDisp(/* a0 4 */ int off_x, /* a1 5 */ int off_y, /* a2 6 */ u_char alpha) {
-	/* -0x20(sp) */ MSG_WIN_DAT win_dat;
+	/* 0x0(sp) */ MSG_WIN_DAT win_dat;
 }
 
 /* 00241308 00000070 */ static void PzlCrossFadeMain() {}
 
 /* 00241378 00000178 */ static void PzlCrossFadeDispMain() {
+	/* rdata 3c4418 */ static char __FUNCTION__[21];
 	/* s1 17 */ u_char alpha;
 	/* s2 18 */ u_char con_alpha;
 	/* rdata 3c4430 */ static ALPHA_ANIM_TBL in_alpha_tbl[2];
-	/* -0x40(sp) */ ALPHA_ANIM_TBL con_alpha_tbl[2];
+	/* 0x0(sp) */ ALPHA_ANIM_TBL con_alpha_tbl[2];
 }
 
 /* 002414f0 000000c8 */ static void PzlCrossMovePuzzlePhase() {
@@ -27115,7 +27595,7 @@
 
 /* 002431e8 00000188 */ void SixPuzzleDispMain() {
 	/* s1 17 */ u_char alpha;
-	/* -0x30(sp) */ u_char fade_alpha;
+	/* 0x0(sp) */ u_char fade_alpha;
 }
 
 /* 00243370 00000120 */ static void SixPuzzleAnim(/* s2 18 */ char *anim_step, /* s0 16 */ short int *anim_timer, /* s1 17 */ u_char *alpha) {
@@ -27139,25 +27619,25 @@
 /* 002438f8 0000001c */ static void SixPuzzleExitSelDisp(/* a0 4 */ int off_x, /* a1 5 */ int off_y, /* a2 6 */ u_char alpha) {}
 
 /* 00243918 000000c0 */ static void SixPuzzleBgDisp(/* a0 4 */ int off_x, /* a1 5 */ int off_y, /* s2 18 */ u_char alpha) {
-	/* -0xc0(sp) */ DISP_SPRT bg_ds;
+	/* 0x0(sp) */ DISP_SPRT bg_ds;
 	/* s1 17 */ int i;
 }
 
 /* 002439d8 00000134 */ static void SixPuzzleShelfBookDisp(/* s3 19 */ int off_x, /* a1 5 */ int off_y, /* s4 20 */ u_char alpha) {
 	/* s2 18 */ int i;
-	/* -0xf0(sp) */ DISP_SPRT book_ds;
+	/* 0x0(sp) */ DISP_SPRT book_ds;
 }
 
 /* 00243b10 00000114 */ static void SixPuzzleBookSelWinDisp(/* s3 19 */ int off_x, /* s4 20 */ int off_y, /* a2 6 */ u_char alpha) {
-	/* -0x160(sp) */ DISP_SPRT win_ds;
-	/* -0xd0(sp) */ DISP_SQAR dsq;
-	/* -0x50(sp) */ SQAR_DAT win_bg;
+	/* 0x0(sp) */ DISP_SPRT win_ds;
+	/* 0x90(sp) */ DISP_SQAR dsq;
+	/* 0x110(sp) */ SQAR_DAT win_bg;
 }
 
 /* 00243c28 00000300 */ static void SixPuzzleBookDisp(/* s4 20 */ int off_x, /* s3 19 */ int off_y, /* s6 22 */ u_char alpha) {
-	/* -0x100(sp) */ DISP_SPRT win_ds;
+	/* 0x0(sp) */ DISP_SPRT win_ds;
 	/* s7 23 */ long int scissor_backup;
-	/* -0x70(sp) */ float anim_off_x;
+	/* 0x90(sp) */ float anim_off_x;
 	/* s2 18 */ u_char book_alpha;
 	/* s5 21 */ u_char next_alpha;
 	/* rdata 3c48b0 */ static ALPHA_ANIM_TBL move_alpha_tbl1[5];
@@ -27169,16 +27649,16 @@
 }
 
 /* 00243fd0 00000178 */ static void SixPuzzleBookTitleWinDisp(/* s3 19 */ int off_x, /* s4 20 */ int off_y, /* a2 6 */ u_char alpha) {
-	/* -0x160(sp) */ DISP_SPRT win_ds;
-	/* -0xd0(sp) */ DISP_SQAR dsq;
-	/* -0x50(sp) */ SQAR_DAT title_bg;
+	/* 0x10(sp) */ DISP_SPRT win_ds;
+	/* 0xa0(sp) */ DISP_SQAR dsq;
+	/* 0x120(sp) */ SQAR_DAT title_bg;
 	/* rdata 3c4958 */ static int msg_type_tbl[5];
 }
 
 /* 00244148 000001b4 */ static void SixPuzzleBookSelArrowDisp(/* s1 17 */ int off_x, /* s2 18 */ int off_y, /* s3 19 */ u_char alpha) {
-	/* -0xe0(sp) */ DISP_SPRT arrow_ds;
+	/* 0x0(sp) */ DISP_SPRT arrow_ds;
 	/* s1 17 */ int i;
-	/* -0x50(sp) */ u_char flea_alpha;
+	/* 0x90(sp) */ u_char flea_alpha;
 }
 
 /* 00244300 00000054 */ static void SixPuzzleBookSelArrowAnim(/* a0 4 */ char *anim_step, /* a1 5 */ short int *anim_timer, /* s0 16 */ u_char *alpha) {
@@ -27186,71 +27666,71 @@
 }
 
 /* 00244358 00000168 */ static void SixPuzzleBookSelCapDisp(/* s0 16 */ int off_x, /* s2 18 */ int off_y, /* a2 6 */ u_char alpha) {
-	/* -0xc0(sp) */ DISP_SPRT cap_ds;
+	/* 0x0(sp) */ DISP_SPRT cap_ds;
 }
 
 /* 002444c0 00000074 */ static void SixPuzzleBookMsgWinDisp(/* s0 16 */ int off_x, /* s1 17 */ int off_y, /* a2 6 */ u_char alpha) {
-	/* -0x60(sp) */ DISP_STR ds;
+	/* 0x0(sp) */ DISP_STR ds;
 }
 
 /* 00244538 000000e8 */ static void SixPuzzleShelfCsrDisp(/* s1 17 */ int off_x, /* s3 19 */ int off_y, /* a2 6 */ u_char alpha) {
-	/* -0xc0(sp) */ DISP_SPRT shelf_ds;
+	/* 0x0(sp) */ DISP_SPRT shelf_ds;
 	/* s2 18 */ u_char csr_alpha;
 	/* rdata 3c4988 */ static ALPHA_ANIM_TBL csr_alpha_tbl[3];
 }
 
 /* 00244620 00000200 */ static void SixPuzzleShelfSelCapDisp(/* s0 16 */ int off_x, /* s1 17 */ int off_y, /* s2 18 */ u_char alpha) {
-	/* -0xd0(sp) */ DISP_SPRT cap_ds;
+	/* 0x0(sp) */ DISP_SPRT cap_ds;
 	/* s1 17 */ int i;
 }
 
 /* 00244820 00000074 */ static void SixPuzzleShelfMsgWinDisp(/* s0 16 */ int off_x, /* s1 17 */ int off_y, /* a2 6 */ u_char alpha) {
-	/* -0x60(sp) */ DISP_STR ds;
+	/* 0x0(sp) */ DISP_STR ds;
 }
 
 /* 00244898 00000080 */ static void SixPuzzleBookReadBgDisp(/* a0 4 */ int off_x, /* a1 5 */ int off_y, /* a2 6 */ u_char alpha) {
-	/* -0xb0(sp) */ DISP_SQAR dsq;
-	/* -0x30(sp) */ SQAR_DAT read_bg;
+	/* 0x0(sp) */ DISP_SQAR dsq;
+	/* 0x80(sp) */ SQAR_DAT read_bg;
 }
 
 /* 00244918 00000048 */ static void SixPuzzleBookReadWinDisp(/* a0 4 */ int off_x, /* a1 5 */ int off_y, /* a2 6 */ u_char alpha) {}
 /* 00244960 0000009c */ static void SixPuzzleBookReadCaptionDisp(/* a0 4 */ int off_x, /* a1 5 */ int off_y, /* a2 6 */ u_char alpha) {}
 
 /* 00244a00 000000d8 */ static void SixPuzzleMsgReadFleaDisp(/* s1 17 */ int off_x, /* s3 19 */ int off_y, /* a2 6 */ u_char alpha) {
-	/* -0xc0(sp) */ DISP_SPRT flea_ds;
+	/* 0x0(sp) */ DISP_SPRT flea_ds;
 	/* s2 18 */ u_char flea_alpha;
 	/* rdata 3c49b8 */ static ALPHA_ANIM_TBL flea_alpha_tbl[3];
 }
 
 /* 00244ad8 00000074 */ static void SixPuzzleMsgReadWinDisp(/* s0 16 */ int off_x, /* s1 17 */ int off_y, /* a2 6 */ u_char alpha) {
-	/* -0x60(sp) */ DISP_STR ds;
+	/* 0x0(sp) */ DISP_STR ds;
 }
 
 /* 00244b50 00000074 */ static void SixPuzzleClearWinDisp(/* s0 16 */ int off_x, /* s1 17 */ int off_y, /* a2 6 */ u_char alpha) {
-	/* -0x60(sp) */ DISP_STR ds;
+	/* 0x0(sp) */ DISP_STR ds;
 }
 
 /* 00244bc8 00000074 */ static void SixPuzzleFailureWinDisp(/* s0 16 */ int off_x, /* s1 17 */ int off_y, /* a2 6 */ u_char alpha) {
-	/* -0x60(sp) */ DISP_STR ds;
+	/* 0x0(sp) */ DISP_STR ds;
 }
 
 /* 00244c40 00000100 */ static void SixPuzzleExitConfWinDisp(/* s1 17 */ int off_x, /* s0 16 */ int off_y, /* a2 6 */ u_char alpha) {
-	/* -0x70(sp) */ DISP_STR ds;
+	/* 0x0(sp) */ DISP_STR ds;
 }
 
 /* 00244d40 000000a0 */ static void SixPuzzleCapWinDisp(/* s0 16 */ int off_x, /* s1 17 */ int off_y, /* a2 6 */ u_char alpha) {
-	/* -0xb0(sp) */ DISP_SPRT cap_ds;
+	/* 0x0(sp) */ DISP_SPRT cap_ds;
 }
 
 /* 00244de0 0000004c */ static void SixPuzzleCmnWinDisp(/* a0 4 */ int off_x, /* a1 5 */ int off_y, /* a2 6 */ u_char alpha) {
-	/* -0x20(sp) */ MSG_WIN_DAT win_dat;
+	/* 0x0(sp) */ MSG_WIN_DAT win_dat;
 }
 
 /* 00244e30 00000040 */ void SixPuzzleCrossScreenDisp(/* a0 4 */ int off_x, /* a1 5 */ int off_y, /* a2 6 */ u_char alpha) {}
 
 /* 00244e70 00000080 */ static void SixPuzzleBlackBgDisp(/* a0 4 */ int off_x, /* a1 5 */ int off_y, /* a2 6 */ u_char alpha) {
-	/* -0xb0(sp) */ DISP_SQAR dsq;
-	/* -0x30(sp) */ SQAR_DAT black_bg;
+	/* 0x0(sp) */ DISP_SQAR dsq;
+	/* 0x80(sp) */ SQAR_DAT black_bg;
 }
 
 /* 0033e390 00000054 */ int* int * _fixed_array_verifyrange<int>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
@@ -27274,8 +27754,8 @@
 // *****************************************************************************
 
 /* 00244ff0 000001bc */ void SaveLoadCmnBaseDisp(/* s4 20 */ int off_x, /* s3 19 */ int off_y, /* s2 18 */ u_char alpha, /* s5 21 */ void *pk2_addr, /* s6 22 */ int disp_slot) {
-	/* -0x120(sp) */ DISP_SQAR dsq;
-	/* -0xa0(sp) */ SQAR_DAT win_bg[4];
+	/* 0x0(sp) */ DISP_SQAR dsq;
+	/* 0x80(sp) */ SQAR_DAT win_bg[4];
 	/* s0 16 */ int i;
 }
 
@@ -27285,79 +27765,79 @@
 
 /* 00245260 000000c8 */ void SaveLoadTitleFrameDisp(/* v0 2 */ int off_x, /* v1 3 */ int off_y, /* s2 18 */ u_char alpha, /* a3 7 */ void *pk2_addr) {
 	/* s1 17 */ int i;
-	/* -0xc0(sp) */ DISP_SPRT title_ds;
+	/* 0x0(sp) */ DISP_SPRT title_ds;
 }
 
 /* 00245328 000000c8 */ void SaveLoadTitleSaveDisp(/* v0 2 */ int off_x, /* v1 3 */ int off_y, /* s2 18 */ u_char alpha, /* a3 7 */ void *pk2_addr) {
 	/* s1 17 */ int i;
-	/* -0xc0(sp) */ DISP_SPRT title_ds;
+	/* 0x0(sp) */ DISP_SPRT title_ds;
 }
 
 /* 002453f0 000000c8 */ void SaveLoadTitleLoadDisp(/* v0 2 */ int off_x, /* v1 3 */ int off_y, /* s2 18 */ u_char alpha, /* a3 7 */ void *pk2_addr) {
 	/* s1 17 */ int i;
-	/* -0xc0(sp) */ DISP_SPRT title_ds;
+	/* 0x0(sp) */ DISP_SPRT title_ds;
 }
 
 /* 002454b8 000001cc */ void SaveLoadFrameDisp(/* v0 2 */ int off_x, /* v1 3 */ int off_y, /* s2 18 */ u_char alpha, /* a3 7 */ void *pk2_addr) {
 	/* s0 16 */ int i;
-	/* -0xc0(sp) */ DISP_SPRT frame_ds;
+	/* 0x0(sp) */ DISP_SPRT frame_ds;
 }
 
 /* 00245688 000000c8 */ void SaveLoadClearFrameDisp(/* s1 17 */ int off_x, /* s2 18 */ int off_y, /* a2 6 */ u_char alpha, /* a3 7 */ void *pk2_addr, /* s0 16 */ int disp_label) {
-	/* -0xc0(sp) */ DISP_SPRT frame_ds;
+	/* 0x0(sp) */ DISP_SPRT frame_ds;
 }
 
 /* 00245750 00000150 */ void SaveLoadCursorDisp(/* s3 19 */ int off_x, /* s4 20 */ int off_y, /* a2 6 */ u_char alpha, /* a3 7 */ u_char rgb, /* t0 8 */ void *pk2_addr, /* s0 16 */ int disp_label) {
-	/* -0xe0(sp) */ DISP_SPRT csr_ds;
+	/* 0x0(sp) */ DISP_SPRT csr_ds;
 }
 
 /* 002458a0 00000138 */ void SaveLoadSelFlareDisp(/* s2 18 */ int off_x, /* s3 19 */ int off_y, /* a2 6 */ u_char alpha, /* a3 7 */ void *pk2_addr, /* s0 16 */ int disp_label) {
-	/* -0xe0(sp) */ DISP_SPRT flare_ds;
+	/* 0x0(sp) */ DISP_SPRT flare_ds;
 }
 
 /* 002459d8 000000c8 */ void SaveLoadSnapShadowDisp(/* s1 17 */ int off_x, /* s2 18 */ int off_y, /* a2 6 */ u_char alpha, /* a3 7 */ void *pk2_addr, /* s0 16 */ int disp_label) {
-	/* -0xc0(sp) */ DISP_SPRT shadow_ds;
+	/* 0x0(sp) */ DISP_SPRT shadow_ds;
 }
 
 /* 00245aa0 000000c8 */ void SaveLoadSnapShotDisp(/* s1 17 */ int off_x, /* s2 18 */ int off_y, /* a2 6 */ u_char alpha, /* a3 7 */ void *pk2_addr, /* s0 16 */ int disp_label) {
-	/* -0xc0(sp) */ DISP_SPRT snap_ds;
+	/* 0x0(sp) */ DISP_SPRT snap_ds;
 }
 
 /* 00245b68 000000c8 */ void SaveLoadNonSelNoDisp(/* s1 17 */ int off_x, /* s2 18 */ int off_y, /* a2 6 */ u_char alpha, /* a3 7 */ void *pk2_addr, /* s0 16 */ int disp_label) {
-	/* -0xc0(sp) */ DISP_SPRT no_ds;
+	/* 0x0(sp) */ DISP_SPRT no_ds;
 }
 
 /* 00245c30 000000b0 */ void SaveLoadNonSelDataNumDisp(/* s1 17 */ int off_x, /* s2 18 */ int off_y, /* a2 6 */ u_char alpha, /* a3 7 */ void *pk2_addr, /* s0 16 */ int disp_label) {
-	/* -0xc0(sp) */ DISP_SPRT num_ds;
+	/* 0x0(sp) */ DISP_SPRT num_ds;
 }
 
 /* 00245ce0 000000c8 */ void SaveLoadNonSelLineDisp(/* s1 17 */ int off_x, /* s2 18 */ int off_y, /* a2 6 */ u_char alpha, /* a3 7 */ void *pk2_addr, /* s0 16 */ int disp_label) {
-	/* -0xc0(sp) */ DISP_SPRT line_ds;
+	/* 0x0(sp) */ DISP_SPRT line_ds;
 }
 
 /* 00245da8 000000c8 */ void SaveLoadSelNoDisp(/* s1 17 */ int off_x, /* s2 18 */ int off_y, /* a2 6 */ u_char alpha, /* a3 7 */ void *pk2_addr, /* s0 16 */ int disp_label) {
-	/* -0xc0(sp) */ DISP_SPRT no_ds;
+	/* 0x0(sp) */ DISP_SPRT no_ds;
 }
 
 /* 00245e70 000000b0 */ void SaveLoadSelDataNumDisp(/* s1 17 */ int off_x, /* s2 18 */ int off_y, /* a2 6 */ u_char alpha, /* a3 7 */ void *pk2_addr, /* s0 16 */ int disp_label) {
-	/* -0xc0(sp) */ DISP_SPRT num_ds;
+	/* 0x0(sp) */ DISP_SPRT num_ds;
 }
 
 /* 00245f20 000000c8 */ void SaveLoadSelLineDisp(/* s1 17 */ int off_x, /* s2 18 */ int off_y, /* a2 6 */ u_char alpha, /* a3 7 */ void *pk2_addr, /* s0 16 */ int disp_label) {
-	/* -0xc0(sp) */ DISP_SPRT line_ds;
+	/* 0x0(sp) */ DISP_SPRT line_ds;
 }
 
 /* 00245fe8 000000f8 */ void SaveLoadClearFlareDisp(/* s1 17 */ int off_x, /* s2 18 */ int off_y, /* s3 19 */ u_char alpha, /* a3 7 */ void *pk2_addr, /* s0 16 */ int disp_label) {
 	/* s0 16 */ int i;
-	/* -0xd0(sp) */ DISP_SPRT flare_ds;
+	/* 0x0(sp) */ DISP_SPRT flare_ds;
 }
 
 /* 002460e0 000000c8 */ void SaveLoadNonClearMaskDisp(/* s1 17 */ int off_x, /* s2 18 */ int off_y, /* a2 6 */ u_char alpha, /* a3 7 */ void *pk2_addr, /* s0 16 */ int disp_label) {
-	/* -0xc0(sp) */ DISP_SPRT mask_ds;
+	/* 0x0(sp) */ DISP_SPRT mask_ds;
 }
 
 /* 002461a8 00000144 */ void SaveLoadMemoryCardSlotDisp(/* s2 18 */ int off_x, /* s3 19 */ int off_y, /* a2 6 */ u_char alpha, /* a3 7 */ void *pk2_addr, /* s1 17 */ int slot_label) {
-	/* -0xd0(sp) */ DISP_SPRT slot_ds;
+	/* 0x0(sp) */ DISP_SPRT slot_ds;
 }
 
 /* 002462f0 00000028 */ void SaveLoadCaptionDisp(/* a0 4 */ int off_x, /* a1 5 */ int off_y, /* a2 6 */ u_char alpha) {}
@@ -27365,8 +27845,8 @@
 /* 002464a0 0000013c */ void SaveLoadMcClearPlayDataInfoDisp(/* s2 18 */ int off_x, /* s0 16 */ int off_y, /* a2 6 */ u_char alpha, /* a3 7 */ TIME_INFO play_time) {}
 
 /* 002465e0 000000cc */ void SaveLoadMcStateMsgWinDisp(/* s0 16 */ int off_x, /* s1 17 */ int off_y, /* a2 6 */ u_char alpha) {
-	/* -0xc0(sp) */ DISP_SQAR dsq;
-	/* -0x40(sp) */ SQAR_DAT win_bg;
+	/* 0x0(sp) */ DISP_SQAR dsq;
+	/* 0x80(sp) */ SQAR_DAT win_bg;
 }
 
 /* 002466b0 0000005c */ void SaveLoadMcSelYesNoWinDisp(/* a0 4 */ int off_x, /* s1 17 */ int off_y, /* a2 6 */ u_char alpha, /* s2 18 */ int csr) {}
@@ -27375,7 +27855,7 @@
 /* 002467c0 00000034 */ void SaveLoadMcStateMsgDisp(/* a0 4 */ int off_x, /* a1 5 */ int off_y, /* a2 6 */ u_char alpha, /* a3 7 */ int msg_id) {}
 /* 002467f8 00000034 */ void SaveLoadFileSelMsgDisp(/* a0 4 */ int off_x, /* a1 5 */ int off_y, /* a2 6 */ u_char alpha, /* a3 7 */ int msg_id) {}
 
-/* 00246830 00000150 */ void SaveLoadClearNumberDisp(/* s1 17 */ int data, /* a1 5 */ int off_x, /* a2 6 */ int off_y, /* s7 23 */ u_char alpha, /* -0x60(sp) */ int pri, /* s5 21 */ u_char zero_flg, /* t2 10 */ int disp_label, /* fp 30 */ void *pk2_addr) {
+/* 00246830 00000150 */ void SaveLoadClearNumberDisp(/* s1 17 */ int data, /* a1 5 */ int off_x, /* a2 6 */ int off_y, /* s7 23 */ u_char alpha, /* 0x0(sp) */ int pri, /* s5 21 */ u_char zero_flg, /* t2 10 */ int disp_label, /* fp 30 */ void *pk2_addr) {
 	/* a1 5 */ int i;
 	/* v1 3 */ int j;
 	/* a0 4 */ int tmp;
@@ -27385,7 +27865,7 @@
 
 /* 00246980 000000f8 */ void SaveLoadClearNumberDisp_One(/* s1 17 */ int data, /* s4 20 */ int x, /* s3 19 */ int y, /* s5 21 */ u_char alpha, /* s2 18 */ int pri, /* s0 16 */ void *pk2_addr) {
 	/* rdata 3c4ab8 */ static char __FUNCTION__[28];
-	/* -0xd0(sp) */ DISP_SPRT num_ds;
+	/* 0x0(sp) */ DISP_SPRT num_ds;
 }
 
 // *****************************************************************************
@@ -27434,32 +27914,32 @@
 }
 
 /* 00247108 00000074 */ void SavePoint_BlackBgDisp(/* a0 4 */ u_char alpha) {
-	/* -0xb0(sp) */ DISP_SQAR dsq;
-	/* -0x30(sp) */ SQAR_DAT save_point_bg;
+	/* 0x0(sp) */ DISP_SQAR dsq;
+	/* 0x80(sp) */ SQAR_DAT save_point_bg;
 }
 
 /* 00247180 00000174 */ static void SavePoint_BgPattern1Disp(/* f22 60 */ float off_x, /* f21 59 */ float off_y, /* s1 17 */ u_char alpha) {
-	/* -0xe0(sp) */ DISP_SPRT pattern_ds;
+	/* 0x0(sp) */ DISP_SPRT pattern_ds;
 	/* s0 16 */ int i;
 }
 
 /* 002472f8 00000174 */ static void SavePoint_BgPattern2Disp(/* f22 60 */ float off_x, /* f21 59 */ float off_y, /* s1 17 */ u_char alpha) {
-	/* -0xe0(sp) */ DISP_SPRT pattern_ds;
+	/* 0x0(sp) */ DISP_SPRT pattern_ds;
 	/* s0 16 */ int i;
 }
 
 /* 00247470 0000010c */ static void SavePoint_BgFleaDisp(/* a0 4 */ int off_x, /* a1 5 */ int off_y, /* s2 18 */ u_char alpha) {
-	/* -0xf0(sp) */ DISP_SPRT flea_ds;
+	/* 0x0(sp) */ DISP_SPRT flea_ds;
 	/* s0 16 */ int i;
 }
 
 /* 00247580 000000dc */ static void SavePoint_FleaDisp(/* a0 4 */ int off_x, /* a1 5 */ int off_y, /* s2 18 */ u_char alpha) {
-	/* -0xd0(sp) */ DISP_SPRT flea_ds;
+	/* 0x0(sp) */ DISP_SPRT flea_ds;
 	/* s0 16 */ int i;
 }
 
 /* 00247660 00000164 */ static void SavePoint_ShadowDisp(/* a0 4 */ int off_x, /* a1 5 */ int off_y, /* s2 18 */ u_char alpha) {
-	/* -0xd0(sp) */ DISP_SPRT shadow_ds;
+	/* 0x0(sp) */ DISP_SPRT shadow_ds;
 	/* s0 16 */ int i;
 }
 
@@ -27486,8 +27966,8 @@
 /* 002479d8 0000004c */ void SavePointFadeInDispMain() {}
 
 /* 00247a28 00000078 */ static void SavePointFadeInMsgWinDisp(/* a0 4 */ int off_x, /* a1 5 */ int off_y, /* a2 6 */ u_char alpha) {
-	/* -0x60(sp) */ DISP_STR ds;
-	/* -0x20(sp) */ MSG_WIN_DAT win_dat;
+	/* 0x0(sp) */ DISP_STR ds;
+	/* 0x40(sp) */ MSG_WIN_DAT win_dat;
 }
 
 // *****************************************************************************
@@ -27578,7 +28058,7 @@
 }
 
 /* 00248ab0 000000b0 */ static void SavePointTopTitleDisp(/* a0 4 */ int off_x, /* a1 5 */ int off_y, /* s2 18 */ u_char alpha) {
-	/* -0xc0(sp) */ DISP_SPRT title_ds;
+	/* 0x0(sp) */ DISP_SPRT title_ds;
 	/* s0 16 */ int i;
 }
 
@@ -27675,13 +28155,13 @@
 /* 00249dc8 000001bc */ void SceneInitAfterModelLoad(/* s2 18 */ int MimInit) {
 	/* s1 17 */ SCENE_FILE *sf;
 	/* s3 19 */ SCENE_CTRL *sc;
-	/* -0x50(sp) */ float offset[4];
+	/* 0x0(sp) */ float offset[4];
 	/* s0 16 */ ANI_CTRL *pAniCtrl;
 	/* s2 18 */ int i;
 }
 
 /* 00249f88 0000033c */ static void SceneLightRevision(/* s5 21 */ SCENE_CTRL *sc) {
-	/* -0x60(sp) */ float amb[4];
+	/* 0x0(sp) */ float amb[4];
 	/* s3 19 */ FOD_LIGHT *fl;
 	/* s1 17 */ u_int *lit_addr;
 	/* s2 18 */ int i;
@@ -27696,28 +28176,28 @@
 
 /* 0024a440 00000118 */ static u_int* SceneInitManMdl(/* s2 18 */ SCN_ANM_MDL *sam, /* s0 16 */ u_int *mot_addr, /* s1 17 */ u_int *mim_addr, /* s4 20 */ u_int *mim_buf, /* s3 19 */ u_int mdl_id) {
 	/* v1 3 */ int i;
-	/* -0x40(sp) */ char pfx[9];
+	/* 0x0(sp) */ char pfx[9];
 	/* s0 16 */ u_int *pRet;
 }
 
 /* 0024a558 00000250 */ static void SceneInitOtherMdl(/* s0 16 */ SCN_ANM_MDL *sam, /* s1 17 */ u_int *pk2_mot_addr, /* s2 18 */ u_int mdl_id) {
-	/* -0x30(sp) */ char pfx[9];
+	/* 0x0(sp) */ char pfx[9];
 	/* s1 17 */ int ModelSize;
 }
 
 /* 0024a7a8 000002d8 */ void SceneDraw(/* s2 18 */ int scene_no) {
-	/* -0x40(sp) */ float offset[4];
+	/* 0x0(sp) */ float offset[4];
 	/* s0 16 */ SCENE_CTRL *sc;
 	/* s3 19 */ FOD_CTRL *fc;
 	/* s1 17 */ int i;
 }
 
 /* 0024aa80 0000062c */ static void SceneRenewEnvironment(/* s6 22 */ SCENE_CTRL *sc) {
-	/* -0x2a70(sp) */ float offset[4];
-	/* -0x2a60(sp) */ FOD_CAMERA_DATA FirstCamera;
-	/* -0x2a30(sp) */ FOD_CAMERA_DATA SecondCamera;
-	/* -0x2a00(sp) */ FOD_LIGHT FirstLight;
-	/* -0x1540(sp) */ FOD_LIGHT SecondLight;
+	/* 0x0(sp) */ float offset[4];
+	/* 0x10(sp) */ FOD_CAMERA_DATA FirstCamera;
+	/* 0x40(sp) */ FOD_CAMERA_DATA SecondCamera;
+	/* 0x70(sp) */ FOD_LIGHT FirstLight;
+	/* 0x1530(sp) */ FOD_LIGHT SecondLight;
 	/* f1 39 */ float NowFrame;
 	/* f22 60 */ float Rate;
 	/* v0 2 */ int Integer;
@@ -27771,7 +28251,7 @@
 }
 
 /* 0024ba28 00000210 */ static void SceneDrawOtherMdl(/* a0 4 */ SCENE_CTRL *sc, /* s1 17 */ SCN_ANM_MDL *sam, /* s0 16 */ float *offset) {
-	/* -0x80(sp) */ float tmp_mat[4][4];
+	/* 0x0(sp) */ float tmp_mat[4][4];
 	/* s2 18 */ SGDCOORDINATE *cp;
 	/* s4 20 */ u_int *base_p;
 	/* s3 19 */ FOD_LIGHT *fl;
@@ -27794,11 +28274,11 @@
 
 /* 0024be78 0000005c */ u_int GetPrefixNo(/* a1 5 */ char *pfx) {
 	/* v1 3 */ u_int mdl_no;
-	/* -0x20(sp) */ char pfx_tmp[5];
+	/* 0x0(sp) */ char pfx_tmp[5];
 }
 
 /* 0024bed8 000000f0 */ int PrefixToNo(/* s3 19 */ char *pPrefix, /* s2 18 */ int num) {
-	/* -0x60(sp) */ fixed_array<char,33> tmp_prifix;
+	/* 0x0(sp) */ fixed_array<char,33> tmp_prifix;
 	/* s0 16 */ int i;
 	/* s1 17 */ int count;
 }
@@ -27852,9 +28332,9 @@
 }
 
 /* 0024c6d8 00000118 */ void SceneGetModelPDeformPos(/* s4 20 */ float *Position, /* s1 17 */ int ModelId, /* f20 58 */ float Dist) {
-	/* -0x70(sp) */ float TmpPos[4];
-	/* -0x60(sp) */ float tv[4];
-	/* -0x50(sp) */ float tr[4];
+	/* 0x0(sp) */ float TmpPos[4];
+	/* 0x10(sp) */ float tv[4];
+	/* 0x20(sp) */ float tr[4];
 	/* s1 17 */ int ModelNo;
 }
 
@@ -27872,8 +28352,8 @@
 
 /* 0024c9b0 0000022c */ void SceneChangeLightParameter(/* s5 21 */ int LightType, /* s1 17 */ int LightNo, /* s2 18 */ int ModelType, /* s3 19 */ int ModelId, /* f25 63 */ float r, /* f24 62 */ float g, /* f23 61 */ float b, /* f21 59 */ float Power, /* f22 60 */ float Cone) {
 	/* s4 20 */ FOD_LIGHT *pFodLight;
-	/* -0xb0(sp) */ char LightNameBuf[28];
-	/* -0x90(sp) */ char ModelPrefixBuf[28];
+	/* 0x0(sp) */ char LightNameBuf[28];
+	/* 0x20(sp) */ char ModelPrefixBuf[28];
 	/* s2 18 */ int i;
 	/* f20 58 */ float intens;
 }
@@ -27896,24 +28376,24 @@
 	/* v0 2 */ ANI_CTRL *pAniCtrl;
 }
 
-/* 0033eef0 00000054 */ SCENE_CTRL* SCENE_CTRL * _fixed_array_verifyrange<SCENE_CTRL>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
-/* 0033eef0 00000054 */ SCN_ANM_MDL* SCN_ANM_MDL * _fixed_array_verifyrange<SCN_ANM_MDL>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
-/* 0033eef0 00000054 */ int* int * _fixed_array_verifyrange<int>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
-/* 0033eef0 00000054 */ FOD_LIT_SERIAL* FOD_LIT_SERIAL * _fixed_array_verifyrange<FOD_LIT_SERIAL>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
-/* 0033eef0 00000054 */ G3DLIGHT* G3DLIGHT * _fixed_array_verifyrange<G3DLIGHT>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
-/* 0033eef0 00000054 */ float*[4] float [3] * _fixed_array_verifyrange<float [3]>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
-/* 0033eef0 00000054 */ char* char * _fixed_array_verifyrange<char>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
-/* 0033eef0 00000054 */ AREA_PREFIX_TO_NO* AREA_PREFIX_TO_NO * _fixed_array_verifyrange<AREA_PREFIX_TO_NO>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ SCENE_CTRL* SCENE_CTRL * _fixed_array_verifyrange<SCENE_CTRL>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ SCN_ANM_MDL* SCN_ANM_MDL * _fixed_array_verifyrange<SCN_ANM_MDL>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ int* int * _fixed_array_verifyrange<int>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ FOD_LIT_SERIAL* FOD_LIT_SERIAL * _fixed_array_verifyrange<FOD_LIT_SERIAL>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ G3DLIGHT* G3DLIGHT * _fixed_array_verifyrange<G3DLIGHT>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ float*[4] float [3] * _fixed_array_verifyrange<float [3]>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ char* char * _fixed_array_verifyrange<char>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ AREA_PREFIX_TO_NO* AREA_PREFIX_TO_NO * _fixed_array_verifyrange<AREA_PREFIX_TO_NO>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
 
 /* 0024ceb0 00000028 */ static void __static_initialization_and_destruction_0(/* a0 4 */ int __initialize_p, /* a1 5 */ int __priority) {
 	/* v0 2 */ AREA_PREFIX_TO_NO *ra;
 }
 
-/* 0033eef0 0000003c */ type_info& SCENE_CTRL type_info function() {}
-/* 0033eef0 0000003c */ type_info& SCN_ANM_MDL type_info function() {}
-/* 0033eef0 0000003c */ type_info& FOD_LIT_SERIAL type_info function() {}
-/* 0033eef0 0000003c */ type_info& G3DLIGHT type_info function() {}
-/* 0033eef0 0000003c */ type_info& float [3] type_info function() {}
+/* ffffffff 0000003c */ type_info& SCENE_CTRL type_info function() {}
+/* ffffffff 0000003c */ type_info& SCN_ANM_MDL type_info function() {}
+/* ffffffff 0000003c */ type_info& FOD_LIT_SERIAL type_info function() {}
+/* ffffffff 0000003c */ type_info& G3DLIGHT type_info function() {}
+/* ffffffff 0000003c */ type_info& float [3] type_info function() {}
 /* 0033eef0 0000003c */ type_info& AREA_PREFIX_TO_NO type_info function() {}
 /* 0024ced8 00000020 */ static void global constructors keyed to scene_ctrl() {}
 
@@ -28093,7 +28573,7 @@
 
 /* 0024e7f8 00000050 */ static short int* SceneEffectReqTorch(/* a0 4 */ short int *pData, /* a1 5 */ int Frame) {
 	/* s0 16 */ SCENE_EFFECT_TORCH *pTorch;
-	/* -0x30(sp) */ SCENE_EFFECT_TORCH_DATA TorchData;
+	/* 0x0(sp) */ SCENE_EFFECT_TORCH_DATA TorchData;
 }
 
 /* 0024e848 0000002c */ static short int* SceneEffectReqPDeformOff(/* s0 16 */ short int *pData, /* a1 5 */ int Frame) {}
@@ -28143,7 +28623,7 @@
 }
 
 /* 0024edf8 000000e0 */ static int SceneEffectPDeformRegist(/* s1 17 */ SCENE_EFFECT_PDEFORM *pPDeform, /* s0 16 */ int NowFrame) {
-	/* -0x70(sp) */ SCENE_PDEFORM_DATA TmpData;
+	/* 0x0(sp) */ SCENE_PDEFORM_DATA TmpData;
 	/* v0 2 */ SLL_CELL *pCell;
 	/* s2 18 */ int RetVal;
 	/* v0 2 */ SCENE_PDEFORM_DATA *pData;
@@ -28155,15 +28635,16 @@
 	/* f20 58 */ float ScaleY;
 	/* f5 43 */ float Progress;
 	/* s4 20 */ SLL_CELL *pCell;
+	/* v0 2 */ SINGLE_LINK_LIST *pSLL;
 	/* s2 18 */ SCENE_PDEFORM_DATA *pData;
 }
 
 /* 0024f218 000000f0 */ static void SceneEffectLenzFlareExec(/* s2 18 */ SCENE_CTRL *pSceneCtrl) {
 	/* s3 19 */ ANI_CTRL *pAniCtrl;
 	/* s1 17 */ int i;
-	/* -0x90(sp) */ float LocalWorld[4][4];
-	/* -0x50(sp) */ float TmpVec[4];
-	/* -0x40(sp) */ float TmpFloat;
+	/* 0x0(sp) */ float LocalWorld[4][4];
+	/* 0x40(sp) */ float TmpVec[4];
+	/* 0x50(sp) */ float TmpFloat;
 }
 
 /* 0024f308 00000010 */ static void SceneEffectEneAuraCtrlInit() {}
@@ -28186,14 +28667,16 @@
 
 /* 0024f558 00000090 */ static void SceneEffectHazeCtrlDelete(/* s2 18 */ int ModelId) {
 	/* s0 16 */ SLL_CELL *pCell;
+	/* v0 2 */ SINGLE_LINK_LIST *pSLL;
 }
 
 /* 0024f5e8 00000090 */ static void SceneEffectHazeCtrlAllDelete() {
 	/* s0 16 */ SLL_CELL *pCell;
+	/* v0 2 */ SINGLE_LINK_LIST *pSLL;
 }
 
 /* 0024f678 000000bc */ static int SceneEffectHazeRegist(/* s1 17 */ SCENE_EFFECT_HAZE *pHaze) {
-	/* -0x70(sp) */ SCENE_HAZE_DATA TmpData;
+	/* 0x0(sp) */ SCENE_HAZE_DATA TmpData;
 	/* v0 2 */ SLL_CELL *pCell;
 	/* s2 18 */ int RetVal;
 	/* s0 16 */ SCENE_HAZE_DATA *pData;
@@ -28201,7 +28684,8 @@
 
 /* 0024f738 000000fc */ static void SceneEffectHazeCtrlExec() {
 	/* s3 19 */ SLL_CELL *pCell;
-	/* -0x40(sp) */ float RotX;
+	/* 0x0(sp) */ float RotX;
+	/* v0 2 */ SINGLE_LINK_LIST *pSLL;
 	/* s0 16 */ SCENE_HAZE_DATA *pHaze;
 }
 
@@ -28238,10 +28722,12 @@
 
 /* 0024fba0 00000090 */ static void SceneTorchCtrlAllDelete() {
 	/* s0 16 */ SLL_CELL *pCell;
+	/* v0 2 */ SINGLE_LINK_LIST *pSLL;
 }
 
 /* 0024fc30 00000074 */ static void SceneTorchCtrlExec() {
 	/* s0 16 */ SLL_CELL *pCell;
+	/* v0 2 */ SINGLE_LINK_LIST *pSLL;
 	/* v0 2 */ SCENE_EFFECT_TORCH_DATA *pTorch;
 }
 
@@ -28250,7 +28736,7 @@
 	/* s0 16 */ int i;
 }
 
-/* 00343374 00000054 */ SCN_ANM_MDL* SCN_ANM_MDL * _fixed_array_verifyrange<SCN_ANM_MDL>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ SCN_ANM_MDL* SCN_ANM_MDL * _fixed_array_verifyrange<SCN_ANM_MDL>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
 /* 00343374 0000003c */ type_info& SCN_ANM_MDL type_info function() {}
 
 // *****************************************************************************
@@ -28276,9 +28762,9 @@
 }
 
 /* 00250048 00000210 */ static int SceneTestSelect() {
-	/* -0x160(sp) */ char str_title[11];
-	/* -0x150(sp) */ char str_press[21];
-	/* -0x130(sp) */ char str_scene_no[256];
+	/* 0x0(sp) */ char str_title[11];
+	/* 0x10(sp) */ char str_press[21];
+	/* 0x30(sp) */ char str_scene_no[256];
 	/* s0 16 */ int func_ret;
 	/* s3 19 */ int ret;
 }
@@ -28318,44 +28804,44 @@
 }
 
 /* 00250b38 0000021c */ static int SceneTestDraw(/* s0 16 */ SCENE_CTRL *pSceneCtrl, /* s1 17 */ int cnt_flg) {
-	/* -0x150(sp) */ char frame[256];
+	/* 0x0(sp) */ char frame[256];
 	/* s1 17 */ int now_frame;
 	/* s3 19 */ int now_reso;
 }
 
 /* 00250d58 00000054 */ static int SceneTestMenuCsrToFuncNo(/* a0 4 */ int csr_no) {
-	/* -0x20(sp) */ short int ChangeTable[9];
+	/* 0x0(sp) */ short int ChangeTable[9];
 	/* v0 2 */ int ret;
 }
 
 /* 00250db0 0000024c */ static void SceneTestMainMenu() {
 	/* s0 16 */ int i;
-	/* -0x50(sp) */ char *menu_str[12];
+	/* 0x0(sp) */ char *menu_str[12];
 }
 
 /* 00251000 000000f8 */ static void SceneTestCameraMode() {
-	/* -0x60(sp) */ float pos[2][4];
+	/* 0x0(sp) */ float pos[2][4];
 	/* s0 16 */ int i;
-	/* -0x40(sp) */ char *menu_str[2];
+	/* 0x20(sp) */ char *menu_str[2];
 }
 
 /* 002510f8 000000b8 */ static void RotVectorY(/* s0 16 */ float *normal, /* s1 17 */ float *vector, /* f20 58 */ float delta) {
-	/* -0x70(sp) */ float m0[4][4];
+	/* 0x0(sp) */ float m0[4][4];
 }
 
 /* 002511b0 000003ec */ static void SceneTestPadCamera() {
-	/* -0x90(sp) */ float vec[4];
-	/* -0x80(sp) */ float dir[4];
-	/* -0x70(sp) */ float xz_dir[4];
+	/* 0x0(sp) */ float vec[4];
+	/* 0x10(sp) */ float dir[4];
+	/* 0x20(sp) */ float xz_dir[4];
 	/* f2 40 */ float accel;
 	/* s2 18 */ float &rCamPosition[4];
 	/* s1 17 */ float &rCamTarget[4];
-	/* -0x60(sp) */ float CamPosition[4];
-	/* -0x50(sp) */ float CamTarget[4];
+	/* 0x30(sp) */ float CamPosition[4];
+	/* 0x40(sp) */ float CamTarget[4];
 }
 
 /* 002515a0 000000c4 */ static void ScnDispPrintVector(/* s4 20 */ char *ttl, /* s0 16 */ float *v, /* f21 59 */ float x, /* f20 58 */ float y) {
-	/* -0x140(sp) */ char tmp_str[256];
+	/* 0x0(sp) */ char tmp_str[256];
 }
 
 /* 00251668 00000074 */ static void SceneTestLightPosDispInit() {
@@ -28375,39 +28861,40 @@
 /* 002517e0 000001d0 */ static void SceneTestLightSelect() {
 	/* s1 17 */ int i;
 	/* a1 5 */ int ret;
-	/* -0x150(sp) */ char *ltype_name[4];
-	/* -0x140(sp) */ char tmp_str[256];
+	/* 0x0(sp) */ char *ltype_name[4];
+	/* 0x10(sp) */ char tmp_str[256];
 	/* s3 19 */ FOD_LIGHT *scn_fl;
 }
 
 /* 002519b0 00000548 */ static void SceneTestLightData() {
 	/* s6 22 */ FOD_LIT_SERIAL *fls;
 	/* s5 21 */ G3DLIGHT *light;
-	/* -0x1a0(sp) */ float color[4];
-	/* -0x190(sp) */ float cone_deg;
+	/* 0x0(sp) */ float color[4];
+	/* 0x10(sp) */ float cone_deg;
 	/* s1 17 */ int i;
 	/* s2 18 */ int yofs;
 	/* s1 17 */ int menu_num;
 	/* s3 19 */ int csr_pos;
-	/* -0x180(sp) */ char *ltype_name[4];
-	/* -0x170(sp) */ char *col_str[3];
-	/* -0x160(sp) */ char tmp_str[256];
+	/* 0x20(sp) */ char *ltype_name[4];
+	/* 0x30(sp) */ char *col_str[3];
+	/* 0x40(sp) */ char tmp_str[256];
 	/* s4 20 */ FOD_LIGHT *scn_fl;
 }
 
 /* 00251ef8 0000021c */ static void SceneTestLightPosDispOnOff() {
 	/* s1 17 */ SCN_TEST_WRK *stw;
 	/* s2 18 */ int i;
-	/* -0x170(sp) */ char *ltype_name[4];
-	/* -0x160(sp) */ char *on_off[2];
-	/* -0x150(sp) */ char tmp_str[256];
+	/* 0x0(sp) */ char *ltype_name[4];
+	/* 0x10(sp) */ char *on_off[2];
+	/* 0x20(sp) */ char tmp_str[256];
+	/* s3 19 */ FOD_LIGHT *scn_fl;
 }
 
 /* 00252118 00000340 */ static void SceneTestAmbient() {
 	/* s5 21 */ float *amb_p[4];
-	/* -0x180(sp) */ char *amb_str[6];
-	/* -0x160(sp) */ char *col_str[3];
-	/* -0x150(sp) */ char tmp_str[256];
+	/* 0x0(sp) */ char *amb_str[6];
+	/* 0x20(sp) */ char *col_str[3];
+	/* 0x30(sp) */ char tmp_str[256];
 	/* s1 17 */ int i;
 	/* fp 30 */ int j;
 	/* s4 20 */ int yofs;
@@ -28418,9 +28905,9 @@
 /* 00252458 00000394 */ static void SceneTestFogData() {
 	/* s4 20 */ SCENE_CTRL *scn_p;
 	/* s3 19 */ int i;
-	/* -0x1b0(sp) */ char *menu_str[7];
-	/* -0x190(sp) */ char tmp_str[256];
-	/* -0x90(sp) */ float fog_data[7];
+	/* 0x0(sp) */ char *menu_str[7];
+	/* 0x20(sp) */ char tmp_str[256];
+	/* 0x120(sp) */ float fog_data[7];
 }
 
 /* 002527f0 00000258 */ static void SceneTestEffect() {
@@ -28429,20 +28916,20 @@
 	/* s1 17 */ int i;
 	/* a1 5 */ int ret;
 	/* s2 18 */ int yofs;
-	/* -0x160(sp) */ char tmp_str[256];
-	/* -0x60(sp) */ char *on_off[2];
+	/* 0x0(sp) */ char tmp_str[256];
+	/* 0x100(sp) */ char *on_off[2];
 }
 
 /* 00252a48 000009f0 */ static void SceneTestEffectData() {
 	/* s2 18 */ SCN_TEST_WRK *stw;
 	/* s1 17 */ SCN_EFF_CTRL *sec;
-	/* -0x130(sp) */ char tmp_str[256];
+	/* 0x0(sp) */ char tmp_str[256];
 }
 
 /* 00253438 00000250 */ static void SceneTestPartsDeformCommon(/* s1 17 */ int PdeformNo) {
 	/* s3 19 */ SCN_TEST_WRK *stw;
 	/* s4 20 */ SCENE_CTRL *scn_p;
-	/* -0x140(sp) */ char tmp_str[256];
+	/* 0x0(sp) */ char tmp_str[256];
 	/* s1 17 */ int i;
 	/* v1 3 */ int ret;
 	/* s2 18 */ int yofs;
@@ -28457,11 +28944,11 @@
 	/* s1 17 */ int i;
 	/* a1 5 */ int ret;
 	/* s4 20 */ int yofs;
-	/* -0x180(sp) */ char tmp_str[256];
-	/* -0x80(sp) */ char *rgba_str[4];
-	/* -0x70(sp) */ float size;
-	/* -0x6c(sp) */ float rate;
-	/* -0x60(sp) */ u_char rgba[4];
+	/* 0x0(sp) */ char tmp_str[256];
+	/* 0x100(sp) */ char *rgba_str[4];
+	/* 0x110(sp) */ float size;
+	/* 0x114(sp) */ float rate;
+	/* 0x120(sp) */ u_char rgba[4];
 	/* s5 21 */ SCENE_CTRL *scn_p;
 }
 
@@ -28469,7 +28956,7 @@
 	/* s4 20 */ SCN_TEST_WRK *stw;
 	/* s5 21 */ SCENE_CTRL *scn_p;
 	/* s3 19 */ SCN_TEST_PDEFORM *pStp;
-	/* -0x140(sp) */ char tmp_str[256];
+	/* 0x0(sp) */ char tmp_str[256];
 	/* a1 5 */ int ret;
 }
 
@@ -28477,10 +28964,10 @@
 	/* s4 20 */ SCN_TEST_WRK *stw;
 	/* s2 18 */ SCN_ENE_EFCT *see;
 	/* s3 19 */ int ret;
-	/* -0x150(sp) */ char tmp_str[256];
-	/* -0x50(sp) */ float dist;
-	/* -0x4c(sp) */ float pos_ajst;
-	/* -0x48(sp) */ int alpha;
+	/* 0x0(sp) */ char tmp_str[256];
+	/* 0x100(sp) */ float dist;
+	/* 0x104(sp) */ float pos_ajst;
+	/* 0x108(sp) */ int alpha;
 	/* s1 17 */ SCENE_CTRL *scn_p;
 }
 
@@ -28502,8 +28989,8 @@
 	/* s7 23 */ SCN_TEST_WRK *stw;
 	/* s0 16 */ int i;
 	/* s3 19 */ int yofs;
-	/* -0x160(sp) */ char *vib_menu[3];
-	/* -0x150(sp) */ char tmp_str[256];
+	/* 0x0(sp) */ char *vib_menu[3];
+	/* 0x10(sp) */ char tmp_str[256];
 }
 
 /* 00254ba0 00000080 */ static int ScnUDCtrl(/* a0 4 */ int *csr, /* a1 5 */ int max, /* a2 6 */ int min) {
@@ -28523,30 +29010,30 @@
 }
 
 /* 00254e70 0000021c */ static int SceneFileSaveBin() {
-	/* -0x170(sp) */ float amb[4];
+	/* 0x0(sp) */ float amb[4];
 	/* s1 17 */ int i;
 	/* s3 19 */ int fd;
-	/* -0x160(sp) */ int align128[4];
-	/* -0x150(sp) */ char fname[256];
+	/* 0x10(sp) */ int align128[4];
+	/* 0x20(sp) */ char fname[256];
 	/* s5 21 */ SCENE_CTRL *scn_p;
 	/* s4 20 */ FOD_LIGHT *scn_fl;
 }
 
 /* 00255090 00000654 */ static int SceneFileSaveText() {
-	/* -0x2a0(sp) */ float ambient[4];
+	/* 0x0(sp) */ float ambient[4];
 	/* s7 23 */ int i;
 	/* s5 21 */ int fd;
-	/* -0x290(sp) */ char *ltype_name[4];
-	/* -0x280(sp) */ char *amb_str[6];
-	/* -0x260(sp) */ char fname[256];
-	/* -0x160(sp) */ char line[256];
-	/* -0x60(sp) */ SCENE_CTRL *scn_p;
-	/* -0x5c(sp) */ FOD_LIGHT *scn_fl;
+	/* 0x10(sp) */ char *ltype_name[4];
+	/* 0x20(sp) */ char *amb_str[6];
+	/* 0x40(sp) */ char fname[256];
+	/* 0x140(sp) */ char line[256];
+	/* 0x240(sp) */ SCENE_CTRL *scn_p;
+	/* 0x244(sp) */ FOD_LIGHT *scn_fl;
 }
 
 /* 002556e8 0000018c */ void SceneTestDrawCrossLine(/* s0 16 */ float *CenterPos, /* f20 58 */ float LineLength, /* s3 19 */ int r, /* s4 20 */ int g, /* s5 21 */ int b, /* s6 22 */ int a) {
-	/* -0x70(sp) */ float LinePos1[4];
-	/* -0x60(sp) */ float LinePos2[4];
+	/* 0x10(sp) */ float LinePos1[4];
+	/* 0x20(sp) */ float LinePos2[4];
 }
 
 /* 00255878 00000014 */ int SceneTestIsMenuMode() {}
@@ -28557,13 +29044,13 @@
 	/* v0 2 */ int FurnId;
 }
 
-/* 00343380 00000054 */ G3DLIGHT* G3DLIGHT * _fixed_array_verifyrange<G3DLIGHT>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
-/* 00343380 00000054 */ float*[4] float [3] * _fixed_array_verifyrange<float [3]>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
-/* 00343380 00000054 */ FOD_LIT_SERIAL* FOD_LIT_SERIAL * _fixed_array_verifyrange<FOD_LIT_SERIAL>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
-/* 00343380 00000054 */ SCN_ANM_MDL* SCN_ANM_MDL * _fixed_array_verifyrange<SCN_ANM_MDL>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
-/* 00343380 0000003c */ type_info& G3DLIGHT type_info function() {}
-/* 00343380 0000003c */ type_info& float [3] type_info function() {}
-/* 00343380 0000003c */ type_info& FOD_LIT_SERIAL type_info function() {}
+/* ffffffff 00000054 */ G3DLIGHT* G3DLIGHT * _fixed_array_verifyrange<G3DLIGHT>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ float*[4] float [3] * _fixed_array_verifyrange<float [3]>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ FOD_LIT_SERIAL* FOD_LIT_SERIAL * _fixed_array_verifyrange<FOD_LIT_SERIAL>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ SCN_ANM_MDL* SCN_ANM_MDL * _fixed_array_verifyrange<SCN_ANM_MDL>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 0000003c */ type_info& G3DLIGHT type_info function() {}
+/* ffffffff 0000003c */ type_info& float [3] type_info function() {}
+/* ffffffff 0000003c */ type_info& FOD_LIT_SERIAL type_info function() {}
 /* 00343380 0000003c */ type_info& SCN_ANM_MDL type_info function() {}
 
 // *****************************************************************************
@@ -28596,7 +29083,7 @@
 /* 00255a38 00000008 */ void CSearchMark::SetRot(/* a0 4 */ CSearchMark *this, /* f12 50 */ float fRot) {}
 
 /* 00255a40 00000104 */ void CSearchMark::Draw(/* s3 19 */ CSearchMark *this, /* s0 16 */ int fndr_mx, /* s1 17 */ int fndr_my, /* a3 7 */ int iAlpha, /* f20 58 */ float fScale) {
-	/* -0xc0(sp) */ DISP_SPRT ds;
+	/* 0x0(sp) */ DISP_SPRT ds;
 }
 
 /* 00344970 00000038 */ void CWrkVariable<short, 0, 128>::Work(/* a0 4 */ CWrkVariable<short int,0,128> *this) {
@@ -28636,12 +29123,12 @@
 
 /* 00256068 00000198 */ static void SetupBgDisp(/* s4 20 */ int off_x, /* s3 19 */ int off_y, /* s2 18 */ u_char alpha, /* a3 7 */ void *pk2_addr) {
 	/* s0 16 */ int i;
-	/* -0xe0(sp) */ DISP_SPRT bg_ds;
+	/* 0x0(sp) */ DISP_SPRT bg_ds;
 }
 
 /* 00256200 00000074 */ void SetupBlackBgDisp(/* a0 4 */ int off_x, /* a1 5 */ int off_y, /* a2 6 */ u_char alpha) {
-	/* -0xb0(sp) */ DISP_SQAR dsq;
-	/* -0x30(sp) */ SQAR_DAT black_bg;
+	/* 0x0(sp) */ DISP_SQAR dsq;
+	/* 0x80(sp) */ SQAR_DAT black_bg;
 }
 
 /* 00256278 0000001c */ void init_Title_SetupMenu() {}
@@ -28716,7 +29203,7 @@
 	/* s1 17 */ int i;
 	/* s0 16 */ u_char non_sel_alpha;
 	/* s4 20 */ u_char setup_alpha;
-	/* -0x60(sp) */ u_char rgb;
+	/* 0x0(sp) */ u_char rgb;
 	/* rdata 3c6d08 */ static int msg_id_tbl[3];
 }
 
@@ -28725,7 +29212,7 @@
 	/* s0 16 */ u_char menu_sel_alpha;
 	/* s6 22 */ u_char menu_non_sel_alpha;
 	/* s5 21 */ u_char non_sel_alpha;
-	/* -0x60(sp) */ u_char line_alpha;
+	/* 0x0(sp) */ u_char line_alpha;
 	/* rdata 3c6d18 */ static int msg_id_tbl[5];
 }
 
@@ -28738,74 +29225,74 @@
 
 /* 002585e8 000000c8 */ static void SetupMenuTitleFrameDisp(/* v0 2 */ int off_x, /* v1 3 */ int off_y, /* s2 18 */ u_char alpha, /* a3 7 */ void *pk2_addr) {
 	/* s1 17 */ int i;
-	/* -0xc0(sp) */ DISP_SPRT frame_ds;
+	/* 0x0(sp) */ DISP_SPRT frame_ds;
 }
 
 /* 002586b0 0000009c */ static void SetupMenuTitleDisp(/* s1 17 */ int off_x, /* s0 16 */ int off_y, /* a2 6 */ u_char alpha, /* a3 7 */ void *pk2_addr) {
-	/* -0xb0(sp) */ DISP_SPRT title_ds;
+	/* 0x0(sp) */ DISP_SPRT title_ds;
 }
 
 /* 00258750 00000164 */ static void SetupMenuSelMenuItemDisp(/* s3 19 */ int menu_label, /* s6 22 */ int off_x, /* s5 21 */ int off_y, /* s4 20 */ u_char alpha, /* s1 17 */ u_char rgb) {
 	/* rdata 3c6d30 */ static char __FUNCTION__[25];
 	/* s2 18 */ int i;
-	/* -0xe0(sp) */ DISP_SPRT menu_ds;
+	/* 0x0(sp) */ DISP_SPRT menu_ds;
 	/* rdata 3c6d50 */ static int menu_tex_tbl[3][2];
 }
 
 /* 002588b8 00000100 */ static void SetupMenuTopCursorFrameDisp(/* a0 4 */ int off_x, /* a1 5 */ int off_y, /* s3 19 */ u_char alpha, /* s0 16 */ u_char rgb) {
 	/* s1 17 */ int i;
-	/* -0xe0(sp) */ DISP_SPRT csr_ds;
+	/* 0x0(sp) */ DISP_SPRT csr_ds;
 }
 
 /* 002589b8 0000020c */ static void SetupMenuTopCursorDisp(/* a0 4 */ int off_x, /* a1 5 */ int off_y, /* s2 18 */ u_char alpha, /* s0 16 */ u_char rgb) {
 	/* s3 19 */ int i;
-	/* -0xe0(sp) */ DISP_SPRT csr_ds;
+	/* 0x0(sp) */ DISP_SPRT csr_ds;
 	/* sdata 3f42f8 */ static int csr_tex_tbl[2];
 	/* sdata 3f4300 */ static int csr_flare_tex_tbl[2];
 }
 
 /* 00258bc8 000000c0 */ static void SetupMenuCostumeDisp(/* s1 17 */ int off_x, /* s3 19 */ int off_y, /* a2 6 */ u_char alpha, /* a3 7 */ u_char rgb, /* t0 8 */ u_char flg) {
-	/* -0xc0(sp) */ DISP_SPRT costume_ds;
+	/* 0x0(sp) */ DISP_SPRT costume_ds;
 }
 
 /* 00258c88 0000015c */ static void SetupMenuCostumeTypeDisp(/* s2 18 */ int costume_type, /* s6 22 */ int off_x, /* s5 21 */ int off_y, /* s4 20 */ u_char alpha, /* s1 17 */ u_char rgb, /* s3 19 */ u_char flg) {
 	/* rdata 3c6d68 */ static char __FUNCTION__[25];
 	/* s2 18 */ int i;
-	/* -0xe0(sp) */ DISP_SPRT costume_ds;
+	/* 0x0(sp) */ DISP_SPRT costume_ds;
 	/* rdata 3c6d88 */ static int costume_type_tbl[9][2];
 }
 
 /* 00258de8 000000c0 */ static void SetupMenuAccessoryDisp(/* s1 17 */ int off_x, /* s3 19 */ int off_y, /* a2 6 */ u_char alpha, /* a3 7 */ u_char rgb, /* t0 8 */ u_char flg) {
-	/* -0xc0(sp) */ DISP_SPRT accessory_ds;
+	/* 0x0(sp) */ DISP_SPRT accessory_ds;
 }
 
 /* 00258ea8 000000c0 */ static void SetupMenuMioDisp(/* s1 17 */ int off_x, /* s3 19 */ int off_y, /* a2 6 */ u_char alpha, /* a3 7 */ u_char rgb, /* t0 8 */ u_char flg) {
-	/* -0xc0(sp) */ DISP_SPRT mio_ds;
+	/* 0x0(sp) */ DISP_SPRT mio_ds;
 }
 
 /* 00258f68 000000c0 */ static void SetupMenuMayuDisp(/* s1 17 */ int off_x, /* s3 19 */ int off_y, /* a2 6 */ u_char alpha, /* a3 7 */ u_char rgb, /* t0 8 */ u_char flg) {
-	/* -0xc0(sp) */ DISP_SPRT mayu_ds;
+	/* 0x0(sp) */ DISP_SPRT mayu_ds;
 }
 
 /* 00259028 000001c8 */ static void SetupMenuDifficultyDisp(/* s6 22 */ int difficulty_label, /* s2 18 */ int off_x, /* s5 21 */ int off_y, /* s4 20 */ u_char alpha, /* s1 17 */ u_char rgb, /* s3 19 */ u_char flg) {
 	/* rdata 3c6dd0 */ static char __FUNCTION__[24];
 	/* s2 18 */ int i;
-	/* -0xf0(sp) */ DISP_SPRT difficulty_ds;
+	/* 0x0(sp) */ DISP_SPRT difficulty_ds;
 	/* rdata 3c6de8 */ static int difficulty_tex_tbl[4][2];
 }
 
 /* 002591f0 000000fc */ static void SetupMenuGameStartDisp(/* a0 4 */ int off_x, /* a1 5 */ int off_y, /* s4 20 */ u_char alpha, /* s0 16 */ u_char rgb, /* s3 19 */ u_char flg) {
-	/* -0xe0(sp) */ DISP_SPRT gamestart_ds;
+	/* 0x0(sp) */ DISP_SPRT gamestart_ds;
 	/* s1 17 */ int i;
 }
 
 /* 002592f0 000000fc */ static void SetupMenuMissionSelectDisp(/* a0 4 */ int off_x, /* a1 5 */ int off_y, /* s4 20 */ u_char alpha, /* s0 16 */ u_char rgb, /* s3 19 */ u_char flg) {
 	/* s1 17 */ int i;
-	/* -0xe0(sp) */ DISP_SPRT mission_ds;
+	/* 0x0(sp) */ DISP_SPRT mission_ds;
 }
 
 /* 002593f0 0000019c */ static void SetupMenuCursorDisp(/* s4 20 */ int off_x, /* s3 19 */ int off_y, /* s1 17 */ u_char alpha, /* s2 18 */ u_char rgb) {
-	/* -0x40(sp) */ u_char flare_rgb;
+	/* 0x0(sp) */ u_char flare_rgb;
 	/* rdata 3c6e08 */ static int csr_right_x_tbl[3];
 	/* rdata 3c6e18 */ static int difficulty_csr_right_x_tbl[4];
 	/* rdata 3c6e28 */ static int flare_right_x_tbl[3];
@@ -28813,32 +29300,32 @@
 }
 
 /* 00259590 000000b0 */ static void SetupMenuOnDisp(/* s2 18 */ int x, /* s3 19 */ int y, /* a2 6 */ u_char alpha, /* a3 7 */ u_char rgb, /* t0 8 */ u_char flg) {
-	/* -0xc0(sp) */ DISP_SPRT on_ds;
+	/* 0x0(sp) */ DISP_SPRT on_ds;
 }
 
 /* 00259640 000000b0 */ static void SetupMenuOffDisp(/* s2 18 */ int x, /* s3 19 */ int y, /* a2 6 */ u_char alpha, /* a3 7 */ u_char rgb, /* t0 8 */ u_char flg) {
-	/* -0xc0(sp) */ DISP_SPRT off_ds;
+	/* 0x0(sp) */ DISP_SPRT off_ds;
 }
 
 /* 002596f0 00000090 */ static void SetupMenuCsrLDisp(/* s2 18 */ int x, /* s3 19 */ int y, /* a2 6 */ u_char alpha, /* a3 7 */ u_char rgb) {
-	/* -0xc0(sp) */ DISP_SPRT csr_ds;
+	/* 0x0(sp) */ DISP_SPRT csr_ds;
 }
 
 /* 00259780 00000090 */ static void SetupMenuCsrRDisp(/* s2 18 */ int x, /* s3 19 */ int y, /* a2 6 */ u_char alpha, /* a3 7 */ u_char rgb) {
-	/* -0xc0(sp) */ DISP_SPRT csr_ds;
+	/* 0x0(sp) */ DISP_SPRT csr_ds;
 }
 
 /* 00259810 00000098 */ static void SetupMenuCsrFlareLDisp(/* s2 18 */ int x, /* s3 19 */ int y, /* a2 6 */ u_char alpha, /* a3 7 */ u_char rgb) {
-	/* -0xc0(sp) */ DISP_SPRT flare_ds;
+	/* 0x0(sp) */ DISP_SPRT flare_ds;
 }
 
 /* 002598a8 00000098 */ static void SetupMenuCsrFlareRDisp(/* s2 18 */ int x, /* s3 19 */ int y, /* a2 6 */ u_char alpha, /* a3 7 */ u_char rgb) {
-	/* -0xc0(sp) */ DISP_SPRT flare_ds;
+	/* 0x0(sp) */ DISP_SPRT flare_ds;
 }
 
 /* 00259940 000000d8 */ static void SetupMenuLineDisp(/* a0 4 */ int off_x, /* a1 5 */ int off_y, /* s3 19 */ u_char alpha, /* s0 16 */ u_char rgb) {
 	/* s1 17 */ int i;
-	/* -0xd0(sp) */ DISP_SPRT line_ds;
+	/* 0x0(sp) */ DISP_SPRT line_ds;
 }
 
 /* 00259a18 00000040 */ static void SetupMenuMsgWinDisp(/* a0 4 */ int off_x, /* a1 5 */ int off_y, /* a2 6 */ u_char alpha) {}
@@ -28899,11 +29386,11 @@
 /* 0025a0f8 0000002c */ void SaAlgoTrace(/* s0 16 */ SISALG_WRK *alg) {}
 
 /* 0025a128 0000025c */ void SaRotEneDir(/* s1 17 */ SISALG_WRK *alg) {
-	/* -0x70(sp) */ float vw[4];
+	/* 0x0(sp) */ float vw[4];
 	/* s4 20 */ u_short adj;
 	/* f21 59 */ float rotf;
 	/* f20 58 */ float rw;
-	/* -0x60(sp) */ float psrot;
+	/* 0x10(sp) */ float psrot;
 }
 
 /* 0025a388 00000048 */ void SaObjHit(/* a3 7 */ SISALG_WRK *alg) {}
@@ -28934,7 +29421,7 @@
 	/* s2 18 */ u_char id;
 	/* s1 17 */ MOVE_BOX *mb;
 	/* v0 2 */ MOVE_BOX *tgt;
-	/* -0x40(sp) */ float vw[4];
+	/* 0x0(sp) */ float vw[4];
 	/* f2 40 */ float adjr;
 }
 
@@ -28949,7 +29436,7 @@
 	/* v1 3 */ u_int attr;
 }
 
-/* 00345070 00000054 */ ENE_WRK* ENE_WRK * _fixed_array_verifyrange<ENE_WRK>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ ENE_WRK* ENE_WRK * _fixed_array_verifyrange<ENE_WRK>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
 /* 00345070 0000003c */ type_info& ENE_WRK type_info function() {}
 
 // *****************************************************************************
@@ -28976,9 +29463,9 @@
 }
 
 /* 0025acc0 000000ac */ int IsReadySisMdl() {
-	/* -0x30(sp) */ int mdl_p;
-	/* -0x2c(sp) */ int anm_p;
-	/* -0x28(sp) */ int smdl_p;
+	/* 0x0(sp) */ int mdl_p;
+	/* 0x4(sp) */ int anm_p;
+	/* 0x8(sp) */ int smdl_p;
 	/* s1 17 */ int ret;
 }
 
@@ -29015,11 +29502,11 @@
 
 /* 0025b4a0 00000244 */ void DrawSister() {
 	/* s3 19 */ HeaderSection *hs;
-	/* -0xc0(sp) */ float work_amb[4];
-	/* -0xb0(sp) */ float avWorldBB[8][4];
-	/* -0xd0(sp) */ int mdl_p;
-	/* -0xcc(sp) */ int anm_p;
-	/* -0xc8(sp) */ int smdl_p;
+	/* 0x10(sp) */ float work_amb[4];
+	/* 0x20(sp) */ float avWorldBB[8][4];
+	/* 0x0(sp) */ int mdl_p;
+	/* 0x4(sp) */ int anm_p;
+	/* 0x8(sp) */ int smdl_p;
 	/* s0 16 */ int ret;
 	/* s1 17 */ int iAlpha;
 }
@@ -29029,10 +29516,10 @@
 
 /* 0025b730 0000018c */ int SisNeckRegisterTarget(/* s2 18 */ LOOK_AT_PARAM *param, /* s3 19 */ LOOK_TARGET_PRIORITY_MAYU priority, /* f21 59 */ float fLimitDist) {
 	/* f20 58 */ float dist;
-	/* -0x60(sp) */ float vSub[4];
-	/* -0x50(sp) */ int mdl_p;
-	/* -0x4c(sp) */ int anm_p;
-	/* -0x48(sp) */ int smdl_p;
+	/* 0x0(sp) */ float vSub[4];
+	/* 0x10(sp) */ int mdl_p;
+	/* 0x14(sp) */ int anm_p;
+	/* 0x18(sp) */ int smdl_p;
 	/* s0 16 */ int ret;
 }
 
@@ -29046,9 +29533,9 @@
 /* 0025b9d8 00000110 */ void sis_mdlGetMATRIX(/* s3 19 */ float *mtx[4], /* s2 18 */ int bone_no) {
 	/* a1 5 */ HeaderSection *hs;
 	/* v0 2 */ SGDCOORDINATE *cp;
-	/* -0x40(sp) */ int mdl_p;
-	/* -0x3c(sp) */ int anm_p;
-	/* -0x38(sp) */ int smdl_p;
+	/* 0x0(sp) */ int mdl_p;
+	/* 0x4(sp) */ int anm_p;
+	/* 0x8(sp) */ int smdl_p;
 	/* s1 17 */ int ret;
 	/* v0 2 */ float *pm1[4];
 }
@@ -29056,21 +29543,21 @@
 /* 0025bae8 0000011c */ void sisterDrawShadow() {
 	/* rdata 3c7380 */ static char __FUNCTION__[17];
 	/* s0 16 */ ANI_CTRL *pAC;
-	/* -0xa0(sp) */ float avBBWorld[8][4];
+	/* 0x0(sp) */ float avBBWorld[8][4];
 	/* s1 17 */ SGDCOORDINATE *pCoord;
 }
 
 /* 0025bc08 00000070 */ static void __static_initialization_and_destruction_0(/* a0 4 */ int __initialize_p, /* a1 5 */ int __priority) {}
-/* 003450d0 0000004c */ type_info& SIS_DATA type_info function() {}
+/* ffffffff 0000004c */ type_info& SIS_DATA type_info function() {}
 
-/* 003450d0 000000bc */ int SIS_DATA::Setup(/* s0 16 */ SIS_DATA *this, /* s5 21 */ int mdl_no, /* s3 19 */ int anm_no, /* s4 20 */ int bd_no, /* s1 17 */ int smdl_no, /* s2 18 */ int iAcsNo) {
+/* ffffffff 000000bc */ int SIS_DATA::Setup(/* s0 16 */ SIS_DATA *this, /* s5 21 */ int mdl_no, /* s3 19 */ int anm_no, /* s4 20 */ int bd_no, /* s1 17 */ int smdl_no, /* s2 18 */ int iAcsNo) {
 	/* s6 22 */ int ret;
 }
 
-/* 003450d0 000000a4 */ int SIS_DATA::IsReady(/* s0 16 */ SIS_DATA *this) {
-	/* -0x30(sp) */ int mdl_p;
-	/* -0x2c(sp) */ int anm_p;
-	/* -0x28(sp) */ int smdl_p;
+/* ffffffff 000000a4 */ int SIS_DATA::IsReady(/* s0 16 */ SIS_DATA *this) {
+	/* 0x0(sp) */ int mdl_p;
+	/* 0x4(sp) */ int anm_p;
+	/* 0x8(sp) */ int smdl_p;
 	/* s1 17 */ int ret;
 }
 
@@ -29101,9 +29588,9 @@
 /* 0025c1a0 000000d0 */ void SisterDisp(/* a0 4 */ int sw) {}
 
 /* 0025c270 0000020c */ static void SisKaidanLookAt() {
-	/* -0x90(sp) */ float mtx[4][4];
-	/* -0x50(sp) */ float offset[4];
-	/* -0x40(sp) */ LOOK_AT_PARAM param;
+	/* 0x0(sp) */ float mtx[4][4];
+	/* 0x40(sp) */ float offset[4];
+	/* 0x50(sp) */ LOOK_AT_PARAM param;
 }
 
 /* 0025c480 00000068 */ void SisMepachiCtrl() {
@@ -29113,7 +29600,7 @@
 /* 0025c4e8 0000000c */ float GetDist_Sister2Player() {}
 
 /* 0025c4f8 0000026c */ void SisterMain() {
-	/* -0x40(sp) */ LOOK_AT_PARAM param;
+	/* 0x0(sp) */ LOOK_AT_PARAM param;
 }
 
 /* 0025c768 00000044 */ int SisterGameOver() {}
@@ -29122,8 +29609,8 @@
 /* 0025c7f0 00000440 */ int SisDead() {
 	/* s3 19 */ int ret;
 	/* sdata 3f4420 */ static int cnt;
-	/* -0xf0(sp) */ DISP_SQAR dsq;
-	/* -0x70(sp) */ SQAR_DAT fade_bg;
+	/* 0x0(sp) */ DISP_SQAR dsq;
+	/* 0x80(sp) */ SQAR_DAT fade_bg;
 }
 
 /* 0025cc30 0000000c */ int IsSisWrk() {}
@@ -29141,7 +29628,7 @@
 /* 0025ce38 0000006c */ int DistHitCheck(/* s0 16 */ float *v1, /* s1 17 */ float *v2, /* f20 58 */ float dist) {}
 
 /* 0025cea8 00000060 */ void SetSisterHeight() {
-	/* -0x30(sp) */ float tv[4];
+	/* 0x0(sp) */ float tv[4];
 	/* v0 2 */ int w_area_no;
 }
 
@@ -29157,8 +29644,8 @@
 	/* s2 18 */ SIS_TRACE *stp;
 	/* s0 16 */ STATUS_DAT *std;
 	/* f20 58 */ float dist;
-	/* -0x70(sp) */ float psrot;
-	/* -0x60(sp) */ float vw[4];
+	/* 0x0(sp) */ float psrot;
+	/* 0x10(sp) */ float vw[4];
 	/* sdata 3f4428 */ static u_int turn_chk_time;
 }
 
@@ -29174,8 +29661,8 @@
 	/* s2 18 */ MOVE_BOX *plm;
 	/* s0 16 */ MOVE_BOX *ssm;
 	/* s4 20 */ SIS_TRACE *stp;
-	/* -0x70(sp) */ float vws[4];
-	/* -0x60(sp) */ float vwp[4];
+	/* 0x0(sp) */ float vws[4];
+	/* 0x10(sp) */ float vwp[4];
 }
 
 /* 0025de40 000007d0 */ void SisterTraceMove() {
@@ -29183,17 +29670,17 @@
 	/* s2 18 */ int n2;
 	/* s2 18 */ int n3;
 	/* s3 19 */ int n4;
-	/* -0xd0(sp) */ float f;
+	/* 0x0(sp) */ float f;
 	/* f20 58 */ float dist;
 	/* f20 58 */ float spd;
 	/* f22 60 */ float pdist;
 	/* f21 59 */ float rdist;
 	/* s7 23 */ SIS_TRACE *stp;
-	/* -0x90(sp) */ int i;
-	/* -0x8c(sp) */ int n;
-	/* -0xc0(sp) */ LINE_T l1;
-	/* -0xb0(sp) */ LINE_T l2;
-	/* -0xa0(sp) */ float vr[4];
+	/* 0x40(sp) */ int i;
+	/* 0x44(sp) */ int n;
+	/* 0x10(sp) */ LINE_T l1;
+	/* 0x20(sp) */ LINE_T l2;
+	/* 0x30(sp) */ float vr[4];
 	/* f3 41 */ float rt;
 }
 
@@ -29209,11 +29696,11 @@
 	/* t0 8 */ int np;
 	/* f21 59 */ float f;
 	/* f27 65 */ float add;
-	/* -0x600(sp) */ float ncf[38][4];
-	/* -0x3a0(sp) */ sceVu0IVECTOR nci[38];
-	/* -0x140(sp) */ float wpos[4];
-	/* -0x130(sp) */ float slm1[4][4];
-	/* -0xf0(sp) */ float wlm[4][4];
+	/* 0x0(sp) */ float ncf[38][4];
+	/* 0x260(sp) */ sceVu0IVECTOR nci[38];
+	/* 0x4c0(sp) */ float wpos[4];
+	/* 0x4d0(sp) */ float slm1[4][4];
+	/* 0x510(sp) */ float wlm[4][4];
 	/* v0 2 */ u_int clpx2;
 	/* v0 2 */ u_int clpy2;
 	/* s3 19 */ u_int clpz2;
@@ -29225,31 +29712,31 @@
 	/* a0 4 */ int j;
 	/* s1 17 */ MOVE_BOX *plm;
 	/* s4 20 */ SIS_TRACE *stp;
-	/* -0x1d0(sp) */ float mpos[4];
-	/* -0x1c0(sp) */ float mopos[4];
-	/* -0x1b0(sp) */ float wlm[4][4];
+	/* 0x10(sp) */ float mpos[4];
+	/* 0x20(sp) */ float mopos[4];
+	/* 0x30(sp) */ float wlm[4][4];
 	/* data 34f9b0 */ static float rrot[4];
-	/* -0x140(sp) */ float vw[4][4];
+	/* 0xa0(sp) */ float vw[4][4];
 	/* f21 59 */ float am;
 	/* f20 58 */ float bm;
 	/* f20 58 */ float ab_ang;
-	/* -0x170(sp) */ float fw1;
-	/* -0x100(sp) */ float fw2;
-	/* -0xf0(sp) */ float a[4];
-	/* -0xe0(sp) */ float b[4];
-	/* -0xd0(sp) */ int c[4];
-	/* -0xc0(sp) */ int d[4][2];
+	/* 0x70(sp) */ float fw1;
+	/* 0xe0(sp) */ float fw2;
+	/* 0xf0(sp) */ float a[4];
+	/* 0x100(sp) */ float b[4];
+	/* 0x110(sp) */ int c[4];
+	/* 0x120(sp) */ int d[4][2];
 	/* f23 61 */ float pai;
 	/* f22 60 */ float qpai;
-	/* -0xa0(sp) */ float rot[4];
-	/* -0x90(sp) */ int flg[4];
+	/* 0x140(sp) */ float rot[4];
+	/* 0x150(sp) */ int flg[4];
 	/* t3 11 */ int m;
-	/* -0x80(sp) */ int n;
+	/* 0x160(sp) */ int n;
 	/* v0 2 */ float *pv0;
 	/* a1 5 */ float *pv1;
 	/* f1 39 */ float dist;
-	/* -0x100(sp) */ float rot;
-	/* -0x170(sp) */ float psrot;
+	/* 0xe0(sp) */ float rot;
+	/* 0x70(sp) */ float psrot;
 }
 
 /* 0025f580 00000024 */ void ClearSisterPushMove() {}
@@ -29257,13 +29744,13 @@
 /* 0025f5a8 000000c8 */ float GetSisterRot() {
 	/* s0 16 */ int n1;
 	/* s1 17 */ int n2;
-	/* -0x30(sp) */ float vw[4];
+	/* 0x0(sp) */ float vw[4];
 }
 
 /* 0025f670 000002b8 */ void SisterPosUpdate() {
 	/* s0 16 */ MOVE_BOX *ssm;
 	/* s6 22 */ MOVE_BOX *plm;
-	/* -0x60(sp) */ float tv[4];
+	/* 0x0(sp) */ float tv[4];
 	/* v0 2 */ float *pv1;
 	/* s2 18 */ float *pv0;
 	/* s1 17 */ float *pv1;
@@ -29275,19 +29762,19 @@
 /* 0025f928 000001fc */ void SisterNoMove() {
 	/* s3 19 */ MOVE_BOX *plm;
 	/* s4 20 */ MOVE_BOX *ssm;
-	/* -0xe0(sp) */ POINT_T pt;
-	/* -0xd0(sp) */ LINE_T lt;
-	/* -0xc0(sp) */ float vt[4];
-	/* -0xb0(sp) */ float wpos[4];
-	/* -0xa0(sp) */ float wlm[4][4];
+	/* 0x0(sp) */ POINT_T pt;
+	/* 0x10(sp) */ LINE_T lt;
+	/* 0x20(sp) */ float vt[4];
+	/* 0x30(sp) */ float wpos[4];
+	/* 0x40(sp) */ float wlm[4][4];
 	/* f20 58 */ float dist;
 	/* f0 38 */ float move;
-	/* -0x60(sp) */ float rot;
+	/* 0x80(sp) */ float rot;
 	/* s5 21 */ int dir;
 }
 
 /* 0025fb28 000000ac */ void SetSisterPos(/* s1 17 */ float *pos) {
-	/* -0x30(sp) */ float vw[4];
+	/* 0x0(sp) */ float vw[4];
 }
 
 /* 0025fbd8 0000002c */ void SetSisterRot(/* a0 4 */ float *rot) {}
@@ -29296,9 +29783,9 @@
 
 /* 0025fc48 00000608 */ void SisterDamageCtrl() {
 	/* s0 16 */ ENE_WRK *ew;
-	/* -0x60(sp) */ u_char sani_dmgin_tbl[3][2];
-	/* -0x50(sp) */ u_char sani_dmg_tbl[2];
-	/* -0x40(sp) */ u_char sani_out_tbl[2];
+	/* 0x0(sp) */ u_char sani_dmgin_tbl[3][2];
+	/* 0x10(sp) */ u_char sani_dmg_tbl[2];
+	/* 0x20(sp) */ u_char sani_out_tbl[2];
 }
 
 /* 00260250 00000010 */ int CheckSisterNeckSW(/* a0 4 */ u_char anime_no) {}
@@ -29309,8 +29796,8 @@
 	/* a1 5 */ u_char anime_no;
 	/* s4 20 */ u_char frame;
 	/* s0 16 */ u_char i;
-	/* -0x90(sp) */ u_int psta_chk_tbl[14];
-	/* -0x50(sp) */ u_char pmani_no_tbl[14][2];
+	/* 0x0(sp) */ u_int psta_chk_tbl[14];
+	/* 0x40(sp) */ u_char pmani_no_tbl[14][2];
 }
 
 /* 002605d0 000001f8 */ int SearchSearchPoint(/* s3 19 */ float *pos, /* s6 22 */ int floor1, /* s2 18 */ float *tgt, /* s5 21 */ int floor2) {
@@ -29330,9 +29817,9 @@
 	/* s4 20 */ int start;
 	/* s1 17 */ int end;
 	/* a1 5 */ int min;
-	/* -0x1c0(sp) */ int leng[32];
-	/* -0x140(sp) */ int v[32];
-	/* -0xc0(sp) */ int index[32];
+	/* 0x0(sp) */ int leng[32];
+	/* 0x80(sp) */ int v[32];
+	/* 0x100(sp) */ int index[32];
 	/* s5 21 */ int **a;
 }
 
@@ -29340,15 +29827,15 @@
 	/* v1 3 */ STATUS_DAT *std;
 }
 
-/* 00260ab0 000005b8 */ void SetSearchPoint(/* fp 30 */ char *route, /* s6 22 */ int floor1, /* -0x90(sp) */ int floor2) {
+/* 00260ab0 000005b8 */ void SetSearchPoint(/* fp 30 */ char *route, /* s6 22 */ int floor1, /* 0x110(sp) */ int floor2) {
 	/* s2 18 */ int i;
-	/* -0x8c(sp) */ int j;
+	/* 0x114(sp) */ int j;
 	/* s1 17 */ int no;
 	/* s4 20 */ int num;
-	/* -0x88(sp) */ float *pointpos[4];
-	/* -0x1a0(sp) */ float vw[4];
-	/* -0x84(sp) */ int area;
-	/* -0x190(sp) */ int mroute[64];
+	/* 0x118(sp) */ float *pointpos[4];
+	/* 0x0(sp) */ float vw[4];
+	/* 0x11c(sp) */ int area;
+	/* 0x10(sp) */ int mroute[64];
 	/* v1 3 */ int fl;
 	/* s5 21 */ int ne;
 	/* s3 19 */ int nw;
@@ -29368,7 +29855,7 @@
 /* 00261338 00000090 */ void ModeSisAeneFind() {}
 
 /* 002613c8 00000188 */ static int SearchMain() {
-	/* -0x140(sp) */ char route[255];
+	/* 0x0(sp) */ char route[255];
 	/* s5 21 */ int ret;
 }
 
@@ -29381,8 +29868,8 @@
 /* 00261640 00000008 */ void SetFindMode(/* a0 4 */ float *tgt, /* a1 5 */ int floor) {}
 
 /* 00261648 000001e0 */ void MoveSisStairs() {
-	/* -0x30(sp) */ float fw;
-	/* -0x2c(sp) */ float rotw;
+	/* 0x0(sp) */ float fw;
+	/* 0x4(sp) */ float rotw;
 }
 
 /* 00261828 000000dc */ void CheckSisGhost() {
@@ -29391,9 +29878,9 @@
 }
 
 /* 00261908 00000180 */ int SetSisTurn() {
-	/* -0x60(sp) */ float vw[4];
+	/* 0x0(sp) */ float vw[4];
 	/* s1 17 */ MOVE_BOX *ssm;
-	/* -0x50(sp) */ float psrot;
+	/* 0x10(sp) */ float psrot;
 	/* f20 58 */ float rw;
 	/* s4 20 */ int ret;
 }
@@ -29412,10 +29899,10 @@
 	/* s2 18 */ int n1;
 	/* s1 17 */ int n2;
 	/* s5 21 */ int j;
-	/* -0xb0(sp) */ LINE_T l1;
-	/* -0xa0(sp) */ LINE_T l2;
-	/* -0x90(sp) */ float wpos[4];
-	/* -0x80(sp) */ float wpos2[4];
+	/* 0x10(sp) */ LINE_T l1;
+	/* 0x20(sp) */ LINE_T l2;
+	/* 0x30(sp) */ float wpos[4];
+	/* 0x40(sp) */ float wpos2[4];
 }
 
 /* 00262340 0000027c */ void SisterDebug() {
@@ -29437,25 +29924,25 @@
 /* 00262680 00000130 */ void ChangeSisterExPos(/* s3 19 */ int old, /* s2 18 */ int now) {
 	/* s1 17 */ SIS_AREA_CHG *sac;
 	/* v1 3 */ SIS_AREA_CHG_SUB *sacs;
-	/* -0x40(sp) */ float pos[4];
+	/* 0x0(sp) */ float pos[4];
 	/* f20 58 */ float dist;
 	/* s0 16 */ int flag;
 }
 
 /* 002627b0 0000007c */ void ReqSisBankPlay(/* s0 16 */ int no, /* s1 17 */ int effect, /* s2 18 */ int loop, /* s3 19 */ int fade_time, /* s4 20 */ SND_3D_SET *s3d) {}
-/* 0034f3c0 00000054 */ float*[4] float [3] * _fixed_array_verifyrange<float [3]>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
-/* 0034f3c0 00000054 */ float* float * _fixed_array_verifyrange<float>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
-/* 0034f3c0 00000054 */ ENE_WRK* ENE_WRK * _fixed_array_verifyrange<ENE_WRK>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
-/* 0034f3c0 00000054 */ u_char* unsigned char * _fixed_array_verifyrange<unsigned char>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
-/* 0034f3c0 00000054 */ SIS_ANI_TBL** SIS_ANI_TBL * * _fixed_array_verifyrange<SIS_ANI_TBL *>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ float*[4] float [3] * _fixed_array_verifyrange<float [3]>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ float* float * _fixed_array_verifyrange<float>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ ENE_WRK* ENE_WRK * _fixed_array_verifyrange<ENE_WRK>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ u_char* unsigned char * _fixed_array_verifyrange<unsigned char>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ SIS_ANI_TBL** SIS_ANI_TBL * * _fixed_array_verifyrange<SIS_ANI_TBL *>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
 
 /* 00262830 00000024 */ static void __static_initialization_and_destruction_0(/* a0 4 */ int __initialize_p, /* a1 5 */ int __priority) {
 	/* v0 2 */ SIS_ANI_TBL **ra;
 }
 
-/* 0034f3c0 0000003c */ type_info& float [3] type_info function() {}
-/* 0034f3c0 0000003c */ type_info& ENE_WRK type_info function() {}
-/* 0034f3c0 0000004c */ type_info& SIS_ANI_TBL * type_info function() {}
+/* ffffffff 0000003c */ type_info& float [3] type_info function() {}
+/* ffffffff 0000003c */ type_info& ENE_WRK type_info function() {}
+/* ffffffff 0000004c */ type_info& SIS_ANI_TBL * type_info function() {}
 /* 0034f3c0 0000003c */ type_info& SIS_ANI_TBL type_info function() {}
 /* 00262858 00000020 */ static void global constructors keyed to sis_trace() {}
 
@@ -29507,7 +29994,7 @@
 	/* s0 16 */ int i;
 	/* a3 7 */ int j;
 	/* a2 6 */ int k;
-	/* -0x2f0(sp) */ int score[176];
+	/* 0x0(sp) */ int score[176];
 }
 
 /* 00262f38 000000c0 */ int GetSoulListAccomplishmentRate() {
@@ -29516,17 +30003,24 @@
 }
 
 /* 00262ff8 00000024 */ int CheckEnhancingSoulListCondition() {}
-/* 00263020 000000c4 */ static void SetPlyrSoulListState(/* s0 16 */ int ghost_list_label, /* s1 17 */ char set_state) {}
-/* 002630e8 000000d4 */ static void SetPlyrSoulListMaxScore(/* s1 17 */ int ghost_list_label, /* s0 16 */ int set_score) {}
+
+/* 00263020 000000c4 */ static void SetPlyrSoulListState(/* s0 16 */ int ghost_list_label, /* s1 17 */ char set_state) {
+	/* rdata 3c7ac8 */ static char __FUNCTION__[21];
+}
+
+/* 002630e8 000000d4 */ static void SetPlyrSoulListMaxScore(/* s1 17 */ int ghost_list_label, /* s0 16 */ int set_score) {
+	/* rdata 3c7b40 */ static char __FUNCTION__[24];
+}
+
 /* 002631c0 00000040 */ void SetSave_PlyrSoulList(/* s0 16 */ MC_SAVE_DATA *data) {}
 
 /* 00263200 00000060 */ void DebugGetAllSoulList() {
 	/* s0 16 */ int i;
 }
 
-/* 0034fe60 00000054 */ PLYR_SOUL_LIST* PLYR_SOUL_LIST * _fixed_array_verifyrange<PLYR_SOUL_LIST>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ PLYR_SOUL_LIST* PLYR_SOUL_LIST * _fixed_array_verifyrange<PLYR_SOUL_LIST>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
 /* 00263260 00000008 */ static void __static_initialization_and_destruction_0(/* a0 4 */ int __initialize_p, /* a1 5 */ int __priority) {}
-/* 0034fe60 0000003c */ type_info& PLYR_SOUL_LIST type_info function() {}
+/* ffffffff 0000003c */ type_info& PLYR_SOUL_LIST type_info function() {}
 /* 00263268 00000020 */ static void global constructors keyed to PlyrSoulListInit() {}
 
 // *****************************************************************************
@@ -29563,14 +30057,14 @@
 
 /* 002635b0 00000168 */ void CSPChance::Draw(/* s4 20 */ CSPChance *this, /* a1 5 */ int fndr_mx, /* a2 6 */ int fndr_my, /* s0 16 */ int iAlpha) {
 	/* s5 21 */ int iDispAlpha;
-	/* -0xe0(sp) */ DISP_SPRT ds;
+	/* 0x0(sp) */ DISP_SPRT ds;
 }
 
-/* 0034fe60 0000006c */ void CBlinkSwitchVariable<short, 0, 128, 1, 0>::Work(/* a0 4 */ CBlinkSwitchVariable<short int,0,128,1,0> *this) {
+/* ffffffff 0000006c */ void CBlinkSwitchVariable<short, 0, 128, 1, 0>::Work(/* a0 4 */ CBlinkSwitchVariable<short int,0,128,1,0> *this) {
 	/* v1 3 */ int iValue;
 }
 
-/* 0034fe60 00000038 */ void CWrkVariable<short, 0, 128>::Work(/* a0 4 */ CWrkVariable<short int,0,128> *this) {
+/* ffffffff 00000038 */ void CWrkVariable<short, 0, 128>::Work(/* a0 4 */ CWrkVariable<short int,0,128> *this) {
 	/* a1 5 */ int iVal;
 }
 
@@ -29593,15 +30087,15 @@
 
 /* 00263850 00000424 */ void CSpiritGage::Draw(/* a0 4 */ CSpiritGage *this, /* s0 16 */ int fndr_mx, /* s2 18 */ int fndr_my, /* a3 7 */ int iMasterAlpha, /* f23 61 */ float fScale) {
 	/* s4 20 */ int iAlpha;
-	/* -0xa0(sp) */ int iDivNum;
-	/* -0x9c(sp) */ int iRot;
-	/* -0x140(sp) */ DISP_SPRT ds;
+	/* 0xa0(sp) */ int iDivNum;
+	/* 0xa4(sp) */ int iRot;
+	/* 0x0(sp) */ DISP_SPRT ds;
 	/* s7 23 */ int r;
 	/* fp 30 */ int g;
 	/* s1 17 */ int b;
 	/* data 34fe60 */ static float ShutterChanceRgb[4];
 	/* data 34fe70 */ static float NormalRgb[4];
-	/* -0xb0(sp) */ float Rgb[4];
+	/* 0x90(sp) */ float Rgb[4];
 	/* s0 16 */ int i;
 }
 
@@ -29676,7 +30170,7 @@
 }
 
 /* 002641d8 00000058 */ static void SubTitleUpdateStreamPosition(/* s0 16 */ int StreamId, /* a1 5 */ int ObjType, /* v1 3 */ int ObjId) {
-	/* -0x20(sp) */ float TmpPos[4];
+	/* 0x0(sp) */ float TmpPos[4];
 }
 
 /* 00264230 00000184 */ void SubTitleMain(/* s3 19 */ int DrawFlg) {
@@ -29693,11 +30187,11 @@
 /* 002644f8 00000028 */ void SubTitleReq(/* a0 4 */ int SubTitleNo) {}
 
 /* 00264520 00000030 */ void SubTitleReq3D(/* a0 4 */ int SubTitleNo, /* a1 5 */ float *Position) {
-	/* -0x20(sp) */ float TmpPos[4];
+	/* 0x0(sp) */ float TmpPos[4];
 }
 
 /* 00264550 00000064 */ void SubTitleReq3DObj(/* s2 18 */ int SubTitleNo, /* s0 16 */ int ObjType, /* s1 17 */ int ObjId) {
-	/* -0x30(sp) */ float TmpPos[4];
+	/* 0x0(sp) */ float TmpPos[4];
 }
 
 /* 002645b8 00000024 */ void SubTitleReqAutoEnemy(/* a0 4 */ int SubTitleNo, /* a1 5 */ int StreamId) {}
@@ -29734,7 +30228,7 @@
 /* 002647c8 00000020 */ int GetVifEndTimer(/* a0 4 */ int ch) {}
 
 /* 002647e8 00000050 */ static void _InitException() {
-	/* -0x20(sp) */ IOPEXCEPTIONCREATIONDATA iopeCD;
+	/* 0x0(sp) */ IOPEXCEPTIONCREATIONDATA iopeCD;
 }
 
 /* 00264838 000001b4 */ void InitSystemON() {}
@@ -29743,7 +30237,7 @@
 /* 00264a60 000000a8 */ static void InitGraphics() {}
 
 /* 00264b08 00000034 */ static void InitVBlank() {
-	/* -0x30(sp) */ SemaParam semap;
+	/* 0x0(sp) */ SemaParam semap;
 }
 
 /* 00264b40 000000d0 */ void ChangeVideoMode(/* a0 4 */ u_char mode) {
@@ -29807,6 +30301,7 @@
 /* 002654d8 0000004c */ static void GetSystemDataSaveDataMem(/* s0 16 */ void **tex_addr, /* s1 17 */ int size) {}
 
 /* 00265528 00000128 */ int SystemDataSaveMain() {
+	/* rdata 3e60f8 */ static char __FUNCTION__[19];
 	/* s1 17 */ int res;
 }
 
@@ -29814,10 +30309,12 @@
 	/* rdata 3e6110 */ static char __FUNCTION__[21];
 }
 
-/* 002656e0 000001a4 */ static void SystemDataSaveMcMain() {}
+/* 002656e0 000001a4 */ static void SystemDataSaveMcMain() {
+	/* rdata 3e6128 */ static char __FUNCTION__[21];
+}
 
 /* 00265888 00000048 */ static void SystemDataSaveMcCheckInit() {
-	/* -0x50(sp) */ char path_name[55];
+	/* 0x0(sp) */ char path_name[55];
 }
 
 /* 002658d0 00000168 */ static void SystemDataSaveMcCheckWait() {
@@ -29830,16 +30327,18 @@
 
 /* 00265bc0 00000094 */ static void SystemDataSaveMcLoadInit() {
 	/* s0 16 */ int size;
+	/* 0x0(sp) */ char path_name[55];
 }
 
 /* 00265c58 00000170 */ static void SystemDataSaveMcLoadWait() {
 	/* s1 17 */ int mc_res;
 	/* s0 16 */ int size;
-	/* -0x80(sp) */ CLEAR_FLG_CTRL buff_flg_ctrl;
+	/* 0x0(sp) */ CLEAR_FLG_CTRL buff_flg_ctrl;
 }
 
 /* 00265dc8 000000ac */ static void SystemDataSaveMcSaveInit() {
 	/* s0 16 */ int size;
+	/* 0x0(sp) */ char path_name[55];
 }
 
 /* 00265e78 00000060 */ static void SystemDataSaveMcSaveWait() {
@@ -29987,15 +30486,15 @@
 /* 002672a8 00000190 */ u_int Tim2GetTexel(/* s3 19 */ TIM2_PICTUREHEADER *ph, /* s1 17 */ int mipmap, /* s2 18 */ int x, /* s4 20 */ int y) {
 	/* s0 16 */ unsigned char *pImage;
 	/* a3 7 */ int t;
-	/* -0x40(sp) */ int w;
-	/* -0x3c(sp) */ int h;
+	/* 0x0(sp) */ int w;
+	/* 0x4(sp) */ int h;
 }
 
 /* 00267438 0000020c */ u_int Tim2SetTexel(/* s4 20 */ TIM2_PICTUREHEADER *ph, /* s2 18 */ int mipmap, /* s3 19 */ int x, /* s5 21 */ int y, /* s1 17 */ u_int newtexel) {
 	/* s0 16 */ unsigned char *pImage;
 	/* a3 7 */ int t;
-	/* -0x50(sp) */ int w;
-	/* -0x4c(sp) */ int h;
+	/* 0x0(sp) */ int w;
+	/* 0x4(sp) */ int h;
 	/* a1 5 */ u_int oldtexel;
 }
 
@@ -30021,7 +30520,7 @@
 
 /* 00267af8 00000358 */ u_int Tim2LoadClut2(/* s0 16 */ TIM2_PICTUREHEADER *ph, /* t1 9 */ u_int cbp, /* t0 8 */ u_int offset) {
 	/* s2 18 */ int i;
-	/* -0xa0(sp) */ void li;
+	/* 0x0(sp) */ void li;
 	/* s1 17 */ u_long128 *pClut;
 	/* t2 10 */ int cpsm;
 }
@@ -30029,7 +30528,7 @@
 /* 00267e50 00000018 */ u_int Tim2LoadClut(/* a0 4 */ TIM2_PICTUREHEADER *ph, /* a1 5 */ u_int cbp) {}
 
 /* 00267e68 00000194 */ void Tim2LoadTexture(/* s5 21 */ int psm, /* fp 30 */ u_int tbp, /* s7 23 */ int tbw, /* s0 16 */ int w, /* s4 20 */ int h, /* s6 22 */ u_long128 *pImage) {
-	/* -0xc0(sp) */ void li;
+	/* 0x0(sp) */ void li;
 	/* s2 18 */ int i;
 	/* s1 17 */ int l;
 	/* s3 19 */ int n;
@@ -30042,7 +30541,7 @@
 
 /* 002680a8 00000098 */ u_long GetTex0RegTM(/* a0 4 */ u_int addr, /* s0 16 */ u_int offset) {
 	/* v0 2 */ u_long ret;
-	/* -0x20(sp) */ sceGsTex0 tex0;
+	/* 0x0(sp) */ sceGsTex0 tex0;
 	/* v1 3 */ TIM2_PICTUREHEADER *ph;
 }
 
@@ -30054,16 +30553,17 @@
 	/* s1 17 */ u_int tbp0;
 	/* s2 18 */ u_int tbw;
 	/* s5 21 */ u_int nloop;
-	/* -0x50(sp) */ sceGsTex0 sgtx0;
+	/* 0x0(sp) */ sceGsTex0 sgtx0;
 	/* v0 2 */ Q_WORDDATA *pbuf;
 }
 
 /* 002682f8 000001b4 */ void MakeClutDirect(/* a0 4 */ u_int *tim2_addr, /* a3 7 */ int cbp, /* a2 6 */ int offset) {
+	/* rdata 3e66b8 */ static char __FUNCTION__[15];
 	/* s0 16 */ TIM2_PICTUREHEADER *tph;
 	/* s2 18 */ u_int *img_addr;
 	/* s3 19 */ u_int nloop;
 	/* s1 17 */ u_int cbp0;
-	/* -0x40(sp) */ sceGsTex0 sgtx0;
+	/* 0x0(sp) */ sceGsTex0 sgtx0;
 	/* t4 12 */ Q_WORDDATA *pbuf;
 	/* t2 10 */ int n;
 }
@@ -30074,7 +30574,7 @@
 	/* s2 18 */ u_int *img_addr;
 	/* s3 19 */ u_int nloop;
 	/* s0 16 */ u_int cbp0;
-	/* -0x40(sp) */ sceGsTex0 sgtx0;
+	/* 0x0(sp) */ sceGsTex0 sgtx0;
 	/* t4 12 */ Q_WORDDATA *pbuf;
 	/* t2 10 */ int n;
 }
@@ -30193,20 +30693,20 @@
 // *****************************************************************************
 
 /* 002698b8 000000a0 */ void DispTitleCursorL(/* f20 58 */ float x, /* f21 59 */ float y, /* a0 4 */ u_char alpha, /* a1 5 */ u_char rgb) {
-	/* -0xc0(sp) */ DISP_SPRT ds;
+	/* 0x0(sp) */ DISP_SPRT ds;
 }
 
 /* 00269958 000000a0 */ void DispTitleCursorR(/* f20 58 */ float x, /* f21 59 */ float y, /* a0 4 */ u_char alpha, /* a1 5 */ u_char rgb) {
-	/* -0xc0(sp) */ DISP_SPRT ds;
+	/* 0x0(sp) */ DISP_SPRT ds;
 }
 
 /* 002699f8 000001e8 */ void DispTitleZeroLogo(/* s0 16 */ int off_x, /* s1 17 */ int off_y, /* s2 18 */ u_char alpha) {
-	/* -0xc0(sp) */ DISP_SPRT ds;
+	/* 0x0(sp) */ DISP_SPRT ds;
 	/* s1 17 */ int i;
 }
 
 /* 00269be0 000000f0 */ void DispTitleTecmoLogo(/* s0 16 */ int off_x, /* s1 17 */ int off_y, /* a2 6 */ u_char alpha) {
-	/* -0xc0(sp) */ DISP_SPRT ds;
+	/* 0x0(sp) */ DISP_SPRT ds;
 }
 
 /* 00269cd0 00000300 */ void DispTitleBack(/* s7 23 */ int *timer, /* fp 30 */ void *tex_addr) {
@@ -30232,35 +30732,35 @@
 }
 
 /* 00269fd0 00000064 */ static void DispTitleBlackBg(/* a0 4 */ int off_x, /* a1 5 */ int off_y, /* a2 6 */ u_char alpha) {
-	/* -0xb0(sp) */ DISP_SQAR dsq;
-	/* -0x30(sp) */ SQAR_DAT title_bg;
+	/* 0x0(sp) */ DISP_SQAR dsq;
+	/* 0x80(sp) */ SQAR_DAT title_bg;
 }
 
 /* 0026a038 00000108 */ static void DispTitleBgPattern1(/* f21 59 */ float off_x, /* f13 51 */ float off_y, /* s1 17 */ u_char alpha) {
-	/* -0xd0(sp) */ DISP_SPRT ds;
+	/* 0x0(sp) */ DISP_SPRT ds;
 	/* s0 16 */ int i;
 }
 
 /* 0026a140 0000013c */ static void DispTitleBgPattern2(/* f21 59 */ float off_x, /* f13 51 */ float off_y, /* s1 17 */ u_char alpha) {
-	/* -0xd0(sp) */ DISP_SPRT ds;
+	/* 0x0(sp) */ DISP_SPRT ds;
 	/* s0 16 */ int i;
 }
 
 /* 0026a280 0000010c */ static void DispTitleBgCloud1(/* f21 59 */ float off_x, /* f20 58 */ float off_y, /* s0 16 */ u_char alpha) {
-	/* -0xb0(sp) */ DISP_SPRT ds;
+	/* 0x0(sp) */ DISP_SPRT ds;
 }
 
 /* 0026a390 000000f8 */ static void DispTitleBgCloud2(/* f20 58 */ float off_x, /* f13 51 */ float off_y, /* s0 16 */ u_char alpha) {
-	/* -0xb0(sp) */ DISP_SPRT ds;
+	/* 0x0(sp) */ DISP_SPRT ds;
 }
 
 /* 0026a488 00000134 */ static void DispTitleBgShadeingOffFlea2(/* f21 59 */ float off_x, /* f13 51 */ float off_y, /* s1 17 */ u_char alpha) {
-	/* -0xd0(sp) */ DISP_SPRT ds;
+	/* 0x0(sp) */ DISP_SPRT ds;
 	/* s0 16 */ int i;
 }
 
 /* 0026a5c0 00000134 */ static void DispTitleBgShadeingOffFlea1(/* f21 59 */ float off_x, /* f13 51 */ float off_y, /* s1 17 */ u_char alpha) {
-	/* -0xd0(sp) */ DISP_SPRT ds;
+	/* 0x0(sp) */ DISP_SPRT ds;
 	/* s0 16 */ int i;
 }
 
@@ -30288,7 +30788,7 @@
 /* 0026ac10 00000088 */ void TitleMenuDispMain(/* s2 18 */ int off_x, /* s1 17 */ int off_y, /* a2 6 */ u_char alpha) {}
 
 /* 0026ac98 00000140 */ static void DispTitleMenuItem(/* a0 4 */ int off_x, /* a1 5 */ int off_y, /* a2 6 */ u_char alpha) {
-	/* -0xe0(sp) */ DISP_SPRT ds;
+	/* 0x0(sp) */ DISP_SPRT ds;
 	/* s0 16 */ int i;
 	/* rdata 3e6bb0 */ static int title_tbl[8][2];
 }
@@ -30317,7 +30817,7 @@
 /* 0026b0d8 0000000c */ void UnlockMoveTitleMovie() {}
 
 /* 0026b0e8 000000c4 */ void init_Title_Movie_Mode() {
-	/* -0x30(sp) */ int play_demo_movie[3];
+	/* 0x0(sp) */ int play_demo_movie[3];
 }
 
 /* 0026b1b0 00000044 */ GPHASE_ENUM one_Title_Movie_Mode(/* a0 4 */ GPHASE_ENUM dummy) {}
@@ -30339,7 +30839,7 @@
 /* 0026b380 00000060 */ void TitleTopDispMain(/* s1 17 */ int off_x, /* s2 18 */ int off_y, /* a2 6 */ u_char alpha) {}
 
 /* 0026b3e0 00000064 */ static void TitleTopPressStartDisp(/* a0 4 */ u_char rgb) {
-	/* -0xa0(sp) */ DISP_SPRT ds;
+	/* 0x0(sp) */ DISP_SPRT ds;
 }
 
 // *****************************************************************************
@@ -30356,15 +30856,15 @@
 /* 0026b520 0000004c */ void RotLimitChk(/* a0 4 */ float *rot) {}
 
 /* 0026b570 000000bc */ void GetTrgtRotFromPlyr(/* s1 17 */ float *p, /* s2 18 */ float *rot, /* s3 19 */ int id) {
-	/* -0x40(sp) */ float dist[4];
+	/* 0x0(sp) */ float dist[4];
 }
 
 /* 0026b630 000000b4 */ void GetTrgtRot(/* s0 16 */ float *p0, /* s1 17 */ float *p1, /* s2 18 */ float *rot, /* s3 19 */ int id) {
-	/* -0x40(sp) */ float dist[4];
+	/* 0x0(sp) */ float dist[4];
 }
 
 /* 0026b6e8 0000002c */ float GetTrgtRotY(/* a0 4 */ float *p0, /* a1 5 */ float *p1) {}
-/* 0026b718 00000058 */ int RotRngChk(/* a0 4 */ float *vp, /* a1 5 */ float *tp, /* -0x20(sp) */ float rot, /* f20 58 */ float rng) {}
+/* 0026b718 00000058 */ int RotRngChk(/* a0 4 */ float *vp, /* a1 5 */ float *tp, /* 0x0(sp) */ float rot, /* f20 58 */ float rng) {}
 
 /* 0026b770 000000a0 */ u_char OutSightChk(/* s2 18 */ float *tp, /* s0 16 */ float *vp, /* f21 59 */ float rot, /* f22 60 */ float sight, /* f20 58 */ float dist) {
 	/* s1 17 */ u_char chk;
@@ -30383,7 +30883,7 @@
 	/* v1 3 */ u_char i;
 }
 
-/* 0035e980 00000054 */ ENE_WRK* ENE_WRK * _fixed_array_verifyrange<ENE_WRK>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
+/* ffffffff 00000054 */ ENE_WRK* ENE_WRK * _fixed_array_verifyrange<ENE_WRK>(/* s1 17 */ size_t v, /* s0 16 */ size_t _max) {}
 /* 0035e980 0000003c */ type_info& ENE_WRK type_info function() {}
 
 // *****************************************************************************
@@ -30393,23 +30893,23 @@
 /* 0026bc08 00000018 */ void GetSquare(/* a0 4 */ float *v0[4], /* a1 5 */ float *v1[4]) {}
 
 /* 0026bc20 00000068 */ float GetDist(/* f12 50 */ float x, /* f13 51 */ float z) {
-	/* -0x30(sp) */ float v0[4];
-	/* -0x20(sp) */ float v1[4];
+	/* 0x0(sp) */ float v0[4];
+	/* 0x10(sp) */ float v1[4];
 }
 
 /* 0026bc88 00000088 */ float GetDistV(/* v1 3 */ float *p0, /* v0 2 */ float *p1) {
-	/* -0x30(sp) */ float v0[4];
-	/* -0x20(sp) */ float v1[4];
+	/* 0x0(sp) */ float v0[4];
+	/* 0x10(sp) */ float v1[4];
 }
 
-/* 0026bd10 000000ec */ float GetDistV2(/* s1 17 */ float *p1) {
-	/* -0x40(sp) */ float v0[4];
-	/* -0x30(sp) */ float v1[4];
+/* 0026bd10 000000ec */ float GetDistV2(/* s0 16 */ float *p0, /* s1 17 */ float *p1) {
+	/* 0x0(sp) */ float v0[4];
+	/* 0x10(sp) */ float v1[4];
 }
 
 /* 0026be00 000000d8 */ void RotFvector(/* s2 18 */ float *rot, /* s1 17 */ float *tv) {
-	/* -0xb0(sp) */ sceVu0FMATRIX work;
-	/* -0x70(sp) */ sceVu0FMATRIX rot_matrix;
+	/* 0x0(sp) */ sceVu0FMATRIX work;
+	/* 0x40(sp) */ sceVu0FMATRIX rot_matrix;
 }
 
 /* 0026bed8 00000074 */ float CombRotate(/* f12 50 */ float rot) {}
@@ -30420,9 +30920,9 @@
 /* 0026c140 00000058 */ int LineStraddle(/* s2 18 */ LINE_T *e, /* a1 5 */ POINT_T *a, /* s1 17 */ POINT_T *b) {}
 
 /* 0026c198 00000094 */ int LineSide(/* a0 4 */ POINT_T *p, /* a1 5 */ LINE_T *e) {
-	/* -0x30(sp) */ POINT_T p1;
-	/* -0x20(sp) */ POINT_T p2;
-	/* -0x10(sp) */ POINT_T p3;
+	/* 0x0(sp) */ POINT_T p1;
+	/* 0x10(sp) */ POINT_T p2;
+	/* 0x20(sp) */ POINT_T p3;
 	/* f1 39 */ float n;
 }
 
@@ -30452,8 +30952,8 @@
 /* 0026c5d0 00000158 */ void PrintMATRIX(/* s0 16 */ float *m[4]) {}
 
 /* 0026c728 00000130 */ int sceFprintf(/* s2 18 */ int fd, /* a1 5 */ char *str) {
-	/* -0x10080(sp) */ va_list ap;
-	/* -0x10070(sp) */ char buf[65536];
+	/* 0x0(sp) */ va_list ap;
+	/* 0x10(sp) */ char buf[65536];
 	/* s0 16 */ int count;
 }
 
@@ -30510,17 +31010,17 @@
 /* 0026cbe8 00000008 */ void SetPrintAssert(/* a0 4 */ void (*func)(/* parameters unknown */)) {}
 
 /* 0026cbf0 000000b0 */ void PrintWarningReal(/* a0 4 */ char *str) {
-	/* -0x470(sp) */ va_list ap;
-	/* -0x460(sp) */ char buf[1000];
+	/* 0x0(sp) */ va_list ap;
+	/* 0x10(sp) */ char buf[1000];
 }
 
 /* 0026cca0 00000070 */ void SetAssertPreMessage(/* v0 2 */ char *cComment) {
-	/* -0x80(sp) */ va_list ap;
+	/* 0x0(sp) */ va_list ap;
 }
 
 /* 0026cd10 000000e4 */ void PrintAssertReal(/* s0 16 */ char *str) {
-	/* -0x860(sp) */ va_list ap;
-	/* -0x850(sp) */ char buf[2000];
+	/* 0x0(sp) */ va_list ap;
+	/* 0x10(sp) */ char buf[2000];
 }
 
 /* 0026cdf8 00000058 */ char* StrToLower(/* a2 6 */ char *str) {
@@ -30552,8 +31052,8 @@
 /* 0026d010 000002bc */ u_char Zero2Anim2D_InOutAnimCtrl(/* s1 17 */ char *anim_step, /* s0 16 */ char *anim_timer, /* s3 19 */ short int in_anim_time, /* s2 18 */ short int out_anim_time) {
 	/* rdata 3e6d98 */ static char __FUNCTION__[26];
 	/* s5 21 */ u_char alpha;
-	/* -0x60(sp) */ ALPHA_ANIM_TBL in_alpha_tbl[2];
-	/* -0x50(sp) */ ALPHA_ANIM_TBL out_alpha_tbl[2];
+	/* 0x0(sp) */ ALPHA_ANIM_TBL in_alpha_tbl[2];
+	/* 0x10(sp) */ ALPHA_ANIM_TBL out_alpha_tbl[2];
 }
 
 /* 0026d2d0 00000060 */ void Zero2Anim2D_CsrAnimCtrl(/* s1 17 */ char *timer, /* s0 16 */ u_char *rgb) {
@@ -30565,12 +31065,12 @@
 }
 
 /* 0026d380 0000008c */ u_char Zero2Anim2D_FadeInAnimCtrl(/* s0 16 */ int *timer, /* a1 5 */ short int fade_in_time) {
-	/* -0x20(sp) */ ALPHA_ANIM_TBL fade_in_tbl[2];
+	/* 0x0(sp) */ ALPHA_ANIM_TBL fade_in_tbl[2];
 	/* v0 2 */ u_char alpha;
 }
 
-/* 0026d410 0000008c */ u_char Zero2Anim2D_FadeOutAnimCtrl(/* a1 5 */ short int fade_out_time) {
-	/* -0x20(sp) */ ALPHA_ANIM_TBL fade_out_tbl[2];
+/* 0026d410 0000008c */ u_char Zero2Anim2D_FadeOutAnimCtrl(/* s0 16 */ int *timer, /* a1 5 */ short int fade_out_time) {
+	/* 0x0(sp) */ ALPHA_ANIM_TBL fade_out_tbl[2];
 	/* v0 2 */ u_char alpha;
 }
 
@@ -30622,9 +31122,9 @@
 
 /* 0026db90 00000130 */ float CalcAngle__FPCfN208_PLANE3D(/* s0 16 */ float *vDirectionAxis, /* s1 17 */ float *vDirection, /* s3 19 */ float *vTop, /* s2 18 */ PLANE3D plane_3d) {
 	/* rdata 3e70c8 */ static char __FUNCTION__[10];
-	/* -0x60(sp) */ float vDirectionAxisIn[4];
-	/* -0x50(sp) */ float vDirectionIn[4];
-	/* -0x40(sp) */ float vRightVec[4];
+	/* 0x0(sp) */ float vDirectionAxisIn[4];
+	/* 0x10(sp) */ float vDirectionIn[4];
+	/* 0x20(sp) */ float vRightVec[4];
 	/* f2 40 */ float fRot;
 }
 
@@ -30671,7 +31171,7 @@
 
 /* 0026e3b0 000000c0 */ FILE_LOAD_ENUM FileLoadCancelAll() {}
 /* 0026e470 00000010 */ static int cmpFileWrkPri(/* a0 4 */ void *a, /* a1 5 */ void *b) {}
-/* 0026e480 00000010 */ static int cmpFileWrkSector(/* a1 5 */ void *b) {}
+/* 0026e480 00000010 */ static int cmpFileWrkSector(/* a0 4 */ void *a, /* a1 5 */ void *b) {}
 
 /* 0026e490 00000098 */ int FileLoadIsEnd2(/* s2 18 */ int file_no, /* s1 17 */ void *adrs) {
 	/* s0 16 */ int ret;
@@ -30691,7 +31191,7 @@
 	/* s1 17 */ int size;
 }
 
-/* 0026e650 00000218 */ void* FileLoadInit(/* s2 18 */ void *wrk_buffer) {
+/* 0026e650 00000218 */ void* FileLoadInit(/* s3 19 */ EEIOP_DEF *def, /* s2 18 */ void *wrk_buffer) {
 	/* a0 4 */ int i;
 	/* v0 2 */ int i;
 }
@@ -30708,6 +31208,7 @@
 
 /* 0026eba8 0000033c */ static int FileLoadReq(/* s2 18 */ int file_no, /* s3 19 */ char *adrs, /* s7 23 */ int priority, /* s4 20 */ void (*func)(/* parameters unknown */), /* s5 21 */ void *arg, /* s6 22 */ FILE_LOAD_TYPE type) {
 	/* s0 16 */ int ret;
+	/* s1 17 */ FILE_LOAD_WRK *wrk;
 	/* s0 16 */ FILE_LOAD_WRK *now_load_wrk;
 }
 
@@ -30715,17 +31216,18 @@
 
 /* 0026ef10 000002d4 */ static void thFileLoad(/* a0 4 */ void *dummy) {
 	/* a3 7 */ FILE_LOAD_RET *ret;
+	/* s1 17 */ FILE_LOAD_WRK *wrk;
 	/* s2 18 */ int end_flg;
 	/* s1 17 */ int i;
 	/* v1 3 */ int part_sort_start;
 	/* s0 16 */ int priority;
-	/* -0x180(sp) */ char aStr[300];
+	/* 0x0(sp) */ char aStr[300];
 }
 
 /* 0026f1e8 00000058 */ void FileLoadChangeThreadPriority(/* s0 16 */ int load_th_priority, /* s2 18 */ int decode_th_priority) {}
 
 /* 0026f240 00000128 */ static void SwapFileLoadWrk(/* a0 4 */ int one, /* a1 5 */ int two) {
-	/* -0x30(sp) */ FILE_LOAD_WRK temp;
+	/* 0x0(sp) */ FILE_LOAD_WRK temp;
 }
 
 // *****************************************************************************
@@ -30790,7 +31292,7 @@
 	/* s0 16 */ int ret;
 }
 
-/* 0026f978 00000188 */ void DrawSPUMemory(/* -0x60(sp) */ void (*draw_rect_func)(/* parameters unknown */), /* s5 21 */ void (*draw_line_func)(/* parameters unknown */), /* s2 18 */ int xx, /* fp 30 */ int yy, /* s7 23 */ int ww, /* s6 22 */ int hh) {
+/* 0026f978 00000188 */ void DrawSPUMemory(/* 0x0(sp) */ void (*draw_rect_func)(/* parameters unknown */), /* s5 21 */ void (*draw_line_func)(/* parameters unknown */), /* s2 18 */ int xx, /* fp 30 */ int yy, /* s7 23 */ int ww, /* s6 22 */ int hh) {
 	/* s4 20 */ SPU_BUF *wrk;
 	/* s1 17 */ int now_y;
 	/* s0 16 */ int gage;
@@ -30816,34 +31318,36 @@
 
 /* 0026fca0 00000090 */ void SndBufAllPause() {
 	/* s1 17 */ int i;
-	/* -0x40(sp) */ SOUND_BUF_PAUSE pause;
+	/* 0x0(sp) */ SOUND_BUF_PAUSE pause;
 }
 
 /* 0026fd30 00000090 */ void SndBufAllRestart() {
 	/* s1 17 */ int i;
-	/* -0x40(sp) */ SOUND_BUF_RESTART restart;
+	/* 0x0(sp) */ SOUND_BUF_RESTART restart;
 }
 
 /* 0026fdc0 00000060 */ static SND_BUF_PLAYER* GetSndBufPlayerFromID(/* a0 4 */ int id) {
 	/* v1 3 */ int wrk_id;
 	/* a2 6 */ int play_id;
+	/* a1 5 */ SND_BUF_PLAYER *sbp;
 }
 
 /* 0026fe20 00000010 */ static int SndBufGetID(/* a0 4 */ int wrk_no, /* a1 5 */ int play_id) {}
 
-/* 0026fe30 00000310 */ int SndBufPlay(/* -0x60(sp) */ int adrs, /* s2 18 */ int core, /* -0x5c(sp) */ int effect, /* s1 17 */ int vol, /* -0x58(sp) */ int bvol, /* s4 20 */ int pitch, /* -0x54(sp) */ int bpitch, /* s7 23 */ int pan, /* 0x0(sp) */ int fade_time, /* 0x8(sp) */ int loop, /* 0x10(sp) */ int type, /* 0x18(sp) */ void *s3d, /* 0x20(sp) */ int s3d_free, /* 0x28(sp) */ int adsr1, /* 0x30(sp) */ int adsr2, /* 0x38(sp) */ int loopstart, /* 0x40(sp) */ int loopend) {
-	/* 0x0(sp) */ int fade_time;
-	/* 0x8(sp) */ int loop;
-	/* 0x10(sp) */ int type;
+/* 0026fe30 00000310 */ int SndBufPlay(/* 0x20(sp) */ int adrs, /* s2 18 */ int core, /* 0x24(sp) */ int effect, /* s1 17 */ int vol, /* 0x28(sp) */ int bvol, /* s4 20 */ int pitch, /* 0x2c(sp) */ int bpitch, /* s7 23 */ int pan, /* 0x80(sp) */ int fade_time, /* 0x88(sp) */ int loop, /* 0x90(sp) */ int type, /* 0x98(sp) */ void *s3d, /* 0xa0(sp) */ int s3d_free, /* 0xa8(sp) */ int adsr1, /* 0xb0(sp) */ int adsr2, /* 0xb8(sp) */ int loopstart, /* 0xc0(sp) */ int loopend) {
+	/* 0x80(sp) */ int fade_time;
+	/* 0x88(sp) */ int loop;
+	/* 0x90(sp) */ int type;
 	/* s6 22 */ void *s3d;
 	/* a1 5 */ int s3d_free;
 	/* s5 21 */ short int adsr1;
 	/* fp 30 */ short int adsr2;
-	/* 0x38(sp) */ int loopstart;
+	/* 0xb8(sp) */ int loopstart;
 	/* v0 2 */ int loopend;
+	/* s0 16 */ SND_BUF_PLAYER *sbp;
 	/* s3 19 */ int wrk_no;
 	/* a0 4 */ int voice_no;
-	/* -0x70(sp) */ VOICE_LOOP_SET slp;
+	/* 0x10(sp) */ VOICE_LOOP_SET slp;
 }
 
 /* 00270140 000000f8 */ void SndBufferPrintStatus() {
@@ -30852,39 +31356,60 @@
 
 /* 00270238 000002a4 */ void SndBufPlayMain() {
 	/* s1 17 */ int i;
-	/* -0x60(sp) */ short int pitch;
-	/* -0x70(sp) */ VOLSET volset;
+	/* 0x20(sp) */ short int pitch;
+	/* 0x10(sp) */ VOLSET volset;
+	/* s0 16 */ SND_BUF_PLAYER *sbp;
 	/* a0 4 */ int new_pitch;
 	/* a0 4 */ int new_vol;
-	/* -0x50(sp) */ SOUND_BUF_SETVOL set_vol;
-	/* -0x40(sp) */ SOUND_BUF_SETPITCH set_pitch;
+	/* 0x30(sp) */ SOUND_BUF_SETVOL set_vol;
+	/* 0x40(sp) */ SOUND_BUF_SETPITCH set_pitch;
 }
 
-/* 002704e0 00000058 */ static void SndBufStopSub() {
-	/* -0x20(sp) */ SOUND_BUF_STOP stop;
+/* 002704e0 00000058 */ static void SndBufStopSub(/* s0 16 */ SND_BUF_PLAYER *sbp) {
+	/* 0x0(sp) */ SOUND_BUF_STOP stop;
 }
 
-/* 00270538 00000044 */ static void SndBufStopSub2() {
-	/* -0x20(sp) */ VOICE_STOP stop2;
+/* 00270538 00000044 */ static void SndBufStopSub2(/* v1 3 */ SND_BUF_PLAYER *sbp) {
+	/* 0x0(sp) */ VOICE_STOP stop2;
 }
 
 /* 00270580 00000020 */ void SndBufStop(/* a0 4 */ int id) {}
 
 /* 002705a0 00000084 */ void SndBufPause(/* a0 4 */ int id) {
-	/* -0x30(sp) */ SOUND_BUF_PAUSE pause;
+	/* s0 16 */ SND_BUF_PLAYER *sbp;
+	/* 0x0(sp) */ SOUND_BUF_PAUSE pause;
 }
 
 /* 00270628 0000007c */ void SndBufRestart(/* a0 4 */ int id) {
-	/* -0x20(sp) */ SOUND_BUF_RESTART restart;
+	/* s0 16 */ SND_BUF_PLAYER *sbp;
+	/* 0x0(sp) */ SOUND_BUF_RESTART restart;
 }
 
-/* 002706a8 0000008c */ void SndBufVolFade(/* a0 4 */ int id, /* s0 16 */ int vol, /* s2 18 */ int frame) {}
-/* 00270738 0000006c */ void SndBufPitchSet(/* a0 4 */ int id, /* s0 16 */ int pitch) {}
-/* 002707a8 00000054 */ void SndBufFadeStop(/* a0 4 */ int id, /* s0 16 */ int time) {}
+/* 002706a8 0000008c */ void SndBufVolFade(/* a0 4 */ int id, /* s0 16 */ int vol, /* s2 18 */ int frame) {
+	/* s1 17 */ SND_BUF_PLAYER *sbp;
+}
+
+/* 00270738 0000006c */ void SndBufPitchSet(/* a0 4 */ int id, /* s0 16 */ int pitch) {
+	/* s1 17 */ SND_BUF_PLAYER *sbp;
+}
+
+/* 002707a8 00000054 */ void SndBufFadeStop(/* a0 4 */ int id, /* s0 16 */ int time) {
+	/* s1 17 */ SND_BUF_PLAYER *sbp;
+}
+
 /* 00270800 00000020 */ int SndBufIsPlaying(/* a0 4 */ int id) {}
-/* 00270820 00000054 */ void SndBufSetPosition(/* a0 4 */ int id, /* s0 16 */ float *pos) {}
-/* 00270878 00000068 */ void SndBufFadePitch(/* a0 4 */ int id, /* s1 17 */ int pitch, /* s2 18 */ int time) {}
-/* 002708e0 00000054 */ void SndBufSet3D(/* a0 4 */ int id, /* s0 16 */ SND_3D_SET *s3s) {}
+
+/* 00270820 00000054 */ void SndBufSetPosition(/* a0 4 */ int id, /* s0 16 */ float *pos) {
+	/* v0 2 */ SND_BUF_PLAYER *sbp;
+}
+
+/* 00270878 00000068 */ void SndBufFadePitch(/* a0 4 */ int id, /* s1 17 */ int pitch, /* s2 18 */ int time) {
+	/* s0 16 */ SND_BUF_PLAYER *sbp;
+}
+
+/* 002708e0 00000054 */ void SndBufSet3D(/* a0 4 */ int id, /* s0 16 */ SND_3D_SET *s3s) {
+	/* v0 2 */ SND_BUF_PLAYER *sbp;
+}
 
 // *****************************************************************************
 // FILE -- /home/akira_koide/zero2np/src/system/eeiop/ee_iop.c
@@ -30896,9 +31421,9 @@
 
 /* 00270ab8 00000020 */ void* ee_iopMalloc(/* a0 4 */ int size) {}
 /* 00270ad8 00000020 */ void ee_iopFree(/* a0 4 */ void *adrs) {}
-/* 00270af8 0000003c */ int ee_iopGetNeedSize() {}
+/* 00270af8 0000003c */ int ee_iopGetNeedSize(/* s0 16 */ EEIOP_DEF *def) {}
 
-/* 00270b38 000003cc */ int ee_iopInit() {
+/* 00270b38 000003cc */ int ee_iopInit(/* s4 20 */ EEIOP_DEF *def) {
 	/* s0 16 */ int size;
 	/* s3 19 */ HIL_FORMAT *hil;
 	/* v0 2 */ HIL_ONE_FORMAT *work;
@@ -30906,7 +31431,7 @@
 	/* s1 17 */ int i;
 	/* s1 17 */ int fd;
 	/* s2 18 */ void *buffer;
-	/* -0x50(sp) */ char temp[9];
+	/* 0x0(sp) */ char temp[9];
 }
 
 /* 00270f08 0000002c */ void WaitMainRpc() {}
@@ -30919,7 +31444,7 @@
 }
 
 /* 002710f8 00000028 */ void SetCDReadMode(/* a0 4 */ int mode) {
-	/* -0x20(sp) */ CD_READ_MODE_CHANGE crm;
+	/* 0x0(sp) */ CD_READ_MODE_CHANGE crm;
 }
 
 /* 00271120 00000020 */ int CheckEndPointThrough(/* a0 4 */ int core, /* a1 5 */ int voice_no) {}
@@ -30933,7 +31458,7 @@
 // *****************************************************************************
 
 /* 002711c0 000000c8 */ void ee_iopQueryInit() {
-	/* -0x40(sp) */ SemaParam semap;
+	/* 0x0(sp) */ SemaParam semap;
 	/* v0 2 */ int i;
 }
 
@@ -30954,7 +31479,7 @@
 }
 
 /* 00271518 00000010 */ static int cmpStreamQueue(/* a0 4 */ void *a, /* a1 5 */ void *b) {}
-/* 00271528 0000009c */ static int PopStreamWaitQueue() {}
+/* 00271528 0000009c */ static int PopStreamWaitQueue(/* a3 7 */ STREAM_QUEUE *play_q) {}
 
 /* 002715c8 000000f4 */ static int DeleteStreamWaitQueue(/* a0 4 */ int id) {
 	/* t0 8 */ int i;
@@ -30966,12 +31491,14 @@
 }
 
 /* 00271710 00000188 */ static void PlayQueueReturn(/* s1 17 */ int id, /* s4 20 */ int time) {
+	/* s0 16 */ STREAM_QUEUE *play_q;
 	/* s2 18 */ STREAM_QUEUE *queue;
 }
 
 /* 00271898 000000ec */ static void StreamAutoSet3DSub(/* s0 16 */ STREAM_QUEUE *queue, /* s1 17 */ SND_3D_SET *s3s) {}
 
-/* 00271988 00000280 */ static int StreamAutoNew(/* s5 21 */ int file_no, /* s1 17 */ int header_file_no, /* s3 19 */ int priority, /* s4 20 */ int effect, /* s2 18 */ int loop, /* s7 23 */ int vol, /* fp 30 */ int in_time, /* s6 22 */ int reset_in_time, /* 0x8(sp) */ int play_flg, /* 0x10(sp) */ int reset_flg, /* 0x18(sp) */ int offset) {
+/* 00271988 00000280 */ static int StreamAutoNew(/* s5 21 */ int file_no, /* s1 17 */ int header_file_no, /* s3 19 */ int priority, /* s4 20 */ int effect, /* s2 18 */ int loop, /* s7 23 */ int vol, /* fp 30 */ int in_time, /* s6 22 */ int reset_in_time, /* 0x50(sp) */ SND_3D_SET *s3s, /* 0x58(sp) */ int play_flg, /* 0x60(sp) */ int reset_flg, /* 0x68(sp) */ int offset) {
+	/* 0x50(sp) */ SND_3D_SET *s3s;
 	/* v0 2 */ int play_flg;
 	/* a0 4 */ int reset_flg;
 	/* v0 2 */ int offset;
@@ -30984,20 +31511,22 @@
 	/* a3 7 */ int least_priority_no;
 }
 
-/* 00271cc0 00000064 */ int StreamAutoPreload(/* a0 4 */ int file_no, /* a1 5 */ int header_file_no, /* s1 17 */ int priority, /* a3 7 */ int effect, /* t0 8 */ int loop, /* t1 9 */ int vol, /* t3 11 */ int in_time) {
+/* 00271cc0 00000064 */ int StreamAutoPreload(/* a0 4 */ int file_no, /* a1 5 */ int header_file_no, /* s1 17 */ int priority, /* a3 7 */ int effect, /* t0 8 */ int loop, /* t1 9 */ int vol, /* t3 11 */ int in_time, /* t4 12 */ SND_3D_SET *s3s) {
 	/* s0 16 */ int id;
 }
 
-/* 00271d28 00000064 */ int StreamAutoPlayNonReset(/* a0 4 */ int file_no, /* a1 5 */ int header_file_no, /* s1 17 */ int priority, /* a3 7 */ int effect, /* t0 8 */ int loop, /* t1 9 */ int vol, /* t2 10 */ int in_time, /* t3 11 */ int reset_in_time, /* 0x8(sp) */ int start_sector) {
+/* 00271d28 00000064 */ int StreamAutoPlayNonReset(/* a0 4 */ int file_no, /* a1 5 */ int header_file_no, /* s1 17 */ int priority, /* a3 7 */ int effect, /* t0 8 */ int loop, /* t1 9 */ int vol, /* t2 10 */ int in_time, /* t3 11 */ int reset_in_time, /* 0x40(sp) */ SND_3D_SET *s3s, /* 0x48(sp) */ int start_sector) {
+	/* v0 2 */ SND_3D_SET *s3s;
 	/* v1 3 */ int start_sector;
 	/* s0 16 */ int id;
 }
 
-/* 00271d90 0000005c */ int StreamAutoPreloadNonReset(/* a0 4 */ int file_no, /* a1 5 */ int header_file_no, /* s1 17 */ int priority, /* a3 7 */ int effect, /* t0 8 */ int loop, /* t1 9 */ int vol, /* t2 10 */ int in_time, /* t3 11 */ int reset_in_time) {
+/* 00271d90 0000005c */ int StreamAutoPreloadNonReset(/* a0 4 */ int file_no, /* a1 5 */ int header_file_no, /* s1 17 */ int priority, /* a3 7 */ int effect, /* t0 8 */ int loop, /* t1 9 */ int vol, /* t2 10 */ int in_time, /* t3 11 */ int reset_in_time, /* 0x40(sp) */ SND_3D_SET *s3s) {
+	/* v0 2 */ SND_3D_SET *s3s;
 	/* s0 16 */ int id;
 }
 
-/* 00271df0 00000064 */ int StreamAutoPlay(/* a0 4 */ int file_no, /* a1 5 */ int header_file_no, /* s1 17 */ int priority, /* a3 7 */ int effect, /* t0 8 */ int loop, /* t1 9 */ int vol, /* t3 11 */ int in_time) {
+/* 00271df0 00000064 */ int StreamAutoPlay(/* a0 4 */ int file_no, /* a1 5 */ int header_file_no, /* s1 17 */ int priority, /* a3 7 */ int effect, /* t0 8 */ int loop, /* t1 9 */ int vol, /* t3 11 */ int in_time, /* t4 12 */ SND_3D_SET *s3s) {
 	/* s0 16 */ int id;
 }
 
@@ -31017,8 +31546,9 @@
 }
 
 /* 00272238 0000021c */ static void StreamPlayQueueWrk(/* s1 17 */ int wrk_id) {
+	/* s0 16 */ STREAM_QUEUE *play_q;
 	/* t1 9 */ SND_3D_SET *ptr;
-	/* -0x30(sp) */ SND_3D_SET s3s;
+	/* 0x0(sp) */ SND_3D_SET s3s;
 }
 
 /* 00272458 0000005c */ void StreamAutoPlayMain() {
@@ -31067,7 +31597,7 @@
 }
 
 /* 00272ab8 00000134 */ int StreamAutoSetPosition(/* s4 20 */ int id, /* s5 21 */ float *pos) {
-	/* -0x50(sp) */ SND_3D_SET set;
+	/* 0x0(sp) */ SND_3D_SET set;
 	/* s0 16 */ int wrk_id;
 }
 
@@ -31101,7 +31631,7 @@
 	/* v1 3 */ int wrk_id;
 }
 
-/* 00273118 000000c4 */ int StreamAutoSet3D(/* s2 18 */ int id) {
+/* 00273118 000000c4 */ int StreamAutoSet3D(/* s2 18 */ int id, /* s1 17 */ SND_3D_SET *s3s) {
 	/* s0 16 */ int wrk_id;
 }
 
@@ -31137,25 +31667,40 @@
 	/* s1 17 */ int i;
 }
 
-/* 002735f0 000000d0 */ int SndBankGetInfo(/* a0 4 */ int bank_no, /* s2 18 */ int *num, /* s1 17 */ SOUND_INFO **info) {}
+/* 002735f0 000000d0 */ int SndBankGetInfo(/* a0 4 */ int bank_no, /* s2 18 */ int *num, /* s1 17 */ SOUND_INFO **info) {
+	/* s0 16 */ SND_BANK *p_Sb;
+}
+
 /* 002736c0 00000034 */ static void intr_LoadCancelHXDFunc(/* s0 16 */ void *buffer, /* a1 5 */ void *dummy) {}
 /* 002736f8 00000014 */ static void intr_LoadCancelBDFunc(/* a0 4 */ void *buffer, /* a1 5 */ void *dummy) {}
 /* 00273710 000000c4 */ static void ReleaseSndHXDFile(/* s0 16 */ SND_BANK_FILE *pSndHXDFile) {}
 /* 002737d8 000000b8 */ static void ReleaseSndBDFile(/* s0 16 */ SND_BANK_FILE *pSndBDFile) {}
-/* 00273890 000000e4 */ int SndBankRelease(/* s0 16 */ int bank_no) {}
-/* 00273978 000000f0 */ int SndBankSet3D(/* s0 16 */ int bank_no, /* s1 17 */ float *pos) {}
-/* 00273a68 00000110 */ int SndBankIsLoopSnd(/* s0 16 */ int bank_no, /* s1 17 */ int no) {}
 
-/* 00273b78 000002c0 */ int SndBankPlay(/* s0 16 */ int bank_no, /* s2 18 */ int no, /* -0x60(sp) */ int effect, /* s3 19 */ int loop, /* s7 23 */ int vol, /* fp 30 */ int pitch, /* s6 22 */ int fade_time, /* s3 19 */ SND_3D_SET *s3s) {
+/* 00273890 000000e4 */ int SndBankRelease(/* s0 16 */ int bank_no) {
+	/* s0 16 */ SND_BANK *p_Sb;
+}
+
+/* 00273978 000000f0 */ int SndBankSet3D(/* s0 16 */ int bank_no, /* s1 17 */ float *pos) {
+	/* s0 16 */ SND_BANK *p_Sb;
+}
+
+/* 00273a68 00000110 */ int SndBankIsLoopSnd(/* s0 16 */ int bank_no, /* s1 17 */ int no) {
+	/* s0 16 */ SND_BANK *p_Sb;
+}
+
+/* 00273b78 000002c0 */ int SndBankPlay(/* s0 16 */ int bank_no, /* s2 18 */ int no, /* 0x50(sp) */ int effect, /* s3 19 */ int loop, /* s7 23 */ int vol, /* fp 30 */ int pitch, /* s6 22 */ int fade_time, /* s3 19 */ SND_3D_SET *s3s) {
 	/* s5 21 */ int s3d_free;
 	/* s1 17 */ unsigned int top_adrs;
 	/* s0 16 */ SOUND_INFO *info;
 	/* s2 18 */ int core;
 	/* v1 3 */ int Ret;
 	/* s4 20 */ void *s3d;
+	/* s1 17 */ SND_BANK *p_Sb;
 }
 
-/* 00273e38 000000c8 */ SND_BANK_STATUS SndBankGetFileNo(/* s0 16 */ int bank_no, /* s1 17 */ int *file_no) {}
+/* 00273e38 000000c8 */ SND_BANK_STATUS SndBankGetFileNo(/* s0 16 */ int bank_no, /* s1 17 */ int *file_no) {
+	/* s0 16 */ SND_BANK *p_Sb;
+}
 
 /* 00273f00 00000048 */ static SND_BANK_FILE* SndBankFileSearch(/* v0 2 */ SND_BANK_FILE *a_snd_file, /* a1 5 */ int FileNo) {
 	/* a2 6 */ int i;
@@ -31165,19 +31710,19 @@
 	/* a1 5 */ int i;
 }
 
-/* 00273fc8 000000dc */ static int SndBankFileReqBD(/* s1 17 */ int file_no) {
+/* 00273fc8 000000dc */ static int SndBankFileReqBD(/* s2 18 */ SND_BANK *p_Sb, /* s1 17 */ int file_no) {
 	/* v0 2 */ unsigned int i_FileSize;
 }
 
-/* 002740a8 000000dc */ static int SndBankFileReqHXD(/* s1 17 */ int file_no) {
+/* 002740a8 000000dc */ static int SndBankFileReqHXD(/* s2 18 */ SND_BANK *p_Sb, /* s1 17 */ int file_no) {
 	/* v0 2 */ unsigned int i_FileSize;
 }
 
 /* 00274188 0000000c */ static void intrSndBankFileBD(/* a0 4 */ void *buffer, /* a1 5 */ void *arg) {}
 /* 00274198 00000030 */ static void intrSndBankFileHXD(/* a0 4 */ void *buffer, /* s0 16 */ void *arg) {}
-/* 002741c8 0000000c */ static HXD_HEADER* snd_bankGet_pHxdHeader() {}
-/* 002741d8 00000010 */ static SOUND_INFO* snd_bankGet_pSOUND_INFO() {}
-/* 002741e8 00000040 */ static int snd_bankIsReady() {}
+/* 002741c8 0000000c */ static HXD_HEADER* snd_bankGet_pHxdHeader(/* a0 4 */ SND_BANK *p_Sb) {}
+/* 002741d8 00000010 */ static SOUND_INFO* snd_bankGet_pSOUND_INFO(/* a0 4 */ SND_BANK *p_Sb) {}
+/* 002741e8 00000040 */ static int snd_bankIsReady(/* a0 4 */ SND_BANK *p_Sb) {}
 
 // *****************************************************************************
 // FILE -- /home/akira_koide/zero2np/src/system/eeiop/snd_3d.c
@@ -31202,22 +31747,22 @@
 	/* a2 6 */ int i;
 }
 
-/* 00274660 00000078 */ void snd3DSetSET(/* s1 17 */ void *hndl) {}
+/* 00274660 00000078 */ void snd3DSetSET(/* s1 17 */ void *hndl, /* s0 16 */ SND_3D_SET *set) {}
 /* 002746d8 00000030 */ void Snd3DSetPosition(/* s0 16 */ void *hndl, /* a1 5 */ float *pos) {}
 /* 00274708 0000001c */ void Snd3DGetVal(/* a0 4 */ void *hndl, /* a1 5 */ VOLSET *volset, /* a2 6 */ short int *pitch) {}
 
 /* 00274728 00000094 */ float GetLenDirection(/* s0 16 */ float *velocity, /* s1 17 */ float *unit_dir) {
 	/* f20 58 */ float vel_len;
-	/* -0x30(sp) */ sceVu0FVECTOR listner_vel_unit;
+	/* 0x0(sp) */ sceVu0FVECTOR listner_vel_unit;
 }
 
 /* 002747c0 000002fc */ static void Snd3DCalc(/* s1 17 */ SND_3D_WRK *s3d) {
-	/* -0x60(sp) */ sceVu0FVECTOR unit;
+	/* 0x0(sp) */ sceVu0FVECTOR unit;
 	/* f0 38 */ float dist;
 	/* f22 60 */ float vol;
 	/* f0 38 */ float fVolRate;
 	/* f2 40 */ float temp_dist;
-	/* -0x50(sp) */ sceVu0FVECTOR rightvec;
+	/* 0x10(sp) */ sceVu0FVECTOR rightvec;
 	/* s3 19 */ int right;
 	/* f2 40 */ float cos;
 	/* f1 39 */ float revcos;
@@ -31246,7 +31791,9 @@
 	/* v1 3 */ FNAME_DAT *p_fname_dat_not_const;
 }
 
-/* 00274dc8 0000003c */ int cddatCompressFileNoUseNo(/* s0 16 */ int file_no) {}
+/* 00274dc8 0000003c */ int cddatCompressFileNoUseNo(/* s0 16 */ int file_no) {
+	/* v1 3 */ FNAME_DAT *p_fname_dat_not_const;
+}
 
 /* 00274e08 000000a8 */ char* GetFileName(/* a0 4 */ int file_no) {
 	/* bss 4c06e0 */ static char file_full_name[256];
@@ -31263,7 +31810,7 @@
 	/* s0 16 */ int size;
 }
 
-/* 00274f80 00000144 */ void* SndInit(/* s2 18 */ void *buffer) {
+/* 00274f80 00000144 */ void* SndInit(/* s0 16 */ EEIOP_DEF *def, /* s2 18 */ void *buffer) {
 	/* s1 17 */ int i;
 }
 
@@ -31272,7 +31819,7 @@
 /* 00275110 00000008 */ void SndFremaAfterMain() {}
 
 /* 00275118 00000120 */ void SndSetEffect(/* s1 17 */ int core, /* s2 18 */ int eff_vol, /* s3 19 */ int mode) {
-	/* -0x50(sp) */ SET_SND_EFFECT eff;
+	/* 0x0(sp) */ SET_SND_EFFECT eff;
 }
 
 /* 00275238 0000000c */ void SndSetStereo() {}
@@ -31280,7 +31827,10 @@
 /* 00275258 0000000c */ int SndIsMono() {}
 /* 00275268 000000a8 */ void SndSetGroupVolume(/* s0 16 */ int type, /* s1 17 */ int vol) {}
 /* 00275310 0000007c */ int SndGetGroupVolume(/* a0 4 */ int type) {}
-/* 00275390 0000017c */ void SndCalcValue(/* s3 19 */ int vol, /* s1 17 */ int pan, /* s0 16 */ int bvol, /* s7 23 */ int pitch, /* s6 22 */ int bpitch, /* t1 9 */ int type, /* s2 18 */ void *s3d, /* s4 20 */ VOLSET *volset, /* 0x0(sp) */ short int *pPitch, /* f20 58 */ float play_speed) {}
+
+/* 00275390 0000017c */ void SndCalcValue(/* s3 19 */ int vol, /* s1 17 */ int pan, /* s0 16 */ int bvol, /* s7 23 */ int pitch, /* s6 22 */ int bpitch, /* t1 9 */ int type, /* s2 18 */ void *s3d, /* s4 20 */ VOLSET *volset, /* 0x60(sp) */ short int *pPitch, /* f20 58 */ float play_speed) {
+	/* s5 21 */ short int *pPitch;
+}
 
 /* 00275510 0000004c */ short int SndGetFrameAddVol(/* a0 4 */ int target, /* a1 5 */ int now, /* a2 6 */ int time) {
 	/* a0 4 */ int diff;
@@ -31295,7 +31845,7 @@
 /* 00275588 0000001c */ void SndAllStop() {}
 
 /* 002755a8 000000c0 */ int GetFreeVoiceNum() {
-	/* -0xb0(sp) */ int voice[25];
+	/* 0x0(sp) */ int voice[25];
 	/* s4 20 */ int iRetNum;
 	/* s2 18 */ int iNum;
 	/* s3 19 */ int i;
@@ -31316,32 +31866,44 @@
 	/* s0 16 */ SND_PCM_STREAM_WRK *wrk;
 }
 
-/* 00275788 000000ec */ SND_PCM_STREAM_ERR SndPCMStreamPlay(/* a0 4 */ int wrk_id, /* a1 5 */ int loop2, /* s1 17 */ int vol, /* s2 18 */ int in_time) {}
+/* 00275788 000000ec */ SND_PCM_STREAM_ERR SndPCMStreamPlay(/* a0 4 */ int wrk_id, /* a1 5 */ int loop2, /* s1 17 */ int vol, /* s2 18 */ int in_time) {
+	/* s0 16 */ SND_PCM_STREAM_WRK *wrk;
+}
 
 /* 00275878 0000013c */ void SndPCMStreamMain() {
 	/* s1 17 */ int wi;
-	/* -0x60(sp) */ PCM_STREAM_SETVOL sts;
-	/* -0x50(sp) */ PCM_STREAM_INIT sts;
+	/* s0 16 */ SND_PCM_STREAM_WRK *wrk;
+	/* 0x0(sp) */ PCM_STREAM_SETVOL sts;
+	/* 0x10(sp) */ PCM_STREAM_INIT sts;
 }
 
 /* 002759b8 00000050 */ void SndPCMStreamStop(/* a3 7 */ int wrk_id) {
-	/* -0x20(sp) */ PCM_STREAM_STOP stop;
+	/* 0x0(sp) */ PCM_STREAM_STOP stop;
 }
 
 /* 00275a08 00000024 */ void SndPCMStreamAllStop() {}
 
 /* 00275a30 00000074 */ void SndPCMStreamPause(/* t0 8 */ int wrk_id) {
-	/* -0x20(sp) */ PCM_STREAM_PAUSE pause;
+	/* a3 7 */ SND_PCM_STREAM_WRK *wrk;
+	/* 0x0(sp) */ PCM_STREAM_PAUSE pause;
 }
 
 /* 00275aa8 00000074 */ void SndPCMStreamRestart(/* t0 8 */ int wrk_id) {
-	/* -0x20(sp) */ PCM_STREAM_RESTART restart;
+	/* a3 7 */ SND_PCM_STREAM_WRK *wrk;
+	/* 0x0(sp) */ PCM_STREAM_RESTART restart;
 }
 
 /* 00275b20 00000028 */ int SndPCMStreamIsUse(/* a0 4 */ int wrk_id) {}
-/* 00275b48 0000007c */ int SndPCMStreamIsPreload(/* a0 4 */ int wrk_id) {}
-/* 00275bc8 00000064 */ SND_PCM_STREAM_ERR SndPCMStreamInitWrk(/* a3 7 */ int file_no) {}
-/* 00275c30 0000005c */ void SndPCMStreamFade(/* v0 2 */ int wrk_id, /* v1 3 */ int target_vol, /* a2 6 */ int time) {}
+
+/* 00275b48 0000007c */ int SndPCMStreamIsPreload(/* a0 4 */ int wrk_id) {
+	/* s0 16 */ SND_PCM_STREAM_WRK *wrk;
+}
+
+/* 00275bc8 00000064 */ SND_PCM_STREAM_ERR SndPCMStreamInitWrk(/* a2 6 */ SND_PCM_STREAM_WRK *wrk, /* a3 7 */ int file_no) {}
+
+/* 00275c30 0000005c */ void SndPCMStreamFade(/* v0 2 */ int wrk_id, /* v1 3 */ int target_vol, /* a2 6 */ int time) {
+	/* s0 16 */ SND_PCM_STREAM_WRK *wrk;
+}
 
 // *****************************************************************************
 // FILE -- /home/akira_koide/zero2np/src/system/eeiop/cmp_eeiop.c
@@ -31351,8 +31913,8 @@
 /* 00275cb8 0000000c */ int cmp_eeiopGetWrkSize() {}
 
 /* 00275cc8 000000ec */ void* cmp_eeiopInit(/* a0 4 */ void *wrk_buffer) {
-	/* -0x60(sp) */ SemaParam semap;
-	/* -0x40(sp) */ ThreadParam th_param;
+	/* 0x0(sp) */ SemaParam semap;
+	/* 0x20(sp) */ ThreadParam th_param;
 	/* s0 16 */ void *ret;
 }
 
@@ -31396,8 +31958,8 @@
 /* 002763f8 0000022c */ void snd_utilAutoBDMain() {
 	/* s2 18 */ int i;
 	/* s1 17 */ SND_3D_SET *ptr;
-	/* -0x5c(sp) */ SOUND_INFO *info;
-	/* -0x60(sp) */ int num;
+	/* 0x14(sp) */ SOUND_INFO *info;
+	/* 0x10(sp) */ int num;
 }
 
 /* 00276628 00000048 */ int GetVacantAutoBDWrk() {
@@ -31459,80 +32021,114 @@
 	/* s0 16 */ SND_STREAM_WRK *wrk;
 }
 
-/* 00276e80 000000b8 */ SND_STREAM_ERR SndStreamStart(/* a0 4 */ int wrk_id, /* a1 5 */ int file_no, /* s1 17 */ int header_file_no, /* a3 7 */ int offset) {}
-/* 00276f38 000000e4 */ void SndStreamFade(/* a0 4 */ int wrk_id, /* s0 16 */ int target_vol, /* s3 19 */ int time) {}
+/* 00276e80 000000b8 */ SND_STREAM_ERR SndStreamStart(/* a0 4 */ int wrk_id, /* a1 5 */ int file_no, /* s1 17 */ int header_file_no, /* a3 7 */ int offset) {
+	/* s0 16 */ SND_STREAM_WRK *wrk;
+}
+
+/* 00276f38 000000e4 */ void SndStreamFade(/* a0 4 */ int wrk_id, /* s0 16 */ int target_vol, /* s3 19 */ int time) {
+	/* s1 17 */ SND_STREAM_WRK *wrk;
+}
+
 /* 00277020 00000054 */ int SndStreamIsHeaderReady(/* a0 4 */ int wrk_id) {}
 
-/* 00277078 00000370 */ SND_STREAM_ERR SndStreamPlay(/* s2 18 */ int wrk_id, /* -0x70(sp) */ int effect, /* s6 22 */ int loop2, /* s1 17 */ int vol, /* s3 19 */ int in_time, /* s5 21 */ SND_3D_SET *s3s, /* f20 58 */ float play_spd, /* s4 20 */ int pitch) {
+/* 00277078 00000370 */ SND_STREAM_ERR SndStreamPlay(/* s2 18 */ int wrk_id, /* 0x10(sp) */ int effect, /* s6 22 */ int loop2, /* s1 17 */ int vol, /* s3 19 */ int in_time, /* s5 21 */ SND_3D_SET *s3s, /* f20 58 */ float play_spd, /* s4 20 */ int pitch) {
 	/* s3 19 */ int i;
 	/* s2 18 */ int loop;
+	/* s0 16 */ SND_STREAM_WRK *wrk;
 	/* s0 16 */ int j;
 }
 
 /* 002773e8 00000220 */ void SndStreamMain() {
 	/* s1 17 */ int wi;
-	/* -0x30(sp) */ STREAM_ABORT abort;
+	/* s0 16 */ SND_STREAM_WRK *wrk;
+	/* 0x0(sp) */ STREAM_ABORT abort;
 }
 
 /* 00277608 00000090 */ char* SndStreamPrintStatus(/* a0 4 */ EEIOP_STREAM_STATUS status) {}
 
 /* 00277698 000001e4 */ static void SndStreamFadeSub(/* s3 19 */ int wi) {
 	/* s2 18 */ int ch;
-	/* -0x70(sp) */ short int pitch;
-	/* -0x80(sp) */ VOLSET volset;
+	/* 0x20(sp) */ short int pitch;
+	/* 0x10(sp) */ VOLSET volset;
 	/* s4 20 */ int vol_change;
 	/* s5 21 */ int pitch_change;
-	/* -0x60(sp) */ STREAM_SETVOL set_vol;
-	/* -0x50(sp) */ STREAM_SETPITCH set_pitch;
+	/* s0 16 */ SND_STREAM_WRK *wrk;
+	/* 0x30(sp) */ STREAM_SETVOL set_vol;
+	/* 0x40(sp) */ STREAM_SETPITCH set_pitch;
 }
 
-/* 00277880 00000178 */ static void SetStreamStartSub() {
+/* 00277880 00000178 */ static void SetStreamStartSub(/* s0 16 */ SND_STREAM_WRK *wrk) {
 	/* s4 20 */ int i;
 	/* s5 21 */ int need_loop_packet;
 }
 
-/* 002779f8 000000c4 */ static SND_STREAM_ERR SndStreamInitWrk(/* t1 9 */ int file_no, /* t2 10 */ int offset) {
+/* 002779f8 000000c4 */ static SND_STREAM_ERR SndStreamInitWrk(/* t0 8 */ SND_STREAM_WRK *wrk, /* t1 9 */ int file_no, /* t2 10 */ int offset) {
 	/* a0 4 */ int i;
 }
 
-/* 00277ac0 000001b8 */ static void StreamWrkRelease() {
+/* 00277ac0 000001b8 */ static void StreamWrkRelease(/* s0 16 */ SND_STREAM_WRK *wrk) {
 	/* s3 19 */ int i;
 }
 
-/* 00277c78 00000090 */ static void SndStreamSet3DSub() {
+/* 00277c78 00000090 */ static void SndStreamSet3DSub(/* s1 17 */ SND_STREAM_WRK *wrk, /* s2 18 */ SND_3D_SET *s3s) {
 	/* s3 19 */ int i;
 }
 
 /* 00277d08 00000084 */ static void SndStreamStop(/* a3 7 */ int wrk_id) {
-	/* -0x20(sp) */ STREAM_STOP stop;
+	/* s0 16 */ SND_STREAM_WRK *wrk;
+	/* 0x0(sp) */ STREAM_STOP stop;
 }
 
-/* 00277d90 00000110 */ void SndStreamFadeStop(/* a0 4 */ int wrk_id, /* a2 6 */ int time) {}
+/* 00277d90 00000110 */ void SndStreamFadeStop(/* a0 4 */ int wrk_id, /* a2 6 */ int time) {
+	/* s0 16 */ SND_STREAM_WRK *wrk;
+}
+
 /* 00277ea0 00000024 */ void SndStreamAllStop() {}
 
 /* 00277ec8 00000050 */ void SndStreamPause(/* a3 7 */ int wrk_id) {
-	/* -0x20(sp) */ STREAM_PAUSE pause;
+	/* 0x0(sp) */ STREAM_PAUSE pause;
 }
 
 /* 00277f18 00000048 */ void SndStreamRestart(/* a3 7 */ int wrk_id) {
-	/* -0x20(sp) */ STREAM_RESTART restart;
+	/* 0x0(sp) */ STREAM_RESTART restart;
 }
 
 /* 00277f60 0000008c */ void SndStreamSetPosition(/* a0 4 */ int wrk_id, /* s1 17 */ float *pos) {
-	/* -0x30(sp) */ SND_3D_SET s3s;
+	/* s0 16 */ SND_STREAM_WRK *wrk;
+	/* 0x0(sp) */ SND_3D_SET s3s;
 }
 
 /* 00277ff0 00000020 */ int SndStreamIsUse(/* a0 4 */ int wrk_id) {}
-/* 00278010 00000078 */ int SndStreamIsPreload(/* a0 4 */ int wrk_id) {}
-/* 00278088 000000c0 */ SND_STREAM_ERR SndStreamGetInfo(/* a0 4 */ int wrk_id, /* s2 18 */ int *nchannel, /* s3 19 */ int *interleave_byte, /* s1 17 */ SOUND_INFO **info) {}
-/* 00278148 00000020 */ int SndStreamGetEndOffset(/* a0 4 */ int wrk_id) {}
-/* 00278168 00000048 */ int SndStreamGetNowOffset(/* a0 4 */ int wrk_id) {}
-/* 002781b0 0000007c */ SND_STREAM_ERR SndStreamChangePlaySpeed(/* a0 4 */ int wrk_id, /* f20 58 */ float rate) {}
-/* 00278230 0000005c */ void SndStreamSet3D(/* a0 4 */ int wrk_id) {}
-/* 00278290 00000064 */ void SndStreamFadePitch(/* a0 4 */ int wrk_id, /* s1 17 */ int pitch, /* a0 4 */ int time) {}
-/* 002782f8 000000bc */ void SetStreamHeaderSub(/* v0 2 */ HXD_HEADER *header) {}
 
-/* 002783b8 0000006c */ int SetIRQCore() {
+/* 00278010 00000078 */ int SndStreamIsPreload(/* a0 4 */ int wrk_id) {
+	/* v0 2 */ SND_STREAM_WRK *wrk;
+}
+
+/* 00278088 000000c0 */ SND_STREAM_ERR SndStreamGetInfo(/* a0 4 */ int wrk_id, /* s2 18 */ int *nchannel, /* s3 19 */ int *interleave_byte, /* s1 17 */ SOUND_INFO **info) {
+	/* s0 16 */ SND_STREAM_WRK *wrk;
+}
+
+/* 00278148 00000020 */ int SndStreamGetEndOffset(/* a0 4 */ int wrk_id) {}
+
+/* 00278168 00000048 */ int SndStreamGetNowOffset(/* a0 4 */ int wrk_id) {
+	/* v0 2 */ SND_STREAM_WRK *wrk;
+}
+
+/* 002781b0 0000007c */ SND_STREAM_ERR SndStreamChangePlaySpeed(/* a0 4 */ int wrk_id, /* f20 58 */ float rate) {
+	/* s0 16 */ SND_STREAM_WRK *wrk;
+}
+
+/* 00278230 0000005c */ void SndStreamSet3D(/* a0 4 */ int wrk_id, /* a1 5 */ SND_3D_SET *s3s) {
+	/* a2 6 */ SND_STREAM_WRK *wrk;
+}
+
+/* 00278290 00000064 */ void SndStreamFadePitch(/* a0 4 */ int wrk_id, /* s1 17 */ int pitch, /* a0 4 */ int time) {
+	/* s0 16 */ SND_STREAM_WRK *wrk;
+}
+
+/* 002782f8 000000bc */ void SetStreamHeaderSub(/* s0 16 */ SND_STREAM_WRK *wrk, /* v0 2 */ HXD_HEADER *header) {}
+
+/* 002783b8 0000006c */ int SetIRQCore(/* a0 4 */ SND_STREAM_WRK *wrk) {
 	/* a0 4 */ int i;
 }
 
@@ -31542,20 +32138,20 @@
 
 /* 00278428 000003f4 */ int SlideEncode(/* s5 21 */ unsigned char *base, /* s7 23 */ unsigned char *addrs, /* s4 20 */ int max_size) {
 	/* s6 22 */ short int s;
-	/* -0x70(sp) */ short int r;
+	/* 0x20(sp) */ short int r;
 	/* fp 30 */ short int len;
-	/* -0x6c(sp) */ short int codeptr;
+	/* 0x24(sp) */ short int codeptr;
 	/* s0 16 */ short int i;
 	/* s2 18 */ short int lastmatchlen;
 	/* s1 17 */ unsigned char c;
-	/* -0x90(sp) */ unsigned char code[17];
-	/* -0x68(sp) */ unsigned char mask;
-	/* -0x64(sp) */ unsigned int incount;
-	/* -0x60(sp) */ unsigned int size;
+	/* 0x0(sp) */ unsigned char code[17];
+	/* 0x28(sp) */ unsigned char mask;
+	/* 0x2c(sp) */ unsigned int incount;
+	/* 0x30(sp) */ unsigned int size;
 }
 
 /* 00278820 00000128 */ void SlideDecode(/* t0 8 */ unsigned char *base, /* t3 11 */ unsigned char *addrs, /* a2 6 */ int size) {
-	/* -0x1020(sp) */ unsigned char textbuf[4113];
+	/* 0x0(sp) */ unsigned char textbuf[4113];
 	/* t2 10 */ int i;
 	/* a3 7 */ int j;
 	/* t1 9 */ int k;
@@ -31586,13 +32182,13 @@
 
 /* 00278d00 00000058 */ void CMP_DecodeOne(/* a0 4 */ CMP_HEADER *header, /* a1 5 */ int no, /* a2 6 */ int from_adrs, /* a3 7 */ int to_adrs) {}
 
-/* 00278d58 0000009c */ int CMP_Decode(/* a1 5 */ void *decode_buf) {
+/* 00278d58 0000009c */ int CMP_Decode(/* s0 16 */ CMP_HEADER *header, /* a1 5 */ void *decode_buf) {
 	/* s1 17 */ int i;
 	/* s2 18 */ int now_adrs;
 	/* s3 19 */ int now_size;
 }
 
-/* 00278df8 00000034 */ void CMP_Init() {}
+/* 00278df8 00000034 */ void CMP_Init(/* a1 5 */ CMP_HEADER *header) {}
 
 // *****************************************************************************
 // FILE -- /home/akira_koide/zero2np/src/system/playpss/my_strfile.c
@@ -31613,15 +32209,15 @@
 /* 002792b0 00000024 */ void playPssSetNtsc2Pal(/* a0 4 */ int lbNtsc2Pal, /* a1 5 */ int iGSImageAdrs) {}
 /* 002792d8 00000020 */ int playPssAlreadySendImage() {}
 
-/* 002792f8 000000f0 */ void playPssStart() {
-	/* -0x70(sp) */ ThreadParam th_param;
+/* 002792f8 000000f0 */ void playPssStart(/* a0 4 */ int (*cbFileRead)(/* parameters unknown */), /* s1 17 */ playPssRsrcs *rsrcs) {
+	/* 0x0(sp) */ ThreadParam th_param;
 }
 
 /* 002793e8 00000028 */ int playPssIsReady() {}
-/* 00279410 00000018 */ int playPssMain(/* a1 5 */ int vram_adrs) {}
+/* 00279410 00000018 */ int playPssMain(/* a0 4 */ playPssRsrcs *rsrcs, /* a1 5 */ int vram_adrs) {}
 /* 00279428 0000001c */ void playPssGetMpegInfo(/* a0 4 */ PLAY_PSS_MPEG_INFO *pInfo) {}
 
-/* 00279448 000002b8 */ int playPssSetPacket(/* s5 21 */ int vram_adrs, /* s4 20 */ int *pTagEndAdrs) {
+/* 00279448 000002b8 */ int playPssSetPacket(/* s1 17 */ playPssRsrcs *rsrcs, /* s5 21 */ int vram_adrs, /* s4 20 */ int *pTagEndAdrs) {
 	/* a0 4 */ int origin_x;
 	/* a3 7 */ int origin_y;
 }
@@ -31637,26 +32233,26 @@
 	/* s2 18 */ int spill;
 }
 
-/* 00279970 000000d0 */ static int audioCallback(/* a2 6 */ void *data) {
-	/* -0x30(sp) */ u_char *pd0;
-	/* -0x28(sp) */ u_char *pd1;
-	/* -0x2c(sp) */ int d0;
-	/* -0x24(sp) */ int d1;
+/* 00279970 000000d0 */ static int audioCallback(/* a0 4 */ sceMpeg *mp, /* s0 16 */ sceMpegCbDataStr *cbstr, /* a2 6 */ void *data) {
+	/* 0x0(sp) */ u_char *pd0;
+	/* 0x8(sp) */ u_char *pd1;
+	/* 0x4(sp) */ int d0;
+	/* 0xc(sp) */ int d1;
 	/* s1 17 */ int spill;
 }
 
-/* 00279a40 00000108 */ static int nodataCallback(/* a1 5 */ sceMpegCbData *cbstr, /* a2 6 */ void *data) {
+/* 00279a40 00000108 */ static int nodataCallback(/* s1 17 */ sceMpeg *mp, /* a1 5 */ sceMpegCbData *cbstr, /* a2 6 */ void *data) {
 	/* a2 6 */ int dmaSize;
 	/* s0 16 */ int availData;
 }
 
-/* 00279b48 00000074 */ static int backgroundCallback(/* a2 6 */ void *data) {
+/* 00279b48 00000074 */ static int backgroundCallback(/* s1 17 */ sceMpeg *mp, /* a1 5 */ sceMpegCbData *cbstr, /* a2 6 */ void *data) {
 	/* s0 16 */ int dueTime;
 }
 
-/* 00279bc0 00000038 */ static int errorCallback(/* a2 6 */ void *data) {}
+/* 00279bc0 00000038 */ static int errorCallback(/* a0 4 */ sceMpeg *mp, /* a1 5 */ sceMpegCbData *cbstr, /* a2 6 */ void *data) {}
 
-/* 00279bf8 0000008c */ static int fillBuff(/* s0 16 */ int blocking) {
+/* 00279bf8 0000008c */ static int fillBuff(/* s1 17 */ sceMpeg *mp, /* s0 16 */ int blocking) {
 	/* a1 5 */ char *startPos;
 }
 
@@ -31664,43 +32260,43 @@
 // FILE -- /home/akira_koide/zero2np/src/system/playpss/audiodec.c
 // *****************************************************************************
 
-/* 00279c88 000000cc */ int audioDecCreate(/* s0 16 */ AudioDec *ad, /* a1 5 */ u_char *buff, /* a2 6 */ int buffSize, /* a3 7 */ int iopBuff, /* t0 8 */ int iopBuffSize, /* s2 18 */ u_char *zeroBuff, /* t2 10 */ int iopZeroBuff, /* s1 17 */ int zeroBuffSize, /* 0x0(sp) */ int audio_vol, /* 0x8(sp) */ int auto_dma_core) {
+/* 00279c88 000000cc */ int audioDecCreate(/* s0 16 */ AudioDec *ad, /* a1 5 */ u_char *buff, /* a2 6 */ int buffSize, /* a3 7 */ int iopBuff, /* t0 8 */ int iopBuffSize, /* s2 18 */ u_char *zeroBuff, /* t2 10 */ int iopZeroBuff, /* s1 17 */ int zeroBuffSize, /* 0x30(sp) */ int audio_vol, /* 0x38(sp) */ int auto_dma_core) {
 	/* s3 19 */ int audio_vol;
 	/* v0 2 */ int auto_dma_core;
 }
 
-/* 00279d58 00000008 */ int audioDecDelete() {}
+/* 00279d58 00000008 */ int audioDecDelete(/* a0 4 */ AudioDec *ad) {}
 
-/* 00279d60 00000080 */ void audioDecPause() {
+/* 00279d60 00000080 */ void audioDecPause(/* s0 16 */ AudioDec *ad) {
 	/* v0 2 */ int ret;
 }
 
-/* 00279de0 00000068 */ void audioDecResume() {}
-/* 00279e48 00000014 */ void audioDecStart() {}
-/* 00279e60 00000044 */ void audioDecReset() {}
+/* 00279de0 00000068 */ void audioDecResume(/* s0 16 */ AudioDec *ad) {}
+/* 00279e48 00000014 */ void audioDecStart(/* a0 4 */ AudioDec *ad) {}
+/* 00279e60 00000044 */ void audioDecReset(/* s0 16 */ AudioDec *ad) {}
 
-/* 00279ea8 000000a4 */ void audioDecBeginPut(/* a1 5 */ u_char **ptr0, /* a2 6 */ int *len0, /* a3 7 */ u_char **ptr1, /* t0 8 */ int *len1) {
+/* 00279ea8 000000a4 */ void audioDecBeginPut(/* t1 9 */ AudioDec *ad, /* a1 5 */ u_char **ptr0, /* a2 6 */ int *len0, /* a3 7 */ u_char **ptr1, /* t0 8 */ int *len1) {
 	/* t3 11 */ int len;
 }
 
-/* 00279f50 00000110 */ void audioDecEndPut(/* s1 17 */ int size) {
+/* 00279f50 00000110 */ void audioDecEndPut(/* s0 16 */ AudioDec *ad, /* s1 17 */ int size) {
 	/* v0 2 */ int hdr_add;
 }
 
-/* 0027a060 00000014 */ int audioDecIsPreset() {}
+/* 0027a060 00000014 */ int audioDecIsPreset(/* a0 4 */ AudioDec *ad) {}
 
-/* 0027a078 000001b0 */ int audioDecSendToIOP() {
-	/* -0x30(sp) */ int pd0;
-	/* -0x28(sp) */ int pd1;
-	/* -0x2c(sp) */ int d0;
-	/* -0x24(sp) */ int d1;
+/* 0027a078 000001b0 */ int audioDecSendToIOP(/* s0 16 */ AudioDec *ad) {
+	/* 0x0(sp) */ int pd0;
+	/* 0x8(sp) */ int pd1;
+	/* 0x4(sp) */ int d0;
+	/* 0xc(sp) */ int d1;
 	/* t0 8 */ u_char *ps0;
 	/* t1 9 */ int s0;
 	/* t3 11 */ int s1;
 	/* s1 17 */ int count_sent;
 }
 
-/* 0027a228 000000c8 */ static void iopGetArea(/* t4 12 */ int *pd0, /* a1 5 */ int *d0, /* a2 6 */ int *pd1, /* a3 7 */ int *d1, /* t1 9 */ int pos) {
+/* 0027a228 000000c8 */ static void iopGetArea(/* t4 12 */ int *pd0, /* a1 5 */ int *d0, /* a2 6 */ int *pd1, /* a3 7 */ int *d1, /* t0 8 */ AudioDec *ad, /* t1 9 */ int pos) {
 	/* t2 10 */ int len;
 	/* t1 9 */ int diff;
 }
@@ -31710,7 +32306,7 @@
 }
 
 /* 0027a458 0000006c */ static int sendToIOP(/* v1 3 */ int dst, /* a1 5 */ u_char *src, /* s1 17 */ int size) {
-	/* -0x30(sp) */ sceSifDmaData transData;
+	/* 0x0(sp) */ sceSifDmaData transData;
 	/* s0 16 */ int did;
 }
 
@@ -31722,9 +32318,9 @@
 
 /* 0027a530 0000003c */ u_int* setLoadImageTags(/* a0 4 */ u_int *tags, /* a1 5 */ void *image, /* v0 2 */ int x, /* v1 3 */ int y, /* t3 11 */ int width, /* v0 2 */ int height, /* t3 11 */ int vram_adrs) {}
 
-/* 0027a570 00000270 */ static u_int* setLoadImageTagsYX(/* a0 4 */ u_int *tags, /* s4 20 */ void *image, /* -0x70(sp) */ int skip, /* -0x6c(sp) */ int x, /* -0x68(sp) */ int y, /* t1 9 */ int width, /* t2 10 */ int height, /* s0 16 */ int vram_adrs) {
+/* 0027a570 00000270 */ static u_int* setLoadImageTagsYX(/* a0 4 */ u_int *tags, /* s4 20 */ void *image, /* 0x0(sp) */ int skip, /* 0x4(sp) */ int x, /* 0x8(sp) */ int y, /* t1 9 */ int width, /* t2 10 */ int height, /* s0 16 */ int vram_adrs) {
 	/* s1 17 */ u_int *p;
-	/* -0x64(sp) */ int mbx;
+	/* 0xc(sp) */ int mbx;
 	/* s5 21 */ int mby;
 	/* s6 22 */ int i;
 	/* s3 19 */ int j;
@@ -32055,8 +32651,8 @@
 }
 
 /* 0027e9a8 000000d4 */ int InitThread() {
-	/* -0x80(sp) */ ThreadParam tp;
-	/* -0x50(sp) */ SemaParam sp;
+	/* 0x0(sp) */ ThreadParam tp;
+	/* 0x30(sp) */ SemaParam sp;
 	/* bss 4c2ff0 */ static char stack[1024];
 }
 
@@ -32075,7 +32671,7 @@
 }
 
 /* 0027ec30 000000c8 */ int DelayThread(/* s1 17 */ u_int uiUsec) {
-	/* -0x50(sp) */ SemaParam sp;
+	/* 0x0(sp) */ SemaParam sp;
 	/* s0 16 */ int sid;
 	/* s1 17 */ int aid;
 	/* v0 2 */ int status;
@@ -32101,7 +32697,7 @@
 }
 
 /* 0027f048 000005f4 */ void _printf(/* s0 16 */ char *fmt, /* s3 19 */ va_list ap) {
-	/* -0xa0(sp) */ char buf[32];
+	/* 0x0(sp) */ char buf[32];
 	/* s0 16 */ char *cp;
 	/* s4 20 */ char *zp;
 	/* v1 3 */ char ch0;
@@ -32114,9 +32710,9 @@
 	/* s6 22 */ int ret;
 }
 
-/* 0027f640 00000038 */ void kprintf() {}
+/* 0027f640 00000038 */ void kprintf(/* a0 4 */ char *fmt) {}
 
-/* 0027f678 00000060 */ void scePrintf() {
+/* 0027f678 00000060 */ void scePrintf(/* a0 4 */ char *fmt) {
 	/* s1 17 */ void (*save)(/* parameters unknown */);
 }
 
@@ -32154,7 +32750,7 @@
 /* 0027fb00 00000134 */ static unsigned int _sceSifSendCmd(/* s4 20 */ unsigned int fcode, /* s3 19 */ unsigned int mode, /* s0 16 */ void *pp, /* s1 17 */ int ps, /* a0 4 */ void *src, /* t1 9 */ void *dest, /* a1 5 */ int size) {
 	/* s2 18 */ int cnt;
 	/* v0 2 */ unsigned int did;
-	/* -0x80(sp) */ sceSifDmaData dmad[2];
+	/* 0x0(sp) */ sceSifDmaData dmad[2];
 }
 
 /* 0027fc38 0000003c */ unsigned int sceSifSendCmd(/* a0 4 */ unsigned int fid, /* a1 5 */ void *pp, /* v0 2 */ int ps, /* v1 3 */ void *src, /* t3 11 */ void *dest, /* t2 10 */ int size) {}
@@ -32162,7 +32758,7 @@
 
 /* 0027fcb8 00000148 */ static int _sceSifCmdIntrHdlr(/* a0 4 */ int chan) {
 	/* a2 6 */ u_long128 *p;
-	/* -0xa0(sp) */ u_long128 buffer[7];
+	/* 0x0(sp) */ u_long128 buffer[7];
 	/* s1 17 */ sceSifCmdDataTable *pScdt;
 	/* a3 7 */ sceSifCmdHdr *pSch;
 	/* a2 6 */ sceSifCmdHandler f;
@@ -32194,8 +32790,8 @@
 }
 
 /* 00280120 0000001c */ static void _sceRpcFreePacket(/* a0 4 */ _sceRpcPacket *pSrp) {}
-/* 00280140 00000030 */ static _sceRpcPacket* _sceRpcGetFPacket() {}
-/* 00280170 00000040 */ static _sceRpcPacket* _sceRpcGetFPacket2(/* a1 5 */ int n) {}
+/* 00280140 00000030 */ static _sceRpcPacket* _sceRpcGetFPacket(/* a0 4 */ _sceRpcDataTable *pSrdt) {}
+/* 00280170 00000040 */ static _sceRpcPacket* _sceRpcGetFPacket2(/* a0 4 */ _sceRpcDataTable *pSrdt, /* a1 5 */ int n) {}
 
 /* 002801b0 000000cc */ static void _request_end(/* a0 4 */ void *send, /* a1 5 */ void *local) {
 	/* s2 18 */ _sceRpcPacket *p;
@@ -32207,12 +32803,13 @@
 /* 00280280 00000040 */ static long unsigned int _alarm_rdata(/* a0 4 */ int id, /* a1 5 */ long unsigned int settime, /* a2 6 */ long unsigned int calltime, /* a1 5 */ void *p, /* t0 8 */ void *addr) {}
 
 /* 002802c0 000000d0 */ static void _request_rdata(/* s1 17 */ void *send, /* a1 5 */ void *local) {
+	/* a0 4 */ _sceRpcDataTable *pSrdt;
 	/* s0 16 */ _sceRpcPacket *q;
 }
 
 /* 00280390 00000158 */ int sceSifGetOtherData(/* s1 17 */ sceSifReceiveData *rd, /* s3 19 */ void *src, /* s4 20 */ void *dest, /* s5 21 */ int size, /* s2 18 */ unsigned int mode) {
 	/* s0 16 */ _sceRpcPacket *p;
-	/* -0x90(sp) */ SemaParam sem;
+	/* 0x0(sp) */ SemaParam sem;
 }
 
 /* 002804e8 0000004c */ static sceSifServeData* _search_svdata(/* a0 4 */ unsigned int c, /* a1 5 */ _sceRpcDataTable *t) {
@@ -32229,7 +32826,7 @@
 
 /* 00280648 00000140 */ int sceSifBindRpc(/* s1 17 */ sceSifClientData *bd, /* s3 19 */ unsigned int command, /* s2 18 */ unsigned int mode) {
 	/* s0 16 */ _sceRpcPacket *p;
-	/* -0x70(sp) */ SemaParam sem;
+	/* 0x0(sp) */ SemaParam sem;
 }
 
 /* 00280788 0000008c */ static void _request_call(/* a0 4 */ void *send, /* a1 5 */ void *local) {
@@ -32238,11 +32835,11 @@
 	/* a2 6 */ sceSifQueueData *pSqd;
 }
 
-/* 00280818 000001f4 */ int sceSifCallRpc(/* s1 17 */ sceSifClientData *bd, /* s6 22 */ unsigned int fno, /* fp 30 */ unsigned int mode, /* s5 21 */ void *send, /* s2 18 */ int ssize, /* s4 20 */ void *receive, /* s3 19 */ int rsize, /* s7 23 */ sceSifEndFunc func, /* 0x0(sp) */ void *para) {
+/* 00280818 000001f4 */ int sceSifCallRpc(/* s1 17 */ sceSifClientData *bd, /* s6 22 */ unsigned int fno, /* fp 30 */ unsigned int mode, /* s5 21 */ void *send, /* s2 18 */ int ssize, /* s4 20 */ void *receive, /* s3 19 */ int rsize, /* s7 23 */ sceSifEndFunc func, /* 0xc0(sp) */ void *para) {
 	/* v0 2 */ void *para;
 	/* s0 16 */ _sceRpcPacket *p;
 	/* v0 2 */ void *gp;
-	/* -0xc0(sp) */ SemaParam sem;
+	/* 0x0(sp) */ SemaParam sem;
 }
 
 /* 00280a10 0000003c */ int sceSifCheckStatRpc(/* a0 4 */ sceSifRpcData *cd) {}
@@ -32273,7 +32870,7 @@
 	/* s4 20 */ int rsize;
 	/* v0 2 */ unsigned int id;
 	/* s3 19 */ int cnt;
-	/* -0x80(sp) */ sceSifDmaData data[2];
+	/* 0x0(sp) */ sceSifDmaData data[2];
 	/* v1 3 */ int j;
 }
 
@@ -32286,7 +32883,7 @@
 // *****************************************************************************
 
 /* 00280f40 0000005c */ static void _sceFsIobSemaMK() {
-	/* -0x40(sp) */ SemaParam sparam;
+	/* 0x0(sp) */ SemaParam sparam;
 }
 
 /* 00280fa0 00000088 */ static _sceFsIob* new_iob() {
@@ -32298,21 +32895,21 @@
 }
 
 /* 00281098 000003b4 */ static void _sceFs_Rcv_Intr(/* a0 4 */ void *pkt, /* a1 5 */ void *data) {
-	/* -0x40(sp) */ int ee_semid;
-	/* -0x38(sp) */ unsigned int ee_retadr;
-	/* -0x34(sp) */ unsigned int ee_retsiz;
-	/* -0x3c(sp) */ unsigned int ee_retmod;
+	/* 0x0(sp) */ int ee_semid;
+	/* 0x8(sp) */ unsigned int ee_retadr;
+	/* 0xc(sp) */ unsigned int ee_retsiz;
+	/* 0x4(sp) */ unsigned int ee_retmod;
 	/* a2 6 */ int i;
 	/* t0 8 */ unsigned char *cp;
 	/* t2 10 */ unsigned char *uccp;
 	/* s0 16 */ unsigned char *rcv_buf;
 	/* a3 7 */ _sceFsReadIntrData *ridp;
-	/* -0x30(sp) */ unsigned int r_addr;
-	/* -0x2c(sp) */ unsigned int r_size;
+	/* 0x10(sp) */ unsigned int r_addr;
+	/* 0x14(sp) */ unsigned int r_size;
 }
 
 /* 00281450 0000004c */ static void _sceFsSemInit() {
-	/* -0x40(sp) */ SemaParam sparam;
+	/* 0x0(sp) */ SemaParam sparam;
 }
 
 /* 002814a0 0000002c */ static int _sceFsWaitS(/* a0 4 */ int cur_cmd) {}
@@ -32331,8 +32928,9 @@
 /* 002815d0 00000204 */ int sceFsInit() {
 	/* v0 2 */ int i;
 	/* s0 16 */ int istat;
-	/* -0x70(sp) */ int bufmode;
+	/* 0x10(sp) */ int bufmode;
 	/* v1 3 */ _sceFsIob *io;
+	/* s1 17 */ _sceFsPoffData *pd;
 	/* bss 4c53c0 */ static unsigned int rcv_adr[2];
 }
 
@@ -32346,36 +32944,36 @@
 	/* a3 7 */ unsigned int mode;
 	/* a1 5 */ int nsize;
 	/* s1 17 */ int ret;
-	/* -0x120(sp) */ int retfd;
+	/* 0x30(sp) */ int retfd;
 	/* s1 17 */ _sceFsOpenData *od;
 	/* s3 19 */ _sceFsIob *io;
-	/* -0x140(sp) */ SemaParam sparam;
+	/* 0x10(sp) */ SemaParam sparam;
 }
 
 /* 00281b28 0000017c */ int sceClose(/* a0 4 */ int fd) {
 	/* s2 18 */ _sceFsCloseData *cd;
 	/* s0 16 */ _sceFsIob *io;
 	/* s0 16 */ int ret;
-	/* -0x70(sp) */ int ret_close;
-	/* -0x90(sp) */ SemaParam sparam;
+	/* 0x30(sp) */ int ret_close;
+	/* 0x10(sp) */ SemaParam sparam;
 }
 
 /* 00281ca8 00000238 */ int sceLseek(/* a0 4 */ int fd, /* s2 18 */ int offset, /* s4 20 */ int how) {
 	/* s1 17 */ _sceFsLseekData *ld;
 	/* s0 16 */ _sceFsIob *io;
 	/* s0 16 */ int ret;
-	/* -0x90(sp) */ int ret_lseek;
+	/* 0x30(sp) */ int ret_lseek;
 	/* a2 6 */ int cnt0;
-	/* -0xb0(sp) */ SemaParam sparam;
+	/* 0x10(sp) */ SemaParam sparam;
 }
 
 /* 00281ee0 00000260 */ int sceRead(/* a0 4 */ int fd, /* s6 22 */ void *addr, /* s7 23 */ int size) {
 	/* s1 17 */ _sceFsReadData *rd;
 	/* s0 16 */ _sceFsIob *io;
 	/* s0 16 */ int ret;
-	/* -0xb0(sp) */ int ret_read;
+	/* 0x30(sp) */ int ret_read;
 	/* a2 6 */ int cnt0;
-	/* -0xd0(sp) */ SemaParam sparam;
+	/* 0x10(sp) */ SemaParam sparam;
 }
 
 /* 00282140 000002c0 */ int sceWrite(/* a0 4 */ int fd, /* s1 17 */ void *addr, /* s5 21 */ int size) {
@@ -32385,34 +32983,35 @@
 	/* a2 6 */ int cnt0;
 	/* s0 16 */ int psize;
 	/* s0 16 */ int ret;
-	/* -0xb0(sp) */ int ret_write;
-	/* -0xd0(sp) */ SemaParam sparam;
+	/* 0x30(sp) */ int ret_write;
+	/* 0x10(sp) */ SemaParam sparam;
 }
 
 /* 00282400 00000374 */ int sceIoctl(/* a0 4 */ int fd, /* s1 17 */ int cmd, /* s2 18 */ void *arg) {
 	/* s3 19 */ _sceFsIoctlData *id;
 	/* s0 16 */ _sceFsIob *io;
 	/* s0 16 */ int ret;
-	/* -0x90(sp) */ int ret_ioctl;
+	/* 0x30(sp) */ int ret_ioctl;
 	/* a0 4 */ int cnt0;
 	/* s5 21 */ int wait;
-	/* -0xb0(sp) */ SemaParam sparam;
+	/* 0x10(sp) */ SemaParam sparam;
 	/* bss 4c53c8 */ static int *ip0;
 }
 
 /* 00282778 000001dc */ int sceIoctl2(/* a0 4 */ int fd, /* s5 21 */ int cmd, /* s0 16 */ void *arg, /* s3 19 */ size_t arglen, /* s7 23 */ void *bufp, /* s4 20 */ size_t buflen) {
+	/* s1 17 */ _sceFsIoctlData *id;
 	/* s2 18 */ _sceFsIob *io;
 	/* s0 16 */ int ret;
-	/* -0xa0(sp) */ int ret_ioctl;
-	/* -0xc0(sp) */ SemaParam sparam;
+	/* 0x30(sp) */ int ret_ioctl;
+	/* 0x10(sp) */ SemaParam sparam;
 }
 
 /* 00282958 000001a4 */ static int _sceCallCode(/* s1 17 */ char *name, /* s6 22 */ unsigned int callcode) {
 	/* s2 18 */ _sceFsNameData *cc;
 	/* s0 16 */ int nsize;
 	/* s0 16 */ int ret;
-	/* -0xa0(sp) */ int ret_code;
-	/* -0xc0(sp) */ SemaParam sparam;
+	/* 0x30(sp) */ int ret_code;
+	/* 0x10(sp) */ SemaParam sparam;
 }
 
 /* 00282b00 0000001c */ int sceRemove(/* a0 4 */ char *name) {}
@@ -32421,8 +33020,8 @@
 	/* s2 18 */ _sceFsMkdirData *mkd;
 	/* s0 16 */ int nsize;
 	/* s0 16 */ int ret;
-	/* -0xa0(sp) */ int ret_mkdir;
-	/* -0xc0(sp) */ SemaParam sparam;
+	/* 0x30(sp) */ int ret_mkdir;
+	/* 0x10(sp) */ SemaParam sparam;
 }
 
 /* 00282cd0 0000001c */ int sceRmdir(/* a0 4 */ char *name) {}
@@ -32430,16 +33029,16 @@
 /* 00282cf0 0000026c */ int sceFormat(/* s0 16 */ char *path, /* s2 18 */ char *blkdevname, /* s6 22 */ void *arg, /* s1 17 */ int arglen) {
 	/* a1 5 */ int nsize;
 	/* s0 16 */ int ret;
-	/* -0xa0(sp) */ int ret_format;
+	/* 0x30(sp) */ int ret_format;
 	/* s3 19 */ _sceFsFormatData *fd;
-	/* -0xc0(sp) */ SemaParam sparam;
+	/* 0x10(sp) */ SemaParam sparam;
 }
 
 /* 00282f60 00000120 */ int sceAddDrv(/* s1 17 */ void *addr) {
 	/* s0 16 */ _sceFsAddrData *id;
 	/* s0 16 */ int ret;
-	/* -0x60(sp) */ int ret_adddrv;
-	/* -0x80(sp) */ SemaParam sparam;
+	/* 0x30(sp) */ int ret_adddrv;
+	/* 0x10(sp) */ SemaParam sparam;
 }
 
 /* 00283080 0000001c */ int sceDelDrv(/* a0 4 */ char *name) {}
@@ -32450,41 +33049,43 @@
 }
 
 /* 00283168 00000168 */ int sceDclose(/* a0 4 */ int fd) {
+	/* s2 18 */ _sceFsCloseData *cd;
 	/* s0 16 */ _sceFsIob *io;
 	/* s0 16 */ int ret;
-	/* -0x70(sp) */ int ret_dclose;
-	/* -0x90(sp) */ SemaParam sparam;
+	/* 0x30(sp) */ int ret_dclose;
+	/* 0x10(sp) */ SemaParam sparam;
 }
 
 /* 002832d0 00000158 */ int sceDread(/* a0 4 */ int fd, /* s1 17 */ sce_dirent *dp) {
+	/* s2 18 */ _sceFsReadData *rd;
 	/* s0 16 */ _sceFsIob *io;
 	/* s0 16 */ int ret;
-	/* -0x60(sp) */ int ret_dread;
-	/* -0x80(sp) */ SemaParam sparam;
+	/* 0x30(sp) */ int ret_dread;
+	/* 0x10(sp) */ SemaParam sparam;
 }
 
 /* 00283428 000001a0 */ int sceGetstat(/* s1 17 */ char *name, /* s6 22 */ sce_stat *dp) {
 	/* s2 18 */ _sceFsGStatData *sd;
 	/* s0 16 */ int nsize;
 	/* s0 16 */ int ret;
-	/* -0xa0(sp) */ int ret_getstat;
-	/* -0xc0(sp) */ SemaParam sparam;
+	/* 0x30(sp) */ int ret_getstat;
+	/* 0x10(sp) */ SemaParam sparam;
 }
 
-/* 002835c8 0000023c */ int sceChstat(/* s2 18 */ char *name, /* s7 23 */ unsigned int cbit) {
+/* 002835c8 0000023c */ int sceChstat(/* s2 18 */ char *name, /* s0 16 */ sce_stat *dp, /* s7 23 */ unsigned int cbit) {
 	/* s3 19 */ _sceFsCStatData *cd;
 	/* s1 17 */ int nsize;
 	/* s0 16 */ int ret;
-	/* -0xb0(sp) */ int ret_chstat;
-	/* -0xd0(sp) */ SemaParam sparam;
+	/* 0x30(sp) */ int ret_chstat;
+	/* 0x10(sp) */ SemaParam sparam;
 }
 
 /* 00283808 000001f0 */ int sceRename(/* s1 17 */ char *oldname, /* s0 16 */ char *newname) {
 	/* s2 18 */ _sceFsRenameData *rd;
 	/* a1 5 */ int nsize;
 	/* s0 16 */ int ret;
-	/* -0x90(sp) */ int ret_rename;
-	/* -0xb0(sp) */ SemaParam sparam;
+	/* 0x30(sp) */ int ret_rename;
+	/* 0x10(sp) */ SemaParam sparam;
 }
 
 /* 002839f8 0000001c */ int sceChdir(/* a0 4 */ char *name) {}
@@ -32493,16 +33094,16 @@
 	/* s0 16 */ _sceFsSyncData *sd;
 	/* a1 5 */ int nsize;
 	/* s0 16 */ int ret;
-	/* -0x90(sp) */ int ret_sync;
-	/* -0xb0(sp) */ SemaParam sparam;
+	/* 0x30(sp) */ int ret_sync;
+	/* 0x10(sp) */ SemaParam sparam;
 }
 
 /* 00283bb0 0000026c */ int sceMount(/* s0 16 */ char *fsdevname, /* s3 19 */ char *blkdevname, /* s7 23 */ int flag, /* s6 22 */ void *arg, /* s1 17 */ int arglen) {
 	/* s2 18 */ _sceFsMountData *md;
 	/* a1 5 */ int nsize;
 	/* s0 16 */ int ret;
-	/* -0xb0(sp) */ int ret_mount;
-	/* -0xd0(sp) */ SemaParam sparam;
+	/* 0x30(sp) */ int ret_mount;
+	/* 0x10(sp) */ SemaParam sparam;
 }
 
 /* 00283e20 0000001c */ int sceUmount(/* a0 4 */ char *name) {}
@@ -32512,32 +33113,32 @@
 	/* s0 16 */ _sceFsIob *io;
 	/* a2 6 */ int cnt0;
 	/* s0 16 */ int ret;
-	/* -0x90(sp) */ long int ret_lseek64;
-	/* -0xb0(sp) */ SemaParam sparam;
+	/* 0x30(sp) */ long int ret_lseek64;
+	/* 0x10(sp) */ SemaParam sparam;
 }
 
 /* 00284078 00000238 */ int sceDevctl(/* s1 17 */ char *path, /* s7 23 */ int cmd, /* s4 20 */ void *arg, /* s0 16 */ size_t arglen, /* fp 30 */ void *bufp, /* s6 22 */ size_t buflen) {
 	/* s2 18 */ _sceFsDevctlData *dd;
 	/* a1 5 */ int nsize;
 	/* s0 16 */ int ret;
-	/* -0xb0(sp) */ int ret_devctl;
-	/* -0xd0(sp) */ SemaParam sparam;
+	/* 0x30(sp) */ int ret_devctl;
+	/* 0x10(sp) */ SemaParam sparam;
 }
 
 /* 002842b0 000001e0 */ int sceSymlink(/* s0 16 */ char *existing, /* s1 17 */ char *new) {
 	/* s2 18 */ _sceFsSymlinkData *rd;
 	/* a1 5 */ int nsize;
 	/* s0 16 */ int ret;
-	/* -0x90(sp) */ int ret_link;
-	/* -0xb0(sp) */ SemaParam sparam;
+	/* 0x30(sp) */ int ret_link;
+	/* 0x10(sp) */ SemaParam sparam;
 }
 
 /* 00284490 000001c8 */ int sceReadlink(/* s1 17 */ char *path, /* s5 21 */ char *buf, /* s0 16 */ size_t bufsize) {
 	/* s2 18 */ _sceFsReadlinkData *rd;
 	/* a1 5 */ int nsize;
 	/* s0 16 */ int ret;
-	/* -0xa0(sp) */ int ret_link;
-	/* -0xc0(sp) */ SemaParam sparam;
+	/* 0x30(sp) */ int ret_link;
+	/* 0x10(sp) */ SemaParam sparam;
 }
 
 // *****************************************************************************
@@ -32585,7 +33186,7 @@
 	/* v0 2 */ int ret;
 }
 
-/* 00284f78 00000208 */ int sceSifStopModule(/* s3 19 */ int modid, /* s1 17 */ int args, /* s0 16 */ char *argp) {
+/* 00284f78 00000208 */ int sceSifStopModule(/* s3 19 */ int modid, /* s1 17 */ int args, /* s0 16 */ char *argp, /* s6 22 */ int *result) {
 	/* v0 2 */ int ret;
 }
 
@@ -32594,23 +33195,23 @@
 /* 002852b0 00000090 */ int sceSifSearchModuleByAddress(/* s1 17 */ void *addr) {}
 
 /* 00285340 0000001c */ int sceSifLoadModuleBuffer(/* a0 4 */ void *addr, /* a1 5 */ int args, /* a2 6 */ char *argp) {
-	/* -0x20(sp) */ int r;
+	/* 0x0(sp) */ int r;
 }
 
-/* 00285360 0000001c */ int sceSifLoadStartModuleBuffer(/* a0 4 */ void *addr, /* a1 5 */ int args, /* a2 6 */ char *argp) {}
+/* 00285360 0000001c */ int sceSifLoadStartModuleBuffer(/* a0 4 */ void *addr, /* a1 5 */ int args, /* a2 6 */ char *argp, /* a3 7 */ int *result) {}
 
-/* 00285380 00000224 */ static int _sceSifLoadModule(/* s1 17 */ char *filename, /* s2 18 */ int args, /* s0 16 */ char *argp, /* s3 19 */ unsigned int fno) {
+/* 00285380 00000224 */ static int _sceSifLoadModule(/* s1 17 */ char *filename, /* s2 18 */ int args, /* s0 16 */ char *argp, /* s4 20 */ int *result, /* s3 19 */ unsigned int fno) {
 	/* v0 2 */ int ret;
 }
 
 /* 002855a8 00000020 */ int sceSifLoadModule(/* a0 4 */ char *filename, /* a1 5 */ int args, /* a2 6 */ char *argp) {
-	/* -0x20(sp) */ int r;
+	/* 0x0(sp) */ int r;
 }
 
-/* 002855c8 0000001c */ int sceSifLoadStartModule(/* a0 4 */ char *filename, /* a1 5 */ int args, /* a2 6 */ char *argp) {}
+/* 002855c8 0000001c */ int sceSifLoadStartModule(/* a0 4 */ char *filename, /* a1 5 */ int args, /* a2 6 */ char *argp, /* a3 7 */ int *result) {}
 /* 002855e8 00000104 */ static int _sceSifLoadElfPart(/* s0 16 */ char *filename, /* s2 18 */ char *secname, /* s4 20 */ sceExecData *data, /* s3 19 */ unsigned int fno) {}
-/* 002856f0 0000001c */ int sceSifLoadElfPart(/* a0 4 */ char *filename, /* a1 5 */ char *secname) {}
-/* 00285710 00000028 */ int sceSifLoadElf(/* a0 4 */ char *filename) {}
+/* 002856f0 0000001c */ int sceSifLoadElfPart(/* a0 4 */ char *filename, /* a1 5 */ char *secname, /* a2 6 */ sceExecData *data) {}
+/* 00285710 00000028 */ int sceSifLoadElf(/* a0 4 */ char *filename, /* a2 6 */ sceExecData *data) {}
 /* 00285738 000000ec */ int sceSifGetIopAddr(/* s3 19 */ void *addr, /* s2 18 */ void *val, /* s0 16 */ unsigned int type) {}
 /* 00285828 000000dc */ int sceSifSetIopAddr(/* s2 18 */ void *addr, /* s1 17 */ void *val, /* s0 16 */ unsigned int type) {}
 
@@ -32619,7 +33220,7 @@
 // *****************************************************************************
 
 /* 00285908 00000154 */ int sceSifResetIop(/* s1 17 */ char *arg, /* s0 16 */ int flag) {
-	/* -0x40(sp) */ sceSifDmaData dmad;
+	/* 0x0(sp) */ sceSifDmaData dmad;
 	/* t3 11 */ unsigned int addr;
 	/* t1 9 */ int i;
 }
@@ -32628,7 +33229,7 @@
 /* 00285a88 00000050 */ int sceSifSyncIop() {}
 
 /* 00285ad8 00000110 */ int sceSifRebootIop(/* s0 16 */ char *fn) {
-	/* -0x80(sp) */ char buf[80];
+	/* 0x0(sp) */ char buf[80];
 	/* v1 3 */ char *d;
 	/* s1 17 */ char *s;
 	/* a0 4 */ char *l;
@@ -32646,7 +33247,7 @@
 
 /* 00285cd0 00000010 */ static int Copy(/* a0 4 */ u_int *dst, /* a1 5 */ u_int *src, /* a2 6 */ u_int size) {}
 
-/* 00285ce0 00000038 */ static int kCopy(/* a1 5 */ u_int *src, /* a2 6 */ u_int size) {
+/* 00285ce0 00000038 */ static int kCopy(/* a0 4 */ u_int *dst, /* a1 5 */ u_int *src, /* a2 6 */ u_int size) {
 	/* a3 7 */ int i;
 }
 
@@ -32706,14 +33307,14 @@
 // *****************************************************************************
 
 /* 002864d0 00000048 */ static void supplement_crt0() {
-	/* -0x50(sp) */ SemaParam libc_sema;
-	/* -0x30(sp) */ SemaParam eh_sema;
+	/* 0x0(sp) */ SemaParam libc_sema;
+	/* 0x20(sp) */ SemaParam eh_sema;
 }
 
 /* 00286518 0000000c */ int __sceKernlGetEhSemaId() {}
 /* 00286528 00000010 */ static int Copy(/* a0 4 */ u_int *dst, /* a1 5 */ u_int *src, /* a2 6 */ u_int size) {}
 
-/* 00286538 00000038 */ static int kCopy(/* a1 5 */ u_int *src, /* a2 6 */ u_int size) {
+/* 00286538 00000038 */ static int kCopy(/* a0 4 */ u_int *dst, /* a1 5 */ u_int *src, /* a2 6 */ u_int size) {
 	/* a3 7 */ int i;
 }
 
@@ -32721,7 +33322,7 @@
 /* 002865b0 00000010 */ static void* FindAddress(/* a0 4 */ u_int *start, /* a1 5 */ u_int *end, /* a2 6 */ int value) {}
 
 /* 002865c0 00000034 */ void* GetSystemCallEntry(/* a0 4 */ int no) {
-	/* -0x20(sp) */ u_int addr;
+	/* 0x0(sp) */ u_int addr;
 }
 
 /* 002865f8 000000fc */ static void InitSystemCallTableAddress() {
@@ -32739,15 +33340,15 @@
 /* 00286760 00000010 */ static void setup(/* a0 4 */ int n, /* a1 5 */ void (*f)(/* parameters unknown */)) {}
 /* 00286770 00000010 */ static int Copy(/* a0 4 */ u_int *dst, /* a1 5 */ u_int *src, /* a2 6 */ u_int size) {}
 
-/* 00286780 00000038 */ static int kCopy(/* a1 5 */ u_int *src, /* a2 6 */ u_int size) {
+/* 00286780 00000038 */ static int kCopy(/* a0 4 */ u_int *dst, /* a1 5 */ u_int *src, /* a2 6 */ u_int size) {
 	/* a3 7 */ int i;
 }
 
 /* 002867b8 00000010 */ static void* GetEntryAddress(/* a0 4 */ int id) {}
 
 /* 002867c8 00000068 */ static int PatchIsNeeded() {
-	/* -0x2c(sp) */ OsdConfigParam p;
-	/* -0x30(sp) */ OsdConfigParam back;
+	/* 0x4(sp) */ OsdConfigParam p;
+	/* 0x0(sp) */ OsdConfigParam back;
 }
 
 /* 00286830 000000ac */ void InitExecPS2() {
@@ -32770,14 +33371,14 @@
 	/* s2 18 */ int i;
 	/* s1 17 */ int len;
 	/* s3 19 */ char **ppkArgv;
-	/* -0x80(sp) */ char *p;
+	/* 0x0(sp) */ char *p;
 	/* s5 21 */ char *ret;
 }
 
 /* 00286a48 00000008 */ static void TerminateLibrary() {}
 /* 00286a50 00000070 */ int ExecPS2(/* s1 17 */ void *addr, /* s2 18 */ void *gp, /* s0 16 */ int argc, /* a3 7 */ char **argv) {}
 
-/* 00286ac0 00000048 */ void LoadExecPS2(/* a0 4 */ char *name, /* s1 17 */ int argc) {
+/* 00286ac0 00000048 */ void LoadExecPS2(/* a0 4 */ char *name, /* s1 17 */ int argc, /* a2 6 */ char **args) {
 	/* s0 16 */ char *kName;
 }
 
@@ -32791,7 +33392,7 @@
 /* 00286b80 00000010 */ static void setup(/* a0 4 */ int n, /* a1 5 */ void (*f)(/* parameters unknown */)) {}
 /* 00286b90 00000010 */ static int Copy(/* a0 4 */ u_int *dst, /* a1 5 */ u_int *src, /* a2 6 */ u_int size) {}
 
-/* 00286ba0 00000038 */ static int kCopy(/* a1 5 */ u_int *src, /* a2 6 */ u_int size) {
+/* 00286ba0 00000038 */ static int kCopy(/* a0 4 */ u_int *dst, /* a1 5 */ u_int *src, /* a2 6 */ u_int size) {
 	/* a3 7 */ int i;
 }
 
@@ -32903,7 +33504,7 @@
 
 /* 00287818 00000050 */ int iGetTimerUsedUnusedCounters(/* a0 4 */ int *pnUsed, /* a1 5 */ int *pnUnused) {}
 
-/* 00287868 0000005c */ int GetTimerUsedUnusedCounters(/* s1 17 */ int *pnUnused) {
+/* 00287868 0000005c */ int GetTimerUsedUnusedCounters(/* s0 16 */ int *pnUsed, /* s1 17 */ int *pnUnused) {
 	/* s0 16 */ int res;
 	/* s2 18 */ int intr;
 }
@@ -32992,14 +33593,19 @@
 
 /* 00288208 000000f0 */ int iSetTimerAlarm(/* s5 21 */ u_long ulClock, /* s3 19 */ u_long (*cbHandler)(/* parameters unknown */), /* s4 20 */ void *arg) {
 	/* s1 17 */ int counterid;
+	/* s0 16 */ ALARM *pAlarm;
 }
 
 /* 002882f8 000000a8 */ int ReleaseTimerAlarm(/* s0 16 */ int id) {
 	/* s2 18 */ int intr;
+	/* s1 17 */ ALARM *pAlarm;
+	/* s1 17 */ ALARM *pAlarm;
 }
 
 /* 002883a0 00000078 */ int iReleaseTimerAlarm(/* a0 4 */ int id) {
+	/* s0 16 */ ALARM *pAlarm;
 	/* a0 4 */ int res;
+	/* s0 16 */ ALARM *pAlarm;
 }
 
 // *****************************************************************************
@@ -33044,8 +33650,8 @@
 /* 00288688 00000090 */ void VSync() {}
 
 /* 00288718 000000a4 */ long int VSync2() {
-	/* -0x20(sp) */ int flag;
-	/* -0x18(sp) */ long int csr;
+	/* 0x0(sp) */ int flag;
+	/* 0x8(sp) */ long int csr;
 }
 
 /* 002887c0 0000007c */ int write(/* a0 4 */ int fd, /* s1 17 */ char *buf, /* s2 18 */ int nbytes) {}
@@ -33067,7 +33673,7 @@
 /* 002889b0 00000014 */ int fstat(/* a0 4 */ int fd, /* a1 5 */ stat *buf) {}
 /* 002889c8 00000008 */ int getpid() {}
 /* 002889d0 00000028 */ int kill(/* a0 4 */ int pid, /* a1 5 */ int sig) {}
-/* 002889f8 00000028 */ int stat(/* a0 4 */ char *path) {}
+/* 002889f8 00000028 */ int stat(/* a0 4 */ char *path, /* a1 5 */ stat *buf) {}
 /* 00288a20 00000028 */ int unlink(/* a0 4 */ char *path) {}
 
 // *****************************************************************************
@@ -33075,51 +33681,51 @@
 // *****************************************************************************
 
 /* 00288a48 00000044 */ int sceDeci2Open(/* a0 4 */ short unsigned int protocol, /* a1 5 */ void *opt, /* a2 6 */ void (*handler)(/* parameters unknown */)) {
-	/* -0x20(sp) */ u_int args[4];
+	/* 0x0(sp) */ u_int args[4];
 }
 
 /* 00288a90 00000024 */ int sceDeci2Close(/* a0 4 */ int s) {
-	/* -0x20(sp) */ u_int args[1];
+	/* 0x0(sp) */ u_int args[1];
 }
 
 /* 00288ab8 00000030 */ int sceDeci2ReqSend(/* a0 4 */ int s, /* a1 5 */ char dest) {
-	/* -0x20(sp) */ u_int args[2];
+	/* 0x0(sp) */ u_int args[2];
 }
 
 /* 00288ae8 00000024 */ void sceDeci2Poll(/* a0 4 */ int s) {
-	/* -0x20(sp) */ u_int args[1];
+	/* 0x0(sp) */ u_int args[1];
 }
 
 /* 00288b10 00000030 */ int sceDeci2GrpOpen(/* a0 4 */ unsigned char grp, /* a1 5 */ void *opt, /* a2 6 */ int (*handler)(/* parameters unknown */)) {
-	/* -0x30(sp) */ u_int args[5];
+	/* 0x0(sp) */ u_int args[5];
 }
 
 /* 00288b40 00000024 */ int sceDeci2GrpClose(/* a0 4 */ int g) {
-	/* -0x20(sp) */ u_int args[1];
+	/* 0x0(sp) */ u_int args[1];
 }
 
 /* 00288b68 00000034 */ int sceDeci2ExRecv(/* a0 4 */ int s, /* v0 2 */ void *buf, /* a2 6 */ u_short len) {
-	/* -0x20(sp) */ u_int args[3];
+	/* 0x0(sp) */ u_int args[3];
 }
 
 /* 00288ba0 00000034 */ int sceDeci2ExSend(/* a0 4 */ int s, /* v0 2 */ void *buf, /* a2 6 */ u_short len) {
-	/* -0x20(sp) */ u_int args[3];
+	/* 0x0(sp) */ u_int args[3];
 }
 
 /* 00288bd8 00000030 */ int sceDeci2ExReqSend(/* a0 4 */ int s, /* a1 5 */ char dest) {
-	/* -0x20(sp) */ u_int args[2];
+	/* 0x0(sp) */ u_int args[2];
 }
 
 /* 00288c08 00000024 */ int sceDeci2ExLock(/* a0 4 */ int s) {
-	/* -0x20(sp) */ u_int args[1];
+	/* 0x0(sp) */ u_int args[1];
 }
 
 /* 00288c30 00000024 */ int sceDeci2ExUnLock(/* a0 4 */ int s) {
-	/* -0x20(sp) */ u_int args[1];
+	/* 0x0(sp) */ u_int args[1];
 }
 
 /* 00288c58 00000024 */ int kputs(/* a0 4 */ char *str) {
-	/* -0x20(sp) */ u_int args[1];
+	/* 0x0(sp) */ u_int args[1];
 }
 
 // *****************************************************************************
@@ -33135,8 +33741,10 @@
 
 /* 00288d28 00000194 */ static void sceTtyHandler(/* a0 4 */ int event, /* s0 16 */ int param, /* s1 17 */ TTYINFO *ti) {
 	/* s0 16 */ int param;
+	/* s1 17 */ TTYINFO *ti;
 	/* s0 16 */ int n;
 	/* s2 18 */ sceDeci2Hdr *deci;
+	/* s1 17 */ TTYINFO *ti;
 	/* a1 5 */ int sz;
 }
 
@@ -33744,7 +34352,7 @@
 // *****************************************************************************
 
 /* 002989b8 000000d4 */ float cosf(/* f0 38 */ float x) {
-	/* -0x30(sp) */ float y[2];
+	/* 0x0(sp) */ float y[2];
 	/* v0 2 */ __int32_t ix;
 }
 
@@ -33777,7 +34385,7 @@
 // *****************************************************************************
 
 /* 00298ad0 000000e8 */ float sinf(/* f0 38 */ float x) {
-	/* -0x30(sp) */ float y[2];
+	/* 0x0(sp) */ float y[2];
 	/* v0 2 */ __int32_t ix;
 }
 
@@ -33786,7 +34394,7 @@
 // *****************************************************************************
 
 /* 00298bb8 00000078 */ float tanf(/* f0 38 */ float x) {
-	/* -0x30(sp) */ float y[2];
+	/* 0x0(sp) */ float y[2];
 	/* v1 3 */ __int32_t ix;
 }
 
@@ -33932,7 +34540,7 @@
 	/* f5 43 */ float t;
 	/* f4 42 */ float r;
 	/* f6 44 */ float fn;
-	/* -0x40(sp) */ float tx[3];
+	/* 0x0(sp) */ float tx[3];
 	/* v1 3 */ __int32_t i;
 	/* a0 4 */ __int32_t j;
 	/* a1 5 */ __int32_t n;
@@ -33973,14 +34581,14 @@
 // FILE -- /usr/local/sce/ee/gcc/src/newlib/libm/math/kf_rem_pio2.c
 // *****************************************************************************
 
-/* 0029a528 00000864 */ int __kernel_rem_pio2f(/* -0x70(sp) */ float *x, /* fp 30 */ float *y, /* a2 6 */ int e0, /* a3 7 */ int nx, /* -0x6c(sp) */ int prec, /* -0x68(sp) */ __int32_t *ipio2) {
+/* 0029a528 00000864 */ int __kernel_rem_pio2f(/* 0x140(sp) */ float *x, /* fp 30 */ float *y, /* a2 6 */ int e0, /* a3 7 */ int nx, /* 0x144(sp) */ int prec, /* 0x148(sp) */ __int32_t *ipio2) {
 	/* s0 16 */ __int32_t jz;
 	/* s2 18 */ __int32_t jx;
 	/* s7 23 */ __int32_t jv;
 	/* s4 20 */ __int32_t jp;
 	/* a3 7 */ __int32_t carry;
 	/* s5 21 */ __int32_t n;
-	/* -0x1b0(sp) */ __int32_t iq[20];
+	/* 0x0(sp) */ __int32_t iq[20];
 	/* a2 6 */ __int32_t i;
 	/* a1 5 */ __int32_t j;
 	/* t0 8 */ __int32_t k;
@@ -33989,9 +34597,9 @@
 	/* s6 22 */ __int32_t ih;
 	/* f20 58 */ float z;
 	/* f2 40 */ float fw;
-	/* -0x160(sp) */ float f[20];
-	/* -0x110(sp) */ float fq[20];
-	/* -0xc0(sp) */ float q[20];
+	/* 0x50(sp) */ float f[20];
+	/* 0xa0(sp) */ float fq[20];
+	/* 0xf0(sp) */ float q[20];
 }
 
 // *****************************************************************************
@@ -34138,16 +34746,16 @@
 /* 0029d838 00000128 */ void __sjpopnthrow() {}
 /* 0029d960 00000048 */ int __eh_rtime_match(/* s0 16 */ void *rtime) {}
 /* 0029d9a8 00000008 */ short int __get_eh_table_version(/* a0 4 */ exception_descriptor *table) {}
-/* 0029d9b0 00000008 */ short int __get_eh_table_language() {}
+/* 0029d9b0 00000008 */ short int __get_eh_table_language(/* a0 4 */ exception_descriptor *table) {}
 /* 0029d9b8 000000d0 */ static void* old_find_exception_handler(/* a0 4 */ void *pc, /* a1 5 */ old_exception_table *table) {}
-/* 0029da88 0000013c */ static void* find_exception_handler(/* s1 17 */ void *pc, /* s3 19 */ __eh_info *eh_info, /* a3 7 */ int rethrow, /* s6 22 */ int *cleanup) {}
+/* 0029da88 0000013c */ static void* find_exception_handler(/* s1 17 */ void *pc, /* s4 20 */ exception_descriptor *table, /* s3 19 */ __eh_info *eh_info, /* a3 7 */ int rethrow, /* s6 22 */ int *cleanup) {}
 /* 0029dbc8 00000090 */ static word_type* get_reg_addr(/* a2 6 */ unsigned int reg, /* a1 5 */ frame_state *udata, /* a2 6 */ frame_state *sub_udata) {}
-/* 0029dc58 00000064 */ static void copy_reg(/* s1 17 */ unsigned int reg, /* s0 16 */ frame_state *target_udata) {}
-/* 0029dcc0 000000b0 */ static void* next_stack_level(/* a0 4 */ void *pc, /* s0 16 */ frame_state *caller_udata) {}
+/* 0029dc58 00000064 */ static void copy_reg(/* s1 17 */ unsigned int reg, /* a1 5 */ frame_state *udata, /* s0 16 */ frame_state *target_udata) {}
+/* 0029dcc0 000000b0 */ static void* next_stack_level(/* a0 4 */ void *pc, /* s1 17 */ frame_state *udata, /* s0 16 */ frame_state *caller_udata) {}
 /* 0029dd70 00000008 */ void __unwinding_cleanup() {}
-/* 0029dd78 0000038c */ static void* throw_helper(/* s2 18 */ eh_context *eh, /* s0 16 */ void *pc, /* s6 22 */ frame_state *my_udata, /* -0x6c(sp) */ long int *offset_p) {}
+/* 0029dd78 0000038c */ static void* throw_helper(/* s2 18 */ eh_context *eh, /* s0 16 */ void *pc, /* s6 22 */ frame_state *my_udata, /* 0xd84(sp) */ long int *offset_p) {}
 /* 0029e108 00000150 */ void __throw() {}
-/* 0029e258 00000160 */ void __rethrow(/* -0x118(sp) */ void *index) {}
+/* 0029e258 00000160 */ void __rethrow(/* 0x488(sp) */ void *index) {}
 
 // *****************************************************************************
 // FILE -- /usr/local/sce/ee/gcc/build/gcc/fp-bit.c
@@ -34220,7 +34828,7 @@
 /* 0029f550 000000bc */ void* __deregister_frame_info(/* s1 17 */ void *begin) {}
 /* 0029f610 00000020 */ void __deregister_frame(/* a0 4 */ void *begin) {}
 /* 0029f630 00000040 */ static size_t count_fdes(/* a0 4 */ fde *this_fde) {}
-/* 0029f670 0000008c */ static void add_fdes(/* a0 4 */ fde *this_fde, /* a2 6 */ void **beg_ptr, /* a3 7 */ void **end_ptr) {}
+/* 0029f670 0000008c */ static void add_fdes(/* a0 4 */ fde *this_fde, /* a1 5 */ fde_accumulator *accu, /* a2 6 */ void **beg_ptr, /* a3 7 */ void **end_ptr) {}
 /* 0029f700 00000058 */ static fde* search_fdes(/* a0 4 */ fde *this_fde, /* a1 5 */ void *pc) {}
 /* 0029f758 00000168 */ static void frame_init(/* s2 18 */ object *ob) {}
 /* 0029f8c0 000001a8 */ static fde* find_fde(/* s2 18 */ void *pc) {}
@@ -34240,33 +34848,33 @@
 /* 002a0360 0000001c */ void __rtti_user(/* a0 4 */ void *addr, /* a1 5 */ char *name) {}
 
 /* 002a0380 00000078 */ int __user_type_info::upcast(/* t0 8 */ __user_type_info *this, /* a1 5 */ type_info &target, /* v0 2 */ void *objptr, /* s0 16 */ void **adjptr) {
-	/* -0x20(sp) */ upcast_result result;
+	/* 0x0(sp) */ upcast_result result;
 }
 
 /* 002a03f8 00000148 */ void* __user_type_info::dyncast(/* v0 2 */ __user_type_info *this, /* s0 16 */ int boff, /* s2 18 */ type_info &target, /* a3 7 */ void *objptr, /* s3 19 */ type_info &subtype, /* s1 17 */ void *subptr) {
-	/* -0x40(sp) */ dyncast_result result;
+	/* 0x0(sp) */ dyncast_result result;
 }
 
 /* 002a0540 00000060 */ bool __user_type_info::do_upcast(/* a0 4 */ __user_type_info *this, /* s2 18 */ sub_kind access_path, /* a2 6 */ type_info &target, /* s1 17 */ void *objptr, /* s0 16 */ upcast_result &result) {}
 /* 002a05a0 00000098 */ bool __user_type_info::do_dyncast(/* s1 17 */ __user_type_info *this, /* s3 19 */ sub_kind access_path, /* s2 18 */ type_info &target, /* s4 20 */ void *objptr, /* a1 5 */ type_info &subtype, /* t2 10 */ void *subptr, /* s0 16 */ dyncast_result &result) {}
 /* 002a0638 00000014 */ sub_kind __user_type_info::do_find_public_subobj(/* a0 4 */ __user_type_info *this, /* a3 7 */ void *objptr, /* t0 8 */ void *subptr) {}
 /* 002a0650 000000ac */ bool __si_type_info::do_upcast(/* s4 20 */ __si_type_info *this, /* s2 18 */ sub_kind access_path, /* s0 16 */ type_info &target, /* s3 19 */ void *objptr, /* s1 17 */ upcast_result &result) {}
-/* 002a0700 00000120 */ bool __si_type_info::do_dyncast(/* s1 17 */ int boff, /* s0 16 */ sub_kind access_path, /* s6 22 */ type_info &target, /* s3 19 */ void *objptr, /* s7 23 */ type_info &subtype, /* s5 21 */ void *subptr, /* s2 18 */ dyncast_result &result) {}
-/* 002a0820 00000098 */ sub_kind __si_type_info::do_find_public_subobj(/* s2 18 */ int boff, /* s0 16 */ type_info &subtype, /* s3 19 */ void *objptr, /* s4 20 */ void *subptr) {}
+/* 002a0700 00000120 */ bool __si_type_info::do_dyncast(/* s4 20 */ __si_type_info *this, /* s1 17 */ int boff, /* s0 16 */ sub_kind access_path, /* s6 22 */ type_info &target, /* s3 19 */ void *objptr, /* s7 23 */ type_info &subtype, /* s5 21 */ void *subptr, /* s2 18 */ dyncast_result &result) {}
+/* 002a0820 00000098 */ sub_kind __si_type_info::do_find_public_subobj(/* s1 17 */ __si_type_info *this, /* s2 18 */ int boff, /* s0 16 */ type_info &subtype, /* s3 19 */ void *objptr, /* s4 20 */ void *subptr) {}
 
 /* 002a08b8 0000023c */ bool __class_type_info::do_upcast(/* s3 19 */ __class_type_info *this, /* s4 20 */ sub_kind access_path, /* s5 21 */ type_info &target, /* s6 22 */ void *objptr, /* s0 16 */ upcast_result &result) {
 	/* s2 18 */ size_t i;
-	/* -0x60(sp) */ upcast_result result2;
+	/* 0x0(sp) */ upcast_result result2;
 	/* a0 4 */ void *p;
 	/* a1 5 */ sub_kind sub_access;
 	/* v0 2 */ bool is_virtual;
 	/* v1 3 */ myint32 offset;
 }
 
-/* 002a0af8 00000440 */ bool __class_type_info::do_dyncast(/* s4 20 */ int boff, /* -0x6c(sp) */ sub_kind access_path, /* s7 23 */ type_info &target, /* fp 30 */ void *objptr, /* -0x68(sp) */ type_info &subtype, /* s6 22 */ void *subptr, /* s2 18 */ dyncast_result &result) {
+/* 002a0af8 00000440 */ bool __class_type_info::do_dyncast(/* 0x10(sp) */ __class_type_info *this, /* s4 20 */ int boff, /* 0x14(sp) */ sub_kind access_path, /* s7 23 */ type_info &target, /* fp 30 */ void *objptr, /* 0x18(sp) */ type_info &subtype, /* s6 22 */ void *subptr, /* s2 18 */ dyncast_result &result) {
 	/* t5 13 */ bool result_ambig;
 	/* s5 21 */ size_t i;
-	/* -0x80(sp) */ dyncast_result result2;
+	/* 0x0(sp) */ dyncast_result result2;
 	/* a2 6 */ sub_kind sub_access;
 	/* a1 5 */ bool result2_ambig;
 	/* v0 2 */ bool is_virtual;
@@ -34276,37 +34884,37 @@
 	/* a3 7 */ void *objptr;
 }
 
-/* 002a0f38 00000164 */ sub_kind __class_type_info::do_find_public_subobj(/* s4 20 */ int boff, /* s5 21 */ type_info &subtype, /* s1 17 */ void *objptr, /* s6 22 */ void *subptr) {
+/* 002a0f38 00000164 */ sub_kind __class_type_info::do_find_public_subobj(/* s3 19 */ __class_type_info *this, /* s4 20 */ int boff, /* s5 21 */ type_info &subtype, /* s1 17 */ void *objptr, /* s6 22 */ void *subptr) {
 	/* s0 16 */ size_t i;
 	/* a2 6 */ sub_kind base_kind;
 	/* v0 2 */ myint32 offset;
 }
 
-/* 00369578 00000040 */ type_info& type_info type_info function() {}
-/* 00369578 00000014 */ type_info* type_info::type_info(/* a0 4 */ type_info *this, /* a1 5 */ char *__n) {}
-/* 00369578 00000008 */ char* type_info::name(/* a0 4 */ type_info *this) {}
-/* 00369578 00000020 */ bool type_info::operator!=(/* a0 4 */ type_info *this, /* a1 5 */ type_info &__arg) {}
-/* 00369578 00000050 */ type_info& bad_cast type_info function() {}
-/* 00369578 00000010 */ bad_cast* bad_cast::bad_cast(/* a0 4 */ bad_cast *this) {}
-/* 00369578 00000034 */ void bad_cast::~bad_cast(/* a0 4 */ bad_cast *this, /* a1 5 */ int __in_chrg) {}
-/* 00369578 00000050 */ type_info& bad_typeid type_info function() {}
-/* 00369578 00000010 */ bad_typeid* bad_typeid::bad_typeid(/* a0 4 */ bad_typeid *this) {}
-/* 00369578 00000034 */ void bad_typeid::~bad_typeid(/* a0 4 */ bad_typeid *this, /* a1 5 */ int __in_chrg) {}
-/* 00369578 00000064 */ void __user_type_info::~__user_type_info(/* s1 17 */ __user_type_info *this, /* s0 16 */ int __in_chrg) {}
-/* 00369578 00000050 */ type_info& __user_type_info type_info function() {}
-/* 00369578 00000014 */ __user_type_info* __user_type_info::__user_type_info(/* a0 4 */ __user_type_info *this, /* a1 5 */ char *n) {}
-/* 00369578 0000000c */ bool __user_type_info::contained_p(/* a0 4 */ sub_kind access_path) {}
-/* 00369578 0000000c */ bool __user_type_info::contained_public_p(/* a0 4 */ sub_kind access_path) {}
-/* 00369578 00000010 */ bool __user_type_info::contained_nonpublic_p(/* a0 4 */ sub_kind access_path) {}
-/* 00369578 00000010 */ bool __user_type_info::contained_nonvirtual_p(/* a0 4 */ sub_kind access_path) {}
-/* 00369578 00000010 */ bool __user_type_info::contained_virtual_p(/* a0 4 */ sub_kind access_path) {}
-/* 00369578 00000068 */ sub_kind __user_type_info::find_public_subobj(/* t2 10 */ __user_type_info *this, /* t1 9 */ int boff, /* a2 6 */ type_info &subtype, /* v1 3 */ void *objptr, /* v0 2 */ void *subptr) {}
-/* 00369578 00000064 */ void __si_type_info::~__si_type_info(/* s1 17 */ __si_type_info *this, /* s0 16 */ int __in_chrg) {}
-/* 00369578 00000050 */ type_info& __si_type_info type_info function() {}
-/* 00369578 00000018 */ __si_type_info* __si_type_info::__si_type_info(/* a0 4 */ __si_type_info *this, /* a1 5 */ char *n, /* a2 6 */ __user_type_info &b) {}
-/* 00369578 00000064 */ void __class_type_info::~__class_type_info(/* s1 17 */ __class_type_info *this, /* s0 16 */ int __in_chrg) {}
-/* 00369578 00000050 */ type_info& __class_type_info type_info function() {}
-/* 00369578 0000001c */ __class_type_info* __class_type_info::__class_type_info(/* a0 4 */ __class_type_info *this, /* a1 5 */ char *name, /* a3 7 */ size_t bn) {}
+/* ffffffff 00000040 */ type_info& type_info type_info function() {}
+/* ffffffff 00000014 */ type_info* type_info::type_info(/* a0 4 */ type_info *this, /* a1 5 */ char *__n) {}
+/* ffffffff 00000008 */ char* type_info::name(/* a0 4 */ type_info *this) {}
+/* ffffffff 00000020 */ bool type_info::operator!=(/* a0 4 */ type_info *this, /* a1 5 */ type_info &__arg) {}
+/* ffffffff 00000050 */ type_info& bad_cast type_info function() {}
+/* ffffffff 00000010 */ bad_cast* bad_cast::bad_cast(/* a0 4 */ bad_cast *this) {}
+/* ffffffff 00000034 */ void bad_cast::~bad_cast(/* a0 4 */ bad_cast *this, /* a1 5 */ int __in_chrg) {}
+/* ffffffff 00000050 */ type_info& bad_typeid type_info function() {}
+/* ffffffff 00000010 */ bad_typeid* bad_typeid::bad_typeid(/* a0 4 */ bad_typeid *this) {}
+/* ffffffff 00000034 */ void bad_typeid::~bad_typeid(/* a0 4 */ bad_typeid *this, /* a1 5 */ int __in_chrg) {}
+/* ffffffff 00000064 */ void __user_type_info::~__user_type_info(/* s1 17 */ __user_type_info *this, /* s0 16 */ int __in_chrg) {}
+/* ffffffff 00000050 */ type_info& __user_type_info type_info function() {}
+/* ffffffff 00000014 */ __user_type_info* __user_type_info::__user_type_info(/* a0 4 */ __user_type_info *this, /* a1 5 */ char *n) {}
+/* ffffffff 0000000c */ bool __user_type_info::contained_p(/* a0 4 */ sub_kind access_path) {}
+/* ffffffff 0000000c */ bool __user_type_info::contained_public_p(/* a0 4 */ sub_kind access_path) {}
+/* ffffffff 00000010 */ bool __user_type_info::contained_nonpublic_p(/* a0 4 */ sub_kind access_path) {}
+/* ffffffff 00000010 */ bool __user_type_info::contained_nonvirtual_p(/* a0 4 */ sub_kind access_path) {}
+/* ffffffff 00000010 */ bool __user_type_info::contained_virtual_p(/* a0 4 */ sub_kind access_path) {}
+/* ffffffff 00000068 */ sub_kind __user_type_info::find_public_subobj(/* t2 10 */ __user_type_info *this, /* t1 9 */ int boff, /* a2 6 */ type_info &subtype, /* v1 3 */ void *objptr, /* v0 2 */ void *subptr) {}
+/* ffffffff 00000064 */ void __si_type_info::~__si_type_info(/* s1 17 */ __si_type_info *this, /* s0 16 */ int __in_chrg) {}
+/* ffffffff 00000050 */ type_info& __si_type_info type_info function() {}
+/* ffffffff 00000018 */ __si_type_info* __si_type_info::__si_type_info(/* a0 4 */ __si_type_info *this, /* a1 5 */ char *n, /* a2 6 */ __user_type_info &b) {}
+/* ffffffff 00000064 */ void __class_type_info::~__class_type_info(/* s1 17 */ __class_type_info *this, /* s0 16 */ int __in_chrg) {}
+/* ffffffff 00000050 */ type_info& __class_type_info type_info function() {}
+/* ffffffff 0000001c */ __class_type_info* __class_type_info::__class_type_info(/* a0 4 */ __class_type_info *this, /* a1 5 */ char *name, /* a2 6 */ base_info *bl, /* a3 7 */ size_t bn) {}
 
 // *****************************************************************************
 // FILE -- /usr/local/sce/ee/gcc/src/gcc/cp/tinfo2.cc
@@ -34323,14 +34931,17 @@
 	/* s3 19 */ cv cvfrom;
 	/* s2 18 */ cv cvto;
 	/* v0 2 */ __attr_type_info *at;
+	/* v0 2 */ __attr_type_info *at;
 	/* v0 2 */ __user_type_info *p;
 	/* s4 20 */ __pointer_type_info *pfr;
 	/* s3 19 */ __pointer_type_info *pto;
 	/* s6 22 */ bool constp;
+	/* v0 2 */ __attr_type_info *at;
+	/* v0 2 */ __attr_type_info *at;
 }
 
-/* 002a15d8 00000028 */ void* __throw_type_match_rtti(/* a1 5 */ void *throw_type_r, /* a2 6 */ void *objptr) {
-	/* -0x20(sp) */ void *ret;
+/* 002a15d8 00000028 */ void* __throw_type_match_rtti(/* a0 4 */ void *catch_type_r, /* a1 5 */ void *throw_type_r, /* a2 6 */ void *objptr) {
+	/* 0x0(sp) */ void *ret;
 }
 
 /* 002a1600 00000050 */ bool __is_pointer(/* v1 3 */ void *p) {
@@ -34338,45 +34949,103 @@
 }
 
 /* 002a1650 00000020 */ void __rtti_ptr(/* a0 4 */ void *addr, /* a1 5 */ char *n, /* a2 6 */ type_info *ti) {}
-/* 002a1670 00000024 */ void __rtti_attr(/* a0 4 */ void *addr, /* a2 6 */ int attrval, /* a3 7 */ type_info *ti) {}
+/* 002a1670 00000024 */ void __rtti_attr(/* a0 4 */ void *addr, /* a1 5 */ char *n, /* a2 6 */ int attrval, /* a3 7 */ type_info *ti) {}
 /* 002a1698 0000001c */ void __rtti_func(/* a0 4 */ void *addr, /* a1 5 */ char *name) {}
 /* 002a16b8 0000001c */ void __rtti_ptmf(/* a0 4 */ void *addr, /* a1 5 */ char *name) {}
 /* 002a16d8 0000001c */ void __rtti_ptmd(/* a0 4 */ void *addr, /* a1 5 */ char *name) {}
 /* 002a16f8 0000001c */ void __rtti_array(/* a0 4 */ void *addr, /* a1 5 */ char *name) {}
 /* 002a1718 00000088 */ void* __dynamic_cast(/* a0 4 */ type_info& (*from)(/* parameters unknown */), /* s1 17 */ type_info& (*to)(/* parameters unknown */), /* a2 6 */ int require_public, /* s3 19 */ void *address, /* s2 18 */ type_info& (*sub)(/* parameters unknown */), /* s4 20 */ void *subptr) {}
-/* 002a17a0 0000008c */ void* __dynamic_cast_2(/* s3 19 */ type_info& (*to)(/* parameters unknown */), /* s4 20 */ int boff, /* s5 21 */ void *address, /* s2 18 */ type_info& (*sub)(/* parameters unknown */), /* s6 22 */ void *subptr) {}
-/* 002a1830 00000034 */ type_info& void type_info function() {}
-/* 002a1868 00000034 */ type_info& long long type_info function() {}
-/* 002a18a0 00000034 */ type_info& long type_info function() {}
-/* 002a18d8 00000034 */ type_info& int type_info function() {}
-/* 002a1910 00000034 */ type_info& short type_info function() {}
-/* 002a1948 00000034 */ type_info& bool type_info function() {}
-/* 002a1980 00000034 */ type_info& char type_info function() {}
-/* 002a19b8 00000034 */ type_info& wchar_t type_info function() {}
-/* 002a19f0 00000034 */ type_info& long double type_info function() {}
-/* 002a1a28 00000034 */ type_info& double type_info function() {}
-/* 002a1a60 00000034 */ type_info& float type_info function() {}
-/* 002a1a98 00000034 */ type_info& unsigned int type_info function() {}
-/* 002a1ad0 00000034 */ type_info& unsigned long type_info function() {}
-/* 002a1b08 00000034 */ type_info& unsigned long long type_info function() {}
-/* 002a1b40 00000034 */ type_info& unsigned short type_info function() {}
-/* 002a1b78 00000034 */ type_info& unsigned char type_info function() {}
-/* 002a1bb0 00000034 */ type_info& signed char type_info function() {}
-/* 002a1be8 00000034 */ type_info& int128_t type_info function() {}
-/* 002a1c20 00000034 */ type_info& unsigned int128_t type_info function() {}
-/* 00369578 00000064 */ void __pointer_type_info::~__pointer_type_info(/* s1 17 */ __pointer_type_info *this, /* s0 16 */ int __in_chrg) {}
-/* 00369578 00000050 */ type_info& __pointer_type_info type_info function() {}
-/* 00369578 00000064 */ void __attr_type_info::~__attr_type_info(/* s1 17 */ __attr_type_info *this, /* s0 16 */ int __in_chrg) {}
-/* 00369578 00000050 */ type_info& __attr_type_info type_info function() {}
-/* 00369578 00000064 */ void __builtin_type_info::~__builtin_type_info(/* s1 17 */ __builtin_type_info *this, /* s0 16 */ int __in_chrg) {}
-/* 00369578 00000050 */ type_info& __builtin_type_info type_info function() {}
-/* 00369578 00000064 */ void __func_type_info::~__func_type_info(/* s1 17 */ __func_type_info *this, /* s0 16 */ int __in_chrg) {}
-/* 00369578 00000050 */ type_info& __func_type_info type_info function() {}
-/* 00369578 00000064 */ void __ptmf_type_info::~__ptmf_type_info(/* s1 17 */ __ptmf_type_info *this, /* s0 16 */ int __in_chrg) {}
-/* 00369578 00000050 */ type_info& __ptmf_type_info type_info function() {}
-/* 00369578 00000064 */ void __ptmd_type_info::~__ptmd_type_info(/* s1 17 */ __ptmd_type_info *this, /* s0 16 */ int __in_chrg) {}
-/* 00369578 00000050 */ type_info& __ptmd_type_info type_info function() {}
-/* 00369578 00000064 */ void __array_type_info::~__array_type_info(/* s1 17 */ __array_type_info *this, /* s0 16 */ int __in_chrg) {}
+/* 002a17a0 0000008c */ void* __dynamic_cast_2(/* a0 4 */ type_info& (*from)(/* parameters unknown */), /* s3 19 */ type_info& (*to)(/* parameters unknown */), /* s4 20 */ int boff, /* s5 21 */ void *address, /* s2 18 */ type_info& (*sub)(/* parameters unknown */), /* s6 22 */ void *subptr) {}
+
+/* 002a1830 00000034 */ type_info& void type_info function() {
+	/* v1 3 */ char *n;
+}
+
+/* 002a1868 00000034 */ type_info& long long type_info function() {
+	/* v1 3 */ char *n;
+}
+
+/* 002a18a0 00000034 */ type_info& long type_info function() {
+	/* v1 3 */ char *n;
+}
+
+/* 002a18d8 00000034 */ type_info& int type_info function() {
+	/* v1 3 */ char *n;
+}
+
+/* 002a1910 00000034 */ type_info& short type_info function() {
+	/* v1 3 */ char *n;
+}
+
+/* 002a1948 00000034 */ type_info& bool type_info function() {
+	/* v1 3 */ char *n;
+}
+
+/* 002a1980 00000034 */ type_info& char type_info function() {
+	/* v1 3 */ char *n;
+}
+
+/* 002a19b8 00000034 */ type_info& wchar_t type_info function() {
+	/* v1 3 */ char *n;
+}
+
+/* 002a19f0 00000034 */ type_info& long double type_info function() {
+	/* v1 3 */ char *n;
+}
+
+/* 002a1a28 00000034 */ type_info& double type_info function() {
+	/* v1 3 */ char *n;
+}
+
+/* 002a1a60 00000034 */ type_info& float type_info function() {
+	/* v1 3 */ char *n;
+}
+
+/* 002a1a98 00000034 */ type_info& unsigned int type_info function() {
+	/* v1 3 */ char *n;
+}
+
+/* 002a1ad0 00000034 */ type_info& unsigned long type_info function() {
+	/* v1 3 */ char *n;
+}
+
+/* 002a1b08 00000034 */ type_info& unsigned long long type_info function() {
+	/* v1 3 */ char *n;
+}
+
+/* 002a1b40 00000034 */ type_info& unsigned short type_info function() {
+	/* v1 3 */ char *n;
+}
+
+/* 002a1b78 00000034 */ type_info& unsigned char type_info function() {
+	/* v1 3 */ char *n;
+}
+
+/* 002a1bb0 00000034 */ type_info& signed char type_info function() {
+	/* v1 3 */ char *n;
+}
+
+/* 002a1be8 00000034 */ type_info& int128_t type_info function() {
+	/* v1 3 */ char *n;
+}
+
+/* 002a1c20 00000034 */ type_info& unsigned int128_t type_info function() {
+	/* v1 3 */ char *n;
+}
+
+/* ffffffff 00000064 */ void __pointer_type_info::~__pointer_type_info(/* s1 17 */ __pointer_type_info *this, /* s0 16 */ int __in_chrg) {}
+/* ffffffff 00000050 */ type_info& __pointer_type_info type_info function() {}
+/* ffffffff 00000064 */ void __attr_type_info::~__attr_type_info(/* s1 17 */ __attr_type_info *this, /* s0 16 */ int __in_chrg) {}
+/* ffffffff 00000050 */ type_info& __attr_type_info type_info function() {}
+/* ffffffff 00000064 */ void __builtin_type_info::~__builtin_type_info(/* s1 17 */ __builtin_type_info *this, /* s0 16 */ int __in_chrg) {}
+/* ffffffff 00000050 */ type_info& __builtin_type_info type_info function() {}
+/* ffffffff 00000064 */ void __func_type_info::~__func_type_info(/* s1 17 */ __func_type_info *this, /* s0 16 */ int __in_chrg) {}
+/* ffffffff 00000050 */ type_info& __func_type_info type_info function() {}
+/* ffffffff 00000064 */ void __ptmf_type_info::~__ptmf_type_info(/* s1 17 */ __ptmf_type_info *this, /* s0 16 */ int __in_chrg) {}
+/* ffffffff 00000050 */ type_info& __ptmf_type_info type_info function() {}
+/* ffffffff 00000064 */ void __ptmd_type_info::~__ptmd_type_info(/* s1 17 */ __ptmd_type_info *this, /* s0 16 */ int __in_chrg) {}
+/* ffffffff 00000050 */ type_info& __ptmd_type_info type_info function() {}
+/* ffffffff 00000064 */ void __array_type_info::~__array_type_info(/* s1 17 */ __array_type_info *this, /* s0 16 */ int __in_chrg) {}
 /* 00369578 00000050 */ type_info& __array_type_info type_info function() {}
 
 // *****************************************************************************
@@ -34417,16 +35086,18 @@
 
 /* 002a1e58 00000128 */ void __cp_pop_exception(/* s0 16 */ cp_eh_info *p) {
 	/* a2 6 */ cp_eh_info **stack;
+	/* a0 4 */ cp_eh_info **q;
 }
 
 /* 002a1f80 00000060 */ void __uncatch_exception() {
 	/* a1 5 */ cp_eh_info **stack;
+	/* v1 3 */ cp_eh_info **q;
 	/* a0 4 */ cp_eh_info *p;
 }
 
 /* 002a1fe0 000001a8 */ void __check_eh_spec(/* s4 20 */ int n, /* s5 21 */ void **spec) {
 	/* s2 18 */ cp_eh_info *p;
-	/* -0x60(sp) */ void *d;
+	/* 0x0(sp) */ void *d;
 	/* s0 16 */ int i;
 	/* s3 19 */ cp_eh_info *__exception_info;
 	/* s6 22 */ type_info &bad_exc;
@@ -34446,11 +35117,11 @@
 	/* v0 2 */ type_info *this;
 }
 
-/* 00369610 00000040 */ type_info& exception type_info function() {}
-/* 00369610 00000010 */ exception* exception::exception(/* a0 4 */ exception *this) {}
-/* 00369610 00000034 */ void exception::~exception(/* a0 4 */ exception *this, /* a1 5 */ int __in_chrg) {}
-/* 00369610 00000050 */ type_info& bad_exception type_info function() {}
-/* 00369610 00000010 */ bad_exception* bad_exception::bad_exception(/* a0 4 */ bad_exception *this) {}
+/* ffffffff 00000040 */ type_info& exception type_info function() {}
+/* ffffffff 00000010 */ exception* exception::exception(/* a0 4 */ exception *this) {}
+/* ffffffff 00000034 */ void exception::~exception(/* a0 4 */ exception *this, /* a1 5 */ int __in_chrg) {}
+/* ffffffff 00000050 */ type_info& bad_exception type_info function() {}
+/* ffffffff 00000010 */ bad_exception* bad_exception::bad_exception(/* a0 4 */ bad_exception *this) {}
 /* 00369610 00000034 */ void bad_exception::~bad_exception(/* a0 4 */ bad_exception *this, /* a1 5 */ int __in_chrg) {}
 
 // *****************************************************************************
@@ -34556,7 +35227,7 @@
 // FILE -- /usr/local/sce/ee/gcc/src/newlib/libc/stdlib/mallocr.c
 // *****************************************************************************
 
-/* 002a2a68 00000258 */ static void malloc_extend_top(/* -0x60(sp) */ _reent *reent_ptr, /* a1 5 */ size_t nb) {
+/* 002a2a68 00000258 */ static void malloc_extend_top(/* 0x0(sp) */ _reent *reent_ptr, /* a1 5 */ size_t nb) {
 	/* s1 17 */ char *brk;
 	/* a1 5 */ size_t front_misalign;
 	/* s0 16 */ size_t correction;
@@ -34630,7 +35301,7 @@
 // FILE -- /usr/local/sce/ee/gcc/src/newlib/libc/stdlib/qsort.c
 // *****************************************************************************
 
-/* 002a3890 000009ec */ void qsort(/* s6 22 */ void *a, /* -0xc0(sp) */ size_t n, /* s4 20 */ size_t es, /* fp 30 */ int (*cmp)(/* parameters unknown */)) {
+/* 002a3890 000009ec */ void qsort(/* s6 22 */ void *a, /* 0x0(sp) */ size_t n, /* s4 20 */ size_t es, /* fp 30 */ int (*cmp)(/* parameters unknown */)) {
 	/* s5 21 */ char *pa;
 	/* s1 17 */ char *pb;
 	/* s2 18 */ char *pc;
@@ -34640,8 +35311,8 @@
 	/* s5 21 */ char *pn;
 	/* s7 23 */ int d;
 	/* a1 5 */ int r;
-	/* -0xbc(sp) */ int swaptype;
-	/* -0xb8(sp) */ int swap_cnt;
+	/* 0x4(sp) */ int swaptype;
+	/* 0x8(sp) */ int swap_cnt;
 	/* a1 5 */ long int i;
 	/* a0 4 */ long int *pi;
 	/* a2 6 */ long int *pj;
@@ -34649,36 +35320,43 @@
 	/* a0 4 */ char *pi;
 	/* a2 6 */ char *pj;
 	/* a3 7 */ long int i;
+	/* a2 6 */ long int *pi;
 	/* a0 4 */ long int *pj;
 	/* a1 5 */ long int i;
 	/* a2 6 */ char *pi;
 	/* a0 4 */ char *pj;
 	/* a2 6 */ long int i;
+	/* a1 5 */ long int *pi;
 	/* a0 4 */ long int *pj;
 	/* a2 6 */ long int i;
 	/* a1 5 */ char *pi;
 	/* a0 4 */ char *pj;
 	/* a2 6 */ long int i;
+	/* a1 5 */ long int *pi;
 	/* a0 4 */ long int *pj;
 	/* a2 6 */ long int i;
 	/* a1 5 */ char *pi;
 	/* a0 4 */ char *pj;
 	/* a2 6 */ long int i;
+	/* a1 5 */ long int *pi;
 	/* a0 4 */ long int *pj;
 	/* a2 6 */ long int i;
 	/* a1 5 */ char *pi;
 	/* a0 4 */ char *pj;
 	/* a1 5 */ long int i;
+	/* a0 4 */ long int *pi;
 	/* a2 6 */ long int *pj;
 	/* a1 5 */ long int i;
 	/* a0 4 */ char *pi;
 	/* a2 6 */ char *pj;
 	/* a1 5 */ long int i;
+	/* a0 4 */ long int *pi;
 	/* a2 6 */ long int *pj;
 	/* a1 5 */ long int i;
 	/* a0 4 */ char *pi;
 	/* a2 6 */ char *pj;
 	/* a1 5 */ long int i;
+	/* a0 4 */ long int *pi;
 	/* a2 6 */ long int *pj;
 	/* a1 5 */ long int i;
 	/* a0 4 */ char *pi;
@@ -34740,11 +35418,11 @@
 // *****************************************************************************
 
 /* 002a46b8 00000088 */ int _sprintf_r(/* a0 4 */ _reent *ptr, /* v1 3 */ char *str, /* a2 6 */ char *fmt) {
-	/* -0xc0(sp) */ FILE f;
+	/* 0x0(sp) */ FILE f;
 }
 
 /* 002a4740 00000090 */ int sprintf(/* t4 12 */ char *str, /* a1 5 */ char *fmt) {
-	/* -0xc0(sp) */ FILE f;
+	/* 0x0(sp) */ FILE f;
 }
 
 // *****************************************************************************
@@ -34754,7 +35432,7 @@
 /* 002a47d0 00000008 */ static int eofread(/* a0 4 */ void *cookie, /* a1 5 */ char *buf, /* a2 6 */ int len) {}
 
 /* 002a47d8 000000a8 */ int sscanf(/* v0 2 */ char *str, /* s0 16 */ char *fmt) {
-	/* -0xc0(sp) */ FILE f;
+	/* 0x0(sp) */ FILE f;
 }
 
 // *****************************************************************************
@@ -34822,7 +35500,7 @@
 // FILE -- /usr/local/sce/ee/gcc/src/newlib/libc/stdlib/strtol.c
 // *****************************************************************************
 
-/* 002a56a8 00000238 */ long int _strtol_r(/* -0x60(sp) */ _reent *rptr, /* s5 21 */ char *nptr, /* fp 30 */ char **endptr, /* s3 19 */ int base) {
+/* 002a56a8 00000238 */ long int _strtol_r(/* 0x0(sp) */ _reent *rptr, /* s5 21 */ char *nptr, /* fp 30 */ char **endptr, /* s3 19 */ int base) {
 	/* s2 18 */ char *s;
 	/* a1 5 */ long unsigned int acc;
 	/* s1 17 */ int c;
@@ -34846,15 +35524,15 @@
 
 /* 002a5918 00000048 */ static int __sprint(/* a0 4 */ FILE *fp, /* s0 16 */ __suio *uio) {}
 
-/* 002a5960 000000b4 */ static int __sbprintf(/* a1 5 */ char *fmt, /* a2 6 */ va_list ap) {
+/* 002a5960 000000b4 */ static int __sbprintf(/* s0 16 */ FILE *fp, /* a1 5 */ char *fmt, /* a2 6 */ va_list ap) {
 	/* s1 17 */ int ret;
-	/* -0x480(sp) */ FILE fake;
-	/* -0x420(sp) */ unsigned char buf[1024];
+	/* 0x0(sp) */ FILE fake;
+	/* 0x60(sp) */ unsigned char buf[1024];
 }
 
-/* 002a5a18 00000074 */ int vfiprintf(/* s1 17 */ char *fmt0, /* s2 18 */ va_list ap) {}
+/* 002a5a18 00000074 */ int vfiprintf(/* s0 16 */ FILE *fp, /* s1 17 */ char *fmt0, /* s2 18 */ va_list ap) {}
 
-/* 002a5a90 00000bf8 */ int _vfiprintf_r(/* a0 4 */ _reent *data, /* s0 16 */ char *fmt0, /* s4 20 */ va_list ap) {
+/* 002a5a90 00000bf8 */ int _vfiprintf_r(/* a0 4 */ _reent *data, /* 0x9c(sp) */ FILE *fp, /* s0 16 */ char *fmt0, /* s4 20 */ va_list ap) {
 	/* s2 18 */ char *fmt;
 	/* s1 17 */ int ch;
 	/* s0 16 */ int n;
@@ -34862,26 +35540,26 @@
 	/* s3 19 */ char *cp;
 	/* s7 23 */ __siov *iovp;
 	/* s6 22 */ int flags;
-	/* -0xa0(sp) */ int ret;
+	/* 0xa0(sp) */ int ret;
 	/* fp 30 */ int width;
 	/* s5 21 */ int prec;
-	/* -0xb0(sp) */ char sign;
-	/* -0xac(sp) */ wchar_t wc;
+	/* 0x90(sp) */ char sign;
+	/* 0x94(sp) */ wchar_t wc;
 	/* s0 16 */ u_long _uquad;
 	/* v1 3 */ enum {
 		OCT = 0,
 		DEC = 1,
 		HEX = 2
 	} base;
-	/* -0x9c(sp) */ int dprec;
+	/* 0xa4(sp) */ int dprec;
 	/* s5 21 */ int realsz;
-	/* -0x98(sp) */ int size;
-	/* -0x94(sp) */ char *xdigs;
-	/* -0x140(sp) */ __suio uio;
-	/* -0x130(sp) */ __siov iov[8];
-	/* -0xf0(sp) */ char buf[40];
-	/* -0xc0(sp) */ char ox[2];
-	/* -0xa8(sp) */ int state;
+	/* 0xa8(sp) */ int size;
+	/* 0xac(sp) */ char *xdigs;
+	/* 0x0(sp) */ __suio uio;
+	/* 0x10(sp) */ __siov iov[8];
+	/* 0x50(sp) */ char buf[40];
+	/* 0x80(sp) */ char ox[2];
+	/* 0x98(sp) */ int state;
 	/* rdata 3ec780 */ static char blanks[16];
 	/* rdata 3ec790 */ static char zeroes[16];
 	/* v0 2 */ char *p;
@@ -34893,15 +35571,15 @@
 
 /* 002a6688 00000048 */ static int __sprint(/* a0 4 */ FILE *fp, /* s0 16 */ __suio *uio) {}
 
-/* 002a66d0 000000b4 */ static int __sbprintf(/* a1 5 */ char *fmt, /* a2 6 */ va_list ap) {
+/* 002a66d0 000000b4 */ static int __sbprintf(/* s0 16 */ FILE *fp, /* a1 5 */ char *fmt, /* a2 6 */ va_list ap) {
 	/* s1 17 */ int ret;
-	/* -0x480(sp) */ FILE fake;
-	/* -0x420(sp) */ unsigned char buf[1024];
+	/* 0x0(sp) */ FILE fake;
+	/* 0x60(sp) */ unsigned char buf[1024];
 }
 
-/* 002a6788 00000074 */ int vfprintf(/* s1 17 */ char *fmt0, /* s2 18 */ va_list ap) {}
+/* 002a6788 00000074 */ int vfprintf(/* s0 16 */ FILE *fp, /* s1 17 */ char *fmt0, /* s2 18 */ va_list ap) {}
 
-/* 002a6800 00001670 */ int _vfprintf_r(/* -0xac(sp) */ _reent *data, /* s0 16 */ char *fmt0, /* s6 22 */ va_list ap) {
+/* 002a6800 00001670 */ int _vfprintf_r(/* 0x1e4(sp) */ _reent *data, /* 0x1e8(sp) */ FILE *fp, /* s0 16 */ char *fmt0, /* s6 22 */ va_list ap) {
 	/* s2 18 */ char *fmt;
 	/* s1 17 */ int ch;
 	/* s0 16 */ int n;
@@ -34909,33 +35587,33 @@
 	/* s5 21 */ char *cp;
 	/* s3 19 */ __siov *iovp;
 	/* s7 23 */ int flags;
-	/* -0xa4(sp) */ int ret;
-	/* -0xa0(sp) */ int width;
+	/* 0x1ec(sp) */ int ret;
+	/* 0x1f0(sp) */ int width;
 	/* s4 20 */ int prec;
-	/* -0xbf(sp) */ char sign;
-	/* -0xbc(sp) */ wchar_t wc;
-	/* -0x9c(sp) */ char *decimal_point;
-	/* -0xc0(sp) */ char softsign;
-	/* -0x98(sp) */ double _double;
-	/* -0xb4(sp) */ int expt;
-	/* -0x90(sp) */ int expsize;
-	/* -0xb0(sp) */ int ndig;
-	/* -0x290(sp) */ char expstr[7];
+	/* 0x1d1(sp) */ char sign;
+	/* 0x1d4(sp) */ wchar_t wc;
+	/* 0x1f4(sp) */ char *decimal_point;
+	/* 0x1d0(sp) */ char softsign;
+	/* 0x1f8(sp) */ double _double;
+	/* 0x1dc(sp) */ int expt;
+	/* 0x200(sp) */ int expsize;
+	/* 0x1e0(sp) */ int ndig;
+	/* 0x0(sp) */ char expstr[7];
 	/* s0 16 */ u_long _uquad;
 	/* v1 3 */ enum {
 		OCT = 0,
 		DEC = 1,
 		HEX = 2
 	} base;
-	/* -0x8c(sp) */ int dprec;
-	/* -0x88(sp) */ int realsz;
+	/* 0x204(sp) */ int dprec;
+	/* 0x208(sp) */ int realsz;
 	/* fp 30 */ int size;
-	/* -0x84(sp) */ char *xdigs;
-	/* -0x280(sp) */ __suio uio;
-	/* -0x270(sp) */ __siov iov[8];
-	/* -0x230(sp) */ char buf[348];
-	/* -0xd0(sp) */ char ox[2];
-	/* -0xb8(sp) */ int state;
+	/* 0x20c(sp) */ char *xdigs;
+	/* 0x10(sp) */ __suio uio;
+	/* 0x20(sp) */ __siov iov[8];
+	/* 0x60(sp) */ char buf[348];
+	/* 0x1c0(sp) */ char ox[2];
+	/* 0x1d8(sp) */ int state;
 	/* rdata 3ec970 */ static char blanks[16];
 	/* rdata 3ec980 */ static char zeroes[16];
 	/* v0 2 */ char *p;
@@ -34943,17 +35621,17 @@
 
 /* 002a7e70 000001c0 */ static char* cvt(/* s6 22 */ _reent *data, /* s2 18 */ double value, /* s3 19 */ int ndigits, /* s7 23 */ int flags, /* s0 16 */ char *sign, /* s5 21 */ int *decpt, /* s1 17 */ int ch, /* fp 30 */ int *length) {
 	/* s4 20 */ int mode;
-	/* -0x60(sp) */ int dsgn;
+	/* 0x0(sp) */ int dsgn;
 	/* s4 20 */ char *digits;
 	/* s0 16 */ char *bp;
-	/* -0x5c(sp) */ char *rve;
+	/* 0x4(sp) */ char *rve;
 	/* v0 2 */ double_union tmp;
 }
 
 /* 002a8030 000000dc */ static int exponent(/* a0 4 */ char *p0, /* a1 5 */ int exp, /* a2 6 */ int fmtch) {
 	/* a2 6 */ char *p;
 	/* a3 7 */ char *t;
-	/* -0x140(sp) */ char expbuf[308];
+	/* 0x0(sp) */ char expbuf[308];
 }
 
 // *****************************************************************************
@@ -34968,13 +35646,13 @@
 	/* s0 16 */ int n;
 	/* s1 17 */ int flags;
 	/* s0 16 */ char *p0;
-	/* -0x90(sp) */ int nassigned;
+	/* 0x260(sp) */ int nassigned;
 	/* t0 8 */ int nread;
 	/* fp 30 */ int base;
 	/* v1 3 */ wchar_t wc;
-	/* -0x8c(sp) */ long unsigned int (*ccfn)(/* parameters unknown */);
-	/* -0x2f0(sp) */ char ccltab[256];
-	/* -0x1f0(sp) */ char buf[350];
+	/* 0x264(sp) */ long unsigned int (*ccfn)(/* parameters unknown */);
+	/* 0x0(sp) */ char ccltab[256];
+	/* 0x100(sp) */ char buf[350];
 	/* s1 17 */ char *lptr;
 	/* v1 3 */ short int *sp;
 	/* v1 3 */ int *ip;
@@ -34986,10 +35664,10 @@
 	/* s1 17 */ size_t sum;
 	/* v0 2 */ size_t r;
 	/* a1 5 */ long unsigned int res;
-	/* -0x88(sp) */ long int leading_zeroes;
+	/* 0x268(sp) */ long int leading_zeroes;
 	/* s6 22 */ long int zeroes;
 	/* a3 7 */ long int exp_adjust;
-	/* -0x80(sp) */ char *exp_start;
+	/* 0x270(sp) */ char *exp_start;
 	/* a0 4 */ double res;
 	/* a2 6 */ long int new_exp;
 }
@@ -35005,11 +35683,11 @@
 // *****************************************************************************
 
 /* 002a8ea0 00000054 */ int vsprintf(/* a3 7 */ char *str, /* a1 5 */ char *fmt, /* a2 6 */ va_list ap) {
-	/* -0x70(sp) */ FILE f;
+	/* 0x0(sp) */ FILE f;
 }
 
 /* 002a8ef8 00000054 */ int vsprintf_r(/* a0 4 */ _reent *ptr, /* t0 8 */ char *str, /* a2 6 */ char *fmt, /* a3 7 */ va_list ap) {
-	/* -0x70(sp) */ FILE f;
+	/* 0x0(sp) */ FILE f;
 }
 
 // *****************************************************************************
@@ -35050,40 +35728,41 @@
 	/* t0 8 */ __ULong zs;
 }
 
-/* 002a92c8 00001264 */ char* _dtoa_r(/* s7 23 */ _reent *ptr, /* a1 5 */ double _d, /* -0xa8(sp) */ int mode, /* -0xa4(sp) */ int ndigits, /* -0xa0(sp) */ int *decpt, /* s0 16 */ int *sign, /* -0x9c(sp) */ char **rve) {
-	/* -0xac(sp) */ int bbits;
-	/* -0x98(sp) */ int b2;
-	/* -0x94(sp) */ int b5;
-	/* -0xb0(sp) */ int be;
+/* 002a92c8 00001264 */ char* _dtoa_r(/* s7 23 */ _reent *ptr, /* a1 5 */ double _d, /* 0x8(sp) */ int mode, /* 0xc(sp) */ int ndigits, /* 0x10(sp) */ int *decpt, /* s0 16 */ int *sign, /* 0x14(sp) */ char **rve) {
+	/* 0x4(sp) */ int bbits;
+	/* 0x18(sp) */ int b2;
+	/* 0x1c(sp) */ int b5;
+	/* 0x0(sp) */ int be;
 	/* s4 20 */ int dig;
 	/* s3 19 */ int i;
 	/* s3 19 */ int ieps;
-	/* -0x90(sp) */ int ilim;
-	/* -0x8c(sp) */ int ilim0;
-	/* -0x88(sp) */ int ilim1;
+	/* 0x20(sp) */ int ilim;
+	/* 0x24(sp) */ int ilim0;
+	/* 0x28(sp) */ int ilim1;
 	/* s0 16 */ int j;
 	/* s1 17 */ int j1;
 	/* fp 30 */ int k;
-	/* -0x84(sp) */ int k0;
-	/* -0x80(sp) */ int k_check;
-	/* -0x7c(sp) */ int leftright;
+	/* 0x2c(sp) */ int k0;
+	/* 0x30(sp) */ int k_check;
+	/* 0x34(sp) */ int leftright;
 	/* s1 17 */ int m2;
 	/* s2 18 */ int m5;
-	/* -0x78(sp) */ int s2;
-	/* -0x74(sp) */ int s5;
+	/* 0x38(sp) */ int s2;
+	/* 0x3c(sp) */ int s5;
 	/* s0 16 */ int spec_case;
 	/* s1 17 */ int try_quick;
 	/* s4 20 */ double_union d;
 	/* s6 22 */ double_union d2;
 	/* s2 18 */ double_union eps;
 	/* s0 16 */ __int32_t L;
-	/* -0x70(sp) */ int denorm;
+	/* 0x40(sp) */ int denorm;
 	/* s0 16 */ __ULong x;
+	/* 0x44(sp) */ _Bigint *b;
 	/* s0 16 */ _Bigint *b1;
 	/* s2 18 */ _Bigint *delta;
-	/* -0x68(sp) */ _Bigint *mlo;
-	/* -0x64(sp) */ _Bigint *mhi;
-	/* -0x60(sp) */ _Bigint *S;
+	/* 0x48(sp) */ _Bigint *mlo;
+	/* 0x4c(sp) */ _Bigint *mhi;
+	/* 0x50(sp) */ _Bigint *S;
 	/* s1 17 */ double ds;
 	/* s5 21 */ char *s;
 }
@@ -35196,7 +35875,7 @@
 	/* s1 17 */ size_t size;
 	/* s2 18 */ size_t couldbetty;
 	/* a1 5 */ void *p;
-	/* -0x90(sp) */ stat st;
+	/* 0x0(sp) */ stat st;
 }
 
 // *****************************************************************************
@@ -35204,7 +35883,7 @@
 // *****************************************************************************
 
 /* 002ab528 00000034 */ int _mbtowc_r(/* a0 4 */ _reent *r, /* v1 3 */ wchar_t *pwc, /* a2 6 */ char *s, /* a3 7 */ size_t n, /* t0 8 */ int *state) {
-	/* -0x10(sp) */ wchar_t dummy;
+	/* 0x0(sp) */ wchar_t dummy;
 }
 
 // *****************************************************************************
@@ -35261,6 +35940,7 @@
 	/* t2 10 */ __ULong carry;
 	/* t1 9 */ __ULong y;
 	/* v0 2 */ __ULong z;
+	/* t0 8 */ __ULong *x;
 	/* t5 13 */ __ULong *xa;
 	/* t6 14 */ __ULong *xae;
 	/* t3 11 */ __ULong *xb;
@@ -35284,6 +35964,7 @@
 	/* s1 17 */ int n;
 	/* s2 18 */ int n1;
 	/* s4 20 */ _Bigint *b1;
+	/* a0 4 */ __ULong *x;
 	/* a3 7 */ __ULong *x1;
 	/* a2 6 */ __ULong *xe;
 	/* v1 3 */ __ULong z;
@@ -35328,22 +36009,23 @@
 	/* s1 17 */ double_union d;
 }
 
-/* 002ac390 00000184 */ _Bigint* _d2b(/* a0 4 */ _reent *ptr, /* a1 5 */ double _d, /* s5 21 */ int *bits) {
+/* 002ac390 00000184 */ _Bigint* _d2b(/* a0 4 */ _reent *ptr, /* a1 5 */ double _d, /* s4 20 */ int *e, /* s5 21 */ int *bits) {
 	/* s0 16 */ double_union d;
 	/* s3 19 */ _Bigint *b;
 	/* s2 18 */ int de;
 	/* s0 16 */ int i;
 	/* a1 5 */ int k;
-	/* -0x50(sp) */ __ULong y;
-	/* -0x4c(sp) */ __ULong z;
+	/* s1 17 */ __ULong *x;
+	/* 0x0(sp) */ __ULong y;
+	/* 0x4(sp) */ __ULong z;
 }
 
 /* 002ac518 000000cc */ double _ratio(/* s0 16 */ _Bigint *a, /* s1 17 */ _Bigint *b) {
 	/* s2 18 */ double_union da;
 	/* t0 8 */ double_union db;
 	/* v0 2 */ int k;
-	/* -0x30(sp) */ int ka;
-	/* -0x2c(sp) */ int kb;
+	/* 0x0(sp) */ int ka;
+	/* 0x4(sp) */ int kb;
 }
 
 /* 002ac5e8 00000070 */ double _mprec_log10(/* s0 16 */ int dig) {
@@ -35355,7 +36037,7 @@
 // *****************************************************************************
 
 /* 002ac658 00000034 */ static int lflush(/* a0 4 */ FILE *fp) {}
-/* 002ac690 0000017c */ int __srefill() {}
+/* 002ac690 0000017c */ int __srefill(/* s0 16 */ FILE *fp) {}
 
 // *****************************************************************************
 // FILE -- /usr/local/sce/ee/gcc/src/newlib/libm/math/s_isinf.c
@@ -35385,13 +36067,13 @@
 // FILE -- /usr/local/sce/ee/gcc/src/newlib/libc/stdlib/strtod.c
 // *****************************************************************************
 
-/* 002ac9c8 00000f14 */ double _strtod_r(/* fp 30 */ _reent *ptr, /* a1 5 */ char *s00, /* -0x98(sp) */ char **se) {
+/* 002ac9c8 00000f14 */ double _strtod_r(/* fp 30 */ _reent *ptr, /* a1 5 */ char *s00, /* 0x8(sp) */ char **se) {
 	/* s2 18 */ int bb2;
 	/* a2 6 */ int bb5;
-	/* -0xa0(sp) */ int bbe;
+	/* 0x0(sp) */ int bbe;
 	/* s1 17 */ int bd2;
 	/* s7 23 */ int bd5;
-	/* -0x9c(sp) */ int bbbits;
+	/* 0x4(sp) */ int bbbits;
 	/* s5 21 */ int bs2;
 	/* a0 4 */ int c;
 	/* s5 21 */ int dsign;
@@ -35405,38 +36087,38 @@
 	/* t0 8 */ int nf;
 	/* a3 7 */ int nz;
 	/* t2 10 */ int nz0;
-	/* -0x94(sp) */ int sign;
-	/* -0x90(sp) */ long int e;
+	/* 0xc(sp) */ int sign;
+	/* 0x10(sp) */ long int e;
 	/* s6 22 */ char *s;
-	/* -0x88(sp) */ char *s0;
+	/* 0x18(sp) */ char *s0;
 	/* a2 6 */ char *s1;
 	/* s0 16 */ double aadj;
 	/* s1 17 */ double aadj1;
 	/* s1 17 */ long unsigned int z;
-	/* -0x80(sp) */ __ULong y;
+	/* 0x20(sp) */ __ULong y;
 	/* s3 19 */ double_union rv;
 	/* s4 20 */ double_union rv0;
-	/* -0x70(sp) */ _Bigint *bb;
+	/* 0x30(sp) */ _Bigint *bb;
 	/* s0 16 */ _Bigint *bb1;
-	/* -0x6c(sp) */ _Bigint *bd;
-	/* -0x68(sp) */ _Bigint *bd0;
-	/* -0x64(sp) */ _Bigint *bs;
-	/* -0x60(sp) */ _Bigint *delta;
+	/* 0x34(sp) */ _Bigint *bd;
+	/* 0x38(sp) */ _Bigint *bd0;
+	/* 0x3c(sp) */ _Bigint *bs;
+	/* 0x40(sp) */ _Bigint *delta;
 }
 
-/* 002ad8e0 00000024 */ double strtod(/* a0 4 */ char *s00) {}
-/* 002ad908 00000028 */ float strtodf(/* a0 4 */ char *s00) {}
+/* 002ad8e0 00000024 */ double strtod(/* a0 4 */ char *s00, /* a2 6 */ char **se) {}
+/* 002ad908 00000028 */ float strtodf(/* a0 4 */ char *s00, /* a1 5 */ char **se) {}
 
 // *****************************************************************************
 // FILE -- /usr/local/sce/ee/gcc/src/newlib/libc/stdlib/strtoul.c
 // *****************************************************************************
 
-/* 002ad930 0000022c */ long unsigned int _strtoul_r(/* -0x60(sp) */ _reent *rptr, /* s5 21 */ char *nptr, /* fp 30 */ char **endptr, /* s3 19 */ int base) {
+/* 002ad930 0000022c */ long unsigned int _strtoul_r(/* 0x0(sp) */ _reent *rptr, /* s5 21 */ char *nptr, /* fp 30 */ char **endptr, /* s3 19 */ int base) {
 	/* s2 18 */ char *s;
 	/* a1 5 */ long unsigned int acc;
 	/* s1 17 */ int c;
 	/* s4 20 */ long unsigned int cutoff;
-	/* -0x5c(sp) */ int neg;
+	/* 0x4(sp) */ int neg;
 	/* s0 16 */ int any;
 	/* s6 22 */ int cutlim;
 }
@@ -35452,7 +36134,7 @@
 	/* s1 17 */ unsigned char *p;
 }
 
-/* 002adc78 00000188 */ int ungetc(/* s1 17 */ int c) {}
+/* 002adc78 00000188 */ int ungetc(/* s1 17 */ int c, /* s0 16 */ FILE *fp) {}
 
 // *****************************************************************************
 // FILE -- /usr/local/sce/ee/gcc/src/newlib/libc/reent/writer.c
@@ -35529,8 +36211,10 @@
 	/* a3 7 */ size_t *mcdst;
 	/* a2 6 */ size_t mcsz;
 	/* a2 6 */ size_t mcsz;
+	/* t0 8 */ size_t *mcsrc;
 	/* a3 7 */ size_t *mcdst;
 	/* a2 6 */ size_t mcsz;
+	/* a3 7 */ size_t *mcsrc;
 	/* a1 5 */ size_t *mcdst;
 }
 

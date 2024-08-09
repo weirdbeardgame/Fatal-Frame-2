@@ -2,10 +2,10 @@
 // FILE -- /home/zero_rom/zero2np/src/ingame/map/CBuff.c
 // *****************************************************************************
 
-/* sdata 3eeac0 */ int CBuffNum;
-/* sdata 3eeac4 */ int CBuffMaxLen;
-/* sdata 3eeac8 */ int CBuffMaxNum;
-/* sbss 3f4a80 */ char *CBuffStr;
+/* sdata 3eeac0 */ static int CBuffNum;
+/* sdata 3eeac4 */ static int CBuffMaxLen;
+/* sdata 3eeac8 */ static int CBuffMaxNum;
+/* sbss 3f4a80 */ static char *CBuffStr;
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/graphics/graph3d/CDebugEdit.cpp
@@ -27,60 +27,60 @@
 // FILE -- /home/zero_rom/zero2np/src/ingame/plyr/ChrSort.c
 // *****************************************************************************
 
-/* sdata 3eeb18 */ int ChrSortFlg;
-/* sbss 3f4a88 */ void *ChrSortHdl[2];
-/* bss 3f5648 */ CHR_SORT_WORK ChrSortEnemList[32];
-/* bss 3f57c8 */ CHR_SORT_FLY_WORK ChrSortFlyList[32];
+/* sdata 3eeb18 */ static int ChrSortFlg;
+/* sbss 3f4a88 */ static void *ChrSortHdl[2];
+/* bss 3f5648 */ static CHR_SORT_WORK ChrSortEnemList[32];
+/* bss 3f57c8 */ static CHR_SORT_FLY_WORK ChrSortFlyList[32];
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/debug/DbFurnPre.c
 // *****************************************************************************
 
-/* sdata 3eeb60 */ int DbFurnPreNameID;
-/* sdata 3eeb64 */ int DbFurnPreMdoelMax;
-/* sdata 3eeb68 */ int DbFurnPreBuffID;
-/* sdata 3eeb6c */ int DbFurnPreObjID;
-/* sdata 3eeb70 */ int DbFurnPreObjMax;
-/* sdata 3eeb74 */ float *DbFurnPrePos;
+/* sdata 3eeb60 */ static int DbFurnPreNameID;
+/* sdata 3eeb64 */ static int DbFurnPreMdoelMax;
+/* sdata 3eeb68 */ static int DbFurnPreBuffID;
+/* sdata 3eeb6c */ static int DbFurnPreObjID;
+/* sdata 3eeb70 */ static int DbFurnPreObjMax;
+/* sdata 3eeb74 */ static float *DbFurnPrePos;
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/common/FileSt.c
 // *****************************************************************************
 
-/* data 2c3d00 */ int FileStLabelList[2][2];
+/* data 2c3d00 */ static int FileStLabelList[2][2];
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/ingame/map/FurnCtl.c
 // *****************************************************************************
 
-/* sdata 3eebe0 */ int FurnCtlFindBuffID;
-/* sdata 3eebe4 */ int FurnCtlFindListID;
-/* bss 3f5948 */ fixed_array<FURN_CTL,48> FurnCtlList;
+/* sdata 3eebe0 */ static int FurnCtlFindBuffID;
+/* sdata 3eebe4 */ static int FurnCtlFindListID;
+/* bss 3f5948 */ static fixed_array<FURN_CTL,48> FurnCtlList;
 /* sbss 3f5118 */ unsigned char FURN_CTL type_info node[8];
-/* bss 3f6488 */ char *FurnCtlWorkList[2][2];
-/* bss 3f6498 */ FURN_WORK_HEAD FurnWorkList[32];
+/* bss 3f6488 */ static char *FurnCtlWorkList[2][2];
+/* bss 3f6498 */ static FURN_WORK_HEAD FurnWorkList[32];
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/ingame/map/FurnLoad.c
 // *****************************************************************************
 
-/* data 2c3d10 */ FURN_LOAD_TBL FurnTbl[16];
+/* data 2c3d10 */ static FURN_LOAD_TBL FurnTbl[16];
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/graphics/scene/IngameScene.c
 // *****************************************************************************
 
-/* data 2c3e10 */ INGAME_SCENE_CTRL ingame_scene;
-/* sdata 3eec40 */ u_int *pSceneMovieEffect;
+/* data 2c3e10 */ static INGAME_SCENE_CTRL ingame_scene;
+/* sdata 3eec40 */ static u_int *pSceneMovieEffect;
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/ingame/map/MapAnim.c
 // *****************************************************************************
 
-/* bss 3f65a0 */ fixed_array<MAP_ANIM_CTL,32> MapAnimCtl;
-/* bss 3f75a0 */ fixed_array<ANI_CTRL,2> MapAnimMotCtl;
-/* bss 3f7a20 */ fixed_array<MAPMANIM_MATRIX,255> MapManimMatrxList;
-/* bss 3fc9d0 */ fixed_array<MAPMANIM_HEAD,64> MapManimList;
+/* bss 3f65a0 */ static fixed_array<MAP_ANIM_CTL,32> MapAnimCtl;
+/* bss 3f75a0 */ static fixed_array<ANI_CTRL,2> MapAnimMotCtl;
+/* bss 3f7a20 */ static fixed_array<MAPMANIM_MATRIX,255> MapManimMatrxList;
+/* bss 3fc9d0 */ static fixed_array<MAPMANIM_HEAD,64> MapManimList;
 /* sbss 3f5128 */ unsigned char MAP_ANIM_CTL type_info node[8];
 /* sbss 3f5130 */ unsigned char ANI_CTRL type_info node[8];
 /* sbss 3f5138 */ unsigned char MAPMANIM_MATRIX type_info node[8];
@@ -90,19 +90,19 @@
 // FILE -- /home/zero_rom/zero2np/src/ingame/map/MapDoor.c
 // *****************************************************************************
 
-/* data 2c3e20 */ MLOAD_DOOR_DAT MapLoadDoorDatList[208];
-/* sdata 3eecc8 */ int MapDoorCtlID;
-/* sdata 3eeccc */ u_int *MapDoorAnimPtr;
-/* sdata 3eecd0 */ int MapDoorAnimID;
-/* sdata 3eecd4 */ int MapDoorAnimType;
-/* sdata 3eecd8 */ int MapDoorRoomNo;
-/* sdata 3eecdc */ int door_bank_id;
-/* sdata 3eece0 */ int MapDoorSp;
-/* sdata 3eece4 */ int MapDoorReqID;
-/* sdata 3eece8 */ int MapDoorAnimEnd;
-/* sdata 3eecec */ int iBuffSw;
-/* bss 3fced0 */ fixed_array<MAPDOOR_HEAD,16> MapDoorList;
-/* bss 3fd010 */ GRA3DLIGHTDATA MapDoorLight;
+/* data 2c3e20 */ static MLOAD_DOOR_DAT MapLoadDoorDatList[208];
+/* sdata 3eecc8 */ static int MapDoorCtlID;
+/* sdata 3eeccc */ static u_int *MapDoorAnimPtr;
+/* sdata 3eecd0 */ static int MapDoorAnimID;
+/* sdata 3eecd4 */ static int MapDoorAnimType;
+/* sdata 3eecd8 */ static int MapDoorRoomNo;
+/* sdata 3eecdc */ static int door_bank_id;
+/* sdata 3eece0 */ static int MapDoorSp;
+/* sdata 3eece4 */ static int MapDoorReqID;
+/* sdata 3eece8 */ static int MapDoorAnimEnd;
+/* sdata 3eecec */ static int iBuffSw;
+/* bss 3fced0 */ static fixed_array<MAPDOOR_HEAD,16> MapDoorList;
+/* bss 3fd010 */ static GRA3DLIGHTDATA MapDoorLight;
 /* sbss 3f5148 */ unsigned char MAPDOOR_HEAD type_info node[8];
 /* bss 4cda90 */ unsigned char MDAT_DOOR * type_info node[12];
 /* sbss 3f5140 */ unsigned char MDAT_DOOR type_info node[8];
@@ -111,69 +111,69 @@
 // FILE -- /home/zero_rom/zero2np/src/ingame/map/MapDraw.c
 // *****************************************************************************
 
-/* sdata 3eed50 */ GRA3DLIGHTDATA *MapDrawRoomLihgtSp[2];
-/* sdata 3eed58 */ int s_bEnableLightFlashlightOnly;
-/* bss 3fe3b0 */ GRA3DLIGHTDATA MapDrawPS2CoordLight[2];
+/* sdata 3eed50 */ static GRA3DLIGHTDATA *MapDrawRoomLihgtSp[2];
+/* sdata 3eed58 */ static int s_bEnableLightFlashlightOnly;
+/* bss 3fe3b0 */ static GRA3DLIGHTDATA MapDrawPS2CoordLight[2];
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/ingame/map/MapFog.c
 // *****************************************************************************
 
-/* data 2c8c88 */ MAP_FOG_HEAD MapFogDat[3];
-/* sdata 3eeda0 */ int MapFogFrame;
-/* sdata 3eeda4 */ int MapFogNowFrame;
-/* sdata 3eeda8 */ int MapFogFlg;
-/* sdata 3eedac */ float *MapFogRect[4];
-/* sdata 3eedb0 */ int MapFogLastRoom;
-/* bss 400af0 */ float MapFogBfoCam[4];
+/* data 2c8c88 */ static MAP_FOG_HEAD MapFogDat[3];
+/* sdata 3eeda0 */ static int MapFogFrame;
+/* sdata 3eeda4 */ static int MapFogNowFrame;
+/* sdata 3eeda8 */ static int MapFogFlg;
+/* sdata 3eedac */ static float *MapFogRect[4];
+/* sdata 3eedb0 */ static int MapFogLastRoom;
+/* bss 400af0 */ static float MapFogBfoCam[4];
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/ingame/map/MapHit.c
 // *****************************************************************************
 
 /* sdata 3eedf8 */ float MapHitDoorZ;
-/* sdata 3eedfc */ float MapHitColLen;
-/* data 2c8ce0 */ float MapHitPoint[4][4];
-/* bss 400b00 */ fixed_array<MAPHIT_HEAD,32> MapHitRecList;
+/* sdata 3eedfc */ static float MapHitColLen;
+/* data 2c8ce0 */ static float MapHitPoint[4][4];
+/* bss 400b00 */ static fixed_array<MAPHIT_HEAD,32> MapHitRecList;
 /* sbss 3f5150 */ unsigned char MAPHIT_HEAD type_info node[8];
-/* bss 400d80 */ int (*MapHitCallBack[3])(/* parameters unknown */);
-/* bss 400d90 */ float MapHitDoorVec[2][4][4];
-/* sbss 3f4a90 */ int MapHitDoorID;
-/* bss 400e10 */ float MapHitColPoint[2][4];
+/* bss 400d80 */ static int (*MapHitCallBack[3])(/* parameters unknown */);
+/* bss 400d90 */ static float MapHitDoorVec[2][4][4];
+/* sbss 3f4a90 */ static int MapHitDoorID;
+/* bss 400e10 */ static float MapHitColPoint[2][4];
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/ingame/map/MapLBuff.c
 // *****************************************************************************
 
-/* bss 400e30 */ MAP_LBUFF_ST MapLBuffList[66][16];
+/* bss 400e30 */ static MAP_LBUFF_ST MapLBuffList[66][16];
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/ingame/map/MapLight.c
 // *****************************************************************************
 
-/* data 2c8d20 */ MAPMEI_FRAME MapMeiList[25];
+/* data 2c8d20 */ static MAPMEI_FRAME MapMeiList[25];
 /* sdata 3eee40 */ float MapLightPower;
 /* sdata 3eee48 */ float MapLightIntens[2];
 /* sdata 3eee50 */ float MapLightDiff[2];
-/* sdata 3eee5c */ MAPMEI_HEAD *MapMeiNowHeadPtr;
-/* bss 403fb0 */ GRA3DLIGHTDATA MapMeiWork[2];
+/* sdata 3eee5c */ static MAPMEI_HEAD *MapMeiNowHeadPtr;
+/* bss 403fb0 */ static GRA3DLIGHTDATA MapMeiWork[2];
 /* sbss 3f5158 */ unsigned char G3DLIGHT type_info node[8];
 /* sbss 3f5160 */ unsigned char GRA3DLIGHTSTATUS type_info node[8];
-/* bss 4066f0 */ MAPMEI_HEAD MapMeiHead[4];
-/* bss 406730 */ MAPMEI_LIGHTONE MapMeiLightOneWork[39];
+/* bss 4066f0 */ static MAPMEI_HEAD MapMeiHead[4];
+/* bss 406730 */ static MAPMEI_LIGHTONE MapMeiLightOneWork[39];
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/ingame/map/MapLoad.c
 // *****************************************************************************
 
-/* sdata 3eeeb0 */ int MapLoadDrawID;
-/* sdata 3eeeb4 */ int MapLoadMyPosLabel;
-/* sdata 3eeeb8 */ int MapLoadStat;
-/* sdata 3eeebc */ void *MapLoadDoorBuff;
-/* sdata 3eeec0 */ char *MapLoadFreeArea[2];
-/* bss 407ab0 */ fixed_array<MLOAD_HEAD,2> MapLoadBuff;
+/* sdata 3eeeb0 */ static int MapLoadDrawID;
+/* sdata 3eeeb4 */ static int MapLoadMyPosLabel;
+/* sdata 3eeeb8 */ static int MapLoadStat;
+/* sdata 3eeebc */ static void *MapLoadDoorBuff;
+/* sdata 3eeec0 */ static char *MapLoadFreeArea[2];
+/* bss 407ab0 */ static fixed_array<MLOAD_HEAD,2> MapLoadBuff;
 /* sbss 3f5168 */ unsigned char MLOAD_HEAD type_info node[8];
-/* bss 40a290 */ int MapLoadFileIDList[5];
+/* bss 40a290 */ static int MapLoadFileIDList[5];
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/ingame/map/MapObj.c
@@ -181,72 +181,72 @@
 
 /* sdata 3eef20 */ int MapObjSimiEnd;
 /* sdata 3eef24 */ int MapObjSimiTime;
-/* data 2c8f18 */ MAPOBJ_EFF MapObjEffLabel[21];
-/* sdata 3eef28 */ int MapObjFlg;
+/* data 2c8f18 */ static MAPOBJ_EFF MapObjEffLabel[21];
+/* sdata 3eef28 */ static int MapObjFlg;
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/ingame/map/MapObjReg.c
 // *****************************************************************************
 
-/* sdata 3eef78 */ int MapObjSceneLoadFlg;
-/* bss 40b6a8 */ fixed_array<MAPOBJ_HEAD,2> MapObjList;
+/* sdata 3eef78 */ static int MapObjSceneLoadFlg;
+/* bss 40b6a8 */ static fixed_array<MAPOBJ_HEAD,2> MapObjList;
 /* sbss 3f5170 */ unsigned char MAPOBJ_HEAD type_info node[8];
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/ingame/map/MapPut.c
 // *****************************************************************************
 
-/* bss 40f860 */ fixed_array<MAPPUT_OBJ,320> MapPutList;
+/* bss 40f860 */ static fixed_array<MAPPUT_OBJ,320> MapPutList;
 /* sbss 3f5178 */ unsigned char MAPPUT_OBJ type_info node[8];
-/* sbss 3f4a94 */ MAPPUT_OBJ *MapPutSt;
-/* sbss 3f4a98 */ MAPPUT_OBJ *MapPutNowDraw;
+/* sbss 3f4a94 */ static MAPPUT_OBJ *MapPutSt;
+/* sbss 3f4a98 */ static MAPPUT_OBJ *MapPutNowDraw;
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/ingame/map/MapSave.c
 // *****************************************************************************
 
-/* data 2c9078 */ MAPSAVE_HEAD MapSaveList[673];
-/* bss 41ac60 */ MAPSAVE_JMP_TBL MapSaveJmp[673];
-/* sbss 3f4a9c */ int MapSaveJmpNum;
-/* bss 41c168 */ MAPSAVE_HEAD MapSaveFirstWork[673];
+/* data 2c9078 */ static MAPSAVE_HEAD MapSaveList[673];
+/* bss 41ac60 */ static MAPSAVE_JMP_TBL MapSaveJmp[673];
+/* sbss 3f4a9c */ static int MapSaveJmpNum;
+/* bss 41c168 */ static MAPSAVE_HEAD MapSaveFirstWork[673];
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/ingame/map/MapSky.c
 // *****************************************************************************
 
-/* data 2cba90 */ MAP_SKY_DB MapSkyDatList[18];
-/* sdata 3ef048 */ MAP_SKY_DB *MapSkyDp;
-/* sdata 3ef04c */ u_int MapSkyTopAddr;
-/* sdata 3ef050 */ u_long MapSkyTex0;
-/* sdata 3ef058 */ float MapSkyX;
-/* sdata 3ef05c */ float MapSkyRotY;
-/* sdata 3ef060 */ int MapSkyFlg;
-/* sdata 3ef064 */ int MapSkyAlpha;
-/* sdata 3ef068 */ int MapSkyFrame;
-/* bss 420c90 */ fixed_array<unsigned int,12> MapSkyDatAddr;
-/* bss 420cc0 */ float MapSkyPers[4][4];
-/* rdata 39f4b0 */ int s_iv1111[4];
+/* data 2cba90 */ static MAP_SKY_DB MapSkyDatList[18];
+/* sdata 3ef048 */ static MAP_SKY_DB *MapSkyDp;
+/* sdata 3ef04c */ static u_int MapSkyTopAddr;
+/* sdata 3ef050 */ static u_long MapSkyTex0;
+/* sdata 3ef058 */ static float MapSkyX;
+/* sdata 3ef05c */ static float MapSkyRotY;
+/* sdata 3ef060 */ static int MapSkyFlg;
+/* sdata 3ef064 */ static int MapSkyAlpha;
+/* sdata 3ef068 */ static int MapSkyFrame;
+/* bss 420c90 */ static fixed_array<unsigned int,12> MapSkyDatAddr;
+/* bss 420cc0 */ static float MapSkyPers[4][4];
+/* rdata 39f4b0 */ static int s_iv1111[4];
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/ingame/map/MapSp.c
 // *****************************************************************************
 
-/* data 2cc610 */ MAPSP_KAZ_DB MapSpDbDat;
+/* data 2cc610 */ static MAPSP_KAZ_DB MapSpDbDat;
 /* data 2cc628 */ DEBUG_MENU dbg_kaza_main;
-/* sdata 3ef0d0 */ int MapSpMoviFlg;
-/* sdata 3ef0d4 */ void *MapSpMoviHdl;
-/* sdata 3ef0d8 */ float MapSpMoviRot;
-/* sdata 3ef0dc */ int MapSpMoveFlg;
-/* sdata 3ef0e0 */ MDAT_OBJ *MapSpKageObjPtr;
-/* sdata 3ef0e4 */ int MapSpKageBuffID;
-/* sdata 3ef0e8 */ MAPOBJ_DAT *MapSpFusumaPtr;
-/* sdata 3ef0ec */ int MapSpFusumaBuffID;
-/* bss 420d00 */ fixed_array<MAPSP_KAZ_HEAD,64> MapSpKazList;
-/* bss 421900 */ fixed_array<MAPSP_KAZ_SPEED,5> MapSpKazSpeed;
+/* sdata 3ef0d0 */ static int MapSpMoviFlg;
+/* sdata 3ef0d4 */ static void *MapSpMoviHdl;
+/* sdata 3ef0d8 */ static float MapSpMoviRot;
+/* sdata 3ef0dc */ static int MapSpMoveFlg;
+/* sdata 3ef0e0 */ static MDAT_OBJ *MapSpKageObjPtr;
+/* sdata 3ef0e4 */ static int MapSpKageBuffID;
+/* sdata 3ef0e8 */ static MAPOBJ_DAT *MapSpFusumaPtr;
+/* sdata 3ef0ec */ static int MapSpFusumaBuffID;
+/* bss 420d00 */ static fixed_array<MAPSP_KAZ_HEAD,64> MapSpKazList;
+/* bss 421900 */ static fixed_array<MAPSP_KAZ_SPEED,5> MapSpKazSpeed;
 /* sbss 3f5180 */ unsigned char MAPSP_KAZ_HEAD type_info node[8];
 /* sbss 3f5188 */ unsigned char MAPSP_KAZ_SPEED type_info node[8];
-/* bss 421968 */ int (*MapSpFuncList[3])(/* parameters unknown */);
-/* bss 421980 */ float MapSpMoviPos[4];
+/* bss 421968 */ static int (*MapSpFuncList[3])(/* parameters unknown */);
+/* bss 421980 */ static float MapSpMoviPos[4];
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/ingame/map/MhCtl.c
@@ -254,20 +254,20 @@
 
 /* data 2cc828 */ MH_CTL_DB_FLG mhdb;
 /* data 2cc838 */ DEBUG_MENU dbg_room_main;
-/* sdata 3ef150 */ int MhCtlLoadFlg;
-/* sdata 3ef154 */ int MhCtlRegBuffID;
-/* sdata 3ef158 */ int s_bDrewShadow;
-/* sbss 3f4aa0 */ int mh_ctl_disp_lock_cnt;
+/* sdata 3ef150 */ static int MhCtlLoadFlg;
+/* sdata 3ef154 */ static int MhCtlRegBuffID;
+/* sdata 3ef158 */ static int s_bDrewShadow;
+/* sbss 3f4aa0 */ static int mh_ctl_disp_lock_cnt;
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/ingame/map/RegDat.c
 // *****************************************************************************
 
-/* sdata 3ef188 */ int RegDatNoRegNum;
-/* sdata 3ef18c */ int RegDatHitNum;
-/* bss 421990 */ fixed_array<RD_REG_HEAD,8> RegDatBuff;
-/* bss 421df0 */ fixed_array<int,8> RegDatHitList;
-/* bss 421e10 */ fixed_array<int,8> RegDatNoRegList;
+/* sdata 3ef188 */ static int RegDatNoRegNum;
+/* sdata 3ef18c */ static int RegDatHitNum;
+/* bss 421990 */ static fixed_array<RD_REG_HEAD,8> RegDatBuff;
+/* bss 421df0 */ static fixed_array<int,8> RegDatHitList;
+/* bss 421e10 */ static fixed_array<int,8> RegDatNoRegList;
 /* sbss 3f5198 */ unsigned char RD_REG_HEAD type_info node[8];
 /* sbss 3f5190 */ unsigned char RD_REG_ST_DAT type_info node[8];
 
@@ -275,7 +275,7 @@
 // FILE -- /home/zero_rom/zero2np/src/outgame/SpriteCmn.c
 // *****************************************************************************
 
-/* sdata 3ef1d8 */ SPRT_DAT *SpCmnCtlList;
+/* sdata 3ef1d8 */ static SPRT_DAT *SpCmnCtlList;
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/graphics/motion/accessory.c
@@ -283,8 +283,8 @@
 
 /* data 2cca40 */ fixed_array<fixed_array<SPRING, 20>,9> rope_spring;
 /* data 2ccfe0 */ fixed_array<fixed_array<C_PARTICLE, 20>,10> rope_particle;
-/* bss 421e30 */ fixed_array<fixed_array<C_ACS_CTRL, 15>,2> c_acs_ctrl;
-/* bss 422010 */ fixed_array<ENE_COLLISION,13> ene_c;
+/* bss 421e30 */ static fixed_array<fixed_array<C_ACS_CTRL, 15>,2> c_acs_ctrl;
+/* bss 422010 */ static fixed_array<ENE_COLLISION,13> ene_c;
 /* sbss 3f51b8 */ unsigned char C_PARTICLE type_info node[8];
 /* bss 4cdab0 */ unsigned char fixed_array<C_PARTICLE, 20> type_info node[12];
 /* sbss 3f51c0 */ unsigned char SPRING type_info node[8];
@@ -298,7 +298,7 @@
 /* sbss 3f51d8 */ unsigned char fixed_array_base<C_PARTICLE, 20, C_PARTICLE [19]> type_info node[8];
 /* sbss 3f51c8 */ unsigned char fixed_array_base<SPRING, 20, SPRING [19]> type_info node[8];
 /* sbss 3f51e8 */ unsigned char fixed_array_base<C_ACS_CTRL, 15, C_ACS_CTRL [14]> type_info node[8];
-/* bss 422078 */ ENE_COLLISION rope_c[13];
+/* bss 422078 */ static ENE_COLLISION rope_c[13];
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/graphics/motion/acs_dat.c
@@ -576,24 +576,24 @@
 // *****************************************************************************
 
 /* data 2d4370 */ fixed_array<ALBUM_INFO,2> album_info;
-/* sdata 3ef2a8 */ void* (*AlbumMemGet)(/* parameters unknown */);
-/* sdata 3ef2ac */ void (*AlbumMemFree)(/* parameters unknown */);
-/* sdata 3ef2b0 */ void *outgame_tex_addr;
-/* sdata 3ef2b4 */ void *album_cmn_tex_addr;
-/* sdata 3ef2b8 */ void *album_hensyu_tex_addr;
-/* sdata 3ef2bc */ void *album_sl_addr;
-/* sdata 3ef2c0 */ void *album_slot_sl_addr;
-/* sdata 3ef2c4 */ void *album_buff_addr;
-/* sdata 3ef2c8 */ void *album_save_data_addr;
-/* sdata 3ef2cc */ char album_title_disp_flg;
-/* sdata 3ef2d0 */ void (*album_mode_init_func[2])(/* parameters unknown */);
-/* sdata 3ef2d8 */ int (*album_mode_main_func[2])(/* parameters unknown */);
-/* sdata 3ef2e0 */ void (*album_mode_disp_func[2])(/* parameters unknown */);
-/* sbss 3f4aa8 */ reference_fixed_array<int,7> album_view_tex_tbl;
+/* sdata 3ef2a8 */ static void* (*AlbumMemGet)(/* parameters unknown */);
+/* sdata 3ef2ac */ static void (*AlbumMemFree)(/* parameters unknown */);
+/* sdata 3ef2b0 */ static void *outgame_tex_addr;
+/* sdata 3ef2b4 */ static void *album_cmn_tex_addr;
+/* sdata 3ef2b8 */ static void *album_hensyu_tex_addr;
+/* sdata 3ef2bc */ static void *album_sl_addr;
+/* sdata 3ef2c0 */ static void *album_slot_sl_addr;
+/* sdata 3ef2c4 */ static void *album_buff_addr;
+/* sdata 3ef2c8 */ static void *album_save_data_addr;
+/* sdata 3ef2cc */ static char album_title_disp_flg;
+/* sdata 3ef2d0 */ static void (*album_mode_init_func[2])(/* parameters unknown */);
+/* sdata 3ef2d8 */ static int (*album_mode_main_func[2])(/* parameters unknown */);
+/* sdata 3ef2e0 */ static void (*album_mode_disp_func[2])(/* parameters unknown */);
+/* sbss 3f4aa8 */ static reference_fixed_array<int,7> album_view_tex_tbl;
 /* sbss 3f51f8 */ unsigned char ALBUM_INFO type_info node[8];
 /* sbss 3f51f0 */ unsigned char PICTURE_WRK type_info node[8];
-/* bss 4220e0 */ ALBUM_CTRL album_ctrl;
-/* sbss 3f4ab0 */ ALBUM_DISP_CTRL album_disp_ctrl;
+/* bss 4220e0 */ static ALBUM_CTRL album_ctrl;
+/* sbss 3f4ab0 */ static ALBUM_DISP_CTRL album_disp_ctrl;
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/album/dat/album_dat.c
@@ -614,68 +614,68 @@
 // FILE -- /home/zero_rom/zero2np/src/album/prg/album_edit.c
 // *****************************************************************************
 
-/* data 2d7dc8 */ void (*album_edit_mode_init_func[10])(/* parameters unknown */);
-/* data 2d7df0 */ void (*album_edit_mode_func[10])(/* parameters unknown */);
-/* data 2d7e18 */ void (*album_edit_mode_end_func[10])(/* parameters unknown */);
-/* data 2d7e40 */ void (*album_edit_mode_disp[10])(/* parameters unknown */);
+/* data 2d7dc8 */ static void (*album_edit_mode_init_func[10])(/* parameters unknown */);
+/* data 2d7df0 */ static void (*album_edit_mode_func[10])(/* parameters unknown */);
+/* data 2d7e18 */ static void (*album_edit_mode_end_func[10])(/* parameters unknown */);
+/* data 2d7e40 */ static void (*album_edit_mode_disp[10])(/* parameters unknown */);
 /* sbss 3f51f8 */ unsigned char ALBUM_INFO type_info node[8];
 /* sbss 3f51f0 */ unsigned char PICTURE_WRK type_info node[8];
 /* sbss 3f5200 */ unsigned char _PICTURE_SUBJECT type_info node[8];
-/* bss 4220f0 */ ALBUM_EDIT_CTRL album_edit_ctrl;
-/* bss 422100 */ ALBUM_EDIT_DISP album_edit_disp;
-/* sbss 3f4ab8 */ ALBUM_COPY_CTRL album_copy_ctrl;
+/* bss 4220f0 */ static ALBUM_EDIT_CTRL album_edit_ctrl;
+/* bss 422100 */ static ALBUM_EDIT_DISP album_edit_disp;
+/* sbss 3f4ab8 */ static ALBUM_COPY_CTRL album_copy_ctrl;
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/album/prg/album_load.c
 // *****************************************************************************
 
-/* sdata 3ef418 */ void *album_load_buff_addr;
-/* bss 422110 */ ALBUM_LOAD_CTRL album_load_ctrl;
-/* sbss 3f4ac0 */ ALBUM_LOAD_DISP album_load_disp;
+/* sdata 3ef418 */ static void *album_load_buff_addr;
+/* bss 422110 */ static ALBUM_LOAD_CTRL album_load_ctrl;
+/* sbss 3f4ac0 */ static ALBUM_LOAD_DISP album_load_disp;
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/album/prg/album_mem.c
 // *****************************************************************************
 
-/* bss 422120 */ ALBUM_MEM_CTRL album_mem_ctrl;
+/* bss 422120 */ static ALBUM_MEM_CTRL album_mem_ctrl;
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/album/prg/album_save.c
 // *****************************************************************************
 
-/* sdata 3ef460 */ void *album_save_buff_addr;
+/* sdata 3ef460 */ static void *album_save_buff_addr;
 /* sbss 3f51f8 */ unsigned char ALBUM_INFO type_info node[8];
-/* bss 422130 */ ALBUM_SAVE_CTRL album_save_ctrl;
-/* sbss 3f4ac8 */ ALBUM_SAVE_DISP album_save_disp;
+/* bss 422130 */ static ALBUM_SAVE_CTRL album_save_ctrl;
+/* sbss 3f4ac8 */ static ALBUM_SAVE_DISP album_save_disp;
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/album/prg/album_view.c
 // *****************************************************************************
 
-/* sdata 3ef4a8 */ void *album_view_tex_addr;
-/* bss 422140 */ fixed_array<char,16> disp_photo_no;
-/* sbss 3f4ad0 */ reference_fixed_array<int,7> album_view_tex_tbl;
+/* sdata 3ef4a8 */ static void *album_view_tex_addr;
+/* bss 422140 */ static fixed_array<char,16> disp_photo_no;
+/* sbss 3f4ad0 */ static reference_fixed_array<int,7> album_view_tex_tbl;
 /* sbss 3f51f8 */ unsigned char ALBUM_INFO type_info node[8];
 /* sbss 3f51f0 */ unsigned char PICTURE_WRK type_info node[8];
 /* sbss 3f5200 */ unsigned char _PICTURE_SUBJECT type_info node[8];
-/* sbss 3f4ad8 */ ALBUM_VIEW_CTRL album_view_ctrl;
-/* sbss 3f4ae0 */ ALBUM_VIEW_DISP album_view_disp;
+/* sbss 3f4ad8 */ static ALBUM_VIEW_CTRL album_view_ctrl;
+/* sbss 3f4ae0 */ static ALBUM_VIEW_DISP album_view_disp;
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/outgame/autoload.c
 // *****************************************************************************
 
-/* sdata 3ef520 */ void *auto_load_data_buff;
-/* sbss 3f4ae8 */ AUTO_LOAD_CTRL auto_load_ctrl;
+/* sdata 3ef520 */ static void *auto_load_data_buff;
+/* sbss 3f4ae8 */ static AUTO_LOAD_CTRL auto_load_ctrl;
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/ingame/photo/bonus_shot.c
 // *****************************************************************************
 
-/* sdata 3ef570 */ MyPoint aComboNumPoint[2];
-/* sdata 3ef578 */ MyPoint aComboCharPoint[2];
+/* sdata 3ef570 */ static MyPoint aComboNumPoint[2];
+/* sdata 3ef578 */ static MyPoint aComboCharPoint[2];
 /* sbss 3f5208 */ unsigned char CBonusShotOne type_info node[8];
-/* rdata 3a1a88 */ SHOT_NAME_TEX aShotTexTbl[5][9];
+/* rdata 3a1a88 */ static SHOT_NAME_TEX aShotTexTbl[5][9];
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/graphics/graph2d/tim_dat/btn_sprt_dat.c
@@ -777,14 +777,14 @@
 // FILE -- /home/zero_rom/zero2np/src/outgame/chapter_sel.c
 // *****************************************************************************
 
-/* sbss 3f4af0 */ CHAPTER_SEL_CTRL chapter_sel_ctrl;
-/* rdata 3a2350 */ short int costume_tbl[9][2];
+/* sbss 3f4af0 */ static CHAPTER_SEL_CTRL chapter_sel_ctrl;
+/* rdata 3a2350 */ static short int costume_tbl[9][2];
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/ingame/plyr/charBB.c
 // *****************************************************************************
 
-/* rdata 3a2430 */ CHARBBDATA s_aCharBBData[78];
+/* rdata 3a2430 */ static CHARBBDATA s_aCharBBData[78];
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/ingame/clear/prg/clear_flg.c
@@ -798,18 +798,18 @@
 // FILE -- /home/zero_rom/zero2np/src/ingame/clear/prg/clearmenu.c
 // *****************************************************************************
 
-/* sdata 3ef850 */ void *clear_bg_tex_addr;
-/* sbss 3f4af8 */ CLEAR_MENU_CTRL clear_menu_ctrl;
-/* bss 422150 */ CLEAR_MENU_DISP clear_menu_disp;
+/* sdata 3ef850 */ static void *clear_bg_tex_addr;
+/* sbss 3f4af8 */ static CLEAR_MENU_CTRL clear_menu_ctrl;
+/* bss 422150 */ static CLEAR_MENU_DISP clear_menu_disp;
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/ingame/clear/prg/clearmenu_top.c
 // *****************************************************************************
 
-/* sdata 3ef898 */ void *clear_menu_tex_addr;
-/* sdata 3ef89c */ char clear_menu_top_init_flg;
-/* sbss 3f4b00 */ CLEAR_MENU_TOP_CTRL clear_menu_top_ctrl;
-/* sbss 3f4b08 */ CLEAR_MENU_TOP_DISP clear_menu_top_disp;
+/* sdata 3ef898 */ static void *clear_menu_tex_addr;
+/* sdata 3ef89c */ static char clear_menu_top_init_flg;
+/* sbss 3f4b00 */ static CLEAR_MENU_TOP_CTRL clear_menu_top_ctrl;
+/* sbss 3f4b08 */ static CLEAR_MENU_TOP_DISP clear_menu_top_disp;
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/system/compress/compress.c
@@ -817,20 +817,20 @@
 
 /* data 2d8d38 */ DCT_ROOT ZigZag[64];
 /* sdata 3ef8a0 */ PHOTO_EXPAND photo_expand;
-/* bss 422170 */ unsigned char pixelstrip[8][384];
-/* bss 422d70 */ float C[8][8];
-/* bss 422e70 */ float Ct[8][8];
-/* sbss 3f4b1c */ int InputRunLength;
-/* sbss 3f4b20 */ int OutputRunLength;
-/* bss 422f70 */ int quantum[8][8];
-/* sbss 3f4b24 */ char repair_flg;
+/* bss 422170 */ static unsigned char pixelstrip[8][384];
+/* bss 422d70 */ static float C[8][8];
+/* bss 422e70 */ static float Ct[8][8];
+/* sbss 3f4b1c */ static int InputRunLength;
+/* sbss 3f4b20 */ static int OutputRunLength;
+/* bss 422f70 */ static int quantum[8][8];
+/* sbss 3f4b24 */ static char repair_flg;
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/ingame/item/prg/crystal.c
 // *****************************************************************************
 
-/* data 2d8db8 */ int crystal_stream[41];
-/* bss 423070 */ fixed_array<char,40> plyr_crystal;
+/* data 2d8db8 */ static int crystal_stream[41];
+/* bss 423070 */ static fixed_array<char,40> plyr_crystal;
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/ingame/item/dat/crystal_dat.c
@@ -889,9 +889,9 @@
 /* sdata 3ef97c */ int dbg_cmn_mem_disp;
 /* sdata 3ef980 */ int dbg_iop_mem_disp;
 /* sdata 3ef984 */ int dbg_ene_no;
-/* sdata 3ef988 */ int dbg_enemy_button_pre;
+/* sdata 3ef988 */ static int dbg_enemy_button_pre;
 /* sdata 3ef98c */ int dbg_enemy_button;
-/* data 2d9c70 */ DEBUG_MENU_DATA dbg_menu_data[3];
+/* data 2d9c70 */ static DEBUG_MENU_DATA dbg_menu_data[3];
 /* data 369d78 */ Rep basic_string<char, string_char_traits<char>, ctl::custom_allocator<char> >::nilRep;
 /* data 3f49fc */ size_t basic_string<char, string_char_traits<char>, ctl::custom_allocator<char> >::npos;
 /* sbss 3f5218 */ unsigned char CVariable<char, 0, 9> type_info node[8];
@@ -904,7 +904,7 @@
 // FILE -- /home/zero_rom/zero2np/src/debug/debug_menu.c
 // *****************************************************************************
 
-/* data 2d9ca0 */ sceVu0IVECTOR s_ivBGColor;
+/* data 2d9ca0 */ static sceVu0IVECTOR s_ivBGColor;
 /* data 2d9cb0 */ DEBUG_MENU dbg_menu_main;
 /* data 2d9eb0 */ DEBUG_MENU dbg_disp_main;
 /* data 2da0b0 */ DEBUG_MENU dbg_item_main;
@@ -916,7 +916,7 @@
 /* data 2dacb0 */ DEBUG_MENU dbg_event_item4;
 /* data 2daeb0 */ DEBUG_MENU dbg_mem_main;
 /* data 2db0b0 */ DEBUG_MENU dbg_ene_main;
-/* sdata 3efa50 */ DEBUG_MENU *now_tree;
+/* sdata 3efa50 */ static DEBUG_MENU *now_tree;
 /* sbss 3f5218 */ unsigned char CVariable<char, 0, 9> type_info node[8];
 /* sbss 3f5210 */ unsigned char CVariable<char, 0, 3> type_info node[8];
 /* sbss 3f5228 */ unsigned char PLYR_ITEM type_info node[8];
@@ -926,25 +926,25 @@
 // FILE -- /home/zero_rom/zero2np/src/graphics/dmaVif1.c
 // *****************************************************************************
 
-/* sbss 3f4b28 */ int vu1tag_num;
-/* sbss 3f4b2c */ float *objwork[4];
-/* sbss 3f4b30 */ float *objworkdbuf[2][4];
-/* sbss 3f4b38 */ sceDmaTag *cachetag;
-/* sbss 3f4b40 */ sceDmaTag *cachetagdbuf[2];
-/* sbss 3f4b48 */ int tagswap;
-/* sbss 3f4b4c */ int bVifBufResizeCnt;
-/* sbss 3f4b50 */ int iSaveNewTagMax;
-/* sbss 3f4b54 */ int numtag_save;
-/* sbss 3f4b58 */ sceDmaChan *s_pDmaChan_VIF1;
-/* rdata 3a42a0 */ int DummyFlushData[4];
+/* sbss 3f4b28 */ static int vu1tag_num;
+/* sbss 3f4b2c */ static float *objwork[4];
+/* sbss 3f4b30 */ static float *objworkdbuf[2][4];
+/* sbss 3f4b38 */ static sceDmaTag *cachetag;
+/* sbss 3f4b40 */ static sceDmaTag *cachetagdbuf[2];
+/* sbss 3f4b48 */ static int tagswap;
+/* sbss 3f4b4c */ static int bVifBufResizeCnt;
+/* sbss 3f4b50 */ static int iSaveNewTagMax;
+/* sbss 3f4b54 */ static int numtag_save;
+/* sbss 3f4b58 */ static sceDmaChan *s_pDmaChan_VIF1;
+/* rdata 3a42a0 */ static int DummyFlushData[4];
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/ingame/door/prg/door.c
 // *****************************************************************************
 
-/* bss 423098 */ fixed_array<DOOR_CTRL,208> door_ctrl;
+/* bss 423098 */ static fixed_array<DOOR_CTRL,208> door_ctrl;
 /* sbss 3f5230 */ unsigned char DOOR_CTRL type_info node[8];
-/* sbss 3f4b5c */ u_char lock_exe_step;
+/* sbss 3f4b5c */ static u_char lock_exe_step;
 /* sdata 3efb60 */ DOOR_LOCK_STATE_CTRL lock_state_ctrl;
 
 // *****************************************************************************
@@ -958,23 +958,23 @@
 // *****************************************************************************
 
 /* data 2db398 */ MAP_DOOR_POINT *menu_map_door_data[18];
-/* rdata 3a4518 */ MAP_DOOR_POINT map_soto_door_point[13];
-/* rdata 3a4650 */ MAP_DOOR_POINT map_os1_door_point[7];
-/* rdata 3a46f8 */ MAP_DOOR_POINT map_os2_door_point[2];
-/* rdata 3a4728 */ MAP_DOOR_POINT map_os0_door_point[1];
-/* rdata 3a4740 */ MAP_DOOR_POINT map_ks1_door_point[20];
-/* rdata 3a4920 */ MAP_DOOR_POINT map_ks2_door_point[8];
-/* rdata 3a49e0 */ MAP_DOOR_POINT map_ks0_door_point[5];
-/* rdata 3a4a58 */ MAP_DOOR_POINT map_ry1_door_point[16];
-/* rdata 3a4bd8 */ MAP_DOOR_POINT map_ry2_door_point[6];
-/* rdata 3a4c68 */ MAP_DOOR_POINT map_ry0_door_point[1];
-/* rdata 3a4c80 */ MAP_DOOR_POINT map_tb1_door_point[16];
-/* rdata 3a4e00 */ MAP_DOOR_POINT map_tb2_door_point[14];
-/* rdata 3a4f50 */ MAP_DOOR_POINT map_tb0_door_point[1];
-/* rdata 3a4f68 */ MAP_DOOR_POINT map_chika_door_point[2];
-/* rdata 3a4f98 */ MAP_DOOR_POINT map_kur_door_point[3];
-/* rdata 3a4fe0 */ MAP_DOOR_POINT map_kuh_door_point[3];
-/* rdata 3a5028 */ MAP_DOOR_POINT map_kuc_door_point[3];
+/* rdata 3a4518 */ static MAP_DOOR_POINT map_soto_door_point[13];
+/* rdata 3a4650 */ static MAP_DOOR_POINT map_os1_door_point[7];
+/* rdata 3a46f8 */ static MAP_DOOR_POINT map_os2_door_point[2];
+/* rdata 3a4728 */ static MAP_DOOR_POINT map_os0_door_point[1];
+/* rdata 3a4740 */ static MAP_DOOR_POINT map_ks1_door_point[20];
+/* rdata 3a4920 */ static MAP_DOOR_POINT map_ks2_door_point[8];
+/* rdata 3a49e0 */ static MAP_DOOR_POINT map_ks0_door_point[5];
+/* rdata 3a4a58 */ static MAP_DOOR_POINT map_ry1_door_point[16];
+/* rdata 3a4bd8 */ static MAP_DOOR_POINT map_ry2_door_point[6];
+/* rdata 3a4c68 */ static MAP_DOOR_POINT map_ry0_door_point[1];
+/* rdata 3a4c80 */ static MAP_DOOR_POINT map_tb1_door_point[16];
+/* rdata 3a4e00 */ static MAP_DOOR_POINT map_tb2_door_point[14];
+/* rdata 3a4f50 */ static MAP_DOOR_POINT map_tb0_door_point[1];
+/* rdata 3a4f68 */ static MAP_DOOR_POINT map_chika_door_point[2];
+/* rdata 3a4f98 */ static MAP_DOOR_POINT map_kur_door_point[3];
+/* rdata 3a4fe0 */ static MAP_DOOR_POINT map_kuh_door_point[3];
+/* rdata 3a5028 */ static MAP_DOOR_POINT map_kuc_door_point[3];
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/graphics/draw_env.c
@@ -982,22 +982,22 @@
 
 /* sdata 3efba8 */ qword* (*context_packet_start[2])(/* parameters unknown */);
 /* sdata 3efbb0 */ void (*context_packet_end[2])(/* parameters unknown */);
-/* bss 423168 */ long int draw_env_alpha[2];
-/* bss 423178 */ long int draw_env_test[2];
-/* bss 423188 */ long int draw_env_zbuf[2];
-/* bss 423198 */ long int draw_env_tex1[2];
-/* bss 4231a8 */ long int draw_env_clamp[2];
-/* bss 4231b8 */ long int draw_env_scissor[2];
-/* sbss 3f4b60 */ long int draw_env_texa;
+/* bss 423168 */ static long int draw_env_alpha[2];
+/* bss 423178 */ static long int draw_env_test[2];
+/* bss 423188 */ static long int draw_env_zbuf[2];
+/* bss 423198 */ static long int draw_env_tex1[2];
+/* bss 4231a8 */ static long int draw_env_clamp[2];
+/* bss 4231b8 */ static long int draw_env_scissor[2];
+/* sbss 3f4b60 */ static long int draw_env_texa;
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/graphics/graph3d/eeException.c
 // *****************************************************************************
 
-/* data 2db3e0 */ int s_abEnableExcCode[14];
-/* data 2db418 */ char *s_astrException[14];
-/* data 2db450 */ int s_aiDmaCatchChannel[3];
-/* bss 4231d0 */ void s_iopExceptionData;
+/* data 2db3e0 */ static int s_abEnableExcCode[14];
+/* data 2db418 */ static char *s_astrException[14];
+/* data 2db450 */ static int s_aiDmaCatchChannel[3];
+/* bss 4231d0 */ static void s_iopExceptionData;
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/graphics/graph3d/eeFile.cpp
@@ -1054,17 +1054,17 @@
 /* data 2defa0 */ fixed_array<EFFECT_CONT,64> efcnt_cnt;
 /* data 2e0ba0 */ fixed_array<EFFECT_CONT,48> efcntm_cnt;
 /* sdata 3efca8 */ reference_fixed_array<SCREEN_EFFECT_PARAMETER *,6> pScreenEffectParamPtr;
-/* sdata 3efcac */ void *pEffectHeapAdrs;
+/* sdata 3efcac */ static void *pEffectHeapAdrs;
 /* sbss 3f5268 */ unsigned char EFFECT_CONT type_info node[8];
 /* bss 4cdaf0 */ unsigned char SCREEN_EFFECT_PARAMETER * type_info node[12];
 /* sbss 3f5260 */ unsigned char SCREEN_EFFECT_PARAMETER type_info node[8];
 /* data 2e20a0 */ SBTSET msbtset;
 /* sdata 3efcc8 */ u_char g_bInterlace;
-/* bss 423430 */ EFF_WRK eff_wrk;
+/* bss 423430 */ static EFF_WRK eff_wrk;
 /* sdata 3efccc */ int look_debugmenu;
-/* sbss 3f4b68 */ int ScreenEffectStatus;
-/* sbss 3f4b6c */ int ScreenEffectNo;
-/* bss 423450 */ MY_MALLOC EffectMallocWrk;
+/* sbss 3f4b68 */ static int ScreenEffectStatus;
+/* sbss 3f4b6c */ static int ScreenEffectNo;
+/* bss 423450 */ static MY_MALLOC EffectMallocWrk;
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/graphics/effect/effect_butterfly.c
@@ -1154,15 +1154,15 @@
 /* sdata 3efd6c */ int SEC3;
 /* sdata 3efd70 */ int SEC4;
 /* sdata 3efd74 */ int SEC5;
-/* sbss 3f4b78 */ reference_fixed_array<ENE_DMG_LARGE_HIT_PARAMETER *,38> pLargeHitParameter;
-/* sbss 3f4b80 */ reference_fixed_array<ENE_DMG_BLUR_CONTRAST_PARAMETER *,20> pLargeHitBlurParameter;
-/* bss 423480 */ fixed_array<TAIL_DMG2_DAT,48> enedmg2_tail;
-/* bss 42e880 */ fixed_array<NEW_PERTICLE,48> new_perticle;
-/* sbss 3f4b88 */ reference_fixed_array<int,3> alp;
-/* sbss 3f4b90 */ reference_fixed_array<int,3> scl;
-/* sbss 3f4b98 */ reference_fixed_array<int,3> rot;
-/* sbss 3f4ba0 */ reference_fixed_array<int,3> ccol;
-/* sbss 3f4ba8 */ reference_fixed_array<int,3> calp;
+/* sbss 3f4b78 */ static reference_fixed_array<ENE_DMG_LARGE_HIT_PARAMETER *,38> pLargeHitParameter;
+/* sbss 3f4b80 */ static reference_fixed_array<ENE_DMG_BLUR_CONTRAST_PARAMETER *,20> pLargeHitBlurParameter;
+/* bss 423480 */ static fixed_array<TAIL_DMG2_DAT,48> enedmg2_tail;
+/* bss 42e880 */ static fixed_array<NEW_PERTICLE,48> new_perticle;
+/* sbss 3f4b88 */ static reference_fixed_array<int,3> alp;
+/* sbss 3f4b90 */ static reference_fixed_array<int,3> scl;
+/* sbss 3f4b98 */ static reference_fixed_array<int,3> rot;
+/* sbss 3f4ba0 */ static reference_fixed_array<int,3> ccol;
+/* sbss 3f4ba8 */ static reference_fixed_array<int,3> calp;
 /* sbss 3f52b0 */ unsigned char ENDMG1 type_info node[8];
 /* sbss 3f5220 */ unsigned char ENE_WRK type_info node[8];
 /* sbss 3f5290 */ unsigned char float [3] type_info node[8];
@@ -1181,7 +1181,7 @@
 /* data 2e5130 */ ENE_HIT_EFFECT_CTRL EneHitEffectCtrl;
 /* sdata 3efd98 */ int eneseal_status;
 /* sdata 3efd9c */ int enedmg_status;
-/* sbss 3f4bac */ int EneDmgParticleSuctionNum;
+/* sbss 3f4bac */ static int EneDmgParticleSuctionNum;
 /* data 2e5170 */ SWORD_LINE sw_line;
 /* data 2e5180 */ ENE_DMG_EFF ene_dmg_eff;
 /* data 2e51d0 */ SINGLE_LINK_LIST EneParticleList;
@@ -1192,14 +1192,14 @@
 // *****************************************************************************
 
 /* data 2e51f0 */ fixed_array<EFFINFO2,8> efi;
-/* bss 43d6e0 */ EFF_PARTSBLUR eff_partsblur;
+/* bss 43d6e0 */ static EFF_PARTSBLUR eff_partsblur;
 /* sbss 3f52c8 */ unsigned char EFFINFO2 type_info node[8];
 /* sbss 3f5280 */ unsigned char int [3] type_info node[8];
 /* sbss 3f52d0 */ unsigned char EFFPOS type_info node[8];
 /* sbss 3f5290 */ unsigned char float [3] type_info node[8];
-/* sbss 3f4bb4 */ int init_pdef2;
-/* rdata 3a68d8 */ u_char pdeform_alpha1[289];
-/* rdata 3a6a00 */ u_char pdeform_alpha2[289];
+/* sbss 3f4bb4 */ static int init_pdef2;
+/* rdata 3a68d8 */ static u_char pdeform_alpha1[289];
+/* rdata 3a6a00 */ static u_char pdeform_alpha2[289];
 /* data 2fbbd0 */ LIGHT_COME_IN_CTRL LightComeInCtrl;
 /* data 2fbbe0 */ SINGLE_LINK_LIST WaterFlowList;
 /* data 2fbbf0 */ SINGLE_LINK_LIST ModelAlphaChangeList;
@@ -1214,15 +1214,15 @@
 /* data 2fbcc8 */ HAZE_PARAMETER KusabiHazeParameter;
 /* data 2fbd70 */ HAZE_PARAMETER SaeHazeParameter;
 /* sdata 3efe68 */ int stop_lf;
-/* sdata 3efe6c */ int haze_stop;
+/* sdata 3efe6c */ static int haze_stop;
 /* data 2fbe20 */ DOOR_SEAL_DISAPPEAR_CTRL DoorSealDisappearCtrl;
-/* data 2fbf30 */ float CandlePolyDat[4][4];
+/* data 2fbf30 */ static float CandlePolyDat[4][4];
 /* data 2fbf70 */ float CandleFlameScaleData[150][2];
 /* data 2fc420 */ float CandleFlameScaleData2[75][2];
-/* bss 43d750 */ fixed_array<EFF_LEAF,6> eff_leaf;
-/* bss 43f610 */ fixed_array<HEAT_HAZE,4> ene_particle;
-/* bss 44f050 */ fixed_array<HEAT_HAZE,1> amu_particle;
-/* bss 452ee0 */ fixed_array<HEAT_HAZE,5> torch_particle;
+/* bss 43d750 */ static fixed_array<EFF_LEAF,6> eff_leaf;
+/* bss 43f610 */ static fixed_array<HEAT_HAZE,4> ene_particle;
+/* bss 44f050 */ static fixed_array<HEAT_HAZE,1> amu_particle;
+/* bss 452ee0 */ static fixed_array<HEAT_HAZE,5> torch_particle;
 /* sbss 3f52f0 */ unsigned char HEAT_HAZE type_info node[8];
 /* sbss 3f52f8 */ unsigned char MANY_CANDLE_PARTICLE type_info node[8];
 /* sbss 3f5280 */ unsigned char int [3] type_info node[8];
@@ -1230,14 +1230,14 @@
 /* sbss 3f5300 */ unsigned char EFF_LEAF type_info node[8];
 /* sbss 3f52e0 */ unsigned char EFF_LEAF_ONE type_info node[8];
 /* sbss 3f52d8 */ unsigned char HAZE_PARTICLE type_info node[8];
-/* sbss 3f4bc0 */ int init_pond;
-/* sbss 3f4bc4 */ int init_hhaze;
-/* sbss 3f4bc8 */ int init_newitem;
-/* sbss 3f4bcc */ int init_torch;
-/* sbss 3f4bd0 */ int init_smoke;
-/* sbss 3f4bd4 */ void *amulet_fire_ret;
-/* sbss 3f4bd8 */ int amulet_fire_flow;
-/* sbss 3f4bdc */ int amulet_fire_cnt;
+/* sbss 3f4bc0 */ static int init_pond;
+/* sbss 3f4bc4 */ static int init_hhaze;
+/* sbss 3f4bc8 */ static int init_newitem;
+/* sbss 3f4bcc */ static int init_torch;
+/* sbss 3f4bd0 */ static int init_smoke;
+/* sbss 3f4bd4 */ static void *amulet_fire_ret;
+/* sbss 3f4bd8 */ static int amulet_fire_flow;
+/* sbss 3f4bdc */ static int amulet_fire_cnt;
 /* data 2fc6b0 */ MANY_CANDLE_LOAD_CTRL ManyCandleLoadCtrl;
 /* data 2fc6f0 */ SINGLE_LINK_LIST ItemEffectList;
 /* data 2fc700 */ THUNDER_LIGHT_CTRL ThunderLightCtrl;
@@ -1246,23 +1246,23 @@
 // FILE -- /home/zero_rom/zero2np/src/graphics/effect/effect_pak.c
 // *****************************************************************************
 
-/* sdata 3efeb8 */ int ndpkt;
-/* sdata 3efebc */ int ndpri;
-/* bss 4667b0 */ u_int draw_pri[4096][2];
+/* sdata 3efeb8 */ static int ndpkt;
+/* sdata 3efebc */ static int ndpri;
+/* bss 4667b0 */ static u_int draw_pri[4096][2];
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/graphics/effect/effect_rain.c
 // *****************************************************************************
 
-/* bss 46e7b0 */ EFFECT_RAIN_CTRL RainCtrl;
-/* bss 46e7f0 */ EFFECT_SPRAY_CTRL SprayCtrl;
-/* bss 46e850 */ EFFECT_SPRAY_CTRL SprayCtrl2;
-/* bss 46e8b0 */ EFFECT_DROP_CTRL DropCtrl;
-/* rdata 3a72b0 */ SPRAY_APPEAR_DATA SprayRect[5];
-/* rdata 3a7440 */ SPRAY_APPEAR_DATA SprayRect2[23];
-/* rdata 3a7b70 */ RAIN_HIT_BOX OutsideBox;
-/* rdata 3a7b90 */ RAIN_HIT_BOX InsideBox;
-/* rdata 3a7bb0 */ float DropOfWaterPos[35][4];
+/* bss 46e7b0 */ static EFFECT_RAIN_CTRL RainCtrl;
+/* bss 46e7f0 */ static EFFECT_SPRAY_CTRL SprayCtrl;
+/* bss 46e850 */ static EFFECT_SPRAY_CTRL SprayCtrl2;
+/* bss 46e8b0 */ static EFFECT_DROP_CTRL DropCtrl;
+/* rdata 3a72b0 */ static SPRAY_APPEAR_DATA SprayRect[5];
+/* rdata 3a7440 */ static SPRAY_APPEAR_DATA SprayRect2[23];
+/* rdata 3a7b70 */ static RAIN_HIT_BOX OutsideBox;
+/* rdata 3a7b90 */ static RAIN_HIT_BOX InsideBox;
+/* rdata 3a7bb0 */ static float DropOfWaterPos[35][4];
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/graphics/effect/effect_rdr.c
@@ -1281,22 +1281,22 @@
 /* data 2fd528 */ EFF_FOCUS eff_focus;
 /* sdata 3eff80 */ EFF_DEFORM eff_deform;
 /* sdata 3eff88 */ short int overlap_passflg[2];
-/* sdata 3eff8c */ int SSC_BankNo;
-/* bss 473720 */ SCREEN_SAVER_CTRL ScreenSaverCtrl;
+/* sdata 3eff8c */ static int SSC_BankNo;
+/* bss 473720 */ static SCREEN_SAVER_CTRL ScreenSaverCtrl;
 /* sbss 3f5318 */ unsigned char SCREEN_SAVER_TEX type_info node[8];
-/* sbss 3f4be0 */ MAKE_DITHER_PATTERN_CTRL MakeDitherPatternCtrl;
-/* bss 473778 */ DEFWORK dw[25][33];
+/* sbss 3f4be0 */ static MAKE_DITHER_PATTERN_CTRL MakeDitherPatternCtrl;
+/* bss 473778 */ static DEFWORK dw[25][33];
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/graphics/effect/effect_sub.c
 // *****************************************************************************
 
-/* data 2fd560 */ SCRCTRL sc_col;
+/* data 2fd560 */ static SCRCTRL sc_col;
 /* sbss 3f5290 */ unsigned char float [3] type_info node[8];
 /* data 2fd570 */ SINGLE_LINK_LIST LeavesList;
-/* sbss 3f4be4 */ u_long128 *buf;
-/* sbss 3f4be8 */ u_long128 *buf2;
-/* sbss 3f4bec */ u_long128 *bufz;
+/* sbss 3f4be4 */ static u_long128 *buf;
+/* sbss 3f4be8 */ static u_long128 *buf2;
+/* sbss 3f4bec */ static u_long128 *bufz;
 /* data 2fd580 */ EFFECT_SOUND_CTRL EffectSoundCtrl;
 
 // *****************************************************************************
@@ -1346,25 +1346,25 @@
 // FILE -- /home/zero_rom/zero2np/src/ingame/enemy/ene_mot_ctrl.c
 // *****************************************************************************
 
-/* data 2fde40 */ ENE_MOT_WRK enemot_ch019anm002[2];
-/* data 2fde50 */ ENE_MOT_WRK *enemot_ch019[17];
-/* data 2fde98 */ ENE_MOT_WRK enemot_ch021anm010[3];
-/* data 2fdeb0 */ ENE_MOT_WRK enemot_ch021anm011[3];
-/* data 2fdec8 */ ENE_MOT_WRK enemot_ch021anm012[3];
-/* data 2fdee0 */ ENE_MOT_WRK *enemot_ch021[13];
-/* data 2fdf18 */ ENE_MOT_WRK enemot_ch025anm016[3];
-/* data 2fdf30 */ ENE_MOT_WRK *enemot_ch025[13];
-/* data 2fdf68 */ ENE_MOT_WRK enemot_ch031anm000[2];
-/* data 2fdf78 */ ENE_MOT_WRK enemot_ch031anm002[2];
-/* data 2fdf88 */ ENE_MOT_WRK enemot_ch031anm014[2];
-/* data 2fdf98 */ ENE_MOT_WRK enemot_ch031anm015[2];
-/* data 2fdfa8 */ ENE_MOT_WRK enemot_ch031anm016[2];
-/* data 2fdfb8 */ ENE_MOT_WRK enemot_ch031anm017[2];
-/* data 2fdfc8 */ ENE_MOT_WRK enemot_ch031anm018[2];
-/* data 2fdfd8 */ ENE_MOT_WRK enemot_ch031anm019[2];
-/* data 2fdfe8 */ ENE_MOT_WRK *enemot_ch031[15];
-/* sbss 3f4bf0 */ reference_fixed_array<ENE_MOT_WRK **,63> ene_mot_char_tbl;
-/* bss 478720 */ fixed_array<ENE_MOT_CTRL,10> ene_mot_ctrl;
+/* data 2fde40 */ static ENE_MOT_WRK enemot_ch019anm002[2];
+/* data 2fde50 */ static ENE_MOT_WRK *enemot_ch019[17];
+/* data 2fde98 */ static ENE_MOT_WRK enemot_ch021anm010[3];
+/* data 2fdeb0 */ static ENE_MOT_WRK enemot_ch021anm011[3];
+/* data 2fdec8 */ static ENE_MOT_WRK enemot_ch021anm012[3];
+/* data 2fdee0 */ static ENE_MOT_WRK *enemot_ch021[13];
+/* data 2fdf18 */ static ENE_MOT_WRK enemot_ch025anm016[3];
+/* data 2fdf30 */ static ENE_MOT_WRK *enemot_ch025[13];
+/* data 2fdf68 */ static ENE_MOT_WRK enemot_ch031anm000[2];
+/* data 2fdf78 */ static ENE_MOT_WRK enemot_ch031anm002[2];
+/* data 2fdf88 */ static ENE_MOT_WRK enemot_ch031anm014[2];
+/* data 2fdf98 */ static ENE_MOT_WRK enemot_ch031anm015[2];
+/* data 2fdfa8 */ static ENE_MOT_WRK enemot_ch031anm016[2];
+/* data 2fdfb8 */ static ENE_MOT_WRK enemot_ch031anm017[2];
+/* data 2fdfc8 */ static ENE_MOT_WRK enemot_ch031anm018[2];
+/* data 2fdfd8 */ static ENE_MOT_WRK enemot_ch031anm019[2];
+/* data 2fdfe8 */ static ENE_MOT_WRK *enemot_ch031[15];
+/* sbss 3f4bf0 */ static reference_fixed_array<ENE_MOT_WRK **,63> ene_mot_char_tbl;
+/* bss 478720 */ static fixed_array<ENE_MOT_CTRL,10> ene_mot_ctrl;
 /* sbss 3f5340 */ unsigned char ENE_MOT_CTRL type_info node[8];
 /* bss 4cdb60 */ unsigned char ENE_MOT_WRK ** type_info node[12];
 /* bss 4cdb70 */ unsigned char ENE_MOT_WRK * type_info node[12];
@@ -1375,9 +1375,9 @@
 // *****************************************************************************
 
 /* data 2fe030 */ fixed_array<ENE_WRK,10> ene_wrk;
-/* data 300dd0 */ DITHER_TYPE dit_type[9];
-/* data 300e60 */ DEFORM_TYPE def_type1[10];
-/* data 300ed8 */ DEFORM_TYPE def_type2[10];
+/* data 300dd0 */ static DITHER_TYPE dit_type[9];
+/* data 300e60 */ static DEFORM_TYPE def_type1[10];
+/* data 300ed8 */ static DEFORM_TYPE def_type2[10];
 /* sdata 3f01e8 */ reference_fixed_array<int,3> ew_combo_tbl;
 /* sbss 3f5220 */ unsigned char ENE_WRK type_info node[8];
 /* sbss 3f5158 */ unsigned char G3DLIGHT type_info node[8];
@@ -1386,12 +1386,12 @@
 /* sbss 3f5268 */ unsigned char EFFECT_CONT type_info node[8];
 /* sbss 3f5218 */ unsigned char CVariable<char, 0, 9> type_info node[8];
 /* sbss 3f5210 */ unsigned char CVariable<char, 0, 3> type_info node[8];
-/* sbss 3f4bf8 */ int earth_quake_cnt;
-/* sbss 3f4bfc */ int enemy_act_lock_cnt;
-/* sbss 3f4c00 */ int enemy_draw_lock_cnt;
-/* sbss 3f4c04 */ int enemy_anim_lock_cnt;
-/* sbss 3f4c08 */ int iPreNearestNoHP;
-/* sbss 3f4c0c */ int iPreNearestNo;
+/* sbss 3f4bf8 */ static int earth_quake_cnt;
+/* sbss 3f4bfc */ static int enemy_act_lock_cnt;
+/* sbss 3f4c00 */ static int enemy_draw_lock_cnt;
+/* sbss 3f4c04 */ static int enemy_anim_lock_cnt;
+/* sbss 3f4c08 */ static int iPreNearestNoHP;
+/* sbss 3f4c0c */ static int iPreNearestNo;
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/ingame/enemy/enemy_act.c
@@ -1412,14 +1412,14 @@
 /* data 3011b8 */ ENE_DAT jene_dat[312];
 /* sdata 3f0278 */ int g_iNumJeneDat;
 /* data 309f18 */ AENE_DAT aene_dat[205];
-/* bss 478c38 */ ENE_DAT_SAVE jene_dat_save[312];
-/* bss 478d70 */ ENE_DAT_SAVE aene_dat_save[205];
+/* bss 478c38 */ static ENE_DAT_SAVE jene_dat_save[312];
+/* bss 478d70 */ static ENE_DAT_SAVE aene_dat_save[205];
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/ingame/event/prg/ev_change.c
 // *****************************************************************************
 
-/* bss 478e40 */ fixed_array<EV_CHANGE_CTRL,30> ev_change_ctrl;
+/* bss 478e40 */ static fixed_array<EV_CHANGE_CTRL,30> ev_change_ctrl;
 /* sbss 3f5350 */ unsigned char EV_CHANGE_CTRL type_info node[8];
 /* sbss 3f5348 */ unsigned char EVENT_STATE type_info node[8];
 
@@ -1427,11 +1427,11 @@
 // FILE -- /home/zero_rom/zero2np/src/ingame/event/prg/ev_disp.c
 // *****************************************************************************
 
-/* bss 478fa8 */ EV_DISP2D_CTRL ev_disp2d_ctrl;
-/* sbss 3f4c20 */ EV_CHAPTER_DISP ev_chapter_disp;
-/* bss 478fd8 */ EV_ITEM_NAME_DISP ev_item_name_disp;
-/* sbss 3f4c28 */ void *ev_disp2d_addr;
-/* sbss 3f4c2c */ void *chapter_load_addr;
+/* bss 478fa8 */ static EV_DISP2D_CTRL ev_disp2d_ctrl;
+/* sbss 3f4c20 */ static EV_CHAPTER_DISP ev_chapter_disp;
+/* bss 478fd8 */ static EV_ITEM_NAME_DISP ev_item_name_disp;
+/* sbss 3f4c28 */ static void *ev_disp2d_addr;
+/* sbss 3f4c2c */ static void *chapter_load_addr;
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/ingame/event/dat/ev_disp_dat.c
@@ -1445,14 +1445,14 @@
 // FILE -- /home/zero_rom/zero2np/src/ingame/event/prg/ev_ene.c
 // *****************************************************************************
 
-/* bss 478ff0 */ ENE_LOAD_DATS ev_ene_dats[66][4];
-/* bss 479830 */ ENE_DATS ene_dats[4];
+/* bss 478ff0 */ static ENE_LOAD_DATS ev_ene_dats[66][4];
+/* bss 479830 */ static ENE_DATS ene_dats[4];
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/ingame/event/prg/ev_exe.c
 // *****************************************************************************
 
-/* bss 479850 */ fixed_array<EV_EXE_CTRL,150> ev_exe_ctrl;
+/* bss 479850 */ static fixed_array<EV_EXE_CTRL,150> ev_exe_ctrl;
 /* sbss 3f5358 */ unsigned char EV_EXE_CTRL type_info node[8];
 
 // *****************************************************************************
@@ -1465,18 +1465,18 @@
 // FILE -- /home/zero_rom/zero2np/src/ingame/event/prg/ev_macro.c
 // *****************************************************************************
 
-/* data 30dc78 */ EV_EXE_WRK ev_exe_wrk[173];
-/* data 30fa38 */ IF_COND_WRK if_cond_wrk[8];
-/* sdata 3f042e */ char synchro_mode_flg;
+/* data 30dc78 */ static EV_EXE_WRK ev_exe_wrk[173];
+/* data 30fa38 */ static IF_COND_WRK if_cond_wrk[8];
+/* sdata 3f042e */ static char synchro_mode_flg;
 /* data 369d78 */ Rep basic_string<char, string_char_traits<char>, ctl::custom_allocator<char> >::nilRep;
 /* data 369d88 */ __vtbl_ptr_type ctl::custom_allocator<char> virtual table[4];
 /* data 369e88 */ __vtbl_ptr_type CFileName virtual table[3];
-/* bss 47a1b0 */ fixed_array<EV_SOUND_CTRL,30> ev_sound_ctrl;
-/* bss 47a318 */ fixed_array<EV_STREAM_CTRL,2> ev_stream_ctrl;
-/* bss 47a328 */ fixed_array<EV_GHOST_CTRL,10> ev_ghost_ctrl;
-/* bss 47a3a0 */ fixed_array<EV_SAVE_STREAM,2> ev_save_stream;
-/* bss 47a3c0 */ fixed_array<EV_SAVE_OBJ_STREAM,2> ev_save_obj_stream;
-/* bss 47a3f0 */ fixed_array<EV_SAVE_POS_STREAM,2> ev_save_pos_stream;
+/* bss 47a1b0 */ static fixed_array<EV_SOUND_CTRL,30> ev_sound_ctrl;
+/* bss 47a318 */ static fixed_array<EV_STREAM_CTRL,2> ev_stream_ctrl;
+/* bss 47a328 */ static fixed_array<EV_GHOST_CTRL,10> ev_ghost_ctrl;
+/* bss 47a3a0 */ static fixed_array<EV_SAVE_STREAM,2> ev_save_stream;
+/* bss 47a3c0 */ static fixed_array<EV_SAVE_OBJ_STREAM,2> ev_save_obj_stream;
+/* bss 47a3f0 */ static fixed_array<EV_SAVE_POS_STREAM,2> ev_save_pos_stream;
 /* bss 4cdad0 */ unsigned char CFileName type_info node[12];
 /* sbss 3f5110 */ unsigned char ctl::custom_allocator<char> type_info node[8];
 /* sbss 3f5388 */ unsigned char EV_SAVE_STREAM type_info node[8];
@@ -1488,11 +1488,11 @@
 /* sbss 3f5218 */ unsigned char CVariable<char, 0, 9> type_info node[8];
 /* sbss 3f5210 */ unsigned char CVariable<char, 0, 3> type_info node[8];
 /* sbss 3f5238 */ unsigned char basic_string<char, string_char_traits<char>, ctl::custom_allocator<char> > type_info node[8];
-/* sbss 3f4c30 */ EV_CHOICE_CTRL ev_choice_ctrl;
-/* sbss 3f4c38 */ EV_EFF_CTRL ev_eff_ctrl;
-/* sbss 3f4c40 */ EV_SAVE_EFF_DITHER ev_save_eff_dither;
-/* sbss 3f4c48 */ EV_SAVE_SCREEN_EFFECT ev_save_screen_effect;
-/* sbss 3f4c4c */ int evPlyrLockCnt;
+/* sbss 3f4c30 */ static EV_CHOICE_CTRL ev_choice_ctrl;
+/* sbss 3f4c38 */ static EV_EFF_CTRL ev_eff_ctrl;
+/* sbss 3f4c40 */ static EV_SAVE_EFF_DITHER ev_save_eff_dither;
+/* sbss 3f4c48 */ static EV_SAVE_SCREEN_EFFECT ev_save_screen_effect;
+/* sbss 3f4c4c */ static int evPlyrLockCnt;
 /* data 3f49fc */ size_t basic_string<char, string_char_traits<char>, ctl::custom_allocator<char> >::npos;
 
 // *****************************************************************************
@@ -1507,14 +1507,14 @@
 // FILE -- /home/zero_rom/zero2np/src/ingame/event/prg/ev_open.c
 // *****************************************************************************
 
-/* data 3119e0 */ EV_COND_WRK ev_cond_wrk[48];
-/* bss 47a430 */ fixed_array<EV_CTRL_CENTER,250> ev_ctrl_center;
-/* bss 47ac00 */ fixed_array<EV_PRI_CTRL,250> ev_pri_ctrl;
+/* data 3119e0 */ static EV_COND_WRK ev_cond_wrk[48];
+/* bss 47a430 */ static fixed_array<EV_CTRL_CENTER,250> ev_ctrl_center;
+/* bss 47ac00 */ static fixed_array<EV_PRI_CTRL,250> ev_pri_ctrl;
 /* sbss 3f5390 */ unsigned char EV_CTRL_CENTER type_info node[8];
 /* sbss 3f5398 */ unsigned char EV_PRI_CTRL type_info node[8];
 /* sdata 3f0520 */ EV_PHOTO_OBJ ev_photo_obj;
-/* sbss 3f4c50 */ EV_COND_CTRL ev_cond_ctrl;
-/* sbss 3f4c52 */ short int ev_pri_num;
+/* sbss 3f4c50 */ static EV_COND_CTRL ev_cond_ctrl;
+/* sbss 3f4c52 */ static short int ev_pri_num;
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/ingame/event/prg/ev_phase.c
@@ -1527,24 +1527,24 @@
 // FILE -- /home/zero_rom/zero2np/src/ingame/event/prg/ev_se.c
 // *****************************************************************************
 
-/* bss 47b3d0 */ int ev_se_reg_files[66][5];
-/* bss 47b8f8 */ int sb_ids[2][5];
-/* sbss 3f4c54 */ int ev_se_toggle;
+/* bss 47b3d0 */ static int ev_se_reg_files[66][5];
+/* bss 47b8f8 */ static int sb_ids[2][5];
+/* sbss 3f4c54 */ static int ev_se_toggle;
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/ingame/event/prg/ev_sis.c
 // *****************************************************************************
 
-/* bss 47b920 */ BIT_FLAGS<66> area_sis_flg;
+/* bss 47b920 */ static BIT_FLAGS<66> area_sis_flg;
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/ingame/event/prg/ev_talk.c
 // *****************************************************************************
 
-/* bss 47b930 */ fixed_array<TALK_TBL,8> talk_tbl;
+/* bss 47b930 */ static fixed_array<TALK_TBL,8> talk_tbl;
 /* sbss 3f53a8 */ unsigned char TALK_TBL type_info node[8];
 /* sbss 3f53a0 */ unsigned char TALK_DATA type_info node[8];
-/* bss 47bd70 */ TALK_EXE_CTRL talk_ctrl;
+/* bss 47bd70 */ static TALK_EXE_CTRL talk_ctrl;
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/ingame/event/dat/ev_talk_dat.c
@@ -1556,7 +1556,7 @@
 // FILE -- /home/zero_rom/zero2np/src/ingame/event/prg/ev_timer.c
 // *****************************************************************************
 
-/* bss 47bd80 */ EV_TIMER_CTRL ev_timer_ctrl;
+/* bss 47bd80 */ static EV_TIMER_CTRL ev_timer_ctrl;
 /* sbss 3f53b0 */ unsigned char REGIST_TIMER type_info node[8];
 
 // *****************************************************************************
@@ -1564,8 +1564,8 @@
 // *****************************************************************************
 
 /* sbss 3f5290 */ unsigned char float [3] type_info node[8];
-/* sbss 3f4c58 */ VCI_CAMERA_CTRL vci_cam_ctrl;
-/* bss 47bf70 */ EVENT_CAMERA_CTRL event_camera_ctrl;
+/* sbss 3f4c58 */ static VCI_CAMERA_CTRL vci_cam_ctrl;
+/* bss 47bf70 */ static EVENT_CAMERA_CTRL event_camera_ctrl;
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/graphics/graph2d/fade.c
@@ -1581,23 +1581,23 @@
 /* rdata 3aca98 */ short int CFEneEntry::aResionAreaTbl[6];
 /* rdata 3acaa8 */ FUYU_GHOST_DATA CFEneEntry::aFuyuGhostTbl[6][11];
 /* rdata 3accc0 */ float CFEneEntry::aFuyuAppearTbl[66][3][4];
-/* sdata 3f0700 */ FUYU_GHOST_ONE_DATA fene_dat0[1];
-/* rdata 3adaf0 */ FUYU_GHOST_ONE_DATA fene_dat02_osaka[4];
-/* rdata 3adb08 */ FUYU_GHOST_ONE_DATA fene_dat02_outdoor[6];
-/* sdata 3f0708 */ FUYU_GHOST_ONE_DATA fene_dat02_kiryu[1];
-/* sdata 3f0710 */ FUYU_GHOST_ONE_DATA fene_dat02_kureha[1];
-/* rdata 3adb30 */ FUYU_GHOST_ONE_DATA fene_dat05_kurosawa[6];
-/* rdata 3adb58 */ FUYU_GHOST_ONE_DATA fene_dat05_outdoor[5];
-/* rdata 3adb78 */ FUYU_GHOST_ONE_DATA fene_dat05_osaka[4];
-/* rdata 3adb90 */ FUYU_GHOST_ONE_DATA fene_dat05_kureha[3];
-/* rdata 3adba8 */ FUYU_GHOST_ONE_DATA fene_dat07_kiryu[3];
-/* rdata 3adbc0 */ FUYU_GHOST_ONE_DATA fene_dat08_outdoor[5];
-/* rdata 3adbe0 */ FUYU_GHOST_ONE_DATA fene_dat08_kiryu[3];
-/* rdata 3adbf8 */ FUYU_GHOST_ONE_DATA fene_dat08_tachibana[3];
-/* rdata 3adc10 */ FUYU_GHOST_ONE_DATA fene_dat08_osaka[5];
-/* rdata 3adc30 */ FUYU_GHOST_ONE_DATA fene_dat08_kureha[3];
-/* rdata 3adc48 */ FUYU_GHOST_ONE_DATA fene_dat09_outdoor[5];
-/* rdata 3adc68 */ FUYU_GHOST_ONE_DATA fene_dat09_kurosawa[5];
+/* sdata 3f0700 */ static FUYU_GHOST_ONE_DATA fene_dat0[1];
+/* rdata 3adaf0 */ static FUYU_GHOST_ONE_DATA fene_dat02_osaka[4];
+/* rdata 3adb08 */ static FUYU_GHOST_ONE_DATA fene_dat02_outdoor[6];
+/* sdata 3f0708 */ static FUYU_GHOST_ONE_DATA fene_dat02_kiryu[1];
+/* sdata 3f0710 */ static FUYU_GHOST_ONE_DATA fene_dat02_kureha[1];
+/* rdata 3adb30 */ static FUYU_GHOST_ONE_DATA fene_dat05_kurosawa[6];
+/* rdata 3adb58 */ static FUYU_GHOST_ONE_DATA fene_dat05_outdoor[5];
+/* rdata 3adb78 */ static FUYU_GHOST_ONE_DATA fene_dat05_osaka[4];
+/* rdata 3adb90 */ static FUYU_GHOST_ONE_DATA fene_dat05_kureha[3];
+/* rdata 3adba8 */ static FUYU_GHOST_ONE_DATA fene_dat07_kiryu[3];
+/* rdata 3adbc0 */ static FUYU_GHOST_ONE_DATA fene_dat08_outdoor[5];
+/* rdata 3adbe0 */ static FUYU_GHOST_ONE_DATA fene_dat08_kiryu[3];
+/* rdata 3adbf8 */ static FUYU_GHOST_ONE_DATA fene_dat08_tachibana[3];
+/* rdata 3adc10 */ static FUYU_GHOST_ONE_DATA fene_dat08_osaka[5];
+/* rdata 3adc30 */ static FUYU_GHOST_ONE_DATA fene_dat08_kureha[3];
+/* rdata 3adc48 */ static FUYU_GHOST_ONE_DATA fene_dat09_outdoor[5];
+/* rdata 3adc68 */ static FUYU_GHOST_ONE_DATA fene_dat09_kurosawa[5];
 /* sbss 3f53b8 */ int FUYU_GHOST_ONE_DATA::mAppearNum;
 
 // *****************************************************************************
@@ -1613,9 +1613,9 @@
 // FILE -- /home/zero_rom/zero2np/src/ingame/item/prg/file.c
 // *****************************************************************************
 
-/* data 312230 */ FILE_DAT *file_dat_tbl[5];
-/* bss 47bfe0 */ PLYR_FILE plyr_file;
-/* bss 47c080 */ char *plyr_file_tbl[5];
+/* data 312230 */ static FILE_DAT *file_dat_tbl[5];
+/* bss 47bfe0 */ static PLYR_FILE plyr_file;
+/* bss 47c080 */ static char *plyr_file_tbl[5];
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/ingame/item/dat/file_dat.c
@@ -1637,21 +1637,21 @@
 // FILE -- /home/zero_rom/zero2np/src/ingame/photo/film_no.c
 // *****************************************************************************
 
-/* sdata 3f0800 */ MyPoint aTypeNumPoint[2];
-/* sdata 3f0808 */ MyPoint aTypeCharPoint[2];
+/* sdata 3f0800 */ static MyPoint aTypeNumPoint[2];
+/* sdata 3f0808 */ static MyPoint aTypeCharPoint[2];
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/ingame/photo/finder.c
 // *****************************************************************************
 
-/* sdata 3f0850 */ int sp_chance_mode;
-/* sdata 3f0854 */ int sp_chance_alpha;
-/* sdata 3f0858 */ float sp_rot1;
-/* sdata 3f085c */ float sp_rot2;
-/* sdata 3f0860 */ int finder_sound_bank_id;
+/* sdata 3f0850 */ static int sp_chance_mode;
+/* sdata 3f0854 */ static int sp_chance_alpha;
+/* sdata 3f0858 */ static float sp_rot1;
+/* sdata 3f085c */ static float sp_rot2;
+/* sdata 3f0860 */ static int finder_sound_bank_id;
 /* sbss 3f5218 */ unsigned char CVariable<char, 0, 9> type_info node[8];
 /* sbss 3f5210 */ unsigned char CVariable<char, 0, 3> type_info node[8];
-/* sbss 3f4c60 */ int finder_draw_lock;
+/* sbss 3f4c60 */ static int finder_draw_lock;
 /* data 3124c8 */ ENEDMGLINE_WRK enedmgline_wrk;
 /* data 312898 */ INFO_WRK info_wrk;
 
@@ -1667,7 +1667,7 @@
 // *****************************************************************************
 
 /* data 312948 */ FLY_DATA fly_dat[6];
-/* bss 47c0a0 */ fixed_array<FLY_WRK,40> fly_wrk;
+/* bss 47c0a0 */ static fixed_array<FLY_WRK,40> fly_wrk;
 /* sbss 3f53c0 */ unsigned char FLY_WRK type_info node[8];
 /* sbss 3f5158 */ unsigned char G3DLIGHT type_info node[8];
 
@@ -1687,17 +1687,17 @@
 // FILE -- /home/zero_rom/zero2np/src/ingame/map/foot_se.c
 // *****************************************************************************
 
-/* data 313ee0 */ int se_footDatList[280][2];
-/* data 3147a0 */ int foot_se_label_tbl[18];
-/* bss 4af390 */ FOOT_SE_MANAGE foot_se_manage[12];
+/* data 313ee0 */ static int se_footDatList[280][2];
+/* data 3147a0 */ static int foot_se_label_tbl[18];
+/* bss 4af390 */ static FOOT_SE_MANAGE foot_se_manage[12];
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/ingame/photo/freq_camera.c
 // *****************************************************************************
 
-/* data 3147e8 */ float freqcam[14];
-/* data 314820 */ float fovcam[3];
-/* bss 4af3c0 */ FREQ_CAM freq_cam_wrk;
+/* data 3147e8 */ static float freqcam[14];
+/* data 314820 */ static float fovcam[3];
+/* bss 4af3c0 */ static FREQ_CAM freq_cam_wrk;
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/graphics/effect/g2d_debug.c
@@ -1705,7 +1705,7 @@
 
 /* sdata 3f09e0 */ int dither_alp;
 /* sdata 3f09e4 */ int dither_col;
-/* sdata 3f09e8 */ int sbtset_old;
+/* sdata 3f09e8 */ static int sbtset_old;
 /* sdata 3f09f8 */ int hint_test_sw;
 /* sdata 3f09fc */ int hint_test_posx;
 
@@ -1731,7 +1731,7 @@
 // FILE -- /home/zero_rom/zero2np/src/graphics/graph3d/g3dCore.c
 // *****************************************************************************
 
-/* sdata 3f0b08 */ G3DCOREOBJECT *s_pObject;
+/* sdata 3f0b08 */ static G3DCOREOBJECT *s_pObject;
 /* sdata 3f0b20 */ LPFUNC_SETGSREGISTER IG3DCompatible::s_pFuncSetGsRegister;
 /* sdata 3f0b24 */ LPFUNC_SETGSREGISTERS IG3DCompatible::s_pFuncSetGsRegisters;
 /* sdata 3f0b28 */ LPFUNC_GETGSREGISTERREF IG3DCompatible::s_pFuncGetGsRegisterRef;
@@ -1739,35 +1739,35 @@
 /* sdata 3f0b30 */ LPFUNC_GETTRANSFORMREF IG3DCompatible::s_pFuncGetTransformRef;
 /* data 369d78 */ Rep basic_string<char, string_char_traits<char>, ctl::custom_allocator<char> >::nilRep;
 /* data 3f49fc */ size_t basic_string<char, string_char_traits<char>, ctl::custom_allocator<char> >::npos;
-/* rdata 3af118 */ LPFUNC_CALCCOLORDATA s_apfCalcColorData[3];
-/* rdata 3af128 */ LPFUNC_LOADMATERIAL s_apfLoadMaterial[3];
-/* rdata 3af138 */ LPFUNC_LOADCOLOR s_apfLoadColor[3];
-/* rdata 3af148 */ LPFUNC_LOADCOLORCOEFF s_apfLoadColorCoeff[3];
-/* rdata 3af158 */ LPFUNC_CALCVERTEXCOLOR s_apfCalcVertexColorDirectionalLight[3];
-/* rdata 3af168 */ LPFUNC_CALCVERTEXCOLOR s_apfCalcVertexColorPointLight[3];
-/* rdata 3af178 */ LPFUNC_CALCVERTEXCOLOR s_apfCalcVertexColorSpotLight[3];
+/* rdata 3af118 */ static LPFUNC_CALCCOLORDATA s_apfCalcColorData[3];
+/* rdata 3af128 */ static LPFUNC_LOADMATERIAL s_apfLoadMaterial[3];
+/* rdata 3af138 */ static LPFUNC_LOADCOLOR s_apfLoadColor[3];
+/* rdata 3af148 */ static LPFUNC_LOADCOLORCOEFF s_apfLoadColorCoeff[3];
+/* rdata 3af158 */ static LPFUNC_CALCVERTEXCOLOR s_apfCalcVertexColorDirectionalLight[3];
+/* rdata 3af168 */ static LPFUNC_CALCVERTEXCOLOR s_apfCalcVertexColorPointLight[3];
+/* rdata 3af178 */ static LPFUNC_CALCVERTEXCOLOR s_apfCalcVertexColorSpotLight[3];
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/graphics/graph3d/g3dDebug.c
 // *****************************************************************************
 
-/* sdata 3f0b60 */ int s_bPrintConsoleInfinitely;
-/* bss 4af3e0 */ _G3DLINEINFO s_LineInfo;
-/* bss 4af3f0 */ sceGsDBuff db;
+/* sdata 3f0b60 */ static int s_bPrintConsoleInfinitely;
+/* bss 4af3e0 */ static _G3DLINEINFO s_LineInfo;
+/* bss 4af3f0 */ static sceGsDBuff db;
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/graphics/graph3d/g3dDma.c
 // *****************************************************************************
 
-/* sdata 3f0be8 */ int s_bOpened;
-/* data 315630 */ _PACKET_SETGSREGISTER s_packetSetRegister;
-/* sbss 3f4c64 */ sceDmaChan *s_pDMAChan_VIF1;
+/* sdata 3f0be8 */ static int s_bOpened;
+/* data 315630 */ static _PACKET_SETGSREGISTER s_packetSetRegister;
+/* sbss 3f4c64 */ static sceDmaChan *s_pDMAChan_VIF1;
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/graphics/graph3d/g3dGsWrapper.c
 // *****************************************************************************
 
-/* sdata 3f0c48 */ LPFUNC_ONDETECTPACKETDOESNOTTERMINATED s_pFuncOnDetectedPacketDoesNotTerminated;
+/* sdata 3f0c48 */ static LPFUNC_ONDETECTPACKETDOESNOTTERMINATED s_pFuncOnDetectedPacketDoesNotTerminated;
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/graphics/graph3d/g3dRenderTarget.cpp
@@ -1805,7 +1805,7 @@
 // FILE -- /home/zero_rom/zero2np/src/graphics/graph3d/g3dVif1.c
 // *****************************************************************************
 
-/* bss 4af620 */ G3DVIF1REGISTERLAYOUT s_Vif1RegisterLayout;
+/* bss 4af620 */ static G3DVIF1REGISTERLAYOUT s_Vif1RegisterLayout;
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/graphics/graph3d/g3dVu0Instance.cpp
@@ -1818,8 +1818,8 @@
 // FILE -- /home/zero_rom/zero2np/src/outgame/gallery.c
 // *****************************************************************************
 
-/* data 315670 */ void (*GalleryCtrlModule[3])(/* parameters unknown */);
-/* data 315680 */ void (*GalleryDispModule[3])(/* parameters unknown */);
+/* data 315670 */ static void (*GalleryCtrlModule[3])(/* parameters unknown */);
+/* data 315680 */ static void (*GalleryDispModule[3])(/* parameters unknown */);
 /* sdata 3f0dd0 */ void *gal_og_tex_addr;
 /* sdata 3f0dd4 */ void *gal_cmn_tex_addr;
 /* sdata 3f0dd8 */ void *gal_top_tex_addr;
@@ -1838,30 +1838,30 @@
 // FILE -- /home/zero_rom/zero2np/src/save_load/prg/game_data_save.c
 // *****************************************************************************
 
-/* sdata 3f0e78 */ void* (*GameDataSaveMemGet)(/* parameters unknown */);
-/* sdata 3f0e7c */ void (*GameDataSaveMemFree)(/* parameters unknown */);
-/* sdata 3f0e80 */ void *save_load_tex_addr;
-/* sdata 3f0e84 */ void *outgame_cmn_tex_addr;
-/* sdata 3f0e88 */ void *game_data_buff_addr;
-/* data 3165c8 */ void *game_data_save_snap_addr[5];
-/* sbss 3f4c78 */ reference_fixed_array<int,5> game_data_save_snap_tex;
-/* bss 4af678 */ GAME_DATA_SAVE_CTRL game_data_save_ctrl;
-/* sbss 3f4c80 */ GAME_DATA_SAVE_DISP game_data_save_disp;
+/* sdata 3f0e78 */ static void* (*GameDataSaveMemGet)(/* parameters unknown */);
+/* sdata 3f0e7c */ static void (*GameDataSaveMemFree)(/* parameters unknown */);
+/* sdata 3f0e80 */ static void *save_load_tex_addr;
+/* sdata 3f0e84 */ static void *outgame_cmn_tex_addr;
+/* sdata 3f0e88 */ static void *game_data_buff_addr;
+/* data 3165c8 */ static void *game_data_save_snap_addr[5];
+/* sbss 3f4c78 */ static reference_fixed_array<int,5> game_data_save_snap_tex;
+/* bss 4af678 */ static GAME_DATA_SAVE_CTRL game_data_save_ctrl;
+/* sbss 3f4c80 */ static GAME_DATA_SAVE_DISP game_data_save_disp;
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/ingame/clear/prg/game_result.c
 // *****************************************************************************
 
-/* sdata 3f0ed8 */ void *clear_bg_tex_addr;
-/* sdata 3f0edc */ void *clear_char_tex_addr;
-/* sbss 3f4c88 */ GAME_RESULT_CTRL game_result_ctrl;
+/* sdata 3f0ed8 */ static void *clear_bg_tex_addr;
+/* sdata 3f0edc */ static void *clear_char_tex_addr;
+/* sbss 3f4c88 */ static GAME_RESULT_CTRL game_result_ctrl;
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/ingame/clear/prg/game_result_top.c
 // *****************************************************************************
 
-/* bss 4af688 */ GAME_RESULT_TOP_CTRL game_result_top_ctrl;
-/* bss 4af6a8 */ GAME_RESULT_TOP_DISP game_result_top_disp;
+/* bss 4af688 */ static GAME_RESULT_TOP_CTRL game_result_top_ctrl;
+/* bss 4af6a8 */ static GAME_RESULT_TOP_DISP game_result_top_disp;
 /* sbss 3f5218 */ unsigned char CVariable<char, 0, 9> type_info node[8];
 /* sbss 3f5210 */ unsigned char CVariable<char, 0, 3> type_info node[8];
 
@@ -1875,7 +1875,7 @@
 // FILE -- /home/zero_rom/zero2np/src/ingame/gameover/prg/gameover.c
 // *****************************************************************************
 
-/* sbss 3f4c90 */ GAMEOVER_FADE_CTRL gameover_fade_ctrl;
+/* sbss 3f4c90 */ static GAMEOVER_FADE_CTRL gameover_fade_ctrl;
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/ingame/gameover/prg/gameover_dat.c
@@ -1887,36 +1887,36 @@
 // FILE -- /home/zero_rom/zero2np/src/ingame/gameover/prg/gameover_menu.c
 // *****************************************************************************
 
-/* sdata 3f0f88 */ void *gameover_bg_tex_addr;
-/* sbss 3f4c98 */ GAMEOVER_MENU_CTRL gameover_menu_ctrl;
-/* bss 4af6c0 */ GAMEOVER_MENU_DISP gameover_menu_disp;
+/* sdata 3f0f88 */ static void *gameover_bg_tex_addr;
+/* sbss 3f4c98 */ static GAMEOVER_MENU_CTRL gameover_menu_ctrl;
+/* bss 4af6c0 */ static GAMEOVER_MENU_DISP gameover_menu_disp;
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/ingame/gameover/prg/gameover_menu_load.c
 // *****************************************************************************
 
-/* sdata 3f0fd0 */ void *gameover_load_tex_addr;
-/* sdata 3f0fd4 */ void *gameover_load_cmn_tex_addr;
-/* sdata 3f0fd8 */ void *load_data_buff;
-/* data 316c60 */ void *gameover_load_snap_addr[5];
-/* sbss 3f4ca0 */ reference_fixed_array<int,5> gameover_load_snap_tex;
-/* sbss 3f4ca8 */ GAMEOVER_LOAD_CTRL gameover_load_ctrl;
-/* sbss 3f4cb0 */ GAMEOVER_LOAD_DISP gameover_load_disp;
+/* sdata 3f0fd0 */ static void *gameover_load_tex_addr;
+/* sdata 3f0fd4 */ static void *gameover_load_cmn_tex_addr;
+/* sdata 3f0fd8 */ static void *load_data_buff;
+/* data 316c60 */ static void *gameover_load_snap_addr[5];
+/* sbss 3f4ca0 */ static reference_fixed_array<int,5> gameover_load_snap_tex;
+/* sbss 3f4ca8 */ static GAMEOVER_LOAD_CTRL gameover_load_ctrl;
+/* sbss 3f4cb0 */ static GAMEOVER_LOAD_DISP gameover_load_disp;
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/ingame/gameover/prg/gameover_menu_top.c
 // *****************************************************************************
 
-/* sdata 3f1020 */ void *gameover_menu_tex_addr;
-/* sdata 3f1024 */ char gameover_menu_top_init_flg;
-/* sbss 3f4cb8 */ GAMEOVER_MENU_TOP_CTRL gameover_menu_top_ctrl;
-/* sbss 3f4cc0 */ GAMEOVER_MENU_TOP_DISP gameover_menu_top_disp;
+/* sdata 3f1020 */ static void *gameover_menu_tex_addr;
+/* sdata 3f1024 */ static char gameover_menu_top_init_flg;
+/* sbss 3f4cb8 */ static GAMEOVER_MENU_TOP_CTRL gameover_menu_top_ctrl;
+/* sbss 3f4cc0 */ static GAMEOVER_MENU_TOP_DISP gameover_menu_top_disp;
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/ingame/menu/ghost_seal_door.c
 // *****************************************************************************
 
-/* bss 4af6d0 */ fixed_array<unsigned char,9> ghost_seal_door_state;
+/* bss 4af6d0 */ static fixed_array<unsigned char,9> ghost_seal_door_state;
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/ingame/menu/tim_dat/ghost_seal_door_dat.c
@@ -1940,53 +1940,53 @@
 // FILE -- /home/zero_rom/zero2np/src/main/gphase.c
 // *****************************************************************************
 
-/* data 317178 */ void (*ini_func[94])(/* parameters unknown */);
-/* data 3172f0 */ void (*end_func[94])(/* parameters unknown */);
-/* data 317468 */ GPHASE_ENUM (*pre_func[94])(/* parameters unknown */);
-/* data 3175e0 */ GPHASE_ENUM (*after_func[94])(/* parameters unknown */);
-/* data 317758 */ GPHASE_DAT gphase_tbl[94];
-/* bss 4af6e0 */ GPHASE_SYS gphase_sys;
+/* data 317178 */ static void (*ini_func[94])(/* parameters unknown */);
+/* data 3172f0 */ static void (*end_func[94])(/* parameters unknown */);
+/* data 317468 */ static GPHASE_ENUM (*pre_func[94])(/* parameters unknown */);
+/* data 3175e0 */ static GPHASE_ENUM (*after_func[94])(/* parameters unknown */);
+/* data 317758 */ static GPHASE_DAT gphase_tbl[94];
+/* bss 4af6e0 */ static GPHASE_SYS gphase_sys;
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/graphics/graph3d/gra3d.c
 // *****************************************************************************
 
 /* sdata 3f1080 */ CVu0Matrix g_Vu0Matrix;
-/* sdata 3f1084 */ int s_bEnableMonotoneDraw;
-/* sdata 3f1088 */ int s_bUseScratchpad;
-/* data 317d40 */ GRA3DSCRATCHPADLAYOUT s_gra3dScratchpadLayoutDefault;
-/* sdata 3f108c */ GRA3DSCRATCHPADLAYOUT *s_pScratchpadLayout;
+/* sdata 3f1084 */ static int s_bEnableMonotoneDraw;
+/* sdata 3f1088 */ static int s_bUseScratchpad;
+/* data 317d40 */ static GRA3DSCRATCHPADLAYOUT s_gra3dScratchpadLayoutDefault;
+/* sdata 3f108c */ static GRA3DSCRATCHPADLAYOUT *s_pScratchpadLayout;
 /* data 369d78 */ Rep basic_string<char, string_char_traits<char>, ctl::custom_allocator<char> >::nilRep;
 /* data 3f49fc */ size_t basic_string<char, string_char_traits<char>, ctl::custom_allocator<char> >::npos;
-/* bss 4b0e80 */ G3DLIGHTMANAGE s_LightManage;
-/* bss 4b10f0 */ G3DLIGHTMANAGE s_WorkLightManage;
+/* bss 4b0e80 */ static G3DLIGHTMANAGE s_LightManage;
+/* bss 4b10f0 */ static G3DLIGHTMANAGE s_WorkLightManage;
 /* sbss 3f5160 */ unsigned char GRA3DLIGHTSTATUS type_info node[8];
 /* sbss 3f5158 */ unsigned char G3DLIGHT type_info node[8];
-/* bss 4b1360 */ GRA3DCAMERA s_Camera;
-/* bss 4b1540 */ G3DFOG s_Fog;
-/* bss 4b1550 */ sceVu0IVECTOR s_ivFogColor;
-/* bss 4b1560 */ float clip_value[4];
-/* bss 4b1570 */ G3DLIGHT s_aLight[39];
-/* bss 4b2680 */ G3DLIGHT s_WorkaLight[39];
-/* bss 4b3790 */ float s_lmDiffuseLight[3][4];
-/* bss 4b37c0 */ float s_lmSpecularLight[3][4];
-/* bss 4b37f0 */ float s_lmDiffuseColor[3][4];
-/* bss 4b3820 */ float s_lmSpecularColor[3][4];
-/* sbss 3f4cd0 */ unsigned int s_uiMaterialPrimType;
-/* bss 4b3850 */ SGDMATERIALCACHE s_aMaterialCache[3];
-/* bss 4b3880 */ GRA3DVU1MATERIALCACHE_POINT s_aVu1MaterialCache_Point[1];
-/* bss 4b3900 */ GRA3DVU1MATERIALCACHE_SPOT s_aVu1MaterialCache_Spot[1];
-/* bss 4b3980 */ GRA3DVU1MATERIALPACKET_DIRECTIONAL s_MaterialPacketDirectional;
-/* bss 4b3a00 */ GRA3DVU1MATERIALPACKET_POINT s_MaterialPacketPoint;
-/* bss 4b3a80 */ GRA3DVU1MATERIALPACKET_SPOT s_MaterialPacketSpot;
-/* sbss 3f4cd4 */ int s_bFogEnable;
-/* rdata 3b4c50 */ float clip_volume[4];
-/* rdata 3b4c60 */ float clip_volumev[4];
-/* rdata 3b4c70 */ G3DVIF1CMDDATA s_aVif1CmdData[6];
-/* bss 4b3b00 */ int s_bLightEnableList[39];
-/* sdata 3f10c8 */ LPFUNC_VIEWSCREENMATRIX s_apViewScreenMatrixFunc[2];
-/* sdata 3f10d0 */ LPFUNC_VIEWCLIPMATRIX s_apViewClipMatrixFunc[2];
-/* sdata 3f10d8 */ G3DINTFLOAT s_if_1_255;
+/* bss 4b1360 */ static GRA3DCAMERA s_Camera;
+/* bss 4b1540 */ static G3DFOG s_Fog;
+/* bss 4b1550 */ static sceVu0IVECTOR s_ivFogColor;
+/* bss 4b1560 */ static float clip_value[4];
+/* bss 4b1570 */ static G3DLIGHT s_aLight[39];
+/* bss 4b2680 */ static G3DLIGHT s_WorkaLight[39];
+/* bss 4b3790 */ static float s_lmDiffuseLight[3][4];
+/* bss 4b37c0 */ static float s_lmSpecularLight[3][4];
+/* bss 4b37f0 */ static float s_lmDiffuseColor[3][4];
+/* bss 4b3820 */ static float s_lmSpecularColor[3][4];
+/* sbss 3f4cd0 */ static unsigned int s_uiMaterialPrimType;
+/* bss 4b3850 */ static SGDMATERIALCACHE s_aMaterialCache[3];
+/* bss 4b3880 */ static GRA3DVU1MATERIALCACHE_POINT s_aVu1MaterialCache_Point[1];
+/* bss 4b3900 */ static GRA3DVU1MATERIALCACHE_SPOT s_aVu1MaterialCache_Spot[1];
+/* bss 4b3980 */ static GRA3DVU1MATERIALPACKET_DIRECTIONAL s_MaterialPacketDirectional;
+/* bss 4b3a00 */ static GRA3DVU1MATERIALPACKET_POINT s_MaterialPacketPoint;
+/* bss 4b3a80 */ static GRA3DVU1MATERIALPACKET_SPOT s_MaterialPacketSpot;
+/* sbss 3f4cd4 */ static int s_bFogEnable;
+/* rdata 3b4c50 */ static float clip_volume[4];
+/* rdata 3b4c60 */ static float clip_volumev[4];
+/* rdata 3b4c70 */ static G3DVIF1CMDDATA s_aVif1CmdData[6];
+/* bss 4b3b00 */ static int s_bLightEnableList[39];
+/* sdata 3f10c8 */ static LPFUNC_VIEWSCREENMATRIX s_apViewScreenMatrixFunc[2];
+/* sdata 3f10d0 */ static LPFUNC_VIEWCLIPMATRIX s_apViewClipMatrixFunc[2];
+/* sdata 3f10d8 */ static G3DINTFLOAT s_if_1_255;
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/graphics/graph3d/gra3dConst.c
@@ -2043,9 +2043,9 @@
 // FILE -- /home/zero_rom/zero2np/src/graphics/graph3d/gra3dMisc.c
 // *****************************************************************************
 
-/* sdata 3f1230 */ int s_iObjdctIdDrawNoShadow;
-/* sdata 3f1250 */ int s_bSpecialLightActive;
-/* bss 4b3ba0 */ G3DLIGHT s_ProjectorSpot;
+/* sdata 3f1230 */ static int s_iObjdctIdDrawNoShadow;
+/* sdata 3f1250 */ static int s_bSpecialLightActive;
+/* bss 4b3ba0 */ static G3DLIGHT s_ProjectorSpot;
 /* sbss 3f5158 */ unsigned char G3DLIGHT type_info node[8];
 /* sbss 3f5160 */ unsigned char GRA3DLIGHTSTATUS type_info node[8];
 
@@ -2053,25 +2053,25 @@
 // FILE -- /home/zero_rom/zero2np/src/graphics/graph3d/gra3dSGD.c
 // *****************************************************************************
 
-/* sdata 3f12a8 */ float *s_pGlobalVertexBuffer[4];
-/* sdata 3f12ac */ float *s_pGlobalNormalBuffer[4];
-/* sdata 3f12b0 */ int s_iGlobalBufferSize;
+/* sdata 3f12a8 */ static float *s_pGlobalVertexBuffer[4];
+/* sdata 3f12ac */ static float *s_pGlobalNormalBuffer[4];
+/* sdata 3f12b0 */ static int s_iGlobalBufferSize;
 /* sbss 3f53e8 */ unsigned char _LIGHTCOMPAREDATA type_info node[8];
-/* sbss 3f4cd8 */ SGDPROCUNITHEADER *save_tri2_pointer;
-/* sbss 3f4cdc */ SGDPROCUNITHEADER *save_bw_pointer;
-/* sbss 3f4ce0 */ SGDPROCUNITHEADER *s_ppuhVUVN;
-/* sbss 3f4ce4 */ SGDCOORDINATE *s_pCoordBase;
-/* sbss 3f4ce8 */ SGDFILEHEADER *s_pSGDTop;
-/* bss 4b3c10 */ CoordCache ccahe;
-/* sbss 3f4cec */ int edge_check;
-/* sdata 3f1308 */ _LIGHTCOMPAREDATA s_NullLightCompareData;
-/* sbss 3f4cf0 */ SGDPROCUNITHEADER *previous_tri2_prim;
+/* sbss 3f4cd8 */ static SGDPROCUNITHEADER *save_tri2_pointer;
+/* sbss 3f4cdc */ static SGDPROCUNITHEADER *save_bw_pointer;
+/* sbss 3f4ce0 */ static SGDPROCUNITHEADER *s_ppuhVUVN;
+/* sbss 3f4ce4 */ static SGDCOORDINATE *s_pCoordBase;
+/* sbss 3f4ce8 */ static SGDFILEHEADER *s_pSGDTop;
+/* bss 4b3c10 */ static CoordCache ccahe;
+/* sbss 3f4cec */ static int edge_check;
+/* sdata 3f1308 */ static _LIGHTCOMPAREDATA s_NullLightCompareData;
+/* sbss 3f4cf0 */ static SGDPROCUNITHEADER *previous_tri2_prim;
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/graphics/graph3d/gra3dSGDData.c
 // *****************************************************************************
 
-/* sdata 3f1350 */ int s_bEnableOptimizeTexture;
+/* sdata 3f1350 */ static int s_bEnableOptimizeTexture;
 /* sbss 3f5158 */ unsigned char G3DLIGHT type_info node[8];
 
 // *****************************************************************************
@@ -2079,54 +2079,54 @@
 // *****************************************************************************
 
 /* data 318210 */ GRA3DSHADOWDEBUG g_gra3dShadowDebug;
-/* sdata 3f13c0 */ int shadow_apgnum;
-/* data 318230 */ GRA3DSCRATCHPADLAYOUT_MAPSHADOW s_gra3dScratchpadLayoutDefault;
-/* sdata 3f13c4 */ GRA3DSCRATCHPADLAYOUT_MAPSHADOW *s_pScratchpadLayout;
-/* data 3183d0 */ GRA3DCAMERA s_Camera;
-/* bss 4b3c40 */ CRenderTarget s_RenderTarget;
-/* bss 4b3cf0 */ fixed_stack<SGDFILEHEADER *,40> s_stackpProjectModel;
+/* sdata 3f13c0 */ static int shadow_apgnum;
+/* data 318230 */ static GRA3DSCRATCHPADLAYOUT_MAPSHADOW s_gra3dScratchpadLayoutDefault;
+/* sdata 3f13c4 */ static GRA3DSCRATCHPADLAYOUT_MAPSHADOW *s_pScratchpadLayout;
+/* data 3183d0 */ static GRA3DCAMERA s_Camera;
+/* bss 4b3c40 */ static CRenderTarget s_RenderTarget;
+/* bss 4b3cf0 */ static fixed_stack<SGDFILEHEADER *,40> s_stackpProjectModel;
 /* bss 4cdbd0 */ unsigned char SGDFILEHEADER * type_info node[12];
 /* sbss 3f53f0 */ unsigned char SGDFILEHEADER type_info node[8];
-/* bss 4b3da0 */ float s_vDirection[4];
-/* bss 4b3db0 */ float s_matIP[4][4];
-/* bss 4b3df0 */ float s_matCull[4][4];
-/* bss 4b3e30 */ float s_avBB[9][4];
-/* sbss 3f4cf4 */ SGDFILEHEADER *s_pSourceModel;
-/* bss 4b3ec0 */ G3DLIGHT s_Light;
-/* sbss 3f4cf8 */ float s_fFundamentScale;
-/* sbss 3f4cfc */ float s_fTextureScale;
-/* sbss 3f4d00 */ int s_iMaxTextureWidth;
-/* sbss 3f4d04 */ int s_iMaxTextureHeight;
-/* rdata 3b8450 */ float s_matTransTexture[4][4];
+/* bss 4b3da0 */ static float s_vDirection[4];
+/* bss 4b3db0 */ static float s_matIP[4][4];
+/* bss 4b3df0 */ static float s_matCull[4][4];
+/* bss 4b3e30 */ static float s_avBB[9][4];
+/* sbss 3f4cf4 */ static SGDFILEHEADER *s_pSourceModel;
+/* bss 4b3ec0 */ static G3DLIGHT s_Light;
+/* sbss 3f4cf8 */ static float s_fFundamentScale;
+/* sbss 3f4cfc */ static float s_fTextureScale;
+/* sbss 3f4d00 */ static int s_iMaxTextureWidth;
+/* sbss 3f4d04 */ static int s_iMaxTextureHeight;
+/* rdata 3b8450 */ static float s_matTransTexture[4][4];
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/graphics/graph3d/gra3dTRI2.c
 // *****************************************************************************
 
-/* rdata 3b86b0 */ SGDTRI2FILEHEADER s_TRI2FileHeaderDefault;
+/* rdata 3b86b0 */ static SGDTRI2FILEHEADER s_TRI2FileHeaderDefault;
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/graphics/graphics.c
 // *****************************************************************************
 
-/* sdata 3f14a8 */ int save_cross_line_cnt;
-/* bss 4b3f30 */ float save_cross_line_pos[10][4];
+/* sdata 3f14a8 */ static int save_cross_line_cnt;
+/* bss 4b3f30 */ static float save_cross_line_pos[10][4];
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/ingame/puzzle/hina/hina_pzl.c
 // *****************************************************************************
 
-/* data 318690 */ void (*hina_pad_func[4])(/* parameters unknown */);
-/* data 3186a0 */ void (*hina_disp_func[4])(/* parameters unknown */);
-/* bss 4b3fd0 */ HINA_PZL_CTRL hina_pzl_ctrl;
-/* bss 4b4028 */ HINA_PZL_DISP hina_pzl_disp;
-/* sbss 3f4d08 */ HINA_PZL_CROSS_DISP hina_pzl_cross_disp;
+/* data 318690 */ static void (*hina_pad_func[4])(/* parameters unknown */);
+/* data 3186a0 */ static void (*hina_disp_func[4])(/* parameters unknown */);
+/* bss 4b3fd0 */ static HINA_PZL_CTRL hina_pzl_ctrl;
+/* bss 4b4028 */ static HINA_PZL_DISP hina_pzl_disp;
+/* sbss 3f4d08 */ static HINA_PZL_CROSS_DISP hina_pzl_cross_disp;
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/ingame/photo/hp_bar.c
 // *****************************************************************************
 
-/* sdata 3f1508 */ float disp_hp_per;
+/* sdata 3f1508 */ static float disp_hp_per;
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/ingame/ingame.c
@@ -2138,25 +2138,25 @@
 /* sdata 3f1550 */ int iPauseLockTimer;
 /* sbss 3f5218 */ unsigned char CVariable<char, 0, 9> type_info node[8];
 /* sbss 3f5210 */ unsigned char CVariable<char, 0, 3> type_info node[8];
-/* sbss 3f4d10 */ int before_game_load_wait;
-/* sbss 3f4d14 */ int load_game_step;
-/* sbss 3f4d18 */ PHASE_CHANGE_REQS phase_change_reqs;
-/* sbss 3f4d20 */ PHASE_CANGE_REQ_OUTGAME OutPhaseChangeFlg;
-/* sbss 3f4d24 */ int story_effect_time;
+/* sbss 3f4d10 */ static int before_game_load_wait;
+/* sbss 3f4d14 */ static int load_game_step;
+/* sbss 3f4d18 */ static PHASE_CHANGE_REQS phase_change_reqs;
+/* sbss 3f4d20 */ static PHASE_CANGE_REQ_OUTGAME OutPhaseChangeFlg;
+/* sbss 3f4d24 */ static int story_effect_time;
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/ingame/ingame_effect.c
 // *****************************************************************************
 
-/* bss 4b4040 */ fixed_array<SUBFUNC_PDEFORM_CTRL,10> SubFuncPDeformCtrl;
+/* bss 4b4040 */ static fixed_array<SUBFUNC_PDEFORM_CTRL,10> SubFuncPDeformCtrl;
 /* sbss 3f53f8 */ unsigned char SUBFUNC_PDEFORM_CTRL type_info node[8];
 /* sbss 3f5220 */ unsigned char ENE_WRK type_info node[8];
 /* sbss 3f5218 */ unsigned char CVariable<char, 0, 9> type_info node[8];
 /* sbss 3f5210 */ unsigned char CVariable<char, 0, 3> type_info node[8];
-/* bss 4b4130 */ float ParticleEndPosFiner[4];
-/* bss 4b4140 */ float ParticleEndPosNoFiner[4];
-/* sbss 3f4d28 */ ZERO_PARTICLE_CTRL ZeroParticleCtrl;
-/* sbss 3f4d30 */ int RenzFlareDispFlg;
+/* bss 4b4130 */ static float ParticleEndPosFiner[4];
+/* bss 4b4140 */ static float ParticleEndPosNoFiner[4];
+/* sbss 3f4d28 */ static ZERO_PARTICLE_CTRL ZeroParticleCtrl;
+/* sbss 3f4d30 */ static int RenzFlareDispFlg;
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/ingame/item/prg/item.c
@@ -2177,43 +2177,43 @@
 // FILE -- /home/zero_rom/zero2np/src/ingame/puzzle/kai/kai_pzl.c
 // *****************************************************************************
 
-/* sdata 3f16c0 */ int KaiPzlGameMode;
-/* sdata 3f16c4 */ int KaiPzlKaiCsl;
-/* sdata 3f16c8 */ int KaiPzlKaiYesNo;
-/* sdata 3f16cc */ int KaiPzlAnimTime;
-/* sdata 3f16d0 */ int KaiPzlCnt;
-/* sdata 3f16d4 */ int KaiPzlMsgNo;
-/* sdata 3f16d8 */ int KaiPzlState;
-/* sdata 3f16dc */ int KaiPzlEneType;
-/* sdata 3f16e0 */ KAIPZL_MODE *KapPzlModeNowPtr;
-/* data 319328 */ KAIPZL_MODE KaiPzlModeList[9];
-/* data 319370 */ KAIPZL_ROT KaiPzlRotDat[2][2];
-/* sdata 3f16e4 */ int KapPzlFadeNext;
-/* sbss 3f4d38 */ int KaiPzlEnemID[2];
-/* sbss 3f4d40 */ int KaiPzlRotY[2];
-/* bss 4b4150 */ int KaiPzlFadeSt[5];
+/* sdata 3f16c0 */ static int KaiPzlGameMode;
+/* sdata 3f16c4 */ static int KaiPzlKaiCsl;
+/* sdata 3f16c8 */ static int KaiPzlKaiYesNo;
+/* sdata 3f16cc */ static int KaiPzlAnimTime;
+/* sdata 3f16d0 */ static int KaiPzlCnt;
+/* sdata 3f16d4 */ static int KaiPzlMsgNo;
+/* sdata 3f16d8 */ static int KaiPzlState;
+/* sdata 3f16dc */ static int KaiPzlEneType;
+/* sdata 3f16e0 */ static KAIPZL_MODE *KapPzlModeNowPtr;
+/* data 319328 */ static KAIPZL_MODE KaiPzlModeList[9];
+/* data 319370 */ static KAIPZL_ROT KaiPzlRotDat[2][2];
+/* sdata 3f16e4 */ static int KapPzlFadeNext;
+/* sbss 3f4d38 */ static int KaiPzlEnemID[2];
+/* sbss 3f4d40 */ static int KaiPzlRotY[2];
+/* bss 4b4150 */ static int KaiPzlFadeSt[5];
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/ingame/puzzle/kaza2/kaza2_pzl.c
 // *****************************************************************************
 
-/* data 3193b0 */ void (*kaza_pzl_pad_func[6])(/* parameters unknown */);
-/* data 3193c8 */ void (*kaza_pzl_disp_func[6])(/* parameters unknown */);
-/* bss 4b4168 */ KAZA_PZL_CTRL kaza_pzl_ctrl;
-/* bss 4b4190 */ KAZA_PZL_DISP kaza_pzl_disp;
-/* bss 4b41b0 */ int *kaza2_panel_color[5];
-/* rdata 3b9d50 */ int kaza2_panel_label_tbl[2][2];
+/* data 3193b0 */ static void (*kaza_pzl_pad_func[6])(/* parameters unknown */);
+/* data 3193c8 */ static void (*kaza_pzl_disp_func[6])(/* parameters unknown */);
+/* bss 4b4168 */ static KAZA_PZL_CTRL kaza_pzl_ctrl;
+/* bss 4b4190 */ static KAZA_PZL_DISP kaza_pzl_disp;
+/* bss 4b41b0 */ static int *kaza2_panel_color[5];
+/* rdata 3b9d50 */ static int kaza2_panel_label_tbl[2][2];
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/ingame/puzzle/kaza/kaza_pzl.c
 // *****************************************************************************
 
-/* data 3193e0 */ void (*kaza_pzl_pad_func[5])(/* parameters unknown */);
-/* data 3193f8 */ void (*kaza_pzl_disp_func[5])(/* parameters unknown */);
-/* bss 4b41c8 */ KAZA_PZL_CTRL kaza_pzl_ctrl;
-/* bss 4b41f0 */ KAZA_PZL_DISP kaza_pzl_disp;
-/* bss 4b4210 */ int *kaza_panel_color[5];
-/* rdata 3ba128 */ int kaza_panel_label_tbl[2][2];
+/* data 3193e0 */ static void (*kaza_pzl_pad_func[5])(/* parameters unknown */);
+/* data 3193f8 */ static void (*kaza_pzl_disp_func[5])(/* parameters unknown */);
+/* bss 4b41c8 */ static KAZA_PZL_CTRL kaza_pzl_ctrl;
+/* bss 4b41f0 */ static KAZA_PZL_DISP kaza_pzl_disp;
+/* bss 4b4210 */ static int *kaza_panel_color[5];
+/* rdata 3ba128 */ static int kaza_panel_label_tbl[2][2];
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/system/pad/key_cnf.c
@@ -2229,17 +2229,17 @@
 // FILE -- /home/zero_rom/zero2np/src/outgame/lang_check.c
 // *****************************************************************************
 
-/* sdata 3f17b8 */ void *lang_check_data_buff;
-/* sbss 3f4d48 */ LANG_CHECK_CTRL lang_check_ctrl;
+/* sdata 3f17b8 */ static void *lang_check_data_buff;
+/* sbss 3f4d48 */ static LANG_CHECK_CTRL lang_check_ctrl;
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/outgame/lang_sel.c
 // *****************************************************************************
 
-/* sdata 3f1800 */ void *lang_sel_bg_addr;
-/* sdata 3f1804 */ void *lang_sel_tex_addr;
-/* sdata 3f1808 */ u_char set_language;
-/* sbss 3f4d50 */ LANG_SEL_CTRL lang_sel_ctrl;
+/* sdata 3f1800 */ static void *lang_sel_bg_addr;
+/* sdata 3f1804 */ static void *lang_sel_tex_addr;
+/* sdata 3f1808 */ static u_char set_language;
+/* sbss 3f4d50 */ static LANG_SEL_CTRL lang_sel_ctrl;
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/outgame/tim_dat/lang_sl_dat.c
@@ -2251,24 +2251,24 @@
 // FILE -- /home/zero_rom/zero2np/src/ingame/item/prg/level_gem.c
 // *****************************************************************************
 
-/* sbss 3f4d58 */ char plyr_level_gem;
+/* sbss 3f4d58 */ static char plyr_level_gem;
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/outgame/loadgame.c
 // *****************************************************************************
 
-/* sdata 3f1890 */ void *load_game_tex_addr;
-/* sdata 3f1894 */ void *load_data_buff;
-/* data 3199c0 */ void *load_game_snap_addr[5];
-/* sbss 3f4d60 */ reference_fixed_array<int,5> load_game_snap_tex;
-/* bss 4b4228 */ LOAD_GAME_CTRL load_game_ctrl;
+/* sdata 3f1890 */ static void *load_game_tex_addr;
+/* sdata 3f1894 */ static void *load_data_buff;
+/* data 3199c0 */ static void *load_game_snap_addr[5];
+/* sbss 3f4d60 */ static reference_fixed_array<int,5> load_game_snap_tex;
+/* bss 4b4228 */ static LOAD_GAME_CTRL load_game_ctrl;
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/ingame/loading/loading.c
 // *****************************************************************************
 
-/* sdata 3f18d8 */ void *loading_tex_addr;
-/* sbss 3f4d68 */ LOADING_CTRL loading_ctrl;
+/* sdata 3f18d8 */ static void *loading_tex_addr;
+/* sbss 3f4d68 */ static LOADING_CTRL loading_ctrl;
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/ingame/loading/loading_dat.c
@@ -2280,10 +2280,10 @@
 // FILE -- /home/zero_rom/zero2np/src/outgame/logo.c
 // *****************************************************************************
 
-/* data 319a78 */ SPRT_DAT logodat[3];
-/* bss 4b4238 */ LOGO_WRK logo_wrk;
-/* sbss 3f4d70 */ void *tecmo_tex_addr;
-/* sbss 3f4d74 */ void *project_tex_addr;
+/* data 319a78 */ static SPRT_DAT logodat[3];
+/* bss 4b4238 */ static LOGO_WRK logo_wrk;
+/* sbss 3f4d70 */ static void *tecmo_tex_addr;
+/* sbss 3f4d74 */ static void *project_tex_addr;
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/ingame/photo/m_plyr_camera.c
@@ -2297,9 +2297,9 @@
 // FILE -- /home/zero_rom/zero2np/src/main/main.c
 // *****************************************************************************
 
-/* sdata 3f1988 */ int softreset_step_timer;
-/* sbss 3f4d78 */ int *SubTitleAddr;
-/* sbss 3f4d7c */ int soft_reset_disable;
+/* sdata 3f1988 */ static int softreset_step_timer;
+/* sbss 3f4d78 */ static int *SubTitleAddr;
+/* sbss 3f4d7c */ static int soft_reset_disable;
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/ingame/plyr/man_data.c
@@ -2319,13 +2319,13 @@
 // FILE -- /home/zero_rom/zero2np/src/ingame/map/map_bgm.c
 // *****************************************************************************
 
-/* data 31c2b8 */ MAP_BGM_DAT map_bgm_tbl[240];
-/* sdata 3f1a00 */ int bgm_act_flg;
-/* bss 4b4248 */ MAP_BGM_SAVE map_bgmSave;
-/* sbss 3f4d80 */ int bgm_room_id_save;
-/* sbss 3f4d84 */ int bgm_play_id;
-/* sbss 3f4d88 */ int now_str_file;
-/* sbss 3f4d8c */ int bgm_now_sector;
+/* data 31c2b8 */ static MAP_BGM_DAT map_bgm_tbl[240];
+/* sdata 3f1a00 */ static int bgm_act_flg;
+/* bss 4b4248 */ static MAP_BGM_SAVE map_bgmSave;
+/* sbss 3f4d80 */ static int bgm_room_id_save;
+/* sbss 3f4d84 */ static int bgm_play_id;
+/* sbss 3f4d88 */ static int now_str_file;
+/* sbss 3f4d8c */ static int bgm_now_sector;
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/ingame/camera/map_camera.c
@@ -2333,17 +2333,17 @@
 
 /* sdata 3f1a60 */ u_short fior_tm;
 /* sdata 3f1a62 */ u_short ori_fior_tm;
-/* bss 4b4610 */ MAP_CAMERA_CTRL map_camera_ctrl;
-/* bss 4b4640 */ APPROACH_CAMERA app_camera;
-/* bss 4b46f0 */ QUAKE_CAMERA_CTRL QuakeCameraCtrl;
+/* bss 4b4610 */ static MAP_CAMERA_CTRL map_camera_ctrl;
+/* bss 4b4640 */ static APPROACH_CAMERA app_camera;
+/* bss 4b46f0 */ static QUAKE_CAMERA_CTRL QuakeCameraCtrl;
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/ingame/map/map_height.c
 // *****************************************************************************
 
-/* data 31c680 */ float mh_l_scale_vec[4];
-/* data 31c690 */ float mh_b_scale_vec[4];
-/* sbss 3f4d90 */ fixed_array<MhCtrl *,2> map_height_ctrl;
+/* data 31c680 */ static float mh_l_scale_vec[4];
+/* data 31c690 */ static float mh_b_scale_vec[4];
+/* sbss 3f4d90 */ static fixed_array<MhCtrl *,2> map_height_ctrl;
 /* bss 4cdbe0 */ unsigned char MhCtrl * type_info node[12];
 /* sbss 3f5290 */ unsigned char float [3] type_info node[8];
 /* sbss 3f5408 */ unsigned char MhCtrl type_info node[8];
@@ -2352,21 +2352,21 @@
 // FILE -- /home/zero_rom/zero2np/src/ingame/map/map_rectangle.c
 // *****************************************************************************
 
-/* sdata 3f1ab8 */ MDAT_CAM *cam_info;
-/* sdata 3f1abc */ int cam_change_flg;
-/* sdata 3f1ac0 */ int cam_hit_flg;
-/* sdata 3f1ac4 */ MDAT_SE *se_info;
-/* data 31c6a0 */ MapRecBufCtrl map_buf_ctrl[2];
-/* data 31c6f0 */ MapRecInfo map_rec_info;
-/* data 31c758 */ MapRecInfo map_door_rec_info;
-/* data 31c7c0 */ float sta_rot_tbl[6];
+/* sdata 3f1ab8 */ static MDAT_CAM *cam_info;
+/* sdata 3f1abc */ static int cam_change_flg;
+/* sdata 3f1ac0 */ static int cam_hit_flg;
+/* sdata 3f1ac4 */ static MDAT_SE *se_info;
+/* data 31c6a0 */ static MapRecBufCtrl map_buf_ctrl[2];
+/* data 31c6f0 */ static MapRecInfo map_rec_info;
+/* data 31c758 */ static MapRecInfo map_door_rec_info;
+/* data 31c7c0 */ static float sta_rot_tbl[6];
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/ingame/map/map_reverb.c
 // *****************************************************************************
 
-/* data 31c7d8 */ MAP_REVERB_DAT map_reverb_tbl[66];
-/* sbss 3f4d98 */ int rev_room_id_save;
+/* data 31c7d8 */ static MAP_REVERB_DAT map_reverb_tbl[66];
+/* sbss 3f4d98 */ static int rev_room_id_save;
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/ingame/menu/tim_dat/map_room_dat.c
@@ -2389,65 +2389,65 @@
 // FILE -- /home/zero_rom/zero2np/src/system/mc/prg/mc_check.c
 // *****************************************************************************
 
-/* bss 4b4708 */ MC_CHECK_CTRL mc_check_ctrl;
+/* bss 4b4708 */ static MC_CHECK_CTRL mc_check_ctrl;
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/system/mc/prg/mc_check_card.c
 // *****************************************************************************
 
-/* bss 4b4750 */ MC_INFO mc_info;
-/* bss 4b4768 */ MC_CHECK_CARD_CTRL mc_check_card_ctrl;
-/* sbss 3f4da0 */ MC_CHECK_CARD_EVERY_FRAME mc_check_card_every_frame;
+/* bss 4b4750 */ static MC_INFO mc_info;
+/* bss 4b4768 */ static MC_CHECK_CARD_CTRL mc_check_card_ctrl;
+/* sbss 3f4da0 */ static MC_CHECK_CARD_EVERY_FRAME mc_check_card_every_frame;
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/system/mc/prg/mc_check_dir.c
 // *****************************************************************************
 
-/* bss 4b4780 */ MC_CHECK_DIR_CTRL mc_check_dir_ctrl;
-/* bss 4b4800 */ MC_DIR_INFO mc_dir_info;
+/* bss 4b4780 */ static MC_CHECK_DIR_CTRL mc_check_dir_ctrl;
+/* bss 4b4800 */ static MC_DIR_INFO mc_dir_info;
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/system/mc/prg/mc_close.c
 // *****************************************************************************
 
-/* sbss 3f4da8 */ MC_FILE_CLOSE_CTRL mc_file_close_ctrl;
+/* sbss 3f4da8 */ static MC_FILE_CLOSE_CTRL mc_file_close_ctrl;
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/system/mc/prg/mc_del_all_file.c
 // *****************************************************************************
 
-/* bss 4b4cc0 */ MC_DEL_ALL_FILE_CTRL mc_del_all_file_ctrl;
+/* bss 4b4cc0 */ static MC_DEL_ALL_FILE_CTRL mc_del_all_file_ctrl;
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/system/mc/prg/mc_del_dir.c
 // *****************************************************************************
 
-/* bss 4b4cd8 */ MC_DIR_DEL_CTRL mc_dir_del_ctrl;
+/* bss 4b4cd8 */ static MC_DIR_DEL_CTRL mc_dir_del_ctrl;
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/system/mc/prg/mc_del_file.c
 // *****************************************************************************
 
-/* bss 4b4ce8 */ MC_FILE_DEL_CTRL mc_file_del_ctrl;
+/* bss 4b4ce8 */ static MC_FILE_DEL_CTRL mc_file_del_ctrl;
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/system/mc/prg/mc_format.c
 // *****************************************************************************
 
-/* bss 4b4d30 */ MC_FORMAT_CTRL mc_format_ctrl;
+/* bss 4b4d30 */ static MC_FORMAT_CTRL mc_format_ctrl;
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/system/mc/prg/mc_icon.c
 // *****************************************************************************
 
-/* sdata 3f1ae0 */ void *icon_data_addr;
-/* bss 4b4d40 */ MC_ICON_CTRL mc_icon_ctrl;
+/* sdata 3f1ae0 */ static void *icon_data_addr;
+/* bss 4b4d40 */ static MC_ICON_CTRL mc_icon_ctrl;
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/system/mc/prg/mc_icon_sys.c
 // *****************************************************************************
 
-/* bss 4b4d58 */ MC_ICON_SYS_CTRL mc_icon_sys_ctrl;
+/* bss 4b4d58 */ static MC_ICON_SYS_CTRL mc_icon_sys_ctrl;
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/system/mc/dat/mc_iconsys_dat.c
@@ -2462,57 +2462,57 @@
 // FILE -- /home/zero_rom/zero2np/src/system/mc/prg/mc_load.c
 // *****************************************************************************
 
-/* bss 4b5130 */ MC_LOAD_CTRL mc_load_ctrl;
+/* bss 4b5130 */ static MC_LOAD_CTRL mc_load_ctrl;
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/system/mc/prg/mc_make.c
 // *****************************************************************************
 
-/* bss 4b5180 */ MC_NEW_MAKE_CTRL mc_new_make_ctrl;
+/* bss 4b5180 */ static MC_NEW_MAKE_CTRL mc_new_make_ctrl;
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/system/mc/prg/mc_make_all_file.c
 // *****************************************************************************
 
-/* bss 4b5198 */ MC_MAKE_ALL_FILE_CTRL mc_make_all_file_ctrl;
+/* bss 4b5198 */ static MC_MAKE_ALL_FILE_CTRL mc_make_all_file_ctrl;
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/system/mc/prg/mc_make_dir.c
 // *****************************************************************************
 
-/* bss 4b51b8 */ MC_MAKE_DIR_CTRL mc_make_dir_ctrl;
+/* bss 4b51b8 */ static MC_MAKE_DIR_CTRL mc_make_dir_ctrl;
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/system/mc/prg/mc_make_file.c
 // *****************************************************************************
 
-/* bss 4b51e0 */ MC_MAKE_FILE_CTRL mc_make_file_ctrl;
+/* bss 4b51e0 */ static MC_MAKE_FILE_CTRL mc_make_file_ctrl;
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/system/mc/prg/mc_open.c
 // *****************************************************************************
 
-/* bss 4b5230 */ MC_FILE_OPEN_CTRL mc_file_open_ctrl;
+/* bss 4b5230 */ static MC_FILE_OPEN_CTRL mc_file_open_ctrl;
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/system/mc/prg/mc_read.c
 // *****************************************************************************
 
-/* bss 4b5248 */ MC_FILE_READ_CTRL mc_file_read_ctrl;
+/* bss 4b5248 */ static MC_FILE_READ_CTRL mc_file_read_ctrl;
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/system/mc/prg/mc_save.c
 // *****************************************************************************
 
-/* bss 4b5260 */ MC_SAVE_CTRL mc_save_ctrl;
+/* bss 4b5260 */ static MC_SAVE_CTRL mc_save_ctrl;
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/system/mc/prg/mc_set_data.c
 // *****************************************************************************
 
-/* data 31e3a8 */ void (**game_save_data[8])(/* parameters unknown */);
-/* sdata 3f1b28 */ void (**album_save_data[2])(/* parameters unknown */);
-/* bss 4b52b0 */ MC_PLAY_DATA_HEAD mc_play_data_head;
+/* data 31e3a8 */ static void (**game_save_data[8])(/* parameters unknown */);
+/* sdata 3f1b28 */ static void (**album_save_data[2])(/* parameters unknown */);
+/* bss 4b52b0 */ static MC_PLAY_DATA_HEAD mc_play_data_head;
 /* sbss 3f5410 */ unsigned char TIME_INFO type_info node[8];
 
 // *****************************************************************************
@@ -2535,7 +2535,7 @@
 // FILE -- /home/zero_rom/zero2np/src/system/mc/prg/mc_write.c
 // *****************************************************************************
 
-/* bss 4b5338 */ MC_FILE_WRITE_CTRL mc_file_write_ctrl;
+/* bss 4b5338 */ static MC_FILE_WRITE_CTRL mc_file_write_ctrl;
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/graphics/motion/mdldat.c
@@ -3184,74 +3184,74 @@
 // FILE -- /home/zero_rom/zero2np/src/debug/mem_dbg.c
 // *****************************************************************************
 
-/* bss 4b5350 */ HEAP_WRK mem_dbg_heap_wrk;
+/* bss 4b5350 */ static HEAP_WRK mem_dbg_heap_wrk;
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/common/mem_util.c
 // *****************************************************************************
 
-/* bss 4b5370 */ HEAP_WRK mem_util_heap_wrk;
+/* bss 4b5370 */ static HEAP_WRK mem_util_heap_wrk;
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/ingame/item/prg/memo.c
 // *****************************************************************************
 
-/* bss 4b5390 */ fixed_array<PLYR_MEMO,20> plyr_memo;
+/* bss 4b5390 */ static fixed_array<PLYR_MEMO,20> plyr_memo;
 /* sbss 3f5418 */ unsigned char PLYR_MEMO type_info node[8];
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/ingame/menu/menu.c
 // *****************************************************************************
 
-/* data 321618 */ MENU_CTRL menu_ctrl[9];
-/* sdata 3f2ae0 */ void *menu_caption_adrs;
+/* data 321618 */ static MENU_CTRL menu_ctrl[9];
+/* sdata 3f2ae0 */ static void *menu_caption_adrs;
 /* data 321660 */ MENU_WRK menu_wrk;
 /* sdata 3f2b00 */ char map_view_flg;
-/* bss 4b5430 */ MENU_DISP_CTRL menu_disp;
+/* bss 4b5430 */ static MENU_DISP_CTRL menu_disp;
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/ingame/menu/menu_cam_edit.c
 // *****************************************************************************
 
-/* data 321670 */ void (*menu_cam_edit_pad[12])(/* parameters unknown */);
-/* data 3216a0 */ void (*menu_cam_edit_disp_func[12])(/* parameters unknown */);
-/* bss 4b5448 */ fixed_array<DISP_LENS_DATA,10> disp_lens_data;
-/* sbss 3f4dc0 */ reference_fixed_array<int,3> base_msg_tbl;
-/* sbss 3f4dc8 */ reference_fixed_array<int,10> lens_msg_tbl;
+/* data 321670 */ static void (*menu_cam_edit_pad[12])(/* parameters unknown */);
+/* data 3216a0 */ static void (*menu_cam_edit_disp_func[12])(/* parameters unknown */);
+/* bss 4b5448 */ static fixed_array<DISP_LENS_DATA,10> disp_lens_data;
+/* sbss 3f4dc0 */ static reference_fixed_array<int,3> base_msg_tbl;
+/* sbss 3f4dc8 */ static reference_fixed_array<int,10> lens_msg_tbl;
 /* sbss 3f5420 */ unsigned char DISP_LENS_DATA type_info node[8];
 /* sbss 3f5210 */ unsigned char CVariable<char, 0, 3> type_info node[8];
 /* sbss 3f5218 */ unsigned char CVariable<char, 0, 9> type_info node[8];
-/* bss 4b5470 */ MENU_CAM_EDIT_CTRL menu_cam_edit_ctrl;
-/* sbss 3f4dd0 */ MENU_CAM_EDIT_DISP menu_cam_edit_disp;
-/* sbss 3f4dd8 */ GEM_ANIM_CTRL base_gem_anim_ctrl;
-/* sbss 3f4de0 */ GEM_ANIM_CTRL lens_gem_anim_ctrl;
+/* bss 4b5470 */ static MENU_CAM_EDIT_CTRL menu_cam_edit_ctrl;
+/* sbss 3f4dd0 */ static MENU_CAM_EDIT_DISP menu_cam_edit_disp;
+/* sbss 3f4dd8 */ static GEM_ANIM_CTRL base_gem_anim_ctrl;
+/* sbss 3f4de0 */ static GEM_ANIM_CTRL lens_gem_anim_ctrl;
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/ingame/menu/menu_cam_main.c
 // *****************************************************************************
 
-/* sdata 3f2ba0 */ void* (*MenuCamMemGetFunc)(/* parameters unknown */);
-/* sdata 3f2ba4 */ void (*MenuCamMemFreeFunc)(/* parameters unknown */);
-/* sdata 3f2ba8 */ void *menu_cam_tex_addr;
-/* sdata 3f2bac */ void *menu_cam_edit_tex_addr;
-/* sdata 3f2bb0 */ void (*menu_cam_init_func[2])(/* parameters unknown */);
-/* sdata 3f2bb8 */ int (*menu_cam_main_func[2])(/* parameters unknown */);
-/* sdata 3f2bc0 */ void (*menu_cam_disp_func[2])(/* parameters unknown */);
+/* sdata 3f2ba0 */ static void* (*MenuCamMemGetFunc)(/* parameters unknown */);
+/* sdata 3f2ba4 */ static void (*MenuCamMemFreeFunc)(/* parameters unknown */);
+/* sdata 3f2ba8 */ static void *menu_cam_tex_addr;
+/* sdata 3f2bac */ static void *menu_cam_edit_tex_addr;
+/* sdata 3f2bb0 */ static void (*menu_cam_init_func[2])(/* parameters unknown */);
+/* sdata 3f2bb8 */ static int (*menu_cam_main_func[2])(/* parameters unknown */);
+/* sdata 3f2bc0 */ static void (*menu_cam_disp_func[2])(/* parameters unknown */);
 /* sbss 3f5218 */ unsigned char CVariable<char, 0, 9> type_info node[8];
 /* sbss 3f5210 */ unsigned char CVariable<char, 0, 3> type_info node[8];
-/* sbss 3f4e08 */ MENU_CAM_MAIN_CTRL menu_cam_main_ctrl;
+/* sbss 3f4e08 */ static MENU_CAM_MAIN_CTRL menu_cam_main_ctrl;
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/ingame/menu/menu_cam_top.c
 // *****************************************************************************
 
-/* data 3216d0 */ void (*menu_cam_top_pad[4])(/* parameters unknown */);
-/* data 3216e0 */ void (*menu_cam_top_disp_func[4])(/* parameters unknown */);
+/* data 3216d0 */ static void (*menu_cam_top_pad[4])(/* parameters unknown */);
+/* data 3216e0 */ static void (*menu_cam_top_disp_func[4])(/* parameters unknown */);
 /* sbss 3f5210 */ unsigned char CVariable<char, 0, 3> type_info node[8];
 /* sbss 3f5218 */ unsigned char CVariable<char, 0, 9> type_info node[8];
-/* sbss 3f4e10 */ MENU_CAM_TOP_CTRL menu_cam_top_ctrl;
-/* sbss 3f4e18 */ MENU_CAM_TOP_DISP menu_cam_top_disp;
-/* rdata 3bd2e0 */ int film_name_tbl[6][2];
+/* sbss 3f4e10 */ static MENU_CAM_TOP_CTRL menu_cam_top_ctrl;
+/* sbss 3f4e18 */ static MENU_CAM_TOP_DISP menu_cam_top_disp;
+/* rdata 3bd2e0 */ static int film_name_tbl[6][2];
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/ingame/menu/tim_dat/menu_camera_dat.c
@@ -3263,9 +3263,9 @@
 // FILE -- /home/zero_rom/zero2np/src/ingame/menu/menu_cmn.c
 // *****************************************************************************
 
-/* data 323c50 */ MENU_CROSS_FADE menu_cross_fade[2];
+/* data 323c50 */ static MENU_CROSS_FADE menu_cross_fade[2];
 /* sdata 3f2c80 */ MENU_YES_NO_CTRL menu_yes_no_ctrl;
-/* bss 4b5488 */ MENU_DBUFF_CTRL menu_dbuff_ctrl;
+/* bss 4b5488 */ static MENU_DBUFF_CTRL menu_dbuff_ctrl;
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/ingame/menu/tim_dat/menu_cmn_dat.c
@@ -3284,28 +3284,28 @@
 // FILE -- /home/zero_rom/zero2np/src/debug/menu_dat.c
 // *****************************************************************************
 
-/* sdata 3f2cd0 */ int DbmFileD;
-/* sdata 3f2cd4 */ int DbmLiCnt;
+/* sdata 3f2cd0 */ static int DbmFileD;
+/* sdata 3f2cd4 */ static int DbmLiCnt;
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/ingame/menu/menu_file.c
 // *****************************************************************************
 
-/* sdata 3f2d48 */ void *file_cmn_tex_addr;
-/* sdata 3f2d4c */ void *file_top_tex_addr;
-/* sdata 3f2d50 */ void *file_doc_tex_addr;
-/* sdata 3f2d54 */ void *file_photo_tex_addr;
-/* sdata 3f2d58 */ void *file_map_tex_addr;
-/* sdata 3f2d5c */ void *photo_small_tex_addr;
-/* sdata 3f2d60 */ void *map_small_tex_addr;
-/* data 324228 */ void (*menu_file_pad[7])(/* parameters unknown */);
-/* data 324248 */ void (*file_mode_disp[7])(/* parameters unknown */);
-/* bss 4b5498 */ MENU_FILE_CTRL menu_file_ctrl;
-/* bss 4b54f0 */ DISP_FILE_DATA disp_file_data;
+/* sdata 3f2d48 */ static void *file_cmn_tex_addr;
+/* sdata 3f2d4c */ static void *file_top_tex_addr;
+/* sdata 3f2d50 */ static void *file_doc_tex_addr;
+/* sdata 3f2d54 */ static void *file_photo_tex_addr;
+/* sdata 3f2d58 */ static void *file_map_tex_addr;
+/* sdata 3f2d5c */ static void *photo_small_tex_addr;
+/* sdata 3f2d60 */ static void *map_small_tex_addr;
+/* data 324228 */ static void (*menu_file_pad[7])(/* parameters unknown */);
+/* data 324248 */ static void (*file_mode_disp[7])(/* parameters unknown */);
+/* bss 4b5498 */ static MENU_FILE_CTRL menu_file_ctrl;
+/* bss 4b54f0 */ static DISP_FILE_DATA disp_file_data;
 /* sbss 3f5430 */ unsigned char MENU_REF_CTRL type_info node[8];
 /* sbss 3f5428 */ unsigned char MENU_FILE_DATA type_info node[8];
-/* sbss 3f4e20 */ MENU_FILE_DISP menu_file_disp;
-/* rdata 3bdb00 */ int msg_type_tbl[5];
+/* sbss 3f4e20 */ static MENU_FILE_DISP menu_file_disp;
+/* rdata 3bdb00 */ static int msg_type_tbl[5];
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/ingame/menu/tim_dat/menu_file_dat.c
@@ -3323,12 +3323,12 @@
 // FILE -- /home/zero_rom/zero2np/src/ingame/menu/menu_item.c
 // *****************************************************************************
 
-/* sdata 3f2dd8 */ void *menu_item_tex_addr;
-/* data 325048 */ void (*menu_item_pad_func[3])(/* parameters unknown */);
-/* bss 4b59f0 */ fixed_array<DISP_ITEM_DATA,58> disp_item;
+/* sdata 3f2dd8 */ static void *menu_item_tex_addr;
+/* data 325048 */ static void (*menu_item_pad_func[3])(/* parameters unknown */);
+/* bss 4b59f0 */ static fixed_array<DISP_ITEM_DATA,58> disp_item;
 /* sbss 3f5438 */ unsigned char DISP_ITEM_DATA type_info node[8];
-/* bss 4b5bc0 */ MENU_ITEM_CTRL menu_item_ctrl;
-/* sbss 3f4e28 */ MENU_ITEM_DISP menu_item_disp;
+/* bss 4b5bc0 */ static MENU_ITEM_CTRL menu_item_ctrl;
+/* sbss 3f4e28 */ static MENU_ITEM_DISP menu_item_disp;
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/ingame/menu/tim_dat/menu_item_dat.c
@@ -3340,12 +3340,12 @@
 // FILE -- /home/zero_rom/zero2np/src/ingame/menu/menu_map.c
 // *****************************************************************************
 
-/* sdata 3f2e20 */ void *menu_map_bg_addr;
-/* sdata 3f2e24 */ void *map_data_addr;
-/* sdata 3f2e28 */ void *snap_data_addr;
-/* bss 4b5bd0 */ MENU_MAP_DISP menu_map_disp;
-/* bss 4b5be8 */ MENU_MAP_CTRL menu_map_ctrl;
-/* rdata 3be168 */ int map_label_tbl[8][3];
+/* sdata 3f2e20 */ static void *menu_map_bg_addr;
+/* sdata 3f2e24 */ static void *map_data_addr;
+/* sdata 3f2e28 */ static void *snap_data_addr;
+/* bss 4b5bd0 */ static MENU_MAP_DISP menu_map_disp;
+/* bss 4b5be8 */ static MENU_MAP_CTRL menu_map_ctrl;
+/* rdata 3be168 */ static int map_label_tbl[8][3];
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/ingame/menu/tim_dat/menu_map_dat.c
@@ -3363,13 +3363,13 @@
 // FILE -- /home/zero_rom/zero2np/src/ingame/menu/menu_memo.c
 // *****************************************************************************
 
-/* sdata 3f2e78 */ void *menu_memo_tex_addr;
-/* data 3285d8 */ void (*menu_memo_pad_func[3])(/* parameters unknown */);
-/* data 3285e8 */ void (*menu_memo_disp_func[3])(/* parameters unknown */);
-/* bss 4b5c00 */ fixed_array<DISP_MEMO_DATA,20> disp_memo_data;
+/* sdata 3f2e78 */ static void *menu_memo_tex_addr;
+/* data 3285d8 */ static void (*menu_memo_pad_func[3])(/* parameters unknown */);
+/* data 3285e8 */ static void (*menu_memo_disp_func[3])(/* parameters unknown */);
+/* bss 4b5c00 */ static fixed_array<DISP_MEMO_DATA,20> disp_memo_data;
 /* sbss 3f5440 */ unsigned char DISP_MEMO_DATA type_info node[8];
-/* bss 4b5ca0 */ MENU_MEMO_CTRL menu_memo_ctrl;
-/* sbss 3f4e30 */ MENU_MEMO_DISP menu_memo_disp;
+/* bss 4b5ca0 */ static MENU_MEMO_CTRL menu_memo_ctrl;
+/* sbss 3f4e30 */ static MENU_MEMO_DISP menu_memo_disp;
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/ingame/menu/tim_dat/menu_memo_dat.c
@@ -3381,11 +3381,11 @@
 // FILE -- /home/zero_rom/zero2np/src/ingame/menu/menu_photo.c
 // *****************************************************************************
 
-/* sdata 3f2ec0 */ void *menu_photo_tex_addr;
+/* sdata 3f2ec0 */ static void *menu_photo_tex_addr;
 /* sbss 3f5200 */ unsigned char _PICTURE_SUBJECT type_info node[8];
-/* bss 4b5cb0 */ MENU_PHOTO_CTRL menu_photo_ctrl;
-/* sbss 3f4e38 */ MENU_PHOTO_DISP menu_photo_disp;
-/* rdata 3be8f8 */ int csr_num[8][2];
+/* bss 4b5cb0 */ static MENU_PHOTO_CTRL menu_photo_ctrl;
+/* sbss 3f4e38 */ static MENU_PHOTO_DISP menu_photo_disp;
+/* rdata 3be8f8 */ static int csr_num[8][2];
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/ingame/menu/tim_dat/menu_photo_dat.c
@@ -3397,13 +3397,13 @@
 // FILE -- /home/zero_rom/zero2np/src/ingame/menu/menu_radio.c
 // *****************************************************************************
 
-/* sdata 3f2f08 */ void *menu_radio_tex_addr;
-/* sdata 3f2f0c */ int menu_radio_stream_id;
-/* sdata 3f2f10 */ u_char crystal_title_debug_flg;
-/* bss 4b5cc0 */ fixed_array<DISP_CRYSTAL_DATA,40> disp_crystal_data;
+/* sdata 3f2f08 */ static void *menu_radio_tex_addr;
+/* sdata 3f2f0c */ static int menu_radio_stream_id;
+/* sdata 3f2f10 */ static u_char crystal_title_debug_flg;
+/* bss 4b5cc0 */ static fixed_array<DISP_CRYSTAL_DATA,40> disp_crystal_data;
 /* sbss 3f5448 */ unsigned char DISP_CRYSTAL_DATA type_info node[8];
-/* bss 4b5e00 */ MENU_RADIO_CTRL menu_radio_ctrl;
-/* bss 4b5e18 */ MENU_RADIO_DISP menu_radio_disp;
+/* bss 4b5e00 */ static MENU_RADIO_CTRL menu_radio_ctrl;
+/* bss 4b5e18 */ static MENU_RADIO_DISP menu_radio_disp;
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/ingame/menu/tim_dat/menu_radio_dat.c
@@ -3418,19 +3418,19 @@
 // FILE -- /home/zero_rom/zero2np/src/ingame/menu/menu_soul.c
 // *****************************************************************************
 
-/* sdata 3f2f70 */ void *menu_soul_tex_addr;
-/* sdata 3f2f74 */ char list_comp_disp_flg;
-/* bss 4b5e28 */ MENU_SOUL_CTRL menu_soul_ctrl;
-/* bss 4b5e48 */ MENU_SOUL_DISP menu_soul_disp;
-/* bss 4b5e58 */ fixed_array<DISP_SOUL_LIST_DATA,176> disp_soul_list_data;
+/* sdata 3f2f70 */ static void *menu_soul_tex_addr;
+/* sdata 3f2f74 */ static char list_comp_disp_flg;
+/* bss 4b5e28 */ static MENU_SOUL_CTRL menu_soul_ctrl;
+/* bss 4b5e48 */ static MENU_SOUL_DISP menu_soul_disp;
+/* bss 4b5e58 */ static fixed_array<DISP_SOUL_LIST_DATA,176> disp_soul_list_data;
 /* sbss 3f5450 */ unsigned char DISP_SOUL_LIST_DATA type_info node[8];
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/ingame/menu/menu_top.c
 // *****************************************************************************
 
-/* sdata 3f2fb8 */ void *chapter_title_tex_addr;
-/* bss 4b63d8 */ MENU_TOP_DISP menu_top_disp;
+/* sdata 3f2fb8 */ static void *chapter_title_tex_addr;
+/* bss 4b63d8 */ static MENU_TOP_DISP menu_top_disp;
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/ingame/menu/tim_dat/menu_top_dat.c
@@ -3450,51 +3450,51 @@
 /* data 32bcc8 */ int wbyte_font_tbl3[26];
 /* data 32bd30 */ int wbyte_font_tbl4[83];
 /* data 32be80 */ int wbyte_font_tbl5[85];
-/* data 32bfd8 */ int font_w_b0[210];
-/* data 32c320 */ int font_w_b1[210];
-/* data 32c668 */ int font_w_b2[210];
-/* data 32c9b0 */ int font_w_b3[210];
-/* data 32ccf8 */ int font_w_b4[210];
+/* data 32bfd8 */ static int font_w_b0[210];
+/* data 32c320 */ static int font_w_b1[210];
+/* data 32c668 */ static int font_w_b2[210];
+/* data 32c9b0 */ static int font_w_b3[210];
+/* data 32ccf8 */ static int font_w_b4[210];
 /* data 32d040 */ SPRT_DAT mesbox[8];
-/* sdata 3f2fe0 */ int *mes_ex_nums[1];
-/* sdata 3f2fe8 */ int (*mes_ex_num_tbl[1])(/* parameters unknown */);
-/* sbss 3f4e40 */ DRAW_ENV_5 *change_msg_env;
-/* rdata 3bfbd0 */ int msg_type_max_tbl[83];
-/* bss 4b63f8 */ MES_DAT msdat;
+/* sdata 3f2fe0 */ static int *mes_ex_nums[1];
+/* sdata 3f2fe8 */ static int (*mes_ex_num_tbl[1])(/* parameters unknown */);
+/* sbss 3f4e40 */ static DRAW_ENV_5 *change_msg_env;
+/* rdata 3bfbd0 */ static int msg_type_max_tbl[83];
+/* bss 4b63f8 */ static MES_DAT msdat;
 /* sdata 3f3038 */ u_char *save_mes_addr;
-/* sbss 3f4e48 */ MES_WRK mes_wrk;
-/* sbss 3f4e50 */ MSG_DISP_CTRL msg_disp_ctrl;
+/* sbss 3f4e48 */ static MES_WRK mes_wrk;
+/* sbss 3f4e50 */ static MSG_DISP_CTRL msg_disp_ctrl;
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/graphics/motion/mim_dat.c
 // *****************************************************************************
 
-/* data 32d140 */ int ch000_mim_no_tbl[41];
-/* data 32d1e8 */ int ch001_mim_no_tbl[41];
+/* data 32d140 */ static int ch000_mim_no_tbl[41];
+/* data 32d1e8 */ static int ch001_mim_no_tbl[41];
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/outgame/mis_sel_disp.c
 // *****************************************************************************
 
-/* sdata 3f30b4 */ int MisFadeNew;
-/* sdata 3f30b8 */ int MisFadeOld;
-/* sdata 3f30bc */ int MisFadeCnt;
+/* sdata 3f30b4 */ static int MisFadeNew;
+/* sdata 3f30b8 */ static int MisFadeOld;
+/* sdata 3f30bc */ static int MisFadeCnt;
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/outgame/mission_ctl.c
 // *****************************************************************************
 
-/* sdata 3f3108 */ int (*MisFunc)(/* parameters unknown */);
-/* sdata 3f310c */ int MisClearTime;
-/* sdata 3f3110 */ int MisTotalScore;
-/* sdata 3f3114 */ int MisBestShot;
-/* sdata 3f3118 */ int MisClearType;
-/* sdata 3f311c */ int MisAnimTime;
-/* sdata 3f3128 */ void *MisStTexPtr;
-/* sdata 3f312c */ void *MisEnTexPtr;
-/* sdata 3f3130 */ void *MisEnClearChrTexPtr;
-/* sdata 3f3134 */ void *MisEnScreenPtr;
-/* sbss 3f4e58 */ int MisDispID[2];
+/* sdata 3f3108 */ static int (*MisFunc)(/* parameters unknown */);
+/* sdata 3f310c */ static int MisClearTime;
+/* sdata 3f3110 */ static int MisTotalScore;
+/* sdata 3f3114 */ static int MisBestShot;
+/* sdata 3f3118 */ static int MisClearType;
+/* sdata 3f311c */ static int MisAnimTime;
+/* sdata 3f3128 */ static void *MisStTexPtr;
+/* sdata 3f312c */ static void *MisEnTexPtr;
+/* sdata 3f3130 */ static void *MisEnClearChrTexPtr;
+/* sdata 3f3134 */ static void *MisEnScreenPtr;
+/* sbss 3f4e58 */ static int MisDispID[2];
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/outgame/tim_dat/mission_dat.c
@@ -3506,39 +3506,39 @@
 // FILE -- /home/zero_rom/zero2np/src/outgame/mission_disp.c
 // *****************************************************************************
 
-/* sdata 3f3178 */ int MisDispTimer;
-/* sdata 3f317c */ int MisDispTimerCnt;
-/* sdata 3f3180 */ int MisDispTimerSw;
+/* sdata 3f3178 */ static int MisDispTimer;
+/* sdata 3f317c */ static int MisDispTimerCnt;
+/* sdata 3f3180 */ static int MisDispTimerSw;
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/outgame/mission_pause.c
 // *****************************************************************************
 
-/* bss 4b6448 */ PAUSE_CTRL pause_ctrl;
+/* bss 4b6448 */ static PAUSE_CTRL pause_ctrl;
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/outgame/mission_sel.c
 // *****************************************************************************
 
-/* sdata 3f3208 */ void *mission_sel_tex_addr;
-/* sdata 3f320c */ void *out_game_cmn_tex;
-/* sdata 3f3210 */ int MissionYesNo;
-/* sdata 3f3214 */ int MissionListTop;
-/* sdata 3f3218 */ int MissionCsrY;
-/* sdata 3f321c */ int MissionMode;
-/* sdata 3f3220 */ int MissionMiniYCnt;
-/* sdata 3f3224 */ int MissionMiniCsr;
-/* sdata 3f3228 */ int MissionBlackOutCnt;
-/* sdata 3f322c */ void *MissionSaveDatPtr;
-/* bss 4b6458 */ MISSION_TBL MissionTblList[25];
+/* sdata 3f3208 */ static void *mission_sel_tex_addr;
+/* sdata 3f320c */ static void *out_game_cmn_tex;
+/* sdata 3f3210 */ static int MissionYesNo;
+/* sdata 3f3214 */ static int MissionListTop;
+/* sdata 3f3218 */ static int MissionCsrY;
+/* sdata 3f321c */ static int MissionMode;
+/* sdata 3f3220 */ static int MissionMiniYCnt;
+/* sdata 3f3224 */ static int MissionMiniCsr;
+/* sdata 3f3228 */ static int MissionBlackOutCnt;
+/* sdata 3f322c */ static void *MissionSaveDatPtr;
+/* bss 4b6458 */ static MISSION_TBL MissionTblList[25];
 /* sbss 3f5228 */ unsigned char PLYR_ITEM type_info node[8];
 /* sbss 3f5218 */ unsigned char CVariable<char, 0, 9> type_info node[8];
 /* sbss 3f5210 */ unsigned char CVariable<char, 0, 3> type_info node[8];
-/* sbss 3f4e60 */ MISSION_SEL_CTRL mission_sel_ctrl;
-/* sbss 3f4e68 */ MISSION_SEL_DISP mission_sel_disp;
-/* bss 4b67e0 */ int MissionList[25][4];
-/* bss 4b6970 */ int MissionMdlWork[4];
-/* bss 4b6980 */ int MissionGage[4];
+/* sbss 3f4e60 */ static MISSION_SEL_CTRL mission_sel_ctrl;
+/* sbss 3f4e68 */ static MISSION_SEL_DISP mission_sel_disp;
+/* bss 4b67e0 */ static int MissionList[25][4];
+/* bss 4b6970 */ static int MissionMdlWork[4];
+/* bss 4b6980 */ static int MissionGage[4];
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/graphics/motion/morph.c
@@ -3549,9 +3549,9 @@
 /* data 32e9c8 */ MORPH_DAT ch030_morph[2];
 /* data 32e9d8 */ MORPH_DAT ch041_morph[14];
 /* data 32ea48 */ MORPH_DAT *morph_dat[78];
-/* bss 4b6990 */ fixed_array<MORPH_CTRL,15> morph_ctrl;
+/* bss 4b6990 */ static fixed_array<MORPH_CTRL,15> morph_ctrl;
 /* sbss 3f5458 */ unsigned char MORPH_CTRL type_info node[8];
-/* sbss 3f4e6c */ ANI_CTRL *now_work;
+/* sbss 3f4e6c */ static ANI_CTRL *now_work;
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/graphics/motion/morph_dat.c
@@ -3590,8 +3590,8 @@
 // FILE -- /home/zero_rom/zero2np/src/graphics/motion/motion.c
 // *****************************************************************************
 
-/* bss 4b9480 */ fixed_array<float[4][4],60> m_start;
-/* bss 4ba380 */ fixed_array<float[4][4],60> m_end;
+/* bss 4b9480 */ static fixed_array<float[4][4],60> m_start;
+/* bss 4ba380 */ static fixed_array<float[4][4],60> m_end;
 /* sbss 3f51a8 */ unsigned char float [3][3] type_info node[8];
 /* sbss 3f5460 */ unsigned char RST_DATA type_info node[8];
 /* data 32ef20 */ MIME_CTRL mim_chodo[20];
@@ -3615,42 +3615,42 @@
 // FILE -- /home/zero_rom/zero2np/src/graphics/movie/movie.c
 // *****************************************************************************
 
-/* sdata 3f3348 */ int iMovieCnt;
-/* bss 4bb280 */ playPssRsrcs rsrcs;
-/* bss 4bb2c0 */ unsigned char temp_zero_bffer[2048];
-/* sbss 3f4e70 */ int movie_audio_flg;
-/* sbss 3f4e74 */ int bPause;
+/* sdata 3f3348 */ static int iMovieCnt;
+/* bss 4bb280 */ static playPssRsrcs rsrcs;
+/* bss 4bb2c0 */ static unsigned char temp_zero_bffer[2048];
+/* sbss 3f4e70 */ static int movie_audio_flg;
+/* sbss 3f4e74 */ static int bPause;
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/ingame/movie_room_menu/prg/movie_projecter.c
 // *****************************************************************************
 
-/* data 336dc0 */ float ScreenPosition[2][4][4];
-/* sbss 3f4e78 */ fixed_array<int,2> SetFilmNo;
-/* sdata 3f3398 */ int InitFilmNo[2];
-/* sbss 3f4e80 */ MOVIE_PROJECTER_STATE now_state;
+/* data 336dc0 */ static float ScreenPosition[2][4][4];
+/* sbss 3f4e78 */ static fixed_array<int,2> SetFilmNo;
+/* sdata 3f3398 */ static int InitFilmNo[2];
+/* sbss 3f4e80 */ static MOVIE_PROJECTER_STATE now_state;
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/ingame/movie_room.c
 // *****************************************************************************
 
-/* rdata 3c1790 */ DRAW_ENV_5 MovieDrawEnv;
+/* rdata 3c1790 */ static DRAW_ENV_5 MovieDrawEnv;
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/ingame/movie_room_menu/prg/movie_room_menu.c
 // *****************************************************************************
 
-/* data 336e40 */ DISP_FILM_REEL disp_film_reel[7];
-/* data 336e98 */ void (*movie_room_menu_pad_func[6])(/* parameters unknown */);
-/* data 336eb0 */ void (*movie_room_menu_disp_func[6])(/* parameters unknown */);
-/* sbss 3f4e88 */ MOVIE_ROOM_MENU_CTRL movie_room_menu_ctrl;
-/* sbss 3f4e90 */ MOVIE_ROOM_MENU_DISP movie_room_menu_disp;
+/* data 336e40 */ static DISP_FILM_REEL disp_film_reel[7];
+/* data 336e98 */ static void (*movie_room_menu_pad_func[6])(/* parameters unknown */);
+/* data 336eb0 */ static void (*movie_room_menu_disp_func[6])(/* parameters unknown */);
+/* sbss 3f4e88 */ static MOVIE_ROOM_MENU_CTRL movie_room_menu_ctrl;
+/* sbss 3f4e90 */ static MOVIE_ROOM_MENU_DISP movie_room_menu_disp;
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/graphics/movie/movie_title.c
 // *****************************************************************************
 
-/* sbss 3f4e98 */ MOVIE_TITLE_CTRL movie_title_ctrl;
+/* sbss 3f4e98 */ static MOVIE_TITLE_CTRL movie_title_ctrl;
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/graphics/movie/movie_title_dat.c
@@ -3777,13 +3777,13 @@
 
 /* sbss 3f5218 */ unsigned char CVariable<char, 0, 9> type_info node[8];
 /* sbss 3f5210 */ unsigned char CVariable<char, 0, 3> type_info node[8];
-/* sbss 3f4e9c */ int mIsSetup;
+/* sbss 3f4e9c */ static int mIsSetup;
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/outgame/newgame.c
 // *****************************************************************************
 
-/* sbss 3f4ea0 */ NEW_GAME_CTRL new_game_ctrl;
+/* sbss 3f4ea0 */ static NEW_GAME_CTRL new_game_ctrl;
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/graphics/obj_draw_ctrl.c
@@ -3803,15 +3803,15 @@
 /* sbss 3f5110 */ unsigned char ctl::custom_allocator<char> type_info node[8];
 /* sbss 3f5468 */ unsigned char OL_LOAD_ONE type_info node[8];
 /* sbss 3f5238 */ unsigned char basic_string<char, string_char_traits<char>, ctl::custom_allocator<char> > type_info node[8];
-/* bss 4bbac0 */ HEAP_WRK ol_load_heap_wrk;
+/* bss 4bbac0 */ static HEAP_WRK ol_load_heap_wrk;
 /* data 3f49fc */ size_t basic_string<char, string_char_traits<char>, ctl::custom_allocator<char> >::npos;
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/outgame/option.c
 // *****************************************************************************
 
-/* data 33a090 */ void (*OptionCtrlModule[4])(/* parameters unknown */);
-/* data 33a0a0 */ void (*OptionDispModule[4])(/* parameters unknown */);
+/* data 33a090 */ static void (*OptionCtrlModule[4])(/* parameters unknown */);
+/* data 33a0a0 */ static void (*OptionDispModule[4])(/* parameters unknown */);
 /* sdata 3f3638 */ OPT_CTRL *oc;
 /* sdata 3f363c */ void *opt_og_tex_addr;
 /* sdata 3f3640 */ void *opt_top_tex_addr;
@@ -3831,7 +3831,7 @@
 // FILE -- /home/zero_rom/zero2np/src/outgame/outgame.c
 // *****************************************************************************
 
-/* sdata 3f36d0 */ int mFlgOnce;
+/* sdata 3f36d0 */ static int mFlgOnce;
 /* sbss 3f5218 */ unsigned char CVariable<char, 0, 9> type_info node[8];
 /* sbss 3f5210 */ unsigned char CVariable<char, 0, 3> type_info node[8];
 
@@ -3848,19 +3848,19 @@
 /* data 33c0d8 */ u_short sce_pad[16];
 /* sdata 3f36d4 */ short unsigned int **paddat;
 /* sdata 3f36d8 */ unsigned char **pushdat;
-/* bss 4bbae0 */ ANALOG_PAD_CTRL analog_pad_ctrl;
+/* bss 4bbae0 */ static ANALOG_PAD_CTRL analog_pad_ctrl;
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/outgame/pad_check.c
 // *****************************************************************************
 
-/* sbss 3f4eae */ char pad_check_step;
+/* sbss 3f4eae */ static char pad_check_step;
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/ingame/pause/prg/pause.c
 // *****************************************************************************
 
-/* bss 4bbaf8 */ PAUSE_CTRL pause_ctrl;
+/* bss 4bbaf8 */ static PAUSE_CTRL pause_ctrl;
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/ingame/pause/prg/pause_dat.c
@@ -3873,27 +3873,27 @@
 // *****************************************************************************
 
 /* data 33c218 */ PFILE_WRK pfile_wrk;
-/* bss 4bbb10 */ fixed_array<_HINT_PHOTO_REQ,5> hint_photo_req;
+/* bss 4bbb10 */ static fixed_array<_HINT_PHOTO_REQ,5> hint_photo_req;
 /* sbss 3f5470 */ unsigned char _HINT_PHOTO_REQ type_info node[8];
 /* sbss 3f51f0 */ unsigned char PICTURE_WRK type_info node[8];
 /* sbss 3f5200 */ unsigned char _PICTURE_SUBJECT type_info node[8];
 /* sbss 3f5218 */ unsigned char CVariable<char, 0, 9> type_info node[8];
 /* sbss 3f5210 */ unsigned char CVariable<char, 0, 3> type_info node[8];
-/* rdata 3c2eb0 */ SPRT_DAT mayu_pk2_dat;
-/* rdata 3c2ed0 */ SPRT_DAT kusabi_pk2_dat;
-/* rdata 3c2ef0 */ SPRT_DAT hint_dat_one;
+/* rdata 3c2eb0 */ static SPRT_DAT mayu_pk2_dat;
+/* rdata 3c2ed0 */ static SPRT_DAT kusabi_pk2_dat;
+/* rdata 3c2ef0 */ static SPRT_DAT hint_dat_one;
 /* data 33c420 */ PHOTO_WRK photo_wrk;
-/* sbss 3f4eb0 */ int name_msg_type;
-/* sbss 3f4eb4 */ int name_msg_name;
-/* sbss 3f4eb8 */ int hint_reqs_cnt;
-/* sbss 3f4ebc */ int hint_req_no;
-/* sbss 3f4ec0 */ void *photo_tmp_adrs;
-/* sbss 3f4ec4 */ int photo_special_tex_file_no;
-/* sbss 3f4ec8 */ int hint_mes_type;
-/* sbss 3f4ecc */ int hint_mes_no;
-/* sbss 3f4ed0 */ SPRT_DAT *p_hint_dat;
-/* bss 4bbb30 */ float rare_ene_pos[4];
-/* sbss 3f4ed4 */ int unlock_ghost;
+/* sbss 3f4eb0 */ static int name_msg_type;
+/* sbss 3f4eb4 */ static int name_msg_name;
+/* sbss 3f4eb8 */ static int hint_reqs_cnt;
+/* sbss 3f4ebc */ static int hint_req_no;
+/* sbss 3f4ec0 */ static void *photo_tmp_adrs;
+/* sbss 3f4ec4 */ static int photo_special_tex_file_no;
+/* sbss 3f4ec8 */ static int hint_mes_type;
+/* sbss 3f4ecc */ static int hint_mes_no;
+/* sbss 3f4ed0 */ static SPRT_DAT *p_hint_dat;
+/* bss 4bbb30 */ static float rare_ene_pos[4];
+/* sbss 3f4ed4 */ static int unlock_ghost;
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/ingame/photo/photo_dat.c
@@ -3905,31 +3905,31 @@
 /* data 33c458 */ float photo_center_ratio[10];
 /* data 33c480 */ float photo_charge_ratio[4];
 /* data 33c490 */ PhotoData photo_dat[72];
-/* sdata 3f3870 */ float pd_default_spd;
-/* sdata 3f3874 */ float pd_default_rate;
-/* sdata 3f3878 */ float pdb_default_spd;
-/* sdata 3f387c */ float pdb_default_rate;
+/* sdata 3f3870 */ static float pd_default_spd;
+/* sdata 3f3874 */ static float pd_default_rate;
+/* sdata 3f3878 */ static float pdb_default_spd;
+/* sdata 3f387c */ static float pdb_default_rate;
 /* sdata 3f3880 */ CSYSTEM_SND_BUF_PLAY furn_sound_player[2];
 /* data 33cb50 */ SPRT_DAT hint_dat[4];
-/* bss 4bbb40 */ BIT_FLAGS<72> photo_dat_save;
-/* bss 4bbb50 */ PHOTO_DAT_OBJ_WRK pd_obj_wrk[4];
+/* bss 4bbb40 */ static BIT_FLAGS<72> photo_dat_save;
+/* bss 4bbb50 */ static PHOTO_DAT_OBJ_WRK pd_obj_wrk[4];
 /* sbss 3f5218 */ unsigned char CVariable<char, 0, 9> type_info node[8];
 /* sbss 3f5210 */ unsigned char CVariable<char, 0, 3> type_info node[8];
-/* sbss 3f4ed8 */ MDAT_OBJ *p_centerest_obj;
-/* sbss 3f4edc */ int seal_ghost_draw_lock;
+/* sbss 3f4ed8 */ static MDAT_OBJ *p_centerest_obj;
+/* sbss 3f4edc */ static int seal_ghost_draw_lock;
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/ingame/photo/photo_make.c
 // *****************************************************************************
 
-/* data 33cbd0 */ SPRT_DAT photo_frame[14];
+/* data 33cbd0 */ static SPRT_DAT photo_frame[14];
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/ingame/menu/play_data.c
 // *****************************************************************************
 
-/* bss 4bbbd0 */ PLAY_DATA_CTRL play_data;
-/* sbss 3f4ee0 */ u_char play_timer;
+/* bss 4bbbd0 */ static PLAY_DATA_CTRL play_data;
+/* sbss 3f4ee0 */ static u_char play_timer;
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/ingame/plyr/player.c
@@ -3937,20 +3937,20 @@
 
 /* data 33cd90 */ PLYR_WRK plyr_wrk;
 /* sdata 3f3960 */ PLCMN_WRK *pl_sta[2];
-/* sdata 3f3968 */ u_short cam_cng_tm;
+/* sdata 3f3968 */ static u_short cam_cng_tm;
 /* sdata 3f3970 */ CPLYR_SND_BUF_PLAY mio_deadly_player;
 /* sbss 3f5220 */ unsigned char ENE_WRK type_info node[8];
 /* sbss 3f5218 */ unsigned char CVariable<char, 0, 9> type_info node[8];
 /* sbss 3f5210 */ unsigned char CVariable<char, 0, 3> type_info node[8];
-/* sbss 3f4ef0 */ int gbLenzShot;
-/* rdata 3c3df8 */ float aDmgRateByDifficulty[4];
-/* sbss 3f4ef4 */ char look_at_pre_kaidan_flg;
-/* sbss 3f4ef8 */ PLAYERFLASHLIGHTTYPE s_FlashlightType;
-/* sbss 3f4efc */ int finder_off_lock_timer_cnt;
-/* sbss 3f4f00 */ int iBusterCountThisTime;
-/* rdata 3c3e08 */ float combo_point_mag[3];
-/* rdata 3c3e18 */ float combo_sb_point_mag[3];
-/* sbss 3f4f04 */ int door_anime_no;
+/* sbss 3f4ef0 */ static int gbLenzShot;
+/* rdata 3c3df8 */ static float aDmgRateByDifficulty[4];
+/* sbss 3f4ef4 */ static char look_at_pre_kaidan_flg;
+/* sbss 3f4ef8 */ static PLAYERFLASHLIGHTTYPE s_FlashlightType;
+/* sbss 3f4efc */ static int finder_off_lock_timer_cnt;
+/* sbss 3f4f00 */ static int iBusterCountThisTime;
+/* rdata 3c3e08 */ static float combo_point_mag[3];
+/* rdata 3c3e18 */ static float combo_sb_point_mag[3];
+/* sbss 3f4f04 */ static int door_anime_no;
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/ingame/plyr/plyr_mdl.c
@@ -3958,19 +3958,19 @@
 
 /* sdata 3f3a50 */ int g_iMaxPlayerAlpha;
 /* sdata 3f3a54 */ int g_iMinPlayerAlpha;
-/* sdata 3f3a58 */ int s_bUseDoorLight;
-/* bss 4bbc70 */ PLYR_PLYR_DATA plyr_data;
+/* sdata 3f3a58 */ static int s_bUseDoorLight;
+/* bss 4bbc70 */ static PLYR_PLYR_DATA plyr_data;
 /* sbss 3f5158 */ unsigned char G3DLIGHT type_info node[8];
 /* sbss 3f5160 */ unsigned char GRA3DLIGHTSTATUS type_info node[8];
-/* bss 4bbcb0 */ MDL_REQ_SAVE plyr_mdl_req_save;
-/* sbss 3f4f08 */ int ltd_mode;
-/* sbss 3f4f0c */ int same_priority_count;
-/* sbss 3f4f10 */ LOOK_TARGET_PRIORITY_MIO plyr_neck_now_priority;
-/* sbss 3f4f14 */ LOOK_TARGET_PRIORITY_MIO pre_priority;
-/* bss 4bbcc0 */ LOOK_AT_PARAM plyr_neck_now_param;
-/* sbss 3f4f18 */ int plyr_neck_flg;
-/* sbss 3f4f1c */ int plyr_neck_no_registered_cnt;
-/* bss 4bbce0 */ GAME_COSTUME GameCostume;
+/* bss 4bbcb0 */ static MDL_REQ_SAVE plyr_mdl_req_save;
+/* sbss 3f4f08 */ static int ltd_mode;
+/* sbss 3f4f0c */ static int same_priority_count;
+/* sbss 3f4f10 */ static LOOK_TARGET_PRIORITY_MIO plyr_neck_now_priority;
+/* sbss 3f4f14 */ static LOOK_TARGET_PRIORITY_MIO pre_priority;
+/* bss 4bbcc0 */ static LOOK_AT_PARAM plyr_neck_now_param;
+/* sbss 3f4f18 */ static int plyr_neck_flg;
+/* sbss 3f4f1c */ static int plyr_neck_no_registered_cnt;
+/* bss 4bbce0 */ static GAME_COSTUME GameCostume;
 /* data 36a050 */ __vtbl_ptr_type PLYR_PLYR_DATA virtual table[4];
 /* bss 4cdbf0 */ unsigned char PLYR_PLYR_DATA type_info node[12];
 /* sbss 3f5400 */ unsigned char MAN_DATA type_info node[8];
@@ -3979,16 +3979,16 @@
 // FILE -- /home/zero_rom/zero2np/src/ingame/menu/plyr_room_info.c
 // *****************************************************************************
 
-/* bss 4bbcf0 */ fixed_array<ROOM_IN_INFO,240> room_in_info;
+/* bss 4bbcf0 */ static fixed_array<ROOM_IN_INFO,240> room_in_info;
 /* sbss 3f5478 */ unsigned char ROOM_IN_INFO type_info node[8];
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/ingame/puzzle/puzzle.c
 // *****************************************************************************
 
-/* sbss 3f4f20 */ fixed_array<unsigned char,6> clear_puzzle;
-/* bss 4bbde0 */ PZL_EXE_CTRL pzl_exe_ctrl;
-/* sbss 3f4f28 */ void *pzl_tex_addr;
+/* sbss 3f4f20 */ static fixed_array<unsigned char,6> clear_puzzle;
+/* bss 4bbde0 */ static PZL_EXE_CTRL pzl_exe_ctrl;
+/* sbss 3f4f28 */ static void *pzl_tex_addr;
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/ingame/puzzle/puzzle_dat.c
@@ -4043,9 +4043,9 @@
 // FILE -- /home/zero_rom/zero2np/src/ingame/puzzle/roku/roku_pzl.c
 // *****************************************************************************
 
-/* data 33e390 */ void (*six_pzl_pad_func[7])(/* parameters unknown */);
-/* bss 4bbdf8 */ SIX_PZL_CTRL six_pzl_ctrl;
-/* bss 4bbe40 */ SIX_PZL_DISP six_pzl_disp;
+/* data 33e390 */ static void (*six_pzl_pad_func[7])(/* parameters unknown */);
+/* bss 4bbdf8 */ static SIX_PZL_CTRL six_pzl_ctrl;
+/* bss 4bbe40 */ static SIX_PZL_DISP six_pzl_disp;
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/system/mc/dat/save_data.c
@@ -4080,30 +4080,30 @@
 // FILE -- /home/zero_rom/zero2np/src/ingame/savepoint/savepoint_fade_in.c
 // *****************************************************************************
 
-/* sbss 3f4f30 */ SAVE_POINT_FADE_IN_CTRL save_point_fade_ctrl;
+/* sbss 3f4f30 */ static SAVE_POINT_FADE_IN_CTRL save_point_fade_ctrl;
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/ingame/savepoint/savepoint_fade_out.c
 // *****************************************************************************
 
-/* sdata 3f3c98 */ int save_point_fade_timer;
+/* sdata 3f3c98 */ static int save_point_fade_timer;
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/ingame/savepoint/savepoint_main.c
 // *****************************************************************************
 
-/* sdata 3f3ce0 */ void *savepoint_bg_tex_addr;
-/* sbss 3f4f38 */ SAVEPOINT_MAIN_CTRL savepoint_main_ctrl;
-/* bss 4bbe50 */ SAVEPOINT_MAIN_DISP savepoint_main_disp;
+/* sdata 3f3ce0 */ static void *savepoint_bg_tex_addr;
+/* sbss 3f4f38 */ static SAVEPOINT_MAIN_CTRL savepoint_main_ctrl;
+/* bss 4bbe50 */ static SAVEPOINT_MAIN_DISP savepoint_main_disp;
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/ingame/savepoint/savepoint_top.c
 // *****************************************************************************
 
-/* sdata 3f3d28 */ void *savepoint_tex_addr;
-/* sdata 3f3d2c */ char savepoint_top_init_flg;
-/* sbss 3f4f40 */ SAVEPOINT_TOP_CTRL savepoint_top_ctrl;
-/* sbss 3f4f48 */ SAVEPOINT_TOP_DISP savepoint_top_disp;
+/* sdata 3f3d28 */ static void *savepoint_tex_addr;
+/* sdata 3f3d2c */ static char savepoint_top_init_flg;
+/* sbss 3f4f40 */ static SAVEPOINT_TOP_CTRL savepoint_top_ctrl;
+/* sbss 3f4f48 */ static SAVEPOINT_TOP_DISP savepoint_top_disp;
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/graphics/scene/scene.c
@@ -4113,7 +4113,7 @@
 /* data 343150 */ SCENE_LOAD_CTRL scene_load;
 /* sdata 3f3d70 */ int scn_vib_time0;
 /* sdata 3f3d74 */ int scn_vib_time1;
-/* sbss 3f4f60 */ reference_fixed_array<AREA_PREFIX_TO_NO,10> area_prefix_to_no;
+/* sbss 3f4f60 */ static reference_fixed_array<AREA_PREFIX_TO_NO,10> area_prefix_to_no;
 /* sbss 3f5480 */ unsigned char SCENE_CTRL type_info node[8];
 /* sbss 3f5488 */ unsigned char SCN_ANM_MDL type_info node[8];
 /* sbss 3f53c8 */ unsigned char FOD_LIT_SERIAL type_info node[8];
@@ -4121,7 +4121,7 @@
 /* sbss 3f5290 */ unsigned char float [3] type_info node[8];
 /* sbss 3f5490 */ unsigned char AREA_PREFIX_TO_NO type_info node[8];
 /* data 343170 */ SCENE_FILE scene_file;
-/* sbss 3f4f64 */ int scn_now_play_id;
+/* sbss 3f4f64 */ static int scn_now_play_id;
 /* data 3431a0 */ G3DLIGHT PlayerLightBackup;
 
 // *****************************************************************************
@@ -4130,68 +4130,68 @@
 
 /* data 343210 */ SCENE_DATA_CMN scene_data_cmn[72];
 /* data 343258 */ int *scene_cut_timing[71];
-/* sdata 3f3e60 */ int sceneDummy_cut_timing[1];
-/* rdata 3c57c0 */ int scene0110_cut_timing[7];
-/* rdata 3c57e0 */ int scene0120_cut_timing[16];
-/* rdata 3c5820 */ int scene0122_cut_timing[9];
-/* rdata 3c5848 */ int scene0130_cut_timing[8];
-/* rdata 3c5868 */ int scene0132_cut_timing[8];
-/* rdata 3c5888 */ int scene0133_cut_timing[5];
-/* rdata 3c58a0 */ int scene0140_cut_timing[19];
-/* rdata 3c58f0 */ int scene0150_cut_timing[10];
-/* rdata 3c5918 */ int scene0160_cut_timing[5];
-/* sdata 3f3e68 */ int scene0170_cut_timing[2];
-/* rdata 3c5930 */ int scene0190_cut_timing[4];
-/* rdata 3c5940 */ int scene0210_cut_timing[5];
-/* rdata 3c5958 */ int scene0231_cut_timing[10];
-/* rdata 3c5980 */ int scene0240_cut_timing[7];
-/* rdata 3c59a0 */ int scene0340_cut_timing[23];
-/* rdata 3c5a00 */ int scene0350_cut_timing[24];
-/* rdata 3c5a60 */ int scene0352_cut_timing[12];
-/* rdata 3c5a90 */ int scene0410_cut_timing[5];
-/* sdata 3f3e70 */ int scene0510_cut_timing[2];
-/* rdata 3c5aa8 */ int scene0520_cut_timing[18];
-/* rdata 3c5af0 */ int scene0610_cut_timing[11];
-/* rdata 3c5b20 */ int scene0620_cut_timing[7];
-/* rdata 3c5b40 */ int scene0720_cut_timing[14];
-/* rdata 3c5b78 */ int scene0721_cut_timing[5];
-/* rdata 3c5b90 */ int scene0730_cut_timing[14];
-/* rdata 3c5bc8 */ int scene0820_cut_timing[7];
-/* rdata 3c5be8 */ int scene1010_cut_timing[11];
-/* rdata 3c5c18 */ int scene9001_cut_timing[4];
-/* rdata 3c5c28 */ int scene9002_cut_timing[10];
-/* rdata 3c5c50 */ int scene9101_cut_timing[8];
-/* rdata 3c5c70 */ int scene9203_cut_timing[4];
-/* rdata 3c5c80 */ int scene9204_cut_timing[4];
-/* rdata 3c5c90 */ int scene9205_cut_timing[6];
-/* rdata 3c5ca8 */ int scene9206_cut_timing[16];
-/* rdata 3c5ce8 */ int scene9302_cut_timing[9];
-/* rdata 3c5d10 */ int scene9303_cut_timing[10];
-/* rdata 3c5d38 */ int scene9501_cut_timing[20];
+/* sdata 3f3e60 */ static int sceneDummy_cut_timing[1];
+/* rdata 3c57c0 */ static int scene0110_cut_timing[7];
+/* rdata 3c57e0 */ static int scene0120_cut_timing[16];
+/* rdata 3c5820 */ static int scene0122_cut_timing[9];
+/* rdata 3c5848 */ static int scene0130_cut_timing[8];
+/* rdata 3c5868 */ static int scene0132_cut_timing[8];
+/* rdata 3c5888 */ static int scene0133_cut_timing[5];
+/* rdata 3c58a0 */ static int scene0140_cut_timing[19];
+/* rdata 3c58f0 */ static int scene0150_cut_timing[10];
+/* rdata 3c5918 */ static int scene0160_cut_timing[5];
+/* sdata 3f3e68 */ static int scene0170_cut_timing[2];
+/* rdata 3c5930 */ static int scene0190_cut_timing[4];
+/* rdata 3c5940 */ static int scene0210_cut_timing[5];
+/* rdata 3c5958 */ static int scene0231_cut_timing[10];
+/* rdata 3c5980 */ static int scene0240_cut_timing[7];
+/* rdata 3c59a0 */ static int scene0340_cut_timing[23];
+/* rdata 3c5a00 */ static int scene0350_cut_timing[24];
+/* rdata 3c5a60 */ static int scene0352_cut_timing[12];
+/* rdata 3c5a90 */ static int scene0410_cut_timing[5];
+/* sdata 3f3e70 */ static int scene0510_cut_timing[2];
+/* rdata 3c5aa8 */ static int scene0520_cut_timing[18];
+/* rdata 3c5af0 */ static int scene0610_cut_timing[11];
+/* rdata 3c5b20 */ static int scene0620_cut_timing[7];
+/* rdata 3c5b40 */ static int scene0720_cut_timing[14];
+/* rdata 3c5b78 */ static int scene0721_cut_timing[5];
+/* rdata 3c5b90 */ static int scene0730_cut_timing[14];
+/* rdata 3c5bc8 */ static int scene0820_cut_timing[7];
+/* rdata 3c5be8 */ static int scene1010_cut_timing[11];
+/* rdata 3c5c18 */ static int scene9001_cut_timing[4];
+/* rdata 3c5c28 */ static int scene9002_cut_timing[10];
+/* rdata 3c5c50 */ static int scene9101_cut_timing[8];
+/* rdata 3c5c70 */ static int scene9203_cut_timing[4];
+/* rdata 3c5c80 */ static int scene9204_cut_timing[4];
+/* rdata 3c5c90 */ static int scene9205_cut_timing[6];
+/* rdata 3c5ca8 */ static int scene9206_cut_timing[16];
+/* rdata 3c5ce8 */ static int scene9302_cut_timing[9];
+/* rdata 3c5d10 */ static int scene9303_cut_timing[10];
+/* rdata 3c5d38 */ static int scene9501_cut_timing[20];
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/graphics/scene/scene_effect.c
 // *****************************************************************************
 
 /* sbss 3f5488 */ unsigned char SCN_ANM_MDL type_info node[8];
-/* bss 4bbf70 */ SCENE_EFFECT_CTRL SceneEffectCtrl;
-/* sbss 3f4f68 */ SCENE_FADE_MODEL_CTRL SceneFadeModelCtrl;
-/* bss 4bbfb0 */ SINGLE_LINK_LIST ScenePDeformCtrl;
-/* sbss 3f4f70 */ SCENE_ENE_AURA_CTRL SceneEneAuraCtrl;
-/* sbss 3f4f78 */ SCENE_VIBRATION_CTRL SceneVibrationCtrl;
-/* bss 4bbfc0 */ SINGLE_LINK_LIST SceneTorchCtrl;
-/* bss 4bbfd0 */ SINGLE_LINK_LIST SceneHazeCtrl;
-/* rdata 3c5e68 */ short int* (*SceneEffectFunc[27])(/* parameters unknown */);
-/* rdata 3c5ee0 */ float SaeHazeOffset[4];
+/* bss 4bbf70 */ static SCENE_EFFECT_CTRL SceneEffectCtrl;
+/* sbss 3f4f68 */ static SCENE_FADE_MODEL_CTRL SceneFadeModelCtrl;
+/* bss 4bbfb0 */ static SINGLE_LINK_LIST ScenePDeformCtrl;
+/* sbss 3f4f70 */ static SCENE_ENE_AURA_CTRL SceneEneAuraCtrl;
+/* sbss 3f4f78 */ static SCENE_VIBRATION_CTRL SceneVibrationCtrl;
+/* bss 4bbfc0 */ static SINGLE_LINK_LIST SceneTorchCtrl;
+/* bss 4bbfd0 */ static SINGLE_LINK_LIST SceneHazeCtrl;
+/* rdata 3c5e68 */ static short int* (*SceneEffectFunc[27])(/* parameters unknown */);
+/* rdata 3c5ee0 */ static float SaeHazeOffset[4];
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/debug/scn_test.c
 // *****************************************************************************
 
-/* sdata 3f3f00 */ int mono_flg;
-/* data 343380 */ char *scene_name[72];
-/* data 3434a0 */ void (*SceneTestDebugMenu[16])(/* parameters unknown */);
-/* data 3434e0 */ SCN_EFF_CTRL scn_eff_ctrl[17];
+/* sdata 3f3f00 */ static int mono_flg;
+/* data 343380 */ static char *scene_name[72];
+/* data 3434a0 */ static void (*SceneTestDebugMenu[16])(/* parameters unknown */);
+/* data 3434e0 */ static SCN_EFF_CTRL scn_eff_ctrl[17];
 /* sbss 3f5158 */ unsigned char G3DLIGHT type_info node[8];
 /* sbss 3f5290 */ unsigned char float [3] type_info node[8];
 /* sbss 3f53c8 */ unsigned char FOD_LIT_SERIAL type_info node[8];
@@ -4203,11 +4203,11 @@
 // FILE -- /home/zero_rom/zero2np/src/outgame/setup.c
 // *****************************************************************************
 
-/* sdata 3f4280 */ void *setup_bg_tex_addr;
-/* sdata 3f4284 */ void *setup_font_tex_addr;
-/* sdata 3f4288 */ void *mission_sel_tex_addr;
-/* sbss 3f4f80 */ SETUP_CTRL setup_ctrl;
-/* sbss 3f4f88 */ SETUP_DISP_CTRL setup_disp_ctrl;
+/* sdata 3f4280 */ static void *setup_bg_tex_addr;
+/* sdata 3f4284 */ static void *setup_font_tex_addr;
+/* sdata 3f4288 */ static void *mission_sel_tex_addr;
+/* sbss 3f4f80 */ static SETUP_CTRL setup_ctrl;
+/* sbss 3f4f88 */ static SETUP_DISP_CTRL setup_disp_ctrl;
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/outgame/tim_dat/setup_dat.c
@@ -4219,12 +4219,12 @@
 // FILE -- /home/zero_rom/zero2np/src/outgame/setup_menu.c
 // *****************************************************************************
 
-/* data 345050 */ void (*setup_menu_pad_func[3])(/* parameters unknown */);
-/* data 345060 */ void (*setup_menu_disp_func[3])(/* parameters unknown */);
-/* sdata 3f42d0 */ void (*setup_on_off_disp_func[2])(/* parameters unknown */);
-/* bss 4bbfe0 */ SETUP_MENU_CTRL setup_menu_ctrl;
-/* bss 4bbff0 */ SETUP_MENU_DISP setup_menu_disp;
-/* rdata 3c6e48 */ COSTUME_TWIN_TBL costume_tbl[9];
+/* data 345050 */ static void (*setup_menu_pad_func[3])(/* parameters unknown */);
+/* data 345060 */ static void (*setup_menu_disp_func[3])(/* parameters unknown */);
+/* sdata 3f42d0 */ static void (*setup_on_off_disp_func[2])(/* parameters unknown */);
+/* bss 4bbfe0 */ static SETUP_MENU_CTRL setup_menu_ctrl;
+/* bss 4bbff0 */ static SETUP_MENU_DISP setup_menu_disp;
+/* rdata 3c6e48 */ static COSTUME_TWIN_TBL costume_tbl[9];
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/ingame/plyr/sis_algo.c
@@ -4238,15 +4238,15 @@
 // FILE -- /home/zero_rom/zero2np/src/ingame/plyr/sis_mdl.c
 // *****************************************************************************
 
-/* bss 4bc040 */ SIS_DATA sis_data;
-/* sbss 3f4f8c */ int ltd_mode;
-/* sbss 3f4f90 */ int same_priority_count;
-/* sbss 3f4f94 */ LOOK_TARGET_PRIORITY_MAYU sis_neck_now_priority;
-/* sbss 3f4f98 */ LOOK_TARGET_PRIORITY_MAYU pre_priority;
-/* bss 4bc080 */ LOOK_AT_PARAM sis_neck_now_param;
-/* sbss 3f4f9c */ float sis_neck_now_dist;
-/* sbss 3f4fa0 */ int sis_neck_flg;
-/* sbss 3f4fa4 */ int sis_neck_no_registered_cnt;
+/* bss 4bc040 */ static SIS_DATA sis_data;
+/* sbss 3f4f8c */ static int ltd_mode;
+/* sbss 3f4f90 */ static int same_priority_count;
+/* sbss 3f4f94 */ static LOOK_TARGET_PRIORITY_MAYU sis_neck_now_priority;
+/* sbss 3f4f98 */ static LOOK_TARGET_PRIORITY_MAYU pre_priority;
+/* bss 4bc080 */ static LOOK_AT_PARAM sis_neck_now_param;
+/* sbss 3f4f9c */ static float sis_neck_now_dist;
+/* sbss 3f4fa0 */ static int sis_neck_flg;
+/* sbss 3f4fa4 */ static int sis_neck_no_registered_cnt;
 /* data 36a070 */ __vtbl_ptr_type SIS_DATA virtual table[4];
 /* bss 4cdc00 */ unsigned char SIS_DATA type_info node[12];
 /* sbss 3f5400 */ unsigned char MAN_DATA type_info node[8];
@@ -4256,67 +4256,67 @@
 // *****************************************************************************
 
 /* data 3450d0 */ int room_point_num[63];
-/* data 3451d0 */ sceVu0FVECTOR room_point_00[21];
-/* data 345320 */ sceVu0FVECTOR room_point_02[18];
-/* data 345440 */ sceVu0FVECTOR room_point_04[24];
-/* data 3455c0 */ sceVu0FVECTOR room_point_06[14];
-/* data 3456a0 */ sceVu0FVECTOR room_point_08[5];
-/* data 3456f0 */ sceVu0FVECTOR room_point_09[6];
-/* data 345750 */ sceVu0FVECTOR room_point_11[8];
-/* data 3457d0 */ sceVu0FVECTOR room_point_12[5];
-/* data 345820 */ sceVu0FVECTOR room_point_13[13];
-/* data 3458f0 */ sceVu0FVECTOR room_point_14[27];
-/* data 345aa0 */ sceVu0FVECTOR room_point_15[6];
-/* data 345b00 */ sceVu0FVECTOR room_point_16[13];
-/* data 345bd0 */ sceVu0FVECTOR room_point_17[11];
-/* data 345c80 */ sceVu0FVECTOR room_point_18[22];
-/* data 345de0 */ sceVu0FVECTOR room_point_40[5];
-/* data 345e30 */ sceVu0FVECTOR room_point_41[15];
-/* data 345f20 */ sceVu0FVECTOR room_point_42[15];
-/* data 346010 */ sceVu0FVECTOR room_point_43[15];
-/* data 346100 */ sceVu0FVECTOR room_point_44[10];
-/* data 3461a0 */ sceVu0FVECTOR room_point_45[23];
-/* data 346310 */ sceVu0FVECTOR room_point_46[21];
-/* data 346460 */ sceVu0FVECTOR room_point_47[21];
-/* data 3465b0 */ sceVu0FVECTOR room_point_48[21];
-/* data 346700 */ sceVu0FVECTOR room_point_49[24];
-/* data 346880 */ sceVu0FVECTOR room_point_50[6];
-/* data 3468e0 */ sceVu0FVECTOR room_point_51[17];
-/* data 3469f0 */ sceVu0FVECTOR room_point_52[6];
-/* data 346a50 */ sceVu0FVECTOR room_point_53[11];
-/* data 346b00 */ sceVu0FVECTOR room_point_54[14];
-/* data 346be0 */ sceVu0FVECTOR room_point_55[17];
+/* data 3451d0 */ static sceVu0FVECTOR room_point_00[21];
+/* data 345320 */ static sceVu0FVECTOR room_point_02[18];
+/* data 345440 */ static sceVu0FVECTOR room_point_04[24];
+/* data 3455c0 */ static sceVu0FVECTOR room_point_06[14];
+/* data 3456a0 */ static sceVu0FVECTOR room_point_08[5];
+/* data 3456f0 */ static sceVu0FVECTOR room_point_09[6];
+/* data 345750 */ static sceVu0FVECTOR room_point_11[8];
+/* data 3457d0 */ static sceVu0FVECTOR room_point_12[5];
+/* data 345820 */ static sceVu0FVECTOR room_point_13[13];
+/* data 3458f0 */ static sceVu0FVECTOR room_point_14[27];
+/* data 345aa0 */ static sceVu0FVECTOR room_point_15[6];
+/* data 345b00 */ static sceVu0FVECTOR room_point_16[13];
+/* data 345bd0 */ static sceVu0FVECTOR room_point_17[11];
+/* data 345c80 */ static sceVu0FVECTOR room_point_18[22];
+/* data 345de0 */ static sceVu0FVECTOR room_point_40[5];
+/* data 345e30 */ static sceVu0FVECTOR room_point_41[15];
+/* data 345f20 */ static sceVu0FVECTOR room_point_42[15];
+/* data 346010 */ static sceVu0FVECTOR room_point_43[15];
+/* data 346100 */ static sceVu0FVECTOR room_point_44[10];
+/* data 3461a0 */ static sceVu0FVECTOR room_point_45[23];
+/* data 346310 */ static sceVu0FVECTOR room_point_46[21];
+/* data 346460 */ static sceVu0FVECTOR room_point_47[21];
+/* data 3465b0 */ static sceVu0FVECTOR room_point_48[21];
+/* data 346700 */ static sceVu0FVECTOR room_point_49[24];
+/* data 346880 */ static sceVu0FVECTOR room_point_50[6];
+/* data 3468e0 */ static sceVu0FVECTOR room_point_51[17];
+/* data 3469f0 */ static sceVu0FVECTOR room_point_52[6];
+/* data 346a50 */ static sceVu0FVECTOR room_point_53[11];
+/* data 346b00 */ static sceVu0FVECTOR room_point_54[14];
+/* data 346be0 */ static sceVu0FVECTOR room_point_55[17];
 /* data 346cf0 */ sceVu0FVECTOR *room_point_pos[63];
-/* data 346df0 */ int room_connect_00[22][22];
-/* data 347580 */ int room_connect_02[19][19];
-/* data 347b28 */ int room_connect_04[25][25];
-/* data 3484f0 */ int room_connect_06[15][15];
-/* data 348878 */ int room_connect_08[6][6];
-/* data 348908 */ int room_connect_09[7][7];
-/* data 3489d0 */ int room_connect_11[9][9];
-/* data 348b18 */ int room_connect_12[6][6];
-/* data 348ba8 */ int room_connect_13[14][14];
-/* data 348eb8 */ int room_connect_14[28][28];
-/* data 349af8 */ int room_connect_15[7][7];
-/* data 349bc0 */ int room_connect_16[14][14];
-/* data 349ed0 */ int room_connect_17[12][12];
-/* data 34a110 */ int room_connect_18[23][23];
-/* data 34a958 */ int room_connect_40[6][6];
-/* data 34a9e8 */ int room_connect_41[16][16];
-/* data 34ade8 */ int room_connect_42[16][16];
-/* data 34b1e8 */ int room_connect_43[16][16];
-/* data 34b5e8 */ int room_connect_44[11][11];
-/* data 34b7d0 */ int room_connect_45[24][24];
-/* data 34c0d0 */ int room_connect_46[22][22];
-/* data 34c860 */ int room_connect_47[22][22];
-/* data 34cff0 */ int room_connect_48[22][22];
-/* data 34d780 */ int room_connect_49[25][25];
-/* data 34e148 */ int room_connect_50[7][7];
-/* data 34e210 */ int room_connect_51[18][18];
-/* data 34e720 */ int room_connect_52[7][7];
-/* data 34e7e8 */ int room_connect_53[12][12];
-/* data 34ea28 */ int room_connect_54[15][15];
-/* data 34edb0 */ int room_connect_55[18][18];
+/* data 346df0 */ static int room_connect_00[22][22];
+/* data 347580 */ static int room_connect_02[19][19];
+/* data 347b28 */ static int room_connect_04[25][25];
+/* data 3484f0 */ static int room_connect_06[15][15];
+/* data 348878 */ static int room_connect_08[6][6];
+/* data 348908 */ static int room_connect_09[7][7];
+/* data 3489d0 */ static int room_connect_11[9][9];
+/* data 348b18 */ static int room_connect_12[6][6];
+/* data 348ba8 */ static int room_connect_13[14][14];
+/* data 348eb8 */ static int room_connect_14[28][28];
+/* data 349af8 */ static int room_connect_15[7][7];
+/* data 349bc0 */ static int room_connect_16[14][14];
+/* data 349ed0 */ static int room_connect_17[12][12];
+/* data 34a110 */ static int room_connect_18[23][23];
+/* data 34a958 */ static int room_connect_40[6][6];
+/* data 34a9e8 */ static int room_connect_41[16][16];
+/* data 34ade8 */ static int room_connect_42[16][16];
+/* data 34b1e8 */ static int room_connect_43[16][16];
+/* data 34b5e8 */ static int room_connect_44[11][11];
+/* data 34b7d0 */ static int room_connect_45[24][24];
+/* data 34c0d0 */ static int room_connect_46[22][22];
+/* data 34c860 */ static int room_connect_47[22][22];
+/* data 34cff0 */ static int room_connect_48[22][22];
+/* data 34d780 */ static int room_connect_49[25][25];
+/* data 34e148 */ static int room_connect_50[7][7];
+/* data 34e210 */ static int room_connect_51[18][18];
+/* data 34e720 */ static int room_connect_52[7][7];
+/* data 34e7e8 */ static int room_connect_53[12][12];
+/* data 34ea28 */ static int room_connect_54[15][15];
+/* data 34edb0 */ static int room_connect_55[18][18];
 /* data 34f2c0 */ int *room_connect[63];
 
 // *****************************************************************************
@@ -4324,24 +4324,24 @@
 // *****************************************************************************
 
 /* data 34f3c0 */ SIS_TRACE sis_trace;
-/* data 34f980 */ SIS_ANI_TBL sis_ani001_tbl[3];
-/* data 34f990 */ SIS_ANI_TBL sis_ani002_tbl[3];
-/* sdata 3f43e0 */ SIS_ANI_TBL sis_ani003_tbl[2];
-/* sdata 3f43e8 */ SIS_ANI_TBL sis_ani004_tbl[2];
-/* data 34f9a0 */ SIS_ANI_TBL sis_ani005_tbl[4];
-/* sdata 3f43f0 */ SIS_ANI_TBL sis_ani006_tbl[2];
-/* sdata 3f43f8 */ SIS_ANI_TBL sis_ani007_tbl[2];
-/* sdata 3f4400 */ SIS_ANI_TBL sis_ani008_tbl[2];
-/* sdata 3f4408 */ SIS_ANI_TBL sis_ani998_tbl[2];
-/* sdata 3f4410 */ SIS_ANI_TBL sis_ani999_tbl[2];
-/* data 34f9c0 */ SIS_AREA_CHG_SUB sis_area_chg_ry00[3];
-/* data 34fa20 */ SIS_AREA_CHG_SUB sis_area_chg_ry02[3];
-/* data 34fa80 */ SIS_AREA_CHG_SUB sis_area_chg_ry04[3];
-/* data 34fae0 */ SIS_AREA_CHG_SUB sis_area_chg_ry06[3];
-/* data 34fb40 */ SIS_AREA_CHG_SUB sis_area_chg_ry08[2];
-/* data 34fb80 */ SIS_AREA_CHG_SUB sis_area_chg_ry09[2];
-/* data 34fbc0 */ SIS_AREA_CHG sis_area_chg[7];
-/* sbss 3f4fb0 */ reference_fixed_array<SIS_ANI_TBL *,10> sis_ani_tbl;
+/* data 34f980 */ static SIS_ANI_TBL sis_ani001_tbl[3];
+/* data 34f990 */ static SIS_ANI_TBL sis_ani002_tbl[3];
+/* sdata 3f43e0 */ static SIS_ANI_TBL sis_ani003_tbl[2];
+/* sdata 3f43e8 */ static SIS_ANI_TBL sis_ani004_tbl[2];
+/* data 34f9a0 */ static SIS_ANI_TBL sis_ani005_tbl[4];
+/* sdata 3f43f0 */ static SIS_ANI_TBL sis_ani006_tbl[2];
+/* sdata 3f43f8 */ static SIS_ANI_TBL sis_ani007_tbl[2];
+/* sdata 3f4400 */ static SIS_ANI_TBL sis_ani008_tbl[2];
+/* sdata 3f4408 */ static SIS_ANI_TBL sis_ani998_tbl[2];
+/* sdata 3f4410 */ static SIS_ANI_TBL sis_ani999_tbl[2];
+/* data 34f9c0 */ static SIS_AREA_CHG_SUB sis_area_chg_ry00[3];
+/* data 34fa20 */ static SIS_AREA_CHG_SUB sis_area_chg_ry02[3];
+/* data 34fa80 */ static SIS_AREA_CHG_SUB sis_area_chg_ry04[3];
+/* data 34fae0 */ static SIS_AREA_CHG_SUB sis_area_chg_ry06[3];
+/* data 34fb40 */ static SIS_AREA_CHG_SUB sis_area_chg_ry08[2];
+/* data 34fb80 */ static SIS_AREA_CHG_SUB sis_area_chg_ry09[2];
+/* data 34fbc0 */ static SIS_AREA_CHG sis_area_chg[7];
+/* sbss 3f4fb0 */ static reference_fixed_array<SIS_ANI_TBL *,10> sis_ani_tbl;
 /* sbss 3f5290 */ unsigned char float [3] type_info node[8];
 /* sbss 3f5220 */ unsigned char ENE_WRK type_info node[8];
 /* bss 4cdc10 */ unsigned char SIS_ANI_TBL * type_info node[12];
@@ -4351,13 +4351,13 @@
 /* sdata 3f4470 */ SIS_SEARCH sis_search;
 /* sdata 3f4478 */ SIS_MOTION sis_motion;
 /* data 34fe50 */ float sistv[4];
-/* sbss 3f4fb4 */ char look_at_pre_kaidan_flg;
+/* sbss 3f4fb4 */ static char look_at_pre_kaidan_flg;
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/ingame/item/prg/soul_list.c
 // *****************************************************************************
 
-/* bss 4bc0a0 */ fixed_array<PLYR_SOUL_LIST,176> plyr_soul_list;
+/* bss 4bc0a0 */ static fixed_array<PLYR_SOUL_LIST,176> plyr_soul_list;
 /* sbss 3f54a0 */ unsigned char PLYR_SOUL_LIST type_info node[8];
 /* sbss 3f5218 */ unsigned char CVariable<char, 0, 9> type_info node[8];
 /* sbss 3f5210 */ unsigned char CVariable<char, 0, 3> type_info node[8];
@@ -4385,40 +4385,40 @@
 // *****************************************************************************
 
 /* data 34fea0 */ SND_3D_ENV s3d_env;
-/* sdata 3f4618 */ int SYSTEM_VBLANK_WAIT_NUM;
-/* data 34feb8 */ CD_DAT_TBL cd_dat_tbl[4491];
-/* data 35d140 */ char *filename_path[54];
-/* data 35d218 */ char file_ext_tbl[4491];
+/* sdata 3f4618 */ static int SYSTEM_VBLANK_WAIT_NUM;
+/* data 34feb8 */ static CD_DAT_TBL cd_dat_tbl[4491];
+/* data 35d140 */ static char *filename_path[54];
+/* data 35d218 */ static char file_ext_tbl[4491];
 /* sdata 3f4628 */ void *pdrawenv;
 /* data 35e3b0 */ sceGsDBuff gdb;
 /* sdata 3f462c */ int system_sound_bank_id;
-/* bss 4bc620 */ HEAP_WRK system_heap_wrk;
-/* sbss 3f4fb8 */ int vblank_sema;
-/* rdata 3dd3d0 */ FNAME_DAT filename_dat[4491];
-/* sbss 3f4fbc */ int draw_perf_count;
+/* bss 4bc620 */ static HEAP_WRK system_heap_wrk;
+/* sbss 3f4fb8 */ static int vblank_sema;
+/* rdata 3dd3d0 */ static FNAME_DAT filename_dat[4491];
+/* sbss 3f4fbc */ static int draw_perf_count;
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/save_load/prg/system_data_save.c
 // *****************************************************************************
 
-/* sdata 3f4700 */ void* (*SystemDataSaveMemGet)(/* parameters unknown */);
-/* sdata 3f4704 */ void (*SystemDataSaveMemFree)(/* parameters unknown */);
-/* sdata 3f4708 */ void *system_data_buff_addr;
-/* sbss 3f4fc0 */ SYSTEM_DATA_SAVE_CTRL system_data_save_ctrl;
-/* sbss 3f4fc8 */ SYSTEM_DATA_SAVE_DISP system_data_save_disp;
+/* sdata 3f4700 */ static void* (*SystemDataSaveMemGet)(/* parameters unknown */);
+/* sdata 3f4704 */ static void (*SystemDataSaveMemFree)(/* parameters unknown */);
+/* sdata 3f4708 */ static void *system_data_buff_addr;
+/* sbss 3f4fc0 */ static SYSTEM_DATA_SAVE_CTRL system_data_save_ctrl;
+/* sbss 3f4fc8 */ static SYSTEM_DATA_SAVE_DISP system_data_save_disp;
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/outgame/title.c
 // *****************************************************************************
 
-/* sdata 3f4770 */ void *title_bg_addr;
-/* sdata 3f4774 */ void *title_logo_addr;
-/* sdata 3f4778 */ void *outgame_cmn_tex_addr;
-/* sdata 3f477c */ u_char title_bg_send_lock;
-/* sdata 3f477d */ u_char title_move_movie_timer;
-/* bss 4bc640 */ TITLE_WRK title_wrk;
-/* sbss 3f4fd0 */ TITLE_DISP_CTRL title_disp_ctrl;
-/* sbss 3f4fd8 */ char title_load_end;
+/* sdata 3f4770 */ static void *title_bg_addr;
+/* sdata 3f4774 */ static void *title_logo_addr;
+/* sdata 3f4778 */ static void *outgame_cmn_tex_addr;
+/* sdata 3f477c */ static u_char title_bg_send_lock;
+/* sdata 3f477d */ static u_char title_move_movie_timer;
+/* bss 4bc640 */ static TITLE_WRK title_wrk;
+/* sbss 3f4fd0 */ static TITLE_DISP_CTRL title_disp_ctrl;
+/* sbss 3f4fd8 */ static char title_load_end;
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/outgame/tim_dat/title_dat.c
@@ -4434,13 +4434,13 @@
 // FILE -- /home/zero_rom/zero2np/src/outgame/title_menu.c
 // *****************************************************************************
 
-/* sbss 3f4fe0 */ TITLE_MENU_CTRL title_menu_ctrl;
+/* sbss 3f4fe0 */ static TITLE_MENU_CTRL title_menu_ctrl;
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/outgame/title_movie.c
 // *****************************************************************************
 
-/* sbss 3f4fe8 */ TITLE_MOVIE_WRK title_movie_wrk;
+/* sbss 3f4fe8 */ static TITLE_MOVIE_WRK title_movie_wrk;
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/ingame/plyr/unit_ctl.c
@@ -4452,17 +4452,17 @@
 // FILE -- /home/zero_rom/zero2np/src/common/utility2.c
 // *****************************************************************************
 
-/* sdata 3f48d0 */ void (*print_warning_func)(/* parameters unknown */);
-/* sdata 3f48d4 */ void (*print_assert_func)(/* parameters unknown */);
-/* bss 4bc658 */ char g_cComment[300];
+/* sdata 3f48d0 */ static void (*print_warning_func)(/* parameters unknown */);
+/* sdata 3f48d4 */ static void (*print_assert_func)(/* parameters unknown */);
+/* bss 4bc658 */ static char g_cComment[300];
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/system/pad/vib_manage.c
 // *****************************************************************************
 
-/* sbss 3f4ff0 */ int vib1_time;
-/* sbss 3f4ff4 */ int vib2_time;
-/* sbss 3f4ff8 */ int vib2_pow;
+/* sbss 3f4ff0 */ static int vib1_time;
+/* sbss 3f4ff4 */ static int vib2_time;
+/* sbss 3f4ff8 */ static int vib2_pow;
 
 // *****************************************************************************
 // FILE -- /home/zero_rom/zero2np/src/debug/zero2_perf.c
@@ -4474,106 +4474,106 @@
 // FILE -- /home/akira_koide/zero2np/src/system/eeiop/fileload.c
 // *****************************************************************************
 
-/* sbss 3f5000 */ short unsigned int file_load_wrk_id;
-/* sbss 3f5004 */ FILE_LOAD_WRK *file_load_wrk;
-/* bss 4bd7c0 */ FILE_LOAD_SYS file_load_sys;
-/* bss 4bd800 */ char iop_fileload_ret[64];
-/* bss 4bd840 */ char iop_fileload_cmd[320];
-/* bss 4bd980 */ sceSifClientData sif_cli_data_f;
-/* sbss 3f5008 */ int load_th_idx;
-/* sbss 3f500c */ int load_req_sema_id;
-/* sbss 3f5010 */ int rpc_sema_id;
+/* sbss 3f5000 */ static short unsigned int file_load_wrk_id;
+/* sbss 3f5004 */ static FILE_LOAD_WRK *file_load_wrk;
+/* bss 4bd7c0 */ static FILE_LOAD_SYS file_load_sys;
+/* bss 4bd800 */ static char iop_fileload_ret[64];
+/* bss 4bd840 */ static char iop_fileload_cmd[320];
+/* bss 4bd980 */ static sceSifClientData sif_cli_data_f;
+/* sbss 3f5008 */ static int load_th_idx;
+/* sbss 3f500c */ static int load_req_sema_id;
+/* sbss 3f5010 */ static int rpc_sema_id;
 
 // *****************************************************************************
 // FILE -- /home/akira_koide/zero2np/src/system/eeiop/spu_mem.c
 // *****************************************************************************
 
-/* bss 4bd9a8 */ SPU_BUF spu_buf[50];
-/* sbss 3f5014 */ int spu_mem_sema;
+/* bss 4bd9a8 */ static SPU_BUF spu_buf[50];
+/* sbss 3f5014 */ static int spu_mem_sema;
 
 // *****************************************************************************
 // FILE -- /home/akira_koide/zero2np/src/system/eeiop/snd_buffer.c
 // *****************************************************************************
 
-/* bss 4bde58 */ SND_BUF_PLAYER snd_buf_player[48];
+/* bss 4bde58 */ static SND_BUF_PLAYER snd_buf_player[48];
 
 // *****************************************************************************
 // FILE -- /home/akira_koide/zero2np/src/system/eeiop/ee_iop.c
 // *****************************************************************************
 
-/* sbss 3f5018 */ void* (*ee_iop_malloc)(/* parameters unknown */);
-/* sbss 3f501c */ void (*ee_iop_free)(/* parameters unknown */);
-/* bss 4be840 */ char iop_com_buffer[4096];
-/* bss 4bf840 */ IOP_RET_STATUS iop_ret;
-/* bss 4bfa00 */ char iop_ret_buffer[448];
-/* sbss 3f5020 */ int iop_com_offset;
-/* bss 4bfbc0 */ sceSifClientData sif_cli_data;
+/* sbss 3f5018 */ static void* (*ee_iop_malloc)(/* parameters unknown */);
+/* sbss 3f501c */ static void (*ee_iop_free)(/* parameters unknown */);
+/* bss 4be840 */ static char iop_com_buffer[4096];
+/* bss 4bf840 */ static IOP_RET_STATUS iop_ret;
+/* bss 4bfa00 */ static char iop_ret_buffer[448];
+/* sbss 3f5020 */ static int iop_com_offset;
+/* bss 4bfbc0 */ static sceSifClientData sif_cli_data;
 
 // *****************************************************************************
 // FILE -- /home/akira_koide/zero2np/src/system/eeiop/ee_iop_q.c
 // *****************************************************************************
 
-/* bss 4bfc00 */ char iop_query_buffer[512];
-/* bss 4bfe00 */ char iop_query_arg[512];
-/* bss 4c0000 */ sceSifClientData sif_cli_data_q;
-/* sbss 3f5024 */ int query_sema_id;
+/* bss 4bfc00 */ static char iop_query_buffer[512];
+/* bss 4bfe00 */ static char iop_query_arg[512];
+/* bss 4c0000 */ static sceSifClientData sif_cli_data_q;
+/* sbss 3f5024 */ static int query_sema_id;
 
 // *****************************************************************************
 // FILE -- /home/akira_koide/zero2np/src/system/eeiop/stream_auto.c
 // *****************************************************************************
 
-/* sdata 3f4978 */ int dbg_stream_enable_flg;
-/* sbss 3f5028 */ int stream_queue_max;
-/* sbss 3f502c */ STREAM_QUEUE *stream_wait_queue;
-/* bss 4c0030 */ STREAM_QUEUE stream_play_queue[2];
-/* sbss 3f5030 */ char stream_play_disable[2];
-/* sbss 3f5032 */ char stream_play_disable_num;
-/* sbss 3f5034 */ int stream_queue_id;
-/* sbss 3f5038 */ int stream_wait_num;
+/* sdata 3f4978 */ static int dbg_stream_enable_flg;
+/* sbss 3f5028 */ static int stream_queue_max;
+/* sbss 3f502c */ static STREAM_QUEUE *stream_wait_queue;
+/* bss 4c0030 */ static STREAM_QUEUE stream_play_queue[2];
+/* sbss 3f5030 */ static char stream_play_disable[2];
+/* sbss 3f5032 */ static char stream_play_disable_num;
+/* sbss 3f5034 */ static int stream_queue_id;
+/* sbss 3f5038 */ static int stream_wait_num;
 
 // *****************************************************************************
 // FILE -- /home/akira_koide/zero2np/src/system/eeiop/snd_bank.c
 // *****************************************************************************
 
-/* sbss 3f503c */ int snd_bank_max;
-/* sbss 3f5040 */ SND_BANK *snd_bank;
-/* sbss 3f5044 */ SND_BANK_FILE *snd_bd_file;
-/* sbss 3f5048 */ SND_BANK_FILE *snd_hxd_file;
-/* sbss 3f504c */ int snd_bank_load_priority;
+/* sbss 3f503c */ static int snd_bank_max;
+/* sbss 3f5040 */ static SND_BANK *snd_bank;
+/* sbss 3f5044 */ static SND_BANK_FILE *snd_bd_file;
+/* sbss 3f5048 */ static SND_BANK_FILE *snd_hxd_file;
+/* sbss 3f504c */ static int snd_bank_load_priority;
 
 // *****************************************************************************
 // FILE -- /home/akira_koide/zero2np/src/system/eeiop/snd_3d.c
 // *****************************************************************************
 
-/* data 35e980 */ SND_3D_ENV snd_3d_env;
-/* sdata 3f4992 */ char listner_set;
-/* sbss 3f5050 */ float farthest_dist_calc;
-/* sbss 3f5054 */ float nearest_dist_calc;
-/* sbss 3f5058 */ float sound_speed;
-/* sbss 3f505c */ float dist_unit;
-/* bss 4c00f0 */ SND_3D_WRK snd_3d_wrk[30];
-/* bss 4c0690 */ SND_3D_LISTENER snd_3d_listner;
+/* data 35e980 */ static SND_3D_ENV snd_3d_env;
+/* sdata 3f4992 */ static char listner_set;
+/* sbss 3f5050 */ static float farthest_dist_calc;
+/* sbss 3f5054 */ static float nearest_dist_calc;
+/* sbss 3f5058 */ static float sound_speed;
+/* sbss 3f505c */ static float dist_unit;
+/* bss 4c00f0 */ static SND_3D_WRK snd_3d_wrk[30];
+/* bss 4c0690 */ static SND_3D_LISTENER snd_3d_listner;
 
 // *****************************************************************************
 // FILE -- /home/akira_koide/zero2np/src/system/eeiop/cddat.c
 // *****************************************************************************
 
-/* bss 4c07e0 */ char title_root_path[200];
-/* sbss 3f5060 */ FNAME_DAT *p_fname_dat;
-/* sbss 3f5064 */ char **p_filename_path;
-/* sbss 3f5068 */ char *p_ext_lbl;
-/* sbss 3f506c */ int project_file_num;
-/* sbss 3f5070 */ CD_DAT_TBL *p_cd_dat;
-/* bss 4c08a8 */ SET_CD_DAT set_cd_dat;
+/* bss 4c07e0 */ static char title_root_path[200];
+/* sbss 3f5060 */ static FNAME_DAT *p_fname_dat;
+/* sbss 3f5064 */ static char **p_filename_path;
+/* sbss 3f5068 */ static char *p_ext_lbl;
+/* sbss 3f506c */ static int project_file_num;
+/* sbss 3f5070 */ static CD_DAT_TBL *p_cd_dat;
+/* bss 4c08a8 */ static SET_CD_DAT set_cd_dat;
 
 // *****************************************************************************
 // FILE -- /home/akira_koide/zero2np/src/system/eeiop/snd.c
 // *****************************************************************************
 
 /* data 35e998 */ int eff_use_size_tbl[0];
-/* bss 4c08b8 */ SOUND_SYS snd_sys;
-/* sbss 3f5078 */ int effect_mode[2];
-/* sbss 3f5080 */ int effect_adrs[2];
+/* bss 4c08b8 */ static SOUND_SYS snd_sys;
+/* sbss 3f5078 */ static int effect_mode[2];
+/* sbss 3f5080 */ static int effect_adrs[2];
 
 // *****************************************************************************
 // FILE -- /home/akira_koide/zero2np/src/system/eeiop/snd_pcmstream.c
@@ -4585,37 +4585,37 @@
 // FILE -- /home/akira_koide/zero2np/src/system/eeiop/cmp_eeiop.c
 // *****************************************************************************
 
-/* sdata 3f49a8 */ void *tmp_buf_adrs;
-/* sdata 3f49ac */ int cmp_th_idx;
-/* sbss 3f5088 */ void *cmp_eeiop_stack;
-/* bss 4c08d0 */ sceSifCmdData cmdbuffer[16];
-/* bss 4c0990 */ LOAD_REQ_NEW decode_load_ee;
-/* sbss 3f508c */ int cmp_eeiop_init_priority;
-/* sbss 3f5090 */ int decode_sema_id;
-/* sbss 3f5094 */ int decode_dat_sema_id;
+/* sdata 3f49a8 */ static void *tmp_buf_adrs;
+/* sdata 3f49ac */ static int cmp_th_idx;
+/* sbss 3f5088 */ static void *cmp_eeiop_stack;
+/* bss 4c08d0 */ static sceSifCmdData cmdbuffer[16];
+/* bss 4c0990 */ static LOAD_REQ_NEW decode_load_ee;
+/* sbss 3f508c */ static int cmp_eeiop_init_priority;
+/* sbss 3f5090 */ static int decode_sema_id;
+/* sbss 3f5094 */ static int decode_dat_sema_id;
 
 // *****************************************************************************
 // FILE -- /home/akira_koide/zero2np/src/system/eeiop/snd_util.c
 // *****************************************************************************
 
-/* sbss 3f5098 */ AUTO_BD_WRK *auto_bd_wrk;
-/* sbss 3f509c */ int auto_bd_wrk_max;
+/* sbss 3f5098 */ static AUTO_BD_WRK *auto_bd_wrk;
+/* sbss 3f509c */ static int auto_bd_wrk_max;
 
 // *****************************************************************************
 // FILE -- /home/akira_koide/zero2np/src/system/eeiop/file_stream.c
 // *****************************************************************************
 
-/* bss 4c0ac0 */ char iop_file_stm_ret[64];
-/* bss 4c0b00 */ char iop_file_stm_arg[320];
-/* bss 4c0c40 */ sceSifClientData sif_cli_data_s;
-/* sbss 3f50a0 */ int file_stream_lock;
+/* bss 4c0ac0 */ static char iop_file_stm_ret[64];
+/* bss 4c0b00 */ static char iop_file_stm_arg[320];
+/* bss 4c0c40 */ static sceSifClientData sif_cli_data_s;
+/* sbss 3f50a0 */ static int file_stream_lock;
 
 // *****************************************************************************
 // FILE -- /home/akira_koide/zero2np/src/system/eeiop/hxd.c
 // *****************************************************************************
 
 /* data 35ec10 */ char *voice_type_name_tbl[0];
-/* sdata 3f49b0 */ int hxd_file_id;
+/* sdata 3f49b0 */ static int hxd_file_id;
 
 // *****************************************************************************
 // FILE -- /home/akira_koide/zero2np/src/system/eeiop/spu_voice.c
@@ -4627,10 +4627,10 @@
 // FILE -- /home/akira_koide/zero2np/src/system/eeiop/snd_stream.c
 // *****************************************************************************
 
-/* bss 4c0c80 */ SND_STREAM_WRK snd_stream_wrk[2];
-/* bss 4c1000 */ char header_buf_64[2][2048];
-/* sbss 3f50a8 */ int irq_core_source[2];
-/* sbss 3f50b0 */ int snd_stream_load_priority;
+/* bss 4c0c80 */ static SND_STREAM_WRK snd_stream_wrk[2];
+/* bss 4c1000 */ static char header_buf_64[2][2048];
+/* sbss 3f50a8 */ static int irq_core_source[2];
+/* sbss 3f50b0 */ static int snd_stream_load_priority;
 
 // *****************************************************************************
 // FILE -- /home/akira_koide/zero2np/src/system/encodes/encodes.c
@@ -4647,7 +4647,7 @@
 // FILE -- /home/akira_koide/zero2np/src/system/playpss/my_strfile.c
 // *****************************************************************************
 
-/* sbss 3f50b4 */ int pss_block_read;
+/* sbss 3f50b4 */ static int pss_block_read;
 
 // *****************************************************************************
 // FILE -- /home/akira_koide/zero2np/src/system/playpss/playpss.c
@@ -4656,146 +4656,146 @@
 /* sdata 3f49e0 */ int iPalVBlankCounter;
 /* sdata 3f49f0 */ int iVTCounter;
 /* bss 4c2000 */ char videoDecStack[2048];
-/* sbss 3f50b8 */ PLAY_PSS_FLAGS Flags;
-/* sbss 3f50bc */ int videoDecTh;
-/* bss 4c2800 */ AudioDec audioDec;
-/* sbss 3f50c0 */ int (*fileRead)(/* parameters unknown */);
-/* sbss 3f50c4 */ int bgDuration;
+/* sbss 3f50b8 */ static PLAY_PSS_FLAGS Flags;
+/* sbss 3f50bc */ static int videoDecTh;
+/* bss 4c2800 */ static AudioDec audioDec;
+/* sbss 3f50c0 */ static int (*fileRead)(/* parameters unknown */);
+/* sbss 3f50c4 */ static int bgDuration;
 /* sdata 3f49f4 */ int iMovieDecSema;
-/* sbss 3f50c8 */ char *muxBuff;
-/* sbss 3f50cc */ int muxBuffFullness;
-/* sbss 3f50d0 */ char *demuxBuff;
-/* sbss 3f50d4 */ int demuxBuffSize;
-/* sbss 3f50d8 */ char *demuxBuffPast;
-/* sbss 3f50dc */ char *demuxBuffPresent;
-/* sbss 3f50e0 */ char *demuxBuffFuture;
-/* sbss 3f50e4 */ sceIpuRGB32 *rsrcs_rgb32;
-/* sbss 3f50e8 */ u_int *rsrcs_path3tag;
-/* sbss 3f50ec */ int rsrcs_vram_adrs;
-/* bss 4c2860 */ sceMpeg playpss_mp;
-/* sbss 3f50f0 */ int audio_play_flg;
+/* sbss 3f50c8 */ static char *muxBuff;
+/* sbss 3f50cc */ static int muxBuffFullness;
+/* sbss 3f50d0 */ static char *demuxBuff;
+/* sbss 3f50d4 */ static int demuxBuffSize;
+/* sbss 3f50d8 */ static char *demuxBuffPast;
+/* sbss 3f50dc */ static char *demuxBuffPresent;
+/* sbss 3f50e0 */ static char *demuxBuffFuture;
+/* sbss 3f50e4 */ static sceIpuRGB32 *rsrcs_rgb32;
+/* sbss 3f50e8 */ static u_int *rsrcs_path3tag;
+/* sbss 3f50ec */ static int rsrcs_vram_adrs;
+/* bss 4c2860 */ static sceMpeg playpss_mp;
+/* sbss 3f50f0 */ static int audio_play_flg;
 /* sdata 3f49f8 */ int hid_vblank;
 
 // *****************************************************************************
 // FILE -- /home/akira_koide/zero2np/src/system/playpss/audiodec.c
 // *****************************************************************************
 
-/* sbss 3f50f4 */ int AUTODMA_CH;
-/* sbss 3f50f8 */ int audio_vol_percent;
+/* sbss 3f50f4 */ static int AUTODMA_CH;
+/* sbss 3f50f8 */ static int audio_vol_percent;
 
 // *****************************************************************************
 // FILE -- /home/xokano/globe_cvs/g_28/g/ee/src/kernel/libc/thread.c
 // *****************************************************************************
 
-/* data 367a80 */ int topId;
-/* bss 4c33f0 */ int topSema;
-/* bss 4c33f8 */ rqueue topArg;
+/* data 367a80 */ static int topId;
+/* bss 4c33f0 */ static int topSema;
+/* bss 4c33f8 */ static rqueue topArg;
 
 // *****************************************************************************
 // FILE -- /home/xokano/globe_cvs/g_28/g/ee/src/kernel/libc/kprintf.c
 // *****************************************************************************
 
-/* data 367a84 */ int count;
-/* data 367a88 */ void (*_putchar)(/* parameters unknown */);
-/* bss 4c3800 */ char linebuf[128];
+/* data 367a84 */ static int count;
+/* data 367a88 */ static void (*_putchar)(/* parameters unknown */);
+/* bss 4c3800 */ static char linebuf[128];
 
 // *****************************************************************************
 // FILE -- /home/xokano/globe_cvs/g_28/g/ee/src/kernel/libc/sifcmd.c
 // *****************************************************************************
 
-/* data 367a8c */ int _cmd_init_check;
-/* bss 4c3880 */ u_long128 _pckt_buffer[8];
-/* bss 4c3900 */ u_long128 _send_buffer[4];
-/* bss 4c3940 */ sceSifCmdCSData _csdata;
-/* bss 4c3954 */ int sif0_handleid;
-/* bss 4c3958 */ sceSifCmdDataTable _data_table;
-/* bss 4c3980 */ sceSifCmdData _sys_buffer[32];
-/* bss 4c3b00 */ unsigned int soft_reg[32];
+/* data 367a8c */ static int _cmd_init_check;
+/* bss 4c3880 */ static u_long128 _pckt_buffer[8];
+/* bss 4c3900 */ static u_long128 _send_buffer[4];
+/* bss 4c3940 */ static sceSifCmdCSData _csdata;
+/* bss 4c3954 */ static int sif0_handleid;
+/* bss 4c3958 */ static sceSifCmdDataTable _data_table;
+/* bss 4c3980 */ static sceSifCmdData _sys_buffer[32];
+/* bss 4c3b00 */ static unsigned int soft_reg[32];
 
 // *****************************************************************************
 // FILE -- /home/xokano/globe_cvs/g_28/g/ee/src/kernel/libc/sifrpc.c
 // *****************************************************************************
 
-/* data 367a90 */ int _sceSifInitCheck;
-/* bss 4c3b80 */ _sceRpcPacket _packet_buffer[32];
-/* bss 4c4380 */ _sceRpcPacket _free_buffer[32];
-/* bss 4c4b80 */ _sceRpcPacket _free_buffer2[32];
-/* bss 4c5380 */ _sceRpcDataTable _data_table;
+/* data 367a90 */ static int _sceSifInitCheck;
+/* bss 4c3b80 */ static _sceRpcPacket _packet_buffer[32];
+/* bss 4c4380 */ static _sceRpcPacket _free_buffer[32];
+/* bss 4c4b80 */ static _sceRpcPacket _free_buffer2[32];
+/* bss 4c5380 */ static _sceRpcDataTable _data_table;
 
 // *****************************************************************************
 // FILE -- /home/xokano/globe_cvs/g_28/g/ee/src/kernel/libc/filestub.c
 // *****************************************************************************
 
 /* data 367a98 */ int _sceFs_q[32];
-/* data 367b18 */ unsigned int ee_retbuf_sel;
-/* data 367b1c */ int _fs_init;
-/* data 367b20 */ int _fs_rcv_bufdbl;
-/* data 367b24 */ int _fs_semid;
-/* data 367b28 */ int _fs_iob_semid;
-/* data 367b2c */ int _fs_fsq_semid;
-/* data 367b30 */ char *_fswildcard;
-/* bss 4c5400 */ unsigned char _send_data[3136];
-/* bss 4c6040 */ unsigned char _rcv_data_rpc[64];
-/* bss 4c6080 */ unsigned char _rcv_data_cmd[2][1088];
-/* bss 4c6900 */ _sceFsIob _iob[32];
-/* bss 4c6b00 */ sceSifClientData _cd;
-/* bss 4c6b28 */ char _fsversion[4];
-/* bss 4c6b40 */ int _sif_FsRcv_Data[16];
-/* bss 4c6b80 */ int _sif_FsPoff_Data[16];
-/* bss 4c6bc0 */ void *sceCbPoff_Gp;
+/* data 367b18 */ static unsigned int ee_retbuf_sel;
+/* data 367b1c */ static int _fs_init;
+/* data 367b20 */ static int _fs_rcv_bufdbl;
+/* data 367b24 */ static int _fs_semid;
+/* data 367b28 */ static int _fs_iob_semid;
+/* data 367b2c */ static int _fs_fsq_semid;
+/* data 367b30 */ static char *_fswildcard;
+/* bss 4c5400 */ static unsigned char _send_data[3136];
+/* bss 4c6040 */ static unsigned char _rcv_data_rpc[64];
+/* bss 4c6080 */ static unsigned char _rcv_data_cmd[2][1088];
+/* bss 4c6900 */ static _sceFsIob _iob[32];
+/* bss 4c6b00 */ static sceSifClientData _cd;
+/* bss 4c6b28 */ static char _fsversion[4];
+/* bss 4c6b40 */ static int _sif_FsRcv_Data[16];
+/* bss 4c6b80 */ static int _sif_FsPoff_Data[16];
+/* bss 4c6bc0 */ static void *sceCbPoff_Gp;
 
 // *****************************************************************************
 // FILE -- /home/xokano/globe_cvs/g_28/g/ee/src/kernel/libc/iopheap.c
 // *****************************************************************************
 
-/* data 367b34 */ int _bind;
-/* bss 4c6c00 */ sceSifClientData cd;
-/* bss 4c6c40 */ unsigned int rdata[16];
-/* bss 4c6c80 */ unsigned int sdata[16];
-/* bss 4c6cc0 */ _sceLoadIHData _lih_data;
+/* data 367b34 */ static int _bind;
+/* bss 4c6c00 */ static sceSifClientData cd;
+/* bss 4c6c40 */ static unsigned int rdata[16];
+/* bss 4c6c80 */ static unsigned int sdata[16];
+/* bss 4c6cc0 */ static _sceLoadIHData _lih_data;
 
 // *****************************************************************************
 // FILE -- /home/xokano/globe_cvs/g_28/g/ee/src/kernel/libc/eeloadfile.c
 // *****************************************************************************
 
-/* data 367b38 */ int _bind_check;
-/* data 367b3c */ char *_lfwildcard;
-/* bss 4c6dc0 */ _sceLoadFileData _senddata;
-/* bss 4c6fc0 */ sceSifClientData cd;
-/* bss 4c6fe8 */ char _lfversion[4];
+/* data 367b38 */ static int _bind_check;
+/* data 367b3c */ static char *_lfwildcard;
+/* bss 4c6dc0 */ static _sceLoadFileData _senddata;
+/* bss 4c6fc0 */ static sceSifClientData cd;
+/* bss 4c6fe8 */ static char _lfversion[4];
 
 // *****************************************************************************
 // FILE -- /home/xokano/globe_cvs/g_28/g/ee/src/kernel/libc/iopreset.c
 // *****************************************************************************
 
-/* bss 4c7000 */ sceSifCmdResetData rdata;
+/* bss 4c7000 */ static sceSifCmdResetData rdata;
 
 // *****************************************************************************
 // FILE -- /home/xokano/globe_cvs/g_28/g/ee/src/kernel/libc/tlbfunc.c
 // *****************************************************************************
 
-/* data 367b40 */ u_int tlbsrc[0];
+/* data 367b40 */ static u_int tlbsrc[0];
 /* data 367e70 */ void (*_kTLBRefillHandler)(/* parameters unknown */);
 /* data 367e78 */ void (*_kDebugHandler[16])(/* parameters unknown */);
 /* data 367eb8 */ void *_kExecArg;
-/* data 367ec0 */ struct SysEntry[0] { // 0x8
+/* data 367ec0 */ static struct { // 0x8
 	/* 0x000 */ int num;
 	/* 0x004 */ void *func;
-};
-/* data 367f00 */ TLBEntry kernelTLB[0];
-/* data 367fd0 */ TLBEntry defaultTLB[0];
-/* data 3680f0 */ TLBEntry extendTLB[0];
+} SysEntry[0];
+/* data 367f00 */ static TLBEntry kernelTLB[0];
+/* data 367fd0 */ static TLBEntry defaultTLB[0];
+/* data 3680f0 */ static TLBEntry extendTLB[0];
 /* data 368170 */ TLB TLBInfo;
 
 // *****************************************************************************
 // FILE -- /home/xokano/globe_cvs/g_28/g/ee/src/kernel/libc/initsys.c
 // *****************************************************************************
 
-/* data 368190 */ int *_SyscallEntry;
-/* data 368198 */ struct SysEntry[0] { // 0x8
+/* data 368190 */ static int *_SyscallEntry;
+/* data 368198 */ static struct { // 0x8
 	/* 0x000 */ int num;
 	/* 0x004 */ void *func;
-};
+} SysEntry[0];
 /* data 3681a8 */ int __sce_sema_id;
 /* data 3681ac */ int __sce_eh_sema_id;
 
@@ -4803,34 +4803,34 @@
 // FILE -- /home/xokano/globe_cvs/g_28/g/ee/src/kernel/libc/libosd.c
 // *****************************************************************************
 
-/* data 3681b0 */ u_int osdsrc[0];
+/* data 3681b0 */ static u_int osdsrc[0];
 /* data 368958 */ SysEntry SysExecPS2Entry[0];
 
 // *****************************************************************************
 // FILE -- /home/xokano/globe_cvs/g_28/g/ee/src/kernel/libc/exit.c
 // *****************************************************************************
 
-/* data 368970 */ struct SysEntry[0] { // 0x8
+/* data 368970 */ static struct { // 0x8
 	/* 0x000 */ int num;
 	/* 0x004 */ void *func;
-};
+} SysEntry[0];
 
 // *****************************************************************************
 // FILE -- /home/xokano/globe_cvs/g_28/g/ee/src/kernel/libc/alarm.c
 // *****************************************************************************
 
-/* data 368978 */ u_int srcfile[0];
-/* data 3690b8 */ u_int eenull[0];
-/* data 3690e0 */ struct SysEntry[0] { // 0x8
+/* data 368978 */ static u_int srcfile[0];
+/* data 3690b8 */ static u_int eenull[0];
+/* data 3690e0 */ static struct { // 0x8
 	/* 0x000 */ int num;
 	/* 0x004 */ void *func;
-};
+} SysEntry[0];
 
 // *****************************************************************************
 // FILE -- /home/xokano/globe_cvs/g_28/g/ee/src/kernel/libc/timer.c
 // *****************************************************************************
 
-/* data 369120 */ struct g_Timer { // 0x20
+/* data 369120 */ static struct { // 0x20
 	/* 0x000 */ u_long ulHighCount;
 	/* 0x008 */ int hid;
 	/* 0x00c */ u_int uniqkey;
@@ -4838,265 +4838,265 @@
 	/* 0x014 */ COUNTER *pFree;
 	/* 0x018 */ COUNTER *pAlarm;
 	/* 0x01c */ int cbcounterid;
-};
-/* bss 4c82c0 */ COUNTER g_CounterBuf[128];
+} g_Timer;
+/* bss 4c82c0 */ static COUNTER g_CounterBuf[128];
 
 // *****************************************************************************
 // FILE -- /home/xokano/globe_cvs/g_28/g/ee/src/kernel/libc/timeralarm.c
 // *****************************************************************************
 
-/* bss 4ca2c0 */ ALARM g_AlarmBuf[64];
-/* bss 4ca6c0 */ ALARM *g_pFreeAlarm;
+/* bss 4ca2c0 */ static ALARM g_AlarmBuf[64];
+/* bss 4ca6c0 */ static ALARM *g_pFreeAlarm;
 
 // *****************************************************************************
 // FILE -- /home/xokano/globe_cvs/g_28/g/ee/src/kernel/libc/iopnotify.c
 // *****************************************************************************
 
-/* data 369140 */ sceSifRebootNotifyData *g_pUserRebootBuf;
-/* data 369144 */ int g_iUserRebootSize;
-/* bss 4ca6c8 */ sceSifRebootNotifyData g_SysRebootBuf[32];
+/* data 369140 */ static sceSifRebootNotifyData *g_pUserRebootBuf;
+/* data 369144 */ static int g_iUserRebootSize;
+/* bss 4ca6c8 */ static sceSifRebootNotifyData g_SysRebootBuf[32];
 
 // *****************************************************************************
 // FILE -- /home/xokano/globe_cvs/g_28/g/ee/src/kernel/libc/glue.c
 // *****************************************************************************
 
-/* data 369148 */ int ttyinit;
+/* data 369148 */ static int ttyinit;
 
 // *****************************************************************************
 // FILE -- /home/xokano/globe_cvs/g_28/g/ee/src/kernel/libc/deci2.c
 // *****************************************************************************
 
-/* bss 4ca8c8 */ char userarea[36];
+/* bss 4ca8c8 */ static char userarea[36];
 
 // *****************************************************************************
 // FILE -- /home/xokano/globe_cvs/g_28/g/ee/src/kernel/libc/tty.c
 // *****************************************************************************
 
-/* bss 4caa10 */ TTYINFO tinfo;
-/* bss 4caa40 */ char wbuf[320];
-/* bss 4cab80 */ char rbuf[320];
+/* bss 4caa10 */ static TTYINFO tinfo;
+/* bss 4caa40 */ static char wbuf[320];
+/* bss 4cab80 */ static char rbuf[320];
 
 // *****************************************************************************
 // FILE -- /usr/local/sce/ee/gcc/src/newlib/libm/math/sf_atan.c
 // *****************************************************************************
 
-/* rdata 3eb000 */ float atanhi[0];
-/* rdata 3eb010 */ float atanlo[0];
-/* rdata 3eb020 */ float aT[0];
-/* rdata 3eb04c */ float one;
-/* rdata 3eb050 */ float huge;
+/* rdata 3eb000 */ static float atanhi[0];
+/* rdata 3eb010 */ static float atanlo[0];
+/* rdata 3eb020 */ static float aT[0];
+/* rdata 3eb04c */ static float one;
+/* rdata 3eb050 */ static float huge;
 
 // *****************************************************************************
 // FILE -- /usr/local/sce/ee/gcc/src/newlib/libm/math/sf_cos.c
 // *****************************************************************************
 
-/* rdata 3eb054 */ float one;
+/* rdata 3eb054 */ static float one;
 
 // *****************************************************************************
 // FILE -- /usr/local/sce/ee/gcc/src/newlib/libm/math/ef_acos.c
 // *****************************************************************************
 
-/* rdata 3eb058 */ float one;
-/* rdata 3eb05c */ float pi;
-/* rdata 3eb060 */ float pio2_hi;
-/* rdata 3eb064 */ float pio2_lo;
-/* rdata 3eb068 */ float pS0;
-/* rdata 3eb06c */ float pS1;
-/* rdata 3eb070 */ float pS2;
-/* rdata 3eb074 */ float pS3;
-/* rdata 3eb078 */ float pS4;
-/* rdata 3eb07c */ float pS5;
-/* rdata 3eb080 */ float qS1;
-/* rdata 3eb084 */ float qS2;
-/* rdata 3eb088 */ float qS3;
-/* rdata 3eb08c */ float qS4;
+/* rdata 3eb058 */ static float one;
+/* rdata 3eb05c */ static float pi;
+/* rdata 3eb060 */ static float pio2_hi;
+/* rdata 3eb064 */ static float pio2_lo;
+/* rdata 3eb068 */ static float pS0;
+/* rdata 3eb06c */ static float pS1;
+/* rdata 3eb070 */ static float pS2;
+/* rdata 3eb074 */ static float pS3;
+/* rdata 3eb078 */ static float pS4;
+/* rdata 3eb07c */ static float pS5;
+/* rdata 3eb080 */ static float qS1;
+/* rdata 3eb084 */ static float qS2;
+/* rdata 3eb088 */ static float qS3;
+/* rdata 3eb08c */ static float qS4;
 
 // *****************************************************************************
 // FILE -- /usr/local/sce/ee/gcc/src/newlib/libm/math/ef_atan2.c
 // *****************************************************************************
 
-/* rdata 3eb090 */ float tiny;
-/* rdata 3eb094 */ float zero;
-/* rdata 3eb098 */ float pi_o_4;
-/* rdata 3eb09c */ float pi_o_2;
-/* rdata 3eb0a0 */ float pi;
-/* rdata 3eb0a4 */ float pi_lo;
+/* rdata 3eb090 */ static float tiny;
+/* rdata 3eb094 */ static float zero;
+/* rdata 3eb098 */ static float pi_o_4;
+/* rdata 3eb09c */ static float pi_o_2;
+/* rdata 3eb0a0 */ static float pi;
+/* rdata 3eb0a4 */ static float pi_lo;
 
 // *****************************************************************************
 // FILE -- /usr/local/sce/ee/gcc/src/newlib/libm/math/ef_fmod.c
 // *****************************************************************************
 
-/* rdata 3eb0a8 */ float one;
-/* rdata 3eb0b0 */ float Zero[0];
+/* rdata 3eb0a8 */ static float one;
+/* rdata 3eb0b0 */ static float Zero[0];
 
 // *****************************************************************************
 // FILE -- /usr/local/sce/ee/gcc/src/newlib/libm/math/ef_log.c
 // *****************************************************************************
 
-/* rdata 3eb0b8 */ float ln2_hi;
-/* rdata 3eb0bc */ float ln2_lo;
-/* rdata 3eb0c0 */ float two25;
-/* rdata 3eb0c4 */ float Lg1;
-/* rdata 3eb0c8 */ float Lg2;
-/* rdata 3eb0cc */ float Lg3;
-/* rdata 3eb0d0 */ float Lg4;
-/* rdata 3eb0d4 */ float Lg5;
-/* rdata 3eb0d8 */ float Lg6;
-/* rdata 3eb0dc */ float Lg7;
-/* rdata 3eb0e0 */ float zero;
+/* rdata 3eb0b8 */ static float ln2_hi;
+/* rdata 3eb0bc */ static float ln2_lo;
+/* rdata 3eb0c0 */ static float two25;
+/* rdata 3eb0c4 */ static float Lg1;
+/* rdata 3eb0c8 */ static float Lg2;
+/* rdata 3eb0cc */ static float Lg3;
+/* rdata 3eb0d0 */ static float Lg4;
+/* rdata 3eb0d4 */ static float Lg5;
+/* rdata 3eb0d8 */ static float Lg6;
+/* rdata 3eb0dc */ static float Lg7;
+/* rdata 3eb0e0 */ static float zero;
 
 // *****************************************************************************
 // FILE -- /usr/local/sce/ee/gcc/src/newlib/libm/math/ef_pow.c
 // *****************************************************************************
 
-/* rdata 3eb0e8 */ float bp[0];
-/* rdata 3eb0f0 */ float dp_h[0];
-/* rdata 3eb0f8 */ float dp_l[0];
-/* rdata 3eb100 */ float zero;
-/* rdata 3eb104 */ float one;
-/* rdata 3eb108 */ float two;
-/* rdata 3eb10c */ float two24;
-/* rdata 3eb110 */ float huge;
-/* rdata 3eb114 */ float tiny;
-/* rdata 3eb118 */ float L1;
-/* rdata 3eb11c */ float L2;
-/* rdata 3eb120 */ float L3;
-/* rdata 3eb124 */ float L4;
-/* rdata 3eb128 */ float L5;
-/* rdata 3eb12c */ float L6;
-/* rdata 3eb130 */ float P1;
-/* rdata 3eb134 */ float P2;
-/* rdata 3eb138 */ float P3;
-/* rdata 3eb13c */ float P4;
-/* rdata 3eb140 */ float P5;
-/* rdata 3eb144 */ float lg2;
-/* rdata 3eb148 */ float lg2_h;
-/* rdata 3eb14c */ float lg2_l;
-/* rdata 3eb150 */ float ovt;
-/* rdata 3eb154 */ float cp;
-/* rdata 3eb158 */ float cp_h;
-/* rdata 3eb15c */ float cp_l;
-/* rdata 3eb160 */ float ivln2;
-/* rdata 3eb164 */ float ivln2_h;
-/* rdata 3eb168 */ float ivln2_l;
+/* rdata 3eb0e8 */ static float bp[0];
+/* rdata 3eb0f0 */ static float dp_h[0];
+/* rdata 3eb0f8 */ static float dp_l[0];
+/* rdata 3eb100 */ static float zero;
+/* rdata 3eb104 */ static float one;
+/* rdata 3eb108 */ static float two;
+/* rdata 3eb10c */ static float two24;
+/* rdata 3eb110 */ static float huge;
+/* rdata 3eb114 */ static float tiny;
+/* rdata 3eb118 */ static float L1;
+/* rdata 3eb11c */ static float L2;
+/* rdata 3eb120 */ static float L3;
+/* rdata 3eb124 */ static float L4;
+/* rdata 3eb128 */ static float L5;
+/* rdata 3eb12c */ static float L6;
+/* rdata 3eb130 */ static float P1;
+/* rdata 3eb134 */ static float P2;
+/* rdata 3eb138 */ static float P3;
+/* rdata 3eb13c */ static float P4;
+/* rdata 3eb140 */ static float P5;
+/* rdata 3eb144 */ static float lg2;
+/* rdata 3eb148 */ static float lg2_h;
+/* rdata 3eb14c */ static float lg2_l;
+/* rdata 3eb150 */ static float ovt;
+/* rdata 3eb154 */ static float cp;
+/* rdata 3eb158 */ static float cp_h;
+/* rdata 3eb15c */ static float cp_l;
+/* rdata 3eb160 */ static float ivln2;
+/* rdata 3eb164 */ static float ivln2_h;
+/* rdata 3eb168 */ static float ivln2_l;
 
 // *****************************************************************************
 // FILE -- /usr/local/sce/ee/gcc/src/newlib/libm/math/ef_rem_pio2.c
 // *****************************************************************************
 
-/* rdata 3eb170 */ __int32_t two_over_pi[0];
-/* rdata 3eb488 */ __int32_t npio2_hw[0];
-/* rdata 3eb508 */ float zero;
-/* rdata 3eb50c */ float half;
-/* rdata 3eb510 */ float two8;
-/* rdata 3eb514 */ float invpio2;
-/* rdata 3eb518 */ float pio2_1;
-/* rdata 3eb51c */ float pio2_1t;
-/* rdata 3eb520 */ float pio2_2;
-/* rdata 3eb524 */ float pio2_2t;
-/* rdata 3eb528 */ float pio2_3;
-/* rdata 3eb52c */ float pio2_3t;
+/* rdata 3eb170 */ static __int32_t two_over_pi[0];
+/* rdata 3eb488 */ static __int32_t npio2_hw[0];
+/* rdata 3eb508 */ static float zero;
+/* rdata 3eb50c */ static float half;
+/* rdata 3eb510 */ static float two8;
+/* rdata 3eb514 */ static float invpio2;
+/* rdata 3eb518 */ static float pio2_1;
+/* rdata 3eb51c */ static float pio2_1t;
+/* rdata 3eb520 */ static float pio2_2;
+/* rdata 3eb524 */ static float pio2_2t;
+/* rdata 3eb528 */ static float pio2_3;
+/* rdata 3eb52c */ static float pio2_3t;
 
 // *****************************************************************************
 // FILE -- /usr/local/sce/ee/gcc/src/newlib/libm/math/ef_sqrt.c
 // *****************************************************************************
 
-/* rdata 3eb530 */ float one;
-/* rdata 3eb534 */ float tiny;
+/* rdata 3eb530 */ static float one;
+/* rdata 3eb534 */ static float tiny;
 
 // *****************************************************************************
 // FILE -- /usr/local/sce/ee/gcc/src/newlib/libm/math/kf_cos.c
 // *****************************************************************************
 
-/* rdata 3eb538 */ float one;
-/* rdata 3eb53c */ float C1;
-/* rdata 3eb540 */ float C2;
-/* rdata 3eb544 */ float C3;
-/* rdata 3eb548 */ float C4;
-/* rdata 3eb54c */ float C5;
-/* rdata 3eb550 */ float C6;
+/* rdata 3eb538 */ static float one;
+/* rdata 3eb53c */ static float C1;
+/* rdata 3eb540 */ static float C2;
+/* rdata 3eb544 */ static float C3;
+/* rdata 3eb548 */ static float C4;
+/* rdata 3eb54c */ static float C5;
+/* rdata 3eb550 */ static float C6;
 
 // *****************************************************************************
 // FILE -- /usr/local/sce/ee/gcc/src/newlib/libm/math/kf_rem_pio2.c
 // *****************************************************************************
 
-/* rdata 3eb558 */ int init_jk[0];
-/* rdata 3eb568 */ float PIo2[0];
-/* rdata 3eb594 */ float zero;
-/* rdata 3eb598 */ float one;
-/* rdata 3eb59c */ float two8;
-/* rdata 3eb5a0 */ float twon8;
+/* rdata 3eb558 */ static int init_jk[0];
+/* rdata 3eb568 */ static float PIo2[0];
+/* rdata 3eb594 */ static float zero;
+/* rdata 3eb598 */ static float one;
+/* rdata 3eb59c */ static float two8;
+/* rdata 3eb5a0 */ static float twon8;
 
 // *****************************************************************************
 // FILE -- /usr/local/sce/ee/gcc/src/newlib/libm/math/kf_sin.c
 // *****************************************************************************
 
-/* rdata 3eb5a4 */ float half;
-/* rdata 3eb5a8 */ float S1;
-/* rdata 3eb5ac */ float S2;
-/* rdata 3eb5b0 */ float S3;
-/* rdata 3eb5b4 */ float S4;
-/* rdata 3eb5b8 */ float S5;
-/* rdata 3eb5bc */ float S6;
+/* rdata 3eb5a4 */ static float half;
+/* rdata 3eb5a8 */ static float S1;
+/* rdata 3eb5ac */ static float S2;
+/* rdata 3eb5b0 */ static float S3;
+/* rdata 3eb5b4 */ static float S4;
+/* rdata 3eb5b8 */ static float S5;
+/* rdata 3eb5bc */ static float S6;
 
 // *****************************************************************************
 // FILE -- /usr/local/sce/ee/gcc/src/newlib/libm/math/kf_tan.c
 // *****************************************************************************
 
-/* rdata 3eb5c0 */ float one;
-/* rdata 3eb5c4 */ float pio4;
-/* rdata 3eb5c8 */ float pio4lo;
-/* rdata 3eb5d0 */ float T[0];
+/* rdata 3eb5c0 */ static float one;
+/* rdata 3eb5c4 */ static float pio4;
+/* rdata 3eb5c8 */ static float pio4lo;
+/* rdata 3eb5d0 */ static float T[0];
 
 // *****************************************************************************
 // FILE -- /usr/local/sce/ee/gcc/src/newlib/libm/math/sf_floor.c
 // *****************************************************************************
 
-/* rdata 3eb604 */ float huge;
+/* rdata 3eb604 */ static float huge;
 
 // *****************************************************************************
 // FILE -- /usr/local/sce/ee/gcc/src/newlib/libm/common/sf_scalbn.c
 // *****************************************************************************
 
-/* rdata 3eb608 */ float two25;
-/* rdata 3eb60c */ float twom25;
-/* rdata 3eb610 */ float huge;
-/* rdata 3eb614 */ float tiny;
+/* rdata 3eb608 */ static float two25;
+/* rdata 3eb60c */ static float twom25;
+/* rdata 3eb610 */ static float huge;
+/* rdata 3eb614 */ static float tiny;
 
 // *****************************************************************************
 // FILE -- /usr/local/sce/ee/gcc/src/gcc/libgcc2.c
 // *****************************************************************************
 
-/* rdata 3eb618 */ UQItype __clz_tab[0];
+/* rdata 3eb618 */ static UQItype __clz_tab[0];
 
 // *****************************************************************************
 // FILE -- /usr/local/sce/ee/gcc/src/gcc/libgcc2.c
 // *****************************************************************************
 
-/* rdata 3eb718 */ UQItype __clz_tab[0];
+/* rdata 3eb718 */ static UQItype __clz_tab[0];
 
 // *****************************************************************************
 // FILE -- /usr/local/sce/ee/gcc/src/gcc/libgcc2.c
 // *****************************************************************************
 
-/* rdata 3eb818 */ UQItype __clz_tab[0];
+/* rdata 3eb818 */ static UQItype __clz_tab[0];
 
 // *****************************************************************************
 // FILE -- /usr/local/sce/ee/gcc/src/gcc/libgcc2.c
 // *****************************************************************************
 
-/* rdata 3eb918 */ UQItype __clz_tab[0];
+/* rdata 3eb918 */ static UQItype __clz_tab[0];
 
 // *****************************************************************************
 // FILE -- /usr/local/sce/ee/gcc/src/gcc/libgcc2.c
 // *****************************************************************************
 
 /* data 369560 */ void (*__terminate_func)(/* parameters unknown */);
-/* data 369564 */ eh_context* (*get_eh_context)(/* parameters unknown */);
-/* data 369568 */ int dwarf_reg_size_table_initialized;
+/* data 369564 */ static eh_context* (*get_eh_context)(/* parameters unknown */);
+/* data 369568 */ static int dwarf_reg_size_table_initialized;
 /* bss 4cdc20 */ void *key_value[256];
-/* bss 4cd9f0 */ __gthread_key_t eh_context_key;
-/* bss 4cd9f8 */ char dwarf_reg_size_table[122];
+/* bss 4cd9f0 */ static __gthread_key_t eh_context_key;
+/* bss 4cd9f8 */ static char dwarf_reg_size_table[122];
 
 // *****************************************************************************
 // FILE -- /usr/local/sce/ee/gcc/build/gcc/dp-bit.c
@@ -5108,9 +5108,9 @@
 // FILE -- /usr/local/sce/ee/gcc/src/gcc/frame-dwarf2.c
 // *****************************************************************************
 
-/* data 369574 */ __gthread_mutex_t object_mutex;
+/* data 369574 */ static __gthread_mutex_t object_mutex;
 /* bss 4cdc20 */ void *key_value[256];
-/* bss 4cda78 */ object *objects;
+/* bss 4cda78 */ static object *objects;
 
 // *****************************************************************************
 // FILE -- /usr/local/sce/ee/gcc/src/gcc/cp/tinfo.cc
@@ -5171,7 +5171,7 @@
 // FILE -- /usr/local/sce/ee/gcc/src/gcc/cp/exception.cc
 // *****************************************************************************
 
-/* data 369610 */ void (*__unexpected_func)(/* parameters unknown */);
+/* data 369610 */ static void (*__unexpected_func)(/* parameters unknown */);
 /* data 36a220 */ __vtbl_ptr_type bad_exception virtual table[4];
 /* data 36a240 */ __vtbl_ptr_type exception virtual table[4];
 /* bss 3f54b0 */ unsigned char exception type_info node[8];
@@ -5187,7 +5187,7 @@
 // FILE -- /usr/local/sce/ee/gcc/src/newlib/libc/reent/impure.c
 // *****************************************************************************
 
-/* data 369618 */ _reent impure_data;
+/* data 369618 */ static _reent impure_data;
 /* data 369908 */ _reent *_impure_ptr;
 
 // *****************************************************************************
@@ -5206,8 +5206,8 @@
 // FILE -- /usr/local/sce/ee/gcc/src/newlib/libc/stdlib/mlock.c
 // *****************************************************************************
 
-/* data 369d68 */ int __malloc_lock_owner;
-/* data 369d6c */ int call_count;
+/* data 369d68 */ static int __malloc_lock_owner;
+/* data 369d6c */ static int call_count;
 
 // *****************************************************************************
 // FILE -- /usr/local/sce/ee/gcc/src/newlib/libc/reent/sbrkr.c
@@ -5220,6 +5220,7 @@
 // *****************************************************************************
 
 /* data 369d70 */ int __mb_cur_max;
+/* rdata 3ed048 */ static lconv lconv;
 
 // *****************************************************************************
 // FILE -- /usr/local/sce/ee/gcc/src/newlib/libc/stdlib/mprec.c
@@ -5279,7 +5280,6 @@
 /* nil 3eebb4 */ _$tmp_7.818;
 /* nil 3eebb8 */ _$tmp_8.826;
 /* nil 3eebbc */ _$tmp_9.831;
-/* nil 39de78 */ __FUNCTION__.1036;
 /* nil 3eec00 */ _$tmp_0.599;
 /* nil 3eec04 */ _$tmp_1.607;
 /* nil 3eec08 */ _$tmp_2.612;
@@ -5482,7 +5482,6 @@
 /* nil 3ef3b4 */ _$tmp_7.830;
 /* nil 3ef3b8 */ _$tmp_8.838;
 /* nil 3ef3bc */ _$tmp_9.843;
-/* nil 3a09e0 */ __FUNCTION__.1057;
 /* nil 3ef3f0 */ _$tmp_0.759;
 /* nil 3ef3f4 */ _$tmp_1.767;
 /* nil 3ef3f8 */ _$tmp_2.772;
@@ -5493,9 +5492,6 @@
 /* nil 3ef40c */ _$tmp_7.830;
 /* nil 3ef410 */ _$tmp_8.838;
 /* nil 3ef414 */ _$tmp_9.843;
-/* nil 3a0d60 */ __FUNCTION__.1051;
-/* nil 3a0d78 */ __FUNCTION__.1057;
-/* nil 3a0e58 */ __FUNCTION__.90;
 /* nil 3ef438 */ _$tmp_0.759;
 /* nil 3ef43c */ _$tmp_1.767;
 /* nil 3ef440 */ _$tmp_2.772;
@@ -5506,8 +5502,6 @@
 /* nil 3ef454 */ _$tmp_7.830;
 /* nil 3ef458 */ _$tmp_8.838;
 /* nil 3ef45c */ _$tmp_9.843;
-/* nil 3a11d0 */ __FUNCTION__.1105;
-/* nil 3a11e8 */ __FUNCTION__.1111;
 /* nil 3ef480 */ _$tmp_0.759;
 /* nil 3ef484 */ _$tmp_1.767;
 /* nil 3ef488 */ _$tmp_2.772;
@@ -5518,11 +5512,6 @@
 /* nil 3ef49c */ _$tmp_7.830;
 /* nil 3ef4a0 */ _$tmp_8.838;
 /* nil 3ef4a4 */ _$tmp_9.843;
-/* nil 3a1418 */ type_tex_tbl.1024;
-/* nil 3a14b0 */ __FUNCTION__.1041;
-/* nil 3a16d0 */ __FUNCTION__.15;
-/* nil 3a1700 */ __FUNCTION__.18;
-/* nil 3a1730 */ __FUNCTION__.21;
 /* nil 3ef4e0 */ _$tmp_0.692;
 /* nil 3ef4e4 */ _$tmp_1.700;
 /* nil 3ef4e8 */ _$tmp_2.705;
@@ -5645,7 +5634,6 @@
 /* nil 3ef8c4 */ _$tmp_7.763;
 /* nil 3ef8c8 */ _$tmp_8.771;
 /* nil 3ef8cc */ _$tmp_9.776;
-/* nil 3a3808 */ __FUNCTION__.985;
 /* nil 3ef900 */ _$tmp_0.759;
 /* nil 3ef904 */ _$tmp_1.767;
 /* nil 3ef908 */ _$tmp_2.772;
@@ -5676,8 +5664,6 @@
 /* nil 3ef9e4 */ _$tmp_7.842;
 /* nil 3ef9e8 */ _$tmp_8.850;
 /* nil 3ef9ec */ _$tmp_9.855;
-/* nil 3a41a0 */ __FUNCTION__.655;
-/* nil 3a4200 */ __FUNCTION__.658;
 /* nil 3efb28 */ _$tmp_0.780;
 /* nil 3efb2c */ _$tmp_1.788;
 /* nil 3efb30 */ _$tmp_2.793;
@@ -5688,8 +5674,6 @@
 /* nil 3efb44 */ _$tmp_7.851;
 /* nil 3efb48 */ _$tmp_8.859;
 /* nil 3efb4c */ _$tmp_9.864;
-/* nil 3a43c8 */ __FUNCTION__.985;
-/* nil 3a44c8 */ __FUNCTION__.1000;
 /* nil 3efb68 */ _$tmp_0.692;
 /* nil 3efb6c */ _$tmp_1.700;
 /* nil 3efb70 */ _$tmp_2.705;
@@ -5700,7 +5684,6 @@
 /* nil 3efb84 */ _$tmp_7.763;
 /* nil 3efb88 */ _$tmp_8.771;
 /* nil 3efb8c */ _$tmp_9.776;
-/* nil 3efbd0 */ __FUNCTION__.907;
 /* nil 3efc28 */ _$tmp_0.620;
 /* nil 3efc2c */ _$tmp_1.628;
 /* nil 3efc30 */ _$tmp_2.633;
@@ -5849,7 +5832,6 @@
 /* nil 3f01a4 */ _$tmp_7.830;
 /* nil 3f01a8 */ _$tmp_8.838;
 /* nil 3f01ac */ _$tmp_9.843;
-/* nil 3a8bb0 */ __FUNCTION__.1252;
 /* nil 3f01f4 */ _$tmp_10.1493;
 /* nil 3f0218 */ _$tmp_0.759;
 /* nil 3f021c */ _$tmp_1.767;
@@ -5861,8 +5843,6 @@
 /* nil 3f0234 */ _$tmp_7.830;
 /* nil 3f0238 */ _$tmp_8.838;
 /* nil 3f023c */ _$tmp_9.843;
-/* nil 3a9070 */ __FUNCTION__.734;
-/* nil 3a9338 */ __FUNCTION__.620;
 /* nil 3f0298 */ _$tmp_0.692;
 /* nil 3f029c */ _$tmp_1.700;
 /* nil 3f02a0 */ _$tmp_2.705;
@@ -5883,8 +5863,6 @@
 /* nil 3f030c */ _$tmp_7.797;
 /* nil 3f0310 */ _$tmp_8.805;
 /* nil 3f0314 */ _$tmp_9.810;
-/* nil 3a97e8 */ __FUNCTION__.967;
-/* nil 3a98b8 */ __FUNCTION__.994;
 /* nil 3f0350 */ _$tmp_0.620;
 /* nil 3f0354 */ _$tmp_1.628;
 /* nil 3f0358 */ _$tmp_2.633;
@@ -5917,36 +5895,11 @@
 /* nil 3f0414 */ _$tmp_9.1016;
 /* nil 3f0438 */ __FUNCTION__.1558;
 /* nil 3f0440 */ __FUNCTION__.1564;
-/* nil 3aa758 */ __FUNCTION__.1585;
 /* nil 3f0448 */ __FUNCTION__.1612;
-/* nil 3aa9e8 */ __FUNCTION__.1618;
-/* nil 3aaac8 */ __FUNCTION__.1624;
-/* nil 3aab38 */ __FUNCTION__.1627;
 /* nil 3f0450 */ __FUNCTION__.1648;
 /* nil 3f0458 */ __FUNCTION__.1651;
 /* nil 3f0460 */ __FUNCTION__.1657;
-/* nil 3aac48 */ __FUNCTION__.1663;
-/* nil 3aacb0 */ __FUNCTION__.1666;
-/* nil 3aad40 */ __FUNCTION__.1696;
-/* nil 3aad90 */ __FUNCTION__.1720;
-/* nil 3aade8 */ __FUNCTION__.1744;
-/* nil 3aae00 */ __FUNCTION__.1753;
-/* nil 3aaea8 */ __FUNCTION__.1759;
-/* nil 3aaf18 */ __FUNCTION__.1762;
-/* nil 3aaf58 */ __FUNCTION__.1765;
-/* nil 3aafc0 */ __FUNCTION__.1768;
-/* nil 3ab030 */ __FUNCTION__.1771;
-/* nil 3ab070 */ __FUNCTION__.1774;
-/* nil 3ab1a0 */ __FUNCTION__.1807;
-/* nil 3ab238 */ __FUNCTION__.1846;
-/* nil 3ab2f8 */ __FUNCTION__.1852;
 /* nil 3f0470 */ __FUNCTION__.1867;
-/* nil 3ab3d0 */ __FUNCTION__.1909;
-/* nil 3ab458 */ __FUNCTION__.1939;
-/* nil 3ab4e0 */ __FUNCTION__.1945;
-/* nil 3ab568 */ __FUNCTION__.1975;
-/* nil 3ab660 */ __FUNCTION__.1999;
-/* nil 3ab6b8 */ __FUNCTION__.2002;
 /* nil 3f04b8 */ _$tmp_0.654;
 /* nil 3f04bc */ _$tmp_1.662;
 /* nil 3f04c0 */ _$tmp_2.667;
@@ -5967,7 +5920,6 @@
 /* nil 3f04fc */ _$tmp_7.763;
 /* nil 3f0500 */ _$tmp_8.771;
 /* nil 3f0504 */ _$tmp_9.776;
-/* nil 3abc88 */ __FUNCTION__.1033;
 /* nil 3f0528 */ _$tmp_0.692;
 /* nil 3f052c */ _$tmp_1.700;
 /* nil 3f0530 */ _$tmp_2.705;
@@ -6032,9 +5984,6 @@
 /* nil 3f074c */ _$tmp_7.830;
 /* nil 3f0750 */ _$tmp_8.838;
 /* nil 3f0754 */ _$tmp_9.843;
-/* nil 3adef8 */ __FUNCTION__.668;
-/* nil 3adfd8 */ __FUNCTION__.674;
-/* nil 3ae190 */ __FUNCTION__.690;
 /* nil 3f07d8 */ _$tmp_0.759;
 /* nil 3f07dc */ _$tmp_1.767;
 /* nil 3f07e0 */ _$tmp_2.772;
@@ -6159,19 +6108,7 @@
 /* nil 3f0b00 */ _$tmp_8.783;
 /* nil 3f0b04 */ _$tmp_9.788;
 /* nil 3aeb88 */ __FUNCTION__.589;
-/* nil 3aec50 */ __FUNCTION__.1125;
-/* nil 3aeca8 */ __FUNCTION__.1128;
-/* nil 3aed70 */ __FUNCTION__.1152;
-/* nil 3aed88 */ __FUNCTION__.1155;
-/* nil 3aedc8 */ __FUNCTION__.1158;
 /* nil 3aef48 */ __FUNCTION__.586;
-/* nil 3aef98 */ __FUNCTION__.1167;
-/* nil 3aefa8 */ __FUNCTION__.1170;
-/* nil 3aefb8 */ __FUNCTION__.1173;
-/* nil 3aefe8 */ __FUNCTION__.1176;
-/* nil 3af000 */ __FUNCTION__.1185;
-/* nil 3af048 */ __FUNCTION__.1188;
-/* nil 3af100 */ __FUNCTION__.1203;
 /* nil 3f0b38 */ _$tmp_0.665;
 /* nil 3f0b3c */ _$tmp_1.673;
 /* nil 3f0b40 */ _$tmp_2.678;
@@ -6182,8 +6119,6 @@
 /* nil 3f0b54 */ _$tmp_7.736;
 /* nil 3f0b58 */ _$tmp_8.744;
 /* nil 3f0b5c */ _$tmp_9.749;
-/* nil 3b1cc8 */ __FUNCTION__.846;
-/* nil 3b20e0 */ __FUNCTION__.661;
 /* nil 3f0c18 */ _$tmp_0.599;
 /* nil 3f0c1c */ _$tmp_1.607;
 /* nil 3f0c20 */ _$tmp_2.612;
@@ -6205,7 +6140,6 @@
 /* nil 3f0c78 */ _$tmp_8.678;
 /* nil 3f0c7c */ _$tmp_9.683;
 /* nil 3b2850 */ __FUNCTION__.687;
-/* nil 3b2950 */ __FUNCTION__.814;
 /* nil 3f0c98 */ _$tmp_0.689;
 /* nil 3f0c9c */ _$tmp_1.697;
 /* nil 3f0ca0 */ _$tmp_2.702;
@@ -6216,12 +6150,7 @@
 /* nil 3f0cb4 */ _$tmp_7.760;
 /* nil 3f0cb8 */ _$tmp_8.768;
 /* nil 3f0cbc */ _$tmp_9.773;
-/* nil 3b2aa8 */ __FUNCTION__.955;
 /* nil 3b2cf0 */ __FUNCTION__.571;
-/* nil 3f0d10 */ __FUNCTION__.553;
-/* nil 3b2e28 */ __FUNCTION__.562;
-/* nil 3b2e38 */ __FUNCTION__.568;
-/* nil 3b2e68 */ __FUNCTION__.571;
 /* nil 3b2ec8 */ __FUNCTION__.643;
 /* nil 3b2f50 */ __FUNCTION__.646;
 /* nil 3f0d90 */ _$tmp_0.692;
@@ -6257,7 +6186,6 @@
 /* nil 3f0e5c */ _$tmp_9.776;
 /* nil 3f0e8c */ _$tmp_10.1067;
 /* nil 3f0e90 */ _$tmp_11.1126;
-/* nil 3b3778 */ __FUNCTION__.1122;
 /* nil 3f0e98 */ _$tmp_0.692;
 /* nil 3f0e9c */ _$tmp_1.700;
 /* nil 3f0ea0 */ _$tmp_2.705;
@@ -6322,15 +6250,8 @@
 /* nil 3f1064 */ _$tmp_9.854;
 /* nil 3b43c0 */ __FUNCTION__.652;
 /* nil 3b4468 */ __FUNCTION__.1336;
-/* nil 3b44e0 */ __FUNCTION__.1378;
-/* nil 3b4538 */ __FUNCTION__.1384;
 /* nil 3f10a8 */ __FUNCTION__.864;
 /* nil 3b4720 */ __FUNCTION__.876;
-/* nil 3b4a10 */ __FUNCTION__.1627;
-/* nil 3b4aa0 */ __FUNCTION__.1630;
-/* nil 3b4ad0 */ __FUNCTION__.1633;
-/* nil 3b4b00 */ __FUNCTION__.1639;
-/* nil 3b4b18 */ __FUNCTION__.1648;
 /* nil 3f10f8 */ _$tmp_0.696;
 /* nil 3f10fc */ _$tmp_1.704;
 /* nil 3f1100 */ _$tmp_2.709;
@@ -6386,11 +6307,6 @@
 /* nil 3f1284 */ _$tmp_7.670;
 /* nil 3f1288 */ _$tmp_8.678;
 /* nil 3f128c */ _$tmp_9.683;
-/* nil 3b72d0 */ __FUNCTION__.933;
-/* nil 3b7590 */ __FUNCTION__.997;
-/* nil 3b76e8 */ __FUNCTION__.1033;
-/* nil 3b7828 */ __FUNCTION__.1075;
-/* nil 3b7998 */ __FUNCTION__.1093;
 /* nil 3f1310 */ _$tmp_0.599;
 /* nil 3f1314 */ _$tmp_1.607;
 /* nil 3f1318 */ _$tmp_2.612;
@@ -6401,8 +6317,6 @@
 /* nil 3f132c */ _$tmp_7.670;
 /* nil 3f1330 */ _$tmp_8.678;
 /* nil 3f1334 */ _$tmp_9.683;
-/* nil 3b7e28 */ __FUNCTION__.901;
-/* nil 3f1378 */ __FUNCTION__.1033;
 /* nil 3f1398 */ _$tmp_0.837;
 /* nil 3f139c */ _$tmp_1.845;
 /* nil 3f13a0 */ _$tmp_2.850;
@@ -6485,8 +6399,6 @@
 /* nil 3f1624 */ _$tmp_7.797;
 /* nil 3f1628 */ _$tmp_8.805;
 /* nil 3f162c */ _$tmp_9.810;
-/* nil 3f1640 */ __FUNCTION__.1087;
-/* nil 3b96f0 */ __FUNCTION__.1115;
 /* nil 3f1648 */ __FUNCTION__.1121;
 /* nil 3f1698 */ _$tmp_0.759;
 /* nil 3f169c */ _$tmp_1.767;
@@ -6608,7 +6520,6 @@
 /* nil 3f1a24 */ _$tmp_7.763;
 /* nil 3f1a28 */ _$tmp_8.771;
 /* nil 3f1a2c */ _$tmp_9.776;
-/* nil 3bb150 */ __FUNCTION__.991;
 /* nil 3f1a68 */ _$tmp_0.671;
 /* nil 3f1a6c */ _$tmp_1.679;
 /* nil 3f1a70 */ _$tmp_2.684;
@@ -6702,8 +6613,6 @@
 /* nil 3f2c5c */ _$tmp_7.763;
 /* nil 3f2c60 */ _$tmp_8.771;
 /* nil 3f2c64 */ _$tmp_9.776;
-/* nil 3bd4e0 */ __FUNCTION__.1003;
-/* nil 3bd538 */ __FUNCTION__.1008;
 /* nil 3f2c88 */ _$tmp_0.692;
 /* nil 3f2c8c */ _$tmp_1.700;
 /* nil 3f2c90 */ _$tmp_2.705;
@@ -6745,9 +6654,6 @@
 /* nil 3f2dfc */ _$tmp_7.763;
 /* nil 3f2e00 */ _$tmp_8.771;
 /* nil 3f2e04 */ _$tmp_9.776;
-/* nil 3bdf80 */ __FUNCTION__.1006;
-/* nil 3be0b8 */ __FUNCTION__.1072;
-/* nil 3be110 */ __FUNCTION__.1078;
 /* nil 3f2e38 */ _$tmp_0.692;
 /* nil 3f2e3c */ _$tmp_1.700;
 /* nil 3f2e40 */ _$tmp_2.705;
@@ -6768,7 +6674,6 @@
 /* nil 3f2eb4 */ _$tmp_7.830;
 /* nil 3f2eb8 */ _$tmp_8.838;
 /* nil 3f2ebc */ _$tmp_9.843;
-/* nil 3be8b0 */ sel_tbl.1070;
 /* nil 3f2ec8 */ _$tmp_0.692;
 /* nil 3f2ecc */ _$tmp_1.700;
 /* nil 3f2ed0 */ _$tmp_2.705;
@@ -6800,15 +6705,6 @@
 /* nil 3f2f98 */ _$tmp_8.771;
 /* nil 3f2f9c */ _$tmp_9.776;
 /* nil 3f2fc0 */ __FUNCTION__.1079;
-/* nil 3bf218 */ __FUNCTION__.809;
-/* nil 3bf308 */ __FUNCTION__.818;
-/* nil 3bf470 */ __FUNCTION__.864;
-/* nil 3bf580 */ __FUNCTION__.873;
-/* nil 3bf670 */ __FUNCTION__.882;
-/* nil 3bf710 */ __FUNCTION__.903;
-/* nil 3bf898 */ __FUNCTION__.940;
-/* nil 3bf8e8 */ __FUNCTION__.943;
-/* nil 3bf980 */ __FUNCTION__.949;
 /* nil 3f3070 */ _$tmp_0.726;
 /* nil 3f3074 */ _$tmp_1.734;
 /* nil 3f3078 */ _$tmp_2.739;
@@ -6859,9 +6755,6 @@
 /* nil 3f31fc */ _$tmp_7.839;
 /* nil 3f3200 */ _$tmp_8.847;
 /* nil 3f3204 */ _$tmp_9.852;
-/* nil 3c05b8 */ __FUNCTION__.1105;
-/* nil 3c05f0 */ __FUNCTION__.1111;
-/* nil 3c06c0 */ __FUNCTION__.1210;
 /* nil 3f3248 */ _$tmp_0.687;
 /* nil 3f324c */ _$tmp_1.695;
 /* nil 3f3250 */ _$tmp_2.700;
@@ -6882,12 +6775,7 @@
 /* nil 3f32c4 */ _$tmp_7.797;
 /* nil 3f32c8 */ _$tmp_8.805;
 /* nil 3f32cc */ _$tmp_9.810;
-/* nil 3c0dc0 */ __FUNCTION__.1003;
-/* nil 3c1148 */ __FUNCTION__.1105;
-/* nil 3c1210 */ __FUNCTION__.1162;
-/* nil 3c1270 */ __FUNCTION__.1177;
 /* nil 3f32dc */ _$tmp_10.1205;
-/* nil 3c12f8 */ __FUNCTION__.1201;
 /* nil 3f32e0 */ _$tmp_11.1219;
 /* nil 3f32e4 */ _$tmp_12.1221;
 /* nil 3f3320 */ _$tmp_0.747;
@@ -6940,7 +6828,6 @@
 /* nil 3f344c */ _$tmp_7.763;
 /* nil 3f3450 */ _$tmp_8.771;
 /* nil 3f3454 */ _$tmp_9.776;
-/* nil 3c19f8 */ __FUNCTION__.949;
 /* nil 3f3488 */ _$tmp_0.759;
 /* nil 3f348c */ _$tmp_1.767;
 /* nil 3f3490 */ _$tmp_2.772;
@@ -6955,7 +6842,6 @@
 /* nil 3f34e0 */ __FUNCTION__.1006;
 /* nil 3f34e8 */ __FUNCTION__.1039;
 /* nil 3f34f0 */ __FUNCTION__.698;
-/* nil 3f3500 */ __FUNCTION__.1327;
 /* nil 3f3510 */ _$tmp_0.629;
 /* nil 3f3514 */ _$tmp_1.637;
 /* nil 3f3518 */ _$tmp_2.642;
@@ -6978,7 +6864,6 @@
 /* nil 3f358c */ _$tmp_7.763;
 /* nil 3f3590 */ _$tmp_8.771;
 /* nil 3f3594 */ _$tmp_9.776;
-/* nil 3f35e8 */ __FUNCTION__.932;
 /* nil 3f35f8 */ _$tmp_0.692;
 /* nil 3f35fc */ _$tmp_1.700;
 /* nil 3f3600 */ _$tmp_2.705;
@@ -7039,7 +6924,6 @@
 /* nil 3f37ac */ _$tmp_7.830;
 /* nil 3f37b0 */ _$tmp_8.838;
 /* nil 3f37b4 */ _$tmp_9.843;
-/* nil 3c2d28 */ __FUNCTION__.1141;
 /* nil 3f37d8 */ _$tmp_0.759;
 /* nil 3f37dc */ _$tmp_1.767;
 /* nil 3f37e0 */ _$tmp_2.772;
@@ -7098,7 +6982,6 @@
 /* nil 3f397c */ _$tmp_11.1148;
 /* nil 3f39a8 */ __FUNCTION__.1155;
 /* nil 3f3a08 */ __FUNCTION__.964;
-/* nil 3c3d98 */ __FUNCTION__.1511;
 /* nil 3f3a28 */ _$tmp_0.786;
 /* nil 3f3a2c */ _$tmp_1.794;
 /* nil 3f3a30 */ _$tmp_2.799;
@@ -7110,7 +6993,6 @@
 /* nil 3f3a48 */ _$tmp_8.865;
 /* nil 3f3a4c */ _$tmp_9.870;
 /* nil 3f3a6c */ _$tmp_10.1235;
-/* nil 3c3fb0 */ __FUNCTION__.1290;
 /* nil 3f3a78 */ _$tmp_0.692;
 /* nil 3f3a7c */ _$tmp_1.700;
 /* nil 3f3a80 */ _$tmp_2.705;
@@ -7131,8 +7013,6 @@
 /* nil 3f3ad4 */ _$tmp_7.763;
 /* nil 3f3ad8 */ _$tmp_8.771;
 /* nil 3f3adc */ _$tmp_9.776;
-/* nil 3c4320 */ __FUNCTION__.985;
-/* nil 3c4418 */ __FUNCTION__.1023;
 /* nil 3f3ba8 */ _$tmp_0.759;
 /* nil 3f3bac */ _$tmp_1.767;
 /* nil 3f3bb0 */ _$tmp_2.772;
@@ -7304,8 +7184,6 @@
 /* nil 3f44b8 */ _$tmp_8.814;
 /* nil 3f44bc */ _$tmp_9.819;
 /* nil 3f44c0 */ __FUNCTION__.1075;
-/* nil 3c7ac8 */ __FUNCTION__.1105;
-/* nil 3c7b40 */ __FUNCTION__.1108;
 /* nil 3f44e0 */ _$tmp_0.759;
 /* nil 3f44e4 */ _$tmp_1.767;
 /* nil 3f44e8 */ _$tmp_2.772;
@@ -7367,9 +7245,6 @@
 /* nil 3f46dc */ _$tmp_7.763;
 /* nil 3f46e0 */ _$tmp_8.771;
 /* nil 3f46e4 */ _$tmp_9.776;
-/* nil 3e60f8 */ __FUNCTION__.955;
-/* nil 3e6128 */ __FUNCTION__.961;
-/* nil 3e66b8 */ __FUNCTION__.173;
 /* nil 3f4748 */ _$tmp_0.759;
 /* nil 3f474c */ _$tmp_1.767;
 /* nil 3f4750 */ _$tmp_2.772;
@@ -7498,7 +7373,6 @@
 /* nil 36955c */ completed.1;
 /* nil 36956c */ once.0;
 /* nil 369570 */ once_regsizes.1;
-/* nil 3ed048 */ lconv;
 /* nil 3674c0 */ _sceCd_scmdsdata;
 /* nil 367a00 */ _sceCd_cd_scmd;
 /* nil 369498 */ _sce_sdr_transIntr0Gp;
