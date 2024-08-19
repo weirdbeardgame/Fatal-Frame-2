@@ -61,7 +61,7 @@ options:
       ".vubss",
     ]
   auto_all_sections: [".data", ".sdata", ".sbss", ".lit4", ".rodata", ".bss"]
-  subalign: 4
+  subalign: null
   
   disasm_unknown: True
   named_regs_for_c_funcs: False
