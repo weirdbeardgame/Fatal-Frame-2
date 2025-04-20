@@ -1,27 +1,35 @@
 #! /usr/bin/env python3
 
-import argparse
+from __future__ import annotations
+
 import os
-import shutil
-import subprocess
-import sys
 import re
-
-from pathlib import Path
-from typing import Dict, List, Set, Union
-
+import sys
+import json
+import yaml
+import copy
+import splat
+import shutil
+import argparse
+import tempfile
+import subprocess
 import ninja_syntax
 
-import splat
-import splat.scripts.split as split
+from typing import Any, Union, Protocol, Literal, cast
+from pathlib import Path
+from contextlib import contextmanager
+
+from splat.scripts import split
+from splat.util.conf import load as splat_load_yaml
 from splat.segtypes.linker_entry import LinkerEntry
 
-ROOT = Path(__file__).parent
+
+ROOT = Path(__file__).parent.resolve()
 TOOLS_DIR = ROOT / "tools"
 
-YAML_FILE = "FF2.yaml"
+YAML_FILE = "config/FF2.yaml"
 BASENAME = "SLES_523.84"
-LD_PATH = f"{BASENAME}.ld"
+LD_PATH = f"build/{BASENAME}.ld"
 ELF_PATH = f"build/{BASENAME}"
 MAP_PATH = f"build/{BASENAME}.map"
 PRE_ELF_PATH = f"build/{BASENAME}.elf"
@@ -267,20 +275,11 @@ if __name__ == "__main__":
     )
     args = parser.parse_args()
 
-    try:
-        exec_shell(["wibo"])
-    except FileNotFoundError:
-        print("ERROR: wibo does not appear to be accessible")
-        print("To install it, please download it and put it in your PATH:")
-        print(
-            f"  wget https://github.com/decompals/wibo/releases/download/{WIBO_VER}/wibo && chmod +x wibo && sudo mv wibo /usr/bin/"
-        )
-        sys.exit(1)
 
     if args.clean:
         clean()
 
-    split.main([YAML_FILE], modes="all", verbose=False)
+    split.main([Path(YAML_FILE)], modes=["all"], verbose=False, disassemble_all=False)
 
     linker_entries = split.linker_writer.entries
 
