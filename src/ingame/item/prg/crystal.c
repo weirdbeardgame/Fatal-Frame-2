@@ -1,16 +1,22 @@
 #include "common.h"
 
-INCLUDE_ASM("asm/nonmatchings/ingame/item/prg/crystal", func_00131C50);
+INCLUDE_ASM("asm/nonmatchings/ingame/item/prg/crystal", _fixed_array_assert__FPCcUiUi);
 
-INCLUDE_ASM("asm/nonmatchings/ingame/item/prg/crystal", func_00131C80);
+INCLUDE_ASM("asm/nonmatchings/ingame/item/prg/crystal", _fixed_array_verifyrange__H1ZPv_UiUi_PX01);
 
-INCLUDE_ASM("asm/nonmatchings/ingame/item/prg/crystal", func_00131CB8);
+INCLUDE_ASM("asm/nonmatchings/ingame/item/prg/crystal", _fixed_array_verifyrange__H1ZPc_UiUi_PX01);
 
-INCLUDE_ASM("asm/nonmatchings/ingame/item/prg/crystal", func_00131CF0);
+INCLUDE_RODATA("asm/nonmatchings/ingame/item/prg/crystal", D_003A3638);
+
+INCLUDE_ASM("asm/nonmatchings/ingame/item/prg/crystal", _fixed_array_verifyrange__H1ZPUi_UiUi_PX01);
 
 INCLUDE_ASM("asm/nonmatchings/ingame/item/prg/crystal", PlyrCrystalInit__Fv);
 
 INCLUDE_ASM("asm/nonmatchings/ingame/item/prg/crystal", GetCrystal__Fi);
+
+INCLUDE_RODATA("asm/nonmatchings/ingame/item/prg/crystal", D_003A36A0);
+
+INCLUDE_RODATA("asm/nonmatchings/ingame/item/prg/crystal", D_003A36D0);
 
 INCLUDE_ASM("asm/nonmatchings/ingame/item/prg/crystal", LostCrystal__Fi);
 
@@ -28,6 +34,6 @@ INCLUDE_ASM("asm/nonmatchings/ingame/item/prg/crystal", SetSave_PlyrCrystal__FP1
 
 INCLUDE_ASM("asm/nonmatchings/ingame/item/prg/crystal", DebugAllCrystalGet__Fv);
 
-INCLUDE_ASM("asm/nonmatchings/ingame/item/prg/crystal", func_00132120);
+INCLUDE_ASM("asm/nonmatchings/ingame/item/prg/crystal", __static_initialization_and_destruction_0);
 
-INCLUDE_ASM("asm/nonmatchings/ingame/item/prg/crystal", func_00132128);
+INCLUDE_ASM("asm/nonmatchings/ingame/item/prg/crystal", _GLOBAL_$I$PlyrCrystalInit__Fv);

@@ -1,12 +1,14 @@
 #include "common.h"
 
-INCLUDE_ASM("asm/nonmatchings/ingame/map/MapLoad", func_0010B4C0);
+INCLUDE_ASM("asm/nonmatchings/ingame/map/MapLoad", _fixed_array_assert__FPCcUiUi);
 
-INCLUDE_ASM("asm/nonmatchings/ingame/map/MapLoad", func_0010B4F0);
+INCLUDE_ASM("asm/nonmatchings/ingame/map/MapLoad", _fixed_array_verifyrange__H1ZPv_UiUi_PX01);
 
-INCLUDE_ASM("asm/nonmatchings/ingame/map/MapLoad", func_0010B528);
+INCLUDE_ASM("asm/nonmatchings/ingame/map/MapLoad", _fixed_array_verifyrange__H1ZPc_UiUi_PX01);
 
-INCLUDE_ASM("asm/nonmatchings/ingame/map/MapLoad", func_0010B560);
+INCLUDE_RODATA("asm/nonmatchings/ingame/map/MapLoad", D_0039E8E0);
+
+INCLUDE_ASM("asm/nonmatchings/ingame/map/MapLoad", _fixed_array_verifyrange__H1ZPUi_UiUi_PX01);
 
 INCLUDE_ASM("asm/nonmatchings/ingame/map/MapLoad", MapLoadGetLabel__Fi);
 
@@ -26,11 +28,17 @@ INCLUDE_ASM("asm/nonmatchings/ingame/map/MapLoad", MapLoadGetFileID__Fi);
 
 INCLUDE_ASM("asm/nonmatchings/ingame/map/MapLoad", MapLoadGetHeadPtr__Fi);
 
-INCLUDE_ASM("asm/nonmatchings/ingame/map/MapLoad", func_0010B7D8);
+INCLUDE_ASM("asm/nonmatchings/ingame/map/MapLoad", MapLoadCheckFreeAreaLabelID__Fi);
 
 INCLUDE_ASM("asm/nonmatchings/ingame/map/MapLoad", MapLoadGetBuffID4Label__Fi);
 
 INCLUDE_ASM("asm/nonmatchings/ingame/map/MapLoad", MapLoadSetNoRegList__Fv);
+
+INCLUDE_RODATA("asm/nonmatchings/ingame/map/MapLoad", D_0039E950);
+
+INCLUDE_RODATA("asm/nonmatchings/ingame/map/MapLoad", D_0039E980);
+
+INCLUDE_RODATA("asm/nonmatchings/ingame/map/MapLoad", D_0039E9A8);
 
 INCLUDE_ASM("asm/nonmatchings/ingame/map/MapLoad", MapLoadGetHeader__Fv);
 
@@ -40,7 +48,7 @@ INCLUDE_ASM("asm/nonmatchings/ingame/map/MapLoad", MapLoadSetNowRoom__Fi);
 
 INCLUDE_ASM("asm/nonmatchings/ingame/map/MapLoad", MapLoadSetDrawFlgSub__Fii);
 
-INCLUDE_ASM("asm/nonmatchings/ingame/map/MapLoad", func_0010BCD8);
+INCLUDE_ASM("asm/nonmatchings/ingame/map/MapLoad", MapLoadCheckSwitch__Fii);
 
 INCLUDE_ASM("asm/nonmatchings/ingame/map/MapLoad", MapLoadSetDrawFlg__Fii);
 
@@ -78,7 +86,9 @@ INCLUDE_ASM("asm/nonmatchings/ingame/map/MapLoad", MapLoadDeleteRoom__Fi);
 
 INCLUDE_ASM("asm/nonmatchings/ingame/map/MapLoad", MapLoadDeleteRoomAll__Fv);
 
-INCLUDE_ASM("asm/nonmatchings/ingame/map/MapLoad", func_0010C7D0);
+INCLUDE_ASM("asm/nonmatchings/ingame/map/MapLoad", MapLoadRegistReq__FiPc);
+
+INCLUDE_RODATA("asm/nonmatchings/ingame/map/MapLoad", D_0039EAC8);
 
 INCLUDE_ASM("asm/nonmatchings/ingame/map/MapLoad", MapLoadMoveRoom__Fi);
 
@@ -86,7 +96,7 @@ INCLUDE_ASM("asm/nonmatchings/ingame/map/MapLoad", MapLoadReload__Fi);
 
 INCLUDE_ASM("asm/nonmatchings/ingame/map/MapLoad", MapLoadUpdatRoomDat__Fi);
 
-INCLUDE_ASM("asm/nonmatchings/ingame/map/MapLoad", func_0010CBA8);
+INCLUDE_ASM("asm/nonmatchings/ingame/map/MapLoad", MapLoadCallFurn__Fi);
 
 INCLUDE_ASM("asm/nonmatchings/ingame/map/MapLoad", MapLoadMain__Fv);
 
@@ -94,6 +104,6 @@ INCLUDE_ASM("asm/nonmatchings/ingame/map/MapLoad", MapLoadSetMemSpace__FUiUi);
 
 INCLUDE_ASM("asm/nonmatchings/ingame/map/MapLoad", MapLoadInit__Fi);
 
-INCLUDE_ASM("asm/nonmatchings/ingame/map/MapLoad", func_0010D168);
+INCLUDE_ASM("asm/nonmatchings/ingame/map/MapLoad", __static_initialization_and_destruction_0);
 
-INCLUDE_ASM("asm/nonmatchings/ingame/map/MapLoad", func_0010D170);
+INCLUDE_ASM("asm/nonmatchings/ingame/map/MapLoad", _GLOBAL_$I$MapLoadGetLabel__Fi);

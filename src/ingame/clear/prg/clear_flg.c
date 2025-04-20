@@ -1,12 +1,14 @@
 #include "common.h"
 
-INCLUDE_ASM("asm/nonmatchings/ingame/clear/prg/clear_flg", func_0012EDA8);
+INCLUDE_ASM("asm/nonmatchings/ingame/clear/prg/clear_flg", _fixed_array_assert__FPCcUiUi);
 
-INCLUDE_ASM("asm/nonmatchings/ingame/clear/prg/clear_flg", func_0012EDD8);
+INCLUDE_ASM("asm/nonmatchings/ingame/clear/prg/clear_flg", _fixed_array_verifyrange__H1ZPv_UiUi_PX01);
 
-INCLUDE_ASM("asm/nonmatchings/ingame/clear/prg/clear_flg", func_0012EE10);
+INCLUDE_ASM("asm/nonmatchings/ingame/clear/prg/clear_flg", _fixed_array_verifyrange__H1ZPc_UiUi_PX01);
 
-INCLUDE_ASM("asm/nonmatchings/ingame/clear/prg/clear_flg", func_0012EE48);
+INCLUDE_RODATA("asm/nonmatchings/ingame/clear/prg/clear_flg", D_003A32D0);
+
+INCLUDE_ASM("asm/nonmatchings/ingame/clear/prg/clear_flg", _fixed_array_verifyrange__H1ZPUi_UiUi_PX01);
 
 INCLUDE_ASM("asm/nonmatchings/ingame/clear/prg/clear_flg", ClearFlgCtrlInit__Fv);
 
@@ -40,6 +42,14 @@ INCLUDE_ASM("asm/nonmatchings/ingame/clear/prg/clear_flg", SetSave_ClearFlg__FP1
 
 INCLUDE_ASM("asm/nonmatchings/ingame/clear/prg/clear_flg", DebugAllClearFlgUp__Fv);
 
-INCLUDE_ASM("asm/nonmatchings/ingame/clear/prg/clear_flg", func_0012F940);
+INCLUDE_ASM("asm/nonmatchings/ingame/clear/prg/clear_flg", __static_initialization_and_destruction_0);
 
-INCLUDE_ASM("asm/nonmatchings/ingame/clear/prg/clear_flg", func_0012F970);
+INCLUDE_ASM("asm/nonmatchings/ingame/clear/prg/clear_flg", _GLOBAL_$I$clear_flg_ctrl);
+
+INCLUDE_RODATA("asm/nonmatchings/ingame/clear/prg/clear_flg", D_003A3328);
+
+INCLUDE_RODATA("asm/nonmatchings/ingame/clear/prg/clear_flg", D_003A3358);
+
+INCLUDE_RODATA("asm/nonmatchings/ingame/clear/prg/clear_flg", D_003A3388);
+
+INCLUDE_RODATA("asm/nonmatchings/ingame/clear/prg/clear_flg", D_003A33A8);

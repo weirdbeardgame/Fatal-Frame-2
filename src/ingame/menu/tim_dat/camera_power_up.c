@@ -1,12 +1,12 @@
 #include "common.h"
 
-INCLUDE_ASM("asm/nonmatchings/ingame/menu/tim_dat/camera_power_up", func_0012D5E8);
+INCLUDE_ASM("asm/nonmatchings/ingame/menu/tim_dat/camera_power_up", _fixed_array_assert__FPCcUiUi);
 
-INCLUDE_ASM("asm/nonmatchings/ingame/menu/tim_dat/camera_power_up", func_0012D618);
+INCLUDE_ASM("asm/nonmatchings/ingame/menu/tim_dat/camera_power_up", _fixed_array_verifyrange__H1ZPv_UiUi_PX01);
 
-INCLUDE_ASM("asm/nonmatchings/ingame/menu/tim_dat/camera_power_up", func_0012D650);
+INCLUDE_ASM("asm/nonmatchings/ingame/menu/tim_dat/camera_power_up", _fixed_array_verifyrange__H1ZPc_UiUi_PX01);
 
-INCLUDE_ASM("asm/nonmatchings/ingame/menu/tim_dat/camera_power_up", func_0012D688);
+INCLUDE_ASM("asm/nonmatchings/ingame/menu/tim_dat/camera_power_up", _fixed_array_verifyrange__H1ZPUi_UiUi_PX01);
 
 INCLUDE_ASM("asm/nonmatchings/ingame/menu/tim_dat/camera_power_up", Init__14CCameraPowerUp);
 

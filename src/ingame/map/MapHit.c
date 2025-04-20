@@ -1,12 +1,14 @@
 #include "common.h"
 
-INCLUDE_ASM("asm/nonmatchings/ingame/map/MapHit", func_00108B88);
+INCLUDE_ASM("asm/nonmatchings/ingame/map/MapHit", _fixed_array_assert__FPCcUiUi);
 
-INCLUDE_ASM("asm/nonmatchings/ingame/map/MapHit", func_00108BB8);
+INCLUDE_ASM("asm/nonmatchings/ingame/map/MapHit", _fixed_array_verifyrange__H1ZPv_UiUi_PX01);
 
-INCLUDE_ASM("asm/nonmatchings/ingame/map/MapHit", func_00108BF0);
+INCLUDE_ASM("asm/nonmatchings/ingame/map/MapHit", _fixed_array_verifyrange__H1ZPc_UiUi_PX01);
 
-INCLUDE_ASM("asm/nonmatchings/ingame/map/MapHit", func_00108C28);
+INCLUDE_RODATA("asm/nonmatchings/ingame/map/MapHit", D_0039E580);
+
+INCLUDE_ASM("asm/nonmatchings/ingame/map/MapHit", _fixed_array_verifyrange__H1ZPUi_UiUi_PX01);
 
 INCLUDE_ASM("asm/nonmatchings/ingame/map/MapHit", MapHitGetColLen__Fv);
 
@@ -16,7 +18,7 @@ INCLUDE_ASM("asm/nonmatchings/ingame/map/MapHit", MapHitSetFlg__Fii);
 
 INCLUDE_ASM("asm/nonmatchings/ingame/map/MapHit", MapHitDeleteFlg__Fii);
 
-INCLUDE_ASM("asm/nonmatchings/ingame/map/MapHit", func_00108D78);
+INCLUDE_ASM("asm/nonmatchings/ingame/map/MapHit", MapHitGetFreeArea__Fi);
 
 INCLUDE_ASM("asm/nonmatchings/ingame/map/MapHit", MapHitRegistRec__FiiiPf);
 
@@ -50,6 +52,6 @@ INCLUDE_ASM("asm/nonmatchings/ingame/map/MapHit", MapHitSetDoorZ__Ff);
 
 INCLUDE_ASM("asm/nonmatchings/ingame/map/MapHit", MapTesCallbackHit__FP11MAPHIT_HEADP10MAPHIT_DATi);
 
-INCLUDE_ASM("asm/nonmatchings/ingame/map/MapHit", __static_initialization_and_destruction_1);
+INCLUDE_ASM("asm/nonmatchings/ingame/map/MapHit", __static_initialization_and_destruction_0);
 
-INCLUDE_ASM("asm/nonmatchings/ingame/map/MapHit", func_001094E8);
+INCLUDE_ASM("asm/nonmatchings/ingame/map/MapHit", _GLOBAL_$I$MapHitDoorZ);

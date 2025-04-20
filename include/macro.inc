@@ -1,10 +1,11 @@
-.macro glabel label
-    .global \label
-    .type \label, @function
-    \label:
+.macro glabel name, visibility=global
+.\visibility \name
+.type \name, @function
+\name:
 .endm
 
-.macro dlabel label
-    .global \label
-    \label:
+.macro dlabel name, visibility=global
+.\visibility \name
+.type \name, @object
+\name:
 .endm

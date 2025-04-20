@@ -1,117 +1,139 @@
 #include "common.h"
 
-INCLUDE_ASM("asm/nonmatchings/save_load/prg/game_data_save", func_001A7D58);
+INCLUDE_ASM("asm/nonmatchings/save_load/prg/game_data_save", _fixed_array_assert__FPCcUiUi);
 
-INCLUDE_ASM("asm/nonmatchings/save_load/prg/game_data_save", func_001A7D88);
+INCLUDE_ASM("asm/nonmatchings/save_load/prg/game_data_save", _fixed_array_verifyrange__H1ZPv_UiUi_PX01);
 
-INCLUDE_ASM("asm/nonmatchings/save_load/prg/game_data_save", func_001A7DC0);
+INCLUDE_ASM("asm/nonmatchings/save_load/prg/game_data_save", _fixed_array_verifyrange__H1ZPc_UiUi_PX01);
 
-INCLUDE_ASM("asm/nonmatchings/save_load/prg/game_data_save", func_001A7DF8);
+INCLUDE_RODATA("asm/nonmatchings/save_load/prg/game_data_save", D_003B34F0);
+
+INCLUDE_ASM("asm/nonmatchings/save_load/prg/game_data_save", _fixed_array_verifyrange__H1ZPUi_UiUi_PX01);
 
 INCLUDE_ASM("asm/nonmatchings/save_load/prg/game_data_save", GameDataSaveInit__Fc);
 
-INCLUDE_ASM("asm/nonmatchings/save_load/prg/game_data_save", func_001A7F00);
+INCLUDE_ASM("asm/nonmatchings/save_load/prg/game_data_save", GameDataSaveCtrlInit__Fc);
 
 INCLUDE_ASM("asm/nonmatchings/save_load/prg/game_data_save", GameDataSaveBackGroundLoadReq__FPFi_PvPFPv_v);
 
-INCLUDE_ASM("asm/nonmatchings/save_load/prg/game_data_save", func_001A8010);
+INCLUDE_ASM("asm/nonmatchings/save_load/prg/game_data_save", GetGameDataSaveDataMem__FPPvi);
 
-INCLUDE_ASM("asm/nonmatchings/save_load/prg/game_data_save", func_001A8060);
+INCLUDE_ASM("asm/nonmatchings/save_load/prg/game_data_save", GameDataSaveTexLoadWait__Fv);
+
+INCLUDE_RODATA("asm/nonmatchings/save_load/prg/game_data_save", D_003B3568);
+
+INCLUDE_RODATA("asm/nonmatchings/save_load/prg/game_data_save", D_003B3598);
+
+INCLUDE_RODATA("asm/nonmatchings/save_load/prg/game_data_save", D_003B35B0);
 
 INCLUDE_ASM("asm/nonmatchings/save_load/prg/game_data_save", GameDataSaveMain__Fv);
 
-INCLUDE_ASM("asm/nonmatchings/save_load/prg/game_data_save", func_001A81C8);
+INCLUDE_ASM("asm/nonmatchings/save_load/prg/game_data_save", GameDataSaveOutReq__Fv);
 
-INCLUDE_ASM("asm/nonmatchings/save_load/prg/game_data_save", func_001A81E8);
+INCLUDE_ASM("asm/nonmatchings/save_load/prg/game_data_save", GameDataSaveMcMain__Fv);
 
-INCLUDE_ASM("asm/nonmatchings/save_load/prg/game_data_save", func_001A83E8);
+INCLUDE_ASM("asm/nonmatchings/save_load/prg/game_data_save", GameDataSaveMcCheckInit__Fv);
 
-INCLUDE_ASM("asm/nonmatchings/save_load/prg/game_data_save", func_001A8440);
+INCLUDE_ASM("asm/nonmatchings/save_load/prg/game_data_save", GameDataSaveMcCheckWait__Fv);
 
-INCLUDE_ASM("asm/nonmatchings/save_load/prg/game_data_save", func_001A8598);
+INCLUDE_ASM("asm/nonmatchings/save_load/prg/game_data_save", GameDataSaveMcHeadLoadInit__Fv);
 
-INCLUDE_ASM("asm/nonmatchings/save_load/prg/game_data_save", func_001A8630);
+INCLUDE_ASM("asm/nonmatchings/save_load/prg/game_data_save", GameDataSaveMcHeadLoadWait__Fv);
 
-INCLUDE_ASM("asm/nonmatchings/save_load/prg/game_data_save", func_001A87E8);
+INCLUDE_ASM("asm/nonmatchings/save_load/prg/game_data_save", GameDataSaveMcSnapLoadInit__Fv);
 
-INCLUDE_ASM("asm/nonmatchings/save_load/prg/game_data_save", func_001A89D0);
+INCLUDE_ASM("asm/nonmatchings/save_load/prg/game_data_save", GameDataSaveMcSnapLoadWait__Fv);
 
-INCLUDE_ASM("asm/nonmatchings/save_load/prg/game_data_save", func_001A8AD0);
+INCLUDE_ASM("asm/nonmatchings/save_load/prg/game_data_save", GameDataSaveMcSaveFileSel__Fv);
 
-INCLUDE_ASM("asm/nonmatchings/save_load/prg/game_data_save", func_001A8AF8);
+INCLUDE_ASM("asm/nonmatchings/save_load/prg/game_data_save", GameDataSaveMcSaveFileSelPad__Fv);
 
-INCLUDE_ASM("asm/nonmatchings/save_load/prg/game_data_save", func_001A8CB8);
+INCLUDE_ASM("asm/nonmatchings/save_load/prg/game_data_save", GameDataSaveMcSaveConf__Fv);
 
-INCLUDE_ASM("asm/nonmatchings/save_load/prg/game_data_save", func_001A8CE0);
+INCLUDE_ASM("asm/nonmatchings/save_load/prg/game_data_save", GameDataSaveMcSaveConfPad__Fv);
 
-INCLUDE_ASM("asm/nonmatchings/save_load/prg/game_data_save", func_001A8E28);
+INCLUDE_ASM("asm/nonmatchings/save_load/prg/game_data_save", GameDataSaveMcSystemLoadInit__Fv);
 
-INCLUDE_ASM("asm/nonmatchings/save_load/prg/game_data_save", func_001A8EC0);
+INCLUDE_ASM("asm/nonmatchings/save_load/prg/game_data_save", GameDataSaveMcSystemLoadWait__Fv);
 
-INCLUDE_ASM("asm/nonmatchings/save_load/prg/game_data_save", func_001A9058);
+INCLUDE_ASM("asm/nonmatchings/save_load/prg/game_data_save", GameDataSaveMcSaveInit__Fv);
 
-INCLUDE_ASM("asm/nonmatchings/save_load/prg/game_data_save", func_001A92F8);
+INCLUDE_ASM("asm/nonmatchings/save_load/prg/game_data_save", GameDataSaveMcSaveWait__Fv);
 
-INCLUDE_ASM("asm/nonmatchings/save_load/prg/game_data_save", func_001A9388);
+INCLUDE_ASM("asm/nonmatchings/save_load/prg/game_data_save", GameDataSaveMcErrorConfInit__Fv);
 
-INCLUDE_ASM("asm/nonmatchings/save_load/prg/game_data_save", func_001A93F8);
+INCLUDE_ASM("asm/nonmatchings/save_load/prg/game_data_save", GameDataSaveMcErrorConfWait__Fv);
 
-INCLUDE_ASM("asm/nonmatchings/save_load/prg/game_data_save", func_001A9470);
+INCLUDE_ASM("asm/nonmatchings/save_load/prg/game_data_save", GameDataSaveMcErrorConfPad__Fv);
 
-INCLUDE_ASM("asm/nonmatchings/save_load/prg/game_data_save", func_001A94F8);
+INCLUDE_ASM("asm/nonmatchings/save_load/prg/game_data_save", GameDataSaveMcEndConf__Fv);
 
-INCLUDE_ASM("asm/nonmatchings/save_load/prg/game_data_save", func_001A9580);
+INCLUDE_ASM("asm/nonmatchings/save_load/prg/game_data_save", GameDataSaveMcRemakeConfInit__Fv);
 
-INCLUDE_ASM("asm/nonmatchings/save_load/prg/game_data_save", func_001A95C0);
+INCLUDE_ASM("asm/nonmatchings/save_load/prg/game_data_save", GameDataSaveMcRemakeConfWait__Fv);
 
-INCLUDE_ASM("asm/nonmatchings/save_load/prg/game_data_save", func_001A95E8);
+INCLUDE_ASM("asm/nonmatchings/save_load/prg/game_data_save", GameDataSaveMcRemakeConfPad__Fv);
 
-INCLUDE_ASM("asm/nonmatchings/save_load/prg/game_data_save", func_001A9728);
+INCLUDE_ASM("asm/nonmatchings/save_load/prg/game_data_save", GameDataSaveMcRemakeDirDelInit__Fv);
 
-INCLUDE_ASM("asm/nonmatchings/save_load/prg/game_data_save", func_001A9760);
+INCLUDE_ASM("asm/nonmatchings/save_load/prg/game_data_save", GameDataSaveMcRemakeDirDelWait__Fv);
 
-INCLUDE_ASM("asm/nonmatchings/save_load/prg/game_data_save", func_001A97C0);
+INCLUDE_ASM("asm/nonmatchings/save_load/prg/game_data_save", GameDataSaveMcNewMakeConfInit__Fv);
 
-INCLUDE_ASM("asm/nonmatchings/save_load/prg/game_data_save", func_001A9800);
+INCLUDE_ASM("asm/nonmatchings/save_load/prg/game_data_save", GameDataSaveMcNewMakeConfWait__Fv);
 
-INCLUDE_ASM("asm/nonmatchings/save_load/prg/game_data_save", func_001A9828);
+INCLUDE_ASM("asm/nonmatchings/save_load/prg/game_data_save", GameDataSaveMcNewMakeConfPad__Fv);
 
-INCLUDE_ASM("asm/nonmatchings/save_load/prg/game_data_save", func_001A9968);
+INCLUDE_ASM("asm/nonmatchings/save_load/prg/game_data_save", GameDataSaveMcNewMakeInit__Fv);
 
-INCLUDE_ASM("asm/nonmatchings/save_load/prg/game_data_save", func_001A99D8);
+INCLUDE_ASM("asm/nonmatchings/save_load/prg/game_data_save", GameDataSaveMcNewMakeWait__Fv);
 
-INCLUDE_ASM("asm/nonmatchings/save_load/prg/game_data_save", func_001A9A68);
+INCLUDE_ASM("asm/nonmatchings/save_load/prg/game_data_save", GameDataSaveMcNewMakeSaveInit__Fv);
 
-INCLUDE_ASM("asm/nonmatchings/save_load/prg/game_data_save", func_001A9CF0);
+INCLUDE_ASM("asm/nonmatchings/save_load/prg/game_data_save", GameDataSaveMcNewMakeSaveWait__Fv);
 
-INCLUDE_ASM("asm/nonmatchings/save_load/prg/game_data_save", func_001A9D80);
+INCLUDE_ASM("asm/nonmatchings/save_load/prg/game_data_save", GameDataSaveMcFormatConfInit__Fv);
 
-INCLUDE_ASM("asm/nonmatchings/save_load/prg/game_data_save", func_001A9DC0);
+INCLUDE_RODATA("asm/nonmatchings/save_load/prg/game_data_save", __FUNCTION__.1063);
 
-INCLUDE_ASM("asm/nonmatchings/save_load/prg/game_data_save", func_001A9E38);
+INCLUDE_RODATA("asm/nonmatchings/save_load/prg/game_data_save", D_003B3730);
 
-INCLUDE_ASM("asm/nonmatchings/save_load/prg/game_data_save", func_001A9F78);
+INCLUDE_RODATA("asm/nonmatchings/save_load/prg/game_data_save", D_003B3740);
 
-INCLUDE_ASM("asm/nonmatchings/save_load/prg/game_data_save", func_001A9FB0);
+INCLUDE_RODATA("asm/nonmatchings/save_load/prg/game_data_save", D_003B3758);
 
-INCLUDE_ASM("asm/nonmatchings/save_load/prg/game_data_save", func_001AA010);
+INCLUDE_RODATA("asm/nonmatchings/save_load/prg/game_data_save", __FUNCTION__.1122);
 
-INCLUDE_ASM("asm/nonmatchings/save_load/prg/game_data_save", func_001AA030);
+INCLUDE_RODATA("asm/nonmatchings/save_load/prg/game_data_save", D_003B3798);
 
-INCLUDE_ASM("asm/nonmatchings/save_load/prg/game_data_save", func_001AA070);
+INCLUDE_ASM("asm/nonmatchings/save_load/prg/game_data_save", GameDataSaveMcFormatConfWait__Fv);
+
+INCLUDE_ASM("asm/nonmatchings/save_load/prg/game_data_save", GameDataSaveMcFormatConfPad__Fv);
+
+INCLUDE_ASM("asm/nonmatchings/save_load/prg/game_data_save", GameDataSaveMcFormatInit__Fv);
+
+INCLUDE_ASM("asm/nonmatchings/save_load/prg/game_data_save", GameDataSaveMcFormatWait__Fv);
+
+INCLUDE_ASM("asm/nonmatchings/save_load/prg/game_data_save", GameDataSaveMcFormatEndInit__Fv);
+
+INCLUDE_ASM("asm/nonmatchings/save_load/prg/game_data_save", GameDataSaveMcFormatEndWait__Fv);
+
+INCLUDE_ASM("asm/nonmatchings/save_load/prg/game_data_save", GameDataSaveMcEveryFrameCheck__Fv);
 
 INCLUDE_ASM("asm/nonmatchings/save_load/prg/game_data_save", GameDataSaveEnd__Fv);
 
 INCLUDE_ASM("asm/nonmatchings/save_load/prg/game_data_save", GameDataSaveTexMemFree__Fv);
 
-INCLUDE_ASM("asm/nonmatchings/save_load/prg/game_data_save", func_001AA178);
+INCLUDE_ASM("asm/nonmatchings/save_load/prg/game_data_save", LiberateGameDataSaveMem__FPPv);
 
-INCLUDE_ASM("asm/nonmatchings/save_load/prg/game_data_save", func_001AA1B8);
+INCLUDE_ASM("asm/nonmatchings/save_load/prg/game_data_save", GameDataSaveDispInit__Fv);
 
 INCLUDE_ASM("asm/nonmatchings/save_load/prg/game_data_save", GameDataSaveDispMain__Fv);
 
-INCLUDE_ASM("asm/nonmatchings/save_load/prg/game_data_save", func_001AA3F8);
+INCLUDE_ASM("asm/nonmatchings/save_load/prg/game_data_save", GameData_SaveFileSelDisp__FUc);
 
-INCLUDE_ASM("asm/nonmatchings/save_load/prg/game_data_save", func_001AA6A8);
+INCLUDE_ASM("asm/nonmatchings/save_load/prg/game_data_save", __static_initialization_and_destruction_0);
 
-INCLUDE_ASM("asm/nonmatchings/save_load/prg/game_data_save", func_001AA6D0);
+INCLUDE_ASM("asm/nonmatchings/save_load/prg/game_data_save", _GLOBAL_$I$GameDataSaveInit__Fc);
+
+INCLUDE_RODATA("asm/nonmatchings/save_load/prg/game_data_save", D_003B38A8);

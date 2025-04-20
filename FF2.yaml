@@ -3,32 +3,57 @@ sha1: 06e0f35b0b38ed54337740fdea8c3eb18bb98bd5
 options:
   # paths
   basename: SLES_523.84
-  target_path: SLES_523.84
-  gp_value: 0x3f57f0
-  base_path: .
-  compiler: GCC
-  find_file_boundaries: False
+  target_path: config/SLES_523.84
+
   platform: ps2
-  string_encoding: EUC-JP
+
+  gp_value: 0x3f57f0
+
+  base_path: .
+
+  compiler: EE-GCC
+
+  find_file_boundaries: False
+
+  string_encoding: ASCII
+  data_string_encoding: ASCII
+  
+  #migrate_rodata_to_functions: no
+
   #rodata_string_guesser_level: 2 # improve string detection
+
   use_legacy_include_asm: False
+
   auto_decompile_empty_functions: False
+
   create_undefined_funcs_auto: True
-  undefined_funcs_auto_path: undefined_funcs_auto.txt
+  undefined_funcs_auto_path: config/undefined_funcs_auto.txt
+
   create_undefined_syms_auto: True
-  undefined_syms_auto_path: undefined_syms_auto.txt
-  symbol_addrs_path: symbol_addrs.txt
+  undefined_syms_auto_path: config/undefined_syms_auto.txt
+
+  symbol_addrs_path: config/symbol_addrs.txt
+
+  asm_data_macro: dlabel
+
   asm_path: asm
   src_path: src
+
   build_path: build
+
   extensions_path: tools/splat_ext
+
   section_order:
     [
       ".text",
       ".vutext",
       ".data",
+      ".eh_frame",
+      ".ctor",
+      ".dtor",
       ".vudata",
       ".rodata",
+      ".gcc_except_table",
       ".lit4",
       ".sdata",
       ".sbss",
@@ -36,7 +61,8 @@ options:
       ".vubss",
     ]
   auto_all_sections: [".data", ".sdata", ".sbss", ".lit4", ".rodata", ".bss"]
-  subalign: 4
+  subalign: null
+  
   disasm_unknown: True
   named_regs_for_c_funcs: False
 segments:
@@ -47,166 +73,2288 @@ segments:
     vram: 0x100000
     bss_size: 0x0d8bec
     subsegments:
-    - [0x1000, asm, crt0.s]
-    - [0x1258, asm, ingame/map/CBuff]
-    - [0x14d0, asm, graphics/graph3d/CDebugEdit]
-    - [0x1db0, asm, ingame/plyr/ChrSort]
-    - [0x23d8, asm, debug/DbFurnPre]
-    - [0x2a38, asm, common/FileSt]
-    - [0x2a70, asm, ingame/map/FurnCtl]
-    - [0x3910, asm, ingame/map/FurnLoad]
-    - [0x3db0, asm, graphics/scene/IngameScene]
-    - [0x45c0, asm, ingame/map/MapAnim]
-    - [0x62e0, asm, ingame/map/MapDoor]
-    - [0x8278, asm, ingame/map/MapDraw]
-    - [0x91b0, asm, ingame/map/MapFog]
-    - [0x9b88, asm, ingame/map/MapHit]
-    - [0xa508, asm, ingame/map/MapLBuff]
-    - [0xa820, asm, ingame/map/MapLight]
-    - [0xc4c0, asm, ingame/map/MapLoad]
-    - [0xe190, asm, ingame/map/MapObj]
-    - [0xf3d0, asm, ingame/map/MapObjReg]
-    - [0x117c0, asm, ingame/map/MapPut]
-    - [0x12598, asm, ingame/map/MapSave]
-    - [0x12d30, asm, ingame/map/MapSky]
-    - [0x143c8, asm, ingame/map/MapSp]
-    - [0x15398, asm, ingame/map/MhCtl]
-    - [0x15a88, asm, common/PhfUnPk]
-    - [0x15c58, asm, ingame/map/RegDat]
-    - [0x177a0, asm, common/SingleLinkList]
-    - [0x17ba0, asm, outgame/SpriteCmn]
-    - [0x18190, asm, graphics/motion/accessory]
-    - [0x1d168, asm, graphics/motion/acs_dat]
-    - [0x1d240, asm, album/prg/album]
-    - [0x1de08, asm, album/prg/album_dat]
-    - [0x1dee0, asm, ingame/enemy/alg_manage]
-    - [0x2b568, asm, graphics/motion/anicode]
-    - [0x2c650, asm, outgame/autoload]
-    - [0x2d110, asm, ingame/photo/bonus_shot]
-    #Missing file btn_sport_dat.c
-    - [0x2e510, asm, ingame/menu/tim_dat/cam_level_up_point]
-    #Missing file camera_film.c
-    #Missing file camera_menu.c
-    - [0x2e5e8, asm, ingame/menu/tim_dat/camera_power_up]
-    - [0x2e7a8, asm, ingame/photo/center_circle]
-    - [0x2ede0, asm, ingame/photo/center_cross]
-    - [0x2f1a8, asm, outgame/chapter_sel]
-    - [0x2fbe8, asm, ingame/plyr/charBB]
-    - [0x2fda8, asm, ingame/clear/prg/clear_flg]
-    - [0x30990, asm, ingame/clear/prg/clearmenu]
-    - [0x31088, asm, ingame/clear/prg/clearmenu_top]
-    - [0x31b78, asm, system/compress/compress]
-    - [0x32c50, asm, ingame/item/prg/crystal]
-    - [0x33148, asm, ingame/photo/damage_disp]
-    - [0x333a8, asm, debug/debug]
-    - [0x33fa8, asm, debug/debug_menu]
-    - [0x365a8, asm, graphics/dmaVif1]
-    - [0x37098, asm, ingame/door/prg/door]
-    - [0x378b0, asm, graphics/graph2d/draw_btn]
-    - [0xa6dc0, asm, outgame/gallery]
-    - [0xa7b80, asm, outgame/gallery_disp]
-    - [0xa8d58, asm, save_load/prg/game_data_save]
-    - [0xab6f0, asm, ingame/clear/prg/game_result]
-    - [0xad4b8, asm, ingame/gameover/prg/gameover]
-    - [0xb09a8, c, main/gphase]
-    - [0xb0d38, c, graphics/gra3d]
+      - [0x1000, asm, crt0] # size:0x258
+      - [0x1258, asm, ingame/map/CBuff] # size:0x274
+      - [0x14d0, asm, graphics/graph3d/CDebugEdit] # size:0x8e0
+      - [0x1db0, asm, ingame/plyr/ChrSort] # size:0x624
+      - [0x23d8, asm, debug/DbFurnPre] # size:0x65c
+      - [0x2a38, asm, common/FileSt] # size:0x34
+      - [0x2a70, asm, ingame/map/FurnCtl] # size:0xea0
+      - [0x3910, asm, ingame/map/FurnLoad] # size:0x4a0
+      - [0x3db0, asm, graphics/scene/IngameScene] # size:0x80c
+      - [0x45c0, asm, ingame/map/MapAnim] # size:0x1d20
+      - [0x62e0, asm, ingame/map/MapDoor] # size:0x1f98
+      - [0x8278, asm, ingame/map/MapDraw] # size:0xf38
+      - [0x91b0, asm, ingame/map/MapFog] # size:0x9d4
+      - [0x9b88, asm, ingame/map/MapHit] # size:0x980
+      - [0xa508, asm, ingame/map/MapLBuff] # size:0x314
+      - [0xa820, asm, ingame/map/MapLight] # size:0x1ca0
+      - [0xc4c0, asm, ingame/map/MapLoad] # size:0x1cd0
+      - [0xe190, asm, ingame/map/MapObj] # size:0x1240
+      - [0xf3d0, asm, ingame/map/MapObjReg] # size:0x23f0
+      - [0x117c0, asm, ingame/map/MapPut] # size:0xdd8
+      - [0x12598, asm, ingame/map/MapSave] # size:0x798
+      - [0x12d30, asm, ingame/map/MapSky] # size:0x1698
+      - [0x143c8, asm, ingame/map/MapSp] # size:0xfd0
+      - [0x15398, asm, ingame/map/MhCtl] # size:0x6ec
+      - [0x15a88, asm, common/PhfUnPk] # size:0x1d0A
+      - [0x15c58, asm, ingame/map/RegDat] # size:0x1b48
+      - [0x177a0, asm, common/SingleLinkList] # size:0x400
+      - [0x17ba0, asm, outgame/SpriteCmn] # size:0x5f0
+      - [0x18190, asm, graphics/motion/accessory] # size:0x4fd8
+      - [0x1d168, asm, graphics/motion/acs_dat] # size:0xd4
+      - [0x1d240, asm, album/prg/album] # size:0xbc8
+      - [0x1de08, asm, album/prg/album_dat] # size:0xd4
+      - [0x1dee0, asm, album/prg/album_disp] # size:0x3294
+      - [0x21178, asm, album/prg/album_edit] # size:0x4298
+      - [0x25410, asm, album/prg/album_load] # size:0x1b00
+      - [0x26f10, asm, album/prg/album_mem] # size:0x1a4
+      - [0x270b8, asm, album/prg/album_save] # size:0x22d0
+      - [0x29388, asm, album/prg/album_view] # size:0x2088
+      - [0x2b410, asm, ingame/enemy/alg_manage] # size:0x158
+      - [0x2b568, asm, graphics/motion/anicode] # size:0x948
+      - [0x2beb0, asm, ingame/menu/anim_2d] # size:0x7a0
+      - [0x2c650, asm, outgame/autoload] # size:0xabc
+      - [0x2d110, asm, ingame/photo/bonus_shot] # size:0x13fc
+      - [0x2e510, asm, ingame/menu/tim_dat/cam_level_up_point] # size:0xd4
+      - [0x2e5e8, asm, ingame/menu/tim_dat/camera_power_up] # size:0x1bc
+      - [0x2e7a8, asm, ingame/photo/center_circle] # size:0x638
+      - [0x2ede0, asm, ingame/photo/center_cross] # size:0x3c8
+      - [0x2f1a8, asm, outgame/chapter_sel] # size:0xa3c
+      - [0x2fbe8, asm, ingame/plyr/charBB] # size:0x1bc
+      - [0x2fda8, asm, ingame/clear/prg/clear_flg] # size:0xbe8
+      - [0x30990, asm, ingame/clear/prg/clearmenu] # size:0x6f8
+      - [0x31088, asm, ingame/clear/prg/clearmenu_top] # size:0xaf0
+      - [0x31b78, asm, system/compress/compress] # size:0x10d4
+      - [0x32c50, asm, ingame/item/prg/crystal] # size:0x4f8
+      - [0x33148, asm, ingame/photo/damage_disp] # size:0x260
+      - [0x333a8, asm, debug/debug] # size:0xc00
+      - [0x33fa8, asm, debug/debug_menu] # size:0x2600
+      - [0x365a8, asm, graphics/dmaVif1] # size:0xaec
+      - [0x37098, asm, ingame/door/prg/door] # size:0x818
+      - [0x378b0, asm, graphics/graph2d/draw_btn] # size:0x8c
+      - [0x37940, asm, graphics/graph2d/draw_caption] # size:0x49c
+      - [0x37de0, asm, graphics/graph2d/draw_cmn_num] # size:0x22c
+      - [0x38010, asm, graphics/graph2d/draw_cmn_win] # size:0xe1c
+      - [0x38e30, asm, graphics/draw_env] # size:0x8f4
+      - [0x39728, asm, graphics/graph2d/draw_line] # size:0x364
+      - [0x39a90, asm, graphics/graph3d/eeException] # size:0x5ec
+      - [0x3a080, asm, graphics/graph3d/eeFile] # size:0x1dc8
+      - [0x3be48, asm, graphics/graph3d/eeFindFile] # size:0x2058
+      - [0x3dea0, asm, graphics/graph3d/eeProfile] # size:0x38
+      - [0x3ded8, asm, system/os/eecdvd] # size:0x2c0
+      - [0x3e198, asm, graphics/effect/effect] # size:0x2c60
+      - [0x40df8, asm, graphics/effect/effect_butterfly] # size:0x2228
+      - [0x43020, asm, graphics/effect/effect_ene] # size:0x7d20
+      - [0x4ad40, asm, graphics/effect/effect_obj] # size:0x7f98
+      - [0x52cd8, asm, graphics/effect/effect_oth] # size:0xa280
+      - [0x5cf58, asm, graphics/effect/effect_pak] # size:0x1c4
+      - [0x5d120, asm, graphics/effect/effect_rain] # size:0x183c
+      - [0x5e960, asm, graphics/effect/effect_rdr] # size:0xe00
+      - [0x5f760, asm, graphics/effect/effect_scr] # size:0x6a78
+      - [0x661d8, asm, graphics/effect/effect_spr] # size:0x778
+      - [0x66950, asm, graphics/effect/effect_sub] # size:0x382c
+      - [0x6a180, asm, graphics/effect/effect_torch] # size:0x1ff0
+      - [0x6c170, asm, ingame/clear/prg/ending] # size:0x264
+      - [0x6c3d8, asm, ingame/photo/ene_life] # size:0x570
+      - [0x6c948, asm, ingame/enemy/ene_mot_ctrl] # size:0x420
+      - [0x6cd68, asm, ingame/enemy/enemy] # size:0x5dd8
+      - [0x72b40, asm, ingame/enemy/enemy_act] # size:0xa1d0
+      - [0x7cd10, asm, ingame/enemy/enemy_dat] # size:0x34c
+      - [0x7d060, asm, ingame/event/prg/ev_change] # size:0xd60
+      - [0x7ddc0, asm, ingame/event/prg/ev_debug] # size:0x30c
+      - [0x7e0d0, asm, ingame/event/prg/ev_disp] # size:0xf18
+      - [0x7efe8, asm, ingame/event/dat/ev_disp_dat] # size:0x120
+      - [0x7f108, asm, ingame/event/prg/ev_ene] # size:0x6a8
+      - [0x7f7b0, asm, ingame/event/prg/ev_exe] # size:0x880
+      - [0x80030, asm, ingame/event/prg/ev_gaze] # size:0x1d0
+      - [0x80200, asm, ingame/event/prg/ev_get] # size:0x468
+      - [0x80668, asm, ingame/event/prg/ev_macro] # size:0x9048
+      - [0x896b0, asm, ingame/event/prg/ev_main] # size:0x2d8
+      - [0x89988, asm, ingame/event/prg/ev_open] # size:0x1fd0
+      - [0x8b958, asm, ingame/event/prg/ev_phase] # size:0x2ec
+      - [0x8bc48, asm, ingame/event/prg/ev_se] # size:0x5cc
+      - [0x8c218, asm, ingame/event/prg/ev_sis] # size:0x3b8
+      - [0x8c5d0, asm, ingame/event/prg/ev_talk] # size:0xa98
+      - [0x8d068, asm, ingame/event/dat/ev_talk_dat] # size:0x120
+      - [0x8d188, asm, ingame/event/prg/ev_timer] # size:0x4d8
+      - [0x8d660, asm, ingame/camera/event_camera] # size:0x1f4c
+      - [0x8f5b0, asm, graphics/graph2d/fade] # size:0x288
+      - [0x8f838, asm, ingame/enemy/fene_entry] # size:0xe0c
+      - [0x90648, asm, ingame/photo/filament] # size:0x5b4
+      - [0x90c00, asm, ingame/item/prg/file] # size:0xbc0
+      - [0x917c0, asm, ingame/item/dat/file_dat] # size:0xd4
+      - [0x91898, asm, ingame/photo/film_no] # size:0x3a4
+      - [0x91c40, asm, ingame/photo/finder] # size:0x1904
+      - [0x93548, asm, ingame/camera/finder_camera] # size:0xaa4
+      - [0x93ff0, asm, ingame/enemy/fly_ctrl] # size:0x1d48
+      - [0x95d38, asm, graphics/scene/fod] # size:0x1c88
+      - [0x979c0, asm, ingame/map/foot_se] # size:0x9cc
+      - [0x98390, asm, outgame/framerate] # size:0x504
+      - [0x98898, asm, ingame/photo/freq_camera] # size:0x36c
+      - [0x98c08, asm, graphics/effect/g2d_debug] # size:0x680
+      - [0x99288, asm, graphics/graph2d/g2d_draw] # size:0x2938
+      - [0x9bbc0, asm, graphics/graph2d/g2d_main] # size:0x198
+      - [0x9bd58, asm, graphics/graph3d/g3dBoundingVolume] # size:0x34c
+      - [0x9c0a8, asm, graphics/graph3d/g3dCamera] # size:0x464
+      - [0x9c510, asm, graphics/graph3d/g3dCore] # size:0x2650
+      - [0x9eb60, asm, graphics/graph3d/g3dDebug] # size:0x1ac0
+      - [0xa0620, asm, graphics/graph3d/g3dDma] # size:0x778
+      - [0xa0d98, asm, graphics/graph3d/g3dGeom] # size:0x12a8
+      - [0xa2040, asm, graphics/graph3d/g3dGsWrapper] # size:0x1530
+      - [0xa3570, asm, graphics/graph3d/g3dLight] # size:0x458
+      - [0xa39c8, asm, graphics/graph3d/g3dLightEx] # size:0x1234
+      - [0xa4c00, asm, graphics/graph3d/g3dMath] # size:0xca4
+      - [0xa58a8, asm, graphics/graph3d/g3dMemory] # size:0x34
+      - [0xa58e0, asm, graphics/graph3d/g3dRenderTarget] # size:0x7c8
+      - [0xa60a8, asm, graphics/graph3d/g3dSprite] # size:0x4b0
+      - [0xa6558, asm, graphics/graph3d/g3dTexture] # size:0x114
+      - [0xa6670, asm, graphics/graph3d/g3dVif1] # size:0x74c
+      - [0xa6dc0, asm, outgame/gallery] # size:0xdbc
+      - [0xa7b80, asm, outgame/gallery_disp] # size:0x11d4
+      - [0xa8d58, asm, save_load/prg/game_data_save] # size:0x2998
+      - [0xab6f0, asm, ingame/clear/prg/game_result] # size:0xa08
+      - [0xac0f8, asm, ingame/clear/prg/game_result_top] # size:0x13c0
+      - [0xad4b8, asm, ingame/gameover/prg/gameover] # size:0x4ac
+      - [0xad968, asm, ingame/gameover/prg/gameover_menu] # size:0x668
+      - [0xadfd0, asm, ingame/gameover/prg/gameover_menu_load] # size:0x1b48
+      - [0xafb18, asm, ingame/gameover/prg/gameover_menu_top] # size:0xad0
+      - [0xb05e8, asm, ingame/menu/ghost_seal_door] # size:0x3c0
+      - [0xb09a8, c, main/gphase] # size:0x390
+      - [0xb0d38, asm, graphics/graph3d/gra3d] # size:0x5080
+      - [0xb5db8, asm, graphics/graph3d/gra3dBoundingBox] # size:0xa40
+      - [0xb67f8, asm, graphics/graph3d/gra3dConst] # size:0x1f8
+      - [0xb69f0, asm, graphics/graph3d/gra3dDebug] # size:0xe04
+      - [0xb77f8, asm, graphics/graph3d/gra3dDma] # size:0x1c0
+      - [0xb79b8, asm, graphics/graph3d/gra3dMisc] # size:0xf50
+      - [0xb8908, asm, graphics/graph3d/gra3dSGD] # size:0x416c
+      - [0xbca78, asm, graphics/graph3d/gra3dSGDData] # size:0x1bc8
+      - [0xbe640, asm, graphics/graph3d/gra3dShadow] # size:0x2a10
+      - [0xc1050, asm, graphics/graph3d/gra3dTRI2] # size:0x6dc
+      - [0xc1730, asm, graphics/graph3d/gra3dVu0] # size:0xd4
+      - [0xc1808, asm, graphics/graphics] # size:0x4324
+      - [0xc5b30, asm, common/heapctrl] # size:0x308
+      - [0xc5e38, asm, ingame/puzzle/hina/hina_pzl] # size:0x2660
+      - [0xc8498, asm, ingame/map/hit_check_base] # size:0xd80
+      - [0xc9218, asm, ingame/photo/hp_bar] # size:0x3a8
+      - [0xc95c0, asm, ingame/ingame] # size:0x2478
+      - [0xcba38, asm, ingame/ingame_effect] # size:0x1fd8
+      - [0xcda10, asm, ingame/item/prg/item] # size:0xbf8
+      - [0xce608, asm, ingame/item/dat/item_dat] # size:0xd4
+      - [0xce6e0, asm, debug/item_debug] # size:0xe0
+      - [0xce7c0, asm, ingame/puzzle/kai/kai_pzl] # size:0x12d4
+      - [0xcfa98, asm, ingame/puzzle/kaza2/kaza2_pzl] # size:0x29f0
+      - [0xd2488, asm, ingame/puzzle/kaza/kaza_pzl] # size:0x2688
+      - [0xd4b10, asm, system/pad/key_cnf] # size:0x1a0
+      - [0xd4cb0, asm, outgame/lang_check] # size:0x714
+      - [0xd53c8, asm, outgame/lang_sel] # size:0x9ac
+      - [0xd5d78, asm, ingame/item/prg/level_gem] # size:0x194
+      - [0xd5f10, asm, outgame/loadgame] # size:0x1af8
+      - [0xd7a08, asm, ingame/loading/loading] # size:0x864
+      - [0xd8270, asm, outgame/logo] # size:0x648
+      - [0xd88b8, asm, ingame/photo/m_plyr_camera] # size:0x460
+      - [0xd8d18, asm, main/main] # size:0x8b8
+      - [0xd95d0, asm, ingame/plyr/man_data] # size:0x70c
+      - [0xd9ce0, asm, ingame/map/map_bgm] # size:0x580
+      - [0xda260, asm, ingame/camera/map_camera] # size:0x2578
+      - [0xdc7d8, asm, ingame/map/map_height] # size:0xd70
+      - [0xdd548, asm, ingame/map/map_hit_check] # size:0xb60
+      - [0xde0a8, asm, ingame/map/map_rectangle] # size:0x1dcc
+      - [0xdfe78, asm, ingame/map/map_reverb] # size:0x198
+      - [0xe0010, asm, system/mc/prg/mc] # size:0x84
+      - [0xe0098, asm, system/mc/prg/mc_check] # size:0x180
+      - [0xe0218, asm, system/mc/prg/mc_check_broken] # size:0x200
+      - [0xe0418, asm, system/mc/prg/mc_check_card] # size:0x35c
+      - [0xe0778, asm, system/mc/prg/mc_check_dir] # size:0x328
+      - [0xe0aa0, asm, system/mc/prg/mc_check_empty] # size:0x80
+      - [0xe0b20, asm, system/mc/prg/mc_close] # size:0x164
+      - [0xe0c88, asm, system/mc/prg/mc_cmn] # size:0xac
+      - [0xe0d38, asm, system/mc/prg/mc_del_all_file] # size:0x298
+      - [0xe0fd0, asm, system/mc/prg/mc_del_dir] # size:0x150
+      - [0xe1120, asm, system/mc/prg/mc_del_file] # size:0x20c
+      - [0xe1330, asm, system/mc/prg/mc_format] # size:0x174
+      - [0xe14a8, asm, system/mc/prg/mc_icon] # size:0x1cc
+      - [0xe1678, asm, system/mc/prg/mc_icon_sys] # size:0x208
+      - [0xe1880, asm, system/mc/prg/mc_load] # size:0x1a8
+      - [0xe1a28, asm, system/mc/prg/mc_make] # size:0x180
+      - [0xe1ba8, asm, system/mc/prg/mc_make_all_file] # size:0x270
+      - [0xe1e18, asm, system/mc/prg/mc_make_dir] # size:0x1cc
+      - [0xe1fe8, asm, system/mc/prg/mc_make_file] # size:0x1a8
+      - [0xe2190, asm, system/mc/prg/mc_open] # size:0x1d4
+      - [0xe2368, asm, system/mc/prg/mc_read] # size:0x1dc
+      - [0xe2548, asm, system/mc/prg/mc_save] # size:0x1a8
+      - [0xe26f0, asm, system/mc/prg/mc_set_data] # size:0x16c0
+      - [0xe3db0, asm, system/mc/prg/mc_write] # size:0x1c4
+      - [0xe3f78, asm, graphics/motion/mdlact] # size:0x1208
+      - [0xe5180, asm, graphics/motion/mdldat] # size:0xd4
+      - [0xe5258, asm, graphics/motion/mdlwork] # size:0xde4
+      - [0xe6040, asm, debug/mem_dbg] # size:0x138
+      - [0xe6178, asm, common/mem_util] # size:0x138
+      - [0xe62b0, asm, ingame/item/prg/memo] # size:0x5a0
+      - [0xe6850, asm, ingame/menu/menu] # size:0x1a34
+      - [0xe8288, asm, ingame/menu/menu_cam] # size:0xb4
+      - [0xe8340, asm, ingame/menu/menu_cam_edit] # size:0x62d0
+      - [0xee610, asm, ingame/menu/menu_cam_main] # size:0x1028
+      - [0xef638, asm, ingame/menu/menu_cam_top] # size:0x336c
+      - [0xf29a8, asm, ingame/menu/menu_cmn] # size:0x1088
+      - [0xf3a30, asm, ingame/menu/menu_cmn_disp] # size:0x1324
+      - [0xf4d58, asm, debug/menu_dat] # size:0x5a0
+      - [0xf52f8, asm, ingame/menu/menu_file] # size:0x4c88
+      - [0xf9f80, asm, ingame/menu/menu_item] # size:0x2678
+      - [0xfc5f8, asm, ingame/menu/menu_map] # size:0x4310
+      - [0x100908, asm, ingame/menu/menu_memo] # size:0x18f0
+      - [0x1021f8, asm, menu/tim_dat/menu_photo_dat] # size:0x2dc4
+      - [0x104fc0, asm, ingame/menu/menu_radio] # size:0x25c8
+      - [0x107588, asm, ingame/menu/menu_soul] # size:0x2638
+      - [0x109bc0, asm, ingame/menu/menu_top] # size:0x1874
+      - [0x10b438, asm, graphics/graph2d/message] # size:0x6374
+      - [0x1117b0, asm, graphics/motion/mim_dat] # size:0x150
+      - [0x111900, asm, graphics/motion/mime] # size:0x1d3c
+      - [0x113640, asm, outgame/mis_sel_disp] # size:0x1070
+      - [0x1146b0, asm, outgame/mission_ctl] # size:0xb3c
+      - [0x1151f0, asm, outgame/mission_disp] # size:0xf10
+      - [0x116100, asm, outgame/mission_pause] # size:0xd00
+      - [0x116e00, asm, outgame/mission_sel] # size:0x2c00
+      - [0x119a00, asm, graphics/mmanage] # size:0x4e8
+      - [0x119ee8, asm, graphics/motion/morph] # size:0x1460
+      - [0x11b348, asm, graphics/motion/motion] # size:0x46f8
+      - [0x11fa40, asm, graphics/movie/movie] # size:0x718
+      - [0x120158, asm, ingame/movie_room_menu/prg/movie_projecter] # size:0x528
+      - [0x120680, asm, ingame/movie_room] # size:0x690
+      - [0x120d10, asm, ingame/movie_room_menu/prg/movie_room_menu] # size:0x1b2c
+      - [0x122840, asm, graphics/movie/movie_title] # size:0x678
+      - [0x122eb8, asm, common/my_malloc] # size:0x39c
+      - [0x123258, asm, ingame/photo/n_equip_tray] # size:0x2c44
+      - [0x125ea0, asm, ingame/photo/n_plyr_camera] # size:0x13b0
+      - [0x127250, asm, outgame/newgame] # size:0x6e0
+      - [0x127930, asm, graphics/obj_draw_ctrl] # size:0x34c
+      - [0x127c80, asm, common/ol_load] # size:0x14a8
+      - [0x129128, asm, outgame/option] # size:0x131c
+      - [0x12a448, asm, outgame/option_disp] # size:0x2354
+      - [0x12c7a0, asm, outgame/outgame] # size:0x538
+      - [0x12ccd8, asm, common/packfile] # size:0x19c
+      - [0x12ce78, asm, pad/pad] # size:0xec4
+      - [0x12dd40, asm, outgame/pad_check] # size:0x300
+      - [0x12e040, asm, ingame/pause/prg/pause] # size:0xc98
+      - [0x12ecd8, asm, system/mc/prg/pc_save] # size:0x1cc
+      - [0x12eea8, asm, debug/perf_measure] # size:0x70
+      - [0x12ef18, asm, ingame/photo/photo] # size:0x4108
+      - [0x133020, asm, ingame/photo/photo_charger] # size:0x2a4
+      - [0x1332c8, asm, ingame/photo/photo_dat] # size:0xc20
+      - [0x133ee8, asm, ingame/photo/photo_make] # size:0x24e0
+      - [0x1363c8, asm, ingame/menu/play_data] # size:0x5f4
+      - [0x1369c0, asm, ingame/plyr/player] # size:0x8740
+      - [0x13f100, asm, ingame/plyr/plyr_mdl] # size:0x1fe8
+      - [0x1410e8, asm, ingame/menu/plyr_room_info] # size:0x9d0
+      - [0x141ab8, asm, ingame/puzzle/puzzle] # size:0x1260
+      - [0x142d18, asm, puzzle/kaza/puzzle_kaza_dat] # size:0x1d8
+      - [0x142ef0, asm, puzzle/roku/puzzle_roku_dat] # size:0x120
+      - [0x143010, asm, ingame/puzzle/roku/roku_pzl] # size:0x2f08
+      - [0x145f18, asm, system/mc/dat/save_data] # size:0xd4
+      - [0x145ff0, asm, save_load/prg/save_load_disp] # size:0x1a88
+      - [0x147a78, asm, ingame/savepoint/savepoint] # size:0x3b0
+      - [0x147e28, asm, ingame/savepoint/savepoint_disp] # size:0x9c8
+      - [0x1487f0, asm, ingame/savepoint/savepoint_fade_in] # size:0x2b0
+      - [0x148aa0, asm, ingame/savepoint/savepoint_fade_out] # size:0x48
+      - [0x148ae8, asm, ingame/savepoint/savepoint_main] # size:0x650
+      - [0x149138, asm, ingame/savepoint/savepoint_top] # size:0xb60
+      - [0x149c98, asm, graphics/scene/scene] # size:0x4260
+      - [0x14def8, asm, graphics/scene/scene_dat] # size:0xd4
+      - [0x14dfd0, asm, graphics/scene/scene_effect] # size:0x2d9c
+      - [0x150d70, asm, debug/scn_test] # size:0x5b94
+      - [0x156908, asm, ingame/photo/search_mark] # size:0x23c
+      - [0x156b48, asm, outgame/setup] # size:0x984
+      - [0x1574d0, asm, outgame/setup_menu] # size:0x35b0
+      - [0x15aa80, asm, ingame/plyr/sis_algo] # size:0xfd4
+      - [0x15ba58, asm, ingame/plyr/sis_mdl] # size:0x1240
+      - [0x15cc98, asm, ingame/plyr/sister] # size:0x6be0
+      - [0x163878, asm, ingame/item/prg/soul_list] # size:0xa10
+      - [0x164288, asm, ingame/photo/sp_chance] # size:0x490
+      - [0x164718, asm, ingame/photo/spirit_gage] # size:0x6c8
+      - [0x164de0, asm, common/spr_stack] # size:0x1d8
+      - [0x164fb8, asm, ingame/subtitle/subtitle] # size:0x6d8
+      - [0x165690, asm, system/os/system] # size:0xcb8
+      - [0x166348, asm, save_load/prg/system_data_save] # size:0x165c
+      - [0x1679a8, asm, graphics/graph2d/tim2] # size:0x1efc
+      - [0x1698a8, asm, outgame/title] # size:0xec8
+      - [0x16a770, asm, outgame/title_album] # size:0x144
+      - [0x16a8b8, asm, outgame/title_disp] # size:0xe68
+      - [0x16b720, asm, outgame/title_menu] # size:0x778
+      - [0x16be98, asm, outgame/title_movie] # size:0x384
+      - [0x16c220, asm, outgame/title_top] # size:0x224
+      - [0x16c448, asm, ingame/plyr/unit_ctl] # size:0x7c0
+      - [0x16cc08, asm, common/utility] # size:0xcbc
+      - [0x16d8c8, asm, common/utility2] # size:0x6b4
+      - [0x16df80, asm, system/pad/vib_manage] # size:0x8c
+      - [0x16e010, asm, ingame/menu/zero2_anim2d] # size:0x48c
+      - [0x16e4a0, asm, debug/zero2_perf] # size:0x240
+      - [0x16e6e0, asm, common/zero2_util] # size:0x5e0
+      - [0x16ecc0, asm, iopsys.a_fileload_] # size:0x16a8
+      - [0x170368, asm, iopsys.a_spu_mem_] # size:0x798
+      - [0x170b00, asm, iopsys.a_snd_buffer_] # size:0xe34
+      - [0x171938, asm, iopsys.a_ee_iop_] # size:0x888
+      - [0x1721c0, asm, iopsys.a_ee_iop_q_] # size:0x2a8
+      - [0x172468, asm, iopsys.a_stream_auto_] # size:0x1d74
+      - [0x1741e0, asm, iopsys.a_snd_bank_] # size:0x1048
+      - [0x175228, asm, iopsys.a_snd_3d_] # size:0x944
+      - [0x175b70, asm, iopsys.a_cddat_] # size:0x3b8
+      - [0x175f28, asm, iopsys.a_snd_] # size:0x754
+      - [0x176680, asm, iopsys.a_snd_pcmstream_] # size:0x60c
+      - [0x176c90, asm, iopsys.a_cmp_eeiop_] # size:0x464
+      - [0x1770f8, asm, iopsys.a_snd_util_] # size:0x578
+      - [0x177670, asm, iopsys.a_file_stream_] # size:0x32c
+      - [0x1779a0, asm, iopsys.a_hxd_] # size:0x2c0
+      - [0x177c60, asm, iopsys.a_spu_voice_] # size:0xf8
+      - [0x177d58, asm, iopsys.a_snd_stream_] # size:0x16cc
+      - [0x179428, asm, cmp.a_encodes_] # size:0x8d8
+      - [0x179d00, asm, cmp.a_cmp_] # size:0x12c
+      - [0x179e30, asm, playpss.a_my_strfile_] # size:0x7c
+      - [0x179eb0, asm, playpss.a_playpss_] # size:0xdd4
+      - [0x17ac88, asm, playpss.a_audiodec_] # size:0x8a4
+      - [0x17b530, asm, playpss.a_ldimage_] # size:0x464
+      - [0x17b998, asm, libexcep.a_libexcep_] # size:0x34c
+      - [0x17bce8, asm, libexcep.a_print_] # size:0x5fc
+      - [0x17c2e8, asm, libcdvd.a_cdvd000_] # size:0x1554
+      - [0x17d840, asm, libcdvd.a_cdvd036_] # size:0xd0
+      - [0x17d910, asm, libcdvd.a_cdvd039_] # size:0xf8
+      - [0x17da08, asm, libdma.a_libdma_] # size:0x844
+      - [0x17e250, asm, libdev.a_devvu0_] # size:0x494
+      - [0x17e6e8, asm, libdev.a_devvif0_] # size:0x32c
+      - [0x17ea18, asm, libdev.a_devvif1_] # size:0x3e8
+      - [0x17ee00, asm, libkernl.a_klib_] # size:0x8a0
+      - [0x17f6a0, asm, libkernl.a_intr_] # size:0x230
+      - [0x17f8d0, asm, libkernl.a_thread_] # size:0x450
+      - [0x17fd20, asm, libkernl.a_kprintf_] # size:0x9b8
+      - [0x1806d8, asm, libkernl.a_sifcmd_] # size:0x7d8
+      - [0x180eb0, asm, libkernl.a_sifrpc_] # size:0x1090
+      - [0x181f40, asm, libkernl.a_filestub_] # size:0x3718
+      - [0x185658, asm, libkernl.a_iopheap_] # size:0x54c
+      - [0x185ba8, asm, libkernl.a_eeloadfile_] # size:0xd5c
+      - [0x186908, asm, libkernl.a_iopreset_] # size:0x2e0
+      - [0x186be8, asm, libkernl.a_tlbfunc_] # size:0x50c
+      - [0x187100, asm, libkernl.a_tlbtrap_] # size:0x35c
+      - [0x187460, asm, libkernl.a_diei_] # size:0x70
+      - [0x1874d0, asm, libkernl.a_initsys_] # size:0x28c
+      - [0x187760, asm, libkernl.a_libosd_] # size:0x17c
+      - [0x1878e0, asm, libkernl.a_exit_] # size:0x29c
+      - [0x187b80, asm, libkernl.a_alarm_] # size:0x13c
+      - [0x187cc0, asm, libkernl.a_timer_] # size:0x1364
+      - [0x189028, asm, libkernl.a_timeralarm_] # size:0x3f0
+      - [0x189418, asm, libkernl.a_iopnotify_] # size:0x260
+      - [0x189678, asm, libkernl.a_glue_] # size:0x3d0
+      - [0x189a48, asm, libkernl.a_deci2_] # size:0x234
+      - [0x189c80, asm, libkernl.a_tty_] # size:0x544
+      - [0x18a1c8, asm, libpkt.a_gifpk000_] # size:0x10
+      - [0x18a1d8, asm, libpkt.a_gifpk001_] # size:0x10
+      - [0x18a1e8, asm, libpkt.a_gifpk002_] # size:0x58
+      - [0x18a240, asm, libpkt.a_gifpk005_] # size:0x74
+      - [0x18a2b8, asm, libpkt.a_gifpk011_] # size:0x74
+      - [0x18a330, asm, libpkt.a_gifpk014_] # size:0xa4
+      - [0x18a3d8, asm, libpkt.a_gifpk015_] # size:0x28
+      - [0x18a400, asm, libpkt.a_vifpk025_] # size:0x10
+      - [0x18a410, asm, libpkt.a_vifpk026_] # size:0x10
+      - [0x18a420, asm, libpkt.a_vifpk027_] # size:0x58
+      - [0x18a478, asm, libpkt.a_vifpk030_] # size:0x58
+      - [0x18a4d0, asm, libpkt.a_vifpk036_] # size:0x58
+      - [0x18a528, asm, libpkt.a_vifpk039_] # size:0x58
+      - [0x18a580, asm, libpkt.a_vifpk040_] # size:0x2c
+      - [0x18a5b0, asm, libpkt.a_vifpk041_] # size:0x18
+      - [0x18a5c8, asm, libpkt.a_vifpk042_] # size:0xa4
+      - [0x18a670, asm, libpkt.a_vifpk043_] # size:0x14
+      - [0x18a688, asm, libpkt.a_vifpk044_] # size:0x7c
+      - [0x18a708, asm, libvu0.a_libvu0_] # size:0x1748
+      - [0x18be50, asm, libpad.a_libpad_] # size:0x1480
+      - [0x18d2d0, asm, libmc.a_libmc_] # size:0x17fc
+      - [0x18ead0, asm, libgraph.a_graph001_] # size:0x19c
+      - [0x18ec70, asm, libgraph.a_graph002_] # size:0x68
+      - [0x18ecd8, asm, libgraph.a_graph009_] # size:0x298
+      - [0x18ef70, asm, libgraph.a_graph011_] # size:0x94
+      - [0x18f008, asm, libgraph.a_graph012_] # size:0x314
+      - [0x18f320, asm, libgraph.a_graph014_] # size:0x5c
+      - [0x18f380, asm, libgraph.a_graph015_] # size:0x1e4
+      - [0x18f568, asm, libgraph.a_graph016_] # size:0x140
+      - [0x18f6a8, asm, libgraph.a_graph017_] # size:0x17c
+      - [0x18f828, asm, libgraph.a_graph019_] # size:0xa0
+      - [0x18f8c8, asm, libgraph.a_graph020_] # size:0x3c
+      - [0x18f908, asm, libgraph.a_graph021_] # size:0x88
+      - [0x18f990, asm, libgraph.a_graph029_] # size:0x1c
+      - [0x18f9b0, asm, libgraph.a_graph003_] # size:0x424
+      - [0x18fdd8, asm, libgraph.a_graph005_] # size:0xc8
+      - [0x18fea0, asm, libgraph.a_graph006_] # size:0x1e4
+      - [0x190088, asm, libgraph.a_graph007_] # size:0x104
+      - [0x190190, asm, libmpeg.a_pack_] # size:0xe20
+      - [0x190fb0, asm, libmpeg.a_mpeg_] # size:0xc48
+      - [0x191bf8, asm, libmpeg.a_init_] # size:0xb04
+      - [0x192700, asm, libmpeg.a_defhandler_] # size:0x4c
+      - [0x192750, asm, libmpeg.a_mpc_] # size:0x5054
+      - [0x1977a8, asm, libmpeg.a_csc_] # size:0x790
+      - [0x197f38, asm, libmpeg.a_bit_] # size:0x20c
+      - [0x198148, asm, libsdr.a_sdr_main_] # size:0x4e0
+      - [0x198628, asm, libsdr.a_sdr_cb_] # size:0x390
+      - [0x1989b8, asm, libipu.a_libipu_] # size:0x390
+      - [0x198d48, asm, libipu.a_ipuinit_] # size:0x2b0
+      - [0x198ff8, asm, libscf.a_libscf_] # size:0x6f0
+      - [0x1996e8, asm, libm.a_s_isnan_] # size:0x3c
+      - [0x199728, asm, libm.a_sf_atan_] # size:0x28c
+      - [0x1999b8, asm, libm.a_sf_cos_] # size:0xd4
+      - [0x199a90, asm, libm.a_sf_fabs_] # size:0x28
+      - [0x199ab8, asm, libm.a_sf_finite_] # size:0x8
+      - [0x199ac0, asm, libm.a_sf_isinf_] # size:0x8
+      - [0x199ac8, asm, libm.a_sf_isnan_] # size:0x8
+      - [0x199ad0, asm, libm.a_sf_sin_] # size:0xe8
+      - [0x199bb8, asm, libm.a_sf_tan_] # size:0x78
+      - [0x199c30, asm, libm.a_wf_acos_] # size:0x14
+      - [0x199c48, asm, libm.a_wf_atan2_] # size:0x14
+      - [0x199c60, asm, libm.a_wf_fmod_] # size:0x14
+      - [0x199c78, asm, libm.a_wf_log_] # size:0x14
+      - [0x199c90, asm, libm.a_wf_pow_] # size:0x14
+      - [0x199ca8, asm, libm.a_wf_sqrt_] # size:0x14
+      - [0x199cc0, asm, libm.a_ef_acos_] # size:0x424
+      - [0x19a0e8, asm, libm.a_ef_atan2_] # size:0x1e0
+      - [0x19a2c8, asm, libm.a_ef_fmod_] # size:0x1d0
+      - [0x19a498, asm, libm.a_ef_log_] # size:0x2e0
+      - [0x19a778, asm, libm.a_ef_pow_] # size:0x7e0
+      - [0x19af58, asm, libm.a_ef_rem_pio2_] # size:0x3b0
+      - [0x19b308, asm, libm.a_ef_sqrt_] # size:0xcc
+      - [0x19b3d8, asm, libm.a_kf_cos_] # size:0x150
+      - [0x19b528, asm, libm.a_kf_rem_pio2_] # size:0x864
+      - [0x19bd90, asm, libm.a_kf_sin_] # size:0x104
+      - [0x19be98, asm, libm.a_kf_tan_] # size:0x284
+      - [0x19c120, asm, libm.a_sf_floor_] # size:0xd8
+      - [0x19c1f8, asm, libm.a_sf_scalbn_] # size:0xc8
+      - [0x19c2c0, asm, libm.a_sf_copysign_] # size:0x3c
+      - [0x19c300, asm, libgcc.a__muldi3_] # size:0x74
+      - [0x19c378, asm, libgcc.a__divdi3_] # size:0x694
+      - [0x19ca10, asm, libgcc.a__moddi3_] # size:0x690
+      - [0x19d0a0, asm, libgcc.a__udivdi3_] # size:0x57c
+      - [0x19d620, asm, libgcc.a__umoddi3_] # size:0x568
+      - [0x19db88, asm, libgcc.a__floatdisf_] # size:0xe8
+      - [0x19dc70, asm, libgcc.a__fixunsdfdi_] # size:0x118
+      - [0x19dd88, asm, libgcc.a__fixunssfdi_] # size:0x128
+      - [0x19deb0, asm, libgcc.a__fixsfdi_] # size:0x3c
+      - [0x19def0, asm, libgcc.a___main_] # size:0x188
+      - [0x19e078, asm, libgcc.a__pure_] # size:0x14
+      - [0x19e090, asm, libgcc.a__eh_] # size:0x1328
+      - [0x19f3b8, asm, libgcc.a__sf_to_df_] # size:0x3c
+      - [0x19f3f8, asm, libgcc.a__addsub_df_] # size:0x31c
+      - [0x19f718, asm, libgcc.a__mul_df_] # size:0x284
+      - [0x19f9a0, asm, libgcc.a__div_df_] # size:0x140
+      - [0x19fae0, asm, libgcc.a__compare_df_] # size:0x4c
+      - [0x19fb30, asm, libgcc.a__si_to_df_] # size:0xb8
+      - [0x19fbe8, asm, libgcc.a__make_df_] # size:0x2c
+      - [0x19fc18, asm, libgcc.a__df_to_sf_] # size:0x54
+      - [0x19fc70, asm, libgcc.a__df_to_usi_] # size:0xa0
+      - [0x19fd10, asm, libgcc.a_frame-dwarf2_] # size:0x1590
+      - [0x1a12a0, asm, libgcc.a_tinfo_] # size:0xdfc
+      - [0x1a20a0, asm, libgcc.a_tinfo2_] # size:0xbb4
+      - [0x1a2c58, asm, libgcc.a_opdel_] # size:0x20
+      - [0x1a2c78, asm, libgcc.a_exception_] # size:0x678
+      - [0x1a32f0, asm, libgcc.a__floatdidf_] # size:0xa8
+      - [0x1a3398, asm, libgcc.a__unpack_sf_] # size:0x5c
+      - [0x1a33f8, asm, libgcc.a__make_sf_] # size:0x2c
+      - [0x1a3428, asm, libgcc.a__pack_df_] # size:0xd8
+      - [0x1a3500, asm, libgcc.a__unpack_df_] # size:0xbc
+      - [0x1a35c0, asm, libgcc.a__fpcmp_parts_df_] # size:0x120
+      - [0x1a36e0, asm, libgcc.a__pack_sf_] # size:0xb4
+      - [0x1a3798, asm, libc.a_abort_] # size:0x18
+      - [0x1a37b0, asm, libc.a_assert_] # size:0x34
+      - [0x1a37e8, asm, libc.a_atexit_] # size:0xa0
+      - [0x1a3888, asm, libc.a_atoi_] # size:0x28
+      - [0x1a38b0, asm, libc.a_errno_] # size:0xc
+      - [0x1a38c0, asm, libc.a_exit_] # size:0xac
+      - [0x1a3970, asm, libc.a_fiprintf_] # size:0x54
+      - [0x1a39c8, asm, libc.a_malloc_] # size:0xa0
+      - [0x1a3a68, asm, libc.a_mallocr_] # size:0x980
+      - [0x1a43e8, asm, libc.a_memcmp_] # size:0x94
+      - [0x1a447c, asm, libc.a_memcpy_] # size:0xb0
+      - [0x1a452c, asm, libc.a_memmove_] # size:0x104
+      - [0x1a4630, asm, libc.a_memset_] # size:0xc0
+      - [0x1a46f0, asm, libc.a_mlock_] # size:0xcc
+      - [0x1a47c0, asm, libc.a_printf_] # size:0xd0
+      - [0x1a4890, asm, libc.a_qsort_] # size:0x9ec
+      - [0x1a5280, asm, libc.a_rand_] # size:0x7c
+      - [0x1a5300, asm, libc.a_sbrkr_] # size:0x58
+      - [0x1a5358, asm, libc.a_signal_] # size:0x2e8
+      - [0x1a5640, asm, libc.a_signalr_] # size:0x74
+      - [0x1a56b8, asm, libc.a_sprintf_] # size:0x118
+      - [0x1a57d0, asm, libc.a_sscanf_] # size:0xb0
+      - [0x1a5880, asm, libc.a_strcat_] # size:0x12c
+      - [0x1a59ac, asm, libc.a_strcmp_] # size:0x144
+      - [0x1a5af0, asm, libc.a_strcpy_] # size:0x114
+      - [0x1a5c08, asm, libc.a_strerror_] # size:0x514
+      - [0x1a611c, asm, libc.a_strlen_] # size:0x138
+      - [0x1a6258, asm, libc.a_strncmp_] # size:0x1b8
+      - [0x1a6410, asm, libc.a_strncpy_] # size:0x1bc
+      - [0x1a65d0, asm, libc.a_strrchr_] # size:0x50
+      - [0x1a6620, asm, libc.a_strstr_] # size:0x84
+      - [0x1a66a8, asm, libc.a_strtol_] # size:0x264
+      - [0x1a6910, asm, libc.a_u_strerr_] # size:0x8
+      - [0x1a6918, asm, libc.a_vfiprintf_] # size:0xd70
+      - [0x1a7688, asm, libc.a_vfprintf_] # size:0x1a84
+      - [0x1a9110, asm, libc.a_vfscanf_] # size:0xd90
+      - [0x1a9ea0, asm, libc.a_vsprintf_] # size:0xac
+      - [0x1a9f50, asm, libc.a_wsetup_] # size:0x10c
+      - [0x1aa060, asm, libc.a_atof_] # size:0x18
+      - [0x1aa078, asm, libc.a_atol_] # size:0x1c
+      - [0x1aa098, asm, libc.a_dtoa_] # size:0x1494
+      - [0x1ab530, asm, libc.a_fflush_] # size:0x114
+      - [0x1ab648, asm, libc.a_findfp_] # size:0x29c
+      - [0x1ab8e8, asm, libc.a_fread_] # size:0x11c
+      - [0x1aba08, asm, libc.a_freer_] # size:0x464
+      - [0x1abe70, asm, libc.a_fvwrite_] # size:0x3e0
+      - [0x1ac250, asm, libc.a_fwalk_] # size:0x94
+      - [0x1ac2e8, asm, libc.a_locale_] # size:0xe4
+      - [0x1ac3d0, asm, libc.a_makebuf_] # size:0x154
+      - [0x1ac528, asm, libc.a_mbtowc_r_] # size:0x34
+      - [0x1ac55c, asm, libc.a_memchr_] # size:0xe0
+      - [0x1ac640, asm, libc.a_mprec_] # size:0x1018
+      - [0x1ad658, asm, libc.a_refill_] # size:0x1b4
+      - [0x1ad810, asm, libc.a_s_isinf_] # size:0x48
+      - [0x1ad858, asm, libc.a_stdio_] # size:0x16c
+      - [0x1ad9c8, asm, libc.a_strtod_] # size:0xf68
+      - [0x1ae930, asm, libc.a_strtoul_] # size:0x25c
+      - [0x1aeb90, asm, libc.a_ungetc_] # size:0x270
+      - [0x1aee00, asm, libc.a_writer_] # size:0x60
+      - [0x1aee60, asm, libc.a_callocr_] # size:0xb4
+      - [0x1aef18, asm, libc.a_closer_] # size:0x58
+      - [0x1aef70, asm, libc.a_fstatr_] # size:0x5c
+      - [0x1aefd0, asm, libc.a_lseekr_] # size:0x60
+      - [0x1af030, asm, libc.a_readr_] # size:0x60
+      - [0x1af090, asm, libc.a_reallocr_] # size:0x5a0
+      - [0x1af630, asm, libkernl.a_cache_] # size:0x27c
+      - [0x1af8b0, asm, libgcc.a__fixdfdi_] # size:0x78
+      - [0x1af928, asm, libgcc.a__df_to_si_] # size:0x9c
 
-    - [0xd8270, asm, outgame/logo]
-    - [0xd88b8, asm, ingame/plyr/m_plyr_camera]
-    - [0xd8d18, c, main/main]
-    - [0xd95d0, asm, ingame/plyr/man_data]
-    - [0xd9ce0, asm, ingame/map/map_bgm]
-    - [0xda240, asm, ingame/map/map_camera]
-    - [0xdc7d8, asm, ingame/map/map_height]
-    - [0xdd548, asm, ingame/map/map_hit_check]
-    - [0xde0a8, asm, unk]
-    - [0x1369c0, c, ingame/plyr/player]
-    - [0x13f100, c, ingame/plyr/plyr_mdl]
-    - [0x1410e8, asm, unk_1]
-    - [0x17e250, asm, devvu0]
-    - [0x17e6e8, asm, devvif0]
-    - [0x17ea18, asm, unk_2] # functions that appear below the sdk!?
 
-    # ######0100000
-    - name: vutext
-      type: textbin
-      start: 0x1bb0a0
-      vram: 0x2ba0a0
-    - [0x1c4b00, databin, ctors]
-    - [0x1c4c6c, databin, dtors]
-    - [0x1c4c78, databin, reg_info]
-    # data ################
-    - name: data_1
-      type: data
-      start: 0x1c4d00
-      vram: 0x2c3d00
-    - name: main/gphase
-      type: .data
-      start: 0x218178
-      vram: 0x317178
-    - name: data_3
-      type: data
-      start: 0x218D40
-      vram: 0x317d40
-    - [0x26b260, databin, eh_frame]
-    # - [0x29eaec, databin, vudata]
-    # rodata ################
-    - name: rodata_1
-      type: rodatabin
-      start: 0x29eb00
-      vram: 0x39db00
-    - name: main/gphase
-      type: .rodata
-      start: 0x2b52f8
-      vram: 0x3b42f8
-    - name: rodata_2
-      type: rodatabin
-      start: 0x2b5310
-      vram: 0x3b4310
-    # #####################
-    # lit4 ################
-    - name: lit4
-      type: lit4
-      start: 0x2ee800
-      vram: 0x3ed800
-    # #####################
-    # sdata ###############
-    - name: sdata
-      type: sdata
-      start: 0x2efa80
-      vram: 0x3eea80
-    # #####################
-    # sbss ################
-    - name: sbss
-      type: sbss
-      start: 0x2f5a80
-      vram: 0x3f4a80
-    # #####################
-    # bss #################
-    - name: bss
-      type: bss
-      start: 0x2f5a80
-      vram: 0x3f5500
-    - name: main/gphase
-      type: .bss
-      start: 0x2f5a80
-      vram: 0x4af6e0
-    - name: bss_1
-      type: bss
-      start: 0x2f5a80
-      vram: 0x4af730
-    - name: vubss
-      type: bss
-      start: 0x2f5a80
-      vram: 0x4ce0ec
-  - name: padding
-    type: databin
-    start: 0x2f5a80
-    vram: 0x000000
+      # VUTEXT ############
+      - name: vutext
+        type: textbin
+        start: 0x1bb0a0
+        vram:
+
+        # CTOR ################
+      - {start: 0x1c4b00, type: ctor, vram: 0x2c3b00, name: crtbegin} #  size:0x4
+      - {start: 0x1c4b04, type: ctor, vram: 0x2c3b04, name: ingame/map/FurnCtl} #  size:0x4
+      - {start: 0x1c4b08, type: ctor, vram: 0x2c3b08, name: ingame/map/MapAnim} #  size:0x4
+      - {start: 0x1c4b0c, type: ctor, vram: 0x2c3b0c, name: ingame/map/MapDoor} #  size:0x4
+      - {start: 0x1c4b10, type: ctor, vram: 0x2c3b10, name: ingame/map/MapDraw} #  size:0x4
+      - {start: 0x1c4b14, type: ctor, vram: 0x2c3b14, name: ingame/map/MapHit} #  size:0x4
+      - {start: 0x1c4b18, type: ctor, vram: 0x2c3b18, name: ingame/map/MapLight} #  size:0x4
+      - {start: 0x1c4b1c, type: ctor, vram: 0x2c3b1c, name: ingame/map/MapLoad} #  size:0x4
+      - {start: 0x1c4b20, type: ctor, vram: 0x2c3b20, name: ingame/map/MapObjReg} #  size:0x4
+      - {start: 0x1c4b24, type: ctor, vram: 0x2c3b24, name: ingame/map/MapPut} #  size:0x4
+      - {start: 0x1c4b28, type: ctor, vram: 0x2c3b28, name: ingame/map/MapSky} #  size:0x4
+      - {start: 0x1c4b2c, type: ctor, vram: 0x2c3b2c, name: ingame/map/MapSp} #  size:0x4
+      - {start: 0x1c4b30, type: ctor, vram: 0x2c3b30, name: ingame/map/RegDat} #  size:0x4
+      - {start: 0x1c4b34, type: ctor, vram: 0x2c3b34, name: graphics/motion/accessory} #  size:0x4
+      - {start: 0x1c4b38, type: ctor, vram: 0x2c3b38, name: album/prg/album} #  size:0x4
+      - {start: 0x1c4b3c, type: ctor, vram: 0x2c3b3c, name: album/prg/album_load} #  size:0x4
+      - {start: 0x1c4b40, type: ctor, vram: 0x2c3b40, name: album/prg/album_view} #  size:0x4
+      - {start: 0x1c4b44, type: ctor, vram: 0x2c3b44, name: ingame/clear/prg/clear_flg} #  size:0x4
+      - {start: 0x1c4b48, type: ctor, vram: 0x2c3b48, name: ingame/item/prg/crystal} #  size:0x4
+      - {start: 0x1c4b4c, type: ctor, vram: 0x2c3b4c, name: debug/debug_menu} #  size:0x4
+      - {start: 0x1c4b50, type: ctor, vram: 0x2c3b50, name: ingame/door/prg/door} #  size:0x4
+      - {start: 0x1c4b54, type: ctor, vram: 0x2c3b54, name: graphics/effect/effect} #  size:0x4
+      - {start: 0x1c4b58, type: ctor, vram: 0x2c3b58, name: graphics/effect/effect_butterfly} #  size:0x4
+      - {start: 0x1c4b5c, type: ctor, vram: 0x2c3b5c, name: graphics/effect/effect_ene} #  size:0x4
+      - {start: 0x1c4b60, type: ctor, vram: 0x2c3b60, name: graphics/effect/effect_obj} #  size:0x4
+      - {start: 0x1c4b64, type: ctor, vram: 0x2c3b64, name: graphics/effect/effect_oth} #  size:0x4
+      - {start: 0x1c4b68, type: ctor, vram: 0x2c3b68, name: graphics/effect/effect_rdr} #  size:0x4
+      - {start: 0x1c4b6c, type: ctor, vram: 0x2c3b6c, name: graphics/effect/effect_scr} #  size:0x4
+      - {start: 0x1c4b70, type: ctor, vram: 0x2c3b70, name: graphics/effect/effect_torch} #  size:0x4
+      - {start: 0x1c4b74, type: ctor, vram: 0x2c3b74, name: ingame/enemy/ene_mot_ctrl} #  size:0x4
+      - {start: 0x1c4b78, type: ctor, vram: 0x2c3b78, name: ingame/enemy/enemy} #  size:0x4
+      - {start: 0x1c4b7c, type: ctor, vram: 0x2c3b7c, name: ingame/event/prg/ev_change} #  size:0x4
+      - {start: 0x1c4b80, type: ctor, vram: 0x2c3b80, name: ingame/event/dat/ev_disp_dat} #  size:0x4
+      - {start: 0x1c4b84, type: ctor, vram: 0x2c3b84, name: ingame/event/prg/ev_exe} #  size:0x4
+      - {start: 0x1c4b88, type: ctor, vram: 0x2c3b88, name: ingame/event/prg/ev_macro} #  size:0x4
+      - {start: 0x1c4b8c, type: ctor, vram: 0x2c3b8c, name: ingame/event/prg/ev_main} #  size:0x4
+      - {start: 0x1c4b90, type: ctor, vram: 0x2c3b90, name: ingame/event/prg/ev_open} #  size:0x4
+      - {start: 0x1c4b94, type: ctor, vram: 0x2c3b94, name: ingame/event/prg/ev_sis} #  size:0x4
+      - {start: 0x1c4b98, type: ctor, vram: 0x2c3b98, name: ingame/event/prg/ev_talk} #  size:0x4
+      - {start: 0x1c4b9c, type: ctor, vram: 0x2c3b9c, name: ingame/event/dat/ev_talk_dat} #  size:0x4
+      - {start: 0x1c4ba0, type: ctor, vram: 0x2c3ba0, name: ingame/event/prg/ev_timer} #  size:0x4
+      - {start: 0x1c4ba4, type: ctor, vram: 0x2c3ba4, name: ingame/item/prg/file} #  size:0x4
+      - {start: 0x1c4ba8, type: ctor, vram: 0x2c3ba8, name: ingame/enemy/fly_ctrl} #  size:0x4
+      - {start: 0x1c4bac, type: ctor, vram: 0x2c3bac, name: graphics/scene/fod} #  size:0x4
+      - {start: 0x1c4bb0, type: ctor, vram: 0x2c3bb0, name: save_load/prg/game_data_save} #  size:0x4
+      - {start: 0x1c4bb4, type: ctor, vram: 0x2c3bb4, name: ingame/clear/prg/game_result_top} #  size:0x4
+      - {start: 0x1c4bb8, type: ctor, vram: 0x2c3bb8, name: ingame/gameover/prg/gameover_menu_load} #  size:0x4
+      - {start: 0x1c4bbc, type: ctor, vram: 0x2c3bbc, name: ingame/menu/ghost_seal_door} #  size:0x4
+      - {start: 0x1c4bc0, type: ctor, vram: 0x2c3bc0, name: graphics/graph3d/gra3d} #  size:0x4
+      - {start: 0x1c4bc4, type: ctor, vram: 0x2c3bc4, name: graphics/graph3d/gra3dConst} #  size:0x4
+      - {start: 0x1c4bc8, type: ctor, vram: 0x2c3bc8, name: graphics/graph3d/gra3dMisc} #  size:0x4
+      - {start: 0x1c4bcc, type: ctor, vram: 0x2c3bcc, name: graphics/graph3d/gra3dShadow} #  size:0x4
+      - {start: 0x1c4bd0, type: ctor, vram: 0x2c3bd0, name: ingame/ingame} #  size:0x4
+      - {start: 0x1c4bd4, type: ctor, vram: 0x2c3bd4, name: ingame/ingame_effect} #  size:0x4
+      - {start: 0x1c4bd8, type: ctor, vram: 0x2c3bd8, name: ingame/item/prg/item} #  size:0x4
+      - {start: 0x1c4bdc, type: ctor, vram: 0x2c3bdc, name: ingame/puzzle/kaza2/kaza2_pzl} #  size:0x4
+      - {start: 0x1c4be0, type: ctor, vram: 0x2c3be0, name: ingame/puzzle/kaza/kaza_pzl} #  size:0x4
+      - {start: 0x1c4be4, type: ctor, vram: 0x2c3be4, name: outgame/loadgame} #  size:0x4
+      - {start: 0x1c4be8, type: ctor, vram: 0x2c3be8, name: ingame/photo/m_plyr_camera} #  size:0x4
+      - {start: 0x1c4bec, type: ctor, vram: 0x2c3bec, name: ingame/map/map_bgm} #  size:0x4
+      - {start: 0x1c4bf0, type: ctor, vram: 0x2c3bf0, name: ingame/map/map_height} #  size:0x4
+      - {start: 0x1c4bf4, type: ctor, vram: 0x2c3bf4, name: system/mc/prg/mc_set_data} #  size:0x4
+      - {start: 0x1c4bf8, type: ctor, vram: 0x2c3bf8, name: ingame/item/prg/memo} #  size:0x4
+      - {start: 0x1c4bfc, type: ctor, vram: 0x2c3bfc, name: ingame/menu/menu_cam_edit} #  size:0x4
+      - {start: 0x1c4c00, type: ctor, vram: 0x2c3c00, name: ingame/menu/menu_file} #  size:0x4
+      - {start: 0x1c4c04, type: ctor, vram: 0x2c3c04, name: ingame/menu/menu_item} #  size:0x4
+      - {start: 0x1c4c08, type: ctor, vram: 0x2c3c08, name: ingame/menu/menu_map} #  size:0x4
+      - {start: 0x1c4c0c, type: ctor, vram: 0x2c3c0c, name: ingame/menu/menu_memo} #  size:0x4
+      - {start: 0x1c4c10, type: ctor, vram: 0x2c3c10, name: ingame/menu/menu_radio} #  size:0x4
+      - {start: 0x1c4c14, type: ctor, vram: 0x2c3c14, name: ingame/menu/menu_soul} #  size:0x4
+      - {start: 0x1c4c18, type: ctor, vram: 0x2c3c18, name: outgame/mission_sel} #  size:0x4
+      - {start: 0x1c4c1c, type: ctor, vram: 0x2c3c1c, name: graphics/motion/morph} #  size:0x4
+      - {start: 0x1c4c20, type: ctor, vram: 0x2c3c20, name: graphics/motion/motion} #  size:0x4
+      - {start: 0x1c4c24, type: ctor, vram: 0x2c3c24, name: ingame/movie_room_menu/prg/movie_projecter} #  size:0x4
+      - {start: 0x1c4c28, type: ctor, vram: 0x2c3c28, name: common/ol_load} #  size:0x4
+      - {start: 0x1c4c2c, type: ctor, vram: 0x2c3c2c, name: ingame/photo/photo} #  size:0x4
+      - {start: 0x1c4c30, type: ctor, vram: 0x2c3c30, name: ingame/photo/photo_dat} #  size:0x4
+      - {start: 0x1c4c34, type: ctor, vram: 0x2c3c34, name: ingame/plyr/player} #  size:0x4
+      - {start: 0x1c4c38, type: ctor, vram: 0x2c3c38, name: ingame/plyr/plyr_mdl} #  size:0x4
+      - {start: 0x1c4c3c, type: ctor, vram: 0x2c3c3c, name: ingame/menu/plyr_room_info} #  size:0x4
+      - {start: 0x1c4c40, type: ctor, vram: 0x2c3c40, name: ingame/puzzle/puzzle} #  size:0x4
+      - {start: 0x1c4c44, type: ctor, vram: 0x2c3c44, name: puzzle/kaza/puzzle_kaza_dat} #  size:0x4
+      - {start: 0x1c4c48, type: ctor, vram: 0x2c3c48, name: puzzle/roku/puzzle_roku_dat} #  size:0x4
+      - {start: 0x1c4c4c, type: ctor, vram: 0x2c3c4c, name: ingame/puzzle/roku/roku_pzl} #  size:0x4
+      - {start: 0x1c4c50, type: ctor, vram: 0x2c3c50, name: graphics/scene/scene} #  size:0x4
+      - {start: 0x1c4c54, type: ctor, vram: 0x2c3c54, name: ingame/plyr/sis_mdl} #  size:0x4
+      - {start: 0x1c4c58, type: ctor, vram: 0x2c3c58, name: ingame/plyr/sister} #  size:0x4
+      - {start: 0x1c4c5c, type: ctor, vram: 0x2c3c5c, name: ingame/item/prg/soul_list} #  size:0x4
+      - {start: 0x1c4c60, type: ctor, vram: 0x2c3c60, name: common/spr_stack} #  size:0x4
+      - {start: 0x1c4c64, type: ctor, vram: 0x2c3c64, name: debug/zero2_perf} #  size:0x4
+      - {start: 0x1c4c68, type: ctor, vram: 0x2c3c68, name: crtend} #  size:0x4
+      
+        # DTOR ################
+      - {start: 0x1c4c6c, type: dtor, vram: 0x2c3c6c, name: crtbegin} #  size:0x4
+      - {start: 0x1c4c70, type: dtor, vram: 0x2c3c70, name: graphics/graph3d/gra3dShadow} #  size:0x4
+      - {start: 0x1c4c74, type: dtor, vram: 0x2c3c74, name: crtend} #  size:0x4
+
+      - [0x1c4c78, databin, reg_info]
+      # data ################
+      - {start: 0x1c4d00, type: data, vram: 0x2c3d00, name: common/FileSt} # size:0x10
+      - {start: 0x1c4d10, type: data, vram: 0x2c3d10, name: ingame/map/FurnLoad} # size:0x100
+      - {start: 0x1c4e10, type: data, vram: 0x2c3e10, name: graphics/scene/IngameScene} # size:0x10
+      - {start: 0x1c4e20, type: data, vram: 0x2c3e20, name: ingame/map/MapDoor} # size:0x4e66
+      - {start: 0x1c9c88, type: data, vram: 0x2c8c88, name: ingame/map/MapFog} # size:0x54
+      - {start: 0x1c9ce0, type: data, vram: 0x2c8ce0, name: ingame/map/MapHit} # size:0x40
+      - {start: 0x1c9d20, type: data, vram: 0x2c8d20, name: ingame/map/MapLight} # size:0x1f4
+      - {start: 0x1c9f18, type: data, vram: 0x2c8f18, name: ingame/map/MapObj} # size:0xb8
+      - {start: 0x1c9fd0, type: data, vram: 0x2c8fd0, name: ingame/map/MapObjReg} # size:0xa8
+      - {start: 0x1ca078, type: data, vram: 0x2c9078, name: ingame/map/MapSave} # size:0x2a10
+      - {start: 0x1cca90, type: data, vram: 0x2cba90, name: ingame/map/MapSky} # size:0xb80
+      - {start: 0x1cd610, type: data, vram: 0x2cc610, name: ingame/map/MapSp} # size:0x214
+      - {start: 0x1cd828, type: data, vram: 0x2cc828, name: ingame/map/MhCtl} # size:0x20c
+      - {start: 0x1cda40, type: data, vram: 0x2cca40, name: graphics/motion/accessory} # size:0x50a0
+      - {start: 0x1d2ae0, type: data, vram: 0x2d1ae0, name: graphics/motion/acs_dat} # size:0x2890
+      - {start: 0x1d5370, type: data, vram: 0x2d4370, name: album/prg/album} # size:0x418
+      - {start: 0x1d5788, type: data, vram: 0x2d4788, name: album/dat/album_dat} # size:0x3640
+      - {start: 0x1d8dc8, type: data, vram: 0x2d7dc8, name: album/prg/album_edit} # size:0xa0
+      - {start: 0x1d8e68, type: data, vram: 0x2d7e68, name: btn_sprt_dat} # size:0x1e0
+      - {start: 0x1d9048, type: data, vram: 0x2d8048, name: camera_menu} # size:0xc
+      - {start: 0x1d9058, type: data, vram: 0x2d8058, name: graphics/graph2d/tim_dat/cap_group_dat} # size:0xa98
+      - {start: 0x1d9af0, type: data, vram: 0x2d8af0, name: caption_dat} # size:0x220
+      - {start: 0x1d9d10, type: data, vram: 0x2d8d10, name: ingame/photo/center_circle} # size:0xc
+      - {start: 0x1d9d20, type: data, vram: 0x2d8d20, name: ingame/clear/prg/clear_flg} # size:0x18
+      - {start: 0x1d9d38, type: data, vram: 0x2d8d38, name: system/compress/compress} # size:0x80
+      - {start: 0x1d9db8, type: data, vram: 0x2d8db8, name: ingame/item/prg/crystal} # size:0xa4
+      - {start: 0x1d9e60, type: data, vram: 0x2d8e60, name: ingame/item/prg/crystal_dat} # size:0xe0c
+      - {start: 0x1dac70, type: data, vram: 0x2d9c70, name: debug/debug} # size:0x24
+      - {start: 0x1daca0, type: data, vram: 0x2d9ca0, name: debug/debug_menu} # size:0x16bc
+      - {start: 0x1dc360, type: data, vram: 0x2db360, name: door_lock_dat} # size:0x38
+      - {start: 0x1dc398, type: data, vram: 0x2db398, name: ingame/menu/tim_dat/door_point_dat} # size:0x48
+      - {start: 0x1dc3e0, type: data, vram: 0x2db3e0, name: graphics/graph3d/eeException} # size:0x7c
+      - {start: 0x1dc460, type: data, vram: 0x2db460, name: graphics/graph3d/eeProfile} # size:0x800
+      - {start: 0x1dcc60, type: data, vram: 0x2dbc60, name: graphics/effect/effect} # size:0x6474
+      - {start: 0x1e30e0, type: data, vram: 0x2e20e0, name: graphics/effect/effect_butterfly} # size:0x14b0
+      - {start: 0x1e4590, type: data, vram: 0x2e3590, name: graphics/effect/effect_ene} # size:0x1c60
+      - {start: 0x1e61f0, type: data, vram: 0x2e51f0, name: graphics/effect/effect_obj} # size:0x16a30
+      - {start: 0x1fcc20, type: data, vram: 0x2fbc20, name: graphics/effect/effect_oth} # size:0xb20
+      - {start: 0x1fd740, type: data, vram: 0x2fc740, name: graphics/effect/effect_rdr} # size:0xdc0
+      - {start: 0x1fe500, type: data, vram: 0x2fd500, name: graphics/effect/effect_scr} # size:0x60
+      - {start: 0x1fe560, type: data, vram: 0x2fd560, name: graphics/effect/effect_sub} # size:0x50
+      - {start: 0x1fe5b0, type: data, vram: 0x2fd5b0, name: graphics/effect/effect_torch} # size:0x890
+      - {start: 0x1fee40, type: data, vram: 0x2fde40, name: ingame/enemy/ene_mot_ctrl} # size:0x1e4
+      - {start: 0x1ff030, type: data, vram: 0x2fe030, name: ingame/enemy/enemy} # size:0x2f20
+      - {start: 0x201f50, type: data, vram: 0x300f50, name: ingame/enemy/enemy_act} # size:0x268
+      - {start: 0x2021b8, type: data, vram: 0x3011b8, name: ingame/enemy/enemy_dat} # size:0xca3c
+      - {start: 0x20ebf8, type: data, vram: 0x30dbf8, name: ingame/event/dat/ev_disp_dat} # size:0x80
+      - {start: 0x20ec78, type: data, vram: 0x30dc78, name: ingame/event/prg/ev_macro} # size:0x1f00
+      - {start: 0x210b80, type: data, vram: 0x30fb80, name: ingame/event/prg/ev_main} # size:0x1e60
+      - {start: 0x2129e0, type: data, vram: 0x3119e0, name: ingame/event/prg/ev_open} # size:0x840
+      - {start: 0x213220, type: data, vram: 0x312220, name: graphics/graph2d/fade} # size:0xc
+      - {start: 0x213230, type: data, vram: 0x312230, name: ingame/item/prg/file} # size:0x14
+      - {start: 0x213248, type: data, vram: 0x312248, name: ingame/item/dat/file_dat} # size:0x280
+      - {start: 0x2134c8, type: data, vram: 0x3124c8, name: ingame/photo/finder} # size:0x47c
+      - {start: 0x213948, type: data, vram: 0x312948, name: ingame/enemy/fly_ctrl} # size:0x138
+      - {start: 0x213a80, type: data, vram: 0x312a80, name: graphics/scene/fod} # size:0x1460
+      - {start: 0x214ee0, type: data, vram: 0x313ee0, name: ingame/map/foot_se} # size:0x908
+      - {start: 0x2157e8, type: data, vram: 0x3147e8, name: ingame/photo/freq_camera} # size:0x44
+      - {start: 0x215830, type: data, vram: 0x314830, name: graphics/graph2d/g2d_draw} # size:0x100
+      - {start: 0x215930, type: data, vram: 0x314930, name: graphics/graph2d/g2d_main} # size:0xd00
+      - {start: 0x216630, type: data, vram: 0x315630, name: graphics/graph3d/g3dDma} # size:0x30
+      - {start: 0x216660, type: data, vram: 0x315660, name: graphics/graph3d/g3dGsWrapper} # size:0x10
+      - {start: 0x216670, type: data, vram: 0x315670, name: outgame/gallery} # size:0x98
+      - {start: 0x216708, type: data, vram: 0x315708, name: outgame/gallery_dat} # size:0xec0
+      - {start: 0x2175c8, type: data, vram: 0x3165c8, name: save_load/prg/game_data_save} # size:0x14
+      - {start: 0x2175e0, type: data, vram: 0x3165e0, name: gameclear_dat} # size:0x640
+      - {start: 0x217c20, type: data, vram: 0x316c20, name: gameover_dat} # size:0x40
+      - {start: 0x217c60, type: data, vram: 0x316c60, name: ingame/gameover/prg/gameover_menu_load} # size:0x14
+      - {start: 0x217c80, type: data, vram: 0x316c80, name: glob} # size:0x4f8
+      - {start: 0x218178, type: .data, vram: 0x317178, name: main/gphase} # size:0xbc0
+      - {start: 0x218d40, type: data, vram: 0x317d40, name: graphics/graph3d/gra3d} # size:0x440
+      - {start: 0x219180, type: data, vram: 0x318180, name: graphics/graph3d/gra3dConst} # size:0x90
+      - {start: 0x219210, type: data, vram: 0x318210, name: graphics/graph3d/gra3dShadow} # size:0x480
+      - {start: 0x219690, type: data, vram: 0x318690, name: ingame/puzzle/hina/hina_pzl} # size:0x20
+      - {start: 0x2196b0, type: data, vram: 0x3186b0, name: ingame/ingame} # size:0x80
+      - {start: 0x219730, type: data, vram: 0x318730, name: ingame/ingame_effect} # size:0x30
+      - {start: 0x219760, type: data, vram: 0x318760, name: ingame/item/prg/item} # size:0x1d0
+      - {start: 0x219930, type: data, vram: 0x318930, name: ingame/item/dat/item_dat} # size:0x9f8
+      - {start: 0x21a328, type: data, vram: 0x319328, name: puzzle/kai/kai_pzl} # size:0x88
+      - {start: 0x21a3b0, type: data, vram: 0x3193b0, name: puzzle/kaza2/kaza2_pzl} # size:0x30
+      - {start: 0x21a3e0, type: data, vram: 0x3193e0, name: puzzle/kaza/kaza_pzl} # size:0x2c
+      - {start: 0x21a410, type: data, vram: 0x319410, name: key_cnf} # size:0x390
+      - {start: 0x21a7a0, type: data, vram: 0x3197a0, name: lang_sl_dat} # size:0x220
+      - {start: 0x21a9c0, type: data, vram: 0x3199c0, name: outgame/loadgame} # size:0x14
+      - {start: 0x21a9d8, type: data, vram: 0x3199d8, name: outgame/loading_dat} # size:0xa0
+      - {start: 0x21aa78, type: data, vram: 0x319a78, name: outgame/logo} # size:0x60
+      - {start: 0x21aad8, type: data, vram: 0x319ad8, name: ingame/photo/m_plyr_camera} # size:0x30c
+      - {start: 0x21ade8, type: data, vram: 0x319de8, name: ingame/plyr/man_data} # size:0x40
+      - {start: 0x21ae28, type: data, vram: 0x319e28, name: map_area_dat} # size:0x2490
+      - {start: 0x21d2b8, type: data, vram: 0x31c2b8, name: ingame/map/map_bgm} # size:0x3c0
+      - {start: 0x21d680, type: data, vram: 0x31c680, name: ingame/map/map_height} # size:0x20
+      - {start: 0x21d6a0, type: data, vram: 0x31c6a0, name: ingame/map/map_rectangle} # size:0x138
+      - {start: 0x21d7d8, type: data, vram: 0x31c7d8, name: ingame/map/map_reverb} # size:0x84
+      - {start: 0x21d860, type: data, vram: 0x31c860, name: ingame/map/map_room_dat} # size:0x19b0
+      - {start: 0x21f210, type: data, vram: 0x31e210, name: ingame/map/map_size_dat} # size:0x198
+      - {start: 0x21f3a8, type: data, vram: 0x31e3a8, name: system/mc/mc_set_data} # size:0x20
+      - {start: 0x21f3c8, type: data, vram: 0x31e3c8, name: system/mc/mc_title_dat} # size:0x34
+      - {start: 0x21f400, type: data, vram: 0x31e400, name: graphics/motion/mdldat} # size:0x3218
+      - {start: 0x222618, type: data, vram: 0x321618, name: ingame/menu/menu} # size:0x58
+      - {start: 0x222670, type: data, vram: 0x321670, name: ingame/menu/menu_cam_edit} # size:0x60
+      - {start: 0x2226d0, type: data, vram: 0x3216d0, name: ingame/menu/menu_cam_top} # size:0x20
+      - {start: 0x2226f0, type: data, vram: 0x3216f0, name: ingame/menu/menu_camera_dat} # size:0x2560
+      - {start: 0x224c50, type: data, vram: 0x323c50, name: ingame/menu/menu_cmn} # size:0x18
+      - {start: 0x224c68, type: data, vram: 0x323c68, name: ingame/menu/menu_cmn_dat} # size:0x5c0
+      - {start: 0x225228, type: data, vram: 0x324228, name: ingame/menu/menu_file} # size:0x3c
+      - {start: 0x225268, type: data, vram: 0x324268, name: ingame/menu/menu_file_dat} # size:0x960
+      - {start: 0x225bc8, type: data, vram: 0x324bc8, name: ingame/menu/menu_glist_dat} # size:0x480
+      - {start: 0x226048, type: data, vram: 0x325048, name: ingame/menu/menu_item} # size:0xc
+      - {start: 0x226058, type: data, vram: 0x325058, name: ingame/menu/menu_item_dat} # size:0xd40
+      - {start: 0x226d98, type: data, vram: 0x325d98, name: ingame/menu/menu_map_dat} # size:0x720
+      - {start: 0x2274b8, type: data, vram: 0x3264b8, name: ingame/menu/menu_map_mapdata_dat} # size:0x2120
+      - {start: 0x2295d8, type: data, vram: 0x3285d8, name: ingame/menu/menu_memo} # size:0x1c
+      - {start: 0x2295f8, type: data, vram: 0x3285f8, name: ingame/menu/menu_memo_dat} # size:0x800
+      - {start: 0x229df8, type: data, vram: 0x328df8, name: menu/tim_dat/menu_photo_dat} # size:0x1ba0
+      - {start: 0x22b998, type: data, vram: 0x32a998, name: ingame/menu/menu_radio_dat} # size:0x4a0
+      - {start: 0x22be38, type: data, vram: 0x32ae38, name: ingame/menu/menu_top_dat} # size:0xa60
+      - {start: 0x22c898, type: data, vram: 0x32b898, name: graphics/graph2d/message} # size:0x18a8
+      - {start: 0x22e140, type: data, vram: 0x32d140, name: graphics/motion/mim_dat} # size:0x14c
+      - {start: 0x22e290, type: data, vram: 0x32d290, name: outgame/mis_sel_disp} # size:0x118
+      - {start: 0x22e3a8, type: data, vram: 0x32d3a8, name: outgame/mission_dat} # size:0x15c0
+      - {start: 0x22f968, type: data, vram: 0x32e968, name: outgame/mission_disp} # size:0x3c
+      - {start: 0x22f9a8, type: data, vram: 0x32e9a8, name: graphics/motion/morph} # size:0x1d8
+      - {start: 0x22fb80, type: data, vram: 0x32eb80, name: graphics/motion/morph_dat} # size:0x36c
+      - {start: 0x22fef0, type: data, vram: 0x32eef0, name: graphics/motion/motion} # size:0x7ec8
+      - {start: 0x237dc0, type: data, vram: 0x336dc0, name: ingame/movie_room_menu/prg/movie_projecter} # size:0x80
+      - {start: 0x237e40, type: data, vram: 0x336e40, name: ingame/movie_room_menu/prg/movie_room_menu} # size:0x88
+      - {start: 0x237ec8, type: data, vram: 0x336ec8, name: graphics/movie/movie_title_dat} # size:0x1538
+      - {start: 0x239400, type: data, vram: 0x338400, name: msg_box} # size:0x180
+      - {start: 0x239580, type: data, vram: 0x338580, name: msg_def_dat} # size:0x20
+      - {start: 0x2395a0, type: data, vram: 0x3385a0, name: msg_disp_dat} # size:0x298
+      - {start: 0x239838, type: data, vram: 0x338838, name: msg_win_dat} # size:0x40
+      - {start: 0x239878, type: data, vram: 0x338878, name: ingame/photo/n_equip_tray} # size:0x110
+      - {start: 0x239988, type: data, vram: 0x338988, name: n_finder_dat} # size:0x1500
+      - {start: 0x23ae88, type: data, vram: 0x339e88, name: graphics/obj_draw_ctrl} # size:0x24
+      - {start: 0x23aeb0, type: data, vram: 0x339eb0, name: common/ol_load} # size:0x1e0
+      - {start: 0x23b090, type: data, vram: 0x33a090, name: outgame/option} # size:0x70
+      - {start: 0x23b100, type: data, vram: 0x33a100, name: outgame/option_dat} # size:0x1ed8
+      - {start: 0x23cfd8, type: data, vram: 0x33bfd8, name: outgame/outgame_dat} # size:0x100
+      - {start: 0x23d0d8, type: data, vram: 0x33c0d8, name: pad/pad} # size:0x20
+      - {start: 0x23d0f8, type: data, vram: 0x33c0f8, name: pause_dat} # size:0x120
+      - {start: 0x23d218, type: data, vram: 0x33c218, name: ingame/photo/photo} # size:0x214
+      - {start: 0x23d430, type: data, vram: 0x33c430, name: ingame/photo/photo_dat} # size:0x7a0
+      - {start: 0x23dbd0, type: data, vram: 0x33cbd0, name: ingame/photo/photo_make} # size:0x1c0
+      - {start: 0x23dd90, type: data, vram: 0x33cd90, name: ingame/plyr/player} # size:0x380
+      - {start: 0x23e110, type: data, vram: 0x33d110, name: ingame/puzzle/puzzle_hina_dat} # size:0x6e0
+      - {start: 0x23e7f0, type: data, vram: 0x33d7f0, name: ingame/puzzle/puzzle_kaza_dat} # size:0x740
+      - {start: 0x23ef30, type: data, vram: 0x33df30, name: ingame/puzzle/puzzle_roku_dat} # size:0x460
+      - {start: 0x23f390, type: data, vram: 0x33e390, name: ingame/puzzle/roku/roku_pzl} # size:0x1c
+      - {start: 0x23f3b0, type: data, vram: 0x33e3b0, name: system/mc/dat/save_data} # size:0xe4
+      - {start: 0x23f498, type: data, vram: 0x33e498, name: system/mc/dat/save_load_dat} # size:0x780
+      - {start: 0x23fc18, type: data, vram: 0x33ec18, name: system/mc/dat/save_point_dat} # size:0xd0
+      - {start: 0x23fce8, type: data, vram: 0x33ece8, name: system/mc/dat/savepoint_dat} # size:0x200
+      - {start: 0x23fef0, type: data, vram: 0x33eef0, name: graphics/scene/scene} # size:0x4320
+      - {start: 0x244210, type: data, vram: 0x343210, name: graphics/scene/scene_dat} # size:0x164
+      - {start: 0x244380, type: data, vram: 0x343380, name: debug/scn_test} # size:0x15f0
+      - {start: 0x245970, type: data, vram: 0x344970, name: setup_dat} # size:0x6e0
+      - {start: 0x246050, type: data, vram: 0x345050, name: outgame/setup_menu} # size:0x1c
+      - {start: 0x246070, type: data, vram: 0x345070, name: ingame/plyr/sis_algo} # size:0x60
+      - {start: 0x2460d0, type: data, vram: 0x3450d0, name: ingame/plyr/sis_trpoint} # size:0xa2ec
+      - {start: 0x2503c0, type: data, vram: 0x34f3c0, name: ingame/plyr/sister} # size:0xaa0
+      - {start: 0x250e60, type: data, vram: 0x34fe60, name: ingame/photo/spirit_gage} # size:0x20
+      - {start: 0x250e80, type: data, vram: 0x34fe80, name: ingame/subtitle/subtitle} # size:0x1c
+      - {start: 0x250ea0, type: data, vram: 0x34fea0, name: system/os/system} # size:0xe740
+      - {start: 0x25f5e0, type: data, vram: 0x35e5e0, name: title_datsystem/mc/mc_title_dat} # size:0x3a0
+      - {start: 0x25f980, type: data, vram: 0x35e980, name: iopsys.a_snd_3d_} # size:0x18
+      - {start: 0x25f998, type: data, vram: 0x35e998, name: iopsys.a_snd_} # size:0x28
+      - {start: 0x25f9c0, type: data, vram: 0x35e9c0, name: iopsys.a_snd_pcmstream_} # size:0x250
+      - {start: 0x25fc10, type: data, vram: 0x35ec10, name: iopsys.a_hxd_} # size:0x14
+      - {start: 0x25fc28, type: data, vram: 0x35ec28, name: cmp.a_encodes_} # size:0x7229
+      - {start: 0x266e58, type: data, vram: 0x365e58, name: libexcep.a_libexcep_} # size:0x10
+      - {start: 0x266e80, type: data, vram: 0x365e80, name: libcdvd.a_cdvd000_} # size:0x1ba8
+      - {start: 0x268a28, type: data, vram: 0x367a28, name: libcdvd.a_cdvd036_} # size:0xc
+      - {start: 0x268a38, type: data, vram: 0x367a38, name: libdma.a_libdma_} # size:0x38
+      - {start: 0x268a70, type: data, vram: 0x367a70, name: libkernl.a_klib_} # size:0x10
+      - {start: 0x268a80, type: data, vram: 0x367a80, name: libkernl.a_thread_} # size:0x4
+      - {start: 0x268a84, type: data, vram: 0x367a84, name: libkernl.a_kprintf_} # size:0x8
+      - {start: 0x268a8c, type: data, vram: 0x367a8c, name: libkernl.a_sifcmd_} # size:0x4
+      - {start: 0x268a90, type: data, vram: 0x367a90, name: libkernl.a_sifrpc_} # size:0x4
+      - {start: 0x268a98, type: data, vram: 0x367a98, name: libkernl.a_filestub_} # size:0x9c
+      - {start: 0x268b34, type: data, vram: 0x367b34, name: libkernl.a_iopheap_} # size:0x4
+      - {start: 0x268b38, type: data, vram: 0x367b38, name: libkernl.a_eeloadfile_} # size:0x8
+      - {start: 0x268b40, type: data, vram: 0x367b40, name: libkernl.a_tlbfunc_} # size:0x64c
+      - {start: 0x269190, type: data, vram: 0x368190, name: libkernl.a_initsys_} # size:0x20
+      - {start: 0x2691b0, type: data, vram: 0x3681b0, name: libkernl.a_libosd_} # size:0x7c0
+      - {start: 0x269970, type: data, vram: 0x368970, name: libkernl.a_exit_} # size:0x8
+      - {start: 0x269978, type: data, vram: 0x368978, name: libkernl.a_alarm_} # size:0x7a8
+      - {start: 0x26a120, type: data, vram: 0x369120, name: libkernl.a_timer_} # size:0x20
+      - {start: 0x26a140, type: data, vram: 0x369140, name: libkernl.a_iopnotify_} # size:0x8
+      - {start: 0x26a148, type: data, vram: 0x369148, name: libkernl.a_glue_} # size:0x8
+      - {start: 0x26a150, type: data, vram: 0x369150, name: libpkt.a_gifpk000_} # size:0x10
+      - {start: 0x26a160, type: data, vram: 0x369160, name: libpkt.a_vifpk025_} # size:0x10
+      - {start: 0x26a170, type: data, vram: 0x369170, name: libvu0.a_libvu0_} # size:0x40
+      - {start: 0x26a1b0, type: data, vram: 0x3691b0, name: libpad.a_libpad_} # size:0x44
+      - {start: 0x26a1f8, type: data, vram: 0x3691f8, name: libmc.a_libmc_} # size:0x1c
+      - {start: 0x26a220, type: data, vram: 0x369220, name: libgraph.a_graph001_} # size:0x20
+      - {start: 0x26a240, type: data, vram: 0x369240, name: libgraph.a_graph002_} # size:0x20
+      - {start: 0x26a260, type: data, vram: 0x369260, name: libmpeg.a_pack_} # size:0xa0
+      - {start: 0x26a300, type: data, vram: 0x369300, name: libmpeg.a_mpeg_} # size:0x10
+      - {start: 0x26a340, type: data, vram: 0x369340, name: libmpeg.a_var_} # size:0x80
+      - {start: 0x26a3c0, type: data, vram: 0x3693c0, name: libmpeg.a_mpc_} # size:0xa8
+      - {start: 0x26a468, type: data, vram: 0x369468, name: libsdr.a_sdr_main_} # size:0x18
+      - {start: 0x26a480, type: data, vram: 0x369480, name: libsdr.a_sdr_cb_} # size:0x28
+      - {start: 0x26a4b0, type: data, vram: 0x3694b0, name: libipu.a_ipuinit_} # size:0x80
+      - {start: 0x26a530, type: data, vram: 0x369530, name: libscf.a_libscf_} # size:0x27
+      - {start: 0x26a558, type: data, vram: 0x369558, name: libgcc.a___main_} # size:0x8
+      - {start: 0x26a560, type: data, vram: 0x369560, name: libgcc.a__eh_} # size:0x14
+      - {start: 0x26a574, type: data, vram: 0x369574, name: libgcc.a_frame-dwarf2_} # size:0x4
+      - {start: 0x26a578, type: data, vram: 0x369578, name: libgcc.a_tinfo2_} # size:0x98
+      - {start: 0x26a610, type: data, vram: 0x369610, name: libgcc.a_exception_} # size:0x4
+      - {start: 0x26a618, type: data, vram: 0x369618, name: libc.a_impure_} # size:0x2f4
+      - {start: 0x26a910, type: data, vram: 0x369910, name: libc.a_mallocr_} # size:0x458
+      - {start: 0x26ad68, type: data, vram: 0x369d68, name: libc.a_mlock_} # size:0x8
+      - {start: 0x26ad70, type: data, vram: 0x369d70, name: libc.a_locale_} # size:0x4
+
+      ## EH_FRAME
+      - {start: 0x26b260, type: eh_frame, vram: 0x36a260, name: ingame/map/CBuff} #  size:0xa8
+      - {start: 0x26b308, type: eh_frame, vram: 0x36a308, name: graphics/graph3d/CDebugEdit} #  size:0x2c8
+      - {start: 0x26b5d0, type: eh_frame, vram: 0x36a5d0, name: ingame/plyr/ChrSort} #  size:0x1a4
+      - {start: 0x26b774, type: eh_frame, vram: 0x36a774, name: debug/DbFurnPre} #  size:0x17c
+      - {start: 0x26b8f0, type: eh_frame, vram: 0x36a8f0, name: ingame/map/FurnCtl} #  size:0x388
+      - {start: 0x26bc78, type: eh_frame, vram: 0x36ac78, name: ingame/map/FurnLoad} #  size:0x130
+      - {start: 0x26bda8, type: eh_frame, vram: 0x36ada8, name: graphics/scene/IngameScene} #  size:0x238
+      - {start: 0x26bfe0, type: eh_frame, vram: 0x36afe0, name: ingame/map/MapAnim} #  size:0x5b8
+      - {start: 0x26c598, type: eh_frame, vram: 0x36b598, name: ingame/map/MapDoor} #  size:0x400
+      - {start: 0x26c998, type: eh_frame, vram: 0x36b998, name: ingame/map/MapDraw} #  size:0x334
+      - {start: 0x26cccc, type: eh_frame, vram: 0x36bccc, name: ingame/map/MapFog} #  size:0x178
+      - {start: 0x26ce44, type: eh_frame, vram: 0x36be44, name: ingame/map/MapHit} #  size:0x28c
+      - {start: 0x26d0d0, type: eh_frame, vram: 0x36c0d0, name: ingame/map/MapLBuff} #  size:0x60
+      - {start: 0x26d130, type: eh_frame, vram: 0x36c130, name: ingame/map/MapLight} #  size:0x428
+      - {start: 0x26d558, type: eh_frame, vram: 0x36c558, name: ingame/map/MapLoad} #  size:0x564
+      - {start: 0x26dabc, type: eh_frame, vram: 0x36cabc, name: ingame/map/MapObj} #  size:0x260
+      - {start: 0x26dd1c, type: eh_frame, vram: 0x36cd1c, name: ingame/map/MapObjReg} #  size:0x4e4
+      - {start: 0x26e200, type: eh_frame, vram: 0x36d200, name: ingame/map/MapPut} #  size:0x1b4
+      - {start: 0x26e3b4, type: eh_frame, vram: 0x36d3b4, name: ingame/map/MapSave} #  size:0x98
+      - {start: 0x26e44c, type: eh_frame, vram: 0x36d44c, name: ingame/map/MapSky} #  size:0x220
+      - {start: 0x26e66c, type: eh_frame, vram: 0x36d66c, name: ingame/map/MapSp} #  size:0x2c8
+      - {start: 0x26e934, type: eh_frame, vram: 0x36d934, name: ingame/map/MhCtl} #  size:0x1b4
+      - {start: 0x26eae8, type: eh_frame, vram: 0x36dae8, name: ingame/map/RegDat} #  size:0x568
+      - {start: 0x26f050, type: eh_frame, vram: 0x36e050, name: common/SingleLinkList} #  size:0x154
+      - {start: 0x26f1a4, type: eh_frame, vram: 0x36e1a4, name: outgame/SpriteCmn} #  size:0x1ac
+      - {start: 0x26f350, type: eh_frame, vram: 0x36e350, name: graphics/motion/accessory} #  size:0x720
+      - {start: 0x26fa70, type: eh_frame, vram: 0x36ea70, name: graphics/motion/acs_dat} #  size:0x70
+      - {start: 0x26fae0, type: eh_frame, vram: 0x36eae0, name: album/prg/album} #  size:0x26c
+      - {start: 0x26fd4c, type: eh_frame, vram: 0x36ed4c, name: album/prg/album_dat} #  size:0x70
+      - {start: 0x26fdbc, type: eh_frame, vram: 0x36edbc, name: album/prg/album_disp} #  size:0x7a4
+      - {start: 0x270560, type: eh_frame, vram: 0x36f560, name: album/prg/album_edit} #  size:0x7b4
+      - {start: 0x270d14, type: eh_frame, vram: 0x36fd14, name: album/prg/album_load} #  size:0x430
+      - {start: 0x271144, type: eh_frame, vram: 0x370144, name: album/prg/album_mem} #  size:0x50
+      - {start: 0x271194, type: eh_frame, vram: 0x370194, name: album/prg/album_save} #  size:0x5a4
+      - {start: 0x271738, type: eh_frame, vram: 0x370738, name: album/prg/album_view} #  size:0x470
+      - {start: 0x271ba8, type: eh_frame, vram: 0x370ba8, name: ingame/enemy/alg_manage} #  size:0xb8
+      - {start: 0x271c60, type: eh_frame, vram: 0x370c60, name: graphics/motion/anicode} #  size:0x194
+      - {start: 0x271df4, type: eh_frame, vram: 0x370df4, name: ingame/menu/anim_2d} #  size:0xe0
+      - {start: 0x271ed4, type: eh_frame, vram: 0x370ed4, name: outgame/autoload} #  size:0x1f8
+      - {start: 0x2720cc, type: eh_frame, vram: 0x3710cc, name: ingame/photo/bonus_shot} #  size:0x25c
+      - {start: 0x272328, type: eh_frame, vram: 0x371328, name: ingame/menu/tim_dat/cam_level_up_point} #  size:0x70
+      - {start: 0x272398, type: eh_frame, vram: 0x371398, name: ingame/menu/tim_dat/camera_power_up} #  size:0x70
+      - {start: 0x272408, type: eh_frame, vram: 0x371408, name: ingame/photo/center_circle} #  size:0xdc
+      - {start: 0x2724e4, type: eh_frame, vram: 0x3714e4, name: ingame/photo/center_cross} #  size:0xf0
+      - {start: 0x2725d4, type: eh_frame, vram: 0x3715d4, name: outgame/chapter_sel} #  size:0xe8
+      - {start: 0x2726bc, type: eh_frame, vram: 0x3716bc, name: ingame/plyr/charBB} #  size:0x58
+      - {start: 0x272714, type: eh_frame, vram: 0x371714, name: ingame/clear/prg/clear_flg} #  size:0x190
+      - {start: 0x2728a4, type: eh_frame, vram: 0x3718a4, name: ingame/clear/prg/clearmenu} #  size:0x2a0
+      - {start: 0x272b44, type: eh_frame, vram: 0x371b44, name: ingame/clear/prg/clearmenu_top} #  size:0x20c
+      - {start: 0x272d50, type: eh_frame, vram: 0x371d50, name: system/compress/compress} #  size:0x11c
+      - {start: 0x272e6c, type: eh_frame, vram: 0x371e6c, name: ingame/item/prg/crystal} #  size:0x1ac
+      - {start: 0x273018, type: eh_frame, vram: 0x372018, name: ingame/photo/damage_disp} #  size:0xd0
+      - {start: 0x2730e8, type: eh_frame, vram: 0x3720e8, name: debug/debug} #  size:0x170
+      - {start: 0x273258, type: eh_frame, vram: 0x372258, name: debug/debug_menu} #  size:0x158
+      - {start: 0x2733b0, type: eh_frame, vram: 0x3723b0, name: graphics/dmaVif1} #  size:0x180
+      - {start: 0x273530, type: eh_frame, vram: 0x372530, name: ingame/door/prg/door} #  size:0x1f4
+      - {start: 0x273724, type: eh_frame, vram: 0x372724, name: graphics/graph2d/draw_btn} #  size:0x34
+      - {start: 0x273758, type: eh_frame, vram: 0x372758, name: graphics/graph2d/draw_caption} #  size:0xf8
+      - {start: 0x273850, type: eh_frame, vram: 0x372850, name: graphics/graph2d/draw_cmn_num} #  size:0x74
+      - {start: 0x2738c4, type: eh_frame, vram: 0x3728c4, name: graphics/graph2d/draw_cmn_win} #  size:0x1d0
+      - {start: 0x273a94, type: eh_frame, vram: 0x372a94, name: graphics/draw_env} #  size:0x174
+      - {start: 0x273c08, type: eh_frame, vram: 0x372c08, name: graphics/graph2d/draw_line} #  size:0x90
+      - {start: 0x273c98, type: eh_frame, vram: 0x372c98, name: graphics/graph3d/eeException} #  size:0xd8
+      - {start: 0x273d70, type: eh_frame, vram: 0x372d70, name: graphics/graph3d/eeFile} #  size:0x2f4
+      - {start: 0x274064, type: eh_frame, vram: 0x373064, name: graphics/graph3d/eeFindFile} #  size:0x394
+      - {start: 0x2743f8, type: eh_frame, vram: 0x3733f8, name: system/os/eecdvd} #  size:0x148
+      - {start: 0x274540, type: eh_frame, vram: 0x373540, name: graphics/effect/effect} #  size:0x4d0
+      - {start: 0x274a10, type: eh_frame, vram: 0x373a10, name: graphics/effect/effect_butterfly} #  size:0x56c
+      - {start: 0x274f7c, type: eh_frame, vram: 0x373f7c, name: graphics/effect/effect_ene} #  size:0xc30
+      - {start: 0x275bac, type: eh_frame, vram: 0x374bac, name: graphics/effect/effect_obj} #  size:0xc38
+      - {start: 0x2767e4, type: eh_frame, vram: 0x3757e4, name: graphics/effect/effect_oth} #  size:0xee0
+      - {start: 0x2776c4, type: eh_frame, vram: 0x3766c4, name: graphics/effect/effect_pak} #  size:0x70
+      - {start: 0x277734, type: eh_frame, vram: 0x376734, name: graphics/effect/effect_rain} #  size:0x3f0
+      - {start: 0x277b24, type: eh_frame, vram: 0x376b24, name: graphics/effect/effect_rdr} #  size:0x2e0
+      - {start: 0x277e04, type: eh_frame, vram: 0x376e04, name: graphics/effect/effect_scr} #  size:0x820
+      - {start: 0x278624, type: eh_frame, vram: 0x377624, name: graphics/effect/effect_spr} #  size:0xd8
+      - {start: 0x2786fc, type: eh_frame, vram: 0x3776fc, name: graphics/effect/effect_sub} #  size:0x7bc
+      - {start: 0x278eb8, type: eh_frame, vram: 0x377eb8, name: graphics/effect/effect_torch} #  size:0x50c
+      - {start: 0x2793c4, type: eh_frame, vram: 0x3783c4, name: ingame/clear/prg/ending} #  size:0x148
+      - {start: 0x27950c, type: eh_frame, vram: 0x37850c, name: ingame/photo/ene_life} #  size:0xd0
+      - {start: 0x2795dc, type: eh_frame, vram: 0x3785dc, name: ingame/enemy/ene_mot_ctrl} #  size:0x124
+      - {start: 0x279700, type: eh_frame, vram: 0x378700, name: ingame/enemy/enemy} #  size:0xbe8
+      - {start: 0x27a2e8, type: eh_frame, vram: 0x3792e8, name: ingame/enemy/enemy_act} #  size:0x1288
+      - {start: 0x27b570, type: eh_frame, vram: 0x37a570, name: ingame/enemy/enemy_dat} #  size:0xa8
+      - {start: 0x27b618, type: eh_frame, vram: 0x37a618, name: ingame/event/prg/ev_change} #  size:0x274
+      - {start: 0x27b88c, type: eh_frame, vram: 0x37a88c, name: ingame/event/prg/ev_debug} #  size:0x94
+      - {start: 0x27b920, type: eh_frame, vram: 0x37a920, name: ingame/event/prg/ev_disp} #  size:0x2b8
+      - {start: 0x27bbd8, type: eh_frame, vram: 0x37abd8, name: ingame/event/dat/ev_disp_dat} #  size:0x70
+      - {start: 0x27bc48, type: eh_frame, vram: 0x37ac48, name: ingame/event/prg/ev_ene} #  size:0x118
+      - {start: 0x27bd60, type: eh_frame, vram: 0x37ad60, name: ingame/event/prg/ev_exe} #  size:0x214
+      - {start: 0x27bf74, type: eh_frame, vram: 0x37af74, name: ingame/event/prg/ev_gaze} #  size:0xa4
+      - {start: 0x27c018, type: eh_frame, vram: 0x37b018, name: ingame/event/prg/ev_get} #  size:0x180
+      - {start: 0x27c198, type: eh_frame, vram: 0x37b198, name: ingame/event/prg/ev_macro} #  size:0x1b84
+      - {start: 0x27dd1c, type: eh_frame, vram: 0x37cd1c, name: ingame/event/prg/ev_main} #  size:0x110
+      - {start: 0x27de2c, type: eh_frame, vram: 0x37ce2c, name: ingame/event/prg/ev_open} #  size:0x75c
+      - {start: 0x27e588, type: eh_frame, vram: 0x37d588, name: ingame/event/prg/ev_phase} #  size:0xa0
+      - {start: 0x27e628, type: eh_frame, vram: 0x37d628, name: ingame/event/prg/ev_se} #  size:0xfc
+      - {start: 0x27e724, type: eh_frame, vram: 0x37d724, name: ingame/event/prg/ev_sis} #  size:0x100
+      - {start: 0x27e824, type: eh_frame, vram: 0x37d824, name: ingame/event/prg/ev_talk} #  size:0x224
+      - {start: 0x27ea48, type: eh_frame, vram: 0x37da48, name: ingame/event/prg/ev_talk_dat} #  size:0x70
+      - {start: 0x27eab8, type: eh_frame, vram: 0x37dab8, name: ingame/event/prg/ev_timer} #  size:0x15c
+      - {start: 0x27ec14, type: eh_frame, vram: 0x37dc14, name: ingame/event/prg/event_camera} #  size:0x3f0
+      - {start: 0x27f004, type: eh_frame, vram: 0x37e004, name: graphics/graph2d/fade} #  size:0x4c
+      - {start: 0x27f050, type: eh_frame, vram: 0x37e050, name: ingame/enemy/fene_entry} #  size:0x268
+      - {start: 0x27f2b8, type: eh_frame, vram: 0x37e2b8, name: ingame/photo/filament} #  size:0xe4
+      - {start: 0x27f39c, type: eh_frame, vram: 0x37e39c, name: ingame/item/prg/file} #  size:0x264
+      - {start: 0x27f600, type: eh_frame, vram: 0x37e600, name: ingame/item/dat/file_dat} #  size:0x70
+      - {start: 0x27f670, type: eh_frame, vram: 0x37e670, name: ingame/photo/film_no} #  size:0xbc
+      - {start: 0x27f72c, type: eh_frame, vram: 0x37e72c, name: ingame/photo/finder} #  size:0x3ec
+      - {start: 0x27fb18, type: eh_frame, vram: 0x37eb18, name: ingame/camera/finder_camera} #  size:0x124
+      - {start: 0x27fc3c, type: eh_frame, vram: 0x37ec3c, name: ingame/enemy/fly_ctrl} #  size:0x3d0
+      - {start: 0x28000c, type: eh_frame, vram: 0x37f00c, name: graphics/scene/fod} #  size:0x368
+      - {start: 0x280374, type: eh_frame, vram: 0x37f374, name: ingame/map/foot_se} #  size:0x11c
+      - {start: 0x280490, type: eh_frame, vram: 0x37f490, name: outgame/framerate} #  size:0x124
+      - {start: 0x2805b4, type: eh_frame, vram: 0x37f5b4, name: ingame/photo/freq_camera} #  size:0xac
+      - {start: 0x280660, type: eh_frame, vram: 0x37f660, name: graphics/effect/g2d_debug} #  size:0x54
+      - {start: 0x2806b4, type: eh_frame, vram: 0x37f6b4, name: graphics/graph2d/g2d_draw} #  size:0x330
+      - {start: 0x2809e4, type: eh_frame, vram: 0x37f9e4, name: graphics/graph2d/g2d_main} #  size:0xb8
+      - {start: 0x280a9c, type: eh_frame, vram: 0x37fa9c, name: graphics/graph3d/g3dBoundingVolume} #  size:0x48
+      - {start: 0x280ae4, type: eh_frame, vram: 0x37fae4, name: graphics/graph3d/g3dCamera} #  size:0xfc
+      - {start: 0x280be0, type: eh_frame, vram: 0x37fbe0, name: graphics/graph3d/g3dCore} #  size:0x30c
+      - {start: 0x280eec, type: eh_frame, vram: 0x37feec, name: graphics/graph3d/g3dDebug} #  size:0x21c
+      - {start: 0x281108, type: eh_frame, vram: 0x380108, name: graphics/graph3d/g3dDma} #  size:0x17c
+      - {start: 0x281284, type: eh_frame, vram: 0x380284, name: graphics/graph3d/g3dGeom} #  size:0x144
+      - {start: 0x2813c8, type: eh_frame, vram: 0x3803c8, name: graphics/graph3d/g3dGsWrapper} #  size:0xc0
+      - {start: 0x281488, type: eh_frame, vram: 0x380488, name: graphics/graph3d/g3dLight} #  size:0x7c
+      - {start: 0x281504, type: eh_frame, vram: 0x380504, name: graphics/graph3d/g3dLightEx} #  size:0x368
+      - {start: 0x28186c, type: eh_frame, vram: 0x38086c, name: graphics/graph3d/g3dMath} #  size:0x100
+      - {start: 0x28196c, type: eh_frame, vram: 0x38096c, name: graphics/graph3d/g3dMemory} #  size:0x40
+      - {start: 0x2819ac, type: eh_frame, vram: 0x3809ac, name: graphics/graph3d/g3dRenderTarget} #  size:0x1c4
+      - {start: 0x281b70, type: eh_frame, vram: 0x380b70, name: graphics/graph3d/g3dSprite} #  size:0x78
+      - {start: 0x281be8, type: eh_frame, vram: 0x380be8, name: graphics/graph3d/g3dTexture} #  size:0x9c
+      - {start: 0x281c84, type: eh_frame, vram: 0x380c84, name: graphics/graph3d/g3dVif1} #  size:0xa4
+      - {start: 0x281d28, type: eh_frame, vram: 0x380d28, name: outgame/gallery} #  size:0x250
+      - {start: 0x281f78, type: eh_frame, vram: 0x380f78, name: outgame/gallery_disp} #  size:0x1fc
+      - {start: 0x282174, type: eh_frame, vram: 0x381174, name: save_load/prg/game_data_save} #  size:0x5f8
+      - {start: 0x28276c, type: eh_frame, vram: 0x38176c, name: ingame/clear/prg/game_result} #  size:0x244
+      - {start: 0x2829b0, type: eh_frame, vram: 0x3819b0, name: ingame/clear/prg/game_result_top} #  size:0x2f0
+      - {start: 0x282ca0, type: eh_frame, vram: 0x381ca0, name: ingame/gameover/prg/gameover} #  size:0x158
+      - {start: 0x282df8, type: eh_frame, vram: 0x381df8, name: ingame/gameover/prg/gameover_menu} #  size:0x27c
+      - {start: 0x283074, type: eh_frame, vram: 0x382074, name: ingame/gameover/prg/gameover_menu_load} #  size:0x420
+      - {start: 0x283494, type: eh_frame, vram: 0x382494, name: ingame/gameover/prg/gameover_menu_top} #  size:0x20c
+      - {start: 0x2836a0, type: eh_frame, vram: 0x3826a0, name: ingame/menu/ghost_seal_door} #  size:0x14c
+      - {start: 0x2837ec, type: .eh_frame, vram: 0x3827ec, name: main/gphase} #  size:0x6c
+      - {start: 0x283858, type: eh_frame, vram: 0x382858, name: graphics/graph3d/gra3d} #  size:0xb70
+      - {start: 0x2843c8, type: eh_frame, vram: 0x3833c8, name: graphics/graph3d/gra3dBoundingBox} #  size:0x10c
+      - {start: 0x2844d4, type: eh_frame, vram: 0x3834d4, name: graphics/graph3d/gra3dConst} #  size:0x70
+      - {start: 0x284544, type: eh_frame, vram: 0x383544, name: graphics/graph3d/gra3dDebug} #  size:0x1f4
+      - {start: 0x284738, type: eh_frame, vram: 0x383738, name: graphics/graph3d/gra3dDma} #  size:0x98
+      - {start: 0x2847d0, type: eh_frame, vram: 0x3837d0, name: graphics/graph3d/gra3dMisc} #  size:0x35c
+      - {start: 0x284b2c, type: eh_frame, vram: 0x383b2c, name: graphics/graph3d/gra3dSGD} #  size:0x658
+      - {start: 0x285184, type: eh_frame, vram: 0x384184, name: graphics/graph3d/gra3dSGDData} #  size:0x298
+      - {start: 0x28541c, type: eh_frame, vram: 0x38441c, name: graphics/graph3d/gra3dShadow} #  size:0x414
+      - {start: 0x285830, type: eh_frame, vram: 0x384830, name: graphics/graph3d/gra3dTRI2} #  size:0x118
+      - {start: 0x285948, type: eh_frame, vram: 0x384948, name: graphics/graph3d/gra3dVu0} #  size:0x70
+      - {start: 0x2859b8, type: eh_frame, vram: 0x3849b8, name: graphics/graphics} #  size:0x664
+      - {start: 0x28601c, type: eh_frame, vram: 0x38501c, name: common/heapctrl} #  size:0x114
+      - {start: 0x286130, type: eh_frame, vram: 0x385130, name: ingame/puzzle/hina/hina_pzl} #  size:0x548
+      - {start: 0x286678, type: eh_frame, vram: 0x385678, name: ingame/map/hit_check_base} #  size:0x138
+      - {start: 0x2867b0, type: eh_frame, vram: 0x3857b0, name: ingame/photo/hp_bar} #  size:0xdc
+      - {start: 0x28688c, type: eh_frame, vram: 0x38588c, name: ingame/ingame} #  size:0x700
+      - {start: 0x286f8c, type: eh_frame, vram: 0x385f8c, name: ingame/ingame_effect} #  size:0x668
+      - {start: 0x2875f4, type: eh_frame, vram: 0x3865f4, name: ingame/item/prg/item} #  size:0x2a4
+      - {start: 0x287898, type: eh_frame, vram: 0x386898, name: ingame/item/prg/item_dat} #  size:0x70
+      - {start: 0x287908, type: eh_frame, vram: 0x386908, name: ingame/item/prg/item_debug} #  size:0x70
+      - {start: 0x287978, type: eh_frame, vram: 0x386978, name: ingame/puzzle/kai/kai_pzl} #  size:0x240
+      - {start: 0x287bb8, type: eh_frame, vram: 0x386bb8, name: ingame/puzzle/kaza2/kaza2_pzl} #  size:0x6e0
+      - {start: 0x288298, type: eh_frame, vram: 0x387298, name: ingame/puzzle/kaza/kaza_pzl} #  size:0x664
+      - {start: 0x2888fc, type: eh_frame, vram: 0x3878fc, name: outgame/lang_check} #  size:0x1a0
+      - {start: 0x288a9c, type: eh_frame, vram: 0x387a9c, name: outgame/lang_sel} #  size:0x23c
+      - {start: 0x288cd8, type: eh_frame, vram: 0x387cd8, name: ingame/item/prg/level_gem} #  size:0x88
+      - {start: 0x288d60, type: eh_frame, vram: 0x387d60, name: outgame/loadgame} #  size:0x400
+      - {start: 0x289160, type: eh_frame, vram: 0x388160, name: ingame/loading/loading} #  size:0x1bc
+      - {start: 0x28931c, type: eh_frame, vram: 0x38831c, name: outgame/logo} #  size:0x17c
+      - {start: 0x289498, type: eh_frame, vram: 0x388498, name: ingame/photo/m_plyr_camera} #  size:0xf8
+      - {start: 0x289590, type: eh_frame, vram: 0x388590, name: main/main} #  size:0x1bc
+      - {start: 0x28974c, type: eh_frame, vram: 0x38874c, name: ingame/plyr/man_data} #  size:0x198
+      - {start: 0x2898e4, type: eh_frame, vram: 0x3888e4, name: ingame/map/map_bgm} #  size:0x17c
+      - {start: 0x289a60, type: eh_frame, vram: 0x388a60, name: ingame/map/map_camera} #  size:0x4a0
+      - {start: 0x289f00, type: eh_frame, vram: 0x388f00, name: ingame/map/map_height} #  size:0x290
+      - {start: 0x28a190, type: eh_frame, vram: 0x389190, name: ingame/map/map_hit_check} #  size:0xd8
+      - {start: 0x28a268, type: eh_frame, vram: 0x389268, name: ingame/map/map_rectangle} #  size:0x554
+      - {start: 0x28a7bc, type: eh_frame, vram: 0x3897bc, name: ingame/map/map_reverb} #  size:0xa4
+      - {start: 0x28a860, type: eh_frame, vram: 0x389860, name: system/mc/prg/mc} #  size:0x58
+      - {start: 0x28a8b8, type: eh_frame, vram: 0x3898b8, name: system/mc/prg/mc_check} #  size:0x54
+      - {start: 0x28a90c, type: eh_frame, vram: 0x38990c, name: system/mc/prg/mc_check_broken} #  size:0x7c
+      - {start: 0x28a988, type: eh_frame, vram: 0x389988, name: system/mc/prg/mc_check_card} #  size:0x84
+      - {start: 0x28aa0c, type: eh_frame, vram: 0x389a0c, name: system/mc/prg/mc_check_dir} #  size:0xa4
+      - {start: 0x28aab0, type: eh_frame, vram: 0x389ab0, name: system/mc/prg/mc_check_empty} #  size:0x4c
+      - {start: 0x28aafc, type: eh_frame, vram: 0x389afc, name: system/mc/prg/mc_close} #  size:0x48
+      - {start: 0x28ab44, type: eh_frame, vram: 0x389b44, name: system/mc/prg/mc_cmn} #  size:0x40
+      - {start: 0x28ab84, type: eh_frame, vram: 0x389b84, name: system/mc/prg/mc_del_all_file} #  size:0x60
+      - {start: 0x28abe4, type: eh_frame, vram: 0x389be4, name: system/mc/prg/mc_del_dir} #  size:0x34
+      - {start: 0x28ac18, type: eh_frame, vram: 0x389c18, name: system/mc/prg/mc_del_file} #  size:0x6c
+      - {start: 0x28ac84, type: eh_frame, vram: 0x389c84, name: system/mc/prg/mc_format} #  size:0x4c
+      - {start: 0x28acd0, type: eh_frame, vram: 0x389cd0, name: system/mc/prg/mc_icon} #  size:0x64
+      - {start: 0x28ad34, type: eh_frame, vram: 0x389d34, name: system/mc/prg/mc_icon_sys} #  size:0x4c
+      - {start: 0x28ad80, type: eh_frame, vram: 0x389d80, name: system/mc/prg/mc_load} #  size:0x50
+      - {start: 0x28add0, type: eh_frame, vram: 0x389dd0, name: system/mc/prg/mc_make} #  size:0x4c
+      - {start: 0x28ae1c, type: eh_frame, vram: 0x389e1c, name: system/mc/prg/mc_make_all_file} #  size:0x54
+      - {start: 0x28ae70, type: eh_frame, vram: 0x389e70, name: system/mc/prg/mc_make_dir} #  size:0x6c
+      - {start: 0x28aedc, type: eh_frame, vram: 0x389edc, name: system/mc/prg/mc_make_file} #  size:0x50
+      - {start: 0x28af2c, type: eh_frame, vram: 0x389f2c, name: system/mc/prg/mc_open} #  size:0x50
+      - {start: 0x28af7c, type: eh_frame, vram: 0x389f7c, name: system/mc/prg/mc_read} #  size:0x4c
+      - {start: 0x28afc8, type: eh_frame, vram: 0x389fc8, name: system/mc/prg/mc_save} #  size:0x50
+      - {start: 0x28b018, type: eh_frame, vram: 0x38a018, name: system/mc/prg/mc_set_data} #  size:0x4f8
+      - {start: 0x28b510, type: eh_frame, vram: 0x38a510, name: system/mc/prg/mc_write} #  size:0x4c
+      - {start: 0x28b55c, type: eh_frame, vram: 0x38a55c, name: graphics/motion/mdlact} #  size:0x1fc
+      - {start: 0x28b758, type: eh_frame, vram: 0x38a758, name: graphics/motion/mdldat} #  size:0x70
+      - {start: 0x28b7c8, type: eh_frame, vram: 0x38a7c8, name: graphics/motion/mdlwork} #  size:0x2d0
+      - {start: 0x28ba98, type: eh_frame, vram: 0x38aa98, name: debug/mem_dbg} #  size:0xb8
+      - {start: 0x28bb50, type: eh_frame, vram: 0x38ab50, name: common/mem_util} #  size:0xb8
+      - {start: 0x28bc08, type: eh_frame, vram: 0x38ac08, name: ingame/item/prg/memo} #  size:0x1a4
+      - {start: 0x28bdac, type: eh_frame, vram: 0x38adac, name: ingame/menu/menu} #  size:0x228
+      - {start: 0x28bfd4, type: eh_frame, vram: 0x38afd4, name: ingame/menu/menu_cam} #  size:0x48
+      - {start: 0x28c01c, type: eh_frame, vram: 0x38b01c, name: ingame/menu/menu_cam_edit} #  size:0xd10
+      - {start: 0x28cd2c, type: eh_frame, vram: 0x38bd2c, name: ingame/menu/menu_cam_main} #  size:0x354
+      - {start: 0x28d080, type: eh_frame, vram: 0x38c080, name: ingame/menu/menu_cam_top} #  size:0x67c
+      - {start: 0x28d6fc, type: eh_frame, vram: 0x38c6fc, name: ingame/menu/menu_cmn} #  size:0x344
+      - {start: 0x28da40, type: eh_frame, vram: 0x38ca40, name: ingame/menu/menu_cmn_disp} #  size:0x2c4
+      - {start: 0x28dd04, type: eh_frame, vram: 0x38cd04, name: debug/menu_dat} #  size:0xf0
+      - {start: 0x28ddf4, type: eh_frame, vram: 0x38cdf4, name: ingame/menu/menu_file} #  size:0xa4c
+      - {start: 0x28e840, type: eh_frame, vram: 0x38d840, name: ingame/menu/menu_item} #  size:0x450
+      - {start: 0x28ec90, type: eh_frame, vram: 0x38dc90, name: ingame/menu/menu_map} #  size:0x6cc
+      - {start: 0x28f35c, type: eh_frame, vram: 0x38e35c, name: ingame/menu/menu_memo} #  size:0x3f4
+      - {start: 0x28f750, type: eh_frame, vram: 0x38e750, name: ingame/menu/menu_photo} #  size:0x49c
+      - {start: 0x28fbec, type: eh_frame, vram: 0x38ebec, name: ingame/menu/menu_radio} #  size:0x530
+      - {start: 0x29011c, type: eh_frame, vram: 0x38f11c, name: ingame/menu/menu_soul} #  size:0x59c
+      - {start: 0x2906b8, type: eh_frame, vram: 0x38f6b8, name: ingame/menu/menu_top} #  size:0x418
+      - {start: 0x290ad0, type: eh_frame, vram: 0x38fad0, name: graphics/graph2d/message} #  size:0x868
+      - {start: 0x291338, type: eh_frame, vram: 0x390338, name: graphics/motion/mim_dat} #  size:0x70
+      - {start: 0x2913a8, type: eh_frame, vram: 0x3903a8, name: graphics/motion/mime} #  size:0x38c
+      - {start: 0x291734, type: eh_frame, vram: 0x390734, name: outgame/mis_sel_disp} #  size:0x264
+      - {start: 0x291998, type: eh_frame, vram: 0x390998, name: outgame/mission_ctl} #  size:0x2b8
+      - {start: 0x291c50, type: eh_frame, vram: 0x390c50, name: outgame/mission_disp} #  size:0x1d0
+      - {start: 0x291e20, type: eh_frame, vram: 0x390e20, name: outgame/mission_pause} #  size:0x254
+      - {start: 0x292074, type: eh_frame, vram: 0x391074, name: outgame/mission_sel} #  size:0x548
+      - {start: 0x2925bc, type: eh_frame, vram: 0x3915bc, name: graphics/mmanage} #  size:0x198
+      - {start: 0x292754, type: eh_frame, vram: 0x391754, name: graphics/motion/morph} #  size:0x2cc
+      - {start: 0x292a20, type: eh_frame, vram: 0x391a20, name: graphics/motion/motion} #  size:0x940
+      - {start: 0x293360, type: eh_frame, vram: 0x392360, name: graphics/movie/movie} #  size:0x174
+      - {start: 0x2934d4, type: eh_frame, vram: 0x3924d4, name: ingame/movie_room_menu/prg/movie_projecter} #  size:0x1dc
+      - {start: 0x2936b0, type: eh_frame, vram: 0x3926b0, name: ingame/movie_room} #  size:0x104
+      - {start: 0x2937b4, type: eh_frame, vram: 0x3927b4, name: ingame/movie_room_menu/prg/movie_room_menu} #  size:0x3b4
+      - {start: 0x293b68, type: eh_frame, vram: 0x392b68, name: graphics/movie/movie_title} #  size:0x140
+      - {start: 0x293ca8, type: eh_frame, vram: 0x392ca8, name: common/my_mallocmy_malloc} #  size:0x64
+      - {start: 0x293d0c, type: eh_frame, vram: 0x392d0c, name: ingame/photo/n_equip_tray} #  size:0x48c
+      - {start: 0x294198, type: eh_frame, vram: 0x393198, name: ingame/photo/n_plyr_camera} #  size:0x2d0
+      - {start: 0x294468, type: eh_frame, vram: 0x393468, name: outgame/newgame} #  size:0x168
+      - {start: 0x2945d0, type: eh_frame, vram: 0x3935d0, name: graphics/obj_draw_ctrl} #  size:0x58
+      - {start: 0x294628, type: eh_frame, vram: 0x393628, name: common/ol_load} #  size:0x38c
+      - {start: 0x2949b4, type: eh_frame, vram: 0x3939b4, name: outgame/option} #  size:0x2b0
+      - {start: 0x294c64, type: eh_frame, vram: 0x393c64, name: outgame/option_disp} #  size:0x36c
+      - {start: 0x294fd0, type: eh_frame, vram: 0x393fd0, name: outgame/outgame} #  size:0x1b0
+      - {start: 0x295180, type: eh_frame, vram: 0x394180, name: pad/pad} #  size:0x114
+      - {start: 0x295294, type: eh_frame, vram: 0x394294, name: pad/pad_check} #  size:0xd4
+      - {start: 0x295368, type: eh_frame, vram: 0x394368, name: ingame/pause/prg/pause} #  size:0x25c
+      - {start: 0x2955c4, type: eh_frame, vram: 0x3945c4, name: system/mc/prg/pc_save} #  size:0x50
+      - {start: 0x295614, type: eh_frame, vram: 0x394614, name: ingame/photo/photo} #  size:0x5b4
+      - {start: 0x295bc8, type: eh_frame, vram: 0x394bc8, name: ingame/photo/photo_charger} #  size:0xd8
+      - {start: 0x295ca0, type: eh_frame, vram: 0x394ca0, name: ingame/photo/photo_dat} #  size:0x1b0
+      - {start: 0x295e50, type: eh_frame, vram: 0x394e50, name: ingame/photo/photo_make} #  size:0x394
+      - {start: 0x2961e4, type: eh_frame, vram: 0x3951e4, name: ingame/menu/play_data} #  size:0x134
+      - {start: 0x296318, type: eh_frame, vram: 0x395318, name: ingame/plyr/player} #  size:0xcbc
+      - {start: 0x296fd4, type: eh_frame, vram: 0x395fd4, name: ingame/plyr/plyr_mdl} #  size:0x440
+      - {start: 0x297414, type: eh_frame, vram: 0x396414, name: ingame/menu/plyr_room_info} #  size:0x1f0
+      - {start: 0x297604, type: eh_frame, vram: 0x396604, name: ingame/puzzle/puzzle} #  size:0x4f8
+      - {start: 0x297afc, type: eh_frame, vram: 0x396afc, name: ingame/puzzle/kaza/puzzle_kaza_dat} #  size:0x70
+      - {start: 0x297b6c, type: eh_frame, vram: 0x396b6c, name: ingame/puzzle/roku/puzzle_roku_dat} #  size:0x70
+      - {start: 0x297bdc, type: eh_frame, vram: 0x396bdc, name: ingame/puzzle/roku/roku_pzl} #  size:0x70c
+      - {start: 0x2982e8, type: eh_frame, vram: 0x3972e8, name: system/mc/dat/save_data} #  size:0x70
+      - {start: 0x298358, type: eh_frame, vram: 0x397358, name: save_load/prg/save_load_disp} #  size:0x4a0
+      - {start: 0x2987f8, type: eh_frame, vram: 0x3977f8, name: ingame/savepoint/savepoint} #  size:0x108
+      - {start: 0x298900, type: eh_frame, vram: 0x397900, name: ingame/savepoint/savepoint_disp} #  size:0x1b8
+      - {start: 0x298ab8, type: eh_frame, vram: 0x397ab8, name: ingame/savepoint/savepoint_fade_in} #  size:0xdc
+      - {start: 0x298b94, type: eh_frame, vram: 0x397b94, name: ingame/savepoint/savepoint_fade_out} #  size:0x28
+      - {start: 0x298bbc, type: eh_frame, vram: 0x397bbc, name: ingame/savepoint/savepoint_main} #  size:0x27c
+      - {start: 0x298e38, type: eh_frame, vram: 0x397e38, name: ingame/savepoint/savepoint_top} #  size:0x20c
+      - {start: 0x299044, type: eh_frame, vram: 0x398044, name: graphics/scene/scene} #  size:0xa28
+      - {start: 0x299a6c, type: eh_frame, vram: 0x398a6c, name: graphics/scene/scene_dat} #  size:0x70
+      - {start: 0x299adc, type: eh_frame, vram: 0x398adc, name: graphics/scene/scene_effect} #  size:0x8e8
+      - {start: 0x29a3c4, type: eh_frame, vram: 0x3993c4, name: debug/scn_test} #  size:0x6fc
+      - {start: 0x29aac0, type: eh_frame, vram: 0x399ac0, name: ingame/photo/search_mark} #  size:0xb0
+      - {start: 0x29ab70, type: eh_frame, vram: 0x399b70, name: outgame/setup} #  size:0x2f0
+      - {start: 0x29ae60, type: eh_frame, vram: 0x399e60, name: outgame/setup_menu} #  size:0x5c0
+      - {start: 0x29b420, type: eh_frame, vram: 0x39a420, name: ingame/plyr/sis_algo} #  size:0x2a4
+      - {start: 0x29b6c4, type: eh_frame, vram: 0x39a6c4, name: ingame/plyr/sis_mdl} #  size:0x348
+      - {start: 0x29ba0c, type: eh_frame, vram: 0x39aa0c, name: ingame/plyr/sister} #  size:0x854
+      - {start: 0x29c260, type: eh_frame, vram: 0x39b260, name: ingame/item/prg/soul_list} #  size:0x254
+      - {start: 0x29c4b4, type: eh_frame, vram: 0x39b4b4, name: ingame/photo/sp_chance} #  size:0x114
+      - {start: 0x29c5c8, type: eh_frame, vram: 0x39b5c8, name: ingame/photo/spirit_gage} #  size:0xec
+      - {start: 0x29c6b4, type: eh_frame, vram: 0x39b6b4, name: common/spr_stack} #  size:0xa4
+      - {start: 0x29c758, type: eh_frame, vram: 0x39b758, name: ingame/subtitle/subtitle} #  size:0x1dc
+      - {start: 0x29c934, type: eh_frame, vram: 0x39b934, name: system/os/system} #  size:0x2a4
+      - {start: 0x29cbd8, type: eh_frame, vram: 0x39bbd8, name: save_load/prg/system_data_save} #  size:0x444
+      - {start: 0x29d01c, type: eh_frame, vram: 0x39c01c, name: graphics/graph2d/tim2} #  size:0x27c
+      - {start: 0x29d298, type: eh_frame, vram: 0x39c298, name: outgame/title} #  size:0x4a0
+      - {start: 0x29d738, type: eh_frame, vram: 0x39c738, name: outgame/title_album} #  size:0xb8
+      - {start: 0x29d7f0, type: eh_frame, vram: 0x39c7f0, name: outgame/title_disp} #  size:0x21c
+      - {start: 0x29da0c, type: eh_frame, vram: 0x39ca0c, name: outgame/title_menu} #  size:0x130
+      - {start: 0x29db3c, type: eh_frame, vram: 0x39cb3c, name: outgame/title_movie} #  size:0xe0
+      - {start: 0x29dc1c, type: eh_frame, vram: 0x39cc1c, name: outgame/title_top} #  size:0xdc
+      - {start: 0x29dcf8, type: eh_frame, vram: 0x39ccf8, name: ingame/plyr/unit_ctl} #  size:0x154
+      - {start: 0x29de4c, type: eh_frame, vram: 0x39ce4c, name: common/utility} #  size:0xc8
+      - {start: 0x29df14, type: eh_frame, vram: 0x39cf14, name: common/utility2} #  size:0x4c
+      - {start: 0x29df60, type: eh_frame, vram: 0x39cf60, name: system/pad/vib_manage} #  size:0x28
+      - {start: 0x29df88, type: eh_frame, vram: 0x39cf88, name: ingame/menu/zero2_anim2d} #  size:0xb0
+      - {start: 0x29e038, type: eh_frame, vram: 0x39d038, name: debug/zero2_perf} #  size:0x90
+      - {start: 0x29e0c8, type: eh_frame, vram: 0x39d0c8, name: common/zero2_util} #  size:0x124
+      - {start: 0x29e1ec, type: eh_frame, vram: 0x39d1ec, name: libgcc.a__eh_} #  size:0x41c
+      - {start: 0x29e608, type: eh_frame, vram: 0x39d608, name: libgcc.a_tinfo_} #  size:0x180
+      - {start: 0x29e788, type: eh_frame, vram: 0x39d788, name: libgcc.a_tinfo2_} #  size:0x190
+      - {start: 0x29e918, type: eh_frame, vram: 0x39d918, name: libgcc.a_exception_} #  size:0x1d0
+      - {start: 0x29eae8, type: eh_frame, vram: 0x39dae8, name: crtend} #  size:0x4
+      #- [0x29eaec, pad, vudata]
+
+      # rodata ################
+      - {start: 0x29eb00, type: rodata, vram: 0x39db00, name: ingame/map/CBuff} 
+      - {start: 0x29eb58, type: rodata, vram: 0x39db58, name: graphics/graph3d/CDebugEdit}
+      - {start: 0x29ec28, type: rodata, vram: 0x39dc28, name: ingame/plyr/ChrSort}  
+      - {start: 0x29ec80, type: rodata, vram: 0x39dc80, name: debug/DbFurnPre}  
+      - {start: 0x29ecf8, type: rodata, vram: 0x39dcf8, name: ingame/map/FurnCtl}  
+      - {start: 0x29eeb8, type: rodata, vram: 0x39deb8, name: ingame/map/FurnLoad}  
+      - {start: 0x29ef50, type: rodata, vram: 0x39df50, name: graphics/scene/IngameScene}  
+      - {start: 0x29efc8, type: rodata, vram: 0x39dfc8, name: ingame/map/MapAnim}  
+      - {start: 0x29f168, type: rodata, vram: 0x39e168, name: ingame/map/MapDoor}  
+      - {start: 0x29f3c8, type: rodata, vram: 0x39e3c8, name: ingame/map/MapDraw}  
+      - {start: 0x29f528, type: rodata, vram: 0x39e528, name: ingame/map/MapFog}
+      - {start: 0x29f580, type: rodata, vram: 0x39e580, name: ingame/map/MapHit}
+      - {start: 0x29f628, type: rodata, vram: 0x39e628, name: ingame/map/MapLBuff}
+      - {start: 0x29f6f8, type: rodata, vram: 0x39e6f8, name: ingame/map/MapLight}
+      - {start: 0x29f8e0, type: rodata, vram: 0x39e8e0, name: ingame/map/MapLoad}
+      - {start: 0x29fba0, type: rodata, vram: 0x39eba0, name: ingame/map/MapObj}
+      - {start: 0x29fea0, type: rodata, vram: 0x39eea0, name: ingame/map/MapObjReg}
+      - {start: 0x2a01f8, type: rodata, vram: 0x39f1f8, name: ingame/map/MapPut}
+      - {start: 0x2a02a0, type: rodata, vram: 0x39f2a0, name: ingame/map/MapSave}
+      - {start: 0x2a03e0, type: rodata, vram: 0x39f3e0, name: ingame/map/MapSky}
+      - {start: 0x2a04c0, type: rodata, vram: 0x39f4c0, name: ingame/map/MapSp}
+      - {start: 0x2a0690, type: rodata, vram: 0x39f690, name: ingame/map/MhCtl}
+      - {start: 0x2a0860, type: rodata, vram: 0x39f860, name: ingame/map/RegDat}
+      - {start: 0x2a0a20, type: rodata, vram: 0x39fa20, name: common/SingleLinkList}
+      - {start: 0x2a0a78, type: rodata, vram: 0x39fa78, name: outgame/SpriteCmn}
+      - {start: 0x2a0ab0, type: rodata, vram: 0x39fab0, name: graphics/motion/accessory}
+      - {start: 0x2a1050, type: rodata, vram: 0x3a0050, name: graphics/motion/acs_dat}
+      - {start: 0x2a10a8, type: rodata, vram: 0x3a00a8, name: album/prg/album}
+      - {start: 0x2a11d8, type: rodata, vram: 0x3a01d8, name: album/dat/album_dat}
+      - {start: 0x2a13e0, type: rodata, vram: 0x3a03e0, name: album/prg/album_disp}
+      - {start: 0x2a18d0, type: rodata, vram: 0x3a08d0, name: album/prg/album_edit}
+      - {start: 0x2a1ab0, type: rodata, vram: 0x3a0ab0, name: album/prg/album_load}
+      - {start: 0x2a1dd0, type: rodata, vram: 0x3a0dd0, name: album/prg/album_mem}
+      - {start: 0x2a1e70, type: rodata, vram: 0x3a0e70, name: album/prg/album_save}
+      - {start: 0x2a2288, type: rodata, vram: 0x3a1288, name: album/prg/album_view}
+      - {start: 0x2a2538, type: rodata, vram: 0x3a1538, name: ingame/enemy/alg_manage}
+      - {start: 0x2a2590, type: rodata, vram: 0x3a1590, name: graphics/motion/anicode}
+      - {start: 0x2a2630, type: rodata, vram: 0x3a1630, name: ingame/menu/anim_2d}
+      - {start: 0x2a27c0, type: rodata, vram: 0x3a17c0, name: outgame/autoload}
+      - {start: 0x2a29a8, type: rodata, vram: 0x3a19a8, name: ingame/photo/bonus_shot}
+      - {start: 0x2a2ae8, type: rodata, vram: 0x3a1ae8, name: ingame/menu/tim_dat/cam_level_up_point}
+      - {start: 0x2a2c10, type: rodata, vram: 0x3a1c10, name: ingame/photo/camera_power_up}
+      - {start: 0x2a2d10, type: rodata, vram: 0x3a1d10, name: graphics/graph2d/tim_dat/cap_group_dat}
+      - {start: 0x2a2f70, type: rodata, vram: 0x3a1f70, name: ingame/photo/center_circle}
+      - {start: 0x2a2fc8, type: rodata, vram: 0x3a1fc8, name: ingame/photo/center_cross}
+      - {start: 0x2a3030, type: rodata, vram: 0x3a2030, name: outgame/chapter_sel}
+      - {start: 0x2a3380, type: rodata, vram: 0x3a2380, name: ingame/plyr/charBB}
+      - {start: 0x2a42d0, type: rodata, vram: 0x3a32d0, name: ingame/clear/prg/clear_flg}
+      - {start: 0x2a43d0, type: rodata, vram: 0x3a33d0, name: ingame/clear/prg/clearmenu}
+      - {start: 0x2a44c0, type: rodata, vram: 0x3a34c0, name: ingame/clear/prg/clearmenu_top}
+      - {start: 0x2a45c8, type: rodata, vram: 0x3a35c8, name: system/compress/compress}
+      - {start: 0x2a4638, type: rodata, vram: 0x3a3638, name: ingame/item/prg/crystal}
+      - {start: 0x2a4850, type: rodata, vram: 0x3a3850, name: ingame/photo/damage_disp}
+      - {start: 0x2a4928, type: rodata, vram: 0x3a3928, name: debug/debug}
+      - {start: 0x2a4a80, type: rodata, vram: 0x3a3a80, name: debug/debug_menu}
+      - {start: 0x2a4f50, type: rodata, vram: 0x3a3f50, name: system/compress/decode}
+      - {start: 0x2a52b0, type: rodata, vram: 0x3a42b0, name: ingame/door/prg/door}
+      - {start: 0x2a5518, type: rodata, vram: 0x3a4518, name: ingame/menu/tim_dat/door_point_dat}
+      - {start: 0x2a6070, type: rodata, vram: 0x3a5070, name: graphics/graph2d/draw_caption}
+      - {start: 0x2a6170, type: rodata, vram: 0x3a5170, name: graphics/graph2d/draw_cmn_num}
+      - {start: 0x2a61d8, type: rodata, vram: 0x3a51d8, name: graphics/graph2d/draw_cmn_win}
+      - {start: 0x2a61f0, type: rodata, vram: 0x3a51f0, name: graphics/draw_env}
+      - {start: 0x2a6218, type: rodata, vram: 0x3a5218, name: graphics/graph2d/draw_line}
+      - {start: 0x2a6230, type: rodata, vram: 0x3a5230, name: graphics/graph3d/eeException}
+      - {start: 0x2a6778, type: rodata, vram: 0x3a5778, name: graphics/graph3d/eeFile}
+      - {start: 0x2a68b0, type: rodata, vram: 0x3a58b0, name: graphics/graph3d/eeFindFile}
+      - {start: 0x2a69e0, type: rodata, vram: 0x3a59e0, name: system/os/eecdvd}
+      - {start: 0x2a6a40, type: rodata, vram: 0x3a5a40, name: graphics/effect/effect}
+      - {start: 0x2a6ce0, type: rodata, vram: 0x3a5ce0, name: graphics/effect/effect_butterfly}
+      - {start: 0x2a6e20, type: rodata, vram: 0x3a5e20, name: graphics/effect/effect_ene}
+      - {start: 0x2a75a0, type: rodata, vram: 0x3a65a0, name: graphics/effect/effect_obj}
+      - {start: 0x2a7b30, type: rodata, vram: 0x3a6b30, name: graphics/effect/effect_oth}
+      - {start: 0x2a8188, type: rodata, vram: 0x3a7188, name: graphics/effect/effect_pak}
+      - {start: 0x2a8210, type: rodata, vram: 0x3a7210, name: graphics/effect/effect_rain}
+      - {start: 0x2a8de0, type: rodata, vram: 0x3a7de0, name: graphics/effect/effect_rdr}
+      - {start: 0x2a8ee0, type: rodata, vram: 0x3a7ee0, name: graphics/effect/effect_scr}
+      - {start: 0x2a91a8, type: rodata, vram: 0x3a81a8, name: graphics/effect/effect_spr}
+      - {start: 0x2a9200, type: rodata, vram: 0x3a8200, name: graphics/effect/effect_sub}
+      - {start: 0x2a9350, type: rodata, vram: 0x3a8350, name: graphics/effect/effect_torch}
+      - {start: 0x2a9578, type: rodata, vram: 0x3a8578, name: ingame/clear/prg/ending}
+      - {start: 0x2a95d0, type: rodata, vram: 0x3a85d0, name: ingame/photo/ene_life}
+      - {start: 0x2a9630, type: rodata, vram: 0x3a8630, name: ingame/enemy/ene_mot_ctrl}
+      - {start: 0x2a97f0, type: rodata, vram: 0x3a87f0, name: ingame/enemy/enemy}
+      - {start: 0x2a9e20, type: rodata, vram: 0x3a8e20, name: ingame/enemy/enemy_act}
+      - {start: 0x2a9fa8, type: rodata, vram: 0x3a8fa8, name: ingame/enemy/enemy_dat}
+      - {start: 0x2aa0e0, type: rodata, vram: 0x3a90e0, name: ingame/event/prg/ev_change}
+      - {start: 0x2aa558, type: rodata, vram: 0x3a9558, name: ingame/event/prg/ev_debug}
+      - {start: 0x2aa718, type: rodata, vram: 0x3a9718, name: ingame/event/prg/ev_disp}
+      - {start: 0x2aa9b0, type: rodata, vram: 0x3a99b0, name: ingame/event/dat/ev_disp_dat}
+      - {start: 0x2aaa38, type: rodata, vram: 0x3a9a38, name: ingame/event/prg/ev_ene}
+      - {start: 0x2aac00, type: rodata, vram: 0x3a9c00, name: ingame/event/prg/ev_exe}
+      - {start: 0x2aae98, type: rodata, vram: 0x3a9e98, name: ingame/event/prg/ev_gaze}
+      - {start: 0x2aaef0, type: rodata, vram: 0x3a9ef0, name: ingame/event/prg/ev_get}
+      - {start: 0x2aafe0, type: rodata, vram: 0x3a9fe0, name: ingame/event/prg/ev_macro}
+      - {start: 0x2aca20, type: rodata, vram: 0x3aba20, name: ingame/event/prg/ev_main}
+      - {start: 0x2acaf0, type: rodata, vram: 0x3abaf0, name: ingame/event/prg/ev_open}
+      - {start: 0x2ace48, type: rodata, vram: 0x3abe48, name: ingame/event/prg/ev_phase}
+      - {start: 0x2acea0, type: rodata, vram: 0x3abea0, name: ingame/event/prg/ev_se}
+      - {start: 0x2acfc0, type: rodata, vram: 0x3abfc0, name: ingame/event/prg/ev_sis}
+      - {start: 0x2ad0e0, type: rodata, vram: 0x3ac0e0, name: ingame/event/prg/ev_talk}
+      - {start: 0x2ad2d8, type: rodata, vram: 0x3ac2d8, name: ingame/event/dat/ev_talk_dat}
+      - {start: 0x2ad350, type: rodata, vram: 0x3ac350, name: ingame/event/prg/ev_timer}
+      - {start: 0x2ad420, type: rodata, vram: 0x3ac420, name: ingame/camera/event_camera}
+      - {start: 0x2ada00, type: rodata, vram: 0x3aca00, name: graphics/graph2d/fade}
+      - {start: 0x2ada40, type: rodata, vram: 0x3aca40, name: ingame/enemy/fene_entry}
+      - {start: 0x2aec88, type: rodata, vram: 0x3adc88, name: ingame/photo/filament}
+      - {start: 0x2aece0, type: rodata, vram: 0x3adce0, name: ingame/item/prg/file}
+      - {start: 0x2af220, type: rodata, vram: 0x3ae220, name: ingame/item/dat/file_dat}
+      - {start: 0x2af278, type: rodata, vram: 0x3ae278, name: ingame/photo/film_no}
+      - {start: 0x2af2d0, type: rodata, vram: 0x3ae2d0, name: ingame/photo/finder}
+      - {start: 0x2af348, type: rodata, vram: 0x3ae348, name: ingame/camera/finder_camera}
+      - {start: 0x2af3b0, type: rodata, vram: 0x3ae3b0, name: ingame/enemy/fly_ctrl}
+      - {start: 0x2af590, type: rodata, vram: 0x3ae590, name: graphics/scene/fod}
+      - {start: 0x2af718, type: rodata, vram: 0x3ae718, name: ingame/map/foot_se}
+      - {start: 0x2af8c0, type: rodata, vram: 0x3ae8c0, name: outgame/framerate}
+      - {start: 0x2af918, type: rodata, vram: 0x3ae918, name: ingame/photo/freq_camera}
+      - {start: 0x2af970, type: rodata, vram: 0x3ae970, name: graphics/effect/g2d_debug}
+      - {start: 0x2af9a8, type: rodata, vram: 0x3ae9a8, name: graphics/graph2d/g2d_draw}
+      - {start: 0x2afaa8, type: rodata, vram: 0x3aeaa8, name: graphics/graph2d/g2d_main}
+      - {start: 0x2afb00, type: rodata, vram: 0x3aeb00, name: graphics/graph3d/g3dCore}
+      - {start: 0x2b0190, type: rodata, vram: 0x3af190, name: graphics/graph3d/g3dDebug}
+      - {start: 0x2b2ff0, type: rodata, vram: 0x3b1ff0, name: graphics/graph3d/g3dDma}
+      - {start: 0x2b3110, type: rodata, vram: 0x3b2110, name: graphics/graph3d/g3dGeom}
+      - {start: 0x2b3260, type: rodata, vram: 0x3b2260, name: graphics/graph3d/g3dGsWrapper}
+      - {start: 0x2b3850, type: rodata, vram: 0x3b2850, name: graphics/graph3d/g3dLight}
+      - {start: 0x2b3968, type: rodata, vram: 0x3b2968, name: graphics/graph3d/g3dLightEx}
+      - {start: 0x2b3d98, type: rodata, vram: 0x3b2d98, name: graphics/graph3d/g3dMath}
+      - {start: 0x2b3eb0, type: rodata, vram: 0x3b2eb0, name: graphics/graph3d/g3dRenderTarget}
+      - {start: 0x2b4028, type: rodata, vram: 0x3b3028, name: graphics/graph3d/g3dSprite}
+      - {start: 0x2b4058, type: rodata, vram: 0x3b3058, name: graphics/graph3d/g3dTexture}
+      - {start: 0x2b40a0, type: rodata, vram: 0x3b30a0, name: graphics/graph3d/g3dVif1}
+      - {start: 0x2b41f0, type: rodata, vram: 0x3b31f0, name: outgame/gallery}
+      - {start: 0x2b4348, type: rodata, vram: 0x3b3348, name: outgame/gallery_disp}
+      - {start: 0x2b44f0, type: rodata, vram: 0x3b34f0, name: save_load/prg/game_data_save}
+      - {start: 0x2b48c0, type: rodata, vram: 0x3b38c0, name: ingame/clear/prg/game_result}
+      - {start: 0x2b4a00, type: rodata, vram: 0x3b3a00, name: ingame/clear/prg/game_result_top}
+      - {start: 0x2b4c18, type: rodata, vram: 0x3b3c18, name: ingame/gameover/prg/gameover}
+      - {start: 0x2b4ca0, type: rodata, vram: 0x3b3ca0, name: ingame/gameover/prg/gameover_menu}
+      - {start: 0x2b4d80, type: rodata, vram: 0x3b3d80, name: ingame/gameover/prg/gameover_menu_load}
+      - {start: 0x2b5088, type: rodata, vram: 0x3b4088, name: ingame/gameover/prg/gameover_menu_top}
+      - {start: 0x2b5190, type: rodata, vram: 0x3b4190, name: ingame/menu/ghost_seal_door}
+      - {start: 0x2b5288, type: rodata, vram: 0x3b4288, name: ingame/menu/tim_dat/ghost_seal_door_dat}
+      - {start: 0x2b52f8, type: .rodata, vram: 0x3b42f8, name: main/gphase}
+      - {start: 0x2b5310, type: rodata, vram: 0x3b4310, name: graphics/graph3d/gra3d}
+      - {start: 0x2b5ce8, type: rodata, vram: 0x3b4ce8, name: graphics/graph3d/gra3dBoundingBox}
+      - {start: 0x2b5dc0, type: rodata, vram: 0x3b4dc0, name: graphics/graph3d/gra3dConst}
+      - {start: 0x2b6330, type: rodata, vram: 0x3b5330, name: graphics/graph3d/gra3dDebug}
+      - {start: 0x2b7da0, type: rodata, vram: 0x3b6da0, name: graphics/graph3d/gra3dMisc}
+      - {start: 0x2b8150, type: rodata, vram: 0x3b7150, name: graphics/graph3d/gra3dSGD}
+      - {start: 0x2b8a00, type: rodata, vram: 0x3b7a00, name: graphics/graph3d/gra3dSGDData}
+      - {start: 0x2b9170, type: rodata, vram: 0x3b8170, name: graphics/graph3d/gra3dShadow}
+      - {start: 0x2b94a0, type: rodata, vram: 0x3b84a0, name: graphics/graph3d/gra3dTRI2}
+      - {start: 0x2b9720, type: rodata, vram: 0x3b8720, name: graphics/graph3d/gra3dVu0}
+      - {start: 0x2b9780, type: rodata, vram: 0x3b8780, name: graphics/graphics}
+      - {start: 0x2b9dc0, type: rodata, vram: 0x3b8dc0, name: common/heapctrl}
+      - {start: 0x2b9e08, type: rodata, vram: 0x3b8e08, name: ingame/puzzle/hina/hina_pzl}
+      - {start: 0x2ba0b0, type: rodata, vram: 0x3b90b0, name: ingame/photo/hp_bar}
+      - {start: 0x2ba110, type: rodata, vram: 0x3b9110, name: ingame/ingame}
+      - {start: 0x2ba320, type: rodata, vram: 0x3b9320, name: ingame/ingame_effect}
+      - {start: 0x2ba3d0, type: rodata, vram: 0x3b93d0, name: ingame/item/prg/item}
+      - {start: 0x2ba7f8, type: rodata, vram: 0x3b97f8, name: ingame/item/dat/item_dat}
+      - {start: 0x2ba850, type: rodata, vram: 0x3b9850, name: debug/item_debug}
+      - {start: 0x2ba8a8, type: rodata, vram: 0x3b98a8, name: puzzle/kai/kai_pzl}
+      - {start: 0x2ba968, type: rodata, vram: 0x3b9968, name: puzzle/kaza2/kaza2_pzl}
+      - {start: 0x2bad60, type: rodata, vram: 0x3b9d60, name: puzzle/kaza/kaza_pzl}
+      - {start: 0x2bb140, type: rodata, vram: 0x3ba140, name: outgame/lang_check}
+      - {start: 0x2bb300, type: rodata, vram: 0x3ba300, name: outgame/lang_sel}
+      - {start: 0x2bb458, type: rodata, vram: 0x3ba458, name: ingame/item/prg/level_gem}
+      - {start: 0x2bb510, type: rodata, vram: 0x3ba510, name: outgame/loadgame}
+      - {start: 0x2bb818, type: rodata, vram: 0x3ba818, name: ingame/loading/loading}
+      - {start: 0x2bb960, type: rodata, vram: 0x3ba960, name: outgame/logo}
+      - {start: 0x2bbac8, type: rodata, vram: 0x3baac8, name: ingame/photo/m_player_camera}
+      - {start: 0x2bbb20, type: rodata, vram: 0x3bab20, name: main/main}
+      - {start: 0x2bbf80, type: rodata, vram: 0x3baf80, name: ingame/plyr/man_data}
+      - {start: 0x2bc050, type: rodata, vram: 0x3bb050, name: ingame/map/map_bgm}
+      - {start: 0x2bc0d0, type: rodata, vram: 0x3bb0d0, name: ingame/camera/map_camera}
+      - {start: 0x2bc230, type: rodata, vram: 0x3bb230, name: ingame/map/map_height}
+      - {start: 0x2bc2a0, type: rodata, vram: 0x3bb2a0, name: ingame/map/map_hit_check}
+      - {start: 0x2bc2b0, type: rodata, vram: 0x3bb2b0, name: ingame/map/map_rectangle}
+      - {start: 0x2bc2c0, type: rodata, vram: 0x3bb2c0, name: ingame/map/map_reverb}
+      - {start: 0x2bc340, type: rodata, vram: 0x3bb340, name: system/mc/mc_check}
+      - {start: 0x2bc360, type: rodata, vram: 0x3bb360, name: system/mc/mc_check_broken}
+      - {start: 0x2bc388, type: rodata, vram: 0x3bb388, name: system/mc/mc_check_card}
+      - {start: 0x2bc3d0, type: rodata, vram: 0x3bb3d0, name: system/mc/mc_check_dir}
+      - {start: 0x2bc440, type: rodata, vram: 0x3bb440, name: system/mc/mc_close}
+      - {start: 0x2bc460, type: rodata, vram: 0x3bb460, name: system/mc/mc_del_all_file}
+      - {start: 0x2bc488, type: rodata, vram: 0x3bb488, name: system/mc/mc_del_dir}
+      - {start: 0x2bc4a8, type: rodata, vram: 0x3bb4a8, name: system/mc/mc_del_file}
+      - {start: 0x2bc508, type: rodata, vram: 0x3bb508, name: system/mc/mc_format}
+      - {start: 0x2bc528, type: rodata, vram: 0x3bb528, name: system/mc/mc_icon}
+      - {start: 0x2bc548, type: rodata, vram: 0x3bb548, name: system/mc/mc_icon_sys}
+      - {start: 0x2bc570, type: rodata, vram: 0x3bb570, name: system/mc/mc_iconsys_dat}
+      - {start: 0x2bc620, type: rodata, vram: 0x3bb620, name: system/mc/mc_load}
+      - {start: 0x2bc658, type: rodata, vram: 0x3bb658, name: system/mc/mc_make}
+      - {start: 0x2bc6b0, type: rodata, vram: 0x3bb6b0, name: system/mc/mc_make_all_file}
+      - {start: 0x2bc758, type: rodata, vram: 0x3bb758, name: system/mc/mc_make_dir}
+      - {start: 0x2bc7a0, type: rodata, vram: 0x3bb7a0, name: system/mc/mc_make_file}
+      - {start: 0x2bc7e8, type: rodata, vram: 0x3bb7e8, name: system/mc/mc_open}
+      - {start: 0x2bc828, type: rodata, vram: 0x3bb828, name: system/mc/mc_read}
+      - {start: 0x2bc850, type: rodata, vram: 0x3bb850, name: system/mc/mc_save}
+      - {start: 0x2bc890, type: rodata, vram: 0x3bb890, name: system/mc/mc_set_data}
+      - {start: 0x2bcc70, type: rodata, vram: 0x3bbc70, name: system/mc/mc_title_dat}
+      - {start: 0x2bd178, type: rodata, vram: 0x3bc178, name: system/mc/mc_write}
+      - {start: 0x2bd198, type: rodata, vram: 0x3bc198, name: graphics/motion/mdlact}
+      - {start: 0x2bd200, type: rodata, vram: 0x3bc200, name: graphics/motion/mdldat}
+      - {start: 0x2bd258, type: rodata, vram: 0x3bc258, name: graphics/motion/mdlwork}
+      - {start: 0x2bd360, type: rodata, vram: 0x3bc360, name: ingame/item/prg/memo}
+      - {start: 0x2bd4e8, type: rodata, vram: 0x3bc4e8, name: ingame/menu/menu}
+      - {start: 0x2bd990, type: rodata, vram: 0x3bc990, name: ingame/menu/menu_cam_edit}
+      - {start: 0x2bde00, type: rodata, vram: 0x3bce00, name: ingame/menu/menu_cam_main}
+      - {start: 0x2be040, type: rodata, vram: 0x3bd040, name: ingame/menu/menu_cam_top}
+      - {start: 0x2be310, type: rodata, vram: 0x3bd310, name: ingame/menu/menu_cmn}
+      - {start: 0x2be618, type: rodata, vram: 0x3bd618, name: ingame/menu/menu_cmn_disp}
+      - {start: 0x2be770, type: rodata, vram: 0x3bd770, name: ingame/menu/menu_dat}
+      - {start: 0x2be830, type: rodata, vram: 0x3bd830, name: ingame/menu/menu_file}
+      - {start: 0x2beb20, type: rodata, vram: 0x3bdb20, name: ingame/menu/menu_item}
+      - {start: 0x2bee50, type: rodata, vram: 0x3bde50, name: ingame/menu/menu_map}
+      - {start: 0x2bf1c8, type: rodata, vram: 0x3be1c8, name: ingame/menu/menu_memo}
+      - {start: 0x2bf498, type: rodata, vram: 0x3be498, name: ingame/menu/menu_photo}
+      - {start: 0x2bf940, type: rodata, vram: 0x3be940, name: ingame/menu/menu_radio}
+      - {start: 0x2bfb40, type: rodata, vram: 0x3beb40, name: ingame/menu/menu_radio_dat}
+      - {start: 0x2bfb88, type: rodata, vram: 0x3beb88, name: ingame/menu/menu_soul}
+      - {start: 0x2bfd30, type: rodata, vram: 0x3bed30, name: ingame/menu/menu_top}
+      - {start: 0x2c0080, type: rodata, vram: 0x3bf080, name: graphics/graph2d/message}
+      - {start: 0x2c0d20, type: rodata, vram: 0x3bfd20, name: graphics/motion/mim_dat}
+      - {start: 0x2c0eb8, type: rodata, vram: 0x3bfeb8, name: graphics/motion/mime}
+      - {start: 0x2c1120, type: rodata, vram: 0x3c0120, name: outgame/mis_sel_disp}
+      - {start: 0x2c1150, type: rodata, vram: 0x3c0150, name: outgame/mission_ctl}
+      - {start: 0x2c1228, type: rodata, vram: 0x3c0228, name: outgame/mission_disp}
+      - {start: 0x2c1370, type: rodata, vram: 0x3c0370, name: outgame/mission_pause}
+      - {start: 0x2c14c0, type: rodata, vram: 0x3c04c0, name: outgame/mission_sel}
+      - {start: 0x2c1978, type: rodata, vram: 0x3c0978, name: graphics/mmanage}
+      - {start: 0x2c1b00, type: rodata, vram: 0x3c0b00, name: graphics/motion/morph}
+      - {start: 0x2c1b70, type: rodata, vram: 0x3c0b70, name: graphics/motion/motion}
+      - {start: 0x2c2348, type: rodata, vram: 0x3c1348, name: graphics/movie/movie}
+      - {start: 0x2c2580, type: rodata, vram: 0x3c1580, name: ingame/movie_room_menu/prg/movie_projecter}
+      - {start: 0x2c2650, type: rodata, vram: 0x3c1650, name: ingame/movie_room}
+      - {start: 0x2c27b8, type: rodata, vram: 0x3c17b8, name: ingame/movie_room_menu/prg/movie_room_menu}
+      - {start: 0x2c2928, type: rodata, vram: 0x3c1928, name: graphics/movie/movie_title}
+      - {start: 0x2c2a38, type: rodata, vram: 0x3c1a38, name: graphics/movie/movie_title_dat}
+      - {start: 0x2c2ac0, type: rodata, vram: 0x3c1ac0, name: msg_col_tbl}
+      - {start: 0x2c2b48, type: rodata, vram: 0x3c1b48, name: common/my_malloc}
+      - {start: 0x2c2c10, type: rodata, vram: 0x3c1c10, name: ingame/photo/n_equip_tray}
+      - {start: 0x2c3088, type: rodata, vram: 0x3c2088, name: outgame/newgame}
+      - {start: 0x2c3170, type: rodata, vram: 0x3c2170, name: common/ol_load}
+      - {start: 0x2c3388, type: rodata, vram: 0x3c2388, name: outgame/option}
+      - {start: 0x2c33f0, type: rodata, vram: 0x3c23f0, name: outgame/option_disp}
+      - {start: 0x2c3960, type: rodata, vram: 0x3c2960, name: outgame/outgame}
+      - {start: 0x2c39d8, type: rodata, vram: 0x3c29d8, name: pad/pad}
+      - {start: 0x2c39e8, type: rodata, vram: 0x3c29e8, name: outgame/pad_check}
+      - {start: 0x2c3aa0, type: rodata, vram: 0x3c2aa0, name: ingame/pause/prg/pause}
+      - {start: 0x2c3bd0, type: rodata, vram: 0x3c2bd0, name: system/mc/prg/pc_save}
+      - {start: 0x2c3c30, type: rodata, vram: 0x3c2c30, name: ingame/photo/photo}
+      - {start: 0x2c3f10, type: rodata, vram: 0x3c2f10, name: ingame/photo/photo_charger}
+      - {start: 0x2c3fe8, type: rodata, vram: 0x3c2fe8, name: menu/tim_dat/menu_photo_dat}
+      - {start: 0x2c4280, type: rodata, vram: 0x3c3280, name: ingame/photo/photo_make}
+      - {start: 0x2c4420, type: rodata, vram: 0x3c3420, name: ingame/menu/play_data}
+      - {start: 0x2c4500, type: rodata, vram: 0x3c3500, name: ingame/plyr/player}
+      - {start: 0x2c4e28, type: rodata, vram: 0x3c3e28, name: ingame/plyr/plyr_mdl}
+      - {start: 0x2c5078, type: rodata, vram: 0x3c4078, name: ingame/menu/plyr_room_info}
+      - {start: 0x2c5250, type: rodata, vram: 0x3c4250, name: ingame/puzzle/puzzle}
+      - {start: 0x2c5528, type: rodata, vram: 0x3c4528, name: ingame/puzzle/puzzle_dat}
+      - {start: 0x2c5558, type: rodata, vram: 0x3c4558, name: ingame/puzzle/puzzle_kaza_dat}
+      - {start: 0x2c5650, type: rodata, vram: 0x3c4650, name: ingame/puzzle/puzzle_roku_dat}
+      - {start: 0x2c56c0, type: rodata, vram: 0x3c46c0, name: ingame/puzzle/rank_time_dat}
+      - {start: 0x2c5720, type: rodata, vram: 0x3c4720, name: ingame/puzzle/roku/roku_pzl}
+      - {start: 0x2c59e8, type: rodata, vram: 0x3c49e8, name: system/mc/dat/save_data}
+      - {start: 0x2c5a40, type: rodata, vram: 0x3c4a40, name: save_load/prg/save_load_disp}
+      - {start: 0x2c5b40, type: rodata, vram: 0x3c4b40, name: ingame/savepoint/savepoint}
+      - {start: 0x2c5c00, type: rodata, vram: 0x3c4c00, name: ingame/savepoint/savepoint_disp}
+      - {start: 0x2c5d78, type: rodata, vram: 0x3c4d78, name: ingame/savepoint/savepoint_fade_in}
+      - {start: 0x2c5e40, type: rodata, vram: 0x3c4e40, name: ingame/savepoint/savepoint_main}
+      - {start: 0x2c5f18, type: rodata, vram: 0x3c4f18, name: ingame/savepoint/savepoint_top}
+      - {start: 0x2c6030, type: rodata, vram: 0x3c5030, name: graphics/scene/scene}
+      - {start: 0x2c6768, type: rodata, vram: 0x3c5768, name: graphics/scene/scene_dat}
+      - {start: 0x2c6d90, type: rodata, vram: 0x3c5d90, name: graphics/scene/scene_effect}
+      - {start: 0x2c6ef0, type: rodata, vram: 0x3c5ef0, name: debug/scn_test}
+      - {start: 0x2c7ad8, type: rodata, vram: 0x3c6ad8, name: ingame/photo/search_mark}
+      - {start: 0x2c7b30, type: rodata, vram: 0x3c6b30, name: outgame/setup}
+      - {start: 0x2c7ba0, type: rodata, vram: 0x3c6ba0, name: outgame/setup_menu}
+      - {start: 0x2c7e90, type: rodata, vram: 0x3c6e90, name: ingame/plyr/sis_algo}
+      - {start: 0x2c7ef8, type: rodata, vram: 0x3c6ef8, name: ingame/plyr/sis_mdl}
+      - {start: 0x2c83e0, type: rodata, vram: 0x3c73e0, name: ingame/plyr/sister}
+      - {start: 0x2c87b8, type: rodata, vram: 0x3c77b8, name: ingame/item/prg/soul_list}
+      - {start: 0x2c8bd8, type: rodata, vram: 0x3c7bd8, name: ingame/photo/sp_chance}
+      - {start: 0x2c8c88, type: rodata, vram: 0x3c7c88, name: ingame/photo/spirit_gage}
+      - {start: 0x2c8cf8, type: rodata, vram: 0x3c7cf8, name: common/spr_stack}
+      - {start: 0x2c8dc0, type: rodata, vram: 0x3c7dc0, name: ingame/subtitle/subtitle}
+      - {start: 0x2c8e20, type: rodata, vram: 0x3c7e20, name: system/os/system}
+      - {start: 0x2e7030, type: rodata, vram: 0x3e6030, name: save_load/prg/system_data_save}
+      - {start: 0x2e7320, type: rodata, vram: 0x3e6320, name: graphics/graph2d/tim2}
+      - {start: 0x2e76e0, type: rodata, vram: 0x3e66e0, name: outgame/title}
+      - {start: 0x2e7738, type: rodata, vram: 0x3e6738, name: outgame/title_album}
+      - {start: 0x2e7790, type: rodata, vram: 0x3e6790, name: outgame/title_dat}
+      - {start: 0x2e7920, type: rodata, vram: 0x3e6920, name: outgame/title_disp}
+      - {start: 0x2e7ac0, type: rodata, vram: 0x3e6ac0, name: outgame/title_menu}
+      - {start: 0x2e7c10, type: rodata, vram: 0x3e6c10, name: outgame/title_movie}
+      - {start: 0x2e7c68, type: rodata, vram: 0x3e6c68, name: outgame/title_top}
+      - {start: 0x2e7cc0, type: rodata, vram: 0x3e6cc0, name: ingame/plyr/unit_ctl}
+      - {start: 0x2e7d28, type: rodata, vram: 0x3e6d28, name: common/utility}
+      - {start: 0x2e7d60, type: rodata, vram: 0x3e6d60, name: common/utility2}
+      - {start: 0x2e7d98, type: rodata, vram: 0x3e6d98, name: ingame/menu/zero2_anim2d}
+      - {start: 0x2e7ef0, type: rodata, vram: 0x3e6ef0, name: debug/zero2_perf}
+      - {start: 0x2e7f00, type: rodata, vram: 0x3e6f00, name: commmon/zero2_util}
+      - {start: 0x2e83a0, type: rodata, vram: 0x3e73a0, name: iopsys.a_spu_mem_}
+      - {start: 0x2e84b0, type: rodata, vram: 0x3e74b0, name: iopsys.a_snd_buffer_}
+      - {start: 0x2e8650, type: rodata, vram: 0x3e7650, name: iopsys.a_ee_iop_}
+      - {start: 0x2e88e0, type: rodata, vram: 0x3e78e0, name: iopsys.a_ee_iop_q_}
+      - {start: 0x2e8918, type: rodata, vram: 0x3e7918, name: iopsys.a_stream_auto_}
+      - {start: 0x2e8cb8, type: rodata, vram: 0x3e7cb8, name: iopsys.a_snd_bank_}
+      - {start: 0x2e90c0, type: rodata, vram: 0x3e80c0, name: iopsys.a_snd_3d_}
+      - {start: 0x2e9260, type: rodata, vram: 0x3e8260, name: iopsys.a_cddat_}
+      - {start: 0x2e92e8, type: rodata, vram: 0x3e82e8, name: iopsys.a_snd_}
+      - {start: 0x2e9418, type: rodata, vram: 0x3e8418, name: iopsys.a_snd_pcmstream_}
+      - {start: 0x2e9510, type: rodata, vram: 0x3e8510, name: iopsys.a_snd_util_}
+      - {start: 0x2e95f0, type: rodata, vram: 0x3e85f0, name: iopsys.a_file_stream_}
+      - {start: 0x2e96b0, type: rodata, vram: 0x3e86b0, name: iopsys.a_hxd_}
+      - {start: 0x2e98f0, type: rodata, vram: 0x3e88f0, name: iopsys.a_spu_voice_}
+      - {start: 0x2e9950, type: rodata, vram: 0x3e8950, name: iopsys.a_snd_stream_}
+      - {start: 0x2e9d40, type: rodata, vram: 0x3e8d40, name: playpss.a_playpss_}
+      - {start: 0x2e9d80, type: rodata, vram: 0x3e8d80, name: playpss.a_audiodec_}
+      - {start: 0x2e9ec8, type: rodata, vram: 0x3e8ec8, name: libexcep.a_libexcep_}
+      - {start: 0x2e9f28, type: rodata, vram: 0x3e8f28, name: libexcep.a_print_}
+      - {start: 0x2eaf28, type: rodata, vram: 0x3e9f28, name: libcdvd.a_cdvd000_}
+      - {start: 0x2eb0f8, type: rodata, vram: 0x3ea0f8, name: libcdvd.a_cdvd039_}
+      - {start: 0x2eb138, type: rodata, vram: 0x3ea138, name: libdma.a_libdma_}
+      - {start: 0x2eb1b0, type: rodata, vram: 0x3ea1b0, name: libdev.a_devvu0_}
+      - {start: 0x2eb1c8, type: rodata, vram: 0x3ea1c8, name: libkernl.a_thread_}
+      - {start: 0x2eb200, type: rodata, vram: 0x3ea200, name: libkernl.a_kprintf_}
+      - {start: 0x2eb360, type: rodata, vram: 0x3ea360, name: libkernl.a_filestub_}
+      - {start: 0x2eb3d0, type: rodata, vram: 0x3ea3d0, name: libkernl.a_eeloadfile_}
+      - {start: 0x2eb3e0, type: rodata, vram: 0x3ea3e0, name: libkernl.a_iopreset_}
+      - {start: 0x2eb410, type: rodata, vram: 0x3ea410, name: libkernl.a_tlbfunc_}
+      - {start: 0x2eb490, type: rodata, vram: 0x3ea490, name: libkernl.a_exit_}
+      - {start: 0x2eb498, type: rodata, vram: 0x3ea498, name: libkernl.a_tty_}
+      - {start: 0x2eb508, type: rodata, vram: 0x3ea508, name: libpad.a_libpad_}
+      - {start: 0x2eb660, type: rodata, vram: 0x3ea660, name: libmc.a_libmc_}
+      - {start: 0x2eb6e8, type: rodata, vram: 0x3ea6e8, name: libgraph.a_graph012_}
+      - {start: 0x2eb880, type: rodata, vram: 0x3ea880, name: libgraph.a_graph015_}
+      - {start: 0x2eb9a0, type: rodata, vram: 0x3ea9a0, name: libgraph.a_graph017_}
+      - {start: 0x2eb9d8, type: rodata, vram: 0x3ea9d8, name: libgraph.a_graph003_}
+      - {start: 0x2eba20, type: rodata, vram: 0x3eaa20, name: libmpeg.a_pack_}
+      - {start: 0x2eba60, type: rodata, vram: 0x3eaa60, name: libmpeg.a_mpeg_}
+      - {start: 0x2ebb68, type: rodata, vram: 0x3eab68, name: libmpeg.a_init_}
+      - {start: 0x2ebcb0, type: rodata, vram: 0x3eacb0, name: libmpeg.a_mpc_}
+      - {start: 0x2ebf78, type: rodata, vram: 0x3eaf78, name: libmpeg.a_csc_}
+      - {start: 0x2ebf90, type: rodata, vram: 0x3eaf90, name: libsdr.a_sdr_main_}
+      - {start: 0x2ebfb8, type: rodata, vram: 0x3eafb8, name: libsdr.a_sdr_cb_}
+      - {start: 0x2ebfe0, type: rodata, vram: 0x3eafe0, name: libscf.a_libscf_}
+      - {start: 0x2ec000, type: rodata, vram: 0x3eb000, name: ibm.a_sf_atan_}
+      - {start: 0x2ec054, type: rodata, vram: 0x3eb054, name: libm.a_sf_cos_}
+      - {start: 0x2ec058, type: rodata, vram: 0x3eb058, name: libm.a_ef_acos_}
+      - {start: 0x2ec090, type: rodata, vram: 0x3eb090, name: libm.a_ef_atan2_}
+      - {start: 0x2ec0a8, type: rodata, vram: 0x3eb0a8, name: libm.a_ef_fmod_}
+      - {start: 0x2ec0b8, type: rodata, vram: 0x3eb0b8, name: libm.a_ef_log_}
+      - {start: 0x2ec0e8, type: rodata, vram: 0x3eb0e8, name: libm.a_ef_pow_}
+      - {start: 0x2ec170, type: rodata, vram: 0x3eb170, name: libm.a_ef_rem_pio2_}
+      - {start: 0x2ec530, type: rodata, vram: 0x3eb530, name: libm.a_ef_sqrt_}
+      - {start: 0x2ec538, type: rodata, vram: 0x3eb538, name: libm.a_kf_cos_}
+      - {start: 0x2ec558, type: rodata, vram: 0x3eb558, name: libm.a_kf_rem_pio2_}
+      - {start: 0x2ec5a4, type: rodata, vram: 0x3eb5a4, name: libm.a_kf_sin_}
+      - {start: 0x2ec5c0, type: rodata, vram: 0x3eb5c0, name: libm.a_kf_tan_}
+      - {start: 0x2ec604, type: rodata, vram: 0x3eb604, name: libm.a_sf_floor_}
+      - {start: 0x2ec608, type: rodata, vram: 0x3eb608, name: libm.a_sf_scalbn_}
+      - {start: 0x2ec618, type: rodata, vram: 0x3eb618, name: libgcc.a__divdi3_}
+      - {start: 0x2ec718, type: rodata, vram: 0x3eb718, name: libgcc.a__moddi3_}
+      - {start: 0x2ec818, type: rodata, vram: 0x3eb818, name: libgcc.a__udivdi3_}
+      - {start: 0x2ec918, type: rodata, vram: 0x3eb918, name: libgcc.a__umoddi3_}
+      - {start: 0x2eca18, type: rodata, vram: 0x3eba18, name: libgcc.a__thenan_df_}
+      - {start: 0x2eca30, type: rodata, vram: 0x3eba30, name: libgcc.a_frame-dwarf2_}
+      - {start: 0x2ecb00, type: rodata, vram: 0x3ebb00, name: libgcc.a_tinfo_}
+      - {start: 0x2ecb78, type: rodata, vram: 0x3ebb78, name: libgcc.a_tinfo2_}
+      - {start: 0x2eccb8, type: rodata, vram: 0x3ebcb8, name: libgcc.a_exception_}
+      - {start: 0x2eccd8, type: rodata, vram: 0x3ebcd8, name: libc.a_assert_}
+      - {start: 0x2ecd08, type: rodata, vram: 0x3ebd08, name: libc.a_ctype__}
+      - {start: 0x2ece10, type: rodata, vram: 0x3ebe10, name: libc.a_impure_}
+      - {start: 0x2ece20, type: rodata, vram: 0x3ebe20, name: libc.a_strerror_}
+      - {start: 0x2ed970, type: rodata, vram: 0x3ec970, name: libc.a_vfiprintf_}
+      - {start: 0x2edb80, type: rodata, vram: 0x3ecb80, name: libc.a_vfscanf_}
+      - {start: 0x2edff0, type: rodata, vram: 0x3ecff0, name: libc.a_dtoa_}
+      - {start: 0x2ee048, type: rodata, vram: 0x3ed048, name: libc.a_locale_}
+      - {start: 0x2ee090, type: rodata, vram: 0x3ed090, name: libc.a_mprec_}
+      - {start: 0x2ee1c0, type: rodata, vram: 0x3ed1c0, name: libc.a_strtod_}
+      - {start: 0x2ee290, type: rodata, vram: 0x3ed290, name: libc.a_s_infconst_}
+      
+      ### GCC_EXCEPT_TABLE
+      - {start: 0x2ee300, type: gcc_except_table, vram: 0x3ed300, name: graphics/graph3d/CDebugEdit}
+      - {start: 0x2ee36c, type: gcc_except_table, vram: 0x3ed36c, name: graphics/graph3d/eeFile}
+      - {start: 0x2ee4b8, type: gcc_except_table, vram: 0x3ed4b8, name: graphics/graph3d/eeFindFile}
+      - {start: 0x2ee594, type: gcc_except_table, vram: 0x3ed594, name: ingame/event/prg/ev_macro}
+      - {start: 0x2ee630, type: gcc_except_table, vram: 0x3ed630, name: graphics/graph3d/g3dRenderTarget}
+      - {start: 0x2ee65c, type: gcc_except_table, vram: 0x3ed65c, name: graphics/graph3d/g3dTexture}
+      - {start: 0x2ee678, type: gcc_except_table, vram: 0x3ed678, name: graphics/graph3d/gra3dShadow}
+      - {start: 0x2ee694, type: gcc_except_table, vram: 0x3ed694, name: common/ol_load}
+      - {start: 0x2ee730, type: gcc_except_table, vram: 0x3ed730, name: libgcc.a_exception_} # size:0x7c
+
+      # lit4 ################
+      - {start: 0x2ee800, type: lit4, vram: 0x3ed800, name: ingame/map/MapDoor} # size:0x2c
+      - {start: 0x2ee82c, type: lit4, vram: 0x3ed82c, name: ingame/map/MapDraw} # size:0x8
+      - {start: 0x2ee834, type: lit4, vram: 0x3ed834, name: ingame/map/MapObj} # size:0x1c
+      - {start: 0x2ee850, type: lit4, vram: 0x3ed850, name: ingame/map/MapObjReg} # size:0x14
+      - {start: 0x2ee864, type: lit4, vram: 0x3ed864, name: ingame/map/MapPut} # size:0x24
+      - {start: 0x2ee888, type: lit4, vram: 0x3ed888, name: ingame/map/MapSky} # size:0x1c
+      - {start: 0x2ee8a4, type: lit4, vram: 0x3ed8a4, name: ingame/map/MapSp} # size:0x1c
+      - {start: 0x2ee8c0, type: lit4, vram: 0x3ed8c0, name: graphics/motion/accessory} # size:0x34
+      - {start: 0x2ee8f4, type: lit4, vram: 0x3ed8f4, name: album/prg/album_disp} # size:0x8
+      - {start: 0x2ee8fc, type: lit4, vram: 0x3ed8fc, name: album/prg/album_edit} # size:0x8
+      - {start: 0x2ee904, type: lit4, vram: 0x3ed904, name: outgame/autoload} # size:0xc
+      - {start: 0x2ee910, type: lit4, vram: 0x3ed910, name: ingame/photo/bonus_shot} # size:0x10
+      - {start: 0x2ee920, type: lit4, vram: 0x3ed920, name: ingame/photo/center_circle} # size:0x4
+      - {start: 0x2ee924, type: lit4, vram: 0x3ed924, name: outgame/chapter_sel} # size:0x4
+      - {start: 0x2ee928, type: lit4, vram: 0x3ed928, name: system/compress/compress} # size:0x4
+      - {start: 0x2ee92c, type: lit4, vram: 0x3ed92c, name: debug/debug_menu} # size:0x10
+      - {start: 0x2ee93c, type: lit4, vram: 0x3ed93c, name: graphics/graph2d/draw_cmn_win} # size:0x4
+      - {start: 0x2ee940, type: lit4, vram: 0x3ed940, name: graphics/effect/effect} # size:0x4
+      - {start: 0x2ee944, type: lit4, vram: 0x3ed944, name: graphics/effect/effect_butterfly} # size:0xd0
+      - {start: 0x2eea14, type: lit4, vram: 0x3eda14, name: graphics/effect/effect_ene} # size:0x174
+      - {start: 0x2eeb88, type: lit4, vram: 0x3edb88, name: graphics/effect/effect_obj} # size:0x184
+      - {start: 0x2eed0c, type: lit4, vram: 0x3edd0c, name: graphics/effect/effect_oth} # size:0x1e0
+      - {start: 0x2eeeec, type: lit4, vram: 0x3edeec, name: graphics/effect/effect_rain} # size:0x48
+      - {start: 0x2eef34, type: lit4, vram: 0x3edf34, name: graphics/effect/effect_rdr} # size:0x38
+      - {start: 0x2eef6c, type: lit4, vram: 0x3edf6c, name: graphics/effect/effect_scr} # size:0xec
+      - {start: 0x2ef058, type: lit4, vram: 0x3ee058, name: graphics/effect/effect_sub} # size:0x7c
+      - {start: 0x2ef0d4, type: lit4, vram: 0x3ee0d4, name: graphics/effect/effect_torch} # size:0x30
+      - {start: 0x2ef104, type: lit4, vram: 0x3ee104, name: ingame/photo/ene_life} # size:0x8
+      - {start: 0x2ef10c, type: lit4, vram: 0x3ee10c, name: ingame/enemy/enemy} # size:0x6c
+      - {start: 0x2ef178, type: lit4, vram: 0x3ee178, name: ingame/enemy/enemy_act} # size:0xd0
+      - {start: 0x2ef248, type: lit4, vram: 0x3ee248, name: ingame/event/prg/ev_disp} # size:0x8
+      - {start: 0x2ef250, type: lit4, vram: 0x3ee250, name: ingame/event/prg/ev_gaze} # size:0xc
+      - {start: 0x2ef25c, type: lit4, vram: 0x3ee25c, name: ingame/event/prg/ev_get} # size:0x4
+      - {start: 0x2ef260, type: lit4, vram: 0x3ee260, name: ingame/event/prg/ev_macro} # size:0x4
+      - {start: 0x2ef264, type: lit4, vram: 0x3ee264, name: ingame/event/prg/ev_open} # size:0x14
+      - {start: 0x2ef278, type: lit4, vram: 0x3ee278, name: ingame/camera/event_camera} # size:0xc
+      - {start: 0x2ef284, type: lit4, vram: 0x3ee284, name: ingame/photo/film_no} # size:0x4
+      - {start: 0x2ef288, type: lit4, vram: 0x3ee288, name: ingame/camera/finder_camera} # size:0x30
+      - {start: 0x2ef2b8, type: lit4, vram: 0x3ee2b8, name: ingame/enemy/fly_ctrl} # size:0x44
+      - {start: 0x2ef2fc, type: lit4, vram: 0x3ee2fc, name: graphics/scene/fod} # size:0x3c
+      - {start: 0x2ef338, type: lit4, vram: 0x3ee338, name: outgame/framerate} # size:0x14
+      - {start: 0x2ef34c, type: lit4, vram: 0x3ee34c, name: graphics/effect/g2d_debug} # size:0xc
+      - {start: 0x2ef358, type: lit4, vram: 0x3ee358, name: graphics/graph2d/g2d_draw} # size:0xc
+      - {start: 0x2ef364, type: lit4, vram: 0x3ee364, name: graphics/graph3d/g3dCore} # size:0x8
+      - {start: 0x2ef36c, type: lit4, vram: 0x3ee36c, name: graphics/graph3d/g3dGeom} # size:0x8
+      - {start: 0x2ef374, type: lit4, vram: 0x3ee374, name: graphics/graph3d/g3dLight} # size:0x4
+      - {start: 0x2ef378, type: lit4, vram: 0x3ee378, name: graphics/graph3d/g3dLightEx} # size:0x8
+      - {start: 0x2ef380, type: lit4, vram: 0x3ee380, name: outgame/gallery_disp} # size:0x28
+      - {start: 0x2ef3a8, type: lit4, vram: 0x3ee3a8, name: graphics/graph3d/gra3d} # size:0x24
+      - {start: 0x2ef3cc, type: lit4, vram: 0x3ee3cc, name: graphics/graph3d/gra3dConst} # size:0x8
+      - {start: 0x2ef3d4, type: lit4, vram: 0x3ee3d4, name: graphics/graph3d/gra3dDebug} # size:0x8
+      - {start: 0x2ef3dc, type: lit4, vram: 0x3ee3dc, name: graphics/graph3d/gra3dMisc} # size:0x10
+      - {start: 0x2ef3ec, type: lit4, vram: 0x3ee3ec, name: graphics/graph3d/gra3dShadow} # size:0x20
+      - {start: 0x2ef40c, type: lit4, vram: 0x3ee40c, name: graphics/graphics} # size:0x14
+      - {start: 0x2ef420, type: lit4, vram: 0x3ee420, name: ingame/puzzle/hina/hina_pzl} # size:0x8
+      - {start: 0x2ef428, type: lit4, vram: 0x3ee428, name: ingame/photo/hp_bar} # size:0x10
+      - {start: 0x2ef438, type: lit4, vram: 0x3ee438, name: ingame/ingame_effect} # size:0x58
+      - {start: 0x2ef490, type: lit4, vram: 0x3ee490, name: puzzle/kai/kai_pzl} # size:0x4
+      - {start: 0x2ef494, type: lit4, vram: 0x3ee494, name: outgame/lang_check} # size:0x4
+      - {start: 0x2ef498, type: lit4, vram: 0x3ee498, name: ingame/photo/m_player_camera} # size:0x4
+      - {start: 0x2ef49c, type: lit4, vram: 0x3ee49c, name: ingame/camera/map_camera} # size:0x18
+      - {start: 0x2ef4b4, type: lit4, vram: 0x3ee4b4, name: ingame/map/map_rectangle} # size:0x4
+      - {start: 0x2ef4b8, type: lit4, vram: 0x3ee4b8, name: graphics/motion/mdlact} # size:0x50
+      - {start: 0x2ef508, type: lit4, vram: 0x3ee508, name: ingame/menu/menu} # size:0xc
+      - {start: 0x2ef514, type: lit4, vram: 0x3ee514, name: ingame/menu/menu_cam_edit} # size:0x40
+      - {start: 0x2ef554, type: lit4, vram: 0x3ee554, name: ingame/menu/menu_cam_top} # size:0x8
+      - {start: 0x2ef55c, type: lit4, vram: 0x3ee55c, name: ingame/menu/menu_file} # size:0x8
+      - {start: 0x2ef564, type: lit4, vram: 0x3ee564, name: ingame/menu/menu_map} # size:0x20
+      - {start: 0x2ef584, type: lit4, vram: 0x3ee584, name: ingame/menu/menu_memo} # size:0x4
+      - {start: 0x2ef588, type: lit4, vram: 0x3ee588, name: ingame/menu/menu_photo} # size:0x14
+      - {start: 0x2ef59c, type: lit4, vram: 0x3ee59c, name: ingame/menu/menu_soul} # size:0x4
+      - {start: 0x2ef5a0, type: lit4, vram: 0x3ee5a0, name: ingame/menu/menu_top} # size:0x4
+      - {start: 0x2ef5a4, type: lit4, vram: 0x3ee5a4, name: graphics/motion/mime} # size:0xc
+      - {start: 0x2ef5b0, type: lit4, vram: 0x3ee5b0, name: outgame/mis_sel_disp} # size:0x24
+      - {start: 0x2ef5d4, type: lit4, vram: 0x3ee5d4, name: outgame/mission_pause} # size:0x4
+      - {start: 0x2ef5d8, type: lit4, vram: 0x3ee5d8, name: graphics/motion/motion} # size:0x20
+      - {start: 0x2ef5f8, type: lit4, vram: 0x3ee5f8, name: ingame/movie_room} # size:0x8
+      - {start: 0x2ef600, type: lit4, vram: 0x3ee600, name: ingame/movie_room_menu/prg/movie_room_menu} # size:0x1c
+      - {start: 0x2ef61c, type: lit4, vram: 0x3ee61c, name: ingame/photo/n_equip_tray} # size:0xc
+      - {start: 0x2ef628, type: lit4, vram: 0x3ee628, name: ingame/photo/n_plyr_camera} # size:0x18
+      - {start: 0x2ef640, type: lit4, vram: 0x3ee640, name: outgame/newgame} # size:0x4
+      - {start: 0x2ef644, type: lit4, vram: 0x3ee644, name: outgame/option_disp} # size:0x38
+      - {start: 0x2ef67c, type: lit4, vram: 0x3ee67c, name: pad/pad} # size:0xc
+      - {start: 0x2ef688, type: lit4, vram: 0x3ee688, name: outgame/pad_check} # size:0x4
+      - {start: 0x2ef68c, type: lit4, vram: 0x3ee68c, name: ingame/pause/prg/pause} # size:0x4
+      - {start: 0x2ef690, type: lit4, vram: 0x3ee690, name: ingame/photo/photo_dat} # size:0x18
+      - {start: 0x2ef6a8, type: lit4, vram: 0x3ee6a8, name: ingame/photo/photo_make} # size:0xc
+      - {start: 0x2ef6b4, type: lit4, vram: 0x3ee6b4, name: ingame/plyr/player} # size:0x13c
+      - {start: 0x2ef7f0, type: lit4, vram: 0x3ee7f0, name: ingame/plyr/plyr_mdl} # size:0x20
+      - {start: 0x2ef810, type: lit4, vram: 0x3ee810, name: ingame/puzzle/roku/roku_pzl} # size:0xc
+      - {start: 0x2ef81c, type: lit4, vram: 0x3ee81c, name: save_load/prg/save_load_disp} # size:0x4
+      - {start: 0x2ef820, type: lit4, vram: 0x3ee820, name: ingame/savepoint/savepoint_disp} # size:0x8
+      - {start: 0x2ef828, type: lit4, vram: 0x3ee828, name: graphics/scene/scene} # size:0x18
+      - {start: 0x2ef840, type: lit4, vram: 0x3ee840, name: graphics/scene/scene_effect} # size:0x4
+      - {start: 0x2ef844, type: lit4, vram: 0x3ee844, name: debug/scn_test} # size:0x68
+      - {start: 0x2ef8ac, type: lit4, vram: 0x3ee8ac, name: outgame/setup_menu} # size:0x4
+      - {start: 0x2ef8b0, type: lit4, vram: 0x3ee8b0, name: ingame/plyr/sis_algo} # size:0x1c
+      - {start: 0x2ef8cc, type: lit4, vram: 0x3ee8cc, name: ingame/plyr/sis_mdl} # size:0x4
+      - {start: 0x2ef8d0, type: lit4, vram: 0x3ee8d0, name: ingame/plyr/sister} # size:0xcc
+      - {start: 0x2ef99c, type: lit4, vram: 0x3ee99c, name: outgame/title} # size:0x8
+      - {start: 0x2ef9a4, type: lit4, vram: 0x3ee9a4, name: ingame/plyr/unit_ctl} # size:0x34
+      - {start: 0x2ef9d8, type: lit4, vram: 0x3ee9d8, name: common/utility} # size:0x14
+      - {start: 0x2ef9ec, type: lit4, vram: 0x3ee9ec, name: common/utility2} # size:0x10
+      - {start: 0x2ef9fc, type: lit4, vram: 0x3ee9fc, name: debug/zero2_perf} # size:0x4
+      - {start: 0x2efa00, type: lit4, vram: 0x3eea00, name: commmon/zero2_util} # size:0xc
+      - {start: 0x2efa0c, type: lit4, vram: 0x3eea0c, name: iopsys.a_snd_3d_} # size:0xc
+      - {start: 0x2efa18, type: lit4, vram: 0x3eea18, name: playpss.a_playpss_} # size:0xc
+      # #####################
+      # sdata ###############
+      - {start: 0x2efa80, type: sdata, vram: 0x3eea80, name: ingame/map/CBuff} # size:0x4c
+      - {start: 0x2efad0, type: sdata, vram: 0x3eead0, name: graphics/graph3d/CDebugEdit} # size:0x5
+      - {start: 0x2efad8, type: sdata, vram: 0x3eead8, name: ingame/plyr/ChrSort} # size:0x44
+      - {start: 0x2efb20, type: sdata, vram: 0x3eeb20, name: debug/DbFurnPre} # size:0x5e
+      - {start: 0x2efb80, type: sdata, vram: 0x3eeb80, name: ingame/map/FurnCtl} # size:0x68
+      - {start: 0x2efbe8, type: sdata, vram: 0x3eebe8, name: ingame/map/FurnLoad} # size:0x16
+      - {start: 0x2efc00, type: sdata, vram: 0x3eec00, name: graphics/scene/IngameScene} # size:0x44
+      - {start: 0x2efc48, type: sdata, vram: 0x3eec48, name: ingame/map/MapAnim} # size:0x3e
+      - {start: 0x2efc88, type: sdata, vram: 0x3eec88, name: ingame/map/MapDoor} # size:0x81
+      - {start: 0x2efd10, type: sdata, vram: 0x3eed10, name: ingame/map/MapDraw} # size:0x4c
+      - {start: 0x2efd60, type: sdata, vram: 0x3eed60, name: ingame/map/MapFog} # size:0x54
+      - {start: 0x2efdb8, type: sdata, vram: 0x3eedb8, name: ingame/map/MapHit} # size:0x48
+      - {start: 0x2efe00, type: sdata, vram: 0x3eee00, name: ingame/map/MapLight} # size:0x69
+      - {start: 0x2efe70, type: sdata, vram: 0x3eee70, name: ingame/map/MapLoad} # size:0x70
+      - {start: 0x2efee0, type: sdata, vram: 0x3eeee0, name: ingame/map/MapObj} # size:0x55
+      - {start: 0x2eff38, type: sdata, vram: 0x3eef38, name: ingame/map/MapObjReg} # size:0x4d
+      - {start: 0x2eff88, type: sdata, vram: 0x3eef88, name: ingame/map/MapPut} # size:0x3e
+      - {start: 0x2effc8, type: sdata, vram: 0x3eefc8, name: ingame/map/MapSave} # size:0x3e
+      - {start: 0x2f0008, type: sdata, vram: 0x3ef008, name: ingame/map/MapSky} # size:0x64
+      - {start: 0x2f0070, type: sdata, vram: 0x3ef070, name: ingame/map/MapSp} # size:0x80
+      - {start: 0x2f00f0, type: sdata, vram: 0x3ef0f0, name: ingame/map/MhCtl} # size:0x7f
+      - {start: 0x2f0170, type: sdata, vram: 0x3ef170, name: RegDat} # size:0x24
+      - {start: 0x2f0198, type: sdata, vram: 0x3ef198, name: common/SingleLinkList} # size:0x3e
+      - {start: 0x2f01d8, type: sdata, vram: 0x3ef1d8, name: outgame/SpriteCmn} # size:0x4
+      - {start: 0x2f01e0, type: sdata, vram: 0x3ef1e0, name: graphics/motion/accessory} # size:0x66
+      - {start: 0x2f0248, type: sdata, vram: 0x3ef248, name: graphics/motion/acs_dat} # size:0x1d
+      - {start: 0x2f0268, type: sdata, vram: 0x3ef268, name: album/prg/album} # size:0x88
+      - {start: 0x2f02f0, type: sdata, vram: 0x3ef2f0, name: album/dat/album_dat} # size:0x16
+      - {start: 0x2f0308, type: sdata, vram: 0x3ef308, name: album/prg/album_disp} # size:0x78
+      - {start: 0x2f0380, type: sdata, vram: 0x3ef380, name: album/prg/album_edit} # size:0x58
+      - {start: 0x2f03d8, type: sdata, vram: 0x3ef3d8, name: album/prg/album_load} # size:0x44
+      - {start: 0x2f0420, type: sdata, vram: 0x3ef420, name: album/prg/album_save} # size:0x44
+      - {start: 0x2f0468, type: sdata, vram: 0x3ef468, name: album/prg/album_view} # size:0x44
+      - {start: 0x2f04b0, type: sdata, vram: 0x3ef4b0, name: ingame/enemy/alg_manage} # size:0x16
+      - {start: 0x2f04c8, type: sdata, vram: 0x3ef4c8, name: graphics/motion/anicode} # size:0x16
+      - {start: 0x2f04e0, type: sdata, vram: 0x3ef4e0, name: outgame/autoload} # size:0x44
+      - {start: 0x2f0528, type: sdata, vram: 0x3ef528, name: ingame/photo/bonus_shot} # size:0x54
+      - {start: 0x2f0580, type: sdata, vram: 0x3ef580, name: ingame/menu/tim_dat/cam_level_up_point} # size:0x16
+      - {start: 0x2f0598, type: sdata, vram: 0x3ef598, name: camera_film} # size:0x15
+      - {start: 0x2f05b0, type: sdata, vram: 0x3ef5b0, name: ingame/menu/tim_dat/camera_power_up} # size:0x44
+      - {start: 0x2f05f8, type: sdata, vram: 0x3ef5f8, name: ingame/photo/center_circle} # size:0x44
+      - {start: 0x2f0640, type: sdata, vram: 0x3ef640, name: ingame/photo/center_cross} # size:0x40
+      - {start: 0x2f0680, type: sdata, vram: 0x3ef680, name: outgame/chapter_sel} # size:0xca
+      - {start: 0x2f0750, type: sdata, vram: 0x3ef750, name: ingame/plyr/charBB} # size:0x31
+      - {start: 0x2f0788, type: sdata, vram: 0x3ef788, name: ingame/clear/prg/clear_flg} # size:0x86
+      - {start: 0x2f0810, type: sdata, vram: 0x3ef810, name: ingame/clear/prg/clearmenu} # size:0x44
+      - {start: 0x2f0858, type: sdata, vram: 0x3ef858, name: ingame/clear/prg/clearmenu_top} # size:0x45
+      - {start: 0x2f08a0, type: sdata, vram: 0x3ef8a0, name: system/compress/compress} # size:0x3
+      - {start: 0x2f08a8, type: sdata, vram: 0x3ef8a8, name: ingame/item/prg/crystal} # size:0x3e
+      - {start: 0x2f08e8, type: sdata, vram: 0x3ef8e8, name: ingame/photo/damage_disp} # size:0x46
+      - {start: 0x2f0930, type: sdata, vram: 0x3ef930, name: debug/debug} # size:0x7a
+      - {start: 0x2f09b0, type: sdata, vram: 0x3ef9b0, name: debug/debug_menu} # size:0x14e
+      - {start: 0x2f0b00, type: sdata, vram: 0x3efb00, name: dmaVif1} # size:0x9
+      - {start: 0x2f0b10, type: sdata, vram: 0x3efb10, name: ingame/door/prg/door} # size:0x58
+      - {start: 0x2f0b68, type: sdata, vram: 0x3efb68, name: graphics/graph2d/draw_caption} # size:0x3e
+      - {start: 0x2f0ba8, type: sdata, vram: 0x3efba8, name: graphics/draw_env} # size:0x10
+      - {start: 0x2f0bb8, type: sdata, vram: 0x3efbb8, name: graphics/graph3d/eeException} # size:0x1
+      - {start: 0x2f0bc0, type: sdata, vram: 0x3efbc0, name: graphics/graph3d/eeFile} # size:0x27
+      - {start: 0x2f0be8, type: sdata, vram: 0x3efbe8, name: graphics/graph3d/eeFindFile} # size:0x36
+      - {start: 0x2f0c20, type: sdata, vram: 0x3efc20, name: graphics/graph3d/eeProfile} # size:0x4
+      - {start: 0x2f0c28, type: sdata, vram: 0x3efc28, name: system/os/eecdvd} # size:0x3e
+      - {start: 0x2f0c68, type: sdata, vram: 0x3efc68, name: graphics/effect/effect} # size:0x68
+      - {start: 0x2f0cd0, type: sdata, vram: 0x3efcd0, name: graphics/effect/effect_butterfly} # size:0x44
+      - {start: 0x2f0d18, type: sdata, vram: 0x3efd18, name: graphics/effect/effect_ene} # size:0x88
+      - {start: 0x2f0da0, type: sdata, vram: 0x3efda0, name: graphics/effect/effect_obj} # size:0x85
+      - {start: 0x2f0e28, type: sdata, vram: 0x3efe28, name: graphics/effect/effect_oth} # size:0x75
+      - {start: 0x2f0ea0, type: sdata, vram: 0x3efea0, name: graphics/effect/effect_pak} # size:0x20
+      - {start: 0x2f0ec0, type: sdata, vram: 0x3efec0, name: graphics/effect/effect_rain} # size:0x3e
+      - {start: 0x2f0f00, type: sdata, vram: 0x3eff00, name: graphics/effect/effect_rdr} # size:0x3e
+      - {start: 0x2f0f40, type: sdata, vram: 0x3eff40, name: graphics/effect/effect_scr} # size:0xc8
+      - {start: 0x2f1008, type: sdata, vram: 0x3f0008, name: graphics/effect/effect_spr} # size:0x1c
+      - {start: 0x2f1028, type: sdata, vram: 0x3f0028, name: graphics/effect/effect_sub} # size:0x55
+      - {start: 0x2f1080, type: sdata, vram: 0x3f0080, name: graphics/effect/effect_torch} # size:0x54
+      - {start: 0x2f10d8, type: sdata, vram: 0x3f00d8, name: ingame/clear/prg/ending} # size:0x40
+      - {start: 0x2f1118, type: sdata, vram: 0x3f0118, name: ingame/photo/ene_life} # size:0x40
+      - {start: 0x2f1158, type: sdata, vram: 0x3f0158, name: ingame/enemy/ene_mot_ctrl} # size:0x16
+      - {start: 0x2f1170, type: sdata, vram: 0x3f0170, name: ingame/enemy/enemy} # size:0x8d
+      - {start: 0x2f1200, type: sdata, vram: 0x3f0200, name: ingame/enemy/enemy_act} # size:0x60
+      - {start: 0x2f1260, type: sdata, vram: 0x3f0260, name: ingame/enemy/enemy_dat} # size:0x1c
+      - {start: 0x2f1280, type: sdata, vram: 0x3f0280, name: ingame/event/prg/ev_change} # size:0x16
+      - {start: 0x2f1298, type: sdata, vram: 0x3f0298, name: ingame/event/prg/ev_debug} # size:0x3e
+      - {start: 0x2f12d8, type: sdata, vram: 0x3f02d8, name: ingame/event/prg/ev_disp} # size:0x40
+      - {start: 0x2f1318, type: sdata, vram: 0x3f0318, name: ingame/event/dat/ev_disp_dat} # size:0x1c
+      - {start: 0x2f1338, type: sdata, vram: 0x3f0338, name: ingame/event/prg/ev_ene} # size:0x16
+      - {start: 0x2f1350, type: sdata, vram: 0x3f0350, name: ingame/event/prg/ev_exe} # size:0x3e
+      - {start: 0x2f1390, type: sdata, vram: 0x3f0390, name: ingame/event/prg/ev_gaze} # size:0x44
+      - {start: 0x2f13d8, type: sdata, vram: 0x3f03d8, name: ingame/event/prg/ev_get} # size:0x16
+      - {start: 0x2f13f0, type: sdata, vram: 0x3f03f0, name: ingame/event/prg/ev_macro} # size:0xad
+      - {start: 0x2f14a0, type: sdata, vram: 0x3f04a0, name: ingame/event/prg/ev_main} # size:0x40
+      - {start: 0x2f14e0, type: sdata, vram: 0x3f04e0, name: ingame/event/prg/ev_open} # size:0x48
+      - {start: 0x2f1528, type: sdata, vram: 0x3f0528, name: ingame/event/prg/ev_phase} # size:0x3e
+      - {start: 0x2f1568, type: sdata, vram: 0x3f0568, name: ingame/event/prg/ev_se} # size:0x8
+      - {start: 0x2f1570, type: sdata, vram: 0x3f0570, name: ingame/event/prg/ev_sis} # size:0x58
+      - {start: 0x2f15c8, type: sdata, vram: 0x3f05c8, name: ingame/event/prg/ev_talk} # size:0x41
+      - {start: 0x2f1610, type: sdata, vram: 0x3f0610, name: ingame/event/dat/ev_talk_dat} # size:0x1c
+      - {start: 0x2f1630, type: sdata, vram: 0x3f0630, name: ingame/event/prg/ev_timer} # size:0x16
+      - {start: 0x2f1648, type: sdata, vram: 0x3f0648, name: ingame/camera/event_camera} # size:0x4d
+      - {start: 0x2f1698, type: sdata, vram: 0x3f0698, name: ingame/enemy/fene_entry} # size:0x7e
+      - {start: 0x2f1718, type: sdata, vram: 0x3f0718, name: ingame/photo/filament} # size:0x5a
+      - {start: 0x2f1778, type: sdata, vram: 0x3f0778, name: ingame/item/prg/file} # size:0x28
+      - {start: 0x2f17a0, type: sdata, vram: 0x3f07a0, name: ingame/item/dat/file_dat} # size:0x16
+      - {start: 0x2f17b8, type: sdata, vram: 0x3f07b8, name: file_tex_dat} # size:0x8
+      - {start: 0x2f17c0, type: sdata, vram: 0x3f07c0, name: ingame/photo/film_no} # size:0x4c
+      - {start: 0x2f1810, type: sdata, vram: 0x3f0810, name: ingame/photo/finder} # size:0x54
+      - {start: 0x2f1868, type: sdata, vram: 0x3f0868, name: ingame/camera/finder_camera} # size:0x40
+      - {start: 0x2f18a8, type: sdata, vram: 0x3f08a8, name: ingame/enemy/fly_ctrl} # size:0x40
+      - {start: 0x2f18e8, type: sdata, vram: 0x3f08e8, name: graphics/scene/fod} # size:0x5d
+      - {start: 0x2f1948, type: sdata, vram: 0x3f0948, name: ingame/map/foot_se} # size:0x16
+      - {start: 0x2f1960, type: sdata, vram: 0x3f0960, name: outgame/framerate} # size:0x3e
+      - {start: 0x2f19a0, type: sdata, vram: 0x3f09a0, name: ingame/photo/freq_camera} # size:0x3e
+      - {start: 0x2f19e0, type: sdata, vram: 0x3f09e0, name: graphics/effect/g2d_debug} # size:0x20
+      - {start: 0x2f1a00, type: sdata, vram: 0x3f0a00, name: graphics/graph2d/g2d_draw} # size:0x48
+      - {start: 0x2f1a48, type: sdata, vram: 0x3f0a48, name: graphics/graph2d/g2d_main} # size:0x48
+      - {start: 0x2f1a90, type: sdata, vram: 0x3f0a90, name: graphics/graph3d/g3dBoundingVolume} # size:0x28
+      - {start: 0x2f1ab8, type: sdata, vram: 0x3f0ab8, name: graphics/graph3d/g3dCamera} # size:0x28
+      - {start: 0x2f1ae0, type: sdata, vram: 0x3f0ae0, name: graphics/graph3d/g3dCore} # size:0x54
+      - {start: 0x2f1b38, type: sdata, vram: 0x3f0b38, name: graphics/graph3d/g3dDebug} # size:0xae
+      - {start: 0x2f1be8, type: sdata, vram: 0x3f0be8, name: graphics/graph3d/g3dDma} # size:0x2c
+      - {start: 0x2f1c18, type: sdata, vram: 0x3f0c18, name: graphics/graph3d/g3dGeom} # size:0x29
+      - {start: 0x2f1c48, type: sdata, vram: 0x3f0c48, name: graphics/graph3d/g3dGsWrapper} # size:0x9
+      - {start: 0x2f1c58, type: sdata, vram: 0x3f0c58, name: graphics/graph3d/g3dLight} # size:0x39
+      - {start: 0x2f1c98, type: sdata, vram: 0x3f0c98, name: graphics/graph3d/g3dLightEx} # size:0x60
+      - {start: 0x2f1cf8, type: sdata, vram: 0x3f0cf8, name: graphics/graph3d/g3dMath} # size:0x32
+      - {start: 0x2f1d30, type: sdata, vram: 0x3f0d30, name: graphics/graph3d/g3dRenderTarget} # size:0x11
+      - {start: 0x2f1d48, type: sdata, vram: 0x3f0d48, name: graphics/graph3d/g3dSprite} # size:0x9
+      - {start: 0x2f1d58, type: sdata, vram: 0x3f0d58, name: graphics/graph3d/g3dTexture} # size:0x9
+      - {start: 0x2f1d68, type: sdata, vram: 0x3f0d68, name: graphics/graph3d/g3dVif1} # size:0x20
+      - {start: 0x2f1d88, type: sdata, vram: 0x3f0d88, name: graphics/graph3d/g3dVu0Instance} # size:0x8
+      - {start: 0x2f1d90, type: sdata, vram: 0x3f0d90, name: outgame/gallery} # size:0x64
+      - {start: 0x2f1df8, type: sdata, vram: 0x3f0df8, name: outgame/gallery_disp} # size:0x3e
+      - {start: 0x2f1e38, type: sdata, vram: 0x3f0e38, name: save_load/prg/game_data_save} # size:0x5c
+      - {start: 0x2f1e98, type: sdata, vram: 0x3f0e98, name: ingame/clear/prg/game_result} # size:0x48
+      - {start: 0x2f1ee0, type: sdata, vram: 0x3f0ee0, name: ingame/clear/prg/game_result_top} # size:0x4d
+      - {start: 0x2f1f30, type: sdata, vram: 0x3f0f30, name: ingame/gameover/prg/gameover} # size:0x3e
+      - {start: 0x2f1f70, type: sdata, vram: 0x3f0f70, name: ingame/gameover/prg/gameover_menu} # size:0x1c
+      - {start: 0x2f1f90, type: sdata, vram: 0x3f0f90, name: ingame/gameover/prg/gameover_menu_load} # size:0x4c
+      - {start: 0x2f1fe0, type: sdata, vram: 0x3f0fe0, name: ingame/gameover/prg/gameover_menu_top} # size:0x45
+      - {start: 0x2f2028, type: sdata, vram: 0x3f1028, name: ghost_seal_door} # size:0x16
+      - {start: 0x2f2040, type: sdata, vram: 0x3f1040, name: graphics/graph3d/gra3d} # size:0x9c
+      - {start: 0x2f20e0, type: sdata, vram: 0x3f10e0, name: graphics/graph3d/gra3dBoundingBox} # size:0x49
+      - {start: 0x2f2130, type: sdata, vram: 0x3f1130, name: graphics/graph3d/gra3dConst} # size:0x68
+      - {start: 0x2f2198, type: sdata, vram: 0x3f1198, name: graphics/graph3d/gra3dDebug} # size:0x57
+      - {start: 0x2f21f0, type: sdata, vram: 0x3f11f0, name: graphics/graph3d/gra3dMisc} # size:0x72
+      - {start: 0x2f2268, type: sdata, vram: 0x3f1268, name: graphics/graph3d/gra3dSGD} # size:0xa8
+      - {start: 0x2f2310, type: sdata, vram: 0x3f1310, name: graphics/graph3d/gra3dSGDData} # size:0x70
+      - {start: 0x2f2380, type: sdata, vram: 0x3f1380, name: graphics/graph3d/gra3dShadow} # size:0x60
+      - {start: 0x2f23e0, type: sdata, vram: 0x3f13e0, name: graphics/graph3d/gra3dTRI2} # size:0x41
+      - {start: 0x2f2428, type: sdata, vram: 0x3f1428, name: graphics/graph3d/gra3dVu0} # size:0x3e
+      - {start: 0x2f2468, type: sdata, vram: 0x3f1468, name: graphics/graphics} # size:0x44
+      - {start: 0x2f24b0, type: sdata, vram: 0x3f14b0, name: ingame/puzzle/hina/hina_pzl} # size:0x40
+      - {start: 0x2f24f0, type: sdata, vram: 0x3f14f0, name: ingame/photo/hp_bar} # size:0x1c
+      - {start: 0x2f2510, type: sdata, vram: 0x3f1510, name: ingame/ingame} # size:0x54
+      - {start: 0x2f2568, type: sdata, vram: 0x3f1568, name: ingame/ingame_effect} # size:0x88
+      - {start: 0x2f25f0, type: sdata, vram: 0x3f15f0, name: ingame/item/prg/item} # size:0x5c
+      - {start: 0x2f2650, type: sdata, vram: 0x3f1650, name: ingame/item/prg/item_dat} # size:0x16
+      - {start: 0x2f2668, type: sdata, vram: 0x3f1668, name: ingame/item/prg/item_debug} # size:0x16
+      - {start: 0x2f2680, type: sdata, vram: 0x3f1680, name: ingame/puzzle/kai/kai_pzl} # size:0x76
+      - {start: 0x2f26f8, type: sdata, vram: 0x3f16f8, name: ingame/puzzle/kaza2/kaza2_pzl} # size:0x40
+      - {start: 0x2f2738, type: sdata, vram: 0x3f1738, name: ingame/puzzle/kaza/kaza_pzl} # size:0x40
+      - {start: 0x2f2778, type: sdata, vram: 0x3f1778, name: outgame/lang_check} # size:0x44
+      - {start: 0x2f27c0, type: sdata, vram: 0x3f17c0, name: outgame/lang_sel} # size:0x49
+      - {start: 0x2f2810, type: sdata, vram: 0x3f1810, name: ingame/item/prg/level_gem} # size:0x3e
+      - {start: 0x2f2850, type: sdata, vram: 0x3f1850, name: outgame/loadgame} # size:0x48
+      - {start: 0x2f2898, type: sdata, vram: 0x3f1898, name: ingame/loading/loading} # size:0x44
+      - {start: 0x2f28e0, type: sdata, vram: 0x3f18e0, name: outgame/logo} # size:0x1f
+      - {start: 0x2f2900, type: sdata, vram: 0x3f1900, name: ingame/photo/m_plyr_camera} # size:0x44
+      - {start: 0x2f2948, type: sdata, vram: 0x3f1948, name: main/main} # size:0x59
+      - {start: 0x2f29a8, type: sdata, vram: 0x3f19a8, name: ingame/plyr/man_data} # size:0x40
+      - {start: 0x2f29e8, type: sdata, vram: 0x3f19e8, name: ingame/map/map_bgm} # size:0x1c
+      - {start: 0x2f2a08, type: sdata, vram: 0x3f1a08, name: ingame/camera/map_camera} # size:0x5c
+      - {start: 0x2f2a68, type: sdata, vram: 0x3f1a68, name: ingame/map/map_height} # size:0x50
+      - {start: 0x2f2ab8, type: sdata, vram: 0x3f1ab8, name: ingame/map/map_rectangle} # size:0x10
+      - {start: 0x2f2ac8, type: sdata, vram: 0x3f1ac8, name: ingame/map/map_reverb} # size:0x16
+      - {start: 0x2f2ae0, type: sdata, vram: 0x3f1ae0, name: system/mc/prg/mc_icon} # size:0x4
+      - {start: 0x2f2ae8, type: sdata, vram: 0x3f1ae8, name: system/mc/prg/mc_set_data} # size:0x55
+      - {start: 0x2f2b40, type: sdata, vram: 0x3f1b40, name: system/mc/mc_title_dat} # size:0x24
+      - {start: 0x2f2b68, type: sdata, vram: 0x3f1b68, name: graphics/motion/mdlact} # size:0x48
+      - {start: 0x2f2bb0, type: sdata, vram: 0x3f1bb0, name: graphics/motion/mdldat} # size:0xebc
+      - {start: 0x2f3a70, type: sdata, vram: 0x3f2a70, name: graphics/motion/mdlwork} # size:0x4c
+      - {start: 0x2f3ac0, type: sdata, vram: 0x3f2ac0, name: ingame/item/prg/memo} # size:0x1f
+      - {start: 0x2f3ae0, type: sdata, vram: 0x3f2ae0, name: ingame/menu/menu} # size:0x21
+      - {start: 0x2f3b08, type: sdata, vram: 0x3f2b08, name: ingame/menu/menu_cam_edit} # size:0x58
+      - {start: 0x2f3b60, type: sdata, vram: 0x3f2b60, name: ingame/menu/menu_cam_main} # size:0x88
+      - {start: 0x2f3be8, type: sdata, vram: 0x3f2be8, name: ingame/menu/menu_cam_top} # size:0x56
+      - {start: 0x2f3c40, type: sdata, vram: 0x3f2c40, name: ingame/menu/menu_cmn} # size:0x41
+      - {start: 0x2f3c88, type: sdata, vram: 0x3f2c88, name: ingame/menu/menu_cmn_disp} # size:0x45
+      - {start: 0x2f3cd0, type: sdata, vram: 0x3f2cd0, name: ingame/menu/menu_dat} # size:0x33
+      - {start: 0x2f3d08, type: sdata, vram: 0x3f2d08, name: ingame/menu/menu_file} # size:0x90
+      - {start: 0x2f3d98, type: sdata, vram: 0x3f2d98, name: ingame/menu/menu_item} # size:0x44
+      - {start: 0x2f3de0, type: sdata, vram: 0x3f2de0, name: ingame/menu/menu_map} # size:0x58
+      - {start: 0x2f3e38, type: sdata, vram: 0x3f2e38, name: ingame/menu/menu_memo} # size:0x44
+      - {start: 0x2f3e80, type: sdata, vram: 0x3f2e80, name: ingame/menu/menu_photo} # size:0x44
+      - {start: 0x2f3ec8, type: sdata, vram: 0x3f2ec8, name: ingame/menu/menu_radio} # size:0x66
+      - {start: 0x2f3f30, type: sdata, vram: 0x3f2f30, name: ingame/menu/menu_soul} # size:0x45
+      - {start: 0x2f3f78, type: sdata, vram: 0x3f2f78, name: ingame/menu/menu_top} # size:0x4c
+      - {start: 0x2f3fc8, type: sdata, vram: 0x3f2fc8, name: graphics/graph2d/message} # size:0x74
+      - {start: 0x2f4040, type: sdata, vram: 0x3f3040, name: graphics/motion/mim_dat} # size:0x16
+      - {start: 0x2f4058, type: sdata, vram: 0x3f3058, name: graphics/motion/mime} # size:0x49
+      - {start: 0x2f40a8, type: sdata, vram: 0x3f30a8, name: outgame/mis_sel_disp} # size:0x20
+      - {start: 0x2f40c8, type: sdata, vram: 0x3f30c8, name: outgame/mission_ctl} # size:0x70
+      - {start: 0x2f4138, type: sdata, vram: 0x3f3138, name: outgame/mission_disp} # size:0x4c
+      - {start: 0x2f4188, type: sdata, vram: 0x3f3188, name: outgame/mission_pause} # size:0x3e
+      - {start: 0x2f41c8, type: sdata, vram: 0x3f31c8, name: outgame/mission_sel} # size:0x68
+      - {start: 0x2f4230, type: sdata, vram: 0x3f3230, name: graphics/mmanage} # size:0x42
+      - {start: 0x2f4278, type: sdata, vram: 0x3f3278, name: graphics/motion/morph} # size:0x16
+      - {start: 0x2f4290, type: sdata, vram: 0x3f3290, name: graphics/motion/motion} # size:0x74
+      - {start: 0x2f4308, type: sdata, vram: 0x3f3308, name: graphics/movie/movie} # size:0x50
+      - {start: 0x2f4358, type: sdata, vram: 0x3f3358, name: ingame/movie_room_menu/prg/movie_projecter} # size:0x48
+      - {start: 0x2f43a0, type: sdata, vram: 0x3f33a0, name: ingame/movie_room} # size:0x48
+      - {start: 0x2f43e8, type: sdata, vram: 0x3f33e8, name: ingame/movie_room_menu/prg/movie_room_menu} # size:0x48
+      - {start: 0x2f4430, type: sdata, vram: 0x3f3430, name: graphics/movie/movie_title} # size:0x3e
+      - {start: 0x2f4470, type: sdata, vram: 0x3f3470, name: ingame/photo/n_equip_tray} # size:0x9c
+      - {start: 0x2f4510, type: sdata, vram: 0x3f3510, name: ingame/photo/n_plyr_camera} # size:0x5d
+      - {start: 0x2f4570, type: sdata, vram: 0x3f3570, name: outgame/newgame} # size:0x48
+      - {start: 0x2f45b8, type: sdata, vram: 0x3f35b8, name: common/ol_load} # size:0x3a
+      - {start: 0x2f45f8, type: sdata, vram: 0x3f35f8, name: outgame/option} # size:0x54
+      - {start: 0x2f4650, type: sdata, vram: 0x3f3650, name: outgame/option_disp} # size:0x3e
+      - {start: 0x2f4690, type: sdata, vram: 0x3f3690, name: outgame/outgame} # size:0x44
+      - {start: 0x2f46d4, type: sdata, vram: 0x3f36d4, name: pad/pad} # size:0x8
+      - {start: 0x2f46e0, type: sdata, vram: 0x3f36e0, name: outgame/pad_check} # size:0x4f
+      - {start: 0x2f4730, type: sdata, vram: 0x3f3730, name: ingame/pause/prg/pause} # size:0x48
+      - {start: 0x2f4778, type: sdata, vram: 0x3f3778, name: ingame/photo/photo} # size:0x48
+      - {start: 0x2f47c0, type: sdata, vram: 0x3f37c0, name: photo_charger} # size:0x46
+      - {start: 0x2f4808, type: sdata, vram: 0x3f3808, name: ingame/photo/photo_dat} # size:0x85
+      - {start: 0x2f4890, type: sdata, vram: 0x3f3890, name: ingame/photo/photo_make} # size:0x50
+      - {start: 0x2f48e0, type: sdata, vram: 0x3f38e0, name: ingame/menu/play_data} # size:0x3e
+      - {start: 0x2f4920, type: sdata, vram: 0x3f3920, name: ingame/plyr/player} # size:0xed
+      - {start: 0x2f4a10, type: sdata, vram: 0x3f3a10, name: ingame/plyr/plyr_mdl} # size:0x64
+      - {start: 0x2f4a78, type: sdata, vram: 0x3f3a78, name: ingame/menu/plyr_room_info} # size:0x3e
+      - {start: 0x2f4ab8, type: sdata, vram: 0x3f3ab8, name: ingame/puzzle/puzzle} # size:0x46
+      - {start: 0x2f4b00, type: sdata, vram: 0x3f3b00, name: ingame/puzzle/puzzle_hina_dat} # size:0x8
+      - {start: 0x2f4b08, type: sdata, vram: 0x3f3b08, name: ingame/puzzle/puzzle_kaza_dat} # size:0x64
+      - {start: 0x2f4b70, type: sdata, vram: 0x3f3b70, name: ingame/puzzle/puzzle_roku_dat} # size:0x1c
+      - {start: 0x2f4b90, type: sdata, vram: 0x3f3b90, name: ingame/puzzle/roku/roku_pzl} # size:0x40
+      - {start: 0x2f4bd0, type: sdata, vram: 0x3f3bd0, name: system/mc/dat/save_data} # size:0x48
+      - {start: 0x2f4c18, type: sdata, vram: 0x3f3c18, name: ingame/savepoint/savepoint} # size:0x40
+      - {start: 0x2f4c58, type: sdata, vram: 0x3f3c58, name: ingame/savepoint/savepoint_fade_in} # size:0x3e
+      - {start: 0x2f4c98, type: sdata, vram: 0x3f3c98, name: ingame/savepoint/savepoint_fade_out} # size:0x4
+      - {start: 0x2f4ca0, type: sdata, vram: 0x3f3ca0, name: ingame/savepoint/savepoint_main} # size:0x44
+      - {start: 0x2f4ce8, type: sdata, vram: 0x3f3ce8, name: ingame/savepoint/savepoint_top} # size:0x45
+      - {start: 0x2f4d30, type: sdata, vram: 0x3f3d30, name: graphics/scene/scene} # size:0x115
+      - {start: 0x2f4e48, type: sdata, vram: 0x3f3e48, name: graphics/scene/scene_dat} # size:0x30
+      - {start: 0x2f4e78, type: sdata, vram: 0x3f3e78, name: graphics/scene/scene_effect} # size:0x45
+      - {start: 0x2f4ec0, type: sdata, vram: 0x3f3ec0, name: debug/scn_test} # size:0x33d
+      - {start: 0x2f5200, type: sdata, vram: 0x3f4200, name: ingame/photo/search_mark} # size:0x40
+      - {start: 0x2f5240, type: sdata, vram: 0x3f4240, name: outgame/setup} # size:0x4c
+      - {start: 0x2f5290, type: sdata, vram: 0x3f4290, name: outgame/setup_menu} # size:0x78
+      - {start: 0x2f5308, type: sdata, vram: 0x3f4308, name: ingame/plyr/sis_algo} # size:0x40
+      - {start: 0x2f5348, type: sdata, vram: 0x3f4348, name: ingame/plyr/sis_mdl} # size:0x58
+      - {start: 0x2f53a0, type: sdata, vram: 0x3f43a0, name: ingame/plyr/sister} # size:0xe0
+      - {start: 0x2f5480, type: sdata, vram: 0x3f4480, name: ingame/item/prg/soul_list} # size:0x46
+      - {start: 0x2f54c8, type: sdata, vram: 0x3f44c8, name: ingame/photo/sp_chance} # size:0x45
+      - {start: 0x2f5510, type: sdata, vram: 0x3f4510, name: ingame/photo/spirit_gage} # size:0x40
+      - {start: 0x2f5550, type: sdata, vram: 0x3f4550, name: common/spr_stack} # size:0x48
+      - {start: 0x2f5598, type: sdata, vram: 0x3f4598, name: ingame/subtitle/subtitle} # size:0x40
+      - {start: 0x2f55d8, type: sdata, vram: 0x3f45d8, name: system} # size:0xe8
+      - {start: 0x2f56c0, type: sdata, vram: 0x3f46c0, name: save_load/prg/system_data_save} # size:0x4c
+      - {start: 0x2f5710, type: sdata, vram: 0x3f4710, name: graphics/graph2d/tim2} # size:0x1f
+      - {start: 0x2f5730, type: sdata, vram: 0x3f4730, name: outgame/title} # size:0x4e
+      - {start: 0x2f5780, type: sdata, vram: 0x3f4780, name: outgame/title_album} # size:0x40
+      - {start: 0x2f57c0, type: sdata, vram: 0x3f47c0, name: outgame/title_menu} # size:0x3e
+      - {start: 0x2f5800, type: sdata, vram: 0x3f4800, name: outgame/title_movie} # size:0x40
+      - {start: 0x2f5840, type: sdata, vram: 0x3f4840, name: outgame/title_top} # size:0x3e
+      - {start: 0x2f5880, type: sdata, vram: 0x3f4880, name: ingame/plyr/unit_ctl} # size:0x3e
+      - {start: 0x2f58c0, type: sdata, vram: 0x3f48c0, name: common/utility2} # size:0x3a
+      - {start: 0x2f5900, type: sdata, vram: 0x3f4900, name: debug/zero2_perf} # size:0x10
+      - {start: 0x2f5910, type: sdata, vram: 0x3f4910, name: commmon/zero2_util} # size:0x4c
+      - {start: 0x2f5960, type: sdata, vram: 0x3f4960, name: iopsys.a_fileload_} # size:0x5
+      - {start: 0x2f5968, type: sdata, vram: 0x3f4968, name: iopsys.a_spu_mem_} # size:0x3
+      - {start: 0x2f5970, type: sdata, vram: 0x3f4970, name: iopsys.a_snd_buffer_} # size:0x8
+      - {start: 0x2f5978, type: sdata, vram: 0x3f4978, name: iopsys.a_stream_auto_} # size:0x12
+      - {start: 0x2f5990, type: sdata, vram: 0x3f4990, name: iopsys.a_snd_bank_} # size:0x2
+      #- {start: 0x2f5992, type: sdata, vram: 0x3f4992, name: iopsys.a_snd_3d_} # size:0x1
+      - {start: 0x2f5998, type: sdata, vram: 0x3f4998, name: iopsys.a_cddat_} # size:0x8
+      - {start: 0x2f59a0, type: sdata, vram: 0x3f49a0, name: iopsys.a_snd_} # size:0x6
+      - {start: 0x2f59a8, type: sdata, vram: 0x3f49a8, name: iopsys.a_cmp_eeiop_} # size:0x8
+      - {start: 0x2f59b0, type: sdata, vram: 0x3f49b0, name: iopsys.a_hxd_} # size:0x12
+      - {start: 0x2f59c8, type: sdata, vram: 0x3f49c8, name: iopsys.a_spu_voice_} # size:0x10
+      - {start: 0x2f59d8, type: sdata, vram: 0x3f49d8, name: cmp.a_encodes_} # size:0x4
+      - {start: 0x2f59e0, type: sdata, vram: 0x3f49e0, name: playpss.a_playpss_} # size:0x1c
+      - {start: 0x2F59FC, type: sdata, vram: 0x3f49fc, name: graphics/graph3d/CDebugEdit_1} # size:0x4
+      - {start: 0x2F5A00, type: sdata, vram: 0x3F4A00, name: graphics/graph3d/CDebugEdit_2} # size:0x4
+      - {start: 0x2F5A04, type: sdata, vram: 0x3F4A04, name: debug/debug_1} # size:0x4
+      - {start: 0x2F5A08, type: sdata, vram: 0x3F4A08, name: debug/debug_2} # size:0x4
+
+      - [0x2F5A0C, pad, section_padding_2F5A0C]
+      
+      # sbss ################
+      - {type: sbss, vram: 0x3f4a80, name: ingame/map/CBuff} # size:0x4
+      - {type: sbss, vram: 0x3f4a88, name: ingame/plyr/ChrSort} # size:0x8
+      - {type: sbss, vram: 0x3f4a90, name: ingame/map/MapHit} # size:0x4
+      - {type: sbss, vram: 0x3f4a94, name: ingame/map/MapPut} # size:0x8
+      - {type: sbss, vram: 0x3f4a9c, name: ingame/map/MapSave} # size:0x4
+      - {type: sbss, vram: 0x3f4aa0, name: ingame/map/MhCtl} # size:0x4
+      - {type: sbss, vram: 0x3f4aa8, name: album/prg/album} # size:0xa
+      - {type: sbss, vram: 0x3f4ab8, name: album/prg/album_edit} # size:0x4
+      - {type: sbss, vram: 0x3f4ac0, name: album/prg/album_load} # size:0x8
+      - {type: sbss, vram: 0x3f4ac8, name: album/prg/album_save} # size:0x8
+      - {type: sbss, vram: 0x3f4ad0, name: album/prg/album_view} # size:0x13
+      - {type: sbss, vram: 0x3f4ae8, name: outgame/autoload} # size:0x8
+      - {type: sbss, vram: 0x3f4af0, name: outgame/chapter_sel} # size:0x8
+      - {type: sbss, vram: 0x3f4af8, name: ingame/clear/prg/clearmenu} # size:0x8
+      - {type: sbss, vram: 0x3f4b00, name: ingame/clear/prg/clearmenu_top} # size:0xc
+      - {type: sbss, vram: 0x3f4b0c, name: system/compress/compress} # size:0x19
+      - {type: sbss, vram: 0x3f4b28, name: dmaVif1} # size:0x34
+      - {type: sbss, vram: 0x3f4b5c, name: ingame/door/prg/door} # size:0x1
+      - {type: sbss, vram: 0x3f4b60, name: graphics/draw_env} # size:0x8
+      - {type: sbss, vram: 0x3f4b68, name: graphics/effect/effect} # size:0x8
+      - {type: sbss, vram: 0x3f4b70, name: graphics/effect/effect_ene} # size:0x40
+      - {type: sbss, vram: 0x3f4bb0, name: graphics/effect/effect_obj} # size:0x8
+      - {type: sbss, vram: 0x3f4bb8, name: graphics/effect/effect_oth} # size:0x28
+      - {type: sbss, vram: 0x3f4be0, name: graphics/effect/effect_scr} # size:0x3
+      - {type: sbss, vram: 0x3f4be4, name: graphics/effect/effect_sub} # size:0xc
+      - {type: sbss, vram: 0x3f4bf0, name: ingame/enemy/ene_mot_ctrl} # size:0x4
+      - {type: sbss, vram: 0x3f4bf4, name: ingame/enemy/enemy} # size:0x1c
+      - {type: sbss, vram: 0x3f4c10, name: ingame/enemy/enemy_act} # size:0xc
+      - {type: sbss, vram: 0x3f4c20, name: ingame/event/prg/ev_disp} # size:0x10
+      - {type: sbss, vram: 0x3f4c30, name: ingame/event/prg/ev_macro} # size:0x20
+      - {type: sbss, vram: 0x3f4c50, name: ingame/event/prg/ev_open} # size:0x4
+      - {type: sbss, vram: 0x3f4c54, name: ingame/event/prg/ev_se} # size:0x4
+      - {type: sbss, vram: 0x3f4c58, name: ingame/camera/event_camera} # size:0x8
+      - {type: sbss, vram: 0x3f4c60, name: ingame/photo/finder} # size:0x4
+      - {type: sbss, vram: 0x3f4c64, name: graphics/graph3d/g3dDma} # size:0x4
+      - {type: sbss, vram: 0x3f4c68, name: save_load/prg/game_data_save} # size:0x20
+      - {type: sbss, vram: 0x3f4c88, name: ingame/clear/prg/game_result} # size:0x8
+      - {type: sbss, vram: 0x3f4c90, name: ingame/gameover/prg/gameover} # size:0x2
+      - {type: sbss, vram: 0x3f4c98, name: ingame/gameover/prg/gameover_menu} # size:0x8
+      - {type: sbss, vram: 0x3f4ca0, name: ingame/gameover/prg/gameover_menu_load} # size:0x18
+      - {type: sbss, vram: 0x3f4cb8, name: ingame/gameover/prg/gameover_menu_top} # size:0xc
+      - {type: sbss, vram: 0x3f4cc8, name: graphics/graph3d/gra3d} # size:0x10
+      - {type: sbss, vram: 0x3f4cd8, name: graphics/graph3d/gra3dSGD} # size:0x1c
+      - {type: sbss, vram: 0x3f4cf4, name: graphics/graph3d/gra3dShadow} # size:0x14
+      - {type: sbss, vram: 0x3f4d08, name: ingame/puzzle/hina/hina_pzl} # size:0x2
+      - {type: sbss, vram: 0x3f4d10, name: ingame/ingame} # size:0x18
+      - {type: sbss, vram: 0x3f4d28, name: ingame/ingame_effect} # size:0xc
+      - {type: sbss, vram: 0x3f4d38, name: ingame/puzzle/kai/kai_pzl} # size:0x10
+      - {type: sbss, vram: 0x3f4d48, name: outgame/lang_check} # size:0x8
+      - {type: sbss, vram: 0x3f4d50, name: outgame/lang_sel} # size:0x8
+      - {type: sbss, vram: 0x3f4d58, name: ingame/item/prg/level_gem} # size:0x1
+      - {type: sbss, vram: 0x3f4d60, name: outgame/loadgame} # size:0x4
+      - {type: sbss, vram: 0x3f4d68, name: ingame/loading/loading} # size:0x6
+      - {type: sbss, vram: 0x3f4d70, name: outgame/logo} # size:0x8
+      - {type: sbss, vram: 0x3f4d78, name: main/main} # size:0x8
+      - {type: sbss, vram: 0x3f4d80, name: ingame/map/map_bgm} # size:0x10
+      - {type: sbss, vram: 0x3f4d90, name: ingame/map/map_height} # size:0x8
+      - {type: sbss, vram: 0x3f4d98, name: ingame/map/map_reverb} # size:0x4
+      - {type: sbss, vram: 0x3f4da0, name: system/mc/prg/mc_check_card} # size:0x8
+      - {type: sbss, vram: 0x3f4da8, name: system/mc/mc_close} # size:0x8
+      - {type: sbss, vram: 0x3f4db0, name: ingame/menu/menu_cam_edit} # size:0x34
+      - {type: sbss, vram: 0x3f4de8, name: ingame/menu/menu_cam_main} # size:0x26
+      - {type: sbss, vram: 0x3f4e10, name: ingame/menu/menu_cam_top} # size:0xb
+      - {type: sbss, vram: 0x3f4e20, name: ingame/menu/menu_file} # size:0x6
+      - {type: sbss, vram: 0x3f4e28, name: ingame/menu/menu_item} # size:0x4
+      - {type: sbss, vram: 0x3f4e30, name: ingame/menu/menu_memo} # size:0x6
+      - {type: sbss, vram: 0x3f4e38, name: ingame/menu/menu_photo} # size:0x2
+      - {type: sbss, vram: 0x3f4e40, name: graphics/graph2d/message} # size:0x18
+      - {type: sbss, vram: 0x3f4e58, name: outgame/mission_ctl} # size:0x8
+      - {type: sbss, vram: 0x3f4e60, name: outgame/mission_sel} # size:0xa
+      - {type: sbss, vram: 0x3f4e6c, name: graphics/motion/morph} # size:0x4
+      - {type: sbss, vram: 0x3f4e70, name: graphics/movie/movie} # size:0x8
+      - {type: sbss, vram: 0x3f4e78, name: ingame/movie_room_menu/prg/movie_projecter} # size:0xc
+      - {type: sbss, vram: 0x3f4e88, name: ingame/movie_room_menu/prg/movie_room_menu} # size:0x10
+      - {type: sbss, vram: 0x3f4e98, name: graphics/movie/movie_title} # size:0x4
+      - {type: sbss, vram: 0x3f4e9c, name: ingame/photo/n_plyr_camera} # size:0x4
+      - {type: sbss, vram: 0x3f4ea0, name: outgame/newgame} # size:0x4
+      - {type: sbss, vram: 0x3f4ea8, name: pad/pad} # size:0x6
+      #- {type: sbss, vram: 0x3f4eae, name: outgame/pad_check} # size:0x1
+      - {type: sbss, vram: 0x3f4eb0, name: ingame/photo/photo} # size:0x28
+      - {type: sbss, vram: 0x3f4ed8, name: ingame/photo/photo_dat} # size:0x8
+      - {type: sbss, vram: 0x3f4ee0, name: ingame/menu/play_data} # size:0x1
+      - {type: sbss, vram: 0x3f4ee4, name: ingame/plyr/player} # size:0x24
+      - {type: sbss, vram: 0x3f4f08, name: ingame/plyr/plyr_mdl} # size:0x18
+      - {type: sbss, vram: 0x3f4f20, name: ingame/puzzle/puzzle} # size:0xc
+      - {type: sbss, vram: 0x3f4f30, name: savepoint_fade_in} # size:0x8
+      - {type: sbss, vram: 0x3f4f38, name: savepoint_main} # size:0x8
+      - {type: sbss, vram: 0x3f4f40, name: savepoint_top} # size:0xc
+      - {type: sbss, vram: 0x3f4f50, name: graphics/scene/scene} # size:0x18
+      - {type: sbss, vram: 0x3f4f68, name: graphics/scene/scene_effect} # size:0x18
+      - {type: sbss, vram: 0x3f4f80, name: outgame/setup} # size:0xa
+      - {type: sbss, vram: 0x3f4f8c, name: ingame/plyr/sis_mdl} # size:0x1c
+      - {type: sbss, vram: 0x3f4fa8, name: ingame/plyr/sister} # size:0xd
+      - {type: sbss, vram: 0x3f4fb8, name: system/os/system} # size:0x8
+      - {type: sbss, vram: 0x3f4fc0, name: save_load/prg/system_data_save} # size:0x10
+      - {type: sbss, vram: 0x3f4fd0, name: outgame/title} # size:0x9
+      - {type: sbss, vram: 0x3f4fe0, name: outgame/title_menu} # size:0x1
+      - {type: sbss, vram: 0x3f4fe8, name: outgame/title_movie} # size:0x6
+      - {type: sbss, vram: 0x3f4ff0, name: vib_manage} # size:0xc
+      - {type: sbss, vram: 0x3f4ffc, name: iopsys.a_fileload_} # size:0x18
+      - {type: sbss, vram: 0x3f5014, name: iopsys.a_spu_mem_} # size:0x4
+      - {type: sbss, vram: 0x3f5018, name: iopsys.a_ee_iop_} # size:0xc
+      - {type: sbss, vram: 0x3f5024, name: iopsys.a_ee_iop_q_} # size:0x4
+      - {type: sbss, vram: 0x3f5028, name: iopsys.a_stream_auto_} # size:0x14
+      - {type: sbss, vram: 0x3f503c, name: iopsys.a_snd_bank_} # size:0x14
+      - {type: sbss, vram: 0x3f5050, name: iopsys.a_snd_3d_} # size:0x10
+      - {type: sbss, vram: 0x3f5060, name: iopsys.a_cddat_} # size:0x14
+      - {type: sbss, vram: 0x3f5078, name: iopsys.a_snd_} # size:0x10
+      - {type: sbss, vram: 0x3f5088, name: iopsys.a_cmp_eeiop_} # size:0x10
+      - {type: sbss, vram: 0x3f5098, name: iopsys.a_snd_util_} # size:0x8
+      - {type: sbss, vram: 0x3f50a0, name: iopsys.a_file_stream_} # size:0x4
+      - {type: sbss, vram: 0x3f50a8, name: iopsys.a_snd_stream_} # size:0xc
+      - {type: sbss, vram: 0x3f50b4, name: playpss.a_my_strfile_} # size:0x4
+      - {type: sbss, vram: 0x3f50b8, name: playpss.a_playpss_} # size:0x3c
+      - {type: sbss, vram: 0x3f50f4, name: playpss.a_audiodec_} # size:0x8
+      # #####################
+      # bss #################
+      - {type: bss, vram: 0x3f5500, name: crt0} # size:0x144
+      - {type: bss, vram: 0x3f5648, name: ingame/plyr/ChrSort} # size:0x300
+      - {type: bss, vram: 0x3f5948, name: ingame/map/FurnCtl} # size:0xc50
+      - {type: bss, vram: 0x3f65a0, name: ingame/map/MapAnim} # size:0x6930
+      - {type: bss, vram: 0x3fced0, name: ingame/map/MapDoor} # size:0x14e0
+      - {type: bss, vram: 0x3fe3b0, name: ingame/map/MapDraw} # size:0x2740
+      - {type: bss, vram: 0x400af0, name: ingame/map/MapFog} # size:0x10
+      - {type: bss, vram: 0x400b00, name: ingame/map/MapHit} # size:0x330
+      - {type: bss, vram: 0x400e30, name: ingame/map/MapLBuff} # size:0x3180
+      - {type: bss, vram: 0x403fb0, name: ingame/map/MapLight} # size:0x3b00
+      - {type: bss, vram: 0x407ab0, name: ingame/map/MapLoad} # size:0x27f4
+      - {type: bss, vram: 0x40a2b0, name: ingame/map/MapObj} # size:0x13a0
+      - {type: bss, vram: 0x40b650, name: ingame/map/MapObjReg} # size:0x4200
+      - {type: bss, vram: 0x40f850, name: ingame/map/MapPut} # size:0xb410
+      - {type: bss, vram: 0x41ac60, name: ingame/map/MapSave} # size:0x3f18
+      - {type: bss, vram: 0x41eb80, name: ingame/map/MapSky} # size:0x2180
+      - {type: bss, vram: 0x420d00, name: ingame/map/MapSp} # size:0xc90
+      - {type: bss, vram: 0x421990, name: RegDat} # size:0x4a0
+      - {type: bss, vram: 0x421e30, name: graphics/motion/accessory} # size:0x2b0
+      - {type: bss, vram: 0x4220e0, name: album/prg/album} # size:0x10
+      - {type: bss, vram: 0x4220f0, name: album/prg/album_edit} # size:0x19
+      - {type: bss, vram: 0x422110, name: album/prg/album_load} # size:0xd
+      - {type: bss, vram: 0x422120, name: album/prg/album_mem} # size:0xc
+      - {type: bss, vram: 0x422130, name: album/prg/album_save} # size:0x9
+      - {type: bss, vram: 0x422140, name: album/prg/album_view} # size:0x10
+      - {type: bss, vram: 0x422150, name: ingame/clear/prg/clearmenu} # size:0x10
+      - {type: bss, vram: 0x422160, name: system/compress/compress} # size:0xf10
+      - {type: bss, vram: 0x423070, name: ingame/item/prg/crystal} # size:0x28
+      - {type: bss, vram: 0x423098, name: ingame/door/prg/door} # size:0xd0
+      - {type: bss, vram: 0x423168, name: graphics/draw_env} # size:0x60
+      - {type: bss, vram: 0x4231d0, name: graphics/graph3d/eeException} # size:0xdc
+      - {type: bss, vram: 0x4232b0, name: graphics/effect/effect} # size:0x1b8
+      - {type: bss, vram: 0x423470, name: graphics/effect/effect_ene} # size:0xc010
+      - {type: bss, vram: 0x42f480, name: graphics/effect/effect_obj} # size:0xe2cc
+      - {type: bss, vram: 0x43d750, name: graphics/effect/effect_oth} # size:0x29060
+      - {type: bss, vram: 0x4667b0, name: graphics/effect/effect_pak} # size:0x8000
+      - {type: bss, vram: 0x46e7b0, name: graphics/effect/effect_rain} # size:0x140
+      - {type: bss, vram: 0x46e8f0, name: graphics/effect/effect_scr} # size:0x9be0
+      - {type: bss, vram: 0x4784d0, name: graphics/effect/effect_spr} # size:0x28
+      - {type: bss, vram: 0x478500, name: graphics/effect/effect_sub} # size:0x220
+      - {type: bss, vram: 0x478720, name: ingame/enemy/ene_mot_ctrl} # size:0x28
+      - {type: bss, vram: 0x478750, name: ingame/enemy/enemy_act} # size:0x4e8
+      - {type: bss, vram: 0x478c38, name: ingame/enemy/enemy_dat} # size:0x205
+      - {type: bss, vram: 0x478e40, name: ingame/event/prg/ev_change} # size:0x168
+      - {type: bss, vram: 0x478fa8, name: ingame/event/prg/ev_disp} # size:0x44
+      - {type: bss, vram: 0x478ff0, name: ingame/event/prg/ev_ene} # size:0x860
+      - {type: bss, vram: 0x479850, name: ingame/event/prg/ev_exe} # size:0x960
+      - {type: bss, vram: 0x47a1b0, name: ingame/event/prg/ev_macro} # size:0x280
+      - {type: bss, vram: 0x47a430, name: ingame/event/prg/ev_open} # size:0xfa0
+      - {type: bss, vram: 0x47b3d0, name: ingame/event/prg/ev_se} # size:0x550
+      - {type: bss, vram: 0x47b920, name: ingame/event/prg/ev_sis} # size:0xc
+      - {type: bss, vram: 0x47b930, name: ingame/event/prg/ev_talk} # size:0x450
+      - {type: bss, vram: 0x47bd80, name: ingame/event/prg/ev_timer} # size:0x1e4
+      - {type: bss, vram: 0x47bf70, name: ingame/camera/event_camera} # size:0x70
+      - {type: bss, vram: 0x47bfe0, name: ingame/item/prg/file} # size:0xb4
+      - {type: bss, vram: 0x47c0a0, name: ingame/enemy/fly_ctrl} # size:0x32f00
+      - {type: bss, vram: 0x4aefa0, name: graphics/scene/fod} # size:0x3f0
+      - {type: bss, vram: 0x4af390, name: ingame/map/foot_se} # size:0x30
+      - {type: bss, vram: 0x4af3c0, name: ingame/photo/freq_camera} # size:0x14
+      - {type: bss, vram: 0x4af3e0, name: graphics/graph3d/g3dDebug} # size:0x240
+      - {type: bss, vram: 0x4af620, name: graphics/graph3d/g3dVif1} # size:0x58
+      - {type: bss, vram: 0x4af678, name: save_load/prg/game_data_save} # size:0xc
+      - {type: bss, vram: 0x4af688, name: ingame/clear/prg/game_result_top} # size:0x32
+      - {type: bss, vram: 0x4af6c0, name: ingame/gameover/prg/gameover_menu} # size:0x10
+      - {type: bss, vram: 0x4af6d0, name: ingame/menu/ghost_seal_door} # size:0x9
+      - {type: .bss, vram: 0x4af6e0, name: main/gphase} # size:0x48
+      - {type: bss, vram: 0x4af730, name: graphics/graph3d/gra3d} # size:0x446c
+      - {type: bss, vram: 0x4b3ba0, name: graphics/graph3d/gra3dMisc} # size:0x70
+      - {type: bss, vram: 0x4b3c10, name: graphics/graph3d/gra3dSGD} # size:0x2c
+      - {type: bss, vram: 0x4b3c40, name: graphics/graph3d/gra3dShadow} # size:0x2f0
+      - {type: bss, vram: 0x4b3f30, name: graphics/graphics} # size:0xa0
+      - {type: bss, vram: 0x4b3fd0, name: ingame/puzzle/hina/hina_pzl} # size:0x66
+      - {type: bss, vram: 0x4b4040, name: ingame/ingame_effect} # size:0x110
+      - {type: bss, vram: 0x4b4150, name: ingame/puzzle/kai/kai_pzl} # size:0x14
+      - {type: bss, vram: 0x4b4168, name: ingame/puzzle/kaza2/kaza2_pzl} # size:0x5c
+      - {type: bss, vram: 0x4b41c8, name: ingame/puzzle/kaza/kaza_pzl} # size:0x5c
+      - {type: bss, vram: 0x4b4228, name: outgame/loadgame} # size:0xc
+      - {type: bss, vram: 0x4b4238, name: outgame/logo} # size:0xc
+      - {type: bss, vram: 0x4b4248, name: ingame/map/map_bgm} # size:0x3c4
+      - {type: bss, vram: 0x4b4610, name: ingame/camera/map_camera} # size:0xf4
+      - {type: bss, vram: 0x4b4708, name: system/mc/prg/mc_check} # size:0x44
+      - {type: bss, vram: 0x4b4750, name: system/mc/prg/mc_check_card} # size:0x24
+      - {type: bss, vram: 0x4b4780, name: system/mc/prg/mc_check_dir} # size:0x540
+      - {type: bss, vram: 0x4b4cc0, name: system/mc/prg/mc_del_all_file} # size:0x14
+      - {type: bss, vram: 0x4b4cd8, name: system/mc/prg/mc_del_dir} # size:0x10
+      - {type: bss, vram: 0x4b4ce8, name: system/mc/prg/mc_del_file} # size:0x44
+      - {type: bss, vram: 0x4b4d30, name: system/mc/prg/mc_format} # size:0xc
+      - {type: bss, vram: 0x4b4d40, name: system/mc/prg/mc_icon} # size:0x14
+      - {type: bss, vram: 0x4b4d58, name: system/mc/prg/mc_icon_sys} # size:0x3d4
+      - {type: bss, vram: 0x4b5130, name: system/mc/prg/mc_load} # size:0x50
+      - {type: bss, vram: 0x4b5180, name: system/mc/prg/mc_make} # size:0x18
+      - {type: bss, vram: 0x4b5198, name: system/mc/prg/mc_make_all_file} # size:0x20
+      - {type: bss, vram: 0x4b51b8, name: system/mc/prg/mc_make_dir} # size:0x24
+      - {type: bss, vram: 0x4b51e0, name: system/mc/prg/mc_make_file} # size:0x50
+      - {type: bss, vram: 0x4b5230, name: system/mc/prg/mc_open} # size:0x14
+      - {type: bss, vram: 0x4b5248, name: system/mc/prg/mc_read} # size:0x14
+      - {type: bss, vram: 0x4b5260, name: system/mc/prg/mc_save} # size:0x50
+      - {type: bss, vram: 0x4b52b0, name: system/mc/prg/mc_set_data} # size:0x84
+      - {type: bss, vram: 0x4b5338, name: system/mc/prg/mc_write} # size:0x14
+      - {type: bss, vram: 0x4b5350, name: debug/mem_dbg} # size:0x20
+      - {type: bss, vram: 0x4b5370, name: common/mem_util} # size:0x20
+      - {type: bss, vram: 0x4b5390, name: ingame/item/prg/memo} # size:0xa0
+      - {type: bss, vram: 0x4b5430, name: ingame/menu/menu} # size:0x12
+      - {type: bss, vram: 0x4b5448, name: ingame/menu/menu_cam_edit} # size:0x40
+      - {type: bss, vram: 0x4b5488, name: ingame/menu/menu_cmn} # size:0xc
+      - {type: bss, vram: 0x4b5498, name: ingame/menu/menu_file} # size:0x558
+      - {type: bss, vram: 0x4b59f0, name: ingame/menu/menu_item} # size:0x1e0
+      - {type: bss, vram: 0x4b5bd0, name: ingame/menu/menu_map} # size:0x2c
+      - {type: bss, vram: 0x4b5c00, name: ingame/menu/menu_memo} # size:0xb0
+      - {type: bss, vram: 0x4b5cb0, name: ingame/menu/menu_photo} # size:0xb
+      - {type: bss, vram: 0x4b5cc0, name: ingame/menu/menu_radio} # size:0x164
+      - {type: bss, vram: 0x4b5e28, name: ingame/menu/menu_soul} # size:0x5b0
+      - {type: bss, vram: 0x4b63d8, name: ingame/menu/menu_top} # size:0x20
+      - {type: bss, vram: 0x4b63f8, name: graphics/graph2d/message} # size:0x50
+      - {type: bss, vram: 0x4b6448, name: outgame/mission_pause} # size:0xc
+      - {type: bss, vram: 0x4b6458, name: outgame/mission_sel} # size:0x538
+      - {type: bss, vram: 0x4b6990, name: graphics/motion/morph} # size:0x924
+      - {type: bss, vram: 0x4b72c0, name: graphics/motion/motion} # size:0x3fc0
+      - {type: bss, vram: 0x4bb280, name: graphics/movie/movie} # size:0x840
+      - {type: bss, vram: 0x4bbac0, name: common/ol_load} # size:0x20
+      - {type: bss, vram: 0x4bbae0, name: pad/pad} # size:0x14
+      - {type: bss, vram: 0x4bbaf8, name: ingame/pause/prg/pause} # size:0xc
+      - {type: bss, vram: 0x4bbb10, name: ingame/photo/photo} # size:0x30
+      - {type: bss, vram: 0x4bbb40, name: ingame/photo/photo_dat} # size:0x90
+      - {type: bss, vram: 0x4bbbd0, name: ingame/menu/play_data} # size:0x20
+      - {type: bss, vram: 0x4bbbf0, name: ingame/plyr/plyr_mdl} # size:0x100
+      - {type: bss, vram: 0x4bbcf0, name: ingame/menu/plyr_room_info} # size:0xf0
+      - {type: bss, vram: 0x4bbde0, name: ingame/puzzle/puzzle} # size:0x18
+      - {type: bss, vram: 0x4bbdf8, name: ingame/puzzle/roku/roku_pzl} # size:0x58
+      - {type: bss, vram: 0x4bbe50, name: ingame/savepoint/savepoint_main} # size:0x10
+      - {type: bss, vram: 0x4bbe60, name: graphics/scene/scene} # size:0x104
+      - {type: bss, vram: 0x4bbf70, name: graphics/scene/scene_effect} # size:0x70
+      - {type: bss, vram: 0x4bbfe0, name: outgame/setup_menu} # size:0x1c
+      - {type: bss, vram: 0x4bc000, name: ingame/plyr/sis_mdl} # size:0xa0
+      - {type: bss, vram: 0x4bc0a0, name: ingame/item/prg/soul_list} # size:0x580
+      - {type: bss, vram: 0x4bc620, name: system/os/system} # size:0x20
+      - {type: bss, vram: 0x4bc640, name: outgame/title} # size:0x14
+      - {type: bss, vram: 0x4bc658, name: common/utility2} # size:0x12c
+      - {type: bss, vram: 0x4bc7c0, name: iopsys.a_fileload_} # size:0x11e8
+      - {type: bss, vram: 0x4bd9a8, name: iopsys.a_spu_mem_} # size:0x4b0
+      - {type: bss, vram: 0x4bde58, name: iopsys.a_snd_buffer_} # size:0x9c0
+      - {type: bss, vram: 0x4be840, name: iopsys.a_ee_iop_} # size:0x13a8
+      - {type: bss, vram: 0x4bfc00, name: iopsys.a_ee_iop_q_} # size:0x428
+      - {type: bss, vram: 0x4c0030, name: iopsys.a_stream_auto_} # size:0xc0
+      - {type: bss, vram: 0x4c00f0, name: iopsys.a_snd_3d_} # size:0x5f0
+      - {type: bss, vram: 0x4c06e0, name: iopsys.a_cddat_} # size:0x1d8
+      - {type: bss, vram: 0x4c08b8, name: iopsys.a_snd_} # size:0x18
+      - {type: bss, vram: 0x4c08d0, name: iopsys.a_cmp_eeiop_} # size:0x1dc
+      - {type: bss, vram: 0x4c0ac0, name: iopsys.a_file_stream_} # size:0x1a8
+      - {type: bss, vram: 0x4c0c80, name: iopsys.a_snd_stream_} # size:0x1380
+      - {type: bss, vram: 0x4c2000, name: playpss.a_playpss_} # size:0x8a8
+      - {type: bss, vram: 0x4c2900, name: libexcep.a_print_} # size:0x408
+      - {type: bss, vram: 0x4c2d40, name: libcdvd.a_cdvd000_} # size:0x294
+      - {type: bss, vram: 0x4c2fd8, name: libdma.a_libdma_} # size:0x14
+      - {type: bss, vram: 0x4c2ff0, name: libkernl.a_thread_} # size:0x810
+      - {type: bss, vram: 0x4c3800, name: libkernl.a_kprintf_} # size:0x80
+      - {type: bss, vram: 0x4c3880, name: libkernl.a_sifcmd_} # size:0x300
+      - {type: bss, vram: 0x4c3b80, name: libkernl.a_sifrpc_} # size:0x182c
+      - {type: bss, vram: 0x4c53c0, name: libkernl.a_filestub_} # size:0x1804
+      - {type: bss, vram: 0x4c6c00, name: libkernl.a_iopheap_} # size:0x1c0
+      - {type: bss, vram: 0x4c6dc0, name: libkernl.a_eeloadfile_} # size:0x22c
+      - {type: bss, vram: 0x4c7000, name: libkernl.a_iopreset_} # size:0x68
+      - {type: bss, vram: 0x4c7080, name: libkernl.a_tlbtrap_} # size:0x122c
+      - {type: bss, vram: 0x4c82c0, name: libkernl.a_timer_} # size:0x2000
+      - {type: bss, vram: 0x4ca2c0, name: libkernl.a_timeralarm_} # size:0x404
+      - {type: bss, vram: 0x4ca6c8, name: libkernl.a_iopnotify_} # size:0x200
+      - {type: bss, vram: 0x4ca8c8, name: libkernl.a_deci2_} # size:0x24
+      - {type: bss, vram: 0x4ca900, name: libkernl.a_tty_} # size:0x3c0
+      - {type: bss, vram: 0x4cacc0, name: libpad.a_libpad_} # size:0x2c0
+      - {type: bss, vram: 0x4caf80, name: libmc.a_libmc_} # size:0x1600
+      - {type: bss, vram: 0x4cc580, name: libmpeg.a_mpc_} # size:0x200
+      - {type: bss, vram: 0x4cc780, name: libsdr.a_sdr_main_} # size:0xa8
+      - {type: bss, vram: 0x4cc840, name: libsdr.a_sdr_cb_} # size:0x109c
+      - {type: bss, vram: 0x4cd8e0, name: libgcc.a___main_} # size:0x1c
+      - {type: bss, vram: 0x4cd900, name: libgcc.a__eh_} # size:0x172
+      - {type: bss, vram: 0x4cda74, name: libgcc.a_frame-dwarf2_} # size:0x8
+      #- {type: bss, vram: 0x4ce0ec, name: vubss}
   - name: mips_debug
     type: databin
     start: 0x2f5ac4
-    vram: 0x000000
   - [0x31034636]
 # Section Headers:
 #   [Nr] Name              Type            Addr     Off    Size   ES Flg Lk Inf Al
@@ -217,7 +2365,7 @@ segments:
 #   [ 4] .dtors            PROGBITS        002c3c6c 1c4c6c 00000c 00  WA  0   0  4
 #   [ 5] .reginfo          MIPS_REGINFO    002c3c78 1c4c78 000018 01   A  0   0  4
 #   [ 6] .data             PROGBITS        002c3d00 1c4d00 0a6560 00  WA  0   0 64
-#   [ 7] .eh_frame         PROGBITS        0036a260 26b260 03388c 00  WA  0   0  8
+#   [ 7] eh_frame         PROGBITS        0036a260 26b260 03388c 00  WA  0   0  8
 #   [ 8] .vudata           PROGBITS        0039daec 29eaec 000000 00  WA  0   0  1
 #   [ 9] .rodata           PROGBITS        0039db00 29eb00 04f798 00   A  0   0 16
 #   [10] .gcc_except_table PROGBITS        003ed300 2ee300 0004ac 00  WA  0   0  4

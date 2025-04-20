@@ -25,3 +25,7 @@ INCLUDE_ASM("asm/nonmatchings/outgame/SpriteCmn", SpCmnTexMemReleaseSub__FPv);
 INCLUDE_ASM("asm/nonmatchings/outgame/SpriteCmn", SpCmnGetScreen__Fv);
 
 INCLUDE_ASM("asm/nonmatchings/outgame/SpriteCmn", SpCmnDrawScreen__FPvi);
+
+INCLUDE_RODATA("asm/nonmatchings/outgame/SpriteCmn", D_0039FA78);
+
+INCLUDE_RODATA("asm/nonmatchings/outgame/SpriteCmn", D_0039FA90);

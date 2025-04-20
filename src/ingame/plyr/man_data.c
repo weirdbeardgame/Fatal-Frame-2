@@ -1,12 +1,14 @@
 #include "common.h"
 
-INCLUDE_ASM("asm/nonmatchings/ingame/plyr/man_data", func_001D85D0);
+INCLUDE_ASM("asm/nonmatchings/ingame/plyr/man_data", _fixed_array_assert__FPCcUiUi);
 
-INCLUDE_ASM("asm/nonmatchings/ingame/plyr/man_data", func_001D8600);
+INCLUDE_ASM("asm/nonmatchings/ingame/plyr/man_data", _fixed_array_verifyrange__H1ZPv_UiUi_PX01);
 
-INCLUDE_ASM("asm/nonmatchings/ingame/plyr/man_data", func_001D8638);
+INCLUDE_ASM("asm/nonmatchings/ingame/plyr/man_data", _fixed_array_verifyrange__H1ZPc_UiUi_PX01);
 
-INCLUDE_ASM("asm/nonmatchings/ingame/plyr/man_data", func_001D8670);
+INCLUDE_RODATA("asm/nonmatchings/ingame/plyr/man_data", D_003BAF80);
+
+INCLUDE_ASM("asm/nonmatchings/ingame/plyr/man_data", _fixed_array_verifyrange__H1ZPUi_UiUi_PX01);
 
 INCLUDE_ASM("asm/nonmatchings/ingame/plyr/man_data", InitializeIn__8MAN_DATA);
 

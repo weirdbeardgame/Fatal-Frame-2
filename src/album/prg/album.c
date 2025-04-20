@@ -1,30 +1,38 @@
 #include "common.h"
 
-INCLUDE_ASM("asm/nonmatchings/album/prg/album", func_0011C240);
+INCLUDE_ASM("asm/nonmatchings/album/prg/album", _fixed_array_assert__FPCcUiUi);
 
-INCLUDE_ASM("asm/nonmatchings/album/prg/album", func_0011C270);
+INCLUDE_ASM("asm/nonmatchings/album/prg/album", _fixed_array_verifyrange__H1ZPv_UiUi_PX01);
 
-INCLUDE_ASM("asm/nonmatchings/album/prg/album", func_0011C2A8);
+INCLUDE_ASM("asm/nonmatchings/album/prg/album", _fixed_array_verifyrange__H1ZPc_UiUi_PX01);
 
-INCLUDE_ASM("asm/nonmatchings/album/prg/album", func_0011C2E0);
+INCLUDE_RODATA("asm/nonmatchings/album/prg/album", D_003A00A8);
+
+INCLUDE_ASM("asm/nonmatchings/album/prg/album", _fixed_array_verifyrange__H1ZPUi_UiUi_PX01);
 
 INCLUDE_ASM("asm/nonmatchings/album/prg/album", AlbumInit__Fi);
 
-INCLUDE_ASM("asm/nonmatchings/album/prg/album", func_0011C398);
+INCLUDE_RODATA("asm/nonmatchings/album/prg/album", D_003A0110);
 
-INCLUDE_ASM("asm/nonmatchings/album/prg/album", func_0011C470);
+INCLUDE_RODATA("asm/nonmatchings/album/prg/album", D_003A0140);
+
+INCLUDE_RODATA("asm/nonmatchings/album/prg/album", __FUNCTION__.967);
+
+INCLUDE_ASM("asm/nonmatchings/album/prg/album", AlbumCtrlInit__Fi);
+
+INCLUDE_ASM("asm/nonmatchings/album/prg/album", AlbumInfoInit__Fi);
 
 INCLUDE_ASM("asm/nonmatchings/album/prg/album", AlbumBackGroundLoadReq__FPFi_PvPFPv_v);
 
 INCLUDE_ASM("asm/nonmatchings/album/prg/album", GetAlbumTexMem__FPPvi);
 
-INCLUDE_ASM("asm/nonmatchings/album/prg/album", func_0011C778);
+INCLUDE_ASM("asm/nonmatchings/album/prg/album", GetAlbumDataMem__FPPvi);
 
-INCLUDE_ASM("asm/nonmatchings/album/prg/album", func_0011C7C8);
+INCLUDE_ASM("asm/nonmatchings/album/prg/album", AlbumTexLoadWait__Fv);
 
 INCLUDE_ASM("asm/nonmatchings/album/prg/album", AlbumMain__Fv);
 
-INCLUDE_ASM("asm/nonmatchings/album/prg/album", func_0011C8F0);
+INCLUDE_ASM("asm/nonmatchings/album/prg/album", AlbumModeMain__Fv);
 
 INCLUDE_ASM("asm/nonmatchings/album/prg/album", AlbumOutReq__Fv);
 
@@ -58,7 +66,7 @@ INCLUDE_ASM("asm/nonmatchings/album/prg/album", LiberateAlbumTexMem__FPPv);
 
 INCLUDE_ASM("asm/nonmatchings/album/prg/album", AlbumTexLoadCancel__FPvi);
 
-INCLUDE_ASM("asm/nonmatchings/album/prg/album", func_0011CBE0);
+INCLUDE_ASM("asm/nonmatchings/album/prg/album", AlbumDispCtrlInit__Fv);
 
 INCLUDE_ASM("asm/nonmatchings/album/prg/album", AlbumDispMain__Fv);
 
@@ -66,6 +74,8 @@ INCLUDE_ASM("asm/nonmatchings/album/prg/album", SetSave_AlbumData__FP12MC_SAVE_D
 
 INCLUDE_ASM("asm/nonmatchings/album/prg/album", SetSave_AlbumInfoData__FP12MC_SAVE_DATA);
 
-INCLUDE_ASM("asm/nonmatchings/album/prg/album", func_0011CD68);
+INCLUDE_ASM("asm/nonmatchings/album/prg/album", __static_initialization_and_destruction_0);
 
-INCLUDE_ASM("asm/nonmatchings/album/prg/album", func_0011CDE8);
+INCLUDE_ASM("asm/nonmatchings/album/prg/album", _GLOBAL_$I$album_info);
+
+INCLUDE_RODATA("asm/nonmatchings/album/prg/album", D_003A0198);

@@ -2,11 +2,13 @@
 
 INCLUDE_ASM("asm/nonmatchings/ingame/map/CBuff", _fixed_array_assert__FPCcUiUi);
 
-INCLUDE_ASM("asm/nonmatchings/ingame/map/CBuff", func_00100288);
+INCLUDE_ASM("asm/nonmatchings/ingame/map/CBuff", _fixed_array_verifyrange__H1ZPv_UiUi_PX01);
 
-INCLUDE_ASM("asm/nonmatchings/ingame/map/CBuff", func_001002C0);
+INCLUDE_ASM("asm/nonmatchings/ingame/map/CBuff", _fixed_array_verifyrange__H1ZPc_UiUi_PX01);
 
-INCLUDE_ASM("asm/nonmatchings/ingame/map/CBuff", func_001002F8);
+INCLUDE_RODATA("asm/nonmatchings/ingame/map/CBuff", RO_STR_0039db00);
+
+INCLUDE_ASM("asm/nonmatchings/ingame/map/CBuff", _fixed_array_verifyrange__H1ZPUi_UiUi_PX01);
 
 INCLUDE_ASM("asm/nonmatchings/ingame/map/CBuff", CBuffGetRegistNum__Fv);
 

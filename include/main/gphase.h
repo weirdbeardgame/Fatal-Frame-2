@@ -1,4 +1,5 @@
-#pragma once
+#ifndef GPHASE_H
+#define GPHASE_H
 
 typedef enum
 {
@@ -125,7 +126,6 @@ const int gphase_sys_num = 6;
 const int gphase_num = 94;
 
 extern "C" int printf(char *fmt, ...);
-
 
 // init functions
 void init_Boot_PadCheck();
@@ -430,3 +430,4 @@ GPHASE_ENUM one_Mission_Save(GPHASE_ENUM);
     GPHASE_ENUM DoJobPhase(int layer);
     void GPhaseSysMain();
     void SetNextGPhase(GPHASE_ID_ENUM id);
+#endif //GPHASE_H

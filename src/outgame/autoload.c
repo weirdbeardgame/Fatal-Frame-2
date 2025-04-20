@@ -1,36 +1,42 @@
 #include "common.h"
 
-INCLUDE_ASM("asm/nonmatchings/outgame/autoload", func_0012B650);
+INCLUDE_ASM("asm/nonmatchings/outgame/autoload", _fixed_array_assert__FPCcUiUi);
 
-INCLUDE_ASM("asm/nonmatchings/outgame/autoload", func_0012B680);
+INCLUDE_ASM("asm/nonmatchings/outgame/autoload", _fixed_array_verifyrange__H1ZPv_UiUi_PX01);
 
-INCLUDE_ASM("asm/nonmatchings/outgame/autoload", func_0012B6B8);
+INCLUDE_ASM("asm/nonmatchings/outgame/autoload", _fixed_array_verifyrange__H1ZPc_UiUi_PX01);
 
-INCLUDE_ASM("asm/nonmatchings/outgame/autoload", func_0012B6F0);
+INCLUDE_RODATA("asm/nonmatchings/outgame/autoload", D_003A17C0);
 
-INCLUDE_ASM("asm/nonmatchings/outgame/autoload", func_0012B728);
+INCLUDE_ASM("asm/nonmatchings/outgame/autoload", _fixed_array_verifyrange__H1ZPUi_UiUi_PX01);
 
-INCLUDE_ASM("asm/nonmatchings/outgame/autoload", func_0012B778);
+INCLUDE_ASM("asm/nonmatchings/outgame/autoload", AutoLoadInit__Fv);
 
-INCLUDE_ASM("asm/nonmatchings/outgame/autoload", func_0012B870);
+INCLUDE_ASM("asm/nonmatchings/outgame/autoload", AutoLoadMain__Fv);
 
-INCLUDE_ASM("asm/nonmatchings/outgame/autoload", func_0012B8B8);
+INCLUDE_ASM("asm/nonmatchings/outgame/autoload", AutoLoadMcCheckInit__Fv);
 
-INCLUDE_ASM("asm/nonmatchings/outgame/autoload", func_0012B9C0);
+INCLUDE_RODATA("asm/nonmatchings/outgame/autoload", D_003A1828);
 
-INCLUDE_ASM("asm/nonmatchings/outgame/autoload", func_0012BA48);
+INCLUDE_RODATA("asm/nonmatchings/outgame/autoload", D_003A1858);
 
-INCLUDE_ASM("asm/nonmatchings/outgame/autoload", func_0012BB80);
+INCLUDE_ASM("asm/nonmatchings/outgame/autoload", AutoLoadMcCheckWait__Fv);
 
-INCLUDE_ASM("asm/nonmatchings/outgame/autoload", func_0012BBF8);
+INCLUDE_ASM("asm/nonmatchings/outgame/autoload", AutoLoadMcLoadInit__Fv);
 
-INCLUDE_ASM("asm/nonmatchings/outgame/autoload", func_0012BC68);
+INCLUDE_ASM("asm/nonmatchings/outgame/autoload", AutoLoadMcLoadWait__Fv);
 
-INCLUDE_ASM("asm/nonmatchings/outgame/autoload", func_0012BDB0);
+INCLUDE_ASM("asm/nonmatchings/outgame/autoload", AutoLoadMcLoadConf__Fv);
 
-INCLUDE_ASM("asm/nonmatchings/outgame/autoload", func_0012BE20);
+INCLUDE_ASM("asm/nonmatchings/outgame/autoload", AutoLoadMcErrorConf__Fv);
 
-INCLUDE_ASM("asm/nonmatchings/outgame/autoload", func_0012BF50);
+INCLUDE_ASM("asm/nonmatchings/outgame/autoload", AutoLoadMcDefStartConf__Fv);
+
+INCLUDE_ASM("asm/nonmatchings/outgame/autoload", AutoLoadMcEmptyError__Fv);
+
+INCLUDE_ASM("asm/nonmatchings/outgame/autoload", AutoLoadMcEmptyWarning__Fv);
+
+INCLUDE_ASM("asm/nonmatchings/outgame/autoload", AutoLoadDispMain__Fv);
 
 INCLUDE_ASM("asm/nonmatchings/outgame/autoload", init_AutoLoad_Main__Fv);
 

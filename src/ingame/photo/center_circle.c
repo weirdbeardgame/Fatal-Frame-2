@@ -1,12 +1,14 @@
 #include "common.h"
 
-INCLUDE_ASM("asm/nonmatchings/ingame/photo/center_circle", func_0012D7A8);
+INCLUDE_ASM("asm/nonmatchings/ingame/photo/center_circle", _fixed_array_assert__FPCcUiUi);
 
-INCLUDE_ASM("asm/nonmatchings/ingame/photo/center_circle", func_0012D7D8);
+INCLUDE_ASM("asm/nonmatchings/ingame/photo/center_circle", _fixed_array_verifyrange__H1ZPv_UiUi_PX01);
 
-INCLUDE_ASM("asm/nonmatchings/ingame/photo/center_circle", func_0012D810);
+INCLUDE_ASM("asm/nonmatchings/ingame/photo/center_circle", _fixed_array_verifyrange__H1ZPc_UiUi_PX01);
 
-INCLUDE_ASM("asm/nonmatchings/ingame/photo/center_circle", func_0012D848);
+INCLUDE_RODATA("asm/nonmatchings/ingame/photo/center_circle", D_003A1F70);
+
+INCLUDE_ASM("asm/nonmatchings/ingame/photo/center_circle", _fixed_array_verifyrange__H1ZPUi_UiUi_PX01);
 
 INCLUDE_ASM("asm/nonmatchings/ingame/photo/center_circle", Init__13CCenterCircle);
 

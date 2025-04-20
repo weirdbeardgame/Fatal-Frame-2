@@ -1,12 +1,14 @@
 #include "common.h"
 
-INCLUDE_ASM("asm/nonmatchings/ingame/enemy/alg_manage", func_0012A410);
+INCLUDE_ASM("asm/nonmatchings/ingame/enemy/alg_manage", _fixed_array_assert__FPCcUiUi);
 
-INCLUDE_ASM("asm/nonmatchings/ingame/enemy/alg_manage", func_0012A440);
+INCLUDE_ASM("asm/nonmatchings/ingame/enemy/alg_manage", _fixed_array_verifyrange__H1ZPv_UiUi_PX01);
 
-INCLUDE_ASM("asm/nonmatchings/ingame/enemy/alg_manage", func_0012A478);
+INCLUDE_ASM("asm/nonmatchings/ingame/enemy/alg_manage", _fixed_array_verifyrange__H1ZPc_UiUi_PX01);
 
-INCLUDE_ASM("asm/nonmatchings/ingame/enemy/alg_manage", func_0012A4B0);
+INCLUDE_RODATA("asm/nonmatchings/ingame/enemy/alg_manage", D_003A1538);
+
+INCLUDE_ASM("asm/nonmatchings/ingame/enemy/alg_manage", _fixed_array_verifyrange__H1ZPUi_UiUi_PX01);
 
 INCLUDE_ASM("asm/nonmatchings/ingame/enemy/alg_manage", alg_manageReqAlg__Fi);
 

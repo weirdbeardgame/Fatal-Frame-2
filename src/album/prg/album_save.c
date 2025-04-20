@@ -1,18 +1,26 @@
 #include "common.h"
 
-INCLUDE_ASM("asm/nonmatchings/album/prg/album_save", __tf10ALBUM_INFO__Fv);
+INCLUDE_ASM("asm/nonmatchings/album/prg/album_save", _fixed_array_assert__FPCcUiUi);
 
-INCLUDE_ASM("asm/nonmatchings/album/prg/album_save", func_001260E8);
+INCLUDE_ASM("asm/nonmatchings/album/prg/album_save", _fixed_array_verifyrange__H1ZPv_UiUi_PX01);
 
-INCLUDE_ASM("asm/nonmatchings/album/prg/album_save", func_00126120);
+INCLUDE_ASM("asm/nonmatchings/album/prg/album_save", _fixed_array_verifyrange__H1ZPc_UiUi_PX01);
 
-INCLUDE_ASM("asm/nonmatchings/album/prg/album_save", func_00126158);
+INCLUDE_RODATA("asm/nonmatchings/album/prg/album_save", D_003A0E70);
+
+INCLUDE_ASM("asm/nonmatchings/album/prg/album_save", _fixed_array_verifyrange__H1ZPUi_UiUi_PX01);
 
 INCLUDE_ASM("asm/nonmatchings/album/prg/album_save", AlbumSaveCtrlInit__Fv);
 
 INCLUDE_ASM("asm/nonmatchings/album/prg/album_save", AlbumSaveTexLoadWait__Fv);
 
 INCLUDE_ASM("asm/nonmatchings/album/prg/album_save", AlbumSaveMain__Fv);
+
+INCLUDE_RODATA("asm/nonmatchings/album/prg/album_save", D_003A0ED8);
+
+INCLUDE_RODATA("asm/nonmatchings/album/prg/album_save", D_003A0EE8);
+
+INCLUDE_RODATA("asm/nonmatchings/album/prg/album_save", D_003A0F18);
 
 INCLUDE_ASM("asm/nonmatchings/album/prg/album_save", AlbumSaveModeMain__Fv);
 
@@ -26,33 +34,33 @@ INCLUDE_ASM("asm/nonmatchings/album/prg/album_save", AlbumSaveMcCardCheckInit__F
 
 INCLUDE_ASM("asm/nonmatchings/album/prg/album_save", AlbumSaveMcCardCheckWait__Fv);
 
-INCLUDE_ASM("asm/nonmatchings/album/prg/album_save", func_001268E8);
-
 INCLUDE_ASM("asm/nonmatchings/album/prg/album_save", AlbumSaveMcGetDirInfoInit__Fv);
 
-INCLUDE_ASM("asm/nonmatchings/album/prg/album_save", AlbumSaveMcSaveAlbumSelInit_Fv);
+INCLUDE_ASM("asm/nonmatchings/album/prg/album_save", AlbumSaveMcGetDirInfoWait__Fv);
 
-INCLUDE_ASM("asm/nonmatchings/album/prg/album_save", AlbumSaveMcSaveAlbumSelWait_Fv);
+INCLUDE_ASM("asm/nonmatchings/album/prg/album_save", AlbumSaveMcSaveAlbumSelInit__Fv);
 
-INCLUDE_ASM("asm/nonmatchings/album/prg/album_save", AlbumSaveMcSaveAlbumSelPad_Fv);
+INCLUDE_ASM("asm/nonmatchings/album/prg/album_save", AlbumSaveMcSaveAlbumSelWait__Fv);
 
-INCLUDE_ASM("asm/nonmatchings/album/prg/album_save", AlbumSaveMcEveryFrameCheck_Fv);
+INCLUDE_ASM("asm/nonmatchings/album/prg/album_save", AlbumSaveMcSaveAlbumSelPad__Fv);
 
-INCLUDE_ASM("asm/nonmatchings/album/prg/album_save", AlbumSaveMcCheckAgainInit_Fv);
+INCLUDE_ASM("asm/nonmatchings/album/prg/album_save", AlbumSaveAlbumSelMcEveryFrameCheck__Fv);
 
-INCLUDE_ASM("asm/nonmatchings/album/prg/album_save", AlbumSaveMcCheckAgainWait_Fv);
+INCLUDE_ASM("asm/nonmatchings/album/prg/album_save", AlbumSaveMcCheckAgainInit__Fv);
 
-INCLUDE_ASM("asm/nonmatchings/album/prg/album_save", AlbumSaveConfInit_Fv);
+INCLUDE_ASM("asm/nonmatchings/album/prg/album_save", AlbumSaveMcCheckAgainWait__Fv);
 
-INCLUDE_ASM("asm/nonmatchings/album/prg/album_save", AlbumSaveConfWait_Fv);
+INCLUDE_ASM("asm/nonmatchings/album/prg/album_save", AlbumSaveMcSaveConfInit__Fv);
 
-INCLUDE_ASM("asm/nonmatchings/album/prg/album_save", AlbumSaveConfPad_Fv);
+INCLUDE_ASM("asm/nonmatchings/album/prg/album_save", AlbumSaveMcSaveConfWait__Fv);
 
-INCLUDE_ASM("asm/nonmatchings/album/prg/album_save", AlbumSaveMcSaveInit_Fv);
+INCLUDE_ASM("asm/nonmatchings/album/prg/album_save", AlbumSaveMcSaveConfPad__Fv);
 
-INCLUDE_ASM("asm/nonmatchings/album/prg/album_save", AlbumSaveMcSaveWait_Fv);
+INCLUDE_ASM("asm/nonmatchings/album/prg/album_save", AlbumSaveMcSaveInit__Fv);
 
-INCLUDE_ASM("asm/nonmatchings/album/prg/album_save", AlbumSaveMcErrorConfInit_Fv);
+INCLUDE_ASM("asm/nonmatchings/album/prg/album_save", AlbumSaveMcSaveWait__Fv);
+
+INCLUDE_ASM("asm/nonmatchings/album/prg/album_save", AlbumSaveMcErrorConfInit__Fv);
 
 INCLUDE_ASM("asm/nonmatchings/album/prg/album_save", AlbumSaveMcErrorConfWait__Fv);
 
@@ -102,8 +110,10 @@ INCLUDE_ASM("asm/nonmatchings/album/prg/album_save", AlbumSaveDispInit__Fv);
 
 INCLUDE_ASM("asm/nonmatchings/album/prg/album_save", AlbumSaveDispMain__Fv);
 
-INCLUDE_ASM("asm/nonmatchings/album/prg/album_save", AlbumSaveSlotSelDisp__Fv);
+INCLUDE_ASM("asm/nonmatchings/album/prg/album_save", AlbumSaveSlotSelDisp__FiiUc);
 
-INCLUDE_ASM("asm/nonmatchings/album/prg/album_save", AlbumSaveMcSaveDisp__Fv);
+INCLUDE_ASM("asm/nonmatchings/album/prg/album_save", AlbumSaveMcSaveDisp__FiiUc);
 
-INCLUDE_ASM("asm/nonmatchings/album/prg/album_save", AlbumSaveAlbumSelDisp__Fv);
+INCLUDE_ASM("asm/nonmatchings/album/prg/album_save", AlbumSaveAlbumSelDisp__FUc);
+
+INCLUDE_RODATA("asm/nonmatchings/album/prg/album_save", D_003A1278);

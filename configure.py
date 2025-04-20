@@ -10,8 +10,6 @@ import re
 from pathlib import Path
 from typing import Dict, List, Set, Union
 
-from fix_gp import main as fix_gp_main
-
 import ninja_syntax
 
 import splat
@@ -29,7 +27,7 @@ MAP_PATH = f"build/{BASENAME}.map"
 PRE_ELF_PATH = f"build/{BASENAME}.elf"
 
 COMMON_INCLUDES = (
-    "-Iinclude -I include/sdk/ee -I include/gcc -I include/main"
+    "-Iinclude -I include/sdk/ee -I include/gcc -I include/gcc/sys -I include/gcc/gcc-lib -I include/main -I include/graphics -I include/graphics/graph3d -I include/graphics/graph3d/ctl -I include/graphics/motion -I include/ingame -I include/ingame/plyr"
 )
 
 COMPILER = "ee-gcc2.96"
@@ -72,6 +70,51 @@ compiler_type = "gcc"
 """
         )
 
+pattern0 = re.compile(r'%(gp_rel)\(([^)]+)\)\(\$28\)')
+pattern1 = re.compile(r"\$28, (%gp_rel\((.+)\))")
+
+def remove_gprel():
+    for root, dirs, files in os.walk("asm/nonmatchings/"):
+        for filename in files:
+            filepath = os.path.join(root, filename)
+
+            with open(filepath, "r") as file:
+                content = file.read()
+            
+            replace: bool = False
+
+            # Search for any %gp_rel access
+            updated_content = content
+            if re.search(pattern0, content):
+                replace = True
+                # Reference found, remove
+                updated_content = re.sub(pattern0, r'\2', updated_content)
+            
+            if re.search(pattern1, updated_content):
+                replace = True
+
+                updated_content = re.sub(pattern1, r'\2', updated_content)
+        
+            if replace == True:
+                # Write the updated content back to the file
+                with open(filepath, "w") as file:
+                    file.write(updated_content)
+
+def fix_asm_include():
+    for root, dirs, files in os.walk("asm/nonmatchings/"):
+        for filename in files:
+            filepath = os.path.join(root, filename)
+
+            with open(filepath, "r") as file:
+                content = file.read()
+            
+            if content.find(".include \"macro.inc\"") != -1:
+                updated_content = content.replace(".include \"macro.inc\"", ".include \"include/macro.inc\"")
+                
+                # Write the updated content back to the file
+                with open(filepath, "w") as file:
+                    file.write(updated_content)
+
 
 def build_stuff(linker_entries: List[LinkerEntry]):
     built_objects: Set[Path] = set()
@@ -104,7 +147,7 @@ def build_stuff(linker_entries: List[LinkerEntry]):
     # Rules
     cross = "mips-linux-gnu-"
 
-    ld_args = "-EL -T undefined_syms.txt -T undefined_syms_auto.txt -T undefined_funcs_auto.txt -Map $mapfile -T $in -o $out"
+    ld_args = "-EL -T config/undefined_syms.txt -T config/undefined_syms_auto.txt -T config/undefined_funcs_auto.txt -Map $mapfile -T $in -o $out"
 
     ninja.rule(
         "as",
@@ -182,6 +225,12 @@ def build_stuff(linker_entries: List[LinkerEntry]):
         elif isinstance(seg, splat.segtypes.common.sbss.CommonSegSbss):
             build(entry.object_path, entry.src_paths, "as")
 
+        elif isinstance(seg, splat.segtypes.common.eh_frame.PS2SegEh_frame):
+            build(entry.object_path, entry.src_paths, "as")
+
+        elif isinstance(seg, splat.segtypes.common.gcc_except_table.PS2SegGcc_except_table):
+            build(entry.object_path, entry.src_paths, "as")
+
         else:
             print(f"ERROR: Unsupported build segment type {seg.type}")
             sys.exit(1)
@@ -239,6 +288,7 @@ if __name__ == "__main__":
 
     write_permuter_settings()
 
-    gp_value = split.config["options"]["gp_value"]
+    remove_gprel()
 
-    fix_gp_main(gp_value)
+    fix_asm_include()
+

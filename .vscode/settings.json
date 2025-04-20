@@ -2,5 +2,14 @@
     "files.associations": {
         "*.ksy": "yaml",
         "*.json": "json",
+        "common.h": "c",
+        "g3dTypes.h": "c",
+        "sgd_types.h": "c",
+        "motion.h": "c",
+        "obj_draw_ctrl.h": "c",
+        "man_data.h": "c",
+        "types.h": "c",
+        "stddef.h": "c",
+        "g3dtexture.h": "c"
     }
 }

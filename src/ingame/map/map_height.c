@@ -1,12 +1,14 @@
 #include "common.h"
 
-INCLUDE_ASM("asm/nonmatchings/ingame/map/map_height", func_001DB7D8);
+INCLUDE_ASM("asm/nonmatchings/ingame/map/map_height", _fixed_array_assert__FPCcUiUi);
 
-INCLUDE_ASM("asm/nonmatchings/ingame/map/map_height", func_001DB808);
+INCLUDE_ASM("asm/nonmatchings/ingame/map/map_height", _fixed_array_verifyrange__H1ZPv_UiUi_PX01);
 
-INCLUDE_ASM("asm/nonmatchings/ingame/map/map_height", func_001DB840);
+INCLUDE_ASM("asm/nonmatchings/ingame/map/map_height", _fixed_array_verifyrange__H1ZPc_UiUi_PX01);
 
-INCLUDE_ASM("asm/nonmatchings/ingame/map/map_height", func_001DB878);
+INCLUDE_RODATA("asm/nonmatchings/ingame/map/map_height", D_003BB230);
+
+INCLUDE_ASM("asm/nonmatchings/ingame/map/map_height", _fixed_array_verifyrange__H1ZPUi_UiUi_PX01);
 
 INCLUDE_ASM("asm/nonmatchings/ingame/map/map_height", MhFirstInit__Fv);
 
@@ -18,22 +20,24 @@ INCLUDE_ASM("asm/nonmatchings/ingame/map/map_height", MhDrawHeight__Fi);
 
 INCLUDE_ASM("asm/nonmatchings/ingame/map/map_height", MhHitLineCheck__FPfT0i);
 
-INCLUDE_ASM("asm/nonmatchings/ingame/map/map_height", func_001DBE38);
+INCLUDE_ASM("asm/nonmatchings/ingame/map/map_height", MhSetCtrlP__Fii);
 
-INCLUDE_ASM("asm/nonmatchings/ingame/map/map_height", func_001DBE98);
+INCLUDE_ASM("asm/nonmatchings/ingame/map/map_height", MhGetCtrlP__Fi);
 
-INCLUDE_ASM("asm/nonmatchings/ingame/map/map_height", func_001DBEE8);
+INCLUDE_ASM("asm/nonmatchings/ingame/map/map_height", MhSetOffset__FP6MhCtrlPf);
 
 INCLUDE_ASM("asm/nonmatchings/ingame/map/map_height", MhSetOffset2__FiPf);
 
-INCLUDE_ASM("asm/nonmatchings/ingame/map/map_height", func_001DC008);
+INCLUDE_ASM("asm/nonmatchings/ingame/map/map_height", MhIsInArea__FP6MhCtrlPf);
 
-INCLUDE_ASM("asm/nonmatchings/ingame/map/map_height", func_001DC0E8);
+INCLUDE_ASM("asm/nonmatchings/ingame/map/map_height", MhIsInTriXZ__FP6MhCtrlPfi);
 
-INCLUDE_ASM("asm/nonmatchings/ingame/map/map_height", func_001DC248);
+INCLUDE_ASM("asm/nonmatchings/ingame/map/map_height", MhIsHeightTri__FP6MhCtrlPfi);
 
-INCLUDE_ASM("asm/nonmatchings/ingame/map/map_height", func_001DC430);
+INCLUDE_ASM("asm/nonmatchings/ingame/map/map_height", MhIsHitHeightTri__FP6MhCtrlPfT1i);
 
-INCLUDE_ASM("asm/nonmatchings/ingame/map/map_height", func_001DC520);
+INCLUDE_ASM("asm/nonmatchings/ingame/map/map_height", __static_initialization_and_destruction_0);
 
-INCLUDE_ASM("asm/nonmatchings/ingame/map/map_height", func_001DC528);
+INCLUDE_ASM("asm/nonmatchings/ingame/map/map_height", _GLOBAL_$I$MhFirstInit__Fv);
+
+INCLUDE_RODATA("asm/nonmatchings/ingame/map/map_height", D_003BB288);

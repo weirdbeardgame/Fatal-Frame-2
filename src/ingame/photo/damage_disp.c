@@ -1,12 +1,14 @@
 #include "common.h"
 
-INCLUDE_ASM("asm/nonmatchings/ingame/photo/damage_disp", func_00132148);
+INCLUDE_ASM("asm/nonmatchings/ingame/photo/damage_disp", _fixed_array_assert__FPCcUiUi);
 
-INCLUDE_ASM("asm/nonmatchings/ingame/photo/damage_disp", func_00132178);
+INCLUDE_ASM("asm/nonmatchings/ingame/photo/damage_disp", _fixed_array_verifyrange__H1ZPv_UiUi_PX01);
 
-INCLUDE_ASM("asm/nonmatchings/ingame/photo/damage_disp", func_001321B0);
+INCLUDE_ASM("asm/nonmatchings/ingame/photo/damage_disp", _fixed_array_verifyrange__H1ZPc_UiUi_PX01);
 
-INCLUDE_ASM("asm/nonmatchings/ingame/photo/damage_disp", func_001321E8);
+INCLUDE_RODATA("asm/nonmatchings/ingame/photo/damage_disp", D_003A3850);
+
+INCLUDE_ASM("asm/nonmatchings/ingame/photo/damage_disp", _fixed_array_verifyrange__H1ZPUi_UiUi_PX01);
 
 INCLUDE_ASM("asm/nonmatchings/ingame/photo/damage_disp", Init__11CDamageDisp);
 

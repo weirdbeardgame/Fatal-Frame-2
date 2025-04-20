@@ -1,12 +1,14 @@
 #include "common.h"
 
-INCLUDE_ASM("asm/nonmatchings/ingame/photo/center_cross", func_0012DDE0);
+INCLUDE_ASM("asm/nonmatchings/ingame/photo/center_cross", _fixed_array_assert__FPCcUiUi);
 
-INCLUDE_ASM("asm/nonmatchings/ingame/photo/center_cross", func_0012DE10);
+INCLUDE_ASM("asm/nonmatchings/ingame/photo/center_cross", _fixed_array_verifyrange__H1ZPv_UiUi_PX01);
 
-INCLUDE_ASM("asm/nonmatchings/ingame/photo/center_cross", func_0012DE48);
+INCLUDE_ASM("asm/nonmatchings/ingame/photo/center_cross", _fixed_array_verifyrange__H1ZPc_UiUi_PX01);
 
-INCLUDE_ASM("asm/nonmatchings/ingame/photo/center_cross", func_0012DE80);
+INCLUDE_RODATA("asm/nonmatchings/ingame/photo/center_cross", D_003A1FC8);
+
+INCLUDE_ASM("asm/nonmatchings/ingame/photo/center_cross", _fixed_array_verifyrange__H1ZPUi_UiUi_PX01);
 
 INCLUDE_ASM("asm/nonmatchings/ingame/photo/center_cross", Work__12CCenterCross);
 

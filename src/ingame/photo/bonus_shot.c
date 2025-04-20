@@ -1,12 +1,14 @@
 #include "common.h"
 
-INCLUDE_ASM("asm/nonmatchings/ingame/photo/bonus_shot", func_0012C110);
+INCLUDE_ASM("asm/nonmatchings/ingame/photo/bonus_shot", _fixed_array_assert__FPCcUiUi);
 
-INCLUDE_ASM("asm/nonmatchings/ingame/photo/bonus_shot", func_0012C140);
+INCLUDE_ASM("asm/nonmatchings/ingame/photo/bonus_shot", _fixed_array_verifyrange__H1ZPv_UiUi_PX01);
 
-INCLUDE_ASM("asm/nonmatchings/ingame/photo/bonus_shot", func_0012C178);
+INCLUDE_ASM("asm/nonmatchings/ingame/photo/bonus_shot", _fixed_array_verifyrange__H1ZPc_UiUi_PX01);
 
-INCLUDE_ASM("asm/nonmatchings/ingame/photo/bonus_shot", func_0012C1B0);
+INCLUDE_RODATA("asm/nonmatchings/ingame/photo/bonus_shot", D_003A19A8);
+
+INCLUDE_ASM("asm/nonmatchings/ingame/photo/bonus_shot", _fixed_array_verifyrange__H1ZPUi_UiUi_PX01);
 
 INCLUDE_ASM("asm/nonmatchings/ingame/photo/bonus_shot", Init__13CBonusShotOne);
 
@@ -33,3 +35,11 @@ INCLUDE_ASM("asm/nonmatchings/ingame/photo/bonus_shot", Work__10CBonusShot);
 INCLUDE_ASM("asm/nonmatchings/ingame/photo/bonus_shot", Draw__10CBonusShotii);
 
 INCLUDE_ASM("asm/nonmatchings/ingame/photo/bonus_shot", Init__10CBonusShot);
+
+INCLUDE_RODATA("asm/nonmatchings/ingame/photo/bonus_shot", D_003A1A00);
+
+INCLUDE_RODATA("asm/nonmatchings/ingame/photo/bonus_shot", D_003A1A30);
+
+INCLUDE_RODATA("asm/nonmatchings/ingame/photo/bonus_shot", D_003A1A60);
+
+INCLUDE_RODATA("asm/nonmatchings/ingame/photo/bonus_shot", aShotTexTbl);

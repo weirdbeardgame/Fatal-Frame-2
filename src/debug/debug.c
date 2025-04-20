@@ -1,12 +1,14 @@
 #include "common.h"
 
-INCLUDE_ASM("asm/nonmatchings/debug/debug", func_001323A8);
+INCLUDE_ASM("asm/nonmatchings/debug/debug", _fixed_array_assert__FPCcUiUi);
 
-INCLUDE_ASM("asm/nonmatchings/debug/debug", func_001323D8);
+INCLUDE_ASM("asm/nonmatchings/debug/debug", _fixed_array_verifyrange__H1ZPv_UiUi_PX01);
 
-INCLUDE_ASM("asm/nonmatchings/debug/debug", func_00132410);
+INCLUDE_ASM("asm/nonmatchings/debug/debug", _fixed_array_verifyrange__H1ZPc_UiUi_PX01);
 
-INCLUDE_ASM("asm/nonmatchings/debug/debug", func_00132448);
+INCLUDE_RODATA("asm/nonmatchings/debug/debug", D_003A3928);
+
+INCLUDE_ASM("asm/nonmatchings/debug/debug", _fixed_array_verifyrange__H1ZPUi_UiUi_PX01);
 
 INCLUDE_ASM("asm/nonmatchings/debug/debug", SPU_draw_rect_func__Fiiiii);
 
@@ -14,11 +16,17 @@ INCLUDE_ASM("asm/nonmatchings/debug/debug", SPU_draw_line_func__Fiiiii);
 
 INCLUDE_ASM("asm/nonmatchings/debug/debug", EachDebugMain__Fv);
 
-INCLUDE_ASM("asm/nonmatchings/debug/debug", func_00132C80);
+INCLUDE_ASM("asm/nonmatchings/debug/debug", SceneTest__Fv);
 
 INCLUDE_ASM("asm/nonmatchings/debug/debug", DebugMenu__Fv);
 
 INCLUDE_ASM("asm/nonmatchings/debug/debug", InitDebug__Fv);
+
+INCLUDE_RODATA("asm/nonmatchings/debug/debug", D_003A39E8);
+
+INCLUDE_RODATA("asm/nonmatchings/debug/debug", D_003A3A00);
+
+INCLUDE_RODATA("asm/nonmatchings/debug/debug", D_003A3A40);
 
 INCLUDE_ASM("asm/nonmatchings/debug/debug", DebugMain__Fv);
 

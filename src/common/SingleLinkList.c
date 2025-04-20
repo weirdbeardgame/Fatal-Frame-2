@@ -1,16 +1,18 @@
 #include "common.h"
 
-INCLUDE_ASM("asm/nonmatchings/common/SingleLinkList", func_001167A0);
+INCLUDE_ASM("asm/nonmatchings/common/SingleLinkList", _fixed_array_assert__FPCcUiUi);
 
-INCLUDE_ASM("asm/nonmatchings/common/SingleLinkList", func_001167D0);
+INCLUDE_ASM("asm/nonmatchings/common/SingleLinkList", _fixed_array_verifyrange__H1ZPv_UiUi_PX01);
 
-INCLUDE_ASM("asm/nonmatchings/common/SingleLinkList", func_00116808);
+INCLUDE_ASM("asm/nonmatchings/common/SingleLinkList", _fixed_array_verifyrange__H1ZPc_UiUi_PX01);
 
-INCLUDE_ASM("asm/nonmatchings/common/SingleLinkList", func_00116840);
+INCLUDE_RODATA("asm/nonmatchings/common/SingleLinkList", D_0039FA20);
 
-INCLUDE_ASM("asm/nonmatchings/common/SingleLinkList", func_00116878);
+INCLUDE_ASM("asm/nonmatchings/common/SingleLinkList", _fixed_array_verifyrange__H1ZPUi_UiUi_PX01);
 
-INCLUDE_ASM("asm/nonmatchings/common/SingleLinkList", func_001168A8);
+INCLUDE_ASM("asm/nonmatchings/common/SingleLinkList", SingleLinkListCellAlloc__FPC16SINGLE_LINK_LIST);
+
+INCLUDE_ASM("asm/nonmatchings/common/SingleLinkList", SingleLinkListCellFree__FP9_SLL_CELL);
 
 INCLUDE_ASM("asm/nonmatchings/common/SingleLinkList", SingleLinkListAlloc__FUi);
 

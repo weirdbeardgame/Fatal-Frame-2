@@ -1,12 +1,14 @@
 #include "common.h"
 
-INCLUDE_ASM("asm/nonmatchings/ingame/plyr/ChrSort", func_00100DB0);
+INCLUDE_ASM("asm/nonmatchings/ingame/plyr/ChrSort", _fixed_array_assert__FPCcUiUi);
 
-INCLUDE_ASM("asm/nonmatchings/ingame/plyr/ChrSort", func_00100DE0);
+INCLUDE_ASM("asm/nonmatchings/ingame/plyr/ChrSort", _fixed_array_verifyrange__H1ZPv_UiUi_PX01);
 
-INCLUDE_ASM("asm/nonmatchings/ingame/plyr/ChrSort", func_00100E18);
+INCLUDE_ASM("asm/nonmatchings/ingame/plyr/ChrSort", _fixed_array_verifyrange__H1ZPc_UiUi_PX01);
 
-INCLUDE_ASM("asm/nonmatchings/ingame/plyr/ChrSort", func_00100E50);
+INCLUDE_RODATA("asm/nonmatchings/ingame/plyr/ChrSort", RO_STR_0039dc28);
+
+INCLUDE_ASM("asm/nonmatchings/ingame/plyr/ChrSort", _fixed_array_verifyrange__H1ZPUi_UiUi_PX01);
 
 INCLUDE_ASM("asm/nonmatchings/ingame/plyr/ChrSort", ChrSortSetFlg__Fi);
 
@@ -16,9 +18,9 @@ INCLUDE_ASM("asm/nonmatchings/ingame/plyr/ChrSort", ChrSortEnemCallback__Fv);
 
 INCLUDE_ASM("asm/nonmatchings/ingame/plyr/ChrSort", ChrSortFlyCallback__Fv);
 
-INCLUDE_ASM("asm/nonmatchings/ingame/plyr/ChrSort", func_00100FA0);
+INCLUDE_ASM("asm/nonmatchings/ingame/plyr/ChrSort", ChrSortGetEnemWork__Fv);
 
-INCLUDE_ASM("asm/nonmatchings/ingame/plyr/ChrSort", func_00100FE8);
+INCLUDE_ASM("asm/nonmatchings/ingame/plyr/ChrSort", ChrSortGetFlyWork__Fv);
 
 INCLUDE_ASM("asm/nonmatchings/ingame/plyr/ChrSort", ChrSortRegistEnem__FP7ENE_WRK);
 

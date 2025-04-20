@@ -1,77 +1,85 @@
 #include "common.h"
 
-INCLUDE_ASM("asm/nonmatchings/album/prg/album_load", func_00124410);
+INCLUDE_ASM("asm/nonmatchings/album/prg/album_load", _fixed_array_assert__FPCcUiUi);
 
-INCLUDE_ASM("asm/nonmatchings/album/prg/album_load", func_00124440);
+INCLUDE_ASM("asm/nonmatchings/album/prg/album_load", _fixed_array_verifyrange__H1ZPv_UiUi_PX01);
 
-INCLUDE_ASM("asm/nonmatchings/album/prg/album_load", func_00124478);
+INCLUDE_ASM("asm/nonmatchings/album/prg/album_load", _fixed_array_verifyrange__H1ZPc_UiUi_PX01);
 
-INCLUDE_ASM("asm/nonmatchings/album/prg/album_load", func_001244B0);
+INCLUDE_RODATA("asm/nonmatchings/album/prg/album_load", D_003A0AB0);
+
+INCLUDE_ASM("asm/nonmatchings/album/prg/album_load", _fixed_array_verifyrange__H1ZPUi_UiUi_PX01);
 
 INCLUDE_ASM("asm/nonmatchings/album/prg/album_load", AlbumLoadCtrlInit__Fv);
 
-INCLUDE_ASM("asm/nonmatchings/album/prg/album_load", func_00124588);
+INCLUDE_ASM("asm/nonmatchings/album/prg/album_load", AlbumLoadTexLoadWait__Fv);
 
 INCLUDE_ASM("asm/nonmatchings/album/prg/album_load", AlbumLoadMain__Fv);
 
-INCLUDE_ASM("asm/nonmatchings/album/prg/album_load", func_00124738);
+INCLUDE_RODATA("asm/nonmatchings/album/prg/album_load", D_003A0B18);
 
-INCLUDE_ASM("asm/nonmatchings/album/prg/album_load", func_001247D0);
+INCLUDE_RODATA("asm/nonmatchings/album/prg/album_load", D_003A0B28);
 
-INCLUDE_ASM("asm/nonmatchings/album/prg/album_load", func_00124918);
+INCLUDE_RODATA("asm/nonmatchings/album/prg/album_load", D_003A0B58);
 
-INCLUDE_ASM("asm/nonmatchings/album/prg/album_load", func_00124958);
+INCLUDE_ASM("asm/nonmatchings/album/prg/album_load", AlbumLoadModeMain__Fv);
 
-INCLUDE_ASM("asm/nonmatchings/album/prg/album_load", func_00124A90);
+INCLUDE_ASM("asm/nonmatchings/album/prg/album_load", AlbumLoadSlotSelPad__Fv);
 
-INCLUDE_ASM("asm/nonmatchings/album/prg/album_load", func_00124AD0);
+INCLUDE_ASM("asm/nonmatchings/album/prg/album_load", AlbumLoadOutReq__Fv);
 
-INCLUDE_ASM("asm/nonmatchings/album/prg/album_load", func_00124BA0);
+INCLUDE_ASM("asm/nonmatchings/album/prg/album_load", AlbumLoadMcLoad__Fv);
 
-INCLUDE_ASM("asm/nonmatchings/album/prg/album_load", func_00124C18);
+INCLUDE_ASM("asm/nonmatchings/album/prg/album_load", AlbumLoadMcCardCheckInit__Fv);
 
-INCLUDE_ASM("asm/nonmatchings/album/prg/album_load", func_00124DD8);
+INCLUDE_ASM("asm/nonmatchings/album/prg/album_load", AlbumLoadMcCardCheckWait__Fv);
 
-INCLUDE_ASM("asm/nonmatchings/album/prg/album_load", func_00124E18);
+INCLUDE_ASM("asm/nonmatchings/album/prg/album_load", AlbumLoadMcGetDirInfoInit__Fv);
 
-INCLUDE_ASM("asm/nonmatchings/album/prg/album_load", func_00124E40);
+INCLUDE_ASM("asm/nonmatchings/album/prg/album_load", AlbumLoadMcGetDirInfoWait__Fv);
 
-INCLUDE_ASM("asm/nonmatchings/album/prg/album_load", func_001250A8);
+INCLUDE_ASM("asm/nonmatchings/album/prg/album_load", AlbumLoadMcLoadAlbumSelInit__Fv);
 
-INCLUDE_ASM("asm/nonmatchings/album/prg/album_load", func_00125108);
+INCLUDE_ASM("asm/nonmatchings/album/prg/album_load", AlbumLoadMcLoadAlbumSelWait__Fv);
 
-INCLUDE_ASM("asm/nonmatchings/album/prg/album_load", func_001251F0);
+INCLUDE_ASM("asm/nonmatchings/album/prg/album_load", AlbumLoadMcLoadAlbumSelPad__Fv);
 
-INCLUDE_ASM("asm/nonmatchings/album/prg/album_load", func_00125238);
+INCLUDE_ASM("asm/nonmatchings/album/prg/album_load", AlbumLoadMcCheckAgainInit__Fv);
 
-INCLUDE_ASM("asm/nonmatchings/album/prg/album_load", func_00125260);
+INCLUDE_ASM("asm/nonmatchings/album/prg/album_load", AlbumLoadMcCheckAgainWait__Fv);
 
-INCLUDE_ASM("asm/nonmatchings/album/prg/album_load", func_001253B0);
+INCLUDE_ASM("asm/nonmatchings/album/prg/album_load", AlbumLoadMcLoadConfInit__Fv);
 
-INCLUDE_ASM("asm/nonmatchings/album/prg/album_load", func_00125498);
+INCLUDE_ASM("asm/nonmatchings/album/prg/album_load", AlbumLoadMcLoadConfWait__Fv);
 
-INCLUDE_ASM("asm/nonmatchings/album/prg/album_load", func_001255A0);
+INCLUDE_ASM("asm/nonmatchings/album/prg/album_load", AlbumLoadMcLoadConfPad__Fv);
 
-INCLUDE_ASM("asm/nonmatchings/album/prg/album_load", func_001255D8);
+INCLUDE_ASM("asm/nonmatchings/album/prg/album_load", AlbumLoadMcLoadInit__Fv);
 
-INCLUDE_ASM("asm/nonmatchings/album/prg/album_load", func_00125658);
+INCLUDE_ASM("asm/nonmatchings/album/prg/album_load", AlbumLoadMcLoadWait__Fv);
 
-INCLUDE_ASM("asm/nonmatchings/album/prg/album_load", func_001256C8);
+INCLUDE_ASM("asm/nonmatchings/album/prg/album_load", AlbumLoadMcErrorConfInit__Fv);
 
-INCLUDE_ASM("asm/nonmatchings/album/prg/album_load", func_00125768);
+INCLUDE_ASM("asm/nonmatchings/album/prg/album_load", AlbumLoadMcErrorConfWait__Fv);
+
+INCLUDE_ASM("asm/nonmatchings/album/prg/album_load", AlbumLoadMcErrorConfPad__Fv);
+
+INCLUDE_ASM("asm/nonmatchings/album/prg/album_load", AlbumLoadMcEndConf__Fv);
+
+INCLUDE_ASM("asm/nonmatchings/album/prg/album_load", AlbumLoadMcEveryFrameCheck__Fv);
 
 INCLUDE_ASM("asm/nonmatchings/album/prg/album_load", AlbumLoadEnd__Fv);
 
-INCLUDE_ASM("asm/nonmatchings/album/prg/album_load", func_00125800);
+INCLUDE_ASM("asm/nonmatchings/album/prg/album_load", AlbumLoadDispInit__Fv);
 
 INCLUDE_ASM("asm/nonmatchings/album/prg/album_load", AlbumLoadDispMain__Fv);
 
-INCLUDE_ASM("asm/nonmatchings/album/prg/album_load", func_00125908);
+INCLUDE_ASM("asm/nonmatchings/album/prg/album_load", AlbumLoadSlotSelDisp__FiiUc);
 
-INCLUDE_ASM("asm/nonmatchings/album/prg/album_load", func_001259D0);
+INCLUDE_ASM("asm/nonmatchings/album/prg/album_load", AlbumLoadMcLoadDisp__FiiUc);
 
-INCLUDE_ASM("asm/nonmatchings/album/prg/album_load", func_00125DD0);
+INCLUDE_ASM("asm/nonmatchings/album/prg/album_load", AlbumLoadAlbumSelDisp__FUc);
 
-INCLUDE_ASM("asm/nonmatchings/album/prg/album_load", func_00125EE8);
+INCLUDE_ASM("asm/nonmatchings/album/prg/album_load", __static_initialization_and_destruction_0);
 
-INCLUDE_ASM("asm/nonmatchings/album/prg/album_load", func_00125EF0);
+INCLUDE_ASM("asm/nonmatchings/album/prg/album_load", _GLOBAL_$I$AlbumLoadCtrlInit__Fv);

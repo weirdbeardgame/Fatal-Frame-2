@@ -1,4 +1,6 @@
-#pragma once
+#ifndef MAIN_H
+#define MAIN_H
+
 #include "common.h"
 #include "gphase.h"
 
@@ -20,4 +22,4 @@ int *GetSubTitleAddr();
 void init_SoftResetMain();
 GPHASE_ENUM one_SoftResetMain(GPHASE_ENUM dummy);
 void end_SoftResetMain();
-
+#endif

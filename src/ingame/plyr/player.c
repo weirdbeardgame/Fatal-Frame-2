@@ -1,12 +1,14 @@
 #include "common.h"
 
-INCLUDE_ASM("asm/nonmatchings/ingame/plyr/player", func_002359C0);
+INCLUDE_ASM("asm/nonmatchings/ingame/plyr/player", _fixed_array_assert__FPCcUiUi);
 
-INCLUDE_ASM("asm/nonmatchings/ingame/plyr/player", func_002359F0);
+INCLUDE_ASM("asm/nonmatchings/ingame/plyr/player", _fixed_array_verifyrange__H1ZPv_UiUi_PX01);
 
-INCLUDE_ASM("asm/nonmatchings/ingame/plyr/player", func_00235A28);
+INCLUDE_ASM("asm/nonmatchings/ingame/plyr/player", _fixed_array_verifyrange__H1ZPc_UiUi_PX01);
 
-INCLUDE_ASM("asm/nonmatchings/ingame/plyr/player", func_00235A60);
+INCLUDE_RODATA("asm/nonmatchings/ingame/plyr/player", D_003C3500);
+
+INCLUDE_ASM("asm/nonmatchings/ingame/plyr/player", _fixed_array_verifyrange__H1ZPUi_UiUi_PX01);
 
 INCLUDE_ASM("asm/nonmatchings/ingame/plyr/player", InitPlayer__Fv);
 
@@ -26,13 +28,19 @@ INCLUDE_ASM("asm/nonmatchings/ingame/plyr/player", PlayerGameOver__Fv);
 
 INCLUDE_ASM("asm/nonmatchings/ingame/plyr/player", ReqPlyrDead__Fi);
 
+INCLUDE_RODATA("asm/nonmatchings/ingame/plyr/player", D_003C3588);
+
+INCLUDE_RODATA("asm/nonmatchings/ingame/plyr/player", D_003C35D8);
+
 INCLUDE_ASM("asm/nonmatchings/ingame/plyr/player", PlyrDead__Fv);
 
 INCLUDE_ASM("asm/nonmatchings/ingame/plyr/player", PlyrMepachiCtrl__Fv);
 
-INCLUDE_ASM("asm/nonmatchings/ingame/plyr/player", func_00236530);
+INCLUDE_ASM("asm/nonmatchings/ingame/plyr/player", PlyrAttractSisMain__Fv);
 
 INCLUDE_ASM("asm/nonmatchings/ingame/plyr/player", PlyrBattleCheck__Fv);
+
+INCLUDE_RODATA("asm/nonmatchings/ingame/plyr/player", D_003C3690);
 
 INCLUDE_ASM("asm/nonmatchings/ingame/plyr/player", PlyrDamageCtrl__Fv);
 
@@ -60,7 +68,7 @@ INCLUDE_ASM("asm/nonmatchings/ingame/plyr/player", PlyrSPdownCtrl__FP9PLCMN_WRK)
 
 INCLUDE_ASM("asm/nonmatchings/ingame/plyr/player", PlyrHPdownCtrl__FP9PLCMN_WRK);
 
-INCLUDE_ASM("asm/nonmatchings/ingame/plyr/player", func_002378A8);
+INCLUDE_ASM("asm/nonmatchings/ingame/plyr/player", playerSetSearchEne__Fi);
 
 INCLUDE_ASM("asm/nonmatchings/ingame/plyr/player", ReqCamTraceNearEne__FPv);
 
@@ -80,9 +88,9 @@ INCLUDE_ASM("asm/nonmatchings/ingame/plyr/player", PlyrFinderIn__Fv);
 
 INCLUDE_ASM("asm/nonmatchings/ingame/plyr/player", PlyrFinderEnd__Fv);
 
-INCLUDE_ASM("asm/nonmatchings/ingame/plyr/player", func_00237FE8);
+INCLUDE_ASM("asm/nonmatchings/ingame/plyr/player", PlyrSpotLightLookAt__Fv);
 
-INCLUDE_ASM("asm/nonmatchings/ingame/plyr/player", func_00238090);
+INCLUDE_ASM("asm/nonmatchings/ingame/plyr/player", PlyrKaidanLookAt__Fv);
 
 INCLUDE_ASM("asm/nonmatchings/ingame/plyr/player", PlyrNModeCtrl__Fv);
 
@@ -112,11 +120,11 @@ INCLUDE_ASM("asm/nonmatchings/ingame/plyr/player", PadInfoTmpSave__FPUcUcPff);
 
 INCLUDE_ASM("asm/nonmatchings/ingame/plyr/player", CngPlyrRotRapid__FP8MOVE_BOXf);
 
-INCLUDE_ASM("asm/nonmatchings/ingame/plyr/player", func_00239298);
+INCLUDE_ASM("asm/nonmatchings/ingame/plyr/player", ShutterChanceChangeJob__Fv);
 
-INCLUDE_ASM("asm/nonmatchings/ingame/plyr/player", func_002393D0);
+INCLUDE_ASM("asm/nonmatchings/ingame/plyr/player", SpiritGageCalc__Fv);
 
-INCLUDE_ASM("asm/nonmatchings/ingame/plyr/player", func_00239610);
+INCLUDE_ASM("asm/nonmatchings/ingame/plyr/player", FinderModeEndJob__Fv);
 
 INCLUDE_ASM("asm/nonmatchings/ingame/plyr/player", PlyrFinderCtrl__Fv);
 
@@ -132,7 +140,7 @@ INCLUDE_ASM("asm/nonmatchings/ingame/plyr/player", PlyrDWalkTmCtrl__FP9PLCMN_WRK
 
 INCLUDE_ASM("asm/nonmatchings/ingame/plyr/player", PlyrCamTurnChk__Fv);
 
-INCLUDE_ASM("asm/nonmatchings/ingame/plyr/player", func_00239C60);
+INCLUDE_ASM("asm/nonmatchings/ingame/plyr/player", PlyrPhotoChk2Sub__Fi);
 
 INCLUDE_ASM("asm/nonmatchings/ingame/plyr/player", PlyrPhotoChk2__Fv);
 
@@ -146,7 +154,13 @@ INCLUDE_ASM("asm/nonmatchings/ingame/plyr/player", PhotoDmgChk2__Fi);
 
 INCLUDE_ASM("asm/nonmatchings/ingame/plyr/player", PhotoDmgChkSub2__FP7ENE_WRKiPi);
 
-INCLUDE_ASM("asm/nonmatchings/ingame/plyr/player", func_0023ABC8);
+INCLUDE_RODATA("asm/nonmatchings/ingame/plyr/player", D_003C37D8);
+
+INCLUDE_ASM("asm/nonmatchings/ingame/plyr/player", PlayerTakePictJob__Fii);
+
+INCLUDE_RODATA("asm/nonmatchings/ingame/plyr/player", D_003C39B0);
+
+INCLUDE_RODATA("asm/nonmatchings/ingame/plyr/player", D_003C3A00);
 
 INCLUDE_ASM("asm/nonmatchings/ingame/plyr/player", PhotoPointCulcEne2__FP7ENE_WRKP16BONUS_SHOT_SCOREP11SUBJECT_WRKP15_HINT_PHOTO_REQi);
 
@@ -194,9 +208,13 @@ INCLUDE_ASM("asm/nonmatchings/ingame/plyr/player", IsPlayerInBattle__Fv);
 
 INCLUDE_ASM("asm/nonmatchings/ingame/plyr/player", FrameInsideChk__FPfN20);
 
-INCLUDE_ASM("asm/nonmatchings/ingame/plyr/player", func_0023C1C8);
+INCLUDE_ASM("asm/nonmatchings/ingame/plyr/player", _SetFlashlightHand__Fi);
 
-INCLUDE_ASM("asm/nonmatchings/ingame/plyr/player", func_0023C7A8);
+INCLUDE_ASM("asm/nonmatchings/ingame/plyr/player", _SetFlashlightStep__Fi);
+
+INCLUDE_RODATA("asm/nonmatchings/ingame/plyr/player", D_003C3B80);
+
+INCLUDE_RODATA("asm/nonmatchings/ingame/plyr/player", D_003C3BA8);
 
 INCLUDE_ASM("asm/nonmatchings/ingame/plyr/player", PlyrFlashlight__Fi);
 
@@ -219,6 +237,10 @@ INCLUDE_ASM("asm/nonmatchings/ingame/plyr/player", PlyrRoomCheck__Fv);
 INCLUDE_ASM("asm/nonmatchings/ingame/plyr/player", GetNearestDistFromPlyrToEnemy__Fv);
 
 INCLUDE_ASM("asm/nonmatchings/ingame/plyr/player", DoorMotionIsEnd__Fv);
+
+INCLUDE_RODATA("asm/nonmatchings/ingame/plyr/player", D_003C3C18);
+
+INCLUDE_RODATA("asm/nonmatchings/ingame/plyr/player", ani_tbl.1477);
 
 INCLUDE_ASM("asm/nonmatchings/ingame/plyr/player", ReqPlyrDoorMotion__Fii);
 
@@ -290,6 +312,12 @@ INCLUDE_ASM("asm/nonmatchings/ingame/plyr/player", Work__10CEneTracer);
 
 INCLUDE_ASM("asm/nonmatchings/ingame/plyr/player", Req__10CEneTracerii);
 
-INCLUDE_ASM("asm/nonmatchings/ingame/plyr/player", func_0023E0A0);
+INCLUDE_ASM("asm/nonmatchings/ingame/plyr/player", __static_initialization_and_destruction_0);
 
-INCLUDE_ASM("asm/nonmatchings/ingame/plyr/player", func_0023E0E0);
+INCLUDE_ASM("asm/nonmatchings/ingame/plyr/player", _GLOBAL_$I$plyr_wrk);
+
+INCLUDE_RODATA("asm/nonmatchings/ingame/plyr/player", aDmgRateByDifficulty);
+
+INCLUDE_RODATA("asm/nonmatchings/ingame/plyr/player", combo_point_mag);
+
+INCLUDE_RODATA("asm/nonmatchings/ingame/plyr/player", combo_sb_point_mag);

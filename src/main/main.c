@@ -1,15 +1,18 @@
 #include "common.h"
-#include "gphase.h"
 
-INCLUDE_ASM("asm/nonmatchings/main/main", func_001D7D18);
+INCLUDE_ASM("asm/nonmatchings/main/main", _fixed_array_assert__FPCcUiUi);
 
-INCLUDE_ASM("asm/nonmatchings/main/main", func_001D7D48);
+INCLUDE_ASM("asm/nonmatchings/main/main", _fixed_array_verifyrange__H1ZPv_UiUi_PX01);
 
-INCLUDE_ASM("asm/nonmatchings/main/main", func_001D7D80);
+INCLUDE_ASM("asm/nonmatchings/main/main", _fixed_array_verifyrange__H1ZPc_UiUi_PX01);
 
-INCLUDE_ASM("asm/nonmatchings/main/main", func_001D7DB8);
+INCLUDE_RODATA("asm/nonmatchings/main/main", D_003BAB20);
+
+INCLUDE_ASM("asm/nonmatchings/main/main", _fixed_array_verifyrange__H1ZPUi_UiUi_PX01);
 
 INCLUDE_ASM("asm/nonmatchings/main/main", main);
+
+INCLUDE_RODATA("asm/nonmatchings/main/main", __FUNCTION__.976);
 
 INCLUDE_ASM("asm/nonmatchings/main/main", DebugMemoryCheck__Fv);
 
@@ -29,13 +32,15 @@ INCLUDE_ASM("asm/nonmatchings/main/main", end_Boot_Init__Fv);
 
 INCLUDE_ASM("asm/nonmatchings/main/main", one_Boot_Init__F11GPHASE_ENUM);
 
-INCLUDE_ASM("asm/nonmatchings/main/main", func_001D83B0);
+INCLUDE_RODATA("asm/nonmatchings/main/main", D_003BAD88);
+
+INCLUDE_ASM("asm/nonmatchings/main/main", CheckSoftReset__Fv);
 
 INCLUDE_ASM("asm/nonmatchings/main/main", SoftResetLock__Fv);
 
 INCLUDE_ASM("asm/nonmatchings/main/main", SoftResetUnlock__Fv);
 
-INCLUDE_ASM("asm/nonmatchings/main/main", func_001D8530);
+INCLUDE_ASM("asm/nonmatchings/main/main", CallSoftReset__Fv);
 
 INCLUDE_ASM("asm/nonmatchings/main/main", GetSubTitleAddr__Fv);
 
