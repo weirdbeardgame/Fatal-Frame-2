@@ -57,8 +57,9 @@ segments:
     start: 0x1000
     vram: 0x100000
     bss_size: 0xd8bec
+    align: 0
     subsegments:
-      - [0x1000, asm, crt0] # size:0x258
+      - [0x1008, asm, crt0] # size:0x258
       - [0x1258, asm, ingame/map/CBuff] # size:0x274
       - [0x14d0, asm, graphics/graph3d/CDebugEdit] # size:0x8e0
       - [0x1db0, asm, ingame/plyr/ChrSort] # size:0x624

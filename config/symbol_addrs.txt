@@ -1,4 +1,3 @@
-D_10011c = 0x10011c; // visibility:global
 D_3f5500 = 0x3f5500; // visibility:global
 func_100250 = 0x100250; // size:0x8 type:func visibility:global
 D_2c3d00 = 0x2c3d00; // visibility:global allow_duplicated:True
