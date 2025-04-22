@@ -90,7 +90,7 @@ segments:
       - [0x18190, asmtu, graphics/motion/accessory] # size:0x4fd8
       - [0x1d168, asmtu, graphics/motion/acs_dat] # size:0xd4
       - [0x1d240, asmtu, album/prg/album] # size:0xbc8
-      - [0x1de08, asmtu, album/prg/album_dat] # size:0xd4
+      - [0x1de08, asm, album/prg/album_dat] # size:0xd4
       - [0x1dee0, asmtu, album/prg/album_disp] # size:0x3294
       - [0x21178, asmtu, album/prg/album_edit] # size:0x4298
       - [0x25410, asmtu, album/prg/album_load] # size:0x1b00
@@ -228,7 +228,7 @@ segments:
       - [0xcda10, asmtu, ingame/item/prg/item] # size:0xbf8
       - [0xce608, asmtu, ingame/item/dat/item_dat] # size:0xd4
       - [0xce6e0, asmtu, debug/item_debug] # size:0xe0
-      - [0xce7c0, asmtu, ingame/puzzle/kai/kai_pzl] # size:0x12d4
+      - [0xce7c0, asm, ingame/puzzle/kai/kai_pzl] # size:0x12d4
       - [0xcfa98, asmtu, ingame/puzzle/kaza2/kaza2_pzl] # size:0x29f0
       - [0xd2488, asmtu, ingame/puzzle/kaza/kaza_pzl] # size:0x2688
       - [0xd4b10, asmtu, system/pad/key_cnf] # size:0x1a0
@@ -1166,7 +1166,7 @@ segments:
       - { start: 0x1d5370, type: .data, vram: 0x2d4370, name: album/prg/album } # size:0x418
       - {
           start: 0x1d5788,
-          type: .data,
+          type: data,
           vram: 0x2d4788,
           name: album/dat/album_dat,
         } # size:0x3640
@@ -1176,15 +1176,15 @@ segments:
           vram: 0x2d7dc8,
           name: album/prg/album_edit,
         } # size:0xa0
-      - { start: 0x1d8e68, type: .data, vram: 0x2d7e68, name: btn_sprt_dat } # size:0x1e0
-      - { start: 0x1d9048, type: .data, vram: 0x2d8048, name: camera_menu } # size:0xc
+      - { start: 0x1d8e68, type: data, vram: 0x2d7e68, name: btn_sprt_dat } # size:0x1e0
+      - { start: 0x1d9048, type: data, vram: 0x2d8048, name: camera_menu } # size:0xc
       - {
           start: 0x1d9058,
-          type: .data,
+          type: data,
           vram: 0x2d8058,
           name: graphics/graph2d/tim_dat/cap_group_dat,
         } # size:0xa98
-      - { start: 0x1d9af0, type: .data, vram: 0x2d8af0, name: caption_dat } # size:0x220
+      - { start: 0x1d9af0, type: data, vram: 0x2d8af0, name: caption_dat } # size:0x220
       - {
           start: 0x1d9d10,
           type: .data,
@@ -1211,16 +1211,16 @@ segments:
         } # size:0xa4
       - {
           start: 0x1d9e60,
-          type: .data,
+          type: data,
           vram: 0x2d8e60,
           name: ingame/item/prg/crystal_dat,
         } # size:0xe0c
       - { start: 0x1dac70, type: .data, vram: 0x2d9c70, name: debug/debug } # size:0x24
       - { start: 0x1daca0, type: .data, vram: 0x2d9ca0, name: debug/debug_menu } # size:0x16bc
-      - { start: 0x1dc360, type: .data, vram: 0x2db360, name: door_lock_dat } # size:0x38
+      - { start: 0x1dc360, type: data, vram: 0x2db360, name: door_lock_dat } # size:0x38
       - {
           start: 0x1dc398,
-          type: .data,
+          type: data,
           vram: 0x2db398,
           name: ingame/menu/tim_dat/door_point_dat,
         } # size:0x48
@@ -1413,7 +1413,7 @@ segments:
       - { start: 0x216670, type: .data, vram: 0x315670, name: outgame/gallery } # size:0x98
       - {
           start: 0x216708,
-          type: .data,
+          type: data,
           vram: 0x315708,
           name: outgame/gallery_dat,
         } # size:0xec0
@@ -1423,15 +1423,15 @@ segments:
           vram: 0x3165c8,
           name: save_load/prg/game_data_save,
         } # size:0x14
-      - { start: 0x2175e0, type: .data, vram: 0x3165e0, name: gameclear_dat } # size:0x640
-      - { start: 0x217c20, type: .data, vram: 0x316c20, name: gameover_dat } # size:0x40
+      - { start: 0x2175e0, type: data, vram: 0x3165e0, name: gameclear_dat } # size:0x640
+      - { start: 0x217c20, type: data, vram: 0x316c20, name: gameover_dat } # size:0x40
       - {
           start: 0x217c60,
           type: .data,
           vram: 0x316c60,
           name: ingame/gameover/prg/gameover_menu_load,
         } # size:0x14
-      - { start: 0x217c80, type: .data, vram: 0x316c80, name: glob } # size:0x4f8
+      - { start: 0x217c80, type: data, vram: 0x316c80, name: glob } # size:0x4f8
       - { start: 0x218178, type: .data, vram: 0x317178, name: main/gphase } # size:0xbc0
       - {
           start: 0x218d40,
@@ -1478,7 +1478,7 @@ segments:
         } # size:0x9f8
       - {
           start: 0x21a328,
-          type: .data,
+          type: data,
           vram: 0x319328,
           name: puzzle/kai/kai_pzl,
         } # size:0x88
@@ -1495,11 +1495,11 @@ segments:
           name: puzzle/kaza/kaza_pzl,
         } # size:0x2c
       - { start: 0x21a410, type: .data, vram: 0x319410, name: key_cnf } # size:0x390
-      - { start: 0x21a7a0, type: .data, vram: 0x3197a0, name: lang_sl_dat } # size:0x220
+      - { start: 0x21a7a0, type: data, vram: 0x3197a0, name: lang_sl_dat } # size:0x220
       - { start: 0x21a9c0, type: .data, vram: 0x3199c0, name: outgame/loadgame } # size:0x14
       - {
           start: 0x21a9d8,
-          type: .data,
+          type: data,
           vram: 0x3199d8,
           name: outgame/loading_dat,
         } # size:0xa0
@@ -1516,7 +1516,7 @@ segments:
           vram: 0x319de8,
           name: ingame/plyr/man_data,
         } # size:0x40
-      - { start: 0x21ae28, type: .data, vram: 0x319e28, name: map_area_dat } # size:0x2490
+      - { start: 0x21ae28, type: data, vram: 0x319e28, name: map_area_dat } # size:0x2490
       - {
           start: 0x21d2b8,
           type: .data,
@@ -1543,13 +1543,13 @@ segments:
         } # size:0x84
       - {
           start: 0x21d860,
-          type: .data,
+          type: data,
           vram: 0x31c860,
           name: ingame/map/map_room_dat,
         } # size:0x19b0
       - {
           start: 0x21f210,
-          type: .data,
+          type: data,
           vram: 0x31e210,
           name: ingame/map/map_size_dat,
         } # size:0x198
@@ -1586,7 +1586,7 @@ segments:
         } # size:0x20
       - {
           start: 0x2226f0,
-          type: .data,
+          type: data,
           vram: 0x3216f0,
           name: ingame/menu/menu_camera_dat,
         } # size:0x2560
@@ -1598,7 +1598,7 @@ segments:
         } # size:0x18
       - {
           start: 0x224c68,
-          type: .data,
+          type: data,
           vram: 0x323c68,
           name: ingame/menu/menu_cmn_dat,
         } # size:0x5c0
@@ -1610,13 +1610,13 @@ segments:
         } # size:0x3c
       - {
           start: 0x225268,
-          type: .data,
+          type: data,
           vram: 0x324268,
           name: ingame/menu/menu_file_dat,
         } # size:0x960
       - {
           start: 0x225bc8,
-          type: .data,
+          type: data,
           vram: 0x324bc8,
           name: ingame/menu/menu_glist_dat,
         } # size:0x480
@@ -1628,19 +1628,19 @@ segments:
         } # size:0xc
       - {
           start: 0x226058,
-          type: .data,
+          type: data,
           vram: 0x325058,
           name: ingame/menu/menu_item_dat,
         } # size:0xd40
       - {
           start: 0x226d98,
-          type: .data,
+          type: data,
           vram: 0x325d98,
           name: ingame/menu/menu_map_dat,
         } # size:0x720
       - {
           start: 0x2274b8,
-          type: .data,
+          type: data,
           vram: 0x3264b8,
           name: ingame/menu/menu_map_mapdata_dat,
         } # size:0x2120
@@ -1652,7 +1652,7 @@ segments:
         } # size:0x1c
       - {
           start: 0x2295f8,
-          type: .data,
+          type: data,
           vram: 0x3285f8,
           name: ingame/menu/menu_memo_dat,
         } # size:0x800
@@ -1664,13 +1664,13 @@ segments:
         } # size:0x1ba0
       - {
           start: 0x22b998,
-          type: .data,
+          type: data,
           vram: 0x32a998,
           name: ingame/menu/menu_radio_dat,
         } # size:0x4a0
       - {
           start: 0x22be38,
-          type: .data,
+          type: data,
           vram: 0x32ae38,
           name: ingame/menu/menu_top_dat,
         } # size:0xa60
@@ -2233,7 +2233,7 @@ segments:
         } #  size:0x26c
       - {
           start: 0x26fd4c,
-          type: .eh_frame,
+          type: eh_frame,
           vram: 0x36ed4c,
           name: album/prg/album_dat,
         } #  size:0x70
@@ -3040,7 +3040,7 @@ segments:
         } #  size:0x70
       - {
           start: 0x287978,
-          type: .eh_frame,
+          type: eh_frame,
           vram: 0x386978,
           name: ingame/puzzle/kai/kai_pzl,
         } #  size:0x240
@@ -4050,7 +4050,7 @@ segments:
       - { start: 0x2a10a8, type: .rodata, vram: 0x3a00a8, name: album/prg/album }
       - {
           start: 0x2a11d8,
-          type: .rodata,
+          type: rodata,
           vram: 0x3a01d8,
           name: album/dat/album_dat,
         }
@@ -4134,7 +4134,7 @@ segments:
         }
       - {
           start: 0x2a2d10,
-          type: .rodata,
+          type: rodata,
           vram: 0x3a1d10,
           name: graphics/graph2d/tim_dat/cap_group_dat,
         }
@@ -4219,7 +4219,7 @@ segments:
         }
       - {
           start: 0x2a5518,
-          type: .rodata,
+          type: rodata,
           vram: 0x3a4518,
           name: ingame/menu/tim_dat/door_point_dat,
         }
@@ -4829,7 +4829,7 @@ segments:
         }
       - {
           start: 0x2ba8a8,
-          type: .rodata,
+          type: rodata,
           vram: 0x3b98a8,
           name: puzzle/kai/kai_pzl,
         }
@@ -5167,7 +5167,7 @@ segments:
         }
       - {
           start: 0x2bfb40,
-          type: .rodata,
+          type: rodata,
           vram: 0x3beb40,
           name: ingame/menu/menu_radio_dat,
         }
@@ -6311,7 +6311,7 @@ segments:
         } # size:0x58
       - {
           start: 0x2ef490,
-          type: .lit4,
+          type: lit4,
           vram: 0x3ee490,
           name: puzzle/kai/kai_pzl,
         } # size:0x4
@@ -6690,7 +6690,7 @@ segments:
       - { start: 0x2f0268, type: .sdata, vram: 0x3ef268, name: album/prg/album } # size:0x88
       - {
           start: 0x2f02f0,
-          type: .sdata,
+          type: sdata,
           vram: 0x3ef2f0,
           name: album/dat/album_dat,
         } # size:0x16
@@ -7414,7 +7414,7 @@ segments:
         } # size:0x16
       - {
           start: 0x2f2680,
-          type: .sdata,
+          type: sdata,
           vram: 0x3f1680,
           name: ingame/puzzle/kai/kai_pzl,
         } # size:0x76
@@ -8109,7 +8109,7 @@ segments:
       - { type: .sbss, vram: 0x3f4d08, name: ingame/puzzle/hina/hina_pzl } # size:0x2
       - { type: .sbss, vram: 0x3f4d10, name: ingame/ingame } # size:0x18
       - { type: .sbss, vram: 0x3f4d28, name: ingame/ingame_effect } # size:0xc
-      - { type: .sbss, vram: 0x3f4d38, name: ingame/puzzle/kai/kai_pzl } # size:0x10
+      - { type: sbss, vram: 0x3f4d38, name: ingame/puzzle/kai/kai_pzl } # size:0x10
       - { type: .sbss, vram: 0x3f4d48, name: outgame/lang_check } # size:0x8
       - { type: .sbss, vram: 0x3f4d50, name: outgame/lang_sel } # size:0x8
       - { type: .sbss, vram: 0x3f4d58, name: ingame/item/prg/level_gem } # size:0x1
@@ -8260,7 +8260,7 @@ segments:
       - { type: .bss, vram: 0x4b3f30, name: graphics/graphics } # size:0xa0
       - { type: .bss, vram: 0x4b3fd0, name: ingame/puzzle/hina/hina_pzl } # size:0x66
       - { type: .bss, vram: 0x4b4040, name: ingame/ingame_effect } # size:0x110
-      - { type: .bss, vram: 0x4b4150, name: ingame/puzzle/kai/kai_pzl } # size:0x14
+      - { type: bss, vram: 0x4b4150, name: ingame/puzzle/kai/kai_pzl } # size:0x14
       - { type: .bss, vram: 0x4b4168, name: ingame/puzzle/kaza2/kaza2_pzl } # size:0x5c
       - { type: .bss, vram: 0x4b41c8, name: ingame/puzzle/kaza/kaza_pzl } # size:0x5c
       - { type: .bss, vram: 0x4b4228, name: outgame/loadgame } # size:0xc
