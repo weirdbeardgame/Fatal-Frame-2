@@ -19,7 +19,7 @@ options:
   undefined_syms_auto_path: undefined_syms_auto.txt
   symbol_addrs_path: symbol_addrs.txt
   extensions_path: ../tools/splat_ext
-  suggestion_rodata_section_start: False
+  pair_rodata_to_text: False
   section_order:
     [
       ".text",
