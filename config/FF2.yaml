@@ -1897,6 +1897,7 @@ segments:
           name: ingame/subtitle/subtitle,
         } # size:0x1c
       - { start: 0x250ea0, type: .data, vram: 0x34fea0, name: system/os/system } # size:0xe740
+      - { start: 0x25f5e0, type: data, vram: 0x35e5e0, name: outgame/title_dat } # size:0x7229
       - { start: 0x25f980, type: .data, vram: 0x35e980, name: iopsys.a_snd_3d_ } # size:0x18
       - { start: 0x25f998, type: .data, vram: 0x35e998, name: iopsys.a_snd_ } # size:0x28
       - {
@@ -1907,7 +1908,6 @@ segments:
         } # size:0x250
       - { start: 0x25fc10, type: .data, vram: 0x35ec10, name: iopsys.a_hxd_ } # size:0x14
       - { start: 0x25fc28, type: .data, vram: 0x35ec28, name: cmp.a_encodes_ } # size:0x7229
-      - { start: 0x25f5e0, type: data, vram: 0x35e5e0, name: outgame/title_dat } # size:0x7229
       - {
           start: 0x266e58,
           type: .data,
