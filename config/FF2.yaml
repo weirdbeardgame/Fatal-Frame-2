@@ -103,7 +103,7 @@ segments:
       - [0x2c650, asmtu, outgame/autoload] # size:0xabc
       - [0x2d110, asmtu, ingame/photo/bonus_shot] # size:0x13fc
       - [0x2e510, asmtu, ingame/menu/tim_dat/cam_level_up_point] # size:0xd4
-      - [0x2e5e8, asmtu, ingame/menu/tim_dat/camera_power_up] # size:0x1bc
+      - [0x2e5e8, asmtu, ingame/photo/camera_power_up] # size:0x1bc
       - [0x2e7a8, asmtu, ingame/photo/center_circle] # size:0x638
       - [0x2ede0, asmtu, ingame/photo/center_cross] # size:0x3c8
       - [0x2f1a8, asmtu, outgame/chapter_sel] # size:0xa3c
@@ -333,8 +333,8 @@ segments:
       - [0x13f100, asmtu, ingame/plyr/plyr_mdl] # size:0x1fe8
       - [0x1410e8, asmtu, ingame/menu/plyr_room_info] # size:0x9d0
       - [0x141ab8, asmtu, ingame/puzzle/puzzle] # size:0x1260
-      - [0x142d18, asmtu, puzzle/kaza/puzzle_kaza_dat] # size:0x1d8
-      - [0x142ef0, asmtu, puzzle/roku/puzzle_roku_dat] # size:0x120
+      - [0x142d18, asmtu, ingame/puzzle/kaza/puzzle_kaza_dat] # size:0x1d8
+      - [0x142ef0, asmtu, ingame/puzzle/roku/puzzle_roku_dat] # size:0x120
       - [0x143010, asmtu, ingame/puzzle/roku/roku_pzl] # size:0x2f08
       - [0x145f18, asmtu, system/mc/dat/save_data] # size:0xd4
       - [0x145ff0, asmtu, save_load/prg/save_load_disp] # size:0x1a88
@@ -618,7 +618,7 @@ segments:
         vram:
 
         # CTOR ################
-      - { start: 0x1c4b00, type: .ctor, vram: 0x2c3b00, name: crtbegin } #  size:0x4
+      - { start: 0x1c4b00, type: ctor, vram: 0x2c3b00, name: crtbegin } #  size:0x4
       - {
           start: 0x1c4b04,
           type: .ctor,
@@ -1053,13 +1053,13 @@ segments:
           start: 0x1c4c44,
           type: .ctor,
           vram: 0x2c3c44,
-          name: puzzle/kaza/puzzle_kaza_dat,
+          name: ingame/puzzle/kaza/puzzle_kaza_dat,
         } #  size:0x4
       - {
           start: 0x1c4c48,
           type: .ctor,
           vram: 0x2c3c48,
-          name: puzzle/roku/puzzle_roku_dat,
+          name: ingame/puzzle/roku/puzzle_roku_dat,
         } #  size:0x4
       - {
           start: 0x1c4c4c,
@@ -1093,18 +1093,18 @@ segments:
         } #  size:0x4
       - { start: 0x1c4c60, type: .ctor, vram: 0x2c3c60, name: common/spr_stack } #  size:0x4
       - { start: 0x1c4c64, type: .ctor, vram: 0x2c3c64, name: debug/zero2_perf } #  size:0x4
-      - { start: 0x1c4c68, type: .ctor, vram: 0x2c3c68, name: crtend } #  size:0x4
+      - { start: 0x1c4c68, type: ctor, vram: 0x2c3c68, name: crtend } #  size:0x4
 
 
         # DTOR ################
-      - { start: 0x1c4c6c, type: .dtor, vram: 0x2c3c6c, name: crtbegin } #  size:0x4
+      - { start: 0x1c4c6c, type: dtor, vram: 0x2c3c6c, name: crtbegin } #  size:0x4
       - {
           start: 0x1c4c70,
           type: .dtor,
           vram: 0x2c3c70,
           name: graphics/graph3d/gra3dShadow,
         } #  size:0x4
-      - { start: 0x1c4c74, type: .dtor, vram: 0x2c3c74, name: crtend } #  size:0x4
+      - { start: 0x1c4c74, type: dtor, vram: 0x2c3c74, name: crtend } #  size:0x4
 
       - [0x1c4c78, databin, reg_info]
       # data ################
@@ -1559,12 +1559,12 @@ segments:
           vram: 0x31e3a8,
           name: system/mc/prg/mc_set_data,
         } # size:0x20
-      - [0x21f3b8, c, system/mc/mc_title_dat] # size:0x16c0
+      - [0x21f3c6, c, system/mc/dat/mc_title_dat] # size:0x16c0
       - {
           start: 0x21f3c8,
           type: .data,
           vram: 0x31e3c8,
-          name: system/mc/mc_title_dat,
+          name: system/mc/dat/mc_title_dat,
         } # size:0x34
       - {
           start: 0x21f400,
@@ -1802,19 +1802,19 @@ segments:
           start: 0x23e110,
           type: data,
           vram: 0x33d110,
-          name: ingame/puzzle/puzzle_hina_dat,
+          name: ingame/puzzle/hina/puzzle_hina_dat,
         } # size:0x6e0
       - {
           start: 0x23e7f0,
           type: .data,
           vram: 0x33d7f0,
-          name: ingame/puzzle/puzzle_kaza_dat,
+          name: ingame/puzzle/kaza/puzzle_kaza_dat,
         } # size:0x740
       - {
           start: 0x23ef30,
           type: .data,
           vram: 0x33df30,
-          name: ingame/puzzle/puzzle_roku_dat,
+          name: ingame/puzzle/roku/puzzle_roku_dat,
         } # size:0x460
       - {
           start: 0x23f390,
@@ -1830,19 +1830,19 @@ segments:
         } # size:0xe4
       - {
           start: 0x23f498,
-          type: .data,
+          type: data,
           vram: 0x33e498,
           name: system/mc/dat/save_load_dat,
         } # size:0x780
       - {
           start: 0x23fc18,
-          type: .data,
+          type: data,
           vram: 0x33ec18,
           name: system/mc/dat/save_point_dat,
         } # size:0xd0
       - {
           start: 0x23fce8,
-          type: .data,
+          type: data,
           vram: 0x33ece8,
           name: system/mc/dat/savepoint_dat,
         } # size:0x200
@@ -1859,7 +1859,7 @@ segments:
           name: graphics/scene/scene_dat,
         } # size:0x164
       - { start: 0x244380, type: .data, vram: 0x343380, name: debug/scn_test } # size:0x15f0
-      - { start: 0x245970, type: .data, vram: 0x344970, name: setup_dat } # size:0x6e0
+      - { start: 0x245970, type: data, vram: 0x344970, name: outgame/tim_dat/setup_dat } # size:0x6e0
       - {
           start: 0x246050,
           type: .data,
@@ -1874,7 +1874,7 @@ segments:
         } # size:0x60
       - {
           start: 0x2460d0,
-          type: .data,
+          type: data,
           vram: 0x3450d0,
           name: ingame/plyr/sis_trpoint,
         } # size:0xa2ec
@@ -1907,6 +1907,7 @@ segments:
         } # size:0x250
       - { start: 0x25fc10, type: .data, vram: 0x35ec10, name: iopsys.a_hxd_ } # size:0x14
       - { start: 0x25fc28, type: .data, vram: 0x35ec28, name: cmp.a_encodes_ } # size:0x7229
+      - { start: 0x25f5e0, type: data, vram: 0x35e5e0, name: outgame/title_dat } # size:0x7229
       - {
           start: 0x266e58,
           type: .data,
@@ -2026,7 +2027,7 @@ segments:
         } # size:0x20
       - { start: 0x26a260, type: .data, vram: 0x369260, name: libmpeg.a_pack_ } # size:0xa0
       - { start: 0x26a300, type: .data, vram: 0x369300, name: libmpeg.a_mpeg_ } # size:0x10
-      - { start: 0x26a340, type: .data, vram: 0x369340, name: libmpeg.a_var_ } # size:0x80
+      - { start: 0x26a340, type: data, vram: 0x369340, name: libmpeg.a_var_ } # size:0x80
       - { start: 0x26a3c0, type: .data, vram: 0x3693c0, name: libmpeg.a_mpc_ } # size:0xa8
       - {
           start: 0x26a468,
@@ -2052,7 +2053,7 @@ segments:
           vram: 0x369610,
           name: libgcc.a_exception_,
         } # size:0x4
-      - { start: 0x26a618, type: .data, vram: 0x369618, name: libc.a_impure_ } # size:0x2f4
+      - { start: 0x26a618, type: data, vram: 0x369618, name: libc.a_impure_ } # size:0x2f4
       - { start: 0x26a910, type: .data, vram: 0x369910, name: libc.a_mallocr_ } # size:0x458
       - { start: 0x26ad68, type: .data, vram: 0x369d68, name: libc.a_mlock_ } # size:0x8
       - { start: 0x26ad70, type: .data, vram: 0x369d70, name: libc.a_locale_ } # size:0x4
@@ -2308,7 +2309,7 @@ segments:
           start: 0x272398,
           type: .eh_frame,
           vram: 0x371398,
-          name: ingame/menu/tim_dat/camera_power_up,
+          name: ingame/photo/camera_power_up,
         } #  size:0x70
       - {
           start: 0x272408,
@@ -2651,7 +2652,7 @@ segments:
           start: 0x27ea48,
           type: .eh_frame,
           vram: 0x37da48,
-          name: ingame/event/prg/ev_talk_dat,
+          name: ingame/event/dat/ev_talk_dat,
         } #  size:0x70
       - {
           start: 0x27eab8,
@@ -2663,7 +2664,7 @@ segments:
           start: 0x27ec14,
           type: .eh_frame,
           vram: 0x37dc14,
-          name: ingame/event/prg/event_camera,
+          name: ingame/camera/event_camera,
         } #  size:0x3f0
       - {
           start: 0x27f004,
@@ -3025,13 +3026,13 @@ segments:
           start: 0x287898,
           type: .eh_frame,
           vram: 0x386898,
-          name: ingame/item/prg/item_dat,
+          name: ingame/item/dat/item_dat,
         } #  size:0x70
       - {
           start: 0x287908,
           type: .eh_frame,
           vram: 0x386908,
-          name: ingame/item/prg/item_debug,
+          name: debug/item_debug,
         } #  size:0x70
       - {
           start: 0x287978,
@@ -3105,7 +3106,7 @@ segments:
           start: 0x289a60,
           type: .eh_frame,
           vram: 0x388a60,
-          name: ingame/map/map_camera,
+          name: ingame/camera/map_camera,
         } #  size:0x4a0
       - {
           start: 0x289f00,
@@ -3380,7 +3381,7 @@ segments:
         } #  size:0x3f4
       - {
           start: 0x28f750,
-          type: .eh_frame,
+          type: eh_frame,
           vram: 0x38e750,
           name: ingame/menu/menu_photo,
         } #  size:0x49c
@@ -3500,7 +3501,7 @@ segments:
         } #  size:0x140
       - {
           start: 0x293ca8,
-          type: .eh_frame,
+          type: eh_frame,
           vram: 0x392ca8,
           name: common/my_mallocmy_malloc,
         } #  size:0x64
@@ -3553,7 +3554,7 @@ segments:
           name: outgame/outgame,
         } #  size:0x1b0
       - { start: 0x295180, type: .eh_frame, vram: 0x394180, name: pad/pad } #  size:0x114
-      - { start: 0x295294, type: .eh_frame, vram: 0x394294, name: pad/pad_check } #  size:0xd4
+      - { start: 0x295294, type: .eh_frame, vram: 0x394294, name: outgame/pad_check } #  size:0xd4
       - {
           start: 0x295368,
           type: .eh_frame,
@@ -3881,7 +3882,7 @@ segments:
           vram: 0x39d918,
           name: libgcc.a_exception_,
         } #  size:0x1d0
-      - { start: 0x29eae8, type: .eh_frame, vram: 0x39dae8, name: crtend } #  size:0x4
+      - { start: 0x29eae8, type: eh_frame, vram: 0x39dae8, name: crtend } #  size:0x4
       #- [0x29eaec, pad, vudata]
 
       # rodata ################
@@ -4202,7 +4203,7 @@ segments:
         }
       - {
           start: 0x2a4f50,
-          type: .rodata,
+          type: rodata,
           vram: 0x3a3f50,
           name: system/compress/decode,
         }
@@ -4713,7 +4714,7 @@ segments:
         }
       - {
           start: 0x2b5288,
-          type: .rodata,
+          type: rodata,
           vram: 0x3b4288,
           name: ingame/menu/tim_dat/ghost_seal_door_dat,
         }
@@ -4873,7 +4874,7 @@ segments:
       - { start: 0x2bb960, type: .rodata, vram: 0x3ba960, name: outgame/logo }
       - {
           start: 0x2bbac8,
-          type: .rodata,
+          type: rodata,
           vram: 0x3baac8,
           name: ingame/photo/m_player_camera,
         }
@@ -4924,121 +4925,121 @@ segments:
           start: 0x2bc340,
           type: .rodata,
           vram: 0x3bb340,
-          name: system/mc/mc_check,
+          name: system/mc/prg/mc_check,
         }
       - {
           start: 0x2bc360,
           type: .rodata,
           vram: 0x3bb360,
-          name: system/mc/mc_check_broken,
+          name: system/mc/prg/mc_check_broken,
         }
       - {
           start: 0x2bc388,
           type: .rodata,
           vram: 0x3bb388,
-          name: system/mc/mc_check_card,
+          name: system/mc/prg/mc_check_card,
         }
       - {
           start: 0x2bc3d0,
           type: .rodata,
           vram: 0x3bb3d0,
-          name: system/mc/mc_check_dir,
+          name: system/mc/prg/mc_check_dir,
         }
       - {
           start: 0x2bc440,
           type: .rodata,
           vram: 0x3bb440,
-          name: system/mc/mc_close,
+          name: system/mc/prg/mc_close,
         }
       - {
           start: 0x2bc460,
           type: .rodata,
           vram: 0x3bb460,
-          name: system/mc/mc_del_all_file,
+          name: system/mc/prg/mc_del_all_file,
         }
       - {
           start: 0x2bc488,
           type: .rodata,
           vram: 0x3bb488,
-          name: system/mc/mc_del_dir,
+          name: system/mc/prg/mc_del_dir,
         }
       - {
           start: 0x2bc4a8,
           type: .rodata,
           vram: 0x3bb4a8,
-          name: system/mc/mc_del_file,
+          name: system/mc/prg/mc_del_file,
         }
       - {
           start: 0x2bc508,
           type: .rodata,
           vram: 0x3bb508,
-          name: system/mc/mc_format,
+          name: system/mc/prg/mc_format,
         }
       - {
           start: 0x2bc528,
           type: .rodata,
           vram: 0x3bb528,
-          name: system/mc/mc_icon,
+          name: system/mc/prg/mc_icon,
         }
       - {
           start: 0x2bc548,
           type: .rodata,
           vram: 0x3bb548,
-          name: system/mc/mc_icon_sys,
+          name: system/mc/prg/mc_icon_sys,
         }
       - {
           start: 0x2bc570,
-          type: .rodata,
+          type: rodata,
           vram: 0x3bb570,
-          name: system/mc/mc_iconsys_dat,
+          name: system/mc/prg/mc_iconsys_dat,
         }
       - {
           start: 0x2bc620,
           type: .rodata,
           vram: 0x3bb620,
-          name: system/mc/mc_load,
+          name: system/mc/prg/mc_load,
         }
       - {
           start: 0x2bc658,
           type: .rodata,
           vram: 0x3bb658,
-          name: system/mc/mc_make,
+          name: system/mc/prg/mc_make,
         }
       - {
           start: 0x2bc6b0,
           type: .rodata,
           vram: 0x3bb6b0,
-          name: system/mc/mc_make_all_file,
+          name: system/mc/prg/mc_make_all_file,
         }
       - {
           start: 0x2bc758,
           type: .rodata,
           vram: 0x3bb758,
-          name: system/mc/mc_make_dir,
+          name: system/mc/prg/mc_make_dir,
         }
       - {
           start: 0x2bc7a0,
           type: .rodata,
           vram: 0x3bb7a0,
-          name: system/mc/mc_make_file,
+          name: system/mc/prg/mc_make_file,
         }
       - {
           start: 0x2bc7e8,
           type: .rodata,
           vram: 0x3bb7e8,
-          name: system/mc/mc_open,
+          name: system/mc/prg/mc_open,
         }
       - {
           start: 0x2bc828,
           type: .rodata,
           vram: 0x3bb828,
-          name: system/mc/mc_read,
+          name: system/mc/prg/mc_read,
         }
       - {
           start: 0x2bc850,
           type: .rodata,
           vram: 0x3bb850,
-          name: system/mc/mc_save,
+          name: system/mc/prg/mc_save,
         }
       - {
           start: 0x2bc890,
@@ -5050,13 +5051,13 @@ segments:
           start: 0x2bcc70,
           type: .rodata,
           vram: 0x3bbc70,
-          name: system/mc/mc_title_dat,
+          name: system/mc/dat/mc_title_dat,
         }
       - {
           start: 0x2bd178,
           type: .rodata,
           vram: 0x3bc178,
-          name: system/mc/mc_write,
+          name: system/mc/prg/mc_write,
         }
       - {
           start: 0x2bd198,
@@ -5122,7 +5123,7 @@ segments:
           start: 0x2be770,
           type: .rodata,
           vram: 0x3bd770,
-          name: ingame/menu/menu_dat,
+          name: debug/menu_dat,
         }
       - {
           start: 0x2be830,
@@ -5150,7 +5151,7 @@ segments:
         }
       - {
           start: 0x2bf498,
-          type: .rodata,
+          type: rodata,
           vram: 0x3be498,
           name: ingame/menu/menu_photo,
         }
@@ -5280,7 +5281,7 @@ segments:
           vram: 0x3c1a38,
           name: graphics/movie/movie_title_dat,
         }
-      - { start: 0x2c2ac0, type: .rodata, vram: 0x3c1ac0, name: msg_col_tbl }
+      - { start: 0x2c2ac0, type: rodata, vram: 0x3c1ac0, name: msg_col_tbl }
       - {
           start: 0x2c2b48,
           type: .rodata,
@@ -5378,7 +5379,7 @@ segments:
         }
       - {
           start: 0x2c5528,
-          type: .rodata,
+          type: rodata,
           vram: 0x3c4528,
           name: ingame/puzzle/puzzle_dat,
         }
@@ -5386,17 +5387,17 @@ segments:
           start: 0x2c5558,
           type: .rodata,
           vram: 0x3c4558,
-          name: ingame/puzzle/puzzle_kaza_dat,
+          name: ingame/puzzle/kaza/puzzle_kaza_dat,
         }
       - {
           start: 0x2c5650,
           type: .rodata,
           vram: 0x3c4650,
-          name: ingame/puzzle/puzzle_roku_dat,
+          name: ingame/puzzle/roku/puzzle_roku_dat,
         }
       - {
           start: 0x2c56c0,
-          type: .rodata,
+          type: rodata,
           vram: 0x3c46c0,
           name: ingame/puzzle/rank_time_dat,
         }
@@ -5555,7 +5556,7 @@ segments:
         }
       - {
           start: 0x2e7790,
-          type: .rodata,
+          type: rodata,
           vram: 0x3e6790,
           name: outgame/title_dat,
         }
@@ -5920,7 +5921,7 @@ segments:
         }
       - { start: 0x2eccd8, type: .rodata, vram: 0x3ebcd8, name: libc.a_assert_ }
       - { start: 0x2ecd08, type: .rodata, vram: 0x3ebd08, name: libc.a_ctype__ }
-      - { start: 0x2ece10, type: .rodata, vram: 0x3ebe10, name: libc.a_impure_ }
+      - { start: 0x2ece10, type: rodata, vram: 0x3ebe10, name: libc.a_impure_ }
       - {
           start: 0x2ece20,
           type: .rodata,
@@ -6318,7 +6319,7 @@ segments:
         } # size:0x4
       - {
           start: 0x2ef498,
-          type: .lit4,
+          type: lit4,
           vram: 0x3ee498,
           name: ingame/photo/m_player_camera,
         } # size:0x4
@@ -6373,7 +6374,7 @@ segments:
         } # size:0x4
       - {
           start: 0x2ef588,
-          type: .lit4,
+          type: lit4,
           vram: 0x3ee588,
           name: ingame/menu/menu_photo,
         } # size:0x14
@@ -6749,7 +6750,7 @@ segments:
           start: 0x2f05b0,
           type: .sdata,
           vram: 0x3ef5b0,
-          name: ingame/menu/tim_dat/camera_power_up,
+          name: ingame/photo/camera_power_up,
         } # size:0x44
       - {
           start: 0x2f05f8,
@@ -7399,13 +7400,13 @@ segments:
           start: 0x2f2650,
           type: .sdata,
           vram: 0x3f1650,
-          name: ingame/item/prg/item_dat,
+          name: ingame/item/dat/item_dat,
         } # size:0x16
       - {
           start: 0x2f2668,
           type: .sdata,
           vram: 0x3f1668,
-          name: ingame/item/prg/item_debug,
+          name: debug/item_debug,
         } # size:0x16
       - {
           start: 0x2f2680,
@@ -7505,7 +7506,7 @@ segments:
           start: 0x2f2b40,
           type: .sdata,
           vram: 0x3f1b40,
-          name: system/mc/mc_title_dat,
+          name: system/mc/dat/mc_title_dat,
         } # size:0x24
       - {
           start: 0x2f2b68,
@@ -7566,7 +7567,7 @@ segments:
           start: 0x2f3cd0,
           type: .sdata,
           vram: 0x3f2cd0,
-          name: ingame/menu/menu_dat,
+          name: debug/menu_dat,
         } # size:0x33
       - {
           start: 0x2f3d08,
@@ -7594,7 +7595,7 @@ segments:
         } # size:0x44
       - {
           start: 0x2f3e80,
-          type: .sdata,
+          type: sdata,
           vram: 0x3f2e80,
           name: ingame/menu/menu_photo,
         } # size:0x44
@@ -7795,19 +7796,19 @@ segments:
           start: 0x2f4b00,
           type: sdata,
           vram: 0x3f3b00,
-          name: ingame/puzzle/puzzle_hina_dat,
+          name: ingame/puzzle/hina/puzzle_hina_dat,
         } # size:0x8
       - {
           start: 0x2f4b08,
           type: .sdata,
           vram: 0x3f3b08,
-          name: ingame/puzzle/puzzle_kaza_dat,
+          name: ingame/puzzle/kaza/puzzle_kaza_dat,
         } # size:0x64
       - {
           start: 0x2f4b70,
           type: .sdata,
           vram: 0x3f3b70,
-          name: ingame/puzzle/puzzle_roku_dat,
+          name: ingame/puzzle/roku/puzzle_roku_dat,
         } # size:0x1c
       - {
           start: 0x2f4b90,
@@ -8123,7 +8124,7 @@ segments:
       - { type: .sbss, vram: 0x3f4e20, name: ingame/menu/menu_file } # size:0x6
       - { type: .sbss, vram: 0x3f4e28, name: ingame/menu/menu_item } # size:0x4
       - { type: .sbss, vram: 0x3f4e30, name: ingame/menu/menu_memo } # size:0x6
-      - { type: .sbss, vram: 0x3f4e38, name: ingame/menu/menu_photo } # size:0x2
+      - { type: sbss, vram: 0x3f4e38, name: ingame/menu/menu_photo } # size:0x2
       - { type: .sbss, vram: 0x3f4e40, name: graphics/graph2d/message } # size:0x18
       - { type: .sbss, vram: 0x3f4e58, name: outgame/mission_ctl } # size:0x8
       - { type: .sbss, vram: 0x3f4e60, name: outgame/mission_sel } # size:0xa
@@ -8143,7 +8144,7 @@ segments:
       - { type: .sbss, vram: 0x3f4e9c, name: ingame/photo/n_plyr_camera } # size:0x4
       - { type: .sbss, vram: 0x3f4ea0, name: outgame/newgame } # size:0x4
       - { type: .sbss, vram: 0x3f4ea8, name: pad/pad } # size:0x6
-      #- {type: .sbss, vram: 0x3f4eae, name: outgame/pad_check} # size:0x1
+      - {type: .sbss, vram: 0x3f4eae, name: outgame/pad_check} # size:0x1
       - { type: .sbss, vram: 0x3f4eb0, name: ingame/photo/photo } # size:0x28
       - { type: .sbss, vram: 0x3f4ed8, name: ingame/photo/photo_dat } # size:0x8
       - { type: .sbss, vram: 0x3f4ee0, name: ingame/menu/play_data } # size:0x1
@@ -8291,7 +8292,7 @@ segments:
       - { type: .bss, vram: 0x4b59f0, name: ingame/menu/menu_item } # size:0x1e0
       - { type: .bss, vram: 0x4b5bd0, name: ingame/menu/menu_map } # size:0x2c
       - { type: .bss, vram: 0x4b5c00, name: ingame/menu/menu_memo } # size:0xb0
-      - { type: .bss, vram: 0x4b5cb0, name: ingame/menu/menu_photo } # size:0xb
+      - { type: bss, vram: 0x4b5cb0, name: ingame/menu/menu_photo } # size:0xb
       - { type: .bss, vram: 0x4b5cc0, name: ingame/menu/menu_radio } # size:0x164
       - { type: .bss, vram: 0x4b5e28, name: ingame/menu/menu_soul } # size:0x5b0
       - { type: .bss, vram: 0x4b63d8, name: ingame/menu/menu_top } # size:0x20
