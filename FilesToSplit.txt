@@ -1,0 +1,13 @@
+glob.c
+mission_dat.c
+morph_dat.c
+movie_title_dat.c
+movie_room_menu.c
+msg_box.c
+msg_def_dat.c
+msg_disp_dat.c
+msg_win_dat.c
+n_finder_dat.c
+option_dat.c
+outgame_dat.c
+pause_dat.c
