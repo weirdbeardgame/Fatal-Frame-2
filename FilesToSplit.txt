@@ -17,7 +17,7 @@ save_load_dat.c
 save_point_dat.c
 savepoint_dat.c
 sis_trpoint.c
-libmpeg.a_var_
+libmpeg.a_var_ # SDK file
 crtend
 decode.c
 ghost_seal_door_dat.c
@@ -27,3 +27,9 @@ msg_col_tbl.c
 puzzle_dat.c
 rank_time_dat
 title_dat
+libgcc.a__thenan_df_ # SDK file
+libc.a_ctype__ # SDK file
+libc.a_s_infconst_ # SDK file
+camera_film.h
+file_tex_dat.h
+g3dVu0Instance.h
