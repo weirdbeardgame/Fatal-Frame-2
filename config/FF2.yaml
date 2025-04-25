@@ -1431,7 +1431,8 @@ segments:
           vram: 0x316c60,
           name: ingame/gameover/prg/gameover_menu_load,
         } # size:0x14
-      - { start: 0x217c80, type: data, vram: 0x316c80, name: glob } # size:0x4f8
+      #- [ 0x217c79, c, main/glob ]
+      - { start: 0x217c80, type: data, vram: 0x316c80, name: main/glob } # size:0x4f8
       - { start: 0x218178, type: .data, vram: 0x317178, name: main/gphase } # size:0xbc0
       - {
           start: 0x218d40,
@@ -1559,7 +1560,7 @@ segments:
           vram: 0x31e3a8,
           name: system/mc/prg/mc_set_data,
         } # size:0x20
-      - [0x21f3c6, c, system/mc/dat/mc_title_dat] # size:0x16c0
+      - [0x21f3c7, c, system/mc/dat/mc_title_dat] # size:0x16c0
       - {
           start: 0x21f3c8,
           type: .data,
@@ -8034,11 +8035,18 @@ segments:
         } # size:0x1c
       - {
           start: 0x2F59FC,
-          type: .sdata,
+          type: sdata,
           vram: 0x3f49fc,
           name: graphics/graph3d/CDebugEdit,
         } # size:0x4
+      #- {
+         # start: 0x2F5A00,
+         # type: sdata,
+         # vram: 0x3F4A00,
+         # name: CDebugEdit_pad, # Header?
+        #} # size:0x4
       - { start: 0x2F5A04, type: .sdata, vram: 0x3F4A04, name: debug/debug } # size:0x4
+      #- { start: 0x2F5A08, type: sdata, vram: 0x3F4A08, name: debug/debug_pad } # size:0x4
 
       - [0x2F5A0C, pad, section_padding_2F5A0C]
 
