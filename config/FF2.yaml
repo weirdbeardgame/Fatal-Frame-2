@@ -8033,20 +8033,6 @@ segments:
           vram: 0x3f49e0,
           name: playpss.a_playpss_,
         } # size:0x1c
-      - {
-          start: 0x2F59FC,
-          type: sdata,
-          vram: 0x3f49fc,
-          name: graphics/graph3d/CDebugEdit,
-        } # size:0x4
-      #- {
-         # start: 0x2F5A00,
-         # type: sdata,
-         # vram: 0x3F4A00,
-         # name: CDebugEdit_pad, # Header?
-        #} # size:0x4
-      - { start: 0x2F5A04, type: .sdata, vram: 0x3F4A04, name: debug/debug } # size:0x4
-      #- { start: 0x2F5A08, type: sdata, vram: 0x3F4A08, name: debug/debug_pad } # size:0x4
 
       - [0x2F5A0C, pad, section_padding_2F5A0C]
 
