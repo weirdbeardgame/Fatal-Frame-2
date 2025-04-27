@@ -1732,7 +1732,7 @@ segments:
         } # size:0x80
       - {
           start: 0x237e40,
-          type: data,
+          type: .data,
           vram: 0x336e40,
           name: ingame/movie_room_menu/prg/movie_room_menu,
         } # size:0x88
@@ -3037,7 +3037,7 @@ segments:
         } #  size:0x70
       - {
           start: 0x287978,
-          type: eh_frame,
+          type: .eh_frame,
           vram: 0x386978,
           name: ingame/puzzle/kai/kai_pzl,
         } #  size:0x240
@@ -3490,7 +3490,7 @@ segments:
         } #  size:0x104
       - {
           start: 0x2937b4,
-          type: eh_frame,
+          type: .eh_frame,
           vram: 0x3927b4,
           name: ingame/movie_room_menu/prg/movie_room_menu,
         } #  size:0x3b4
@@ -4826,7 +4826,7 @@ segments:
         }
       - {
           start: 0x2ba8a8,
-          type: rodata,
+          type: .rodata,
           vram: 0x3b98a8,
           name: ingame/puzzle/kai/kai_pzl,
         }
@@ -5266,7 +5266,7 @@ segments:
         }
       - {
           start: 0x2c27b8,
-          type: rodata,
+          type: .rodata,
           vram: 0x3c17b8,
           name: ingame/movie_room_menu/prg/movie_room_menu,
         }
@@ -6308,9 +6308,9 @@ segments:
         } # size:0x58
       - {
           start: 0x2ef490,
-          type: lit4,
+          type: .lit4,
           vram: 0x3ee490,
-          name: puzzle/kai/kai_pzl,
+          name: ingame/puzzle/kai/kai_pzl,
         } # size:0x4
       - {
           start: 0x2ef494,
@@ -6418,7 +6418,7 @@ segments:
       - { start: 0x2ef5f8, type: .lit4, vram: 0x3ee5f8, name: ingame/movie_room } # size:0x8
       - {
           start: 0x2ef600,
-          type: lit4,
+          type: .lit4,
           vram: 0x3ee600,
           name: ingame/movie_room_menu/prg/movie_room_menu,
         } # size:0x1c
@@ -7411,7 +7411,7 @@ segments:
         } # size:0x16
       - {
           start: 0x2f2680,
-          type: sdata,
+          type: .sdata,
           vram: 0x3f1680,
           name: ingame/puzzle/kai/kai_pzl,
         } # size:0x76
@@ -7699,7 +7699,7 @@ segments:
         } # size:0x48
       - {
           start: 0x2f43e8,
-          type: sdata,
+          type: .sdata,
           vram: 0x3f33e8,
           name: ingame/movie_room_menu/prg/movie_room_menu,
         } # size:0x48
@@ -8092,7 +8092,7 @@ segments:
       - { type: .sbss, vram: 0x3f4d08, name: ingame/puzzle/hina/hina_pzl } # size:0x2
       - { type: .sbss, vram: 0x3f4d10, name: ingame/ingame } # size:0x18
       - { type: .sbss, vram: 0x3f4d28, name: ingame/ingame_effect } # size:0xc
-      - { type: sbss, vram: 0x3f4d38, name: ingame/puzzle/kai/kai_pzl } # size:0x10
+      - { type: .sbss, vram: 0x3f4d38, name: ingame/puzzle/kai/kai_pzl } # size:0x10
       - { type: .sbss, vram: 0x3f4d48, name: outgame/lang_check } # size:0x8
       - { type: .sbss, vram: 0x3f4d50, name: outgame/lang_sel } # size:0x8
       - { type: .sbss, vram: 0x3f4d58, name: ingame/item/prg/level_gem } # size:0x1
@@ -8123,7 +8123,7 @@ segments:
           name: ingame/movie_room_menu/prg/movie_projecter,
         } # size:0xc
       - {
-          type: sbss,
+          type: .sbss,
           vram: 0x3f4e88,
           name: ingame/movie_room_menu/prg/movie_room_menu,
         } # size:0x10
