@@ -1,4 +1,3 @@
-glob.c
 mission_dat.c
 morph_dat.c
 menu_photo.c

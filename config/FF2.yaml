@@ -4204,9 +4204,9 @@ segments:
         }
       - {
           start: 0x2a4f50,
-          type: rodata,
+          type: .rodata,
           vram: 0x3a3f50,
-          name: system/compress/decode,
+          name: graphics/dmaVif1,
         }
       - {
           start: 0x2a52b0,
@@ -5948,12 +5948,12 @@ segments:
         }
 
       ### GCC_EXCEPT_TABLE
-      - {
-          start: 0x2ee300,
-          type: .gcc_except_table,
-          vram: 0x3ed300,
-          name: graphics/graph3d/CDebugEdit,
-        }
+      #- {
+       #   start: 0x2ee300,
+        #  type: .gcc_except_table,
+        #  vram: 0x3ed300,
+        #  name: graphics/graph3d/CDebugEdit,
+        #}
       - {
           start: 0x2ee36c,
           type: .gcc_except_table,
