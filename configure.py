@@ -23,6 +23,23 @@ from splat.scripts import split
 from splat.util.conf import load as splat_load_yaml
 from splat.segtypes.linker_entry import LinkerEntry
 
+ASM_FILE_OVERRIDE = set(
+    [
+        "libkernl.a_klib_",
+        "libkernl.a_tlbtrap_",
+        "libc.a_memcmp_",
+        "libc.a_memcpy_",
+        "libc.a_memmove_",
+        "libc.a_memset_",
+        "libc.a_strcat_",
+        "libc.a_strcmp_",
+        "libc.a_strcpy_",
+        "libc.a_strlen_",
+        "libc.a_strncmp_",
+        "libc.a_strncpy_",
+        "libc.a_memchr_"
+    ]
+)
 
 ROOT = Path(__file__).parent.resolve()
 TOOLS_DIR = ROOT / "tools"
@@ -57,8 +74,8 @@ def exec_shell(command: List[str]) -> str:
 
 
 def clean():
-    if os.path.exists(".splache"):
-        os.remove(".splache")
+    if os.path.exists("config/.splache"):
+        os.remove("config/.splache")
     shutil.rmtree("asm", ignore_errors=True)
     shutil.rmtree("assets", ignore_errors=True)
     shutil.rmtree("build", ignore_errors=True)
@@ -160,7 +177,7 @@ def build_stuff(linker_entries: List[LinkerEntry]):
     ninja.rule(
         "as",
         description="as $in",
-        command=f"cpp {COMMON_INCLUDES} $in -o  - | {cross}as -no-pad-sections -EL -march=5900 -mabi=eabi -Iinclude -o $out",
+        command=f"cpp {COMMON_INCLUDES} $in -o  - | {cross}as -no-pad-sections -EL -march=5900 -mabi=eabi -Iinclude -o $out && python3 tools/elf_patcher.py $out gas $override",
     )
 
     ninja.rule(
@@ -202,6 +219,17 @@ def build_stuff(linker_entries: List[LinkerEntry]):
         if entry.object_path is None:
             continue
 
+        if seg.name in ASM_FILE_OVERRIDE:
+            override = "--section-align .text:0x4"
+        elif "libm.a" in seg.name:
+            override = "--section-align .rodata:0x4"
+        elif seg.name == "ingame/map/CBuff":
+            override = "--section-align .sbss:0x80"
+        elif seg.name == "outgame/pad_check":
+            override = "--section-align .sbss:0x1"
+        else:
+            override = ""
+
         if isinstance(
             seg,
             (
@@ -209,7 +237,7 @@ def build_stuff(linker_entries: List[LinkerEntry]):
                 splat.segtypes.common.data.CommonSegData,
             ),
         ):
-            build(entry.object_path, entry.src_paths, "as")
+            build(entry.object_path, entry.src_paths, "as", variables={"override": override})
 
         elif isinstance(seg, splat.segtypes.common.c.CommonSegC):
             if any(
@@ -222,22 +250,22 @@ def build_stuff(linker_entries: List[LinkerEntry]):
                 build(entry.object_path, entry.src_paths, "cc")
 
         elif isinstance(seg, splat.segtypes.common.databin.CommonSegDatabin):
-            build(entry.object_path, entry.src_paths, "as")
+            build(entry.object_path, entry.src_paths, "as", variables={"override": override})
 
         elif isinstance(seg, splat.segtypes.common.rodatabin.CommonSegRodatabin):
-            build(entry.object_path, entry.src_paths, "as")
+            build(entry.object_path, entry.src_paths, "as", variables={"override": override})
 
         elif isinstance(seg, splat.segtypes.common.textbin.CommonSegTextbin):
-            build(entry.object_path, entry.src_paths, "as")
+            build(entry.object_path, entry.src_paths, "as", variables={"override": override})
 
         elif isinstance(seg, splat.segtypes.common.sbss.CommonSegSbss):
-            build(entry.object_path, entry.src_paths, "as")
+            build(entry.object_path, entry.src_paths, "as", variables={"override": override})
 
         elif isinstance(seg, splat.segtypes.common.eh_frame.PS2SegEh_frame):
-            build(entry.object_path, entry.src_paths, "as")
+            build(entry.object_path, entry.src_paths, "as", variables={"override": override})
 
         elif isinstance(seg, splat.segtypes.common.gcc_except_table.PS2SegGcc_except_table):
-            build(entry.object_path, entry.src_paths, "as")
+            build(entry.object_path, entry.src_paths, "as", variables={"override": override})
 
         else:
             print(f"ERROR: Unsupported build segment type {seg.type}")
