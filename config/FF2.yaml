@@ -15,6 +15,7 @@ options:
   string_encoding: EUC-JP
   create_undefined_funcs_auto: False
   create_undefined_syms_auto: True
+  asm_data_macro: dlabel
   undefined_funcs_auto_path: undefined_funcs_auto.txt
   undefined_syms_auto_path: undefined_syms_auto.txt
   symbol_addrs_path: symbol_addrs.txt
@@ -7596,9 +7597,9 @@ segments:
         } # size:0x44
       - {
           start: 0x2f3e80,
-          type: sdata,
+          type: .sdata,
           vram: 0x3f2e80,
-          name: ingame/menu/menu_photo,
+          name: menu/tim_dat/menu_photo_dat,
         } # size:0x44
       - {
           start: 0x2f3ec8,
@@ -8010,7 +8011,7 @@ segments:
           vram: 0x3f4990,
           name: iopsys.a_snd_bank_,
         } # size:0x2
-      #- {start: 0x2f5992, type: .sdata, vram: 0x3f4992, name: iopsys.a_snd_3d_} # size:0x1
+      - {start: 0x2f5992, type: .sdata, vram: 0x3f4992, name: iopsys.a_snd_3d_} # size:0x1
       - { start: 0x2f5998, type: .sdata, vram: 0x3f4998, name: iopsys.a_cddat_ } # size:0x8
       - { start: 0x2f59a0, type: .sdata, vram: 0x3f49a0, name: iopsys.a_snd_ } # size:0x6
       - {
