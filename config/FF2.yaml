@@ -21,14 +21,18 @@ options:
   symbol_addrs_path: symbol_addrs.txt
   extensions_path: ../tools/splat_ext
   pair_rodata_to_text: False
+  asm_data_macro: dlabel
+  use_gp_rel_macro_nonmatching: False
   section_order:
     [
       ".text",
+      ".linkonce", # bit of a hack here
       ".vutext",
-      ".data",
-      ".eh_frame",
       ".ctor",
       ".dtor",
+      ".reginfo",
+      ".data",
+      ".eh_frame",
       ".vudata",
       ".rodata",
       ".gcc_except_table",
@@ -38,29 +42,20 @@ options:
       ".bss",
       ".vubss",
     ]
-  subalign: null
   disasm_unknown: True
   named_regs_for_c_funcs: False
   gp_value: 0x3f57f0
-  ld_bss_is_noload: true
-# custom field used by fix_linkerscript.py to fix linkerscript alignments
-#_section_subalign:
-#  elf_header: 8
-#  main: 2
-#  main_bss: 1
-#  reg_info: 4
-#  mips_debug: 4
-#  rest: 4
 segments:
   - [0, databin, elf_header]
   - name: main
     type: code
     start: 0x1000
     vram: 0x100000
-    bss_size: 0xd8bec
+    bss_size: 0xd966C # real size -0x44
+    subalign: null
     align: 0
     subsegments:
-      - [0x1008, asmtu, crt0] # size:0x258
+      - [0x1000, asmtu, crt0] # size:0x258
       - [0x1258, asmtu, ingame/map/CBuff] # size:0x274
       - [0x14d0, asmtu, graphics/graph3d/CDebugEdit] # size:0x8e0
       - [0x1db0, asmtu, ingame/plyr/ChrSort] # size:0x624
@@ -611,14 +606,101 @@ segments:
       - [0x1af630, asmtu, libkernl.a_cache_] # size:0x27c
       - [0x1af8b0, asmtu, libgcc.a__fixdfdi_] # size:0x78
       - [0x1af928, asmtu, libgcc.a__df_to_si_] # size:0x9c
+      
+      # LINKONCE ############
+      - { start: 0x1af9c8, type: .linkonce, name: graphics/graph3d/CDebugEdit, linker_section: linkonce }
+      - { start: 0x1b05f8, type: .linkonce, name: debug/DbFurnPre, linker_section: linkonce }
+      - { start: 0x1b0650, type: .linkonce, name: ingame/map/FurnCtl, linker_section: linkonce }
+      - { start: 0x1b06e8, type: .linkonce, name: ingame/map/MapAnim, linker_section: linkonce }
+      - { start: 0x1b0948, type: .linkonce, name: ingame/map/MapDoor, linker_section: linkonce }
+      - { start: 0x1b0b20, type: .linkonce, name: ingame/map/MapHit, linker_section: linkonce }
+      - { start: 0x1b0bb8, type: .linkonce, name: ingame/map/MapLight, linker_section: linkonce }
+      - { start: 0x1b0ce8, type: .linkonce, name: ingame/map/MapLoad, linker_section: linkonce }
+      - { start: 0x1b0d80, type: .linkonce, name: ingame/map/MapObjReg, linker_section: linkonce }
+      - { start: 0x1b0e18, type: .linkonce, name: ingame/map/MapPut, linker_section: linkonce }
+      - { start: 0x1b0eb0, type: .linkonce, name: ingame/map/MapSky, linker_section: linkonce }
+      - { start: 0x1b0f08, type: .linkonce, name: ingame/map/MapSp, linker_section: linkonce }
+      - { start: 0x1b1038, type: .linkonce, name: ingame/map/RegDat, linker_section: linkonce }
+      - { start: 0x1b1168, type: .linkonce, name: graphics/motion/accessory, linker_section: linkonce }
+      - { start: 0x1b1848, type: .linkonce, name: album/prg/album, linker_section: linkonce }
+      - { start: 0x1b1978, type: .linkonce, name: album/prg/album_edit, linker_section: linkonce }
+      - { start: 0x1b1a10, type: .linkonce, name: ingame/photo/bonus_shot, linker_section: linkonce }
+      - { start: 0x1b1d60, type: .linkonce, name: ingame/photo/center_circle, linker_section: linkonce }
+      - { start: 0x1b1dd8, type: .linkonce, name: ingame/photo/center_cross, linker_section: linkonce }
+      - { start: 0x1b1e70, type: .linkonce, name: ingame/photo/damage_disp, linker_section: linkonce }
+      - { start: 0x1b1f40, type: .linkonce, name: debug/debug_menu, linker_section: linkonce }
+      - { start: 0x1b1fd8, type: .linkonce, name: ingame/door/prg/door, linker_section: linkonce }
+      - { start: 0x1b2070, type: .linkonce, name: graphics/graph3d/eeException, linker_section: linkonce }
+      - { start: 0x1b20f0, type: .linkonce, name: graphics/graph3d/eeFile, linker_section: linkonce }
+      - { start: 0x1b26e8, type: .linkonce, name: graphics/graph3d/eeFindFile, linker_section: linkonce }
+      - { start: 0x1b34c8, type: .linkonce, name: graphics/effect/effect, linker_section: linkonce }
+      - { start: 0x1b36a0, type: .linkonce, name: graphics/effect/effect_butterfly, linker_section: linkonce }
+      - { start: 0x1b3788, type: .linkonce, name: graphics/effect/effect_ene, linker_section: linkonce }
+      - { start: 0x1b43b8, type: .linkonce, name: graphics/effect/effect_obj, linker_section: linkonce }
+      - { start: 0x1b44e8, type: .linkonce, name: graphics/effect/effect_oth, linker_section: linkonce }
+      - { start: 0x1b4878, type: .linkonce, name: graphics/effect/effect_rdr, linker_section: linkonce }
+      - { start: 0x1b49a8, type: .linkonce, name: graphics/effect/effect_scr, linker_section: linkonce }
+      - { start: 0x1b4a40, type: .linkonce, name: graphics/effect/effect_torch, linker_section: linkonce }
+      - { start: 0x1b4cf8, type: .linkonce, name: ingame/photo/ene_life, linker_section: linkonce }
+      - { start: 0x1b4d30, type: .linkonce, name: ingame/enemy/ene_mot_ctrl, linker_section: linkonce }
+      - { start: 0x1b4f00, type: .linkonce, name: ingame/enemy/enemy, linker_section: linkonce }
+      - { start: 0x1b4f90, type: .linkonce, name: ingame/event/prg/ev_change, linker_section: linkonce }
+      - { start: 0x1b50c0, type: .linkonce, name: ingame/event/prg/ev_exe, linker_section: linkonce }
+      - { start: 0x1b5158, type: .linkonce, name: ingame/event/prg/ev_macro, linker_section: linkonce }
+      - { start: 0x1b54e8, type: .linkonce, name: ingame/event/prg/ev_open, linker_section: linkonce }
+      - { start: 0x1b5618, type: .linkonce, name: ingame/event/prg/ev_talk, linker_section: linkonce }
+      - { start: 0x1b5748, type: .linkonce, name: ingame/event/prg/ev_timer, linker_section: linkonce }
+      - { start: 0x1b57e0, type: .linkonce, name: ingame/enemy/fene_entry, linker_section: linkonce }
+      - { start: 0x1b5808, type: .linkonce, name: ingame/photo/filament, linker_section: linkonce }
+      - { start: 0x1b59c8, type: .linkonce, name: ingame/photo/film_no, linker_section: linkonce }
+      - { start: 0x1b5a38, type: .linkonce, name: ingame/enemy/fly_ctrl, linker_section: linkonce }
+      - { start: 0x1b5ad0, type: .linkonce, name: graphics/scene/fod, linker_section: linkonce }
+      - { start: 0x1b5b68, type: .linkonce, name: graphics/graph3d/g3dCore, linker_section: linkonce }
+      - { start: 0x1b6730, type: .linkonce, name: graphics/graph3d/g3dLightEx, linker_section: linkonce }
+      - { start: 0x1b7248, type: .linkonce, name: graphics/graph3d/g3dRenderTarget, linker_section: linkonce }
+      - { start: 0x1b7718, type: .linkonce, name: graphics/graph3d/g3dTexture, linker_section: linkonce }
+      - { start: 0x1b7838, type: .linkonce, name: graphics/graph3d/gra3d, linker_section: linkonce }
+      - { start: 0x1b88c0, type: .linkonce, name: graphics/graph3d/gra3dMisc, linker_section: linkonce }
+      - { start: 0x1b88e8, type: .linkonce, name: graphics/graph3d/gra3dSGD, linker_section: linkonce }
+      - { start: 0x1b8a48, type: .linkonce, name: graphics/graph3d/gra3dSGDData, linker_section: linkonce }
+      - { start: 0x1b8b68, type: .linkonce, name: graphics/graph3d/gra3dShadow, linker_section: linkonce }
+      - { start: 0x1b8cd0, type: .linkonce, name: ingame/ingame_effect, linker_section: linkonce }
+      - { start: 0x1b8d68, type: .linkonce, name: ingame/plyr/man_data, linker_section: linkonce }
+      - { start: 0x1b8e18, type: .linkonce, name: ingame/map/map_height, linker_section: linkonce }
+      - { start: 0x1b8f00, type: .linkonce, name: system/mc/prg/mc_set_data, linker_section: linkonce }
+      - { start: 0x1b8f98, type: .linkonce, name: ingame/item/prg/memo, linker_section: linkonce }
+      - { start: 0x1b9030, type: .linkonce, name: ingame/menu/menu_cam_edit, linker_section: linkonce }
+      - { start: 0x1b9160, type: .linkonce, name: ingame/menu/menu_file, linker_section: linkonce }
+      - { start: 0x1b9290, type: .linkonce, name: ingame/menu/menu_item, linker_section: linkonce }
+      - { start: 0x1b9328, type: .linkonce, name: ingame/menu/menu_memo, linker_section: linkonce }
+      - { start: 0x1b93c0, type: .linkonce, name: ingame/menu/menu_radio, linker_section: linkonce }
+      - { start: 0x1b9458, type: .linkonce, name: ingame/menu/menu_soul, linker_section: linkonce }
+      - { start: 0x1b94f0, type: .linkonce, name: graphics/motion/morph, linker_section: linkonce }
+      - { start: 0x1b9588, type: .linkonce, name: graphics/motion/motion, linker_section: linkonce }
+      - { start: 0x1b9620, type: .linkonce, name: ingame/photo/n_equip_tray, linker_section: linkonce }
+      - { start: 0x1b9950, type: .linkonce, name: ingame/photo/n_plyr_camera, linker_section: linkonce }
+      - { start: 0x1b9af8, type: .linkonce, name: common/ol_load, linker_section: linkonce }
+      - { start: 0x1b9b90, type: .linkonce, name: ingame/photo/photo, linker_section: linkonce }
+      - { start: 0x1b9c28, type: .linkonce, name: ingame/photo/photo_charger, linker_section: linkonce }
+      - { start: 0x1b9d00, type: .linkonce, name: ingame/plyr/plyr_mdl, linker_section: linkonce }
+      - { start: 0x1b9f50, type: .linkonce, name: ingame/menu/plyr_room_info, linker_section: linkonce }
+      - { start: 0x1b9fe8, type: .linkonce, name: graphics/scene/scene, linker_section: linkonce }
+      - { start: 0x1ba1b0, type: .linkonce, name: ingame/plyr/sis_mdl, linker_section: linkonce }
+      - { start: 0x1ba368, type: .linkonce, name: ingame/plyr/sister, linker_section: linkonce }
+      - { start: 0x1ba450, type: .linkonce, name: ingame/item/prg/soul_list, linker_section: linkonce }
+      - { start: 0x1ba4e8, type: .linkonce, name: ingame/photo/sp_chance, linker_section: linkonce }
+      - { start: 0x1ba558, type: .linkonce, name: ingame/photo/spirit_gage, linker_section: linkonce }
+      - { start: 0x1ba590, type: .linkonce, name: libgcc.a_tinfo_, linker_section: linkonce }
+      - { start: 0x1baa70, type: .linkonce, name: libgcc.a_tinfo2_, linker_section: linkonce }
+      - { start: 0x1baf78, type: .linkonce, name: libgcc.a_exception_, linker_section: linkonce }
 
       # VUTEXT ############
       - name: vutext
-        type: textbin
+        type: vutext
         start: 0x1bb0a0
         vram:
 
-        # CTOR ################
+      # CTOR ################
       - { start: 0x1c4b00, type: ctor, vram: 0x2c3b00, name: crtbegin } #  size:0x4
       - {
           start: 0x1c4b04,
@@ -1561,10 +1643,9 @@ segments:
           vram: 0x31e3a8,
           name: system/mc/prg/mc_set_data,
         } # size:0x20
-      - [0x21f3c7, c, system/mc/dat/mc_title_dat] # size:0x16c0
       - {
           start: 0x21f3c8,
-          type: .data,
+          type: data,
           vram: 0x31e3c8,
           name: system/mc/dat/mc_title_dat,
         } # size:0x34
@@ -1663,7 +1744,7 @@ segments:
           start: 0x229df8,
           type: data,
           vram: 0x328df8,
-          name: menu/tim_dat/menu_photo_dat,
+          name: ingame/menu/menu_photo,
         } # size:0x1ba0
       - {
           start: 0x22b998,
@@ -5051,7 +5132,7 @@ segments:
         }
       - {
           start: 0x2bcc70,
-          type: .rodata,
+          type: rodata,
           vram: 0x3bbc70,
           name: system/mc/dat/mc_title_dat,
         }
@@ -5931,15 +6012,21 @@ segments:
           name: libc.a_strerror_,
         }
       - {
+          start: 0x2ed780,
+          type: .rodata,
+          vram: 0x3ec780,
+          name: libc.a_vfiprintf_,
+        }
+      - {
           start: 0x2ed970,
           type: .rodata,
           vram: 0x3ec970,
-          name: libc.a_vfiprintf_,
+          name: libc.a_vfprintf_,
         }
       - { start: 0x2edb80, type: .rodata, vram: 0x3ecb80, name: libc.a_vfscanf_ }
-      - { start: 0x2edff0, type: .rodata, vram: 0x3ecff0, name: libc.a_dtoa_ }
       - { start: 0x2ee048, type: .rodata, vram: 0x3ed048, name: libc.a_locale_ }
-      - { start: 0x2ee090, type: .rodata, vram: 0x3ed090, name: libc.a_mprec_ }
+      - { start: 0x2ee090, type: .rodata, vram: 0x3ed090, name: libc.a_dtoa_ }
+      - { start: 0x2ee0a0, type: .rodata, vram: 0x3ed0a0, name: libc.a_mprec_ }
       - { start: 0x2ee1c0, type: .rodata, vram: 0x3ed1c0, name: libc.a_strtod_ }
       - {
           start: 0x2ee290,
@@ -7506,7 +7593,7 @@ segments:
         } # size:0x55
       - {
           start: 0x2f2b40,
-          type: .sdata,
+          type: sdata,
           vram: 0x3f1b40,
           name: system/mc/dat/mc_title_dat,
         } # size:0x24
@@ -8035,7 +8122,8 @@ segments:
           name: playpss.a_playpss_,
         } # size:0x1c
 
-      - [0x2F5A0C, pad, section_padding_2F5A0C]
+      - [0x2F5A0C, pad]
+      - [0x2F5A80]
 
       # sbss ################
       - { type: .sbss, vram: 0x3f4a80, name: ingame/map/CBuff } # size:0x4
@@ -8348,6 +8436,7 @@ segments:
       - { type: .bss, vram: 0x4cd900, name: libgcc.a__eh_ } # size:0x172
       - { type: .bss, vram: 0x4cda74, name: libgcc.a_frame-dwarf2_ } # size:0x8
       #- {type: .bss, vram: 0x4ce0ec, name: vubss}
+  - [0x2F5A80, databin, padding]
   - [0x2f5ac4, databin, mips_debug]
   - [0x31034636]
 # Section Headers:
