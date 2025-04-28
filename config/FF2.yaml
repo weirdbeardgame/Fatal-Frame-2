@@ -290,7 +290,7 @@ segments:
       - [0xf9f80, asmtu, ingame/menu/menu_item] # size:0x2678
       - [0xfc5f8, asmtu, ingame/menu/menu_map] # size:0x4310
       - [0x100908, asmtu, ingame/menu/menu_memo] # size:0x18f0
-      - [0x1021f8, asmtu, menu/tim_dat/menu_photo_dat] # size:0x2dc4
+      - [0x1021f8, asmtu, ingame/menu/menu_photo] # size:0x2dc4
       - [0x104fc0, asmtu, ingame/menu/menu_radio] # size:0x25c8
       - [0x107588, asmtu, ingame/menu/menu_soul] # size:0x2638
       - [0x109bc0, asmtu, ingame/menu/menu_top] # size:0x1874
@@ -1661,7 +1661,7 @@ segments:
         } # size:0x800
       - {
           start: 0x229df8,
-          type: .data,
+          type: data,
           vram: 0x328df8,
           name: menu/tim_dat/menu_photo_dat,
         } # size:0x1ba0
@@ -3383,7 +3383,7 @@ segments:
         } #  size:0x3f4
       - {
           start: 0x28f750,
-          type: eh_frame,
+          type: .eh_frame,
           vram: 0x38e750,
           name: ingame/menu/menu_photo,
         } #  size:0x49c
@@ -5153,7 +5153,7 @@ segments:
         }
       - {
           start: 0x2bf498,
-          type: rodata,
+          type: .rodata,
           vram: 0x3be498,
           name: ingame/menu/menu_photo,
         }
@@ -5341,7 +5341,7 @@ segments:
           start: 0x2c3fe8,
           type: .rodata,
           vram: 0x3c2fe8,
-          name: menu/tim_dat/menu_photo_dat,
+          name: ingame/photo/photo_dat,
         }
       - {
           start: 0x2c4280,
@@ -6376,7 +6376,7 @@ segments:
         } # size:0x4
       - {
           start: 0x2ef588,
-          type: lit4,
+          type: .lit4,
           vram: 0x3ee588,
           name: ingame/menu/menu_photo,
         } # size:0x14
@@ -7599,7 +7599,7 @@ segments:
           start: 0x2f3e80,
           type: .sdata,
           vram: 0x3f2e80,
-          name: menu/tim_dat/menu_photo_dat,
+          name: ingame/menu/menu_photo,
         } # size:0x44
       - {
           start: 0x2f3ec8,
@@ -8112,7 +8112,7 @@ segments:
       - { type: .sbss, vram: 0x3f4e20, name: ingame/menu/menu_file } # size:0x6
       - { type: .sbss, vram: 0x3f4e28, name: ingame/menu/menu_item } # size:0x4
       - { type: .sbss, vram: 0x3f4e30, name: ingame/menu/menu_memo } # size:0x6
-      - { type: sbss, vram: 0x3f4e38, name: ingame/menu/menu_photo } # size:0x2
+      - { type: .sbss, vram: 0x3f4e38, name: ingame/menu/menu_photo } # size:0x2
       - { type: .sbss, vram: 0x3f4e40, name: graphics/graph2d/message } # size:0x18
       - { type: .sbss, vram: 0x3f4e58, name: outgame/mission_ctl } # size:0x8
       - { type: .sbss, vram: 0x3f4e60, name: outgame/mission_sel } # size:0xa
@@ -8280,7 +8280,7 @@ segments:
       - { type: .bss, vram: 0x4b59f0, name: ingame/menu/menu_item } # size:0x1e0
       - { type: .bss, vram: 0x4b5bd0, name: ingame/menu/menu_map } # size:0x2c
       - { type: .bss, vram: 0x4b5c00, name: ingame/menu/menu_memo } # size:0xb0
-      - { type: bss, vram: 0x4b5cb0, name: ingame/menu/menu_photo } # size:0xb
+      - { type: .bss, vram: 0x4b5cb0, name: ingame/menu/menu_photo } # size:0xb
       - { type: .bss, vram: 0x4b5cc0, name: ingame/menu/menu_radio } # size:0x164
       - { type: .bss, vram: 0x4b5e28, name: ingame/menu/menu_soul } # size:0x5b0
       - { type: .bss, vram: 0x4b63d8, name: ingame/menu/menu_top } # size:0x20
