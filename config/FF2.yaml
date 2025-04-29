@@ -1742,7 +1742,7 @@ segments:
         } # size:0x800
       - {
           start: 0x229df8,
-          type: data,
+          type: .data,
           vram: 0x328df8,
           name: ingame/menu/menu_photo,
         } # size:0x1ba0
@@ -8098,7 +8098,7 @@ segments:
           vram: 0x3f4990,
           name: iopsys.a_snd_bank_,
         } # size:0x2
-      - {start: 0x2f5992, type: .sdata, vram: 0x3f4992, name: iopsys.a_snd_3d_} # size:0x1
+      #- {start: 0x2f5992, type: .sdata, vram: 0x3f4992, name: iopsys.a_snd_3d_} # size:0x1
       - { start: 0x2f5998, type: .sdata, vram: 0x3f4998, name: iopsys.a_cddat_ } # size:0x8
       - { start: 0x2f59a0, type: .sdata, vram: 0x3f49a0, name: iopsys.a_snd_ } # size:0x6
       - {
