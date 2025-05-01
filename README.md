@@ -1,4 +1,4 @@
-# Fatal Frame 2 Decompilation
+# Minakami (皆神村) Decompilation Project
 ## Description:
 This is a project that aims to have a matching source decomplilation of the PlayStation 2 version of Fatal Frame 2 (Project Zero 2) with the intent of enabling research into the games source and eventually lead to a port on modern hardware.
 
